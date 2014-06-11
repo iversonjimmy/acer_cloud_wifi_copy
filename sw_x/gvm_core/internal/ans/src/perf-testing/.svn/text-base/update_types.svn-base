@@ -1,0 +1,17 @@
+#! /bin/sh
+
+if [ $1"_" == "_" ]; then
+    echo "Usage:  update_types <cluster DNS>"
+    exit 1
+fi
+
+if [ $2"_" != "_" ]; then
+    echo "Usage:  update_types <cluster DNS>"
+    exit 1
+fi
+
+export PATH=/opt/broadon/pkgs/ans/bin:$PATH
+
+device_types=/opt/broadon/pkgs/ans/conf/device_types
+
+grep -v '^#' $device_types | grep -v '^ *$' | sed -e "s/^/ansManager $1 set-device-type /" | /bin/sh -x

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1">
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_margin="10dip">
+		    <TextView
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:text="@string/signup_label_summery"
+		    />
+		    <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/signup_label_name"
+		        android:layout_marginTop="5dip"
+		    />
+		    <EditText
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:id="@+id/signup_edit_firstname"
+		        android:hint="@string/signup_hint_firstname"
+		        android:inputType="textPersonName"
+		        android:text="" />
+		    <EditText
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:id="@+id/signup_edit_lastname"
+		        android:hint="@string/signup_hint_lastname"
+		        android:inputType="textPersonName"
+		        android:text="" />
+		    <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/signup_label_email"
+		        android:layout_marginTop="5dip"
+		    />
+		    <EditText
+		        android:inputType="textEmailAddress"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:id="@+id/signup_edit_email"
+		        android:hint="@string/signup_hint_email"
+		        android:text="" />
+		    <EditText
+		        android:inputType="textEmailAddress"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:id="@+id/signup_edit_confirm_email"
+		        android:hint="@string/signup_hint_confirm_email"
+		        android:text="" />
+		    <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/signup_label_send_confirm_email"
+		        android:layout_marginTop="2dip"
+		        android:textSize="12sp"
+		    /> 
+		    <CheckBox 
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:textSize="16sp"
+		        android:id="@+id/signup_checkbox_remember_account"
+		        android:text="@string/signup_label_remember_account" />
+		        
+		    <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/label_password"
+		        android:layout_marginTop="5dip"
+		    />
+		    <EditText
+		        android:inputType="textPassword"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:id="@+id/signup_edit_password"
+		        android:hint="@string/signup_hint_password"
+		        android:text="" />
+		    <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/signup_label_min_char"
+		        android:layout_marginTop="2dip"
+		    /> 
+		</LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="46dip"
+        android:orientation="horizontal"
+        style="@android:style/ButtonBar">
+        <Button
+            android:id="@+id/signup_button_back"
+            android:layout_width="fill_parent"
+            android:layout_height="40dip"
+            android:text="@string/button_back"
+            android:layout_weight="1"
+            android:textSize="14dip" />
+        <Button
+            android:id="@+id/signup_button_next"
+            android:layout_width="fill_parent"
+            android:layout_height="40dip"
+            android:text="@string/button_next"
+            android:layout_weight="1"
+            android:textSize="14dip" />
+    </LinearLayout>
+    
+</LinearLayout>

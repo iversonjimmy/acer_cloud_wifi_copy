@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D0E0496C-D100-4CFE-BDA4-3D9D45DA55ED}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>protorpc</RootNamespace>
+    <AssemblyName>protorpc_dotnet</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>$(BUILDROOT)\build_msvc\$(SolutionName)\$(Configuration)\$(MSBuildProjectName)\$(Platform)\</OutputPath>
+    <IntermediateOutputPath>$(BUILDROOT)\build_msvc\$(SolutionName)\$(Configuration)\$(MSBuildProjectName)\$(Platform)_obj</IntermediateOutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>$(BUILDROOT)\build_msvc\$(SolutionName)\$(Configuration)\$(MSBuildProjectName)\$(Platform)\</OutputPath>
+    <IntermediateOutputPath>$(BUILDROOT)\build_msvc\$(SolutionName)\$(Configuration)\$(MSBuildProjectName)\$(Platform)_obj</IntermediateOutputPath>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="protobuf-net, Version=1.0.0.282, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(BUILDROOT)\tools\cygwin_any\external\protobuf_dotnet\protobuf\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\..\gvm_core\internal\protorpc\csharp\AppLayerException.cs">
+      <Link>AppLayerException.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\gvm_core\internal\protorpc\csharp\ProtoChannel.cs">
+      <Link>ProtoChannel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\gvm_core\internal\protorpc\csharp\ProtoRpcClient.cs">
+      <Link>ProtoRpcClient.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\gvm_core\internal\protorpc\csharp\ProtoRpcException.cs">
+      <Link>ProtoRpcException.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\gvm_core\internal\protorpc\csharp\rpc.pb.cs">
+      <Link>rpc.pb.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\gvm_core\internal\protorpc\csharp\RpcLayerException.cs">
+      <Link>RpcLayerException.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

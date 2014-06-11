@@ -1,0 +1,71 @@
+/// Definition of Acer Cloud Technology's proprietary Protocol Buffer RPC encoding.
+///
+/// The request message is a byte-stream consisting of:
+/// - the standard Protocol Buffer encoding of the "RpcRequestHeader", followed by
+/// - the standard Protocol Buffer encoding of the method-specific request type (the service can determine which method by parsing the RpcRequestHeader).
+///
+/// The response message is a byte-stream consisting of:
+/// - the standard Protocol Buffer encoding of the "RpcStatus", followed by
+/// - the standard Protocol Buffer encoding of the method-specific response type [omitted if (RpcStatus.status() != RpcStatus::OK) or (RpcStatus.appstatus() < 0)].
+
+// TODO: This should probably be in a package:
+//package igware.protobuf;
+
+option java_package = "igware.protobuf.pb";
+option java_outer_classname = "Rpc";
+
+message RpcRequestHeader {
+    required string methodName = 1;
+}
+
+message RpcStatus {
+    enum Status {
+    
+        OK = 0;
+        
+        /// There was an I/O error communicating with the remote endpoint.
+        IO_ERROR = 1;
+        
+        /// The caller of the client API provided a bad request object.
+        /// The client did not send the message (although it may have opened a connection
+        /// already). 
+        BAD_REQUEST = 2;
+        
+        /// The server endpoint rejected the request object.
+        /// Check for a version mismatch between RPC client and server.
+        BAD_REQUEST_SERVER = 10;
+        
+        /// The client rejected the server's response object.
+        /// Check for a version mismatch between RPC client and server.
+        BAD_RESPONSE = 3;
+        
+        /// The server endpoint handler did not return a valid response object.
+        /// You may need to file a bug against the RPC server component.
+        BAD_RESPONSE_SERVER = 4;
+        
+        /// There was an unspecified failure on the client, specific to the RPC mechanism.
+        INTERNAL_ERROR = 5;
+        
+        /// The RPC layer encountered a invalid header.
+        /// Check for a version mismatch between RPC client and server.
+        HEADER_ERROR = 6;
+        
+        /// The server endpoint did not recognize the method name.
+        /// Check for a version mismatch between RPC client and server, and
+        /// make sure that you are connecting to the correct service.
+        UNKNOWN_METHOD = 7;
+    }
+    /// Status as seen by the RPC system, i.e. was the handler successfully
+    /// invoked.  If not OK, there is no application status or response
+    /// payload.  Note this is distinct from the application status code
+    /// filled in by the handler.
+    required Status status = 1;
+    
+    /// Application-defined return code.  If this is negative, there is no
+    /// response payload.
+    optional int32 appStatus = 3;
+    
+    /// Optional human-readable explanation of the error, can be useful for diagnosing problems.
+    /// Can be filled in by RPC system or application.
+    optional string errorDetail = 2;
+}

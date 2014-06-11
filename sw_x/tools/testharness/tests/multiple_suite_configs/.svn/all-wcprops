@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/29393/trunk/sw_x/tools/testharness/tests/multiple_suite_configs
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repo/!svn/ver/29393/trunk/sw_x/tools/testharness/tests/multiple_suite_configs/Makefile
+END

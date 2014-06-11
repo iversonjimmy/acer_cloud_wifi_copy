@@ -1,0 +1,143 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repo/!svn/ver/58242/trunk/sw_x/gvm_core/internal/pxd/src/testing
+END
+pxd_circle.doc
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repo/!svn/ver/51641/trunk/sw_x/gvm_core/internal/pxd/src/testing/pxd_circle.doc
+END
+run-test
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/58242/trunk/sw_x/gvm_core/internal/pxd/src/testing/run-test
+END
+run-triangle-preconfig
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repo/!svn/ver/39813/trunk/sw_x/gvm_core/internal/pxd/src/testing/run-triangle-preconfig
+END
+setup-real
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/52660/trunk/sw_x/gvm_core/internal/pxd/src/testing/setup-real
+END
+start-debug
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/51821/trunk/sw_x/gvm_core/internal/pxd/src/testing/start-debug
+END
+run-circle-lots
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repo/!svn/ver/39813/trunk/sw_x/gvm_core/internal/pxd/src/testing/run-circle-lots
+END
+run-lots
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/39813/trunk/sw_x/gvm_core/internal/pxd/src/testing/run-lots
+END
+pxd_triangle.doc
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/51641/trunk/sw_x/gvm_core/internal/pxd/src/testing/pxd_triangle.doc
+END
+run-triangle-lots
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repo/!svn/ver/46525/trunk/sw_x/gvm_core/internal/pxd/src/testing/run-triangle-lots
+END
+run-pxdtest
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/53375/trunk/sw_x/gvm_core/internal/pxd/src/testing/run-pxdtest
+END
+Readme
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/52369/trunk/sw_x/gvm_core/internal/pxd/src/testing/Readme
+END
+run-circle-fast
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repo/!svn/ver/39878/trunk/sw_x/gvm_core/internal/pxd/src/testing/run-circle-fast
+END
+run-many-pxd
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/53224/trunk/sw_x/gvm_core/internal/pxd/src/testing/run-many-pxd
+END
+run-fast
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/39807/trunk/sw_x/gvm_core/internal/pxd/src/testing/run-fast
+END
+server_keys
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/38177/trunk/sw_x/gvm_core/internal/pxd/src/testing/server_keys
+END
+run-triangle-fast
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repo/!svn/ver/39813/trunk/sw_x/gvm_core/internal/pxd/src/testing/run-triangle-fast
+END
+run-circle
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/38956/trunk/sw_x/gvm_core/internal/pxd/src/testing/run-circle
+END
+run-triangle
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/39818/trunk/sw_x/gvm_core/internal/pxd/src/testing/run-triangle
+END
+run-server
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/51853/trunk/sw_x/gvm_core/internal/pxd/src/testing/run-server
+END
+run-bw
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/50072/trunk/sw_x/gvm_core/internal/pxd/src/testing/run-bw
+END
+run-triangle-bw
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repo/!svn/ver/52930/trunk/sw_x/gvm_core/internal/pxd/src/testing/run-triangle-bw
+END
+run-circle-preconfig
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repo/!svn/ver/39813/trunk/sw_x/gvm_core/internal/pxd/src/testing/run-circle-preconfig
+END
+start-real
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/51822/trunk/sw_x/gvm_core/internal/pxd/src/testing/start-real
+END

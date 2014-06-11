@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repo/!svn/ver/32477/trunk/sw_x/gvm_core/vpl/posix_include
+END
+vplu__missing.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/1226/trunk/sw_x/gvm_core/vpl/posix_include/vplu__missing.h
+END
+vpl__lazy_init.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/15424/trunk/sw_x/gvm_core/vpl/posix_include/vpl__lazy_init.h
+END
+vpl__dynamic.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/80/trunk/sw_x/gvm_core/vpl/posix_include/vpl__dynamic.h
+END
+vpl__srwlock.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/24753/trunk/sw_x/gvm_core/vpl/posix_include/vpl__srwlock.h
+END
+vpl__conv.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/80/trunk/sw_x/gvm_core/vpl/posix_include/vpl__conv.h
+END
+vpl__monitor_dir.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/15683/trunk/sw_x/gvm_core/vpl/posix_include/vpl__monitor_dir.h
+END
+vpl__net.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/80/trunk/sw_x/gvm_core/vpl/posix_include/vpl__net.h
+END
+vpl__fs.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/32477/trunk/sw_x/gvm_core/vpl/posix_include/vpl__fs.h
+END

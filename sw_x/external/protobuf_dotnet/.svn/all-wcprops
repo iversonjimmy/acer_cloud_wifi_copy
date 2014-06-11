@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repo/!svn/ver/25449/trunk/sw_x/external/protobuf_dotnet
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/10295/trunk/sw_x/external/protobuf_dotnet/BUILD
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repo/!svn/ver/25449/trunk/sw_x/external/protobuf_dotnet/Makefile
+END

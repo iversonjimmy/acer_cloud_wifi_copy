@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/59817/trunk/sw_x/projects/xcode/PersonalCloud/ccd
+END
+KeychainFileReader-C-Interface.h
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repo/!svn/ver/24295/trunk/sw_x/projects/xcode/PersonalCloud/ccd/KeychainFileReader-C-Interface.h
+END
+KeychainFileReader.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/24295/trunk/sw_x/projects/xcode/PersonalCloud/ccd/KeychainFileReader.h
+END
+TestHelper.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/28619/trunk/sw_x/projects/xcode/PersonalCloud/ccd/TestHelper.h
+END
+KeychainFileReader.mm
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repo/!svn/ver/29117/trunk/sw_x/projects/xcode/PersonalCloud/ccd/KeychainFileReader.mm
+END
+OnDeviceTest.entitlements
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repo/!svn/ver/27028/trunk/sw_x/projects/xcode/PersonalCloud/ccd/OnDeviceTest.entitlements
+END
+TestHelper.mm
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/47487/trunk/sw_x/projects/xcode/PersonalCloud/ccd/TestHelper.mm
+END
+Default-568h@2x.png
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repo/!svn/ver/40990/trunk/sw_x/projects/xcode/PersonalCloud/ccd/Default-568h@2x.png
+END

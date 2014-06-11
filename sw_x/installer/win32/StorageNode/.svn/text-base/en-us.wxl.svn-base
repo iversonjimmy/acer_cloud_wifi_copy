@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WixLocalization Culture="en-us" xmlns="http://schemas.microsoft.com/wix/2006/localization">
+  <String Id="StrLang">1033</String>
+  <String Id="StrProdName">iGware Storage Node</String>
+  <String Id="StrManufacturer">iGware Inc.</String>
+  <String Id="StrPkgDescription">iGware Storage Node</String>
+  <String Id="StrPkgComments">Installer for iGware Storage Node</String>
+  <String Id="StrDowngradeErrMsg">A later version of Storage Node is already installed. Setup will now exit.</String>
+  <String Id="StrLicenseFile">License-en-us.rtf</String>
+  <String Id="StrWin7OrLater">This application is only supported on Windows 7 or later.</String>
+</WixLocalization>

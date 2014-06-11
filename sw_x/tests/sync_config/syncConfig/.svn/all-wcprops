@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/59872/trunk/sw_x/tests/sync_config/syncConfig
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/41201/trunk/sw_x/tests/sync_config/syncConfig/BUILD
+END
+VcsTestSession.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/41029/trunk/sw_x/tests/sync_config/syncConfig/VcsTestSession.cpp
+END
+VcsTestUtils.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/57234/trunk/sw_x/tests/sync_config/syncConfig/VcsTestUtils.hpp
+END
+SyncConfigTest.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/59872/trunk/sw_x/tests/sync_config/syncConfig/SyncConfigTest.cpp
+END
+VcsTestSession.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/32389/trunk/sw_x/tests/sync_config/syncConfig/VcsTestSession.hpp
+END
+SyncConfigTest.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/51209/trunk/sw_x/tests/sync_config/syncConfig/SyncConfigTest.hpp
+END
+SyncConfigTestFiles.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repo/!svn/ver/57403/trunk/sw_x/tests/sync_config/syncConfig/SyncConfigTestFiles.hpp
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/59671/trunk/sw_x/tests/sync_config/syncConfig/Makefile
+END
+VcsTestUtils.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/57234/trunk/sw_x/tests/sync_config/syncConfig/VcsTestUtils.cpp
+END

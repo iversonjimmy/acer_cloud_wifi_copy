@@ -1,0 +1,8 @@
+#! /bin/sh
+export PATH=/opt/broadon/pkgs/jre/bin:$PATH
+
+cd ~/java
+
+. ./set_classpath
+
+java -classpath "$classpath" com.broadon.ans.client.AnsManager $*

@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/32790/trunk/sw_x/gvm_core/internal/vssi/tests/loadgen_proxy
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repo/!svn/ver/31745/trunk/sw_x/gvm_core/internal/vssi/tests/loadgen_proxy/BUILD
+END
+loadgen_proxy.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repo/!svn/ver/31745/trunk/sw_x/gvm_core/internal/vssi/tests/loadgen_proxy/loadgen_proxy.hpp
+END
+test_client.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repo/!svn/ver/32787/trunk/sw_x/gvm_core/internal/vssi/tests/loadgen_proxy/test_client.hpp
+END
+test_server.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repo/!svn/ver/32790/trunk/sw_x/gvm_core/internal/vssi/tests/loadgen_proxy/test_server.cpp
+END
+loadgen_proxy.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repo/!svn/ver/32787/trunk/sw_x/gvm_core/internal/vssi/tests/loadgen_proxy/loadgen_proxy.cpp
+END
+test_server.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repo/!svn/ver/31745/trunk/sw_x/gvm_core/internal/vssi/tests/loadgen_proxy/test_server.hpp
+END
+test_client.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repo/!svn/ver/32787/trunk/sw_x/gvm_core/internal/vssi/tests/loadgen_proxy/test_client.cpp
+END

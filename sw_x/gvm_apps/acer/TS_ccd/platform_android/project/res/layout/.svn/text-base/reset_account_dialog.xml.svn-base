@@ -1,0 +1,35 @@
+
+<RelativeLayout
+    android:id="@+id/relativeLayout1"
+	android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<TextView
+        android:id="@+id/dialog_reset_label_summery"
+        android:layout_width="wrap_content"
+		android:text="Please enter your email to get a password reset message sent to your password. After receiving this email, click on the embedded link and follow this instructions to get your password reset."
+		android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+		android:layout_alignParentLeft="true"
+        android:layout_margin="5dip"></TextView>
+	<TextView
+        android:id="@+id/dialog_reset_label_email"
+        android:layout_width="wrap_content"
+		android:text="@string/signin_label_email"
+        android:layout_height="wrap_content"
+		android:layout_below="@+id/dialog_reset_label_summery"
+        android:layout_alignLeft="@+id/dialog_reset_label_summery"
+		android:layout_marginTop="50dp">
+		</TextView>
+	<EditText android:layout_width="wrap_content"
+		android:inputType="textEmailAddress"
+        android:id="@+id/dialog_reset_edit_email"
+		android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/dialog_reset_label_email"
+        android:layout_below="@+id/dialog_reset_label_summery"
+		android:layout_marginLeft="10dp"
+		android:layout_marginTop="35dip"
+        android:layout_alignRight="@+id/dialog_reset_label_summery">
+		<requestFocus></requestFocus>
+	</EditText>
+</RelativeLayout>

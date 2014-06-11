@@ -1,0 +1,5 @@
+platform = env('PLATFORM',None)
+target_platform = env('TARGET_PLATFORM',None)
+product = env('PRODUCT',None)
+host_platform = env('HOST_PLATFORM',None)
+host_platform_sub = env('HOST_PLATFORM_SUB',None)

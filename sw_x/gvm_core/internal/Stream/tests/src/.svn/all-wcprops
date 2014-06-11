@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/36090/trunk/sw_x/gvm_core/internal/Stream/tests/src
+END
+SampleRequest.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repo/!svn/ver/36090/trunk/sw_x/gvm_core/internal/Stream/tests/src/SampleRequest.hpp
+END
+InStringStreamTester.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repo/!svn/ver/36090/trunk/sw_x/gvm_core/internal/Stream/tests/src/InStringStreamTester.cpp
+END
+SampleResponse.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/36090/trunk/sw_x/gvm_core/internal/Stream/tests/src/SampleResponse.cpp
+END
+OutStringStreamTester.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repo/!svn/ver/36090/trunk/sw_x/gvm_core/internal/Stream/tests/src/OutStringStreamTester.cpp
+END
+SampleResponse.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/36090/trunk/sw_x/gvm_core/internal/Stream/tests/src/SampleResponse.hpp
+END
+HttpFileUploadStreamTester.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repo/!svn/ver/36090/trunk/sw_x/gvm_core/internal/Stream/tests/src/HttpFileUploadStreamTester.cpp
+END
+HttpReqHeaderTester.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repo/!svn/ver/36090/trunk/sw_x/gvm_core/internal/Stream/tests/src/HttpReqHeaderTester.cpp
+END
+HttpRespHeaderTester.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repo/!svn/ver/36090/trunk/sw_x/gvm_core/internal/Stream/tests/src/HttpRespHeaderTester.cpp
+END
+HttpStringStreamTester.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repo/!svn/ver/36090/trunk/sw_x/gvm_core/internal/Stream/tests/src/HttpStringStreamTester.cpp
+END
+SampleRequest.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repo/!svn/ver/36090/trunk/sw_x/gvm_core/internal/Stream/tests/src/SampleRequest.cpp
+END

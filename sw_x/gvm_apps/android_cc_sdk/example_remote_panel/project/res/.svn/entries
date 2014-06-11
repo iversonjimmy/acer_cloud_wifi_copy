@@ -1,0 +1,61 @@
+10
+
+dir
+59951
+https://src-us.ctbg.acer.com/repo/trunk/sw_x/gvm_apps/android_cc_sdk/example_remote_panel/project/res
+https://src-us.ctbg.acer.com/repo
+
+
+
+2013-11-06T02:47:23.510406Z
+50079
+steveo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+187b5c42-a02b-43e7-ba74-80c9f8da41ab
+
+layout-normal-land
+dir
+
+values
+dir
+
+xml
+dir
+
+drawable
+dir
+
+drawable-hdpi
+dir
+
+menu
+dir
+
+layout-large
+dir
+
+drawable-ldpi
+dir
+
+drawable-mdpi
+dir
+
+raw
+dir
+
+layout
+dir
+

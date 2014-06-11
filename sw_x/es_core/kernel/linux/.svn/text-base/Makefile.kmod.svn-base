@@ -1,0 +1,77 @@
+# -*-Makefile-*-
+# kbuild file for escmod.ko
+# the file is used by both makegen and standalone builds
+
+# uncomment following line to use kernel's SHA256 code
+#USE_KERNEL_SHA256 = 1
+
+# if PRODUCT is defined, the file was invoked by makegen
+ifdef PRODUCT
+SW_X := sw_x
+endif
+
+obj-m +=  escmod.o
+escmod-objs =							\
+	$(SW_X)/es_core/kernel/linux/esc.o			\
+	$(SW_X)/es_core/kernel/linux/esc_ioc.o			\
+	$(SW_X)/es_core/kernel/linux/escsvc.o			\
+	$(SW_X)/es_core/kernel/linux/esc_mon.o			\
+	$(SW_X)/es_core/kernel/linux/core_glue.o		\
+	$(SW_X)/es_core/esc/core/ec/ec_cache.o			\
+	$(SW_X)/es_core/esc/core/ec/ec_core.o			\
+	$(SW_X)/es_core/esc/core/ec/ec_pers.o			\
+	$(SW_X)/es_core/esc/core/ec/istorage_impl.o		\
+	$(SW_X)/es_core/esc/core/es/es_container.o		\
+	$(SW_X)/es_core/esc/core/es/es_storage.o		\
+	$(SW_X)/es_core/esc/core/ioscrypto/crypto_impl.o	\
+	$(SW_X)/es_core/esc/core/ioscrypto/mt19937-64.o		\
+	$(SW_X)/es_core/esc/core/base/esi/esi_core.o		\
+	$(SW_X)/es_core/esc/core/base/ioscrypto/bsl.o		\
+	$(SW_X)/es_core/esc/core/base/ioscrypto/keystore.o	\
+	$(SW_X)/es_core/esc/core/base/ioscrypto/wrapper.o	\
+	$(SW_X)/gvm_core/internal/csl/src/aes.o			\
+	$(SW_X)/gvm_core/internal/csl/src/aes_api.o		\
+	$(SW_X)/gvm_core/internal/csl/src/aes_imp.o		\
+	$(SW_X)/gvm_core/internal/csl/src/algorithms.o		\
+	$(SW_X)/gvm_core/internal/csl/src/convecc.o		\
+	$(SW_X)/gvm_core/internal/csl/src/convrsa.o		\
+	$(SW_X)/gvm_core/internal/csl/src/cslecc.o		\
+	$(SW_X)/gvm_core/internal/csl/src/csloaep.o		\
+	$(SW_X)/gvm_core/internal/csl/src/cslrsa.o		\
+	$(SW_X)/gvm_core/internal/csl/src/cslrsa_sign.o		\
+	$(SW_X)/gvm_core/internal/csl/src/elliptic_math.o	\
+	$(SW_X)/gvm_core/internal/csl/src/integer_math.o	\
+	$(SW_X)/gvm_core/internal/csl/src/poly_math.o		\
+	$(SW_X)/gvm_core/internal/csl/src/sha1.o		\
+	$(SW_X)/gvm_core/internal/csl/src/sha256.o
+
+ifndef USE_KERNEL_SHA256
+escmod-objs +=							\
+	$(SW_X)/gvm_core/internal/csl/src/tomcrypt_sha256.o
+endif
+
+
+EXTRA_CFLAGS +=							\
+	-D_KERNEL_MODULE					\
+	-DHOST_IS_LITTLE_ENDIAN					\
+	-DGVM_FEAT_PLAT_CMN_KEY					\
+	-I$(GVM_SRCROOT)/es_core/kernel/linux			\
+	-I$(GVM_SRCROOT)/es_core/kernel/include			\
+	-I$(GVM_SRCROOT)/es_core/km_include			\
+	-I$(GVM_SRCROOT)/es_core/esc/include			\
+	-I$(GVM_SRCROOT)/es_core/esc/core/base/include		\
+	-I$(GVM_SRCROOT)/es_core/esc/core/base/ioscrypto	\
+	-I$(GVM_SRCROOT)/es_core/esc/core/base/es		\
+	-I$(GVM_SRCROOT)/es_core/esc/core/base/esi		\
+	-I$(GVM_SRCROOT)/es_core/esc/core/ioscrypto		\
+	-I$(GVM_SRCROOT)/es_core/esc/core/ec			\
+	-I$(GVM_SRCROOT)/es_core/esc/core/es			\
+	-I$(GVM_SRCROOT)/gvm_core/internal/csl/include		\
+	-I$(GVM_SRCROOT)/gvm_core/internal/csl/src			\
+	-I$(GVM_SRCROOT)/gvm_core/os/esmon			\
+	-I$(GVM_SRCROOT)/gvm_core/vpl/include
+
+ifdef USE_KERNEL_SHA256
+EXTRA_CFLAGS +=					\
+	-DUSE_KERNEL_SHA256
+endif

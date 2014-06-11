@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="linked_src/protorpc"/>
+	<classpathentry kind="src" path="linked_src/vplex_proto"/>
+	<classpathentry kind="src" path="linked_src/ccd_client"/>
+	<classpathentry kind="src" path="linked_src/ccd_types"/>
+	<classpathentry kind="src" path="linked_src/vpl"/>
+	<classpathentry kind="src" path="linked_src/media_metadata_common"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="var" path="PBROOT/usr/lib/protobuf-lite.jar" sourcepath="/PBROOT/gvm_core/external/protobuf/protobuf-2.4.0a/java/src/main"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

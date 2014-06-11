@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repo/!svn/ver/15133/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/res/layout
+END
+sign_up_activity_entry.xml
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/res/layout/sign_up_activity_entry.xml
+END
+sign_in_activity.xml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repo/!svn/ver/15022/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/res/layout/sign_in_activity.xml
+END
+activity_login.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/res/layout/activity_login.xml
+END
+main.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/res/layout/main.xml
+END
+logout_activity.xml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/res/layout/logout_activity.xml
+END
+device_management_activity.xml
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/res/layout/device_management_activity.xml
+END
+device_list_item.xml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/res/layout/device_list_item.xml
+END
+device_list_title_item.xml
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/res/layout/device_list_title_item.xml
+END
+relogin_activity.xml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repo/!svn/ver/15133/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/res/layout/relogin_activity.xml
+END
+finish_activity.xml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/res/layout/finish_activity.xml
+END
+reset_account_dialog.xml
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/res/layout/reset_account_dialog.xml
+END
+progressing_activity.xml
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repo/!svn/ver/15022/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/res/layout/progressing_activity.xml
+END

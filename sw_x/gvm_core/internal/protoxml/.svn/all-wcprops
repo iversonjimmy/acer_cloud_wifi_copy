@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repo/!svn/ver/54250/trunk/sw_x/gvm_core/internal/protoxml
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/8074/trunk/sw_x/gvm_core/internal/protoxml/BUILD
+END
+ProtoXmlParseState.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/82/trunk/sw_x/gvm_core/internal/protoxml/ProtoXmlParseState.cpp
+END
+ProtoXmlParseStateImpl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/14498/trunk/sw_x/gvm_core/internal/protoxml/ProtoXmlParseStateImpl.cpp
+END
+ProtoXmlParseState.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/54248/trunk/sw_x/gvm_core/internal/protoxml/ProtoXmlParseState.h
+END
+ProtoXmlParseStateImpl.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repo/!svn/ver/14499/trunk/sw_x/gvm_core/internal/protoxml/ProtoXmlParseStateImpl.h
+END
+README.txt
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/54250/trunk/sw_x/gvm_core/internal/protoxml/README.txt
+END

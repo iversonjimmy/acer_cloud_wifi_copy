@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/http
+END
+HTTPServerList.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/http/HTTPServerList.java
+END
+HTML.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/http/HTML.java
+END
+HTTPServer.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/http/HTTPServer.java
+END
+HTTPPacket.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/http/HTTPPacket.java
+END
+ParameterList.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/http/ParameterList.java
+END
+Date.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/http/Date.java
+END
+HTTP.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/http/HTTP.java
+END
+Parameter.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/http/Parameter.java
+END
+HTTPStatus.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/http/HTTPStatus.java
+END
+HTTPSocket.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/http/HTTPSocket.java
+END
+HTTPRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/http/HTTPRequest.java
+END
+HTTPHeader.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/http/HTTPHeader.java
+END
+HTTPServerThread.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/http/HTTPServerThread.java
+END
+HTTPResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/http/HTTPResponse.java
+END
+HTTPRequestListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/http/HTTPRequestListener.java
+END

@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Ts2Alt\ext\src\ts_ext_client.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Ts2Alt\ext\src\ts_ext_pkt.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\vssts\shim\vssts_shim.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\vssts\src\vssts.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\vssts\src\vssts_internal.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\vssts\wrapper\vssts_wrapper.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\vssts\wrapper\wrapper_glue.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CCDIClient\CCDIClient.vcxproj">
+      <Project>{e791a6b9-c726-4831-ba4e-867b7f11ff19}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\vplex\vplex.vcxproj">
+      <Project>{7a28862d-2195-4d66-b9f6-e6e83f06e71f}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E7B4846C-C46B-4DCA-B3D7-340ED993D877}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>vssts</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v90</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v90</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v90</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v90</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\internal_libs.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\internal_libs.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\internal_libs.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\internal_libs.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IntDir>$(BUILDROOT)\build_msvc\$(SolutionName)\$(Configuration)\$(ProjectName)\$(Platform)_obj\</IntDir>
+    <OutDir>$(BUILDROOT)\build_msvc\$(SolutionName)\$(Configuration)\$(ProjectName)\$(Platform)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(BUILDROOT)\build_msvc\$(SolutionName)\$(Configuration)\$(ProjectName)\$(Platform)\</OutDir>
+    <IntDir>$(BUILDROOT)\build_msvc\$(SolutionName)\$(Configuration)\$(ProjectName)\$(Platform)_obj\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(BUILDROOT)\build_msvc\$(SolutionName)\$(Configuration)\$(ProjectName)\$(Platform)\</OutDir>
+    <IntDir>$(BUILDROOT)\build_msvc\$(SolutionName)\$(Configuration)\$(ProjectName)\$(Platform)_obj\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(BUILDROOT)\build_msvc\$(SolutionName)\$(Configuration)\$(ProjectName)\$(Platform)\</OutDir>
+    <IntDir>$(BUILDROOT)\build_msvc\$(SolutionName)\$(Configuration)\$(ProjectName)\$(Platform)_obj\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)/../../../gvm_core/internal/vssts/include;$(SolutionDir)/../../../gvm_core/internal/vssts/src;$(SolutionDir)/../../../gvm_core/internal/vssts/wrapper;$(SolutionDir)/../../../gvm_core/daemons/ccd/client/include/;$(SolutionDir)/../../../gvm_core/daemons/ccd/include/;$(SolutionDir)/../../../gvm_core/daemons/ccd/types/src/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <ProgramDataBaseFileName>$(IntDir)$(TargetName)_obj.pdb</ProgramDataBaseFileName>
+      <DisableSpecificWarnings>4125;4127;4200;4512;4996;4267</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)/../../../gvm_core/internal/vssts/include;$(SolutionDir)/../../../gvm_core/internal/vssts/src;$(SolutionDir)/../../../gvm_core/internal/vssts/wrapper;$(SolutionDir)/../../../gvm_core/daemons/ccd/client/include/;$(SolutionDir)/../../../gvm_core/daemons/ccd/include/;$(SolutionDir)/../../../gvm_core/daemons/ccd/types/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <ProgramDataBaseFileName>$(IntDir)$(TargetName)_obj.pdb</ProgramDataBaseFileName>
+      <DisableSpecificWarnings>4125;4127;4200;4512;4996;4267</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)/../../../gvm_core/internal/vssts/include;$(SolutionDir)/../../../gvm_core/internal/vssts/src;$(SolutionDir)/../../../gvm_core/internal/vssts/wrapper;$(SolutionDir)/../../../gvm_core/daemons/ccd/client/include/;$(SolutionDir)/../../../gvm_core/daemons/ccd/include/;$(SolutionDir)/../../../gvm_core/daemons/ccd/types/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <ProgramDataBaseFileName>$(IntDir)$(TargetName)_obj.pdb</ProgramDataBaseFileName>
+      <DisableSpecificWarnings>4125;4127;4200;4512;4996;4267</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)/../../../gvm_core/internal/vssts/include;$(SolutionDir)/../../../gvm_core/internal/vssts/src;$(SolutionDir)/../../../gvm_core/internal/vssts/wrapper;$(SolutionDir)/../../../gvm_core/daemons/ccd/client/include/;$(SolutionDir)/../../../gvm_core/daemons/ccd/include/;$(SolutionDir)/../../../gvm_core/daemons/ccd/types/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <ProgramDataBaseFileName>$(IntDir)$(TargetName)_obj.pdb</ProgramDataBaseFileName>
+      <DisableSpecificWarnings>4125;4127;4200;4512;4996;4267</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

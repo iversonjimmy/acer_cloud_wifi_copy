@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/52127/trunk/sw_x/gvm_core/internal/vssi/tests/loadgen_local
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repo/!svn/ver/21345/trunk/sw_x/gvm_core/internal/vssi/tests/loadgen_local/BUILD
+END
+vsTest_personal_cloud_data.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repo/!svn/ver/52127/trunk/sw_x/gvm_core/internal/vssi/tests/loadgen_local/vsTest_personal_cloud_data.hpp
+END
+loadgen_local.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repo/!svn/ver/21542/trunk/sw_x/gvm_core/internal/vssi/tests/loadgen_local/loadgen_local.cpp
+END
+manifest.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repo/!svn/ver/21345/trunk/sw_x/gvm_core/internal/vssi/tests/loadgen_local/manifest.cpp
+END
+vsTest_personal_cloud_data.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repo/!svn/ver/21345/trunk/sw_x/gvm_core/internal/vssi/tests/loadgen_local/vsTest_personal_cloud_data.cpp
+END
+manifest.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/21345/trunk/sw_x/gvm_core/internal/vssi/tests/loadgen_local/manifest.h
+END

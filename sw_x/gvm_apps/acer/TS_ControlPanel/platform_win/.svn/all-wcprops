@@ -1,0 +1,701 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/18625/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win
+END
+ccd_manager_native.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/ccd_manager_native.h
+END
+settings.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/settings.cpp
+END
+TabButton.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/TabButton.cpp
+END
+SyncItems_Panel.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/SyncItems_Panel.h
+END
+ITunesEventSink.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/ITunesEventSink.h
+END
+general_tab.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/general_tab.cpp
+END
+register_panel.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/register_panel.cpp
+END
+filter_treeview.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/filter_treeview.h
+END
+finish_panel.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/finish_panel.h
+END
+proxy_tab.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/proxy_tab.cpp
+END
+TabController.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/TabController.cpp
+END
+CiTunes.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/CiTunes.cpp
+END
+StateFlow.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/StateFlow.h
+END
+TSMainForm.resx
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/TSMainForm.resx
+END
+localized_text.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/localized_text.h
+END
+TestSendMessage.vcproj
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/TestSendMessage.vcproj
+END
+acpanel_win.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/acpanel_win.cpp
+END
+async_operations.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/async_operations.cpp
+END
+start_panel.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/start_panel.h
+END
+Layout.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/Layout.h
+END
+setup_form.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/setup_form.cpp
+END
+ShellLibUtilites.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/ShellLibUtilites.h
+END
+account_tab.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/account_tab.h
+END
+AlphaBGForm.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/AlphaBGForm.h
+END
+login_panel.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/login_panel.cpp
+END
+ccd_manager.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/ccd_manager.h
+END
+ccd_manager_native.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repo/!svn/ver/15991/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/ccd_manager_native.cpp
+END
+acpanel_win.sln
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repo/!svn/ver/14959/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/acpanel_win.sln
+END
+CommonTool.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/CommonTool.h
+END
+MessageProcForm.resx
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/MessageProcForm.resx
+END
+cMediaController.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/cMediaController.h
+END
+CppSQLite3.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/CppSQLite3.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repo/!svn/ver/14972/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/Makefile
+END
+MessageProcForm.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/MessageProcForm.cpp
+END
+iTunesCOMInterface.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/iTunesCOMInterface.h
+END
+SyncItems_Panel.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/SyncItems_Panel.cpp
+END
+filter_treeview.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/filter_treeview.cpp
+END
+finish_panel.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/finish_panel.cpp
+END
+SyncItem.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/SyncItem.h
+END
+app.rc
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/app.rc
+END
+sync_tab.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/sync_tab.cpp
+END
+settings.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/settings.h
+END
+CWMP.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/CWMP.cpp
+END
+TabButton.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/TabButton.h
+END
+PlayerOptions.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/PlayerOptions.h
+END
+ForgetPassword.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/ForgetPassword.h
+END
+tristate_treeview.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/tristate_treeview.h
+END
+TabController.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/TabController.h
+END
+CiTunes.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/CiTunes.h
+END
+util_funcs.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/util_funcs.h
+END
+ShellLibUtilites.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/ShellLibUtilites.cpp
+END
+AlphaBGForm.resx
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/AlphaBGForm.resx
+END
+ccd_manager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/ccd_manager.cpp
+END
+ControlPanel_Panel.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/ControlPanel_Panel.h
+END
+async_operations.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/async_operations.h
+END
+WM_USER.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/WM_USER.h
+END
+VerifyID.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/VerifyID.h
+END
+CppSQLite3.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/CppSQLite3.cpp
+END
+progress_dialog.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/progress_dialog.h
+END
+sqlite3.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/sqlite3.h
+END
+ReadMe.txt
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/ReadMe.txt
+END
+bandwidth_tab.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/bandwidth_tab.cpp
+END
+AssemblyInfo.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/AssemblyInfo.cpp
+END
+SyncItem.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/SyncItem.cpp
+END
+FileSystemMonitor.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/FileSystemMonitor.cpp
+END
+tray_icon.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/tray_icon.h
+END
+stdafx.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/stdafx.h
+END
+iTunesCOMInterface_i.c
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/iTunesCOMInterface_i.c
+END
+sync_panel.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/sync_panel.h
+END
+MessageProcForm.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/MessageProcForm.h
+END
+icon1.ico
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/icon1.ico
+END
+sync_tab.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/sync_tab.h
+END
+app.ico
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/app.ico
+END
+ForgetPassword.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/ForgetPassword.cpp
+END
+tristate_treeview.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/tristate_treeview.cpp
+END
+CWMP.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/CWMP.h
+END
+util_funcs.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/util_funcs.cpp
+END
+WrapLabel.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/WrapLabel.h
+END
+json_filter.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/json_filter.cpp
+END
+ControlPanel_Panel.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/ControlPanel_Panel.cpp
+END
+build_solution.bat
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/build_solution.bat
+END
+DeviceManagement_Panel.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/DeviceManagement_Panel.h
+END
+VerifyID.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/VerifyID.cpp
+END
+progress_dialog.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/progress_dialog.cpp
+END
+Signup_panel.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/Signup_panel.cpp
+END
+logger.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/logger.h
+END
+MyButton.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/MyButton.h
+END
+tray_icon.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/tray_icon.cpp
+END
+settings_form.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/settings_form.h
+END
+stdafx.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/stdafx.cpp
+END
+sync_panel.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/sync_panel.cpp
+END
+CWinLib.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/CWinLib.h
+END
+resource.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/resource.h
+END
+bandwidth_tab.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/bandwidth_tab.h
+END
+acpanel_win.vcproj
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repo/!svn/ver/18625/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/acpanel_win.vcproj
+END
+FileSystemMonitor.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/FileSystemMonitor.h
+END
+DeviceLabel.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/DeviceLabel.h
+END
+PlayerOptions.resX
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/PlayerOptions.resX
+END
+general_tab.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/general_tab.h
+END
+register_panel.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/register_panel.h
+END
+localized_text.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/localized_text.cpp
+END
+DeviceManagement_Panel.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/DeviceManagement_Panel.cpp
+END
+proxy_tab.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/proxy_tab.h
+END
+start_panel.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/start_panel.cpp
+END
+logger.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/logger.cpp
+END
+MyButton.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/MyButton.cpp
+END
+account_tab.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/account_tab.cpp
+END
+AlphaBGForm.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/AlphaBGForm.cpp
+END
+json_filter.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/json_filter.h
+END
+settings_form.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/settings_form.cpp
+END
+CommonTool.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/CommonTool.cpp
+END
+cMediaController.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/cMediaController.cpp
+END
+CWinLib.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/CWinLib.cpp
+END
+setup_form.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/setup_form.h
+END
+Signup_panel.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repo/!svn/ver/14444/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/Signup_panel.h
+END
+login_panel.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/login_panel.h
+END

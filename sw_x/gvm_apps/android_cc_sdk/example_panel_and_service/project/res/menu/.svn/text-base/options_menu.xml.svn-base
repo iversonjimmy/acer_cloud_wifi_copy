@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <item android:id="@+id/Menu_PauseSync"
+          android:icon="@drawable/ic_menu_stop"
+          android:title="@string/Menu_PauseSync"/>
+          
+    <item android:id="@+id/Menu_ResumeSync"
+          android:icon="@drawable/ic_menu_play_clip"
+          android:title="@string/Menu_ResumeSync"/>
+    
+    <item android:id="@+id/Menu_Exit"
+          android:icon="@drawable/ic_menu_home"
+          android:title="@string/Menu_Exit"/>
+          
+    <item android:id="@+id/Menu_Status"   
+          android:icon="@drawable/ic_menu_view"     
+          android:title="@string/Menu_Status"/>
+          
+    <item android:id="@+id/Menu_Logout"
+          android:icon="@drawable/ic_menu_login"
+          android:title="@string/Menu_Logout"/>
+          
+    <item android:id="@+id/Menu_Settings"
+          android:icon="@drawable/ic_menu_preferences"
+          android:title="@string/Menu_Settings"/>
+          
+    <item android:id="@+id/Menu_RenameDevice"
+          android:icon="@drawable/ic_menu_manage"
+          android:title="@string/Menu_RenameDevice"/>
+          
+    <item android:id="@+id/Menu_UnlinkDevice"
+          android:icon="@drawable/ic_menu_close_clear_cancel"
+          android:title="@string/Menu_UnlinkDevice"/>
+          
+    <item android:id="@+id/Menu_Trashcan"
+          android:icon="@drawable/ic_menu_delete"
+          android:title="@string/Menu_Trashcan"/>
+</menu>

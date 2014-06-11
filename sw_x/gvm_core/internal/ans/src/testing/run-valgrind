@@ -1,0 +1,33 @@
+#! /bin/csh -fb
+
+set log = /tmp/ans_circle.log.$$
+
+onintr cleanup
+
+setenv device_test_program "./ans_circle_s"
+setenv dt_loop_limit 20
+
+while (1)
+    ./run-device | tee $log || break
+
+    grep "==[0-9]*== ERROR SUMMARY: 0 errors from" < $log > /dev/null
+
+    if ($status == 1) then
+        echo "Got an error from valgrind"
+        break;
+    endif
+
+    grep "==[0-9]*== LEAK SUMMARY" < $log > /dev/null
+
+    if ($status == 0) then
+        echo "valgrind found a memory leak"
+        break;
+    endif
+end
+
+echo "The log is $log"
+exit 1
+
+cleanup:
+    echo "Interrupted!"
+    rm -f $log

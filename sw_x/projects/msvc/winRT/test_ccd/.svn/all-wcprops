@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/43469/trunk/sw_x/projects/msvc/winRT/test_ccd
+END
+test_ccd.vcxproj.user
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/25288/trunk/sw_x/projects/msvc/winRT/test_ccd/test_ccd.vcxproj.user
+END
+test_ccd_TemporaryKey.pfx
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repo/!svn/ver/40364/trunk/sw_x/projects/msvc/winRT/test_ccd/test_ccd_TemporaryKey.pfx
+END
+App.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/25297/trunk/sw_x/projects/msvc/winRT/test_ccd/App.xaml
+END
+pch.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/25289/trunk/sw_x/projects/msvc/winRT/test_ccd/pch.h
+END
+MainPage.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/25840/trunk/sw_x/projects/msvc/winRT/test_ccd/MainPage.xaml
+END
+App.xaml.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/25289/trunk/sw_x/projects/msvc/winRT/test_ccd/App.xaml.cpp
+END
+test_ccd.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/40364/trunk/sw_x/projects/msvc/winRT/test_ccd/test_ccd.vcxproj
+END
+MainPage.xaml.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/43469/trunk/sw_x/projects/msvc/winRT/test_ccd/MainPage.xaml.cpp
+END
+App.xaml.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/25289/trunk/sw_x/projects/msvc/winRT/test_ccd/App.xaml.h
+END
+MainPage.xaml.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/25840/trunk/sw_x/projects/msvc/winRT/test_ccd/MainPage.xaml.h
+END
+Package.appxmanifest
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repo/!svn/ver/25297/trunk/sw_x/projects/msvc/winRT/test_ccd/Package.appxmanifest
+END
+test_ccd.vcxproj.filters
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/32817/trunk/sw_x/projects/msvc/winRT/test_ccd/test_ccd.vcxproj.filters
+END
+test_ccd_sync.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/25288/trunk/sw_x/projects/msvc/winRT/test_ccd/test_ccd_sync.h
+END
+pch.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/25289/trunk/sw_x/projects/msvc/winRT/test_ccd/pch.cpp
+END

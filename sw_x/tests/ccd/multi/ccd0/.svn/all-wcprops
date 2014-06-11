@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/repo/!svn/ver/17530/trunk/sw_x/tests/ccd/multi/ccd0
+END
+start_ccd.sh
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repo/!svn/ver/17530/trunk/sw_x/tests/ccd/multi/ccd0/start_ccd.sh
+END

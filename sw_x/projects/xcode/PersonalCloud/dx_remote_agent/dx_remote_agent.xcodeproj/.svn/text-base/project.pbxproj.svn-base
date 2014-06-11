@@ -1,0 +1,584 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		162AB5221785538A000AF104 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 162AB5211785538A000AF104 /* Default-568h@2x.png */; };
+		162AB54B1793B272000AF104 /* libccd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 162AB54A1793B272000AF104 /* libccd.a */; };
+		16D6F569191D8AE8000ADC01 /* DxRemoteTSTestAgent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 16D6F567191D8AE8000ADC01 /* DxRemoteTSTestAgent.cpp */; };
+		16D6F56B191D8B45000ADC01 /* ts_testClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 16D6F56A191D8B45000ADC01 /* ts_testClient.cpp */; };
+		16E648DC177E7A4400A2B8B3 /* common_utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 16E648DB177E7A4400A2B8B3 /* common_utils.cpp */; };
+		3C081017159D378E00C66217 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C081016159D378E00C66217 /* UIKit.framework */; };
+		3C081019159D378E00C66217 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C081018159D378E00C66217 /* Foundation.framework */; };
+		3C08101B159D378E00C66217 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C08101A159D378E00C66217 /* CoreGraphics.framework */; };
+		3C081021159D378E00C66217 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C08101F159D378E00C66217 /* InfoPlist.strings */; };
+		3C081023159D378F00C66217 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C081022159D378F00C66217 /* main.m */; };
+		3C081027159D378F00C66217 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3C081026159D378F00C66217 /* AppDelegate.mm */; };
+		3C08102A159D378F00C66217 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C081029159D378F00C66217 /* ViewController.m */; };
+		3C08102D159D378F00C66217 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C08102B159D378F00C66217 /* ViewController_iPhone.xib */; };
+		3C081030159D378F00C66217 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C08102E159D378F00C66217 /* ViewController_iPad.xib */; };
+		3C08105E159D38C000C66217 /* HttpAgent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C08105A159D38C000C66217 /* HttpAgent.cpp */; };
+		3C08105F159D38C000C66217 /* HttpAgentLocal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C08105C159D38C000C66217 /* HttpAgentLocal.cpp */; };
+		3C081072159D38D900C66217 /* dx_remote_agent.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3C081071159D38D900C66217 /* dx_remote_agent.pb.cc */; };
+		3C0811FF159D3A6C00C66217 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C0811FE159D3A6C00C66217 /* Security.framework */; };
+		3C0815AF159D406600C66217 /* dx_remote_agent_util_ios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C0815AB159D406600C66217 /* dx_remote_agent_util_ios.cpp */; };
+		3C0815B0159D406600C66217 /* dx_remote_agent_util_ios.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3C0815AD159D406600C66217 /* dx_remote_agent_util_ios.mm */; };
+		3C09B9DC15D36B65006D581E /* dx_remote_agent_ios.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3C09B9DB15D36B65006D581E /* dx_remote_agent_ios.mm */; };
+		3C238E1D159D4A9F003B9DBF /* ccdi_rpc-server.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3C238E1C159D4A9F003B9DBF /* ccdi_rpc-server.pb.cc */; };
+		3C7946AA1827875C00814E63 /* BUILD in Resources */ = {isa = PBXBuildFile; fileRef = 3C7946931827875C00814E63 /* BUILD */; };
+		3C7946AB1827875C00814E63 /* dx_remote_agent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C7946941827875C00814E63 /* dx_remote_agent.cpp */; };
+		3C7946AC1827875C00814E63 /* DxRemoteAgentListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C7946971827875C00814E63 /* DxRemoteAgentListener.cpp */; };
+		3C7946AD1827875C00814E63 /* DxRemoteAgentManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C7946991827875C00814E63 /* DxRemoteAgentManager.cpp */; };
+		3C7946AE1827875C00814E63 /* DxRemoteCCDAgent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79469B1827875C00814E63 /* DxRemoteCCDAgent.cpp */; };
+		3C7946AF1827875C00814E63 /* DxRemoteFileTransferAgent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79469D1827875C00814E63 /* DxRemoteFileTransferAgent.cpp */; };
+		3C7946B01827875C00814E63 /* DxRemoteHTTPAgent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79469F1827875C00814E63 /* DxRemoteHTTPAgent.cpp */; };
+		3C7946B11827875C00814E63 /* DxRemoteMSAAgent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C7946A11827875C00814E63 /* DxRemoteMSAAgent.cpp */; };
+		3C7946B21827875C00814E63 /* DxRemoteOSAgent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C7946A31827875C00814E63 /* DxRemoteOSAgent.cpp */; };
+		3C7946B31827875C00814E63 /* DxRemoteQueryDeviceAgent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C7946A51827875C00814E63 /* DxRemoteQueryDeviceAgent.cpp */; };
+		3C7946B41827875C00814E63 /* IDxRemoteAgent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C7946A71827875C00814E63 /* IDxRemoteAgent.cpp */; };
+		3CAF1833159D515000D39828 /* libinternal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CAF182C159D515000D39828 /* libinternal.a */; };
+		3CAF1836159D515000D39828 /* libvpl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CAF182F159D515000D39828 /* libvpl.a */; };
+		3CAF1837159D515000D39828 /* libvplex.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CAF1830159D515000D39828 /* libvplex.a */; };
+		3CAF1838159D515000D39828 /* libprotobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CAF1831159D515000D39828 /* libprotobuf.a */; };
+		3CAF1839159D515000D39828 /* libprotorpc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CAF1832159D515000D39828 /* libprotorpc.a */; };
+		6B0D8CBE165B25D1001A84AE /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0D8CBD165B25D1001A84AE /* ImageIO.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		162AB5211785538A000AF104 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		162AB54A1793B272000AF104 /* libccd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libccd.a; path = "../ccd/build/Release-iphoneos/libccd.a"; sourceTree = "<group>"; };
+		16D6F567191D8AE8000ADC01 /* DxRemoteTSTestAgent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DxRemoteTSTestAgent.cpp; sourceTree = "<group>"; };
+		16D6F568191D8AE8000ADC01 /* DxRemoteTSTestAgent.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DxRemoteTSTestAgent.hpp; sourceTree = "<group>"; };
+		16D6F56A191D8B45000ADC01 /* ts_testClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ts_testClient.cpp; path = ../../../../tests/dxshell/ts_testClient.cpp; sourceTree = "<group>"; };
+		16E648DB177E7A4400A2B8B3 /* common_utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = common_utils.cpp; path = ../../../../tests/dxshell/common_utils.cpp; sourceTree = "<group>"; };
+		16E648E2177E7B7F00A2B8B3 /* common_utils.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = common_utils.hpp; path = ../../../../tests/dxshell/common_utils.hpp; sourceTree = "<group>"; };
+		3C081012159D378E00C66217 /* dx_remote_agent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dx_remote_agent.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C081016159D378E00C66217 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3C081018159D378E00C66217 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3C08101A159D378E00C66217 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3C08101E159D378E00C66217 /* dx_remote_agent-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "dx_remote_agent-Info.plist"; sourceTree = "<group>"; };
+		3C081020159D378E00C66217 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3C081022159D378F00C66217 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3C081024159D378F00C66217 /* dx_remote_agent-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "dx_remote_agent-Prefix.pch"; sourceTree = "<group>"; };
+		3C081025159D378F00C66217 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3C081026159D378F00C66217 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		3C081028159D378F00C66217 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3C081029159D378F00C66217 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3C08102C159D378F00C66217 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		3C08102F159D378F00C66217 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		3C08105A159D38C000C66217 /* HttpAgent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HttpAgent.cpp; path = ../../../../tests/dxshell/HttpAgent.cpp; sourceTree = "<group>"; };
+		3C08105B159D38C000C66217 /* HttpAgent.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = HttpAgent.hpp; path = ../../../../tests/dxshell/HttpAgent.hpp; sourceTree = "<group>"; };
+		3C08105C159D38C000C66217 /* HttpAgentLocal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HttpAgentLocal.cpp; path = ../../../../tests/dxshell/HttpAgentLocal.cpp; sourceTree = "<group>"; };
+		3C08105D159D38C000C66217 /* HttpAgentLocal.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = HttpAgentLocal.hpp; path = ../../../../tests/dxshell/HttpAgentLocal.hpp; sourceTree = "<group>"; };
+		3C081071159D38D900C66217 /* dx_remote_agent.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dx_remote_agent.pb.cc; path = ../../../../tests/dxshell/types/dx_remote_agent.pb.cc; sourceTree = "<group>"; };
+		3C0811FE159D3A6C00C66217 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		3C0815AB159D406600C66217 /* dx_remote_agent_util_ios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dx_remote_agent_util_ios.cpp; sourceTree = "<group>"; };
+		3C0815AC159D406600C66217 /* dx_remote_agent_util_ios.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dx_remote_agent_util_ios.h; sourceTree = "<group>"; };
+		3C0815AD159D406600C66217 /* dx_remote_agent_util_ios.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = dx_remote_agent_util_ios.mm; sourceTree = "<group>"; };
+		3C09B9DB15D36B65006D581E /* dx_remote_agent_ios.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = dx_remote_agent_ios.mm; sourceTree = "<group>"; };
+		3C238E1C159D4A9F003B9DBF /* ccdi_rpc-server.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "ccdi_rpc-server.pb.cc"; path = "../../../../gvm_core/daemons/ccd/rpc_server/ccdi_rpc-server.pb.cc"; sourceTree = "<group>"; };
+		3C7946931827875C00814E63 /* BUILD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BUILD; sourceTree = "<group>"; };
+		3C7946941827875C00814E63 /* dx_remote_agent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dx_remote_agent.cpp; sourceTree = "<group>"; };
+		3C7946951827875C00814E63 /* dx_remote_agent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dx_remote_agent.h; sourceTree = "<group>"; };
+		3C7946961827875C00814E63 /* dx_remote_agent_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dx_remote_agent_util.h; sourceTree = "<group>"; };
+		3C7946971827875C00814E63 /* DxRemoteAgentListener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DxRemoteAgentListener.cpp; sourceTree = "<group>"; };
+		3C7946981827875C00814E63 /* DxRemoteAgentListener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DxRemoteAgentListener.hpp; sourceTree = "<group>"; };
+		3C7946991827875C00814E63 /* DxRemoteAgentManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DxRemoteAgentManager.cpp; sourceTree = "<group>"; };
+		3C79469A1827875C00814E63 /* DxRemoteAgentManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DxRemoteAgentManager.hpp; sourceTree = "<group>"; };
+		3C79469B1827875C00814E63 /* DxRemoteCCDAgent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DxRemoteCCDAgent.cpp; sourceTree = "<group>"; };
+		3C79469C1827875C00814E63 /* DxRemoteCCDAgent.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DxRemoteCCDAgent.hpp; sourceTree = "<group>"; };
+		3C79469D1827875C00814E63 /* DxRemoteFileTransferAgent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DxRemoteFileTransferAgent.cpp; sourceTree = "<group>"; };
+		3C79469E1827875C00814E63 /* DxRemoteFileTransferAgent.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DxRemoteFileTransferAgent.hpp; sourceTree = "<group>"; };
+		3C79469F1827875C00814E63 /* DxRemoteHTTPAgent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DxRemoteHTTPAgent.cpp; sourceTree = "<group>"; };
+		3C7946A01827875C00814E63 /* DxRemoteHTTPAgent.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DxRemoteHTTPAgent.hpp; sourceTree = "<group>"; };
+		3C7946A11827875C00814E63 /* DxRemoteMSAAgent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DxRemoteMSAAgent.cpp; sourceTree = "<group>"; };
+		3C7946A21827875C00814E63 /* DxRemoteMSAAgent.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DxRemoteMSAAgent.hpp; sourceTree = "<group>"; };
+		3C7946A31827875C00814E63 /* DxRemoteOSAgent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DxRemoteOSAgent.cpp; sourceTree = "<group>"; };
+		3C7946A41827875C00814E63 /* DxRemoteOSAgent.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DxRemoteOSAgent.hpp; sourceTree = "<group>"; };
+		3C7946A51827875C00814E63 /* DxRemoteQueryDeviceAgent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DxRemoteQueryDeviceAgent.cpp; sourceTree = "<group>"; };
+		3C7946A61827875C00814E63 /* DxRemoteQueryDeviceAgent.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DxRemoteQueryDeviceAgent.hpp; sourceTree = "<group>"; };
+		3C7946A71827875C00814E63 /* IDxRemoteAgent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IDxRemoteAgent.cpp; sourceTree = "<group>"; };
+		3C7946A81827875C00814E63 /* IDxRemoteAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDxRemoteAgent.h; sourceTree = "<group>"; };
+		3C7946A91827875C00814E63 /* PrepareProtoBufSizeStream.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PrepareProtoBufSizeStream.hpp; sourceTree = "<group>"; };
+		3CAF182C159D515000D39828 /* libinternal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libinternal.a; path = "../internal/build/Release-iphoneos/libinternal.a"; sourceTree = "<group>"; };
+		3CAF182E159D515000D39828 /* libsqlite3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libsqlite3.a; path = "../libsqlite3/build/Release-iphoneos/libsqlite3.a"; sourceTree = "<group>"; };
+		3CAF182F159D515000D39828 /* libvpl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libvpl.a; path = "../libvpl/build/Release-iphoneos/libvpl.a"; sourceTree = "<group>"; };
+		3CAF1830159D515000D39828 /* libvplex.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libvplex.a; path = "../libvplex/build/Release-iphoneos/libvplex.a"; sourceTree = "<group>"; };
+		3CAF1831159D515000D39828 /* libprotobuf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libprotobuf.a; path = "../protobuf/build/Release-iphoneos/libprotobuf.a"; sourceTree = "<group>"; };
+		3CAF1832159D515000D39828 /* libprotorpc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libprotorpc.a; path = "../protorpc/build/Release-iphoneos/libprotorpc.a"; sourceTree = "<group>"; };
+		3CAF1841159D776C00D39828 /* dx_remote_agent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = dx_remote_agent.entitlements; sourceTree = "<group>"; };
+		6B0D8CBD165B25D1001A84AE /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3C08100F159D378E00C66217 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B0D8CBE165B25D1001A84AE /* ImageIO.framework in Frameworks */,
+				3CAF1833159D515000D39828 /* libinternal.a in Frameworks */,
+				3CAF1836159D515000D39828 /* libvpl.a in Frameworks */,
+				3CAF1837159D515000D39828 /* libvplex.a in Frameworks */,
+				3CAF1838159D515000D39828 /* libprotobuf.a in Frameworks */,
+				3CAF1839159D515000D39828 /* libprotorpc.a in Frameworks */,
+				3C0811FF159D3A6C00C66217 /* Security.framework in Frameworks */,
+				3C081017159D378E00C66217 /* UIKit.framework in Frameworks */,
+				3C081019159D378E00C66217 /* Foundation.framework in Frameworks */,
+				3C08101B159D378E00C66217 /* CoreGraphics.framework in Frameworks */,
+				162AB54B1793B272000AF104 /* libccd.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3C081007159D378E00C66217 = {
+			isa = PBXGroup;
+			children = (
+				162AB5211785538A000AF104 /* Default-568h@2x.png */,
+				6B0D8CBD165B25D1001A84AE /* ImageIO.framework */,
+				3CAF182C159D515000D39828 /* libinternal.a */,
+				3CAF182E159D515000D39828 /* libsqlite3.a */,
+				3CAF182F159D515000D39828 /* libvpl.a */,
+				3CAF1830159D515000D39828 /* libvplex.a */,
+				3CAF1831159D515000D39828 /* libprotobuf.a */,
+				3CAF1832159D515000D39828 /* libprotorpc.a */,
+				162AB54A1793B272000AF104 /* libccd.a */,
+				3C0811FE159D3A6C00C66217 /* Security.framework */,
+				3C081036159D385300C66217 /* src */,
+				3C08101C159D378E00C66217 /* dx_remote_agent */,
+				3C081015159D378E00C66217 /* Frameworks */,
+				3C081013159D378E00C66217 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3C081013159D378E00C66217 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3C081012159D378E00C66217 /* dx_remote_agent.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3C081015159D378E00C66217 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C081016159D378E00C66217 /* UIKit.framework */,
+				3C081018159D378E00C66217 /* Foundation.framework */,
+				3C08101A159D378E00C66217 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3C08101C159D378E00C66217 /* dx_remote_agent */ = {
+			isa = PBXGroup;
+			children = (
+				3CAF1841159D776C00D39828 /* dx_remote_agent.entitlements */,
+				3C081025159D378F00C66217 /* AppDelegate.h */,
+				3C081026159D378F00C66217 /* AppDelegate.mm */,
+				3C081028159D378F00C66217 /* ViewController.h */,
+				3C081029159D378F00C66217 /* ViewController.m */,
+				3C08102B159D378F00C66217 /* ViewController_iPhone.xib */,
+				3C08102E159D378F00C66217 /* ViewController_iPad.xib */,
+				3C08101D159D378E00C66217 /* Supporting Files */,
+			);
+			path = dx_remote_agent;
+			sourceTree = "<group>";
+		};
+		3C08101D159D378E00C66217 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3C08101E159D378E00C66217 /* dx_remote_agent-Info.plist */,
+				3C08101F159D378E00C66217 /* InfoPlist.strings */,
+				3C081022159D378F00C66217 /* main.m */,
+				3C081024159D378F00C66217 /* dx_remote_agent-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3C081036159D385300C66217 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				16D6F56A191D8B45000ADC01 /* ts_testClient.cpp */,
+				16E648E2177E7B7F00A2B8B3 /* common_utils.hpp */,
+				16E648DB177E7A4400A2B8B3 /* common_utils.cpp */,
+				3C238E1C159D4A9F003B9DBF /* ccdi_rpc-server.pb.cc */,
+				3C0815A9159D406600C66217 /* platform_ios */,
+				3C081071159D38D900C66217 /* dx_remote_agent.pb.cc */,
+				3C08105A159D38C000C66217 /* HttpAgent.cpp */,
+				3C08105B159D38C000C66217 /* HttpAgent.hpp */,
+				3C08105C159D38C000C66217 /* HttpAgentLocal.cpp */,
+				3C08105D159D38C000C66217 /* HttpAgentLocal.hpp */,
+				3C7946921827875C00814E63 /* dx_remote_agent */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		3C0815A9159D406600C66217 /* platform_ios */ = {
+			isa = PBXGroup;
+			children = (
+				3C09B9DB15D36B65006D581E /* dx_remote_agent_ios.mm */,
+				3C0815AB159D406600C66217 /* dx_remote_agent_util_ios.cpp */,
+				3C0815AC159D406600C66217 /* dx_remote_agent_util_ios.h */,
+				3C0815AD159D406600C66217 /* dx_remote_agent_util_ios.mm */,
+			);
+			name = platform_ios;
+			path = ../../../../gvm_apps/dx_remote_agent/platform_ios;
+			sourceTree = "<group>";
+		};
+		3C7946921827875C00814E63 /* dx_remote_agent */ = {
+			isa = PBXGroup;
+			children = (
+				16D6F567191D8AE8000ADC01 /* DxRemoteTSTestAgent.cpp */,
+				16D6F568191D8AE8000ADC01 /* DxRemoteTSTestAgent.hpp */,
+				3C7946931827875C00814E63 /* BUILD */,
+				3C7946941827875C00814E63 /* dx_remote_agent.cpp */,
+				3C7946951827875C00814E63 /* dx_remote_agent.h */,
+				3C7946961827875C00814E63 /* dx_remote_agent_util.h */,
+				3C7946971827875C00814E63 /* DxRemoteAgentListener.cpp */,
+				3C7946981827875C00814E63 /* DxRemoteAgentListener.hpp */,
+				3C7946991827875C00814E63 /* DxRemoteAgentManager.cpp */,
+				3C79469A1827875C00814E63 /* DxRemoteAgentManager.hpp */,
+				3C79469B1827875C00814E63 /* DxRemoteCCDAgent.cpp */,
+				3C79469C1827875C00814E63 /* DxRemoteCCDAgent.hpp */,
+				3C79469D1827875C00814E63 /* DxRemoteFileTransferAgent.cpp */,
+				3C79469E1827875C00814E63 /* DxRemoteFileTransferAgent.hpp */,
+				3C79469F1827875C00814E63 /* DxRemoteHTTPAgent.cpp */,
+				3C7946A01827875C00814E63 /* DxRemoteHTTPAgent.hpp */,
+				3C7946A11827875C00814E63 /* DxRemoteMSAAgent.cpp */,
+				3C7946A21827875C00814E63 /* DxRemoteMSAAgent.hpp */,
+				3C7946A31827875C00814E63 /* DxRemoteOSAgent.cpp */,
+				3C7946A41827875C00814E63 /* DxRemoteOSAgent.hpp */,
+				3C7946A51827875C00814E63 /* DxRemoteQueryDeviceAgent.cpp */,
+				3C7946A61827875C00814E63 /* DxRemoteQueryDeviceAgent.hpp */,
+				3C7946A71827875C00814E63 /* IDxRemoteAgent.cpp */,
+				3C7946A81827875C00814E63 /* IDxRemoteAgent.h */,
+				3C7946A91827875C00814E63 /* PrepareProtoBufSizeStream.hpp */,
+			);
+			name = dx_remote_agent;
+			path = ../../../../tests/dx_remote_agent;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3C081011159D378E00C66217 /* dx_remote_agent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C081033159D378F00C66217 /* Build configuration list for PBXNativeTarget "dx_remote_agent" */;
+			buildPhases = (
+				3C08100E159D378E00C66217 /* Sources */,
+				3C08100F159D378E00C66217 /* Frameworks */,
+				3C081010159D378E00C66217 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = dx_remote_agent;
+			productName = dx_remote_agent;
+			productReference = 3C081012159D378E00C66217 /* dx_remote_agent.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3C081009159D378E00C66217 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+			};
+			buildConfigurationList = 3C08100C159D378E00C66217 /* Build configuration list for PBXProject "dx_remote_agent" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3C081007159D378E00C66217;
+			productRefGroup = 3C081013159D378E00C66217 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3C081011159D378E00C66217 /* dx_remote_agent */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3C081010159D378E00C66217 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C081021159D378E00C66217 /* InfoPlist.strings in Resources */,
+				3C08102D159D378F00C66217 /* ViewController_iPhone.xib in Resources */,
+				3C081030159D378F00C66217 /* ViewController_iPad.xib in Resources */,
+				162AB5221785538A000AF104 /* Default-568h@2x.png in Resources */,
+				3C7946AA1827875C00814E63 /* BUILD in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3C08100E159D378E00C66217 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C081023159D378F00C66217 /* main.m in Sources */,
+				3C081027159D378F00C66217 /* AppDelegate.mm in Sources */,
+				3C08102A159D378F00C66217 /* ViewController.m in Sources */,
+				3C08105E159D38C000C66217 /* HttpAgent.cpp in Sources */,
+				3C08105F159D38C000C66217 /* HttpAgentLocal.cpp in Sources */,
+				3C081072159D38D900C66217 /* dx_remote_agent.pb.cc in Sources */,
+				3C0815AF159D406600C66217 /* dx_remote_agent_util_ios.cpp in Sources */,
+				3C0815B0159D406600C66217 /* dx_remote_agent_util_ios.mm in Sources */,
+				3C238E1D159D4A9F003B9DBF /* ccdi_rpc-server.pb.cc in Sources */,
+				3C09B9DC15D36B65006D581E /* dx_remote_agent_ios.mm in Sources */,
+				16E648DC177E7A4400A2B8B3 /* common_utils.cpp in Sources */,
+				3C7946AB1827875C00814E63 /* dx_remote_agent.cpp in Sources */,
+				3C7946AC1827875C00814E63 /* DxRemoteAgentListener.cpp in Sources */,
+				3C7946AD1827875C00814E63 /* DxRemoteAgentManager.cpp in Sources */,
+				3C7946AE1827875C00814E63 /* DxRemoteCCDAgent.cpp in Sources */,
+				3C7946AF1827875C00814E63 /* DxRemoteFileTransferAgent.cpp in Sources */,
+				3C7946B01827875C00814E63 /* DxRemoteHTTPAgent.cpp in Sources */,
+				3C7946B11827875C00814E63 /* DxRemoteMSAAgent.cpp in Sources */,
+				3C7946B21827875C00814E63 /* DxRemoteOSAgent.cpp in Sources */,
+				3C7946B31827875C00814E63 /* DxRemoteQueryDeviceAgent.cpp in Sources */,
+				3C7946B41827875C00814E63 /* IDxRemoteAgent.cpp in Sources */,
+				16D6F569191D8AE8000ADC01 /* DxRemoteTSTestAgent.cpp in Sources */,
+				16D6F56B191D8B45000ADC01 /* ts_testClient.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3C08101F159D378E00C66217 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3C081020159D378E00C66217 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3C08102B159D378F00C66217 /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3C08102C159D378F00C66217 /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		3C08102E159D378F00C66217 /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3C08102F159D378F00C66217 /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3C081031159D378F00C66217 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
+					"VPL_PLAT_IS_ARM=1",
+					"IOS=1",
+					"VPL_HOST_IS_LITTLE_ENDIAN=1",
+					"_USER_LEVEL=1",
+					"HOST_IS_LITTLE_ENDIAN=1",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../../../../gvm_core/vpl/include,
+					../../../../gvm_core/vplex/include,
+					../../../../gvm_core/daemons/ccd/rpc_server,
+					../../../../gvm_core/daemons/ccd/types/src,
+					../../../../gvm_core/vpl/posix_include,
+					../../../../gvm_core/vpl/platform_linux/include,
+					../../../../gvm_core/vplex/posix_include,
+					../../../../gvm_core/vplex/platform_ios/include,
+					../../../../gvm_core/daemons/ccd/include,
+					../../../../gvm_core/vplex/proto,
+					../../../../gvm_core/external/protobuflib,
+					../../../../gvm_core/internal/media_metadata/common/include,
+					../../../../gvm_core/internal/log/include,
+					../../../../gvm_core/internal/protorpc,
+					../../../../gvm_core/internal/error_codes/include,
+					../../../../gvm_core/internal/file_utils/include,
+					../../../../gvm_apps/actool/platform_ios/platform_ios,
+					../../../../gvm_core/internal/Ts2/include,
+					../../../../gvm_core/internal/Ts2Alt/Ext/src,
+					../../../../gvm_core/internal/Ts2/LocalInfo/include,
+					../../../../gvm_core/daemons/ccd/client/include,
+					../../../../storageNode/src,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "../../../../tests/dxshell_rc/dx_remote_agent ../../../../gvm_apps/dx_remote_agent/platform_ios ../../../../tests/dxshell/types";
+			};
+			name = Debug;
+		};
+		3C081032159D378F00C66217 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
+					"VPL_PLAT_IS_ARM=1",
+					"IOS=1",
+					"VPL_HOST_IS_LITTLE_ENDIAN=1",
+					"_USER_LEVEL=1",
+					"HOST_IS_LITTLE_ENDIAN=1",
+				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../../../../gvm_core/vpl/include,
+					../../../../gvm_core/vplex/include,
+					../../../../gvm_core/daemons/ccd/rpc_server,
+					../../../../gvm_core/daemons/ccd/types/src,
+					../../../../gvm_core/vpl/posix_include,
+					../../../../gvm_core/vpl/platform_linux/include,
+					../../../../gvm_core/vplex/posix_include,
+					../../../../gvm_core/vplex/platform_ios/include,
+					../../../../gvm_core/daemons/ccd/include,
+					../../../../gvm_core/vplex/proto,
+					../../../../gvm_core/external/protobuflib,
+					../../../../gvm_core/internal/media_metadata/common/include,
+					../../../../gvm_core/internal/log/include,
+					../../../../gvm_core/internal/protorpc,
+					../../../../gvm_core/internal/error_codes/include,
+					../../../../gvm_core/internal/file_utils/include,
+					../../../../gvm_apps/actool/platform_ios/platform_ios,
+					../../../../gvm_core/internal/Ts2/include,
+					../../../../gvm_core/internal/Ts2Alt/Ext/src,
+					../../../../gvm_core/internal/Ts2/LocalInfo/include,
+					../../../../gvm_core/daemons/ccd/client/include,
+					../../../../storageNode/src,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "../../../../tests/dxshell_rc/dx_remote_agent ../../../../gvm_apps/dx_remote_agent/platform_ios ../../../../tests/dxshell/types";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3C081034159D378F00C66217 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = dx_remote_agent/dx_remote_agent.entitlements;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "dx_remote_agent/dx_remote_agent-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "$(inherited)";
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "dx_remote_agent/dx_remote_agent-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../ccd/build/Release-iphoneos\"",
+					"\"$(SRCROOT)/../internal/build/Release-iphoneos\"",
+					"\"$(SRCROOT)/../libvpl/build/Release-iphoneos\"",
+					"\"$(SRCROOT)/../libvplex/build/Release-iphoneos\"",
+					"\"$(SRCROOT)/../protobuf/build/Release-iphoneos\"",
+					"\"$(SRCROOT)/../protorpc/build/Release-iphoneos\"",
+					"\"$(SRCROOT)/../libsqlite3/build/Release-iphoneos\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(inherited)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3C081035159D378F00C66217 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = dx_remote_agent/dx_remote_agent.entitlements;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "dx_remote_agent/dx_remote_agent-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "$(inherited)";
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "dx_remote_agent/dx_remote_agent-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../ccd/build/Release-iphoneos\"",
+					"\"$(SRCROOT)/../internal/build/Release-iphoneos\"",
+					"\"$(SRCROOT)/../libvpl/build/Release-iphoneos\"",
+					"\"$(SRCROOT)/../libvplex/build/Release-iphoneos\"",
+					"\"$(SRCROOT)/../protobuf/build/Release-iphoneos\"",
+					"\"$(SRCROOT)/../protorpc/build/Release-iphoneos\"",
+					"\"$(SRCROOT)/../libsqlite3/build/Release-iphoneos\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(inherited)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3C08100C159D378E00C66217 /* Build configuration list for PBXProject "dx_remote_agent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C081031159D378F00C66217 /* Debug */,
+				3C081032159D378F00C66217 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C081033159D378F00C66217 /* Build configuration list for PBXNativeTarget "dx_remote_agent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C081034159D378F00C66217 /* Debug */,
+				3C081035159D378F00C66217 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3C081009159D378E00C66217 /* Project object */;
+}

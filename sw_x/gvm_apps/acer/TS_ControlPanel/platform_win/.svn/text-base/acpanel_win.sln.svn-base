@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "acpanel_win", "acpanel_win.vcproj", "{8467B8D4-DA25-4A10-8157-E5C48E3D924F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8467B8D4-DA25-4A10-8157-E5C48E3D924F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8467B8D4-DA25-4A10-8157-E5C48E3D924F}.Debug|Win32.Build.0 = Debug|Win32
+		{8467B8D4-DA25-4A10-8157-E5C48E3D924F}.Release|Win32.ActiveCfg = Release|Win32
+		{8467B8D4-DA25-4A10-8157-E5C48E3D924F}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

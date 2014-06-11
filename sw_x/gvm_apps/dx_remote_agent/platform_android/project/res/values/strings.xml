@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="App_Name">DX Agent</string>
+
+	<!-- StatusActivity -->
+
+	<string name="Label_Status">DX Remote Agent</string>
+
+	<string name="Label_AppVersionHeader">Static Info</string>
+	<string name="Label_AppVersion">App version</string>
+
+	<string name="Label_StatTotals">Totals</string>
+	<string name="Label_Connections">Connections</string>
+	<string name="Label_Requests">Requests</string>
+	<string name="Label_Responses">Responses</string>
+
+	<string name="Label_SyncStatusHeader">Current status</string>
+	<string name="Label_SyncState">Summary</string>
+
+</resources>

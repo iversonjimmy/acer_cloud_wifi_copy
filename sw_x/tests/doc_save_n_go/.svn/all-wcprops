@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repo/!svn/ver/57229/trunk/sw_x/tests/doc_save_n_go
+END
+test-bad-rename.sh
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/57229/trunk/sw_x/tests/doc_save_n_go/test-bad-rename.sh
+END
+test-user-switch.sh
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/57229/trunk/sw_x/tests/doc_save_n_go/test-user-switch.sh
+END
+test-10uploads-stop-go.sh
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/57229/trunk/sw_x/tests/doc_save_n_go/test-10uploads-stop-go.sh
+END
+test-10uploads-5renames.sh
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/57229/trunk/sw_x/tests/doc_save_n_go/test-10uploads-5renames.sh
+END
+test-10uploads.sh
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/57229/trunk/sw_x/tests/doc_save_n_go/test-10uploads.sh
+END

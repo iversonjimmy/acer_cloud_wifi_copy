@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/repo/!svn/ver/25449/trunk/sw_x/devtools/win32
+END
+win32_env_defs.mk
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/25449/trunk/sw_x/devtools/win32/win32_env_defs.mk
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/repo/!svn/ver/7473/trunk/sw_x/devtools/win32/Makefile
+END

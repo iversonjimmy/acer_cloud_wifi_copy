@@ -1,0 +1,191 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/repo/!svn/ver/58997/trunk/sw_x/tests/test_utils
+END
+CallGetLocalHttpInfo.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/57230/trunk/sw_x/tests/test_utils/CallGetLocalHttpInfo.cpp
+END
+FindDatasetCCD.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/15397/trunk/sw_x/tests/test_utils/FindDatasetCCD.hpp
+END
+VisitDatasetEntryCCD.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/13295/trunk/sw_x/tests/test_utils/VisitDatasetEntryCCD.hpp
+END
+fileClone.py
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/2228/trunk/sw_x/tests/test_utils/fileClone.py
+END
+createProcess.py
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/2427/trunk/sw_x/tests/test_utils/createProcess.py
+END
+linkedDevices.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/28845/trunk/sw_x/tests/test_utils/linkedDevices.cpp
+END
+linkDevice.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/20967/trunk/sw_x/tests/test_utils/linkDevice.cpp
+END
+ConfigPicstream.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/57230/trunk/sw_x/tests/test_utils/ConfigPicstream.cpp
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/repo/!svn/ver/29524/trunk/sw_x/tests/test_utils/BUILD
+END
+registerStorageNode.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/25383/trunk/sw_x/tests/test_utils/registerStorageNode.cpp
+END
+unlinkDevice.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repo/!svn/ver/20967/trunk/sw_x/tests/test_utils/unlinkDevice.cpp
+END
+VisitDatasetCCD.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/13295/trunk/sw_x/tests/test_utils/VisitDatasetCCD.hpp
+END
+listStorageNodes.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/58997/trunk/sw_x/tests/test_utils/listStorageNodes.cpp
+END
+subscribeMobileCam.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/20967/trunk/sw_x/tests/test_utils/subscribeMobileCam.cpp
+END
+addSyncSubscription.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/25383/trunk/sw_x/tests/test_utils/addSyncSubscription.cpp
+END
+UploadToPicstream.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/57230/trunk/sw_x/tests/test_utils/UploadToPicstream.cpp
+END
+ccdStop.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repo/!svn/ver/1915/trunk/sw_x/tests/test_utils/ccdStop.cpp
+END
+fileWatcher.py
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/30317/trunk/sw_x/tests/test_utils/fileWatcher.py
+END
+listDatasets.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repo/!svn/ver/16869/trunk/sw_x/tests/test_utils/listDatasets.cpp
+END
+listDatasetDirectory.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/23925/trunk/sw_x/tests/test_utils/listDatasetDirectory.cpp
+END
+GetAcerCloudAccessTokens.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/29524/trunk/sw_x/tests/test_utils/GetAcerCloudAccessTokens.cpp
+END
+vsListOwnedDataSets.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/28929/trunk/sw_x/tests/test_utils/vsListOwnedDataSets.cpp
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/repo/!svn/ver/2028/trunk/sw_x/tests/test_utils/README
+END
+ccdWaitUntilInSync.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/57230/trunk/sw_x/tests/test_utils/ccdWaitUntilInSync.cpp
+END
+fileGen.py
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repo/!svn/ver/2009/trunk/sw_x/tests/test_utils/fileGen.py
+END
+subscribe.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/58996/trunk/sw_x/tests/test_utils/subscribe.cpp
+END
+ccdLogin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repo/!svn/ver/33841/trunk/sw_x/tests/test_utils/ccdLogin.cpp
+END
+ccdLogout.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/20967/trunk/sw_x/tests/test_utils/ccdLogout.cpp
+END
+fileCmp.py
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repo/!svn/ver/2228/trunk/sw_x/tests/test_utils/fileCmp.py
+END
+ccdSync.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repo/!svn/ver/1915/trunk/sw_x/tests/test_utils/ccdSync.cpp
+END
+LoginCCD.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repo/!svn/ver/17390/trunk/sw_x/tests/test_utils/LoginCCD.hpp
+END

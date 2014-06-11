@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/681/trunk/sw_x/gvm_core/vpl/tests/microbench/condvar
+END
+vpl_condvar_timing.c
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repo/!svn/ver/681/trunk/sw_x/gvm_core/vpl/tests/microbench/condvar/vpl_condvar_timing.c
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/681/trunk/sw_x/gvm_core/vpl/tests/microbench/condvar/Makefile
+END

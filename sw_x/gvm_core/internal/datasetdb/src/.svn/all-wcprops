@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/28307/trunk/sw_x/gvm_core/internal/datasetdb/src
+END
+utf8.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/26234/trunk/sw_x/gvm_core/internal/datasetdb/src/utf8.cpp
+END
+DatasetDB.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/28307/trunk/sw_x/gvm_core/internal/datasetdb/src/DatasetDB.cpp
+END
+unicode_upcase_table.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repo/!svn/ver/26232/trunk/sw_x/gvm_core/internal/datasetdb/src/unicode_upcase_table.cpp
+END

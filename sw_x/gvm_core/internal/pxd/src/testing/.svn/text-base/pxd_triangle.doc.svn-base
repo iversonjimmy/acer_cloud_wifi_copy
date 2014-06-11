@@ -1,0 +1,74 @@
+    To run the pxd_triangle program, you need a live PXD server and a
+live ANS server, and they need to be able to talk to each other.  A
+lab environment should be okay if you use a real Acer Cloud account
+that's valid for the lab.
+
+    You will need to edit the start-real script to point it at your
+ANS server, unless you want to use the default.  Locate the line:
+    export pxd_ans_dns=...
+and insert your server there.
+
+    Your PATH environment variable ($path for csh users) must point to
+the currently-supported java binary in /opt/routefree.  Currently,
+        $ export PATH=/opt/routefree/java1.6/bin/:$PATH
+is correct.  The default java installation often doesn't seem to work
+with the jar files from the Acer build.
+
+If you use fake user ids, you might need to disable the IAS login
+checks run by the ANS server.  To do that:
+    # ssh root@<ANS host>
+    # /opt/broadon/pkgs/ans/bin/ansManager localhost set-cluster login-checks off
+
+If you want to run the PXD demon locally, first build the server.  You
+will need to run a full "infra" build if that hasn't been done.
+    $ cd $WORKAREA/sw_i/infra/modules/pxd
+    $ make install
+
+Then start the server as root:
+    # cd $WORKAREA/sw_x/gvm_core/internal/pxd/src/testing
+    # ./start-real
+You might need to kill any HTTP servers to get the PXD server running.
+See the pxd_triangle.doc file for information on how to do that.
+
+The server log will in
+    /tmp/server.log
+
+Displaying the log on the screen directly will slow the server down
+noticeably, so you'll need to run tail -f to watch it.
+
+Then you will need to build the pxd_triangle program.
+    $ cd $WORKAREA/sw_x
+    $ export DEBUG=1
+    $ export PRODUCT=linux
+    $ make libpxd
+    $ cd $WORKAREA/sw_x/gvm_core/internal/pxd/src
+    $ make pxd_triangle
+
+Then you'll need to get user and device ids, and some ANS credentials,
+and set the environment variables:
+    $ export client_user=<id>
+    $ export client_device=<id>
+    $ export server_user=<id>
+    $ export server_device=<id>
+    $ export server_instance=<instance>
+    $ export ans_blob=<blob>
+    $ export ans_key=<key>
+
+The instance id can be any string, at this point.  The
+run-triangle-fast script has some example credentials.
+
+To generate credentials, you can run the ans_circle test program with
+one of the scripts and pull the values out of the log.  Someone
+probably should write a Java program to produce ids and credentials on
+the fly.
+
+Once all the previously-listed environment variables are set, you can
+run the pxd_triangle program against your local machine:
+    $ export ans_host=<ANS server>
+    $ export pxd_host=localhost
+    $ cd $WORKAREA/sw_x/gvm_core/internal/pxd/src/testing
+    $ ./run-triangle
+
+You then can run the pxd_triangle test in a loop with:
+    $ cd $WORKAREA/sw_x/gvm_core/internal/pxd/src/testing
+    $ ./run-triangle-preconfig

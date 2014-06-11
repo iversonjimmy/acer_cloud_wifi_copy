@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/54059/trunk/sw_x/gvm_core/internal/Ts2Alt/Wrapper/src
+END
+ts_pool.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repo/!svn/ver/54059/trunk/sw_x/gvm_core/internal/Ts2Alt/Wrapper/src/ts_pool.cpp
+END
+ts_client.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/52263/trunk/sw_x/gvm_core/internal/Ts2Alt/Wrapper/src/ts_client.cpp
+END
+ts_pool.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repo/!svn/ver/48393/trunk/sw_x/gvm_core/internal/Ts2Alt/Wrapper/src/ts_pool.hpp
+END

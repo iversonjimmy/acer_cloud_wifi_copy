@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp
+END
+Device.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/Device.java
+END
+Service.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/Service.java
+END
+AllowedValueRange.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/AllowedValueRange.java
+END
+ServiceStateTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/ServiceStateTable.java
+END
+ActionList.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/ActionList.java
+END
+Action.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/Action.java
+END
+ArgumentList.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/ArgumentList.java
+END
+AllowedValueList.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/AllowedValueList.java
+END
+Argument.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/Argument.java
+END
+UPnP.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/UPnP.java
+END
+IconList.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/IconList.java
+END
+AllowedValue.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/AllowedValue.java
+END
+UPnPStatus.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/UPnPStatus.java
+END
+StateVariable.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/StateVariable.java
+END
+RootDescription.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/RootDescription.java
+END
+Icon.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/Icon.java
+END
+ControlPoint.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/ControlPoint.java
+END
+DeviceList.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/DeviceList.java
+END
+ServiceList.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/ServiceList.java
+END

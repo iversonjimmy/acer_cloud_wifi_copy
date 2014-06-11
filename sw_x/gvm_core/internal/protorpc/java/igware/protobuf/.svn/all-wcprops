@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/12101/trunk/sw_x/gvm_core/internal/protorpc/java/igware/protobuf
+END
+RpcLayerException.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repo/!svn/ver/425/trunk/sw_x/gvm_core/internal/protorpc/java/igware/protobuf/RpcLayerException.java
+END
+AbstractByteArrayProtoChannel.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repo/!svn/ver/12101/trunk/sw_x/gvm_core/internal/protorpc/java/igware/protobuf/AbstractByteArrayProtoChannel.java
+END
+ProtoRpcClient.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repo/!svn/ver/425/trunk/sw_x/gvm_core/internal/protorpc/java/igware/protobuf/ProtoRpcClient.java
+END
+ProtoRpcException.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repo/!svn/ver/425/trunk/sw_x/gvm_core/internal/protorpc/java/igware/protobuf/ProtoRpcException.java
+END
+AppLayerException.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repo/!svn/ver/425/trunk/sw_x/gvm_core/internal/protorpc/java/igware/protobuf/AppLayerException.java
+END
+ProtoChannel.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repo/!svn/ver/425/trunk/sw_x/gvm_core/internal/protorpc/java/igware/protobuf/ProtoChannel.java
+END
+BasicProtoChannel.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repo/!svn/ver/425/trunk/sw_x/gvm_core/internal/protorpc/java/igware/protobuf/BasicProtoChannel.java
+END

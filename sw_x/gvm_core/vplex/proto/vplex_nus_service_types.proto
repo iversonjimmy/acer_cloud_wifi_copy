@@ -1,0 +1,116 @@
+// Input and output types for infrastructure services.
+// This .proto is used to generate the client-side SOAP client.
+// It needs to match the infra-side WSDL/XSD.
+// When editing this file, be sure to also update
+// sw_i/infra/modules/nus/WebContent/NetUpdate.wsdl and/or
+// sw_i/infra/modules/nus/WebContent/NetUpdateBaseTypes.xsd.
+
+option java_package = "igware.vplex.pb";
+option java_outer_classname = "NusServiceTypes";
+
+package vplex.nus;
+
+message AbstractRequestType {
+    required string Version = 1;
+    required string MessageId = 2;
+    required fixed64 DeviceId = 3;
+    required string RegionId = 4;
+    required string CountryCode = 5;
+    optional sint32 VirtualDeviceType = 6;
+    optional string Language = 7;
+    optional string SerialNo = 8;
+    optional string AccountId = 9;
+    optional fixed64 UserId = 10;
+}
+
+message AbstractResponseType {
+    required string Version = 1;
+    required fixed64 DeviceId = 2;
+    required string MessageId = 3;
+    required fixed64 TimeStamp = 4;
+    required sint32 ErrorCode = 5;
+    optional string ErrorMessage = 6;
+}
+
+message TitleVersionType {
+    required string TitleId = 1;
+    required sint32 Version = 2;
+    optional sint64 FsSize = 3;
+    optional sint32 TicketSize = 4;
+    optional sint32 TMDSize = 5;
+    optional string AppGUID = 6;
+    optional string AppVersion = 7;
+    optional string AppMinVersion = 8;
+    optional string CcdMinVersion = 9;
+    optional string AppMessage = 10;
+}
+
+//==========================================
+// GetSystemUpdate
+//==========================================
+
+message GetSystemUpdateRequestType {
+    required AbstractRequestType _inherited = 1;
+    repeated TitleVersionType TitleVersion = 2;
+    optional sint32 Attribute = 3;
+    optional string AuditData = 4;
+    optional sint32 RunTimeTypeMask = 5;
+    optional string Group = 6;
+}
+
+message GetSystemUpdateResponseType {
+    required AbstractResponseType _inherited = 1;
+    optional string ContentPrefixURL = 2;
+    optional string UncachedContentPrefixURL = 3;
+    optional string PcsPrefiURL = 4;
+    repeated TitleVersionType TitleVersion = 5;
+    required sint32 UploadAuditData = 6;
+    optional bool IsQA = 7;
+    optional bool IsAutoUpdateDisabled = 8;
+    optional bool InfraDownload = 9;
+}
+
+//==========================================
+// GetSystemTMD
+//==========================================
+
+message GetSystemTMDRequestType {
+    required AbstractRequestType _inherited = 1;
+    repeated TitleVersionType TitleVersion = 2;
+}
+
+message GetSystemTMDResponseType {
+    required AbstractResponseType _inherited = 1;
+    repeated bytes TMD = 2;
+}
+
+//==========================================
+// GetSystemPersonalizedETicket
+//==========================================
+
+message GetSystemPersonalizedETicketRequestType {
+    required AbstractRequestType _inherited = 1;
+    repeated string TitleId = 2;
+    required bytes DeviceCert = 3;
+}
+
+message GetSystemPersonalizedETicketResponseType {
+    required AbstractResponseType _inherited = 1;
+    repeated bytes ETicket = 2;
+    repeated bytes Certs = 3;
+}
+
+//==========================================
+// GetSystemCommonETicket
+//==========================================
+
+message GetSystemCommonETicketRequestType {
+    required AbstractRequestType _inherited = 1;
+    repeated string TitleId = 2;
+}
+
+message GetSystemCommonETicketResponseType {
+    required AbstractResponseType _inherited = 1;
+    repeated bytes CommonETicket = 2;
+    repeated bytes Certs = 3;
+}

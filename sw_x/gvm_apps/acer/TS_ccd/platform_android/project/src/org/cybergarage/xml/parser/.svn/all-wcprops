@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repo/!svn/ver/15022/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/xml/parser
+END
+JaxpParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/xml/parser/JaxpParser.java
+END
+DMSXmlHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/repo/!svn/ver/15022/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/xml/parser/DMSXmlHandler.java
+END
+XmlPullParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/xml/parser/XmlPullParser.java
+END

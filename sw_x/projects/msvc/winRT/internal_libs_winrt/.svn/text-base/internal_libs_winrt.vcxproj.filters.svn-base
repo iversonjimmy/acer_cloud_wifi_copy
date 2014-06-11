@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\libsync_config">
+      <UniqueIdentifier>{c0cb3159-1800-4225-8c09-25147eed9023}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libvcs">
+      <UniqueIdentifier>{85a69a5d-90b6-44e6-82e0-4c1c56d28756}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\sync_config\src\FileMonitorDelayQ.cpp">
+      <Filter>Source Files\libsync_config</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\sync_config\src\SyncConfig.cpp">
+      <Filter>Source Files\libsync_config</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\sync_config\src\SyncConfigDb.cpp">
+      <Filter>Source Files\libsync_config</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\sync_config\src\SyncConfigThreadPool.cpp">
+      <Filter>Source Files\libsync_config</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\vcs\src\vcs_common.cpp">
+      <Filter>Source Files\libvcs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\vcs\src\vcs_common_priv.cpp">
+      <Filter>Source Files\libvcs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\vcs\src\vcs_defs.cpp">
+      <Filter>Source Files\libvcs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\vcs\src\vcs_share_util.cpp">
+      <Filter>Source Files\libvcs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\vcs\src\vcs_util.cpp">
+      <Filter>Source Files\libvcs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\vcs\src\vcs_v1_util.cpp">
+      <Filter>Source Files\libvcs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\sync_config\src\SyncConfigUtil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\vcs\src\vcs_file_url_access_basic_impl.cpp">
+      <Filter>Source Files\libvcs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\vcs\src\vcs_file_url_operation_http.cpp">
+      <Filter>Source Files\libvcs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\sync_config_manager\src\SyncConfigManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

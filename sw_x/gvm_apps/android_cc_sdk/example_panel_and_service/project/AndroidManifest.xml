@@ -1,0 +1,69 @@
+<manifest package="com.igware.android_cc_sdk.example_panel_and_service" android:versionCode="203070275" android:versionName="2.3.7.275" xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-sdk android:minSdkVersion="8" />
+    
+    
+    
+    
+    
+    
+    
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application android:debuggable="true" android:icon="@drawable/igicon" android:label="@string/App_Name" android:name=".AppMain">
+        <activity android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTask" android:name="com.igware.example_panel.ui.StartUpActivity" android:stateNotNeeded="true" android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/App_Name" android:launchMode="singleTask" android:name="com.igware.example_panel.ui.MainActivity" android:stateNotNeeded="true">
+        </activity>
+        <activity android:name="com.igware.example_panel.ui.LogoActivity" />
+        <activity android:name="com.igware.example_panel.ui.CreateAccountActivity" />
+        <activity android:name="com.igware.example_panel.ui.LoginActivity" />
+        <activity android:name="com.igware.example_panel.ui.LinkDeviceActivity" />
+        <activity android:name="com.igware.example_panel.ui.SyncFoldersActivity">
+            <intent-filter>
+            <action android:name="android.intent.action.MEDIA_MOUNTED" />
+            <data android:scheme="file" />
+            </intent-filter>
+            <intent-filter>
+            <action android:name="android.intent.action.MEDIA_SCANNER_SCAN_FILE" />
+            <data android:scheme="file" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.igware.example_panel.ui.SettingsActivity">
+            <intent-filter>
+            <action android:name="android.intent.action.MEDIA_SCANNER_SCAN_FILE" />
+            <data android:scheme="file" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.igware.example_panel.ui.RenameDeviceActivity">
+            <intent-filter>
+            <action android:name="android.intent.action.MEDIA_SCANNER_SCAN_FILE" />
+            <data android:scheme="file" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.igware.example_panel.ui.StatusActivity">
+            <intent-filter>
+            <action android:name="android.intent.action.MEDIA_SCANNER_SCAN_FILE" />
+            <data android:scheme="file" />
+            </intent-filter>
+        </activity>
+        <service android:name="com.igware.android_services.CcdiService">
+            <intent-filter>
+                <action android:name="com.igware.ccdi_android.ICcdiAidlRpc" />
+            </intent-filter>
+        </service>
+        <service android:name="com.igware.android_services.McaService">
+            <intent-filter>
+                <action android:name="com.igware.mca_android.IMcaAidlRpc" />
+            </intent-filter>
+        </service>
+    </application>
+</manifest>

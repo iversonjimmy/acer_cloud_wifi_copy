@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/device
+END
+NT.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/device/NT.java
+END
+Description.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/device/Description.java
+END
+NTS.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/device/NTS.java
+END
+USN.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/device/USN.java
+END
+ST.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/device/ST.java
+END
+Advertiser.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/device/Advertiser.java
+END
+Disposer.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/device/Disposer.java
+END
+InvalidDescriptionException.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/device/InvalidDescriptionException.java
+END
+SearchResponseListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/device/SearchResponseListener.java
+END
+DeviceChangeListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/device/DeviceChangeListener.java
+END
+MAN.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/device/MAN.java
+END
+SearchListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/device/SearchListener.java
+END
+NotifyListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/device/NotifyListener.java
+END

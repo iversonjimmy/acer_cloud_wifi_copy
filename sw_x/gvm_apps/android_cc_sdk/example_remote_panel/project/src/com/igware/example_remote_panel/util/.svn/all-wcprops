@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repo/!svn/ver/50079/trunk/sw_x/gvm_apps/android_cc_sdk/example_remote_panel/project/src/com/igware/example_remote_panel/util
+END
+Utils.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/repo/!svn/ver/50079/trunk/sw_x/gvm_apps/android_cc_sdk/example_remote_panel/project/src/com/igware/example_remote_panel/util/Utils.java
+END
+Dataset.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_remote_panel/project/src/com/igware/example_remote_panel/util/Dataset.java
+END
+Filter.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_remote_panel/project/src/com/igware/example_remote_panel/util/Filter.java
+END
+Subfolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_remote_panel/project/src/com/igware/example_remote_panel/util/Subfolder.java
+END
+SyncListItem.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_remote_panel/project/src/com/igware/example_remote_panel/util/SyncListItem.java
+END
+Constants.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_remote_panel/project/src/com/igware/example_remote_panel/util/Constants.java
+END
+DownloadProgress.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_remote_panel/project/src/com/igware/example_remote_panel/util/DownloadProgress.java
+END

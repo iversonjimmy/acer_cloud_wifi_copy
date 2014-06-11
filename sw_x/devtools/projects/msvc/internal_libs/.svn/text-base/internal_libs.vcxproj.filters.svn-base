@@ -1,0 +1,557 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{151770FE-8137-424b-9FB1-B5A690473B8C}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\libescore">
+      <UniqueIdentifier>{0276ee2f-faa4-4bb1-a175-f027feec3cf0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libesc_ul">
+      <UniqueIdentifier>{b429cf4f-9e21-4d26-b508-d2380b182e63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libans">
+      <UniqueIdentifier>{cafc41fd-495b-4a52-bea0-866224358940}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libconf">
+      <UniqueIdentifier>{69f1da42-64ad-41d6-9d59-8c8246a126e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\liberror_codes">
+      <UniqueIdentifier>{36bb88a2-a459-495d-b17c-fc541944b38f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libcontentfile">
+      <UniqueIdentifier>{dedb5848-4508-4bae-a885-20450eab6a47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libdb_utils">
+    </Filter>
+    <Filter Include="Source Files\libes_viewer">
+      <UniqueIdentifier>{770d8263-88b2-4bea-82c2-2552d49113fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libfile_utils">
+      <UniqueIdentifier>{6fff13be-433b-47ab-8812-2ac19866c521}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libvplcore">
+      <UniqueIdentifier>{9213eb2e-6f11-4a44-b40c-a7ddfdc9f0da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libsimple_http">
+      <UniqueIdentifier>{5f1ec9c4-5579-4bc7-8015-95dd47488f2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libsync_config">
+      <UniqueIdentifier>
+      </UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libvcs">
+      <UniqueIdentifier>
+      </UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libStorageNode">
+      <UniqueIdentifier>{0436e913-5cbb-4fa1-876f-f69623c96372}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libdatasetdb">
+      <UniqueIdentifier>{d181ec88-81f2-48b5-ab41-97ec7a8836b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{09BA6996-4516-4b15-A375-9A4B7D660B9E}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{119FE7A2-A7BB-4fef-BBEB-923C99335B4D}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Source Files\libioac">
+      <UniqueIdentifier>{0399101b-2abc-4f9c-b7a4-fe268bae155c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libimage_transcode">
+      <UniqueIdentifier>{89a0e342-a3f4-43ea-8cc1-f134025c68b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libcJSON2">
+      <UniqueIdentifier>{6ce4835d-7b9b-4af9-9ae5-6a7b22ba6464}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libexif_parser">
+      <UniqueIdentifier>{3d61e51f-f9ba-4da0-838a-a0c047323891}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libtswrapper">
+      <UniqueIdentifier>{43925266-6aa7-4670-a581-fd2e2f90009d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libts_shim">
+      <UniqueIdentifier>{3652ab7e-c32b-4dbe-b855-f6c5e46054de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libtsext">
+      <UniqueIdentifier>{7c5719f4-22fb-4119-84d8-fdc582abe275}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libStream">
+      <UniqueIdentifier>{52705897-6886-4212-9b8f-e3217e6ba16c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libts2">
+      <UniqueIdentifier>{dd6a44d2-e0b8-4b86-b70b-85c5b3d0a06f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libts2\Network">
+      <UniqueIdentifier>{a5593ea4-5f52-43ca-ad94-080ed96e3209}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libts2\Link">
+      <UniqueIdentifier>{794b8641-1a86-4da4-b665-94a593afb82c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libts2\Transport">
+      <UniqueIdentifier>{094fae10-519e-4279-b970-b8ffda27d3a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libts2\Packet">
+      <UniqueIdentifier>{5cabe86c-cccf-4a9b-8ad5-182891b36bf6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libpxd">
+      <UniqueIdentifier>{31affc13-3dde-417d-a409-37e102133f96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libp2p">
+      <UniqueIdentifier>{23a3fa22-1194-4dc2-88ab-aa9248c0c8d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libInterruptibleSocket">
+      <UniqueIdentifier>{1f1f9b26-e373-43c7-9616-2930747bb2ac}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\es_core\user_local\escore_base.c">
+      <Filter>Source Files\libescore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\es_core\esc\core\base\ioscrypto\bsl.c">
+      <Filter>Source Files\libesc_ul</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\es_core\esc\core\ec\core_glue.c">
+      <Filter>Source Files\libesc_ul</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\es_core\esc\core\ioscrypto\crypto_impl.c">
+      <Filter>Source Files\libesc_ul</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\es_core\esc\core\ec\ec_cache.c">
+      <Filter>Source Files\libesc_ul</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\es_core\esc\core\ec\ec_core.c">
+      <Filter>Source Files\libesc_ul</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\es_core\esc\core\ec\ec_pers.c">
+      <Filter>Source Files\libesc_ul</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\es_core\esc\core\es\es_container.c">
+      <Filter>Source Files\libesc_ul</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\es_core\esc\core\es\es_device.c">
+      <Filter>Source Files\libesc_ul</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\es_core\esc\core\es\es_storage.c">
+      <Filter>Source Files\libesc_ul</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\es_core\esc\core\base\esi\esi_core.c">
+      <Filter>Source Files\libesc_ul</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\es_core\esc\core\ec\istorage_impl.c">
+      <Filter>Source Files\libesc_ul</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\es_core\esc\core\base\ioscrypto\keyglobals.c">
+      <Filter>Source Files\libesc_ul</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\es_core\esc\core\base\ioscrypto\keystore.c">
+      <Filter>Source Files\libesc_ul</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\es_core\esc\core\ioscrypto\mt19937-64.c">
+      <Filter>Source Files\libesc_ul</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\es_core\esc\core\base\ioscrypto\wrapper.c">
+      <Filter>Source Files\libesc_ul</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\ans\src\ans_device.cpp">
+      <Filter>Source Files\libans</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\conf\src\conf.c">
+      <Filter>Source Files\libconf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\es_core_utils\src\util_tmdgetcontentinfo.c">
+      <Filter>Source Files\liberror_codes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\contentfile\src\contentfile.c">
+      <Filter>Source Files\libcontentfile</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\db_utils\src\db_util_check_macros.cpp">
+      <Filter>Source Files\libdb_utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\db_utils\src\util_open_db_handle.cpp">
+      <Filter>Source Files\libdb_utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\es_viewer\src\cfmviewer.c">
+      <Filter>Source Files\libes_viewer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\es_viewer\src\tikviewer.c">
+      <Filter>Source Files\libes_viewer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\es_viewer\src\tmdviewer.c">
+      <Filter>Source Files\libes_viewer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\file_utils\src\util_readfile.c">
+      <Filter>Source Files\libfile_utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\file_utils\src\util_spawnthread.c">
+      <Filter>Source Files\libfile_utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\file_utils\src\util_writefile.c">
+      <Filter>Source Files\libfile_utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\simple_http\src\http_request.cpp">
+      <Filter>Source Files\libsimple_http</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\sync_config\src\FileMonitorDelayQ.cpp">
+      <Filter>Source Files\libsync_config</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\sync_config\src\SyncConfig.cpp">
+      <Filter>Source Files\libsync_config</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\sync_config\src\SyncConfigDb.cpp">
+      <Filter>Source Files\libsync_config</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\sync_config\src\SyncConfigThreadPool.cpp">
+      <Filter>Source Files\libsync_config</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\sync_config\src\SyncConfigUtil.cpp">
+      <Filter>Source Files\libsync_config</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vpl\platform_win32\src\vpl__monitor_dir.cpp">
+      <Filter>Source Files\libvplcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\storageNode\src\dataset.cpp">
+      <Filter>Source Files\libStorageNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\storageNode\src\vssts_srvr.cpp">
+      <Filter>Source Files\libStorageNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\storageNode\src\vss_client.cpp">
+      <Filter>Source Files\libStorageNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\storageNode\src\vss_cmdproc.cpp">
+      <Filter>Source Files\libStorageNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\storageNode\src\vss_object.cpp">
+      <Filter>Source Files\libStorageNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\storageNode\src\vss_p2p_client.cpp">
+      <Filter>Source Files\libStorageNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\storageNode\src\vss_query.cpp">
+      <Filter>Source Files\libStorageNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\storageNode\src\vss_server.cpp">
+      <Filter>Source Files\libStorageNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\storageNode\src\vss_session.cpp">
+      <Filter>Source Files\libStorageNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\storageNode\src\vss_util.cpp">
+      <Filter>Source Files\libStorageNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\storageNode\src\vss_file.cpp">
+      <Filter>Source Files\libStorageNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\storageNode\src\xid_sequence.cpp">
+      <Filter>Source Files\libStorageNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\storageNode\src\rf_search.cpp">
+      <Filter>Source Files\libStorageNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\storageNode\src\rf_search_manager.cpp">
+      <Filter>Source Files\libStorageNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\storageNode\datasetdb2\src\DatasetDB.cpp">
+      <Filter>Source Files\libdatasetdb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\storageNode\datasetdb2\src\unicode_upcase_table.cpp">
+      <Filter>Source Files\libdatasetdb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\storageNode\datasetdb2\src\utf8.cpp">
+      <Filter>Source Files\libdatasetdb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\file_utils\src\util_mime.cpp">
+      <Filter>Source Files\libfile_utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\simple_http\src\http_response.cpp">
+      <Filter>Source Files\libsimple_http</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\external\ioac_loader\CustomerLibLoader.cpp">
+      <Filter>Source Files\libioac</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\storageNode\src\fs_dataset.cpp">
+      <Filter>Source Files\libStorageNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\storageNode\src\managed_dataset.cpp">
+      <Filter>Source Files\libStorageNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\simple_http\src\http_request_async.cpp">
+      <Filter>Source Files\libsimple_http</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\image_transcode\src\image_transcode.cpp">
+      <Filter>Source Files\libimage_transcode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\image_transcode\src_win32\image__transcode.cpp">
+      <Filter>Source Files\libimage_transcode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\cJSON2\src\cJSON2.c">
+      <Filter>Source Files\libcJSON2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\exif_parser\common\exif_util.cpp">
+      <Filter>Source Files\libexif_parser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\exif_parser\src_win32\exif_parser.cpp">
+      <Filter>Source Files\libexif_parser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\vcs\src\vcs_common.cpp">
+      <Filter>Source Files\libvcs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\vcs\src\vcs_common_priv.cpp">
+      <Filter>Source Files\libvcs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\vcs\src\vcs_defs.cpp">
+      <Filter>Source Files\libvcs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\vcs\src\vcs_share_util.cpp">
+      <Filter>Source Files\libvcs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\vcs\src\vcs_util.cpp">
+      <Filter>Source Files\libvcs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\vcs\src\vcs_v1_util.cpp">
+      <Filter>Source Files\libvcs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\multicast_dns_discovery/platform/win32/src/mdd_fdutil.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\multicast_dns_discovery/platform/win32/src/mdd_iface.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\multicast_dns_discovery/platform/win32/src/mdd_mutex.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\multicast_dns_discovery/platform/win32/src/mdd_net.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\multicast_dns_discovery/platform/win32/src/mdd_socket.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\multicast_dns_discovery/platform/win32/src/mdd_time.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\multicast_dns_discovery/platform/win32/src/mdd_utils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\multicast_dns_discovery/src/1035.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\multicast_dns_discovery/src/mdd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\multicast_dns_discovery/src/mdnsd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\multicast_dns_discovery/src/sdtxt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\multicast_dns_discovery/src/xht.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\sync_config_manager\src\SyncConfigManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Stream\src\HttpFileDownloadStream.cpp">
+      <Filter>Source Files\libStream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Stream\src\HttpFileUploadStream.cpp">
+      <Filter>Source Files\libStream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Stream\src\HttpReqHeader.cpp">
+      <Filter>Source Files\libStream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Stream\src\HttpRespHeader.cpp">
+      <Filter>Source Files\libStream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Stream\src\HttpSocketStream.cpp">
+      <Filter>Source Files\libStream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Stream\src\HttpStream.cpp">
+      <Filter>Source Files\libStream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Stream\src\HttpStream_Helper.cpp">
+      <Filter>Source Files\libStream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Stream\src\HttpStringStream.cpp">
+      <Filter>Source Files\libStream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Stream\src\HttpTsStream.cpp">
+      <Filter>Source Files\libStream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Stream\src\InStringStream.cpp">
+      <Filter>Source Files\libStream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Stream\src\OutStringStream.cpp">
+      <Filter>Source Files\libStream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Stream\src\SocketStream.cpp">
+      <Filter>Source Files\libStream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\storageNode\src\HttpSvc_Sn_Dispatcher.cpp">
+      <Filter>Source Files\libStorageNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\storageNode\src\HttpSvc_Sn_Handler.cpp">
+      <Filter>Source Files\libStorageNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\storageNode\src\HttpSvc_Sn_Handler_cmd.cpp">
+      <Filter>Source Files\libStorageNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\storageNode\src\HttpSvc_Sn_Handler_mediafile.cpp">
+      <Filter>Source Files\libStorageNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\storageNode\src\HttpSvc_Sn_Handler_mm.cpp">
+      <Filter>Source Files\libStorageNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\storageNode\src\HttpSvc_Sn_Handler_rf.cpp">
+      <Filter>Source Files\libStorageNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\storageNode\src\HttpSvc_Sn_Handler_vcs_archive.cpp">
+      <Filter>Source Files\libStorageNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\storageNode\src\HttpSvc_Sn_MediaDsFile.cpp">
+      <Filter>Source Files\libStorageNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\storageNode\src\HttpSvc_Sn_MediaFile.cpp">
+      <Filter>Source Files\libStorageNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\storageNode\src\HttpSvc_Sn_MediaFileSender.cpp">
+      <Filter>Source Files\libStorageNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\storageNode\src\HttpSvc_Sn_MediaFsFile.cpp">
+      <Filter>Source Files\libStorageNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\storageNode\src\HttpSvc_Sn_MediaMetadata.cpp">
+      <Filter>Source Files\libStorageNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\storageNode\src\HttpSvc_TsToHsAdapter.cpp">
+      <Filter>Source Files\libStorageNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\storageNode\src\strm_http.cpp">
+      <Filter>Source Files\libStorageNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\storageNode\src\echoSvc.cpp">
+      <Filter>Source Files\libStorageNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Ts2\src\ts_api.cpp">
+      <Filter>Source Files\libts2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Ts2\src\ts_server.cpp">
+      <Filter>Source Files\libts2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Ts2\Network\src\TcpDinListener.cpp">
+      <Filter>Source Files\libts2\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Ts2\Network\src\FrontEnd.cpp">
+      <Filter>Source Files\libts2\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Ts2\Network\src\Ts2_RouteManager.cpp">
+      <Filter>Source Files\libts2\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Ts2\Network\src\PrxP2PListener.cpp">
+      <Filter>Source Files\libts2\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Ts2\Link\src\TcpDinAcceptHelper.cpp">
+      <Filter>Source Files\libts2\Link</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Ts2\Link\src\TcpDinConnHelper.cpp">
+      <Filter>Source Files\libts2\Link</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Ts2\Link\src\AcceptHelper.cpp">
+      <Filter>Source Files\libts2\Link</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Ts2\Link\src\ConnectHelper.cpp">
+      <Filter>Source Files\libts2\Link</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Ts2\Link\src\EndPoint.cpp">
+      <Filter>Source Files\libts2\Link</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Ts2\Link\src\LinkProtocol.cpp">
+      <Filter>Source Files\libts2\Link</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Ts2\Link\src\PrxP2PAcceptHelper.cpp">
+      <Filter>Source Files\libts2\Link</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Ts2\Link\src\PrxP2PConnHelper.cpp">
+      <Filter>Source Files\libts2\Link</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Ts2\Packet\src\Packet.cpp">
+      <Filter>Source Files\libts2\Packet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Ts2\Transport\src\Vtunnel.cpp">
+      <Filter>Source Files\libts2\Transport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Ts2\Transport\src\Pool.cpp">
+      <Filter>Source Files\libts2\Transport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\pxd\src\pxd_mtwist.cpp">
+      <Filter>Source Files\libpxd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\pxd\src\pxd_packet.cpp">
+      <Filter>Source Files\libpxd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\pxd\src\pxd_util.cpp">
+      <Filter>Source Files\libpxd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\pxd\src\pxd_client.cpp">
+      <Filter>Source Files\libpxd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\pxd\src\pxd_event.cpp">
+      <Filter>Source Files\libpxd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\pxd\src\pxd_log.cpp">
+      <Filter>Source Files\libpxd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\p2p\src\p2p_internal.cpp">
+      <Filter>Source Files\libp2p</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\p2p\src\p2p.cpp">
+      <Filter>Source Files\libp2p</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Ts2Alt\Shim\src\ts_shim.cpp">
+      <Filter>Source Files\libts_shim</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Ts2Alt\Ext\src\ts_ext_server.cpp">
+      <Filter>Source Files\libtsext</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Ts2Alt\Ext\src\ts_ext_pkt.cpp">
+      <Filter>Source Files\libtsext</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Ts2Alt\Wrapper\src\ts_pool.cpp">
+      <Filter>Source Files\libtswrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Ts2Alt\Wrapper\src\ts_client.cpp">
+      <Filter>Source Files\libtswrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\storageNode\src\HttpSvc_Sn_Handler_minidms.cpp">
+      <Filter>Source Files\libStorageNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\storageNode\src\HttpSvc_Sn_Handler_rexe.cpp">
+      <Filter>Source Files\libStorageNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\storageNode\src\executable_manager.cpp">
+      <Filter>Source Files\libStorageNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\InterruptibleSocket\src\InterruptibleSocket.cpp">
+      <Filter>Source Files\libInterruptibleSocket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\InterruptibleSocket\src\InterruptibleSocket_SigBySockShutdown.cpp">
+      <Filter>Source Files\libInterruptibleSocket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\vcs\src\vcs_file_url_access_basic_impl.cpp">
+      <Filter>Source Files\libvcs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\vcs\src\vcs_file_url_operation_http.cpp">
+      <Filter>Source Files\libvcs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\storageNode\src\HttpSvc_Sn_ASFileSender.cpp">
+      <Filter>Source Files\libStorageNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\file_utils\src\util_utf8.cpp">
+      <Filter>Source Files\libfile_utils</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

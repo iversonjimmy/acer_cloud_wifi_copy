@@ -1,0 +1,83 @@
+10
+
+dir
+59951
+https://src-us.ctbg.acer.com/repo/trunk/sw_x/gvm_core/internal/image_transcode
+https://src-us.ctbg.acer.com/repo
+
+
+
+2014-04-24T06:55:42.537834Z
+58146
+wukon.hsieh
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+187b5c42-a02b-43e7-ba74-80c9f8da41ab
+
+BUILD
+file
+
+
+
+
+2014-05-22T01:47:22.161885Z
+396a1047ef3be1ed671e360119b161bf
+2014-01-17T10:22:06.538032Z
+53795
+wukon.hsieh
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1671
+
+src_ios
+dir
+
+tests
+dir
+
+include
+dir
+
+src_cloudnode
+dir
+
+src
+dir
+
+src_android
+dir
+
+src_win32
+dir
+

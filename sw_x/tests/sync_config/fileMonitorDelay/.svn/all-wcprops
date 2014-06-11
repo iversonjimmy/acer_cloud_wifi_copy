@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/43124/trunk/sw_x/tests/sync_config/fileMonitorDelay
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/32379/trunk/sw_x/tests/sync_config/fileMonitorDelay/BUILD
+END
+fileMonitorDelayTest.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repo/!svn/ver/43124/trunk/sw_x/tests/sync_config/fileMonitorDelay/fileMonitorDelayTest.cpp
+END

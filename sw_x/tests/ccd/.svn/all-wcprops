@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/repo/!svn/ver/58479/trunk/sw_x/tests/ccd
+END
+test_file_list_msvc.txt
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repo/!svn/ver/16423/trunk/sw_x/tests/ccd/test_file_list_msvc.txt
+END
+test_file_list.txt
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/19597/trunk/sw_x/tests/ccd/test_file_list.txt
+END
+valgrind.supp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/repo/!svn/ver/58479/trunk/sw_x/tests/ccd/valgrind.supp
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/repo/!svn/ver/57676/trunk/sw_x/tests/ccd/Makefile
+END

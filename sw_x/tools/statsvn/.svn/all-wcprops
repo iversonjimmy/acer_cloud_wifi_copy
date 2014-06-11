@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/repo/!svn/ver/44867/trunk/sw_x/tools/statsvn
+END
+readme.txt
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repo/!svn/ver/35752/trunk/sw_x/tools/statsvn/readme.txt
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/repo/!svn/ver/44867/trunk/sw_x/tools/statsvn/Makefile
+END
+statsvn.jar
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repo/!svn/ver/35752/trunk/sw_x/tools/statsvn/statsvn.jar
+END

@@ -1,0 +1,52 @@
+#! /bin/sh
+#
+#  This script runs the PXD module tests and single-instance integration
+#  test on a Linux platform.
+#
+#  You need some jars to run this script.  All the jars should be placed in
+#  the $jars directory where this script will be run.  At this point, $jars
+#  points to ./jars-unit by default.
+#
+#  The debug.jar file contains the PXD classes and some debugging skeleton
+#  classes.  It is created by running "make debug.jar" in the
+#      $WORKAREA/sw_i/infra/modules/pxd
+#  directory.  The debug.jar file is put in
+#      $BUILDROOT/infra/modules/pxd/debug
+#  by the makefile.
+#
+#  The test requires one additional jar:
+#      $BUILDROOT/infra/imports/lib/commons-logging-1.1.1.jar
+#  The sw_i/infra build should install it in the $BUILDROOT area.
+#
+#  If your $WORKAREA variable is not set, you also need to install some
+#  configuration files:
+#      $WORKAREA/sw_i/infra/modules/src/java/com/broadon/pxd/server_keys
+#  You'll need to modify this script to point at the configuration files.
+#
+#  The PATH shell variable needs to point to the version of java that you
+#  wish to use.
+#
+unset pxd_host
+export pxd_ias_host="ias.lab1.routefree.com"
+
+export pxd_key_file=$WORKAREA/sw_i/infra/modules/src/java/com/broadon/pxd/server_keys
+
+if [ "$jars" == "" ] 
+then
+    export jars=./jars-unit
+else
+    export jars=$jars
+fi
+
+export classpath="$jars/debug.jar:$jars/commons-logging-1.1.1.jar"
+
+#
+#  Copy the test configuration files to the current directory for the module
+#  tests.  The PXD server reads the environment variables, but the module tests
+#  do not, so the files need to be in both places.  Also, this approach saves
+#  the configuration files locally in case there's a problem.
+#
+rm -f device_types server_keys
+
+cp $pxd_key_file .          || exit 1
+java -Djava.library.path=. -classpath "$classpath" com.broadon.pxd.test.PxdTest

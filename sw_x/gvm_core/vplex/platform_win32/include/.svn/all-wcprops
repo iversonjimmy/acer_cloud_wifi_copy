@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/59732/trunk/sw_x/gvm_core/vplex/platform_win32/include
+END
+vplex__named_socket.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repo/!svn/ver/1551/trunk/sw_x/gvm_core/vplex/platform_win32/include/vplex__named_socket.h
+END
+vplex__file.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repo/!svn/ver/43435/trunk/sw_x/gvm_core/vplex/platform_win32/include/vplex__file.h
+END
+vplex__plat.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repo/!svn/ver/25409/trunk/sw_x/gvm_core/vplex/platform_win32/include/vplex__plat.h
+END
+vplex__http2.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repo/!svn/ver/59732/trunk/sw_x/gvm_core/vplex/platform_win32/include/vplex__http2.hpp
+END

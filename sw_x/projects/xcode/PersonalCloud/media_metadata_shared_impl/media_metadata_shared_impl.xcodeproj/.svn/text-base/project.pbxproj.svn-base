@@ -1,0 +1,450 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6B05A813158A0ABF00E09F0B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B05A812158A0ABF00E09F0B /* Foundation.framework */; };
+		6B05A83F158A0B1900E09F0B /* media_metadata_utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A83B158A0B1900E09F0B /* media_metadata_utils.cpp */; };
+		6B05A840158A0B1900E09F0B /* media_metadata_utils.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 6B05A83C158A0B1900E09F0B /* media_metadata_utils.hpp */; };
+		6B05A841158A0B1900E09F0B /* MediaMetadataCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A83D158A0B1900E09F0B /* MediaMetadataCache.cpp */; };
+		6B05A842158A0B1900E09F0B /* MediaMetadataCache.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 6B05A83E158A0B1900E09F0B /* MediaMetadataCache.hpp */; };
+		6B05A84B158A0B5300E09F0B /* protobuf_file_reader.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 6B05A846158A0B5300E09F0B /* protobuf_file_reader.hpp */; };
+		6B05A84C158A0B5300E09F0B /* protobuf_file_writer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 6B05A847158A0B5300E09F0B /* protobuf_file_writer.hpp */; };
+		6B05A84D158A0B5300E09F0B /* protobuf_file_reader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A849158A0B5300E09F0B /* protobuf_file_reader.cpp */; };
+		6B05A84E158A0B5300E09F0B /* protobuf_file_writer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A84A158A0B5300E09F0B /* protobuf_file_writer.cpp */; };
+		6B05A863158A0B7600E09F0B /* gvm_assert.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B05A852158A0B7600E09F0B /* gvm_assert.h */; };
+		6B05A864158A0B7600E09F0B /* gvm_file_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B05A853158A0B7600E09F0B /* gvm_file_utils.h */; };
+		6B05A865158A0B7600E09F0B /* gvm_file_utils.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 6B05A854158A0B7600E09F0B /* gvm_file_utils.hpp */; };
+		6B05A866158A0B7600E09F0B /* gvm_misc_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B05A855158A0B7600E09F0B /* gvm_misc_utils.h */; };
+		6B05A867158A0B7600E09F0B /* gvm_thread_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B05A856158A0B7600E09F0B /* gvm_thread_utils.h */; };
+		6B05A868158A0B7600E09F0B /* gvm_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B05A857158A0B7600E09F0B /* gvm_utils.h */; };
+		6B05A869158A0B7600E09F0B /* util_mime.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 6B05A858158A0B7600E09F0B /* util_mime.hpp */; };
+		6B05A86A158A0B7600E09F0B /* util_cleanuppath.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A85B158A0B7600E09F0B /* util_cleanuppath.cpp */; };
+		6B05A86B158A0B7600E09F0B /* util_createpath.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A85C158A0B7600E09F0B /* util_createpath.c */; };
+		6B05A86C158A0B7600E09F0B /* util_encodebase64.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A85D158A0B7600E09F0B /* util_encodebase64.c */; };
+		6B05A86D158A0B7600E09F0B /* util_mime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A85E158A0B7600E09F0B /* util_mime.cpp */; };
+		6B05A86E158A0B7600E09F0B /* util_parsestricthex64.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A85F158A0B7600E09F0B /* util_parsestricthex64.c */; };
+		6B05A86F158A0B7600E09F0B /* util_readfile.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A860158A0B7600E09F0B /* util_readfile.c */; };
+		6B05A870158A0B7600E09F0B /* util_spawnthread.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A861158A0B7600E09F0B /* util_spawnthread.c */; };
+		6B05A871158A0B7600E09F0B /* util_writefile.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A862158A0B7600E09F0B /* util_writefile.c */; };
+		6B902BC1158B6B43008C10FB /* media_metadata_errors.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 6B902BB5158B6B43008C10FB /* media_metadata_errors.hpp */; };
+		6B902BC2158B6B43008C10FB /* media_metadata_types.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B902BB6158B6B43008C10FB /* media_metadata_types.pb.h */; };
+		6B902BC4158B6B43008C10FB /* media_metadata_types.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 6B902BC0158B6B43008C10FB /* media_metadata_types.pb.cc */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6B05A80F158A0ABF00E09F0B /* libmedia_metadata_shared_impl.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmedia_metadata_shared_impl.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B05A812158A0ABF00E09F0B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6B05A820158A0ABF00E09F0B /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		6B05A822158A0ABF00E09F0B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		6B05A83B158A0B1900E09F0B /* media_metadata_utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = media_metadata_utils.cpp; sourceTree = "<group>"; };
+		6B05A83C158A0B1900E09F0B /* media_metadata_utils.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = media_metadata_utils.hpp; sourceTree = "<group>"; };
+		6B05A83D158A0B1900E09F0B /* MediaMetadataCache.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MediaMetadataCache.cpp; sourceTree = "<group>"; };
+		6B05A83E158A0B1900E09F0B /* MediaMetadataCache.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MediaMetadataCache.hpp; sourceTree = "<group>"; };
+		6B05A844158A0B5300E09F0B /* BUILD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BUILD; sourceTree = "<group>"; };
+		6B05A846158A0B5300E09F0B /* protobuf_file_reader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = protobuf_file_reader.hpp; sourceTree = "<group>"; };
+		6B05A847158A0B5300E09F0B /* protobuf_file_writer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = protobuf_file_writer.hpp; sourceTree = "<group>"; };
+		6B05A849158A0B5300E09F0B /* protobuf_file_reader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = protobuf_file_reader.cpp; sourceTree = "<group>"; };
+		6B05A84A158A0B5300E09F0B /* protobuf_file_writer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = protobuf_file_writer.cpp; sourceTree = "<group>"; };
+		6B05A850158A0B7600E09F0B /* BUILD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BUILD; sourceTree = "<group>"; };
+		6B05A852158A0B7600E09F0B /* gvm_assert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gvm_assert.h; sourceTree = "<group>"; };
+		6B05A853158A0B7600E09F0B /* gvm_file_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gvm_file_utils.h; sourceTree = "<group>"; };
+		6B05A854158A0B7600E09F0B /* gvm_file_utils.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = gvm_file_utils.hpp; sourceTree = "<group>"; };
+		6B05A855158A0B7600E09F0B /* gvm_misc_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gvm_misc_utils.h; sourceTree = "<group>"; };
+		6B05A856158A0B7600E09F0B /* gvm_thread_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gvm_thread_utils.h; sourceTree = "<group>"; };
+		6B05A857158A0B7600E09F0B /* gvm_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gvm_utils.h; sourceTree = "<group>"; };
+		6B05A858158A0B7600E09F0B /* util_mime.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = util_mime.hpp; sourceTree = "<group>"; };
+		6B05A859158A0B7600E09F0B /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		6B05A85B158A0B7600E09F0B /* util_cleanuppath.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = util_cleanuppath.cpp; sourceTree = "<group>"; };
+		6B05A85C158A0B7600E09F0B /* util_createpath.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = util_createpath.c; sourceTree = "<group>"; };
+		6B05A85D158A0B7600E09F0B /* util_encodebase64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = util_encodebase64.c; sourceTree = "<group>"; };
+		6B05A85E158A0B7600E09F0B /* util_mime.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = util_mime.cpp; sourceTree = "<group>"; };
+		6B05A85F158A0B7600E09F0B /* util_parsestricthex64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = util_parsestricthex64.c; sourceTree = "<group>"; };
+		6B05A860158A0B7600E09F0B /* util_readfile.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = util_readfile.c; sourceTree = "<group>"; };
+		6B05A861158A0B7600E09F0B /* util_spawnthread.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = util_spawnthread.c; sourceTree = "<group>"; };
+		6B05A862158A0B7600E09F0B /* util_writefile.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = util_writefile.c; sourceTree = "<group>"; };
+		6B902BB5158B6B43008C10FB /* media_metadata_errors.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = media_metadata_errors.hpp; sourceTree = "<group>"; };
+		6B902BB6158B6B43008C10FB /* media_metadata_types.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = media_metadata_types.pb.h; sourceTree = "<group>"; };
+		6B902BB7158B6B43008C10FB /* media_metadata_types.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = media_metadata_types.proto; sourceTree = "<group>"; };
+		6B902BC0158B6B43008C10FB /* media_metadata_types.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = media_metadata_types.pb.cc; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6B05A80C158A0ABF00E09F0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B05A813158A0ABF00E09F0B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6B05A804158A0ABF00E09F0B = {
+			isa = PBXGroup;
+			children = (
+				6B173C6B158A154300274168 /* media_metadata_shared */,
+				6B05A811158A0ABF00E09F0B /* Frameworks */,
+				6B05A810158A0ABF00E09F0B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6B05A810158A0ABF00E09F0B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6B05A80F158A0ABF00E09F0B /* libmedia_metadata_shared_impl.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6B05A811158A0ABF00E09F0B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6B05A812158A0ABF00E09F0B /* Foundation.framework */,
+				6B05A820158A0ABF00E09F0B /* SenTestingKit.framework */,
+				6B05A822158A0ABF00E09F0B /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6B05A839158A0B1900E09F0B /* impl */ = {
+			isa = PBXGroup;
+			children = (
+				6B05A83B158A0B1900E09F0B /* media_metadata_utils.cpp */,
+				6B05A83C158A0B1900E09F0B /* media_metadata_utils.hpp */,
+				6B05A83D158A0B1900E09F0B /* MediaMetadataCache.cpp */,
+				6B05A83E158A0B1900E09F0B /* MediaMetadataCache.hpp */,
+			);
+			name = impl;
+			path = ../../../../gvm_core/internal/media_metadata/impl;
+			sourceTree = "<group>";
+		};
+		6B05A843158A0B5300E09F0B /* protobuf_file_utils */ = {
+			isa = PBXGroup;
+			children = (
+				6B05A844158A0B5300E09F0B /* BUILD */,
+				6B05A845158A0B5300E09F0B /* include */,
+				6B05A848158A0B5300E09F0B /* src */,
+			);
+			name = protobuf_file_utils;
+			path = ../../../../gvm_core/internal/protobuf_file_utils;
+			sourceTree = "<group>";
+		};
+		6B05A845158A0B5300E09F0B /* include */ = {
+			isa = PBXGroup;
+			children = (
+				6B05A846158A0B5300E09F0B /* protobuf_file_reader.hpp */,
+				6B05A847158A0B5300E09F0B /* protobuf_file_writer.hpp */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		6B05A848158A0B5300E09F0B /* src */ = {
+			isa = PBXGroup;
+			children = (
+				6B05A849158A0B5300E09F0B /* protobuf_file_reader.cpp */,
+				6B05A84A158A0B5300E09F0B /* protobuf_file_writer.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		6B05A84F158A0B7500E09F0B /* file_utils */ = {
+			isa = PBXGroup;
+			children = (
+				6B05A850158A0B7600E09F0B /* BUILD */,
+				6B05A851158A0B7600E09F0B /* include */,
+				6B05A859158A0B7600E09F0B /* README.txt */,
+				6B05A85A158A0B7600E09F0B /* src */,
+			);
+			name = file_utils;
+			path = ../../../../gvm_core/internal/file_utils;
+			sourceTree = "<group>";
+		};
+		6B05A851158A0B7600E09F0B /* include */ = {
+			isa = PBXGroup;
+			children = (
+				6B05A852158A0B7600E09F0B /* gvm_assert.h */,
+				6B05A853158A0B7600E09F0B /* gvm_file_utils.h */,
+				6B05A854158A0B7600E09F0B /* gvm_file_utils.hpp */,
+				6B05A855158A0B7600E09F0B /* gvm_misc_utils.h */,
+				6B05A856158A0B7600E09F0B /* gvm_thread_utils.h */,
+				6B05A857158A0B7600E09F0B /* gvm_utils.h */,
+				6B05A858158A0B7600E09F0B /* util_mime.hpp */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		6B05A85A158A0B7600E09F0B /* src */ = {
+			isa = PBXGroup;
+			children = (
+				6B05A85B158A0B7600E09F0B /* util_cleanuppath.cpp */,
+				6B05A85C158A0B7600E09F0B /* util_createpath.c */,
+				6B05A85D158A0B7600E09F0B /* util_encodebase64.c */,
+				6B05A85E158A0B7600E09F0B /* util_mime.cpp */,
+				6B05A85F158A0B7600E09F0B /* util_parsestricthex64.c */,
+				6B05A860158A0B7600E09F0B /* util_readfile.c */,
+				6B05A861158A0B7600E09F0B /* util_spawnthread.c */,
+				6B05A862158A0B7600E09F0B /* util_writefile.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		6B173C6B158A154300274168 /* media_metadata_shared */ = {
+			isa = PBXGroup;
+			children = (
+				6B902BB2158B6B43008C10FB /* common */,
+				6B05A84F158A0B7500E09F0B /* file_utils */,
+				6B05A843158A0B5300E09F0B /* protobuf_file_utils */,
+				6B05A839158A0B1900E09F0B /* impl */,
+			);
+			name = media_metadata_shared;
+			sourceTree = "<group>";
+		};
+		6B902BB2158B6B43008C10FB /* common */ = {
+			isa = PBXGroup;
+			children = (
+				6B902BB4158B6B43008C10FB /* include */,
+				6B902BBF158B6B43008C10FB /* src */,
+			);
+			name = common;
+			path = ../../../../gvm_core/internal/media_metadata/common;
+			sourceTree = "<group>";
+		};
+		6B902BB4158B6B43008C10FB /* include */ = {
+			isa = PBXGroup;
+			children = (
+				6B902BB5158B6B43008C10FB /* media_metadata_errors.hpp */,
+				6B902BB6158B6B43008C10FB /* media_metadata_types.pb.h */,
+				6B902BB7158B6B43008C10FB /* media_metadata_types.proto */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		6B902BBF158B6B43008C10FB /* src */ = {
+			isa = PBXGroup;
+			children = (
+				6B902BC0158B6B43008C10FB /* media_metadata_types.pb.cc */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		6B05A80D158A0ABF00E09F0B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B05A840158A0B1900E09F0B /* media_metadata_utils.hpp in Headers */,
+				6B05A842158A0B1900E09F0B /* MediaMetadataCache.hpp in Headers */,
+				6B05A84B158A0B5300E09F0B /* protobuf_file_reader.hpp in Headers */,
+				6B05A84C158A0B5300E09F0B /* protobuf_file_writer.hpp in Headers */,
+				6B05A863158A0B7600E09F0B /* gvm_assert.h in Headers */,
+				6B05A864158A0B7600E09F0B /* gvm_file_utils.h in Headers */,
+				6B05A865158A0B7600E09F0B /* gvm_file_utils.hpp in Headers */,
+				6B05A866158A0B7600E09F0B /* gvm_misc_utils.h in Headers */,
+				6B05A867158A0B7600E09F0B /* gvm_thread_utils.h in Headers */,
+				6B05A868158A0B7600E09F0B /* gvm_utils.h in Headers */,
+				6B05A869158A0B7600E09F0B /* util_mime.hpp in Headers */,
+				6B902BC1158B6B43008C10FB /* media_metadata_errors.hpp in Headers */,
+				6B902BC2158B6B43008C10FB /* media_metadata_types.pb.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		6B05A80E158A0ABF00E09F0B /* media_metadata_shared_impl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B05A833158A0ABF00E09F0B /* Build configuration list for PBXNativeTarget "media_metadata_shared_impl" */;
+			buildPhases = (
+				6B05A80B158A0ABF00E09F0B /* Sources */,
+				6B05A80C158A0ABF00E09F0B /* Frameworks */,
+				6B05A80D158A0ABF00E09F0B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = media_metadata_shared_impl;
+			productName = media_metadata_shared_impl;
+			productReference = 6B05A80F158A0ABF00E09F0B /* libmedia_metadata_shared_impl.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6B05A806158A0ABF00E09F0B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+			};
+			buildConfigurationList = 6B05A809158A0ABF00E09F0B /* Build configuration list for PBXProject "media_metadata_shared_impl" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6B05A804158A0ABF00E09F0B;
+			productRefGroup = 6B05A810158A0ABF00E09F0B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6B05A80E158A0ABF00E09F0B /* media_metadata_shared_impl */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6B05A80B158A0ABF00E09F0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B05A83F158A0B1900E09F0B /* media_metadata_utils.cpp in Sources */,
+				6B05A841158A0B1900E09F0B /* MediaMetadataCache.cpp in Sources */,
+				6B05A84D158A0B5300E09F0B /* protobuf_file_reader.cpp in Sources */,
+				6B05A84E158A0B5300E09F0B /* protobuf_file_writer.cpp in Sources */,
+				6B05A86A158A0B7600E09F0B /* util_cleanuppath.cpp in Sources */,
+				6B05A86B158A0B7600E09F0B /* util_createpath.c in Sources */,
+				6B05A86C158A0B7600E09F0B /* util_encodebase64.c in Sources */,
+				6B05A86D158A0B7600E09F0B /* util_mime.cpp in Sources */,
+				6B05A86E158A0B7600E09F0B /* util_parsestricthex64.c in Sources */,
+				6B05A86F158A0B7600E09F0B /* util_readfile.c in Sources */,
+				6B05A870158A0B7600E09F0B /* util_spawnthread.c in Sources */,
+				6B05A871158A0B7600E09F0B /* util_writefile.c in Sources */,
+				6B902BC4158B6B43008C10FB /* media_metadata_types.pb.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6B05A831158A0ABF00E09F0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
+					"VPL_PLAT_IS_ARM=1",
+					"IOS=1",
+					"VPL_HOST_IS_LITTLE_ENDIAN=1",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "../../../../gvm_core/external/protobuflib/ ../../../../gvm_core/vpl/posix_include/ ../../../../gvm_core/vpl/include/ ../../../../gvm_core/vplex/posix_include/ ../../../../gvm_core/vplex/include/ ../../../../gvm_core/external/protobuflib/ ../../../../gvm_core/internal/protoxml/ ../libvpl/libvpl/sdk/include/ ../../../../gvm_core/vpl/platform_linux/include/ ../../../../gvm_core/vplex/platform_ios/include/ ../../../../gvm_core/internal/log/include/ ../../../../gvm_core/internal/error_codes/include/ ../../../../gvm_core/internal/media_metadata/common/include/";
+			};
+			name = Debug;
+		};
+		6B05A832158A0ABF00E09F0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
+					"VPL_PLAT_IS_ARM=1",
+					"IOS=1",
+					"VPL_HOST_IS_LITTLE_ENDIAN=1",
+				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "../../../../gvm_core/external/protobuflib/ ../../../../gvm_core/vpl/posix_include/ ../../../../gvm_core/vpl/include/ ../../../../gvm_core/vplex/posix_include/ ../../../../gvm_core/vplex/include/ ../../../../gvm_core/external/protobuflib/ ../../../../gvm_core/internal/protoxml/ ../libvpl/libvpl/sdk/include/ ../../../../gvm_core/vpl/platform_linux/include/ ../../../../gvm_core/vplex/platform_ios/include/ ../../../../gvm_core/internal/log/include/ ../../../../gvm_core/internal/error_codes/include/ ../../../../gvm_core/internal/media_metadata/common/include/";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6B05A834158A0ABF00E09F0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/media_metadata_shared_impl.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../../../../Library/Developer/Xcode/DerivedData/PersonalCloud-fdgfjhbbmxskzxavdaelhuslrwfv/Build/Products/Debug-iphoneos\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "../../../../gvm_core/external/protobuflib/ ../../../../gvm_core/vpl/posix_include/ ../../../../gvm_core/vpl/include/ ../../../../gvm_core/vplex/posix_include/ ../../../../gvm_core/vplex/include/ ../../../../gvm_core/external/protobuflib/ ../../../../gvm_core/internal/protoxml/ ../libvpl/libvpl/sdk/include/ ../../../../gvm_core/vpl/platform_linux/include/ ../../../../gvm_core/vplex/platform_ios/include/ ../../../../gvm_core/internal/log/include/ ../../../../gvm_core/internal/error_codes/include/ ../../../../gvm_core/internal/media_metadata/common/include/";
+			};
+			name = Debug;
+		};
+		6B05A835158A0ABF00E09F0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/media_metadata_shared_impl.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../../../../Library/Developer/Xcode/DerivedData/PersonalCloud-fdgfjhbbmxskzxavdaelhuslrwfv/Build/Products/Debug-iphoneos\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "../../../../gvm_core/external/protobuflib/ ../../../../gvm_core/vpl/posix_include/ ../../../../gvm_core/vpl/include/ ../../../../gvm_core/vplex/posix_include/ ../../../../gvm_core/vplex/include/ ../../../../gvm_core/external/protobuflib/ ../../../../gvm_core/internal/protoxml/ ../libvpl/libvpl/sdk/include/ ../../../../gvm_core/vpl/platform_linux/include/ ../../../../gvm_core/vplex/platform_ios/include/ ../../../../gvm_core/internal/log/include/ ../../../../gvm_core/internal/error_codes/include/ ../../../../gvm_core/internal/media_metadata/common/include/";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6B05A809158A0ABF00E09F0B /* Build configuration list for PBXProject "media_metadata_shared_impl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B05A831158A0ABF00E09F0B /* Debug */,
+				6B05A832158A0ABF00E09F0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B05A833158A0ABF00E09F0B /* Build configuration list for PBXNativeTarget "media_metadata_shared_impl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B05A834158A0ABF00E09F0B /* Debug */,
+				6B05A835158A0ABF00E09F0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6B05A806158A0ABF00E09F0B /* Project object */;
+}

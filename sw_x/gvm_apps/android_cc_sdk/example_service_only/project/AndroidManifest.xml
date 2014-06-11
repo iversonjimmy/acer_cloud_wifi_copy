@@ -1,0 +1,24 @@
+<manifest package="com.igware.android_cc_sdk.example_service_only" android:versionCode="203070275" android:versionName="2.3.7.275" xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-sdk android:minSdkVersion="8" />
+
+    
+    
+    
+    
+    
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application android:debuggable="true" android:icon="@drawable/igicon" android:label="@string/App_Name">
+        <service android:name="com.igware.android_services.CcdiService">
+            <intent-filter>
+                <action android:name="com.igware.ccdi_android.ICcdiAidlRpc" />
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </service>
+    </application>
+</manifest>

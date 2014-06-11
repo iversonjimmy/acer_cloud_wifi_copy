@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/event
+END
+SubscriberList.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/event/SubscriberList.java
+END
+PropertyList.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/event/PropertyList.java
+END
+NotifyRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/event/NotifyRequest.java
+END
+Subscriber.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/event/Subscriber.java
+END
+SubscriptionResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/event/SubscriptionResponse.java
+END
+Property.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/event/Property.java
+END
+Subscription.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/event/Subscription.java
+END
+EventListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/event/EventListener.java
+END
+SubscriptionRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/event/SubscriptionRequest.java
+END

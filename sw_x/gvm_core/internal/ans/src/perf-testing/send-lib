@@ -1,0 +1,11 @@
+#! /bin/csh -fb
+
+cd ~root/java
+
+foreach i (`cat automatic-hosts manual-hosts`)
+	echo =========== $i
+	uname -m
+	ssh $i "cd java; rm -f *.so"
+	scp set-lib-links *.so $i":java/"
+	ssh $i "cd java; ./set-lib-links; ls -l *.so"
+end

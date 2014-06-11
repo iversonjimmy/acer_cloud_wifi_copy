@@ -1,0 +1,47 @@
+# -*-Makefile-*-
+export PRODUCT=infra_ops
+
+# makefile included by all sw_x/dist/igware.runtime makefiles
+include igware.runtime.common.mk
+# makefile included by all sw_x/dist/* makefiles
+include $(WORKDIR)/sw_x/dist/Makefile.common
+
+# --- this target should install any tools needed to build the product
+.PHONY: build_tools
+build_tools:
+	echo "Build Tools"
+# --- this target should build the product
+.PHONY: default
+default:
+	echo "Default"
+# --- this target should generate a test package for running on the test machine
+.PHONY: dist
+dist:
+	echo "Dist"
+
+# --- this target should clean the machine before running tests
+clean_tests:
+
+# --- this target should install anything needed to test the product
+# --- assume that the build of the product and test of the product DO NOT occur on the same machine
+install_tests:
+
+# --- this target should execute the tests (usually using the testharness)
+run_tests:
+	# execute the testharness on a Linux machine
+	$(WORKDIR)/sw_x/tools/testharness/bin/testharness.py -c $(WORKDIR)/sw_x/tools/testharness/conf/runs/buildbot_tests.$(PRODUCT).run -o /tmp/testharness/output_$(PRODUCT)/$(BUILD_DATE) -b $(INFRA_STORE_USER)@$(INFRA_STORE_HOST):/$(FS_INFRA_STORE_TEST_PATH)/$(BRANCH_NAME)/$(BUILD_DATE)_$(PRODUCT)_$(LAB) -k
+	#
+	# execute testharness on a Cygwin machine
+	#/usr/bin/python2.7 $(shell cygpath -m "$(WORKDIR)")/sw_x/tools/testharness/bin/testharness.py -c $(shell cygpath -m "$(WORKDIR)")/sw_x/tools/testharness/conf/runs/buildbot_tests.$(PRODUCT).run -o $(shell cygpath -m "/tmp")/testharness/output_$(PRODUCT)/$(BUILD_DATE) -b $(INFRA_STORE_USER)@$(INFRA_STORE_HOST):/$(FS_INFRA_STORE_TEST_PATH)/$(BRANCH_NAME)/$(BUILD_DATE)_$(PRODUCT)_$(LAB) -k
+
+run_full_tests:
+	$(WORKDIR)/sw_x/tools/testharness/bin/testharness.py -c $(WORKDIR)/sw_x/tools/testharness/conf/runs/buildbot_tests.$(PRODUCT).run -o /tmp/testharness/output_$(PRODUCT)/$(BUILD_DATE) -b $(INFRA_STORE_USER)@$(INFRA_STORE_HOST):/$(FS_INFRA_STORE_TEST_PATH)/$(BRANCH_NAME)/$(BUILD_DATE)_$(PRODUCT)_$(LAB) -k
+
+# --- this target should report the test results
+report_test_results:
+	# if the string "TEST RUN STATUS PASS" is not found in the summary output, then it's a fail
+	cat /tmp/testharness/output_$(PRODUCT)/$(BUILD_DATE)/testharness_summary.out
+	grep "TEST RUN STATUS PASS" /tmp/testharness/output_$(PRODUCT)/$(BUILD_DATE)/testharness_summary.out
+
+# --- this target run once to setup a machine for build and/or test
+build_setup:

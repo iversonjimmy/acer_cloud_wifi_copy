@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{151770FE-8137-424b-9FB1-B5A690473B8C}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\libccd">
+      <UniqueIdentifier>{4dc75b4d-e632-4de9-9c20-af3d89ca239f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ccd">
+      <UniqueIdentifier>{e9d8e52d-ea7e-4efb-ba95-b1dac99c52ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{09BA6996-4516-4b15-A375-9A4B7D660B9E}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{119FE7A2-A7BB-4fef-BBEB-923C99335B4D}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Source Files\HttpService">
+      <UniqueIdentifier>{f7197313-7c8b-483e-9d38-2aee88c7efec}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\ans_connection.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\AsyncDatasetOps.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\AutoLocks.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\cache.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\CachePlayer.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\ccd_build_info.c">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\ccd_core.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\ccd_storage.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\ccd_util.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\ccdiimpl.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\ccdiquery.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\CloudDocMgr.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\config.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\EventManagerPb.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\ias_query.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\MediaMetadata.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\NotificationQ.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\nus_query.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\picstream.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\query.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\DeviceStateCache.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\sw_update.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\SyncFeatureMgr.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\system_query.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\virtual_device.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\vsds_query.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\types\src\ccd_types.pb.cc">
+      <Filter>Source Files\ccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\rpc_server\ccdi_rpc-server.pb.cc">
+      <Filter>Source Files\ccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\types\src\ccdi_rpc.pb.cc">
+      <Filter>Source Files\ccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\main.cpp">
+      <Filter>Source Files\ccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\proto\vplex_sync_agent_notifier.pb.cc">
+      <Filter>Source Files\ccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\netman.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\win32\NlmEventSink.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\LanDeviceInfoCache.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\RouteManager.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\AsyncUploadQueue.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\SharedFiles.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\SyncUp.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\SyncDown.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\McaThumbMigrate.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\MediaMetadataServer.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\JsonHelper.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\stream_transaction.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpService.cpp">
+      <Filter>Source Files\HttpService</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_AtomicCounter.cpp">
+      <Filter>Source Files\HttpService</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_Ccd_Agent.cpp">
+      <Filter>Source Files\HttpService</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_Ccd_AsyncAgent.cpp">
+      <Filter>Source Files\HttpService</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_Ccd_Dispatcher.cpp">
+      <Filter>Source Files\HttpService</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_Ccd_Handler_clouddoc.cpp">
+      <Filter>Source Files\HttpService</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_Ccd_Handler_cmd.cpp">
+      <Filter>Source Files\HttpService</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_Ccd_Handler_ds.cpp">
+      <Filter>Source Files\HttpService</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_Ccd_Handler_Helper.cpp">
+      <Filter>Source Files\HttpService</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_Ccd_Handler_mediafile.cpp">
+      <Filter>Source Files\HttpService</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_Ccd_Handler_mm.cpp">
+      <Filter>Source Files\HttpService</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_Ccd_Handler_picstream.cpp">
+      <Filter>Source Files\HttpService</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_Ccd_Handler_rf.cpp">
+      <Filter>Source Files\HttpService</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_Ccd_Handler_share.cpp">
+      <Filter>Source Files\HttpService</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_Ccd_ListenAgent.cpp">
+      <Filter>Source Files\HttpService</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_Ccd_Server.cpp">
+      <Filter>Source Files\HttpService</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_Ccd_SocketAgent.cpp">
+      <Filter>Source Files\HttpService</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_HsToHttpAdapter.cpp">
+      <Filter>Source Files\HttpService</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_HsToTsAdapter.cpp">
+      <Filter>Source Files\HttpService</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_Utils.cpp">
+      <Filter>Source Files\HttpService</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\McaDb.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\MsaDb.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_Ccd_Handler_minidms.cpp">
+      <Filter>Source Files\HttpService</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\pin_manager.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Ts2\LocalInfo\src\LocalInfo_Ccd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\s3_proxy.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\StatManager.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\vcs_archive_access_ccd.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\vcs_proxy.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\vcs_utils.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_Ccd_MediaFile.cpp">
+      <Filter>Source Files\HttpService</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_Ccd_MediaFileSender.cpp">
+      <Filter>Source Files\HttpService</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_Ccd_MediaFsFile.cpp">
+      <Filter>Source Files\HttpService</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_Ccd_Handler_rexe.cpp">
+      <Filter>Source Files\HttpService</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_HsToVcsTranslator.cpp">
+      <Filter>Source Files\HttpService</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\file_url_operation_ts.cpp">
+      <Filter>Source Files\libccd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_Ccd_Handler_iotsdkapi.cpp">
+      <Filter>Source Files\HttpService</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ccd_info.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="CCD.exe.manifest" />
+  </ItemGroup>
+</Project>

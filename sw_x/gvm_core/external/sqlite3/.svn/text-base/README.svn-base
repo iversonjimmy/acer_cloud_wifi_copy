@@ -1,0 +1,7 @@
+Original Source: 3.7.15.2
+http://www.sqlite.org/sqlite-amalgamation-3071502.zip
+sha1sum sqlite3.c: 5741f47d1bc38aa0a8c38f09e60a5fe0031f272d
+
+Useful links:
+http://www.sqlite.org/changes.html
+http://www.sqlite.org/formatchng.html

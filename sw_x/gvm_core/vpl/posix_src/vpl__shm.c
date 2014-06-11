@@ -1,0 +1,131 @@
+/*
+ *  Copyright 2013 Acer Cloud Technology, Inc.
+ *  All Rights Reserved.
+ *
+ *  This software contains confidential information and
+ *  trade secrets of Acer Cloud Technology, Inc.
+ *  Use, disclosure or reproduction is prohibited without
+ *  the prior express written permission of Acer Cloud
+ *  Technology, Inc.
+ */
+
+#include "vplu.h"
+#include "vpl_shm.h"
+
+#include <errno.h>
+#include <unistd.h>
+
+int
+VPLShm_Open(const char* name, int oflag, mode_t mode)
+{
+    int rv = VPL_OK;
+    int rc;
+
+    rc = shm_open(name, oflag, mode);
+    if (rc < 0) {
+        int const err = errno;
+        rv = VPLError_XlatErrno(err);
+    } else {
+        rv = rc;
+    }
+
+    return rv;
+}
+
+int
+VPLShm_Unlink(const char* name)
+{
+    int rv = VPL_OK;
+    int rc;
+
+    rc = shm_unlink(name);
+    if (rc != 0) {
+        int const err = errno;
+        rv = VPLError_XlatErrno(err);
+    }
+
+    return rv;
+}
+
+int
+VPL_Close(int fd)
+{
+    int rv = VPL_OK;
+    int rc;
+
+    rc = close(fd);
+    if (rc != 0) {
+        int const err = errno;
+        rv = VPLError_XlatErrno(err);
+    }
+
+    return rv;
+}
+
+int
+VPL_Ftruncate(int fd, off_t offset)
+{
+    int rv = VPL_OK;
+    int rc;
+
+    rc = ftruncate(fd, offset);
+    if (rc != 0) {
+        int const err = errno;
+        rv = VPLError_XlatErrno(err);
+    }
+
+    return rv;
+}
+#ifndef LINUX_EMB
+int
+VPL_Fallocate(int fd, off_t offset, off_t len)
+{
+    int rv = VPL_OK;
+    int rc;
+
+    rc = posix_fallocate(fd, offset, len);
+    if (rc != 0) {
+        // posix_fallocate() returns zero on success, or an error number on failure.  Note that errno is not set.
+        rv = VPLError_XlatErrno(rc);
+    }
+
+    return rv;
+}
+#endif
+int
+VPL_Mmap(void *addr, size_t length, int prot, int flags, int fd, off_t offset, void **out)
+{
+    int rv = VPL_OK;
+    void *rc;
+
+    if (out == NULL) {
+        rv = VPL_ERR_INVALID;
+        goto out;
+    }
+
+    rc = mmap(addr, length, prot, flags, fd, offset);
+    if (rc == MAP_FAILED) {
+        int const err = errno;
+        rv = VPLError_XlatErrno(err);
+    } else {
+        *out = rc;
+    }
+
+out:
+    return rv;
+}
+
+int
+VPL_Munmap(void *addr, size_t length)
+{
+    int rv = VPL_OK;
+    int rc;
+
+    rc = munmap(addr, length);
+    if (rc != 0) {
+        int const err = errno;
+        rv = VPLError_XlatErrno(err);
+    }
+
+    return rv;
+}

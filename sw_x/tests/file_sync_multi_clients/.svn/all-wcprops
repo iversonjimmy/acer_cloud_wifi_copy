@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repo/!svn/ver/57229/trunk/sw_x/tests/file_sync_multi_clients
+END
+test_master.py
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/25449/trunk/sw_x/tests/file_sync_multi_clients/test_master.py
+END
+testUtils.py
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/22989/trunk/sw_x/tests/file_sync_multi_clients/testUtils.py
+END
+conf.py
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/7999/trunk/sw_x/tests/file_sync_multi_clients/conf.py
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/57229/trunk/sw_x/tests/file_sync_multi_clients/Makefile
+END

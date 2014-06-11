@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0dp">
+    
+    <RelativeLayout android:id="@+id/RelativeLayout1"
+        android:background="@color/light_grey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentTop="true"
+        android:padding="0dp">
+        
+        <TextView android:id="@+id/TextView_AppVersionHeader"
+            android:text="@string/Label_AppVersionHeader"
+            style="@+style/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></TextView>
+            
+        <TextView android:id="@+id/TextView_LabelAppVersion"
+            android:text="@string/Label_AppVersion"
+            android:textStyle="bold"
+            android:textColor="@color/blue"
+            android:layout_below="@id/TextView_AppVersionHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="24dp"
+            android:paddingLeft="2dp"></TextView>
+            
+        <TextView android:id="@+id/TextView_AppVersion" 
+            android:text=""
+            android:textColor="@color/black"
+            android:layout_toRightOf="@id/TextView_LabelAppVersion"
+            android:layout_below="@id/TextView_AppVersionHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"></TextView>
+        
+    </RelativeLayout>
+    
+    <RelativeLayout android:id="@+id/RelativeLayout2"
+        android:background="@color/light_grey"
+        android:layout_below="@id/RelativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:padding="0dp">
+    
+        <TextView android:id="@+id/TextView_StatTotals"
+            android:text="@string/Label_StatTotals"
+            style="@+style/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></TextView>
+            
+	    <TextView android:id="@+id/TextView_LabelConnections"
+            android:text="@string/Label_Connections"
+            android:textStyle="bold"
+            android:textColor="@color/blue"
+            android:layout_below="@id/TextView_StatTotals"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:paddingRight="24dp"
+	        android:paddingLeft="2dp"></TextView>
+	        
+	    <TextView android:id="@+id/TextView_Connections" 
+	        android:text=""
+	        android:textColor="@color/black"
+	        android:layout_toRightOf="@id/TextView_LabelConnections"
+	        android:layout_below="@id/TextView_StatTotals"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"></TextView>
+
+	    <TextView android:id="@+id/TextView_LabelRequests"
+            android:text="@string/Label_Requests"
+            android:textStyle="bold"
+            android:textColor="@color/blue"
+            android:layout_below="@id/TextView_LabelConnections"
+            android:layout_alignLeft="@id/TextView_LabelConnections"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:paddingRight="24dp"
+	        android:paddingLeft="2dp"></TextView>
+	        
+	    <TextView android:id="@+id/TextView_Requests" 
+	        android:text=""
+	        android:textColor="@color/black"
+	        android:layout_toRightOf="@id/TextView_LabelRequests"
+	        android:layout_below="@id/TextView_Connections"
+	        android:layout_alignLeft="@id/TextView_Connections"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"></TextView>
+	        
+        <TextView android:id="@+id/TextView_LabelResponses" 
+            android:text="@string/Label_Responses"
+            android:textStyle="bold"
+            android:textColor="@color/blue"
+            android:layout_below="@id/TextView_LabelRequests"
+            android:layout_alignLeft="@id/TextView_LabelRequests"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:paddingRight="24dp"
+            android:paddingLeft="2dp"></TextView>
+	        
+	    <TextView android:id="@+id/TextView_Responses" 
+	        android:text=""
+	        android:textColor="@color/black"
+	        android:layout_toRightOf="@id/TextView_LabelResponses"
+	        android:layout_below="@id/TextView_Requests"
+	        android:layout_alignLeft="@id/TextView_Requests"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginBottom="4dp"></TextView>
+    
+    </RelativeLayout>
+    
+    <RelativeLayout android:id="@+id/RelativeLayout3"
+        android:background="@color/light_grey"
+        android:layout_below="@id/RelativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:padding="0dp">
+        
+        <TextView android:id="@+id/TextView_SyncStatusHeader"
+            android:text="@string/Label_SyncStatusHeader"
+            style="@+style/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></TextView>
+            
+	    <TextView android:id="@+id/TextView_LabelSyncState" 
+	        android:text="@string/Label_SyncState"
+            android:textStyle="bold"
+            android:textColor="@color/blue"
+            android:layout_below="@id/TextView_SyncStatusHeader"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+            android:paddingRight="24dp"
+            android:paddingLeft="2dp"></TextView>
+	        
+        <TextView android:id="@+id/TextView_SyncState" 
+            android:text=""
+            android:textColor="@color/black"
+            android:layout_toRightOf="@id/TextView_LabelSyncState"
+            android:layout_below="@id/TextView_SyncStatusHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></TextView>
+	        
+	    <!-- <ProgressBar android:id="@+id/ProgressBar_DownloadStatus"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        style="@android:style/Widget.ProgressBar.Horizontal"></ProgressBar> -->
+	        
+	    <TextView android:id="@+id/TextView_DownloadStatus" 
+	        android:text=""
+	        android:textColor="@color/black"
+	        android:layout_below="@id/TextView_LabelSyncState"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"></TextView>
+	        
+	    <!-- <ProgressBar android:id="@+id/ProgressBar_UploadStatus"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        style="@android:style/Widget.ProgressBar.Horizontal"></ProgressBar> -->
+	        
+	    <TextView android:id="@+id/TextView_UploadStatus" 
+            android:text=""
+            android:textColor="@color/black"
+            android:layout_below="@id/TextView_DownloadStatus"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginBottom="4dp"></TextView>
+        
+    </RelativeLayout>
+        
+    <!-- <TextView android:text="@string/Label_QuotaStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView> -->
+        
+    <!-- <ProgressBar android:id="@+id/ProgressBar_QuotaStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@android:style/Widget.ProgressBar.Horizontal"></ProgressBar> -->
+        
+    <!-- <TextView android:id="@+id/TextView_QuotaStatus" 
+        android:text=""
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8px"></TextView> -->
+        
+    <LinearLayout android:id="@+id/LinearLayout1"
+        android:orientation="horizontal"
+        android:layout_below="@id/RelativeLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp">
+    
+    </LinearLayout>
+    
+</RelativeLayout>

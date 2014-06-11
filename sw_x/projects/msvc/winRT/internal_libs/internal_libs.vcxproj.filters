@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\libans">
+      <UniqueIdentifier>{bfa3a496-5f0c-421a-ba01-665697d2700e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libconf">
+      <UniqueIdentifier>{f1365167-43b4-4327-b938-2feafd21f472}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libcontentfile">
+      <UniqueIdentifier>{678a5f3f-6f79-4724-a93f-2d6ef5c5baf5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libcsl">
+      <UniqueIdentifier>{c65fb197-fa9f-4cdf-8118-61dcd9737ea2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libdatasetdb">
+      <UniqueIdentifier>{223c8008-6c66-4696-bbf4-d357348f2bd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libdb_utils">
+    </Filter>
+    <Filter Include="Source Files\liberror_codes">
+      <UniqueIdentifier>{ac8d4c65-1933-4e4a-a037-dfa7e68677a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libes_viewer">
+      <UniqueIdentifier>{ce61411b-c662-49ba-88cf-d2fa896f2302}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libescore">
+      <UniqueIdentifier>{bc7b0efa-b349-40bd-bcc8-2ed308e95a4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libfile_utils">
+      <UniqueIdentifier>{1844bb95-cc29-40a4-8967-fc71594237c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libsimple_http">
+      <UniqueIdentifier>{1529310d-3028-49a1-af10-2a9afbc24905}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libvssi">
+      <UniqueIdentifier>{049cd1ee-9868-47e1-bf04-3f3e71fc8e4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libesc_ul">
+      <UniqueIdentifier>{ec53f11b-d8dd-440b-b945-4aaee8295126}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libcJSON2">
+      <UniqueIdentifier>{66ddb8b3-a273-41b1-a90b-2a7d9d018353}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libexif_parser">
+      <UniqueIdentifier>{5f30f620-6865-4e99-aa20-8e8876a57590}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libStream">
+      <UniqueIdentifier>{2955e2a6-14fb-48b5-bd38-888fe9e384ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\InterruptibleSocket">
+      <UniqueIdentifier>{82e8f5cf-46cd-405a-98f9-51438fb84548}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\ans\src\ans_device.cpp">
+      <Filter>Source Files\libans</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\conf\src\conf.c">
+      <Filter>Source Files\libconf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\contentfile\src\contentfile.c">
+      <Filter>Source Files\libcontentfile</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\aes.c">
+      <Filter>Source Files\libcsl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\aes_api.c">
+      <Filter>Source Files\libcsl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\aes_imp.c">
+      <Filter>Source Files\libcsl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\algorithms.c">
+      <Filter>Source Files\libcsl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\convecc.c">
+      <Filter>Source Files\libcsl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\convrsa.c">
+      <Filter>Source Files\libcsl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\cslaes.c">
+      <Filter>Source Files\libcsl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\cslecc.c">
+      <Filter>Source Files\libcsl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\cslhmac.c">
+      <Filter>Source Files\libcsl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\csloaep.c">
+      <Filter>Source Files\libcsl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\cslrsa.c">
+      <Filter>Source Files\libcsl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\cslrsa_sign.c">
+      <Filter>Source Files\libcsl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\cslsha.c">
+      <Filter>Source Files\libcsl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\elliptic_math.c">
+      <Filter>Source Files\libcsl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\integer_math.c">
+      <Filter>Source Files\libcsl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\poly_math.c">
+      <Filter>Source Files\libcsl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\sha1.c">
+      <Filter>Source Files\libcsl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\sha256.c">
+      <Filter>Source Files\libcsl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\tomcrypt_sha256.c">
+      <Filter>Source Files\libcsl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\datasetdb\src\DatasetDB.cpp">
+      <Filter>Source Files\libdatasetdb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\datasetdb\src\unicode_upcase_table.cpp">
+      <Filter>Source Files\libdatasetdb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\datasetdb\src\utf8.cpp">
+      <Filter>Source Files\libdatasetdb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\db_utils\src\db_util_check_macros.cpp">
+      <Filter>Source Files\libdb_utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\db_utils\src\util_open_db_handle.cpp">
+      <Filter>Source Files\libdb_utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\es_core_utils\src\util_tmdgetcontentinfo.c">
+      <Filter>Source Files\liberror_codes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\es_viewer\src\cfmviewer.c">
+      <Filter>Source Files\libes_viewer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\es_viewer\src\tikviewer.c">
+      <Filter>Source Files\libes_viewer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\es_viewer\src\tmdviewer.c">
+      <Filter>Source Files\libes_viewer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\es_core\user_local\escore_base.c">
+      <Filter>Source Files\libescore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\file_utils\src\util_mime.cpp">
+      <Filter>Source Files\libfile_utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\file_utils\src\util_readfile.c">
+      <Filter>Source Files\libfile_utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\file_utils\src\util_spawnthread.c">
+      <Filter>Source Files\libfile_utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\file_utils\src\util_writefile.c">
+      <Filter>Source Files\libfile_utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\simple_http\src\http_request.cpp">
+      <Filter>Source Files\libsimple_http</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\simple_http\src\http_response.cpp">
+      <Filter>Source Files\libsimple_http</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\vssi\src\basic_vssi_wrapper.cpp">
+      <Filter>Source Files\libvssi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\vssi\src\vssi.c">
+      <Filter>Source Files\libvssi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\vssi\src\vssi_http.c">
+      <Filter>Source Files\libvssi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\vssi\src\vssi_internal.c">
+      <Filter>Source Files\libvssi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\vssi\src\vssi_tunnel.c">
+      <Filter>Source Files\libvssi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\vssi\src\vssi_vss.c">
+      <Filter>Source Files\libvssi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\es_core\esc\core\base\ioscrypto\bsl.c">
+      <Filter>Source Files\libesc_ul</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\es_core\esc\core\ec\core_glue.c">
+      <Filter>Source Files\libesc_ul</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\es_core\esc\core\ioscrypto\crypto_impl.c">
+      <Filter>Source Files\libesc_ul</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\es_core\esc\core\ec\ec_cache.c">
+      <Filter>Source Files\libesc_ul</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\es_core\esc\core\ec\ec_core.c">
+      <Filter>Source Files\libesc_ul</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\es_core\esc\core\ec\ec_pers.c">
+      <Filter>Source Files\libesc_ul</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\es_core\esc\core\es\es_container.c">
+      <Filter>Source Files\libesc_ul</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\es_core\esc\core\es\es_device.c">
+      <Filter>Source Files\libesc_ul</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\es_core\esc\core\es\es_storage.c">
+      <Filter>Source Files\libesc_ul</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\es_core\esc\core\base\esi\esi_core.c">
+      <Filter>Source Files\libesc_ul</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\es_core\esc\core\ec\istorage_impl.c">
+      <Filter>Source Files\libesc_ul</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\es_core\esc\core\base\ioscrypto\keyglobals.c">
+      <Filter>Source Files\libesc_ul</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\es_core\esc\core\base\ioscrypto\keystore.c">
+      <Filter>Source Files\libesc_ul</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\es_core\esc\core\base\ioscrypto\wrapper.c">
+      <Filter>Source Files\libesc_ul</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\es_core\esc\core\ioscrypto\mt19937-64.c">
+      <Filter>Source Files\libesc_ul</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\simple_http\src\http_request_async.cpp">
+      <Filter>Source Files\libsimple_http</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\cJSON2\src\cJSON2.c">
+      <Filter>Source Files\libcJSON2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\exif_parser\src_winrt\exif_parser.cpp">
+      <Filter>Source Files\libexif_parser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Stream\src\HttpFileDownloadStream.cpp">
+      <Filter>Source Files\libStream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Stream\src\HttpFileUploadStream.cpp">
+      <Filter>Source Files\libStream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Stream\src\HttpReqHeader.cpp">
+      <Filter>Source Files\libStream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Stream\src\HttpRespHeader.cpp">
+      <Filter>Source Files\libStream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Stream\src\HttpSocketStream.cpp">
+      <Filter>Source Files\libStream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Stream\src\HttpStream.cpp">
+      <Filter>Source Files\libStream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Stream\src\HttpStream_Helper.cpp">
+      <Filter>Source Files\libStream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Stream\src\HttpStringStream.cpp">
+      <Filter>Source Files\libStream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Stream\src\HttpTsStream.cpp">
+      <Filter>Source Files\libStream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Stream\src\InStringStream.cpp">
+      <Filter>Source Files\libStream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Stream\src\OutStringStream.cpp">
+      <Filter>Source Files\libStream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Stream\src\SocketStream.cpp">
+      <Filter>Source Files\libStream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\InterruptibleSocket\src\InterruptibleSocket.cpp">
+      <Filter>Source Files\InterruptibleSocket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\InterruptibleSocket\src\InterruptibleSocket_SigBySockShutdown.cpp">
+      <Filter>Source Files\InterruptibleSocket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\file_utils\src\util_utf8.cpp">
+      <Filter>Source Files\libfile_utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\md5.c">
+      <Filter>Source Files\libcsl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\tomcrypt_md5.c">
+      <Filter>Source Files\libcsl</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

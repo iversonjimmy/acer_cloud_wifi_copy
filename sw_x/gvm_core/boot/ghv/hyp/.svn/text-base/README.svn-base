@@ -1,0 +1,69 @@
+
+Hardware independent support functions:
+	hyp.h				Common header files
+	types.h				Basic types
+	bsd_types.h			Types for BSD-derived code
+	compiler.h			GCC builtins
+	errno.h				Error codes
+	alloc.[ch] page.[ch]		Physical memory allocator
+	assert.h			assert()
+	bits.h				Bit manipulation
+	bitmap.h			Multi-word bitmaps
+	list.[ch]			Doubly-linked lists
+	memcpy.c
+	memset.c
+	memzero.c
+	udivdi3.c umoddi3.c		BSD multi-precision arithmetic
+	qdivrem.c quad.h
+	setjmp.h			setjmp() longjmp()
+	sprintf.c			BSD sprintf()
+	string.[ch]			strncpy() etc.
+
+Hypervisor common:
+	x86.[ch]			x86 common
+	vm.[ch]				Hypervisor common entry point and data
+	dt.[ch]				GDT, IDT, TSS setup
+	apic.[ch]			APIC handling
+	entry64.S entry32.S entry.S	Assembly entry points
+	exception.c			Exception handling
+	interrupt.[ch]			Hypervisor interrupt handling
+	gpt.[ch]			Guest page table walking
+	guest.h				Multiple guest support (placeholder)
+	kprintf.[ch]			kprintf()
+	kvtophys.h			kvtophys(), phystokv()
+	notify.[ch]			Inter-CPU function calls
+	prot.[ch]			Physical memory protection
+	pt.[ch]				Host page tables
+	x86decode.[ch]			x86 instruction decoding
+	valloc.[ch]			Host virtual memory allocator
+
+Intel VMX specific:
+	vmcs.h				VM Control Structure
+	vmx.[ch]			VMX init and exit handlers
+	vmxcheck.[ch]			Guest state checking
+	vmx_guest_debug.h		Guest debug
+	ept.[ch]			Extended page tables
+	vtd.[ch]			IOMMU support
+	vapic.[ch]			APIC virtualization
+
+AMD SVM specific:
+	vmcb.[ch]			VM Control Block
+	svm.[ch]			SVM init and exit handlers
+	svmcheck.c			Guest state checking
+
+Booting:
+	bootparam.h			Boot parameter block
+
+Linux module:
+	hyp.c				hyp_on(), hyp_off()
+	dmar.c				Parse ACPI tables for DMAR units
+	hyprint.[ch]			Separate module for hypervisor printfs
+	os.[ch]				Interface to Linux, module init
+
+Header file for guest:
+	hypervisor.h			Hypercalls, hypervisor detection
+
+Linux usermode test programs:
+	vmcall.c
+	vmcopytest.c
+	vmtest.c

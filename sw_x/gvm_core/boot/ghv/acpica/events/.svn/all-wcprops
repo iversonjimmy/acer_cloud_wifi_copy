@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/events
+END
+evregion.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/events/evregion.c
+END
+evgpeblk.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/events/evgpeblk.c
+END
+evrgnini.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/events/evrgnini.c
+END
+evxface.c
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/events/evxface.c
+END
+evgpeutil.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/events/evgpeutil.c
+END
+evxfregn.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/events/evxfregn.c
+END
+evxfevnt.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/events/evxfevnt.c
+END
+evgpe.c
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/events/evgpe.c
+END
+evmisc.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/events/evmisc.c
+END
+evsci.c
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/events/evsci.c
+END
+evgpeinit.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/events/evgpeinit.c
+END
+evevent.c
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/events/evevent.c
+END

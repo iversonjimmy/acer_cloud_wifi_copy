@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repo/!svn/ver/46945/trunk/sw_x/gvm_core/vpl/tests/src_ios
+END
+VPLTestWrapper.c
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/46945/trunk/sw_x/gvm_core/vpl/tests/src_ios/VPLTestWrapper.c
+END
+vplTest_fs.m
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/32577/trunk/sw_x/gvm_core/vpl/tests/src_ios/vplTest_fs.m
+END
+VPLTestWrapper.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/23845/trunk/sw_x/gvm_core/vpl/tests/src_ios/VPLTestWrapper.h
+END

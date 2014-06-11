@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repo/!svn/ver/52688/trunk/sw_x/es_core/esc/core/ec
+END
+istorage_impl.c
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/32843/trunk/sw_x/es_core/esc/core/ec/istorage_impl.c
+END
+ec_data_int.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repo/!svn/ver/15867/trunk/sw_x/es_core/esc/core/ec/ec_data_int.h
+END
+ec_core.c
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repo/!svn/ver/37081/trunk/sw_x/es_core/esc/core/ec/ec_core.c
+END
+build_features.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/19368/trunk/sw_x/es_core/esc/core/ec/build_features.h
+END
+istorage_impl.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repo/!svn/ver/169/trunk/sw_x/es_core/esc/core/ec/istorage_impl.h
+END
+ec_common.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/16405/trunk/sw_x/es_core/esc/core/ec/ec_common.h
+END
+core_glue.c
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/1428/trunk/sw_x/es_core/esc/core/ec/core_glue.c
+END
+ghv_endian.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/1428/trunk/sw_x/es_core/esc/core/ec/ghv_endian.h
+END
+core_glue.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/1428/trunk/sw_x/es_core/esc/core/ec/core_glue.h
+END
+ec_cache.c
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repo/!svn/ver/1428/trunk/sw_x/es_core/esc/core/ec/ec_cache.c
+END
+ec_cache.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repo/!svn/ver/1428/trunk/sw_x/es_core/esc/core/ec/ec_cache.h
+END
+ec_pers.c
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repo/!svn/ver/52688/trunk/sw_x/es_core/esc/core/ec/ec_pers.c
+END
+istorage.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repo/!svn/ver/1428/trunk/sw_x/es_core/esc/core/ec/istorage.h
+END
+ec_pers.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/1428/trunk/sw_x/es_core/esc/core/ec/ec_pers.h
+END
+tmd_tmpl.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/169/trunk/sw_x/es_core/esc/core/ec/tmd_tmpl.h
+END
+defs.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repo/!svn/ver/169/trunk/sw_x/es_core/esc/core/ec/defs.h
+END
+ec_log.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/18688/trunk/sw_x/es_core/esc/core/ec/ec_log.h
+END

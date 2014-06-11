@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/repo/!svn/ver/15158/trunk/sw_x/tests/ccd/test_sub_api
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repo/!svn/ver/2013/trunk/sw_x/tests/ccd/test_sub_api/BUILD
+END
+test_sub_api.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/15158/trunk/sw_x/tests/ccd/test_sub_api/test_sub_api.cpp
+END

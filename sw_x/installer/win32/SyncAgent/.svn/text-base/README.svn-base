@@ -1,0 +1,26 @@
+How to create a Windows Installer package file for SyncAgent
+
+
+- You will need to be on a Windows PC.
+- You will need to have WiX version 3.5 installed.
+- You will need to have the following environment variables defined:
+-- PBROOT, the absolute path to the part of the build root for win32_ul.
+-- SRCROOT, the absolute path to the sw_x directory.
+-- VERSION, the version number for the package file.  It must have exactly 3 components separated by a dot in the form major.minor.build.
+
+
+To generate the msi files, run make.
+(makemsi.bat is now obsolete)
+
+
+
+Right now, self-registering the shell extension is a little tricky.
+The shell extension depends on the CRT and ATL DLLs included in the installer package,
+which won't be committed/available until InstallFinalize.
+However, to run a custom action with elevated privileges, 
+it must be done before InstallFinalize.
+Thus, the current solution is to spawn register.exe as a background process
+and have it periodically try to register the shell extension.
+
+register.exe is a compiled AutoIt script.
+It is compiled for x86 as a console application.

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/59556/trunk/sw_x/gvm_core/internal/sync_config/include
+END
+SyncConfigUtil.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repo/!svn/ver/48141/trunk/sw_x/gvm_core/internal/sync_config/include/SyncConfigUtil.hpp
+END
+SyncConfig.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repo/!svn/ver/59556/trunk/sw_x/gvm_core/internal/sync_config/include/SyncConfig.hpp
+END
+SyncConfigThreadPool.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repo/!svn/ver/51090/trunk/sw_x/gvm_core/internal/sync_config/include/SyncConfigThreadPool.hpp
+END
+SyncConfigDb.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repo/!svn/ver/58655/trunk/sw_x/gvm_core/internal/sync_config/include/SyncConfigDb.hpp
+END

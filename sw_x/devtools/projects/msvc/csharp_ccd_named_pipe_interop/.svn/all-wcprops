@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repo/!svn/ver/51627/trunk/sw_x/devtools/projects/msvc/csharp_ccd_named_pipe_interop
+END
+app.rc
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repo/!svn/ver/51620/trunk/sw_x/devtools/projects/msvc/csharp_ccd_named_pipe_interop/app.rc
+END
+csharp_ccd_named_pipe_interop.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repo/!svn/ver/51627/trunk/sw_x/devtools/projects/msvc/csharp_ccd_named_pipe_interop/csharp_ccd_named_pipe_interop.vcxproj
+END
+app.ico
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repo/!svn/ver/51620/trunk/sw_x/devtools/projects/msvc/csharp_ccd_named_pipe_interop/app.ico
+END
+csharp_ccd_named_pipe_interop.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repo/!svn/ver/51627/trunk/sw_x/devtools/projects/msvc/csharp_ccd_named_pipe_interop/csharp_ccd_named_pipe_interop.cpp
+END
+csharp_ccd_named_pipe_interop.vcxproj.filters
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repo/!svn/ver/51627/trunk/sw_x/devtools/projects/msvc/csharp_ccd_named_pipe_interop/csharp_ccd_named_pipe_interop.vcxproj.filters
+END
+AssemblyInfo.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repo/!svn/ver/51620/trunk/sw_x/devtools/projects/msvc/csharp_ccd_named_pipe_interop/AssemblyInfo.cpp
+END
+resource.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repo/!svn/ver/51620/trunk/sw_x/devtools/projects/msvc/csharp_ccd_named_pipe_interop/resource.h
+END

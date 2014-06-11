@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:dx_remote_agent/dx_remote_agent.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:internal/internal.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:libsqlite3/sqlite3.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:libvpl/vpl.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "container:libvplex/vplex.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:media_metadata_shared_impl/media_metadata_shared_impl.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:protobuf/protobuf.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:protorpc/protorpc.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "container:ccd/ccd.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:DummyApp/DummyApp.xcodeproj">
+   </FileRef>
+</Workspace>

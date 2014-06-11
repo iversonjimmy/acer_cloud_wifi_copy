@@ -1,0 +1,61 @@
+   This directory contains the source and some module tests for
+the PXD client library.  The tests run on Linux, and possibly
+some other POSIX systems.
+
+   To do the basic setup and run the module tests, you'll need
+to set the PRODUCT environment variable.  "linux" works.
+The WORKAREA variable must be set, and you'll need the sw_x,
+sw_i, and sw_c trees.  Then,
+   make all
+should work.
+
+   To set up the tests, you need to make various libraries in
+the sw_x directory that the tests use.  The easiest way to
+do that is to run:
+    $ export DEBUG=1
+    $ export PRODUCT=linux
+    $ cd $WORKAREA/sw_x
+    $ make libpxd libans es_core vplex vpl
+The "setup" target in the Makefile also will build the libpxd
+files and the PXD java code.
+
+If your machine does not have valgrind installed, run:
+    # yum install valgrind
+as root.  On Ubuntu machines, use:
+    # apt-get valgrind
+
+To run the basic stand-alone module tests, enter:
+    $ cd $WORKAREA/sw_x/gvm_core/internal/pxd/src
+    $ make test
+Once the tests have been built, you can run them repeatedly:
+    $ cd $WORKAREA/sw_x/gvm_core/internal/pxd/src/testing
+    $ ./run-lots
+The script will stop when an error is detected.
+
+You can run
+    $ cd $WORKAREA/sw_x/gvm_core/internal/pxd/src
+    $ make gcov
+to get code coverage information for the module tests.
+The output is put in the "total" subdirectory.
+
+   To run the pxd_circle test, which runs against a test
+version of the PXD demon, see the pxd_circle.doc file in
+the ./testing subdirectory.  The pxd_triangle program can
+run against a test lab environment.  The pxd_triangle.doc
+file in the testing subdirectory describes how to run it.
+
+To make the pxd_circle program, run:
+    $ cd $WORKAREA/sw_x/gvm_core/internal/pxd/src
+    $ make pxd_circle
+
+To make pxd_triangle, run:
+    $ cd $WORKAREA/sw_x/gvm_core/internal/pxd/src
+    $ make pxd_triangle
+
+You only need to do the "make libpxd" step once for a new
+build area, and then whenever you want a newer version of
+the libraries, for example, after running "svn update".
+
+The testing subdirectory also has two scripts for running
+the PXD server unit test.  See the run-pxdtest.doc file for
+details.

@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repo/!svn/ver/56674/trunk/sw_x/gvm_core/vplex/posix_src
+END
+vplex__powerman.c
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/22467/trunk/sw_x/gvm_core/vplex/posix_src/vplex__powerman.c
+END
+vplex__socket.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/56674/trunk/sw_x/gvm_core/vplex/posix_src/vplex__socket.c
+END
+vplex__named_socket.c
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/33772/trunk/sw_x/gvm_core/vplex/posix_src/vplex__named_socket.c
+END
+vplex__wstring.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/1226/trunk/sw_x/gvm_core/vplex/posix_src/vplex__wstring.c
+END
+vplex__time.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/2314/trunk/sw_x/gvm_core/vplex/posix_src/vplex__time.c
+END
+vplex__file.c
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/43611/trunk/sw_x/gvm_core/vplex/posix_src/vplex__file.c
+END
+vplex__plat.c
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/29921/trunk/sw_x/gvm_core/vplex/posix_src/vplex__plat.c
+END

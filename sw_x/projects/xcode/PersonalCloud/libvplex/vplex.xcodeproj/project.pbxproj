@@ -1,0 +1,1287 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		16330D07163F7B15000ECFE7 /* vplex_http2.mm in Sources */ = {isa = PBXBuildFile; fileRef = 16330D05163F7B15000ECFE7 /* vplex_http2.mm */; };
+		16330D0E163FB97E000ECFE7 /* NSURLConnectionHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 16330D0C163FB97E000ECFE7 /* NSURLConnectionHelper.h */; };
+		16330D0F163FB97E000ECFE7 /* NSURLConnectionHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 16330D0D163FB97E000ECFE7 /* NSURLConnectionHelper.mm */; };
+		16494A521724E4EC00F2278D /* vplex_shared_credential.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 16494A501724E4EC00F2278D /* vplex_shared_credential.cpp */; };
+		16494A5B17253AEA00F2278D /* vplex_shared_credential.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 16494A5917253AEA00F2278D /* vplex_shared_credential.pb.cc */; };
+		16494A5C17253AEA00F2278D /* vplex_shared_credential.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 16494A5A17253AEA00F2278D /* vplex_shared_credential.pb.h */; };
+		167FF44A1610279D00434B30 /* vplex_shared_object.mm in Sources */ = {isa = PBXBuildFile; fileRef = 167FF4491610279D00434B30 /* vplex_shared_object.mm */; };
+		167FF453161027C500434B30 /* SystemInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 167FF44F161027C500434B30 /* SystemInfo.h */; };
+		167FF454161027C500434B30 /* SystemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 167FF450161027C500434B30 /* SystemInfo.m */; };
+		167FF4DD1610390500434B30 /* KeychainItemWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 167FF4DB1610390500434B30 /* KeychainItemWrapper.h */; };
+		167FF4DE1610390500434B30 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 167FF4DC1610390500434B30 /* KeychainItemWrapper.m */; };
+		168473CE1643E89400A8F24B /* vplex__http2.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 168473CC1643E89400A8F24B /* vplex__http2.hpp */; };
+		168473CF1643E89400A8F24B /* vplex__plat.h in Headers */ = {isa = PBXBuildFile; fileRef = 168473CD1643E89400A8F24B /* vplex__plat.h */; };
+		16ADFA1718B8F05700982050 /* NSCallbackInputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 16ADFA1518B8F05700982050 /* NSCallbackInputStream.h */; };
+		16ADFA1818B8F05700982050 /* NSCallbackInputStream.mm in Sources */ = {isa = PBXBuildFile; fileRef = 16ADFA1618B8F05700982050 /* NSCallbackInputStream.mm */; };
+		16B9AA311798D67400870F57 /* vplexTest_http2.m in Sources */ = {isa = PBXBuildFile; fileRef = 16B9AA301798D67400870F57 /* vplexTest_http2.m */; };
+		16B9AA331798D69E00870F57 /* vplexTest.conf in Resources */ = {isa = PBXBuildFile; fileRef = 16B9AA321798D69E00870F57 /* vplexTest.conf */; };
+		16B9AA341798D6BC00870F57 /* vplexTest_http2.m in Sources */ = {isa = PBXBuildFile; fileRef = 16B9AA301798D67400870F57 /* vplexTest_http2.m */; };
+		16B9AA361799C4A000870F57 /* vplexTest_http2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 16B9AA351799C4A000870F57 /* vplexTest_http2.cpp */; };
+		16B9AA371799C4C000870F57 /* vplexTest_http2.m in Sources */ = {isa = PBXBuildFile; fileRef = 16B9AA301798D67400870F57 /* vplexTest_http2.m */; };
+		16D147DF16EF1CDE0055C5D5 /* vplex_soap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 16D147DE16EF1CDE0055C5D5 /* vplex_soap.cpp */; };
+		16D147F516F2F41A0055C5D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D147F416F2F41A0055C5D5 /* UIKit.framework */; };
+		16D147F616F2F5690055C5D5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 160C163D16E8A94E00FA3FE9 /* Default-568h@2x.png */; };
+		6B05A1491589899D00E09F0B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B05A1481589899D00E09F0B /* Foundation.framework */; };
+		6B05A1571589899D00E09F0B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B05A1561589899D00E09F0B /* SenTestingKit.framework */; };
+		6B05A15A1589899D00E09F0B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B05A1481589899D00E09F0B /* Foundation.framework */; };
+		6B05A15D1589899D00E09F0B /* libvplex.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B05A1451589899D00E09F0B /* libvplex.a */; };
+		6B05A1631589899D00E09F0B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B05A1611589899D00E09F0B /* InfoPlist.strings */; };
+		6B05A1661589899D00E09F0B /* libvplexTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A1651589899D00E09F0B /* libvplexTests.m */; };
+		6B05A2861589918600E09F0B /* vplex__file.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A25C1589918600E09F0B /* vplex__file.c */; };
+		6B05A2871589918600E09F0B /* vplex__named_socket.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A25D1589918600E09F0B /* vplex__named_socket.c */; };
+		6B05A2881589918600E09F0B /* vplex__plat.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A25E1589918600E09F0B /* vplex__plat.c */; };
+		6B05A2891589918600E09F0B /* vplex__powerman.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A25F1589918600E09F0B /* vplex__powerman.c */; };
+		6B05A28A1589918600E09F0B /* vplex__socket.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A2601589918600E09F0B /* vplex__socket.c */; };
+		6B05A28B1589918600E09F0B /* vplex__time.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A2611589918600E09F0B /* vplex__time.c */; };
+		6B05A28C1589918600E09F0B /* vplex__wstring.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A2621589918600E09F0B /* vplex__wstring.c */; };
+		6B05A28D1589918600E09F0B /* vplex_dataset.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A2641589918600E09F0B /* vplex_dataset.c */; };
+		6B05A28E1589918600E09F0B /* vplex_ias.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A2651589918600E09F0B /* vplex_ias.cpp */; };
+		6B05A28F1589918600E09F0B /* vplex_ias_priv.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B05A2661589918600E09F0B /* vplex_ias_priv.h */; };
+		6B05A2901589918600E09F0B /* vplex_ipc_socket.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A2671589918600E09F0B /* vplex_ipc_socket.c */; };
+		6B05A2911589918600E09F0B /* vplex_list.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A2681589918600E09F0B /* vplex_list.c */; };
+		6B05A2921589918600E09F0B /* vplex_math.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A2691589918600E09F0B /* vplex_math.c */; };
+		6B05A2931589918600E09F0B /* vplex_mem_heap.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A26A1589918600E09F0B /* vplex_mem_heap.c */; };
+		6B05A2941589918600E09F0B /* vplex_no_trace.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A26B1589918600E09F0B /* vplex_no_trace.c */; };
+		6B05A2951589918600E09F0B /* vplex_nus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A26C1589918600E09F0B /* vplex_nus.cpp */; };
+		6B05A2961589918600E09F0B /* vplex_nus_priv.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B05A26D1589918600E09F0B /* vplex_nus_priv.h */; };
+		6B05A2971589918600E09F0B /* vplex_private.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B05A26E1589918600E09F0B /* vplex_private.h */; };
+		6B05A2981589918600E09F0B /* vplex_queue.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A26F1589918600E09F0B /* vplex_queue.c */; };
+		6B05A2991589918600E09F0B /* vplex_rwlock.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A2701589918600E09F0B /* vplex_rwlock.c */; };
+		6B05A29A1589918600E09F0B /* vplex_safe_serialization.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A2711589918600E09F0B /* vplex_safe_serialization.c */; };
+		6B05A29B1589918600E09F0B /* vplex_serialization.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A2721589918600E09F0B /* vplex_serialization.c */; };
+		6B05A29D1589918600E09F0B /* vplex_soap_priv.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B05A2741589918600E09F0B /* vplex_soap_priv.h */; };
+		6B05A29E1589918600E09F0B /* vplex_soap_util.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A2751589918600E09F0B /* vplex_soap_util.c */; };
+		6B05A29F1589918600E09F0B /* vplex_socket.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A2761589918600E09F0B /* vplex_socket.c */; };
+		6B05A2A01589918600E09F0B /* vplex_strings.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A2771589918600E09F0B /* vplex_strings.c */; };
+		6B05A2A11589918600E09F0B /* vplex_strto.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A2781589918600E09F0B /* vplex_strto.c */; };
+		6B05A2A21589918600E09F0B /* vplex_syslog.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A2791589918600E09F0B /* vplex_syslog.c */; };
+		6B05A2A31589918600E09F0B /* vplex_time.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A27A1589918600E09F0B /* vplex_time.c */; };
+		6B05A2A41589918600E09F0B /* vplex_trace.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A27B1589918600E09F0B /* vplex_trace.c */; };
+		6B05A2A51589918600E09F0B /* vplex_utf_conversion.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A27C1589918600E09F0B /* vplex_utf_conversion.c */; };
+		6B05A2A61589918600E09F0B /* vplex_vs_directory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A27D1589918600E09F0B /* vplex_vs_directory.cpp */; };
+		6B05A2A71589918600E09F0B /* vplex_vs_directory_priv.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B05A27E1589918600E09F0B /* vplex_vs_directory_priv.h */; };
+		6B05A2A81589918600E09F0B /* vplex_vs_directory_utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A27F1589918600E09F0B /* vplex_vs_directory_utils.cpp */; };
+		6B05A2A91589918600E09F0B /* vplex_xml_reader.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A2801589918600E09F0B /* vplex_xml_reader.c */; };
+		6B05A2AA1589918600E09F0B /* vplex_xml_writer.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A2811589918600E09F0B /* vplex_xml_writer.c */; };
+		6B05A2B9158991B900E09F0B /* vplexTest_common.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A2AF158991B900E09F0B /* vplexTest_common.c */; };
+		6B05A2BB158991B900E09F0B /* vplexTest_math.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A2B1158991B900E09F0B /* vplexTest_math.c */; };
+		6B05A2BC158991B900E09F0B /* vplexTest_mem_heap.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A2B2158991B900E09F0B /* vplexTest_mem_heap.c */; };
+		6B05A2BD158991B900E09F0B /* vplexTest_safe_serialization.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A2B3158991B900E09F0B /* vplexTest_safe_serialization.c */; };
+		6B05A2BE158991B900E09F0B /* vplexTest_serialization.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A2B4158991B900E09F0B /* vplexTest_serialization.c */; };
+		6B05A2BF158991B900E09F0B /* vplexTest_wstring.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A2B5158991B900E09F0B /* vplexTest_wstring.c */; };
+		6B05A2C0158991B900E09F0B /* vplexTest_xml_reader.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A2B6158991B900E09F0B /* vplexTest_xml_reader.c */; };
+		6B05A2C1158991B900E09F0B /* vplexTest_xml_writer.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A2B7158991B900E09F0B /* vplexTest_xml_writer.c */; };
+		6B05A2C5158992F800E09F0B /* VPLEXTestWrapper.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A2C3158992F800E09F0B /* VPLEXTestWrapper.c */; };
+		6B05A2C6158992F800E09F0B /* VPLEXTestWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B05A2C4158992F800E09F0B /* VPLEXTestWrapper.h */; };
+		6B05A2DA158994D400E09F0B /* vpl__atomic.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B05A2D0158994D400E09F0B /* vpl__atomic.h */; };
+		6B05A2DD158994D400E09F0B /* vpl__error.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B05A2D3158994D400E09F0B /* vpl__error.h */; };
+		6B05A2E0158994D400E09F0B /* vpl__plat.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B05A2D6158994D400E09F0B /* vpl__plat.h */; };
+		6B05A2E1158994D400E09F0B /* vpl__socket.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B05A2D7158994D400E09F0B /* vpl__socket.h */; };
+		6B05A2E2158994D400E09F0B /* vpl__th.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B05A2D8158994D400E09F0B /* vpl__th.h */; };
+		6B05A2E3158994D400E09F0B /* vpl__types.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B05A2D9158994D400E09F0B /* vpl__types.h */; };
+		6B05A3CD1589D86D00E09F0B /* vplex_ans_message.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A39E1589D86D00E09F0B /* vplex_ans_message.pb.cc */; };
+		6B05A3CE1589D86D00E09F0B /* vplex_ans_message.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B05A39F1589D86D00E09F0B /* vplex_ans_message.pb.h */; };
+		6B05A3CF1589D86D00E09F0B /* vplex_common_types-xml.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A3A11589D86D00E09F0B /* vplex_common_types-xml.pb.cc */; };
+		6B05A3D01589D86D00E09F0B /* vplex_common_types-xml.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B05A3A21589D86D00E09F0B /* vplex_common_types-xml.pb.h */; };
+		6B05A3D11589D86D00E09F0B /* vplex_common_types.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A3A31589D86D00E09F0B /* vplex_common_types.pb.cc */; };
+		6B05A3D21589D86D00E09F0B /* vplex_common_types.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B05A3A41589D86D00E09F0B /* vplex_common_types.pb.h */; };
+		6B05A3D31589D86D00E09F0B /* vplex_community_notifier.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A3A61589D86D00E09F0B /* vplex_community_notifier.pb.cc */; };
+		6B05A3D41589D86D00E09F0B /* vplex_community_notifier.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B05A3A71589D86D00E09F0B /* vplex_community_notifier.pb.h */; };
+		6B05A3D51589D86D00E09F0B /* vplex_community_service_types-xml.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A3A91589D86D00E09F0B /* vplex_community_service_types-xml.pb.cc */; };
+		6B05A3D61589D86D00E09F0B /* vplex_community_service_types-xml.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B05A3AA1589D86D00E09F0B /* vplex_community_service_types-xml.pb.h */; };
+		6B05A3D71589D86D00E09F0B /* vplex_community_service_types.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A3AB1589D86D00E09F0B /* vplex_community_service_types.pb.cc */; };
+		6B05A3D81589D86D00E09F0B /* vplex_community_service_types.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B05A3AC1589D86D00E09F0B /* vplex_community_service_types.pb.h */; };
+		6B05A3D91589D86D00E09F0B /* vplex_community_types-xml.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A3AE1589D86D00E09F0B /* vplex_community_types-xml.pb.cc */; };
+		6B05A3DA1589D86D00E09F0B /* vplex_community_types-xml.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B05A3AF1589D86D00E09F0B /* vplex_community_types-xml.pb.h */; };
+		6B05A3DB1589D86D00E09F0B /* vplex_community_types.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A3B01589D86D00E09F0B /* vplex_community_types.pb.cc */; };
+		6B05A3DC1589D86D00E09F0B /* vplex_community_types.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B05A3B11589D86D00E09F0B /* vplex_community_types.pb.h */; };
+		6B05A3DD1589D86D00E09F0B /* vplex_ias_service_types-xml.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A3B31589D86D00E09F0B /* vplex_ias_service_types-xml.pb.cc */; };
+		6B05A3DE1589D86D00E09F0B /* vplex_ias_service_types-xml.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B05A3B41589D86D00E09F0B /* vplex_ias_service_types-xml.pb.h */; };
+		6B05A3DF1589D86D00E09F0B /* vplex_ias_service_types.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A3B51589D86D00E09F0B /* vplex_ias_service_types.pb.cc */; };
+		6B05A3E01589D86D00E09F0B /* vplex_ias_service_types.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B05A3B61589D86D00E09F0B /* vplex_ias_service_types.pb.h */; };
+		6B05A3E11589D86D00E09F0B /* vplex_nus_service_types-xml.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A3B81589D86D00E09F0B /* vplex_nus_service_types-xml.pb.cc */; };
+		6B05A3E21589D86D00E09F0B /* vplex_nus_service_types-xml.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B05A3B91589D86D00E09F0B /* vplex_nus_service_types-xml.pb.h */; };
+		6B05A3E31589D86D00E09F0B /* vplex_nus_service_types.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A3BA1589D86D00E09F0B /* vplex_nus_service_types.pb.cc */; };
+		6B05A3E41589D86D00E09F0B /* vplex_nus_service_types.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B05A3BB1589D86D00E09F0B /* vplex_nus_service_types.pb.h */; };
+		6B05A3E51589D86D00E09F0B /* vplex_sync_agent_notifier.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A3BD1589D86D00E09F0B /* vplex_sync_agent_notifier.pb.cc */; };
+		6B05A3E61589D86D00E09F0B /* vplex_sync_agent_notifier.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B05A3BE1589D86D00E09F0B /* vplex_sync_agent_notifier.pb.h */; };
+		6B05A3E71589D86D00E09F0B /* vplex_vs_directory_service_types-xml.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A3C11589D86D00E09F0B /* vplex_vs_directory_service_types-xml.pb.cc */; };
+		6B05A3E81589D86D00E09F0B /* vplex_vs_directory_service_types-xml.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B05A3C21589D86D00E09F0B /* vplex_vs_directory_service_types-xml.pb.h */; };
+		6B05A3E91589D86D00E09F0B /* vplex_vs_directory_service_types.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A3C31589D86D00E09F0B /* vplex_vs_directory_service_types.pb.cc */; };
+		6B05A3EA1589D86D00E09F0B /* vplex_vs_directory_service_types.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B05A3C41589D86D00E09F0B /* vplex_vs_directory_service_types.pb.h */; };
+		6B5C2B8A158F238D0012772E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B05A1481589899D00E09F0B /* Foundation.framework */; };
+		6B5C2B8C158F238D0012772E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B5C2B8B158F238D0012772E /* CoreGraphics.framework */; };
+		6B5C2B92158F238D0012772E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B5C2B90158F238D0012772E /* InfoPlist.strings */; };
+		6B5C2B94158F238D0012772E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5C2B93158F238D0012772E /* main.m */; };
+		6B5C2B98158F238D0012772E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5C2B97158F238D0012772E /* AppDelegate.m */; };
+		6B5C2BA1158F238D0012772E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5C2BA0158F238D0012772E /* ViewController.m */; };
+		6B5C2BBC158F24470012772E /* VPLEXTestWrapper.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A2C3158992F800E09F0B /* VPLEXTestWrapper.c */; };
+		6B5C2BE4158F26D00012772E /* VPLEXTestWrapper.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A2C3158992F800E09F0B /* VPLEXTestWrapper.c */; };
+		6B902C56158B7070008C10FB /* ProtoXmlParseState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B902C52158B7070008C10FB /* ProtoXmlParseState.cpp */; };
+		6B902C57158B7070008C10FB /* ProtoXmlParseState.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B902C53158B7070008C10FB /* ProtoXmlParseState.h */; };
+		6B902C58158B7070008C10FB /* ProtoXmlParseStateImpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B902C54158B7070008C10FB /* ProtoXmlParseStateImpl.cpp */; };
+		6B902C59158B7070008C10FB /* ProtoXmlParseStateImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B902C55158B7070008C10FB /* ProtoXmlParseStateImpl.h */; };
+		6BB07DC5164B480B0024E2AB /* vplex_http_util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6BB07DC4164B480B0024E2AB /* vplex_http_util.cpp */; };
+		6BF9160316BF8B7C00FB543D /* libvplex.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B05A1451589899D00E09F0B /* libvplex.a */; };
+		6BF9160516BF8B7C00FB543D /* libvpl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BF9160416BF8B7C00FB543D /* libvpl.a */; };
+		6BF9164A16BF997900FB543D /* LogReceiveURL in Resources */ = {isa = PBXBuildFile; fileRef = 6BF9164916BF997900FB543D /* LogReceiveURL */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6B05A15B1589899D00E09F0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B05A13C1589899D00E09F0B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B05A1441589899D00E09F0B;
+			remoteInfo = libvplex;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		160C163D16E8A94E00FA3FE9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		16330D05163F7B15000ECFE7 /* vplex_http2.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = vplex_http2.mm; sourceTree = "<group>"; };
+		16330D0C163FB97E000ECFE7 /* NSURLConnectionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSURLConnectionHelper.h; sourceTree = "<group>"; };
+		16330D0D163FB97E000ECFE7 /* NSURLConnectionHelper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NSURLConnectionHelper.mm; sourceTree = "<group>"; };
+		16494A501724E4EC00F2278D /* vplex_shared_credential.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vplex_shared_credential.cpp; sourceTree = "<group>"; };
+		16494A5917253AEA00F2278D /* vplex_shared_credential.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vplex_shared_credential.pb.cc; sourceTree = "<group>"; };
+		16494A5A17253AEA00F2278D /* vplex_shared_credential.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vplex_shared_credential.pb.h; sourceTree = "<group>"; };
+		167FF4491610279D00434B30 /* vplex_shared_object.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = vplex_shared_object.mm; sourceTree = "<group>"; };
+		167FF44F161027C500434B30 /* SystemInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemInfo.h; sourceTree = "<group>"; };
+		167FF450161027C500434B30 /* SystemInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemInfo.m; sourceTree = "<group>"; };
+		167FF4DB1610390500434B30 /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
+		167FF4DC1610390500434B30 /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
+		168473CC1643E89400A8F24B /* vplex__http2.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = vplex__http2.hpp; sourceTree = "<group>"; };
+		168473CD1643E89400A8F24B /* vplex__plat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vplex__plat.h; sourceTree = "<group>"; };
+		16ADFA1518B8F05700982050 /* NSCallbackInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSCallbackInputStream.h; path = ../../../../gvm_core/vplex/src_use_cocoa/NSCallbackInputStream.h; sourceTree = "<group>"; };
+		16ADFA1618B8F05700982050 /* NSCallbackInputStream.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = NSCallbackInputStream.mm; path = ../../../../gvm_core/vplex/src_use_cocoa/NSCallbackInputStream.mm; sourceTree = "<group>"; };
+		16B9AA301798D67400870F57 /* vplexTest_http2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vplexTest_http2.m; sourceTree = "<group>"; };
+		16B9AA321798D69E00870F57 /* vplexTest.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vplexTest.conf; sourceTree = "<group>"; };
+		16B9AA351799C4A000870F57 /* vplexTest_http2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vplexTest_http2.cpp; sourceTree = "<group>"; };
+		16D147DE16EF1CDE0055C5D5 /* vplex_soap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vplex_soap.cpp; sourceTree = "<group>"; };
+		16D147F416F2F41A0055C5D5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6B05A1451589899D00E09F0B /* libvplex.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libvplex.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B05A1481589899D00E09F0B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6B05A14C1589899D00E09F0B /* vplex-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "vplex-Prefix.pch"; sourceTree = "<group>"; };
+		6B05A1551589899D00E09F0B /* vplexTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vplexTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B05A1561589899D00E09F0B /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		6B05A1581589899D00E09F0B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		6B05A1601589899D00E09F0B /* vplexTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "vplexTests-Info.plist"; sourceTree = "<group>"; };
+		6B05A1621589899D00E09F0B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6B05A1641589899D00E09F0B /* libvplexTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = libvplexTests.h; sourceTree = "<group>"; };
+		6B05A1651589899D00E09F0B /* libvplexTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = libvplexTests.m; sourceTree = "<group>"; };
+		6B05A25C1589918600E09F0B /* vplex__file.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplex__file.c; sourceTree = "<group>"; };
+		6B05A25D1589918600E09F0B /* vplex__named_socket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplex__named_socket.c; sourceTree = "<group>"; };
+		6B05A25E1589918600E09F0B /* vplex__plat.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplex__plat.c; sourceTree = "<group>"; };
+		6B05A25F1589918600E09F0B /* vplex__powerman.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplex__powerman.c; sourceTree = "<group>"; };
+		6B05A2601589918600E09F0B /* vplex__socket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplex__socket.c; sourceTree = "<group>"; };
+		6B05A2611589918600E09F0B /* vplex__time.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplex__time.c; sourceTree = "<group>"; };
+		6B05A2621589918600E09F0B /* vplex__wstring.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplex__wstring.c; sourceTree = "<group>"; };
+		6B05A2641589918600E09F0B /* vplex_dataset.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplex_dataset.c; sourceTree = "<group>"; };
+		6B05A2651589918600E09F0B /* vplex_ias.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vplex_ias.cpp; sourceTree = "<group>"; };
+		6B05A2661589918600E09F0B /* vplex_ias_priv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vplex_ias_priv.h; sourceTree = "<group>"; };
+		6B05A2671589918600E09F0B /* vplex_ipc_socket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplex_ipc_socket.c; sourceTree = "<group>"; };
+		6B05A2681589918600E09F0B /* vplex_list.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplex_list.c; sourceTree = "<group>"; };
+		6B05A2691589918600E09F0B /* vplex_math.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplex_math.c; sourceTree = "<group>"; };
+		6B05A26A1589918600E09F0B /* vplex_mem_heap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplex_mem_heap.c; sourceTree = "<group>"; };
+		6B05A26B1589918600E09F0B /* vplex_no_trace.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplex_no_trace.c; sourceTree = "<group>"; };
+		6B05A26C1589918600E09F0B /* vplex_nus.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vplex_nus.cpp; sourceTree = "<group>"; };
+		6B05A26D1589918600E09F0B /* vplex_nus_priv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vplex_nus_priv.h; sourceTree = "<group>"; };
+		6B05A26E1589918600E09F0B /* vplex_private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vplex_private.h; sourceTree = "<group>"; };
+		6B05A26F1589918600E09F0B /* vplex_queue.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplex_queue.c; sourceTree = "<group>"; };
+		6B05A2701589918600E09F0B /* vplex_rwlock.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplex_rwlock.c; sourceTree = "<group>"; };
+		6B05A2711589918600E09F0B /* vplex_safe_serialization.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplex_safe_serialization.c; sourceTree = "<group>"; };
+		6B05A2721589918600E09F0B /* vplex_serialization.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplex_serialization.c; sourceTree = "<group>"; };
+		6B05A2741589918600E09F0B /* vplex_soap_priv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vplex_soap_priv.h; sourceTree = "<group>"; };
+		6B05A2751589918600E09F0B /* vplex_soap_util.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplex_soap_util.c; sourceTree = "<group>"; };
+		6B05A2761589918600E09F0B /* vplex_socket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplex_socket.c; sourceTree = "<group>"; };
+		6B05A2771589918600E09F0B /* vplex_strings.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplex_strings.c; sourceTree = "<group>"; };
+		6B05A2781589918600E09F0B /* vplex_strto.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplex_strto.c; sourceTree = "<group>"; };
+		6B05A2791589918600E09F0B /* vplex_syslog.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplex_syslog.c; sourceTree = "<group>"; };
+		6B05A27A1589918600E09F0B /* vplex_time.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplex_time.c; sourceTree = "<group>"; };
+		6B05A27B1589918600E09F0B /* vplex_trace.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplex_trace.c; sourceTree = "<group>"; };
+		6B05A27C1589918600E09F0B /* vplex_utf_conversion.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplex_utf_conversion.c; sourceTree = "<group>"; };
+		6B05A27D1589918600E09F0B /* vplex_vs_directory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vplex_vs_directory.cpp; sourceTree = "<group>"; };
+		6B05A27E1589918600E09F0B /* vplex_vs_directory_priv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vplex_vs_directory_priv.h; sourceTree = "<group>"; };
+		6B05A27F1589918600E09F0B /* vplex_vs_directory_utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vplex_vs_directory_utils.cpp; sourceTree = "<group>"; };
+		6B05A2801589918600E09F0B /* vplex_xml_reader.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplex_xml_reader.c; sourceTree = "<group>"; };
+		6B05A2811589918600E09F0B /* vplex_xml_writer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplex_xml_writer.c; sourceTree = "<group>"; };
+		6B05A2AF158991B900E09F0B /* vplexTest_common.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplexTest_common.c; sourceTree = "<group>"; };
+		6B05A2B1158991B900E09F0B /* vplexTest_math.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplexTest_math.c; sourceTree = "<group>"; };
+		6B05A2B2158991B900E09F0B /* vplexTest_mem_heap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplexTest_mem_heap.c; sourceTree = "<group>"; };
+		6B05A2B3158991B900E09F0B /* vplexTest_safe_serialization.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplexTest_safe_serialization.c; sourceTree = "<group>"; };
+		6B05A2B4158991B900E09F0B /* vplexTest_serialization.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplexTest_serialization.c; sourceTree = "<group>"; };
+		6B05A2B5158991B900E09F0B /* vplexTest_wstring.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplexTest_wstring.c; sourceTree = "<group>"; };
+		6B05A2B6158991B900E09F0B /* vplexTest_xml_reader.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplexTest_xml_reader.c; sourceTree = "<group>"; };
+		6B05A2B7158991B900E09F0B /* vplexTest_xml_writer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplexTest_xml_writer.c; sourceTree = "<group>"; };
+		6B05A2C3158992F800E09F0B /* VPLEXTestWrapper.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = VPLEXTestWrapper.c; sourceTree = "<group>"; };
+		6B05A2C4158992F800E09F0B /* VPLEXTestWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPLEXTestWrapper.h; sourceTree = "<group>"; };
+		6B05A2D0158994D400E09F0B /* vpl__atomic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vpl__atomic.h; sourceTree = "<group>"; };
+		6B05A2D3158994D400E09F0B /* vpl__error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vpl__error.h; sourceTree = "<group>"; };
+		6B05A2D6158994D400E09F0B /* vpl__plat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vpl__plat.h; sourceTree = "<group>"; };
+		6B05A2D7158994D400E09F0B /* vpl__socket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vpl__socket.h; sourceTree = "<group>"; };
+		6B05A2D8158994D400E09F0B /* vpl__th.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vpl__th.h; sourceTree = "<group>"; };
+		6B05A2D9158994D400E09F0B /* vpl__types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vpl__types.h; sourceTree = "<group>"; };
+		6B05A38A1589D86D00E09F0B /* BUILD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BUILD; sourceTree = "<group>"; };
+		6B05A39D1589D86D00E09F0B /* Make.common */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Make.common; sourceTree = "<group>"; };
+		6B05A39E1589D86D00E09F0B /* vplex_ans_message.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vplex_ans_message.pb.cc; sourceTree = "<group>"; };
+		6B05A39F1589D86D00E09F0B /* vplex_ans_message.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vplex_ans_message.pb.h; sourceTree = "<group>"; };
+		6B05A3A01589D86D00E09F0B /* vplex_ans_message.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vplex_ans_message.proto; sourceTree = "<group>"; };
+		6B05A3A11589D86D00E09F0B /* vplex_common_types-xml.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "vplex_common_types-xml.pb.cc"; sourceTree = "<group>"; };
+		6B05A3A21589D86D00E09F0B /* vplex_common_types-xml.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "vplex_common_types-xml.pb.h"; sourceTree = "<group>"; };
+		6B05A3A31589D86D00E09F0B /* vplex_common_types.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vplex_common_types.pb.cc; sourceTree = "<group>"; };
+		6B05A3A41589D86D00E09F0B /* vplex_common_types.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vplex_common_types.pb.h; sourceTree = "<group>"; };
+		6B05A3A51589D86D00E09F0B /* vplex_common_types.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vplex_common_types.proto; sourceTree = "<group>"; };
+		6B05A3A61589D86D00E09F0B /* vplex_community_notifier.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vplex_community_notifier.pb.cc; sourceTree = "<group>"; };
+		6B05A3A71589D86D00E09F0B /* vplex_community_notifier.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vplex_community_notifier.pb.h; sourceTree = "<group>"; };
+		6B05A3A81589D86D00E09F0B /* vplex_community_notifier.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vplex_community_notifier.proto; sourceTree = "<group>"; };
+		6B05A3A91589D86D00E09F0B /* vplex_community_service_types-xml.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "vplex_community_service_types-xml.pb.cc"; sourceTree = "<group>"; };
+		6B05A3AA1589D86D00E09F0B /* vplex_community_service_types-xml.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "vplex_community_service_types-xml.pb.h"; sourceTree = "<group>"; };
+		6B05A3AB1589D86D00E09F0B /* vplex_community_service_types.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vplex_community_service_types.pb.cc; sourceTree = "<group>"; };
+		6B05A3AC1589D86D00E09F0B /* vplex_community_service_types.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vplex_community_service_types.pb.h; sourceTree = "<group>"; };
+		6B05A3AD1589D86D00E09F0B /* vplex_community_service_types.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vplex_community_service_types.proto; sourceTree = "<group>"; };
+		6B05A3AE1589D86D00E09F0B /* vplex_community_types-xml.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "vplex_community_types-xml.pb.cc"; sourceTree = "<group>"; };
+		6B05A3AF1589D86D00E09F0B /* vplex_community_types-xml.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "vplex_community_types-xml.pb.h"; sourceTree = "<group>"; };
+		6B05A3B01589D86D00E09F0B /* vplex_community_types.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vplex_community_types.pb.cc; sourceTree = "<group>"; };
+		6B05A3B11589D86D00E09F0B /* vplex_community_types.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vplex_community_types.pb.h; sourceTree = "<group>"; };
+		6B05A3B21589D86D00E09F0B /* vplex_community_types.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vplex_community_types.proto; sourceTree = "<group>"; };
+		6B05A3B31589D86D00E09F0B /* vplex_ias_service_types-xml.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "vplex_ias_service_types-xml.pb.cc"; sourceTree = "<group>"; };
+		6B05A3B41589D86D00E09F0B /* vplex_ias_service_types-xml.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "vplex_ias_service_types-xml.pb.h"; sourceTree = "<group>"; };
+		6B05A3B51589D86D00E09F0B /* vplex_ias_service_types.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vplex_ias_service_types.pb.cc; sourceTree = "<group>"; };
+		6B05A3B61589D86D00E09F0B /* vplex_ias_service_types.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vplex_ias_service_types.pb.h; sourceTree = "<group>"; };
+		6B05A3B71589D86D00E09F0B /* vplex_ias_service_types.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vplex_ias_service_types.proto; sourceTree = "<group>"; };
+		6B05A3B81589D86D00E09F0B /* vplex_nus_service_types-xml.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "vplex_nus_service_types-xml.pb.cc"; sourceTree = "<group>"; };
+		6B05A3B91589D86D00E09F0B /* vplex_nus_service_types-xml.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "vplex_nus_service_types-xml.pb.h"; sourceTree = "<group>"; };
+		6B05A3BA1589D86D00E09F0B /* vplex_nus_service_types.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vplex_nus_service_types.pb.cc; sourceTree = "<group>"; };
+		6B05A3BB1589D86D00E09F0B /* vplex_nus_service_types.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vplex_nus_service_types.pb.h; sourceTree = "<group>"; };
+		6B05A3BC1589D86D00E09F0B /* vplex_nus_service_types.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vplex_nus_service_types.proto; sourceTree = "<group>"; };
+		6B05A3BD1589D86D00E09F0B /* vplex_sync_agent_notifier.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vplex_sync_agent_notifier.pb.cc; sourceTree = "<group>"; };
+		6B05A3BE1589D86D00E09F0B /* vplex_sync_agent_notifier.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vplex_sync_agent_notifier.pb.h; sourceTree = "<group>"; };
+		6B05A3BF1589D86D00E09F0B /* vplex_sync_agent_notifier.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vplex_sync_agent_notifier.proto; sourceTree = "<group>"; };
+		6B05A3C01589D86D00E09F0B /* vplex_vs_directory_service_priv_types.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vplex_vs_directory_service_priv_types.proto; sourceTree = "<group>"; };
+		6B05A3C11589D86D00E09F0B /* vplex_vs_directory_service_types-xml.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "vplex_vs_directory_service_types-xml.pb.cc"; sourceTree = "<group>"; };
+		6B05A3C21589D86D00E09F0B /* vplex_vs_directory_service_types-xml.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "vplex_vs_directory_service_types-xml.pb.h"; sourceTree = "<group>"; };
+		6B05A3C31589D86D00E09F0B /* vplex_vs_directory_service_types.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vplex_vs_directory_service_types.pb.cc; sourceTree = "<group>"; };
+		6B05A3C41589D86D00E09F0B /* vplex_vs_directory_service_types.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vplex_vs_directory_service_types.pb.h; sourceTree = "<group>"; };
+		6B05A3C51589D86D00E09F0B /* vplex_vs_directory_service_types.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vplex_vs_directory_service_types.proto; sourceTree = "<group>"; };
+		6B5C2B87158F238D0012772E /* OnDeviceVPLEXTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnDeviceVPLEXTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B5C2B8B158F238D0012772E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6B5C2B8F158F238D0012772E /* OnDeviceVPLEXTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OnDeviceVPLEXTest-Info.plist"; sourceTree = "<group>"; };
+		6B5C2B91158F238D0012772E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6B5C2B93158F238D0012772E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6B5C2B95158F238D0012772E /* OnDeviceVPLEXTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OnDeviceVPLEXTest-Prefix.pch"; sourceTree = "<group>"; };
+		6B5C2B96158F238D0012772E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6B5C2B97158F238D0012772E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6B5C2B9F158F238D0012772E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6B5C2BA0158F238D0012772E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6B902BDB158B6BEB008C10FB /* vplex_ans_message.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vplex_ans_message.pb.cc; sourceTree = "<group>"; };
+		6B902BDC158B6BEB008C10FB /* vplex_ans_message.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vplex_ans_message.pb.h; sourceTree = "<group>"; };
+		6B902BDE158B6BEB008C10FB /* vplex_common_types-xml.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "vplex_common_types-xml.pb.cc"; sourceTree = "<group>"; };
+		6B902BDF158B6BEB008C10FB /* vplex_common_types-xml.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "vplex_common_types-xml.pb.h"; sourceTree = "<group>"; };
+		6B902BE0158B6BEB008C10FB /* vplex_common_types.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vplex_common_types.pb.cc; sourceTree = "<group>"; };
+		6B902BE1158B6BEB008C10FB /* vplex_common_types.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vplex_common_types.pb.h; sourceTree = "<group>"; };
+		6B902BE3158B6BEB008C10FB /* vplex_community_notifier.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vplex_community_notifier.pb.cc; sourceTree = "<group>"; };
+		6B902BE4158B6BEB008C10FB /* vplex_community_notifier.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vplex_community_notifier.pb.h; sourceTree = "<group>"; };
+		6B902BE6158B6BEB008C10FB /* vplex_community_service_types-xml.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "vplex_community_service_types-xml.pb.cc"; sourceTree = "<group>"; };
+		6B902BE7158B6BEB008C10FB /* vplex_community_service_types-xml.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "vplex_community_service_types-xml.pb.h"; sourceTree = "<group>"; };
+		6B902BE8158B6BEB008C10FB /* vplex_community_service_types.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vplex_community_service_types.pb.cc; sourceTree = "<group>"; };
+		6B902BE9158B6BEB008C10FB /* vplex_community_service_types.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vplex_community_service_types.pb.h; sourceTree = "<group>"; };
+		6B902BEB158B6BEB008C10FB /* vplex_community_types-xml.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "vplex_community_types-xml.pb.cc"; sourceTree = "<group>"; };
+		6B902BEC158B6BEB008C10FB /* vplex_community_types-xml.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "vplex_community_types-xml.pb.h"; sourceTree = "<group>"; };
+		6B902BED158B6BEB008C10FB /* vplex_community_types.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vplex_community_types.pb.cc; sourceTree = "<group>"; };
+		6B902BEE158B6BEB008C10FB /* vplex_community_types.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vplex_community_types.pb.h; sourceTree = "<group>"; };
+		6B902BF0158B6BEB008C10FB /* vplex_ias_service_types-xml.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "vplex_ias_service_types-xml.pb.cc"; sourceTree = "<group>"; };
+		6B902BF1158B6BEB008C10FB /* vplex_ias_service_types-xml.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "vplex_ias_service_types-xml.pb.h"; sourceTree = "<group>"; };
+		6B902BF2158B6BEB008C10FB /* vplex_ias_service_types.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vplex_ias_service_types.pb.cc; sourceTree = "<group>"; };
+		6B902BF3158B6BEB008C10FB /* vplex_ias_service_types.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vplex_ias_service_types.pb.h; sourceTree = "<group>"; };
+		6B902BF5158B6BEB008C10FB /* vplex_nus_service_types-xml.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "vplex_nus_service_types-xml.pb.cc"; sourceTree = "<group>"; };
+		6B902BF6158B6BEB008C10FB /* vplex_nus_service_types-xml.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "vplex_nus_service_types-xml.pb.h"; sourceTree = "<group>"; };
+		6B902BF7158B6BEB008C10FB /* vplex_nus_service_types.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vplex_nus_service_types.pb.cc; sourceTree = "<group>"; };
+		6B902BF8158B6BEB008C10FB /* vplex_nus_service_types.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vplex_nus_service_types.pb.h; sourceTree = "<group>"; };
+		6B902BFA158B6BEB008C10FB /* vplex_sync_agent_notifier.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vplex_sync_agent_notifier.pb.cc; sourceTree = "<group>"; };
+		6B902BFB158B6BEB008C10FB /* vplex_sync_agent_notifier.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vplex_sync_agent_notifier.pb.h; sourceTree = "<group>"; };
+		6B902BFE158B6BEB008C10FB /* vplex_vs_directory_service_types-xml.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "vplex_vs_directory_service_types-xml.pb.cc"; sourceTree = "<group>"; };
+		6B902BFF158B6BEB008C10FB /* vplex_vs_directory_service_types-xml.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "vplex_vs_directory_service_types-xml.pb.h"; sourceTree = "<group>"; };
+		6B902C00158B6BEB008C10FB /* vplex_vs_directory_service_types.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vplex_vs_directory_service_types.pb.cc; sourceTree = "<group>"; };
+		6B902C01158B6BEB008C10FB /* vplex_vs_directory_service_types.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vplex_vs_directory_service_types.pb.h; sourceTree = "<group>"; };
+		6B902C52158B7070008C10FB /* ProtoXmlParseState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ProtoXmlParseState.cpp; sourceTree = "<group>"; };
+		6B902C53158B7070008C10FB /* ProtoXmlParseState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProtoXmlParseState.h; sourceTree = "<group>"; };
+		6B902C54158B7070008C10FB /* ProtoXmlParseStateImpl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ProtoXmlParseStateImpl.cpp; sourceTree = "<group>"; };
+		6B902C55158B7070008C10FB /* ProtoXmlParseStateImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProtoXmlParseStateImpl.h; sourceTree = "<group>"; };
+		6BB07DC4164B480B0024E2AB /* vplex_http_util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vplex_http_util.cpp; sourceTree = "<group>"; };
+		6BF9160416BF8B7C00FB543D /* libvpl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libvpl.a; path = "../libvpl/build/Release-iphoneos/libvpl.a"; sourceTree = "<group>"; };
+		6BF9164916BF997900FB543D /* LogReceiveURL */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LogReceiveURL; path = ../../LogReceiveURL; sourceTree = "<group>"; };
+		6BFEF7741590BA360071F770 /* libprotobuf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libprotobuf.a; path = "../protobuf/build/Release-iphoneos/libprotobuf.a"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6B05A1421589899D00E09F0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B05A1491589899D00E09F0B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B05A1511589899D00E09F0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B05A1571589899D00E09F0B /* SenTestingKit.framework in Frameworks */,
+				6B05A15A1589899D00E09F0B /* Foundation.framework in Frameworks */,
+				6B05A15D1589899D00E09F0B /* libvplex.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B5C2B84158F238D0012772E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16D147F516F2F41A0055C5D5 /* UIKit.framework in Frameworks */,
+				6BF9160516BF8B7C00FB543D /* libvpl.a in Frameworks */,
+				6BF9160316BF8B7C00FB543D /* libvplex.a in Frameworks */,
+				6B5C2B8A158F238D0012772E /* Foundation.framework in Frameworks */,
+				6B5C2B8C158F238D0012772E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		16330D0B163FB949000ECFE7 /* NSURLConnectionHelper */ = {
+			isa = PBXGroup;
+			children = (
+				16ADFA1518B8F05700982050 /* NSCallbackInputStream.h */,
+				16ADFA1618B8F05700982050 /* NSCallbackInputStream.mm */,
+				16330D0C163FB97E000ECFE7 /* NSURLConnectionHelper.h */,
+				16330D0D163FB97E000ECFE7 /* NSURLConnectionHelper.mm */,
+			);
+			name = NSURLConnectionHelper;
+			sourceTree = "<group>";
+		};
+		167FF4DA1610390500434B30 /* KeychainItemWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				167FF4DB1610390500434B30 /* KeychainItemWrapper.h */,
+				167FF4DC1610390500434B30 /* KeychainItemWrapper.m */,
+			);
+			path = KeychainItemWrapper;
+			sourceTree = "<group>";
+		};
+		168473CA1643E89400A8F24B /* platform_ios */ = {
+			isa = PBXGroup;
+			children = (
+				168473CB1643E89400A8F24B /* include */,
+			);
+			name = platform_ios;
+			path = ../../../../gvm_core/vplex/platform_ios;
+			sourceTree = "<group>";
+		};
+		168473CB1643E89400A8F24B /* include */ = {
+			isa = PBXGroup;
+			children = (
+				168473CC1643E89400A8F24B /* vplex__http2.hpp */,
+				168473CD1643E89400A8F24B /* vplex__plat.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		6B05A13A1589899D00E09F0B = {
+			isa = PBXGroup;
+			children = (
+				16D147F416F2F41A0055C5D5 /* UIKit.framework */,
+				160C163D16E8A94E00FA3FE9 /* Default-568h@2x.png */,
+				6BF9160416BF8B7C00FB543D /* libvpl.a */,
+				6BFEF7741590BA360071F770 /* libprotobuf.a */,
+				6B902C4E158B7057008C10FB /* protoxml */,
+				6B902BC6158B6BEB008C10FB /* proto */,
+				6B05A2CD158994AF00E09F0B /* vpl */,
+				6B05A2571589915D00E09F0B /* vplex_test */,
+				6B05A2561589915700E09F0B /* vplex */,
+				16330D0B163FB949000ECFE7 /* NSURLConnectionHelper */,
+				167FF4DA1610390500434B30 /* KeychainItemWrapper */,
+				167FF44F161027C500434B30 /* SystemInfo.h */,
+				167FF450161027C500434B30 /* SystemInfo.m */,
+				6B05A14A1589899D00E09F0B /* libvplex */,
+				6B05A15E1589899D00E09F0B /* libvplexTests */,
+				6B5C2B8D158F238D0012772E /* OnDeviceVPLEXTest */,
+				6B05A1471589899D00E09F0B /* Frameworks */,
+				6B05A1461589899D00E09F0B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6B05A1461589899D00E09F0B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6B05A1451589899D00E09F0B /* libvplex.a */,
+				6B05A1551589899D00E09F0B /* vplexTests.octest */,
+				6B5C2B87158F238D0012772E /* OnDeviceVPLEXTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6B05A1471589899D00E09F0B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6B05A1481589899D00E09F0B /* Foundation.framework */,
+				6B05A1561589899D00E09F0B /* SenTestingKit.framework */,
+				6B05A1581589899D00E09F0B /* UIKit.framework */,
+				6B5C2B8B158F238D0012772E /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6B05A14A1589899D00E09F0B /* libvplex */ = {
+			isa = PBXGroup;
+			children = (
+				6B05A14B1589899D00E09F0B /* Supporting Files */,
+			);
+			path = libvplex;
+			sourceTree = "<group>";
+		};
+		6B05A14B1589899D00E09F0B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6B05A14C1589899D00E09F0B /* vplex-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6B05A15E1589899D00E09F0B /* libvplexTests */ = {
+			isa = PBXGroup;
+			children = (
+				6B05A1641589899D00E09F0B /* libvplexTests.h */,
+				6B05A1651589899D00E09F0B /* libvplexTests.m */,
+				6B05A15F1589899D00E09F0B /* Supporting Files */,
+			);
+			path = libvplexTests;
+			sourceTree = "<group>";
+		};
+		6B05A15F1589899D00E09F0B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6B05A1601589899D00E09F0B /* vplexTests-Info.plist */,
+				6B05A1611589899D00E09F0B /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6B05A2561589915700E09F0B /* vplex */ = {
+			isa = PBXGroup;
+			children = (
+				6B05A3891589D86D00E09F0B /* proto */,
+				168473CA1643E89400A8F24B /* platform_ios */,
+				6B05A25B1589918600E09F0B /* posix_src */,
+				6B05A2631589918600E09F0B /* src */,
+				6B05A2821589918600E09F0B /* src_use_cocoa */,
+			);
+			name = vplex;
+			sourceTree = "<group>";
+		};
+		6B05A2571589915D00E09F0B /* vplex_test */ = {
+			isa = PBXGroup;
+			children = (
+				6B05A2C2158992F800E09F0B /* src_ios */,
+				6B05A2AD158991B900E09F0B /* src */,
+			);
+			name = vplex_test;
+			sourceTree = "<group>";
+		};
+		6B05A25B1589918600E09F0B /* posix_src */ = {
+			isa = PBXGroup;
+			children = (
+				6B05A25C1589918600E09F0B /* vplex__file.c */,
+				6B05A25D1589918600E09F0B /* vplex__named_socket.c */,
+				6B05A25E1589918600E09F0B /* vplex__plat.c */,
+				6B05A25F1589918600E09F0B /* vplex__powerman.c */,
+				6B05A2601589918600E09F0B /* vplex__socket.c */,
+				6B05A2611589918600E09F0B /* vplex__time.c */,
+				6B05A2621589918600E09F0B /* vplex__wstring.c */,
+			);
+			name = posix_src;
+			path = ../../../../gvm_core/vplex/posix_src;
+			sourceTree = "<group>";
+		};
+		6B05A2631589918600E09F0B /* src */ = {
+			isa = PBXGroup;
+			children = (
+				6BB07DC4164B480B0024E2AB /* vplex_http_util.cpp */,
+				6B05A2641589918600E09F0B /* vplex_dataset.c */,
+				6B05A2651589918600E09F0B /* vplex_ias.cpp */,
+				6B05A2661589918600E09F0B /* vplex_ias_priv.h */,
+				6B05A2671589918600E09F0B /* vplex_ipc_socket.c */,
+				6B05A2681589918600E09F0B /* vplex_list.c */,
+				6B05A2691589918600E09F0B /* vplex_math.c */,
+				6B05A26A1589918600E09F0B /* vplex_mem_heap.c */,
+				6B05A26B1589918600E09F0B /* vplex_no_trace.c */,
+				6B05A26C1589918600E09F0B /* vplex_nus.cpp */,
+				6B05A26D1589918600E09F0B /* vplex_nus_priv.h */,
+				6B05A26E1589918600E09F0B /* vplex_private.h */,
+				6B05A26F1589918600E09F0B /* vplex_queue.c */,
+				6B05A2701589918600E09F0B /* vplex_rwlock.c */,
+				6B05A2711589918600E09F0B /* vplex_safe_serialization.c */,
+				6B05A2721589918600E09F0B /* vplex_serialization.c */,
+				16D147DE16EF1CDE0055C5D5 /* vplex_soap.cpp */,
+				6B05A2741589918600E09F0B /* vplex_soap_priv.h */,
+				6B05A2751589918600E09F0B /* vplex_soap_util.c */,
+				6B05A2761589918600E09F0B /* vplex_socket.c */,
+				6B05A2771589918600E09F0B /* vplex_strings.c */,
+				6B05A2781589918600E09F0B /* vplex_strto.c */,
+				6B05A2791589918600E09F0B /* vplex_syslog.c */,
+				6B05A27A1589918600E09F0B /* vplex_time.c */,
+				6B05A27B1589918600E09F0B /* vplex_trace.c */,
+				6B05A27C1589918600E09F0B /* vplex_utf_conversion.c */,
+				6B05A27D1589918600E09F0B /* vplex_vs_directory.cpp */,
+				6B05A27E1589918600E09F0B /* vplex_vs_directory_priv.h */,
+				6B05A27F1589918600E09F0B /* vplex_vs_directory_utils.cpp */,
+				6B05A2801589918600E09F0B /* vplex_xml_reader.c */,
+				6B05A2811589918600E09F0B /* vplex_xml_writer.c */,
+				16494A501724E4EC00F2278D /* vplex_shared_credential.cpp */,
+			);
+			name = src;
+			path = ../../../../gvm_core/vplex/src;
+			sourceTree = "<group>";
+		};
+		6B05A2821589918600E09F0B /* src_use_cocoa */ = {
+			isa = PBXGroup;
+			children = (
+				167FF4491610279D00434B30 /* vplex_shared_object.mm */,
+				16330D05163F7B15000ECFE7 /* vplex_http2.mm */,
+			);
+			name = src_use_cocoa;
+			path = ../../../../gvm_core/vplex/src_use_cocoa;
+			sourceTree = "<group>";
+		};
+		6B05A2AD158991B900E09F0B /* src */ = {
+			isa = PBXGroup;
+			children = (
+				16B9AA351799C4A000870F57 /* vplexTest_http2.cpp */,
+				6B05A2AF158991B900E09F0B /* vplexTest_common.c */,
+				6B05A2B1158991B900E09F0B /* vplexTest_math.c */,
+				6B05A2B2158991B900E09F0B /* vplexTest_mem_heap.c */,
+				6B05A2B3158991B900E09F0B /* vplexTest_safe_serialization.c */,
+				6B05A2B4158991B900E09F0B /* vplexTest_serialization.c */,
+				6B05A2B5158991B900E09F0B /* vplexTest_wstring.c */,
+				6B05A2B6158991B900E09F0B /* vplexTest_xml_reader.c */,
+				6B05A2B7158991B900E09F0B /* vplexTest_xml_writer.c */,
+			);
+			name = src;
+			path = ../../../../gvm_core/vplex/tests/src;
+			sourceTree = "<group>";
+		};
+		6B05A2C2158992F800E09F0B /* src_ios */ = {
+			isa = PBXGroup;
+			children = (
+				16B9AA301798D67400870F57 /* vplexTest_http2.m */,
+				6B05A2C3158992F800E09F0B /* VPLEXTestWrapper.c */,
+				6B05A2C4158992F800E09F0B /* VPLEXTestWrapper.h */,
+			);
+			name = src_ios;
+			path = ../../../../gvm_core/vplex/tests/src_ios;
+			sourceTree = "<group>";
+		};
+		6B05A2CD158994AF00E09F0B /* vpl */ = {
+			isa = PBXGroup;
+			children = (
+				6B05A2CE158994BB00E09F0B /* platform_linux */,
+			);
+			name = vpl;
+			sourceTree = "<group>";
+		};
+		6B05A2CE158994BB00E09F0B /* platform_linux */ = {
+			isa = PBXGroup;
+			children = (
+				6B05A2CF158994D400E09F0B /* include */,
+			);
+			name = platform_linux;
+			sourceTree = "<group>";
+		};
+		6B05A2CF158994D400E09F0B /* include */ = {
+			isa = PBXGroup;
+			children = (
+				6B05A2D0158994D400E09F0B /* vpl__atomic.h */,
+				6B05A2D3158994D400E09F0B /* vpl__error.h */,
+				6B05A2D6158994D400E09F0B /* vpl__plat.h */,
+				6B05A2D7158994D400E09F0B /* vpl__socket.h */,
+				6B05A2D8158994D400E09F0B /* vpl__th.h */,
+				6B05A2D9158994D400E09F0B /* vpl__types.h */,
+			);
+			name = include;
+			path = ../../../../gvm_core/vpl/platform_linux/include;
+			sourceTree = "<group>";
+		};
+		6B05A3891589D86D00E09F0B /* proto */ = {
+			isa = PBXGroup;
+			children = (
+				6B05A38A1589D86D00E09F0B /* BUILD */,
+				6B05A39D1589D86D00E09F0B /* Make.common */,
+				6B05A39E1589D86D00E09F0B /* vplex_ans_message.pb.cc */,
+				6B05A39F1589D86D00E09F0B /* vplex_ans_message.pb.h */,
+				6B05A3A01589D86D00E09F0B /* vplex_ans_message.proto */,
+				6B05A3A11589D86D00E09F0B /* vplex_common_types-xml.pb.cc */,
+				6B05A3A21589D86D00E09F0B /* vplex_common_types-xml.pb.h */,
+				6B05A3A31589D86D00E09F0B /* vplex_common_types.pb.cc */,
+				6B05A3A41589D86D00E09F0B /* vplex_common_types.pb.h */,
+				6B05A3A51589D86D00E09F0B /* vplex_common_types.proto */,
+				6B05A3A61589D86D00E09F0B /* vplex_community_notifier.pb.cc */,
+				6B05A3A71589D86D00E09F0B /* vplex_community_notifier.pb.h */,
+				6B05A3A81589D86D00E09F0B /* vplex_community_notifier.proto */,
+				6B05A3A91589D86D00E09F0B /* vplex_community_service_types-xml.pb.cc */,
+				6B05A3AA1589D86D00E09F0B /* vplex_community_service_types-xml.pb.h */,
+				6B05A3AB1589D86D00E09F0B /* vplex_community_service_types.pb.cc */,
+				6B05A3AC1589D86D00E09F0B /* vplex_community_service_types.pb.h */,
+				6B05A3AD1589D86D00E09F0B /* vplex_community_service_types.proto */,
+				6B05A3AE1589D86D00E09F0B /* vplex_community_types-xml.pb.cc */,
+				6B05A3AF1589D86D00E09F0B /* vplex_community_types-xml.pb.h */,
+				6B05A3B01589D86D00E09F0B /* vplex_community_types.pb.cc */,
+				6B05A3B11589D86D00E09F0B /* vplex_community_types.pb.h */,
+				6B05A3B21589D86D00E09F0B /* vplex_community_types.proto */,
+				6B05A3B31589D86D00E09F0B /* vplex_ias_service_types-xml.pb.cc */,
+				6B05A3B41589D86D00E09F0B /* vplex_ias_service_types-xml.pb.h */,
+				6B05A3B51589D86D00E09F0B /* vplex_ias_service_types.pb.cc */,
+				6B05A3B61589D86D00E09F0B /* vplex_ias_service_types.pb.h */,
+				6B05A3B71589D86D00E09F0B /* vplex_ias_service_types.proto */,
+				6B05A3B81589D86D00E09F0B /* vplex_nus_service_types-xml.pb.cc */,
+				6B05A3B91589D86D00E09F0B /* vplex_nus_service_types-xml.pb.h */,
+				6B05A3BA1589D86D00E09F0B /* vplex_nus_service_types.pb.cc */,
+				6B05A3BB1589D86D00E09F0B /* vplex_nus_service_types.pb.h */,
+				6B05A3BC1589D86D00E09F0B /* vplex_nus_service_types.proto */,
+				6B05A3BD1589D86D00E09F0B /* vplex_sync_agent_notifier.pb.cc */,
+				6B05A3BE1589D86D00E09F0B /* vplex_sync_agent_notifier.pb.h */,
+				6B05A3BF1589D86D00E09F0B /* vplex_sync_agent_notifier.proto */,
+				6B05A3C01589D86D00E09F0B /* vplex_vs_directory_service_priv_types.proto */,
+				6B05A3C11589D86D00E09F0B /* vplex_vs_directory_service_types-xml.pb.cc */,
+				6B05A3C21589D86D00E09F0B /* vplex_vs_directory_service_types-xml.pb.h */,
+				6B05A3C31589D86D00E09F0B /* vplex_vs_directory_service_types.pb.cc */,
+				6B05A3C41589D86D00E09F0B /* vplex_vs_directory_service_types.pb.h */,
+				6B05A3C51589D86D00E09F0B /* vplex_vs_directory_service_types.proto */,
+			);
+			name = proto;
+			path = ../../../../gvm_core/vplex/proto;
+			sourceTree = "<group>";
+		};
+		6B5C2B8D158F238D0012772E /* OnDeviceVPLEXTest */ = {
+			isa = PBXGroup;
+			children = (
+				16B9AA321798D69E00870F57 /* vplexTest.conf */,
+				6BF9164916BF997900FB543D /* LogReceiveURL */,
+				6B5C2B96158F238D0012772E /* AppDelegate.h */,
+				6B5C2B97158F238D0012772E /* AppDelegate.m */,
+				6B5C2B9F158F238D0012772E /* ViewController.h */,
+				6B5C2BA0158F238D0012772E /* ViewController.m */,
+				6B5C2B8E158F238D0012772E /* Supporting Files */,
+			);
+			path = OnDeviceVPLEXTest;
+			sourceTree = "<group>";
+		};
+		6B5C2B8E158F238D0012772E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6B5C2B8F158F238D0012772E /* OnDeviceVPLEXTest-Info.plist */,
+				6B5C2B90158F238D0012772E /* InfoPlist.strings */,
+				6B5C2B93158F238D0012772E /* main.m */,
+				6B5C2B95158F238D0012772E /* OnDeviceVPLEXTest-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6B902BC6158B6BEB008C10FB /* proto */ = {
+			isa = PBXGroup;
+			children = (
+				6B902BDB158B6BEB008C10FB /* vplex_ans_message.pb.cc */,
+				6B902BDC158B6BEB008C10FB /* vplex_ans_message.pb.h */,
+				6B902BDE158B6BEB008C10FB /* vplex_common_types-xml.pb.cc */,
+				6B902BDF158B6BEB008C10FB /* vplex_common_types-xml.pb.h */,
+				6B902BE0158B6BEB008C10FB /* vplex_common_types.pb.cc */,
+				6B902BE1158B6BEB008C10FB /* vplex_common_types.pb.h */,
+				6B902BE3158B6BEB008C10FB /* vplex_community_notifier.pb.cc */,
+				6B902BE4158B6BEB008C10FB /* vplex_community_notifier.pb.h */,
+				6B902BE6158B6BEB008C10FB /* vplex_community_service_types-xml.pb.cc */,
+				6B902BE7158B6BEB008C10FB /* vplex_community_service_types-xml.pb.h */,
+				6B902BE8158B6BEB008C10FB /* vplex_community_service_types.pb.cc */,
+				6B902BE9158B6BEB008C10FB /* vplex_community_service_types.pb.h */,
+				6B902BEB158B6BEB008C10FB /* vplex_community_types-xml.pb.cc */,
+				6B902BEC158B6BEB008C10FB /* vplex_community_types-xml.pb.h */,
+				6B902BED158B6BEB008C10FB /* vplex_community_types.pb.cc */,
+				6B902BEE158B6BEB008C10FB /* vplex_community_types.pb.h */,
+				6B902BF0158B6BEB008C10FB /* vplex_ias_service_types-xml.pb.cc */,
+				6B902BF1158B6BEB008C10FB /* vplex_ias_service_types-xml.pb.h */,
+				6B902BF2158B6BEB008C10FB /* vplex_ias_service_types.pb.cc */,
+				6B902BF3158B6BEB008C10FB /* vplex_ias_service_types.pb.h */,
+				6B902BF5158B6BEB008C10FB /* vplex_nus_service_types-xml.pb.cc */,
+				6B902BF6158B6BEB008C10FB /* vplex_nus_service_types-xml.pb.h */,
+				6B902BF7158B6BEB008C10FB /* vplex_nus_service_types.pb.cc */,
+				6B902BF8158B6BEB008C10FB /* vplex_nus_service_types.pb.h */,
+				16494A5917253AEA00F2278D /* vplex_shared_credential.pb.cc */,
+				16494A5A17253AEA00F2278D /* vplex_shared_credential.pb.h */,
+				6B902BFA158B6BEB008C10FB /* vplex_sync_agent_notifier.pb.cc */,
+				6B902BFB158B6BEB008C10FB /* vplex_sync_agent_notifier.pb.h */,
+				6B902BFE158B6BEB008C10FB /* vplex_vs_directory_service_types-xml.pb.cc */,
+				6B902BFF158B6BEB008C10FB /* vplex_vs_directory_service_types-xml.pb.h */,
+				6B902C00158B6BEB008C10FB /* vplex_vs_directory_service_types.pb.cc */,
+				6B902C01158B6BEB008C10FB /* vplex_vs_directory_service_types.pb.h */,
+			);
+			name = proto;
+			path = ../../../../gvm_core/vplex/proto;
+			sourceTree = "<group>";
+		};
+		6B902C4E158B7057008C10FB /* protoxml */ = {
+			isa = PBXGroup;
+			children = (
+				6B902C50158B7070008C10FB /* protoxml */,
+			);
+			name = protoxml;
+			sourceTree = "<group>";
+		};
+		6B902C50158B7070008C10FB /* protoxml */ = {
+			isa = PBXGroup;
+			children = (
+				6B902C52158B7070008C10FB /* ProtoXmlParseState.cpp */,
+				6B902C53158B7070008C10FB /* ProtoXmlParseState.h */,
+				6B902C54158B7070008C10FB /* ProtoXmlParseStateImpl.cpp */,
+				6B902C55158B7070008C10FB /* ProtoXmlParseStateImpl.h */,
+			);
+			name = protoxml;
+			path = ../../../../gvm_core/internal/protoxml;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		6B05A1431589899D00E09F0B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B05A28F1589918600E09F0B /* vplex_ias_priv.h in Headers */,
+				6B05A2961589918600E09F0B /* vplex_nus_priv.h in Headers */,
+				6B05A2971589918600E09F0B /* vplex_private.h in Headers */,
+				6B05A29D1589918600E09F0B /* vplex_soap_priv.h in Headers */,
+				6B05A2A71589918600E09F0B /* vplex_vs_directory_priv.h in Headers */,
+				6B05A2C6158992F800E09F0B /* VPLEXTestWrapper.h in Headers */,
+				6B05A2DA158994D400E09F0B /* vpl__atomic.h in Headers */,
+				6B05A2DD158994D400E09F0B /* vpl__error.h in Headers */,
+				6B05A2E0158994D400E09F0B /* vpl__plat.h in Headers */,
+				6B05A2E1158994D400E09F0B /* vpl__socket.h in Headers */,
+				6B05A2E2158994D400E09F0B /* vpl__th.h in Headers */,
+				6B05A2E3158994D400E09F0B /* vpl__types.h in Headers */,
+				6B05A3CE1589D86D00E09F0B /* vplex_ans_message.pb.h in Headers */,
+				6B05A3D01589D86D00E09F0B /* vplex_common_types-xml.pb.h in Headers */,
+				6B05A3D21589D86D00E09F0B /* vplex_common_types.pb.h in Headers */,
+				6B05A3D41589D86D00E09F0B /* vplex_community_notifier.pb.h in Headers */,
+				6B05A3D61589D86D00E09F0B /* vplex_community_service_types-xml.pb.h in Headers */,
+				6B05A3D81589D86D00E09F0B /* vplex_community_service_types.pb.h in Headers */,
+				6B05A3DA1589D86D00E09F0B /* vplex_community_types-xml.pb.h in Headers */,
+				6B05A3DC1589D86D00E09F0B /* vplex_community_types.pb.h in Headers */,
+				6B05A3DE1589D86D00E09F0B /* vplex_ias_service_types-xml.pb.h in Headers */,
+				6B05A3E01589D86D00E09F0B /* vplex_ias_service_types.pb.h in Headers */,
+				6B05A3E21589D86D00E09F0B /* vplex_nus_service_types-xml.pb.h in Headers */,
+				6B05A3E41589D86D00E09F0B /* vplex_nus_service_types.pb.h in Headers */,
+				6B05A3E61589D86D00E09F0B /* vplex_sync_agent_notifier.pb.h in Headers */,
+				6B05A3E81589D86D00E09F0B /* vplex_vs_directory_service_types-xml.pb.h in Headers */,
+				6B05A3EA1589D86D00E09F0B /* vplex_vs_directory_service_types.pb.h in Headers */,
+				6B902C57158B7070008C10FB /* ProtoXmlParseState.h in Headers */,
+				6B902C59158B7070008C10FB /* ProtoXmlParseStateImpl.h in Headers */,
+				167FF453161027C500434B30 /* SystemInfo.h in Headers */,
+				167FF4DD1610390500434B30 /* KeychainItemWrapper.h in Headers */,
+				16ADFA1718B8F05700982050 /* NSCallbackInputStream.h in Headers */,
+				16330D0E163FB97E000ECFE7 /* NSURLConnectionHelper.h in Headers */,
+				168473CE1643E89400A8F24B /* vplex__http2.hpp in Headers */,
+				168473CF1643E89400A8F24B /* vplex__plat.h in Headers */,
+				16494A5C17253AEA00F2278D /* vplex_shared_credential.pb.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		6B05A1441589899D00E09F0B /* vplex */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B05A1691589899D00E09F0B /* Build configuration list for PBXNativeTarget "vplex" */;
+			buildPhases = (
+				6B05A1411589899D00E09F0B /* Sources */,
+				6B05A1421589899D00E09F0B /* Frameworks */,
+				6B05A1431589899D00E09F0B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = vplex;
+			productName = libvplex;
+			productReference = 6B05A1451589899D00E09F0B /* libvplex.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		6B05A1541589899D00E09F0B /* vplexTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B05A16C1589899D00E09F0B /* Build configuration list for PBXNativeTarget "vplexTests" */;
+			buildPhases = (
+				6B05A1501589899D00E09F0B /* Sources */,
+				6B05A1511589899D00E09F0B /* Frameworks */,
+				6B05A1521589899D00E09F0B /* Resources */,
+				6B05A1531589899D00E09F0B /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6B05A15C1589899D00E09F0B /* PBXTargetDependency */,
+			);
+			name = vplexTests;
+			productName = libvplexTests;
+			productReference = 6B05A1551589899D00E09F0B /* vplexTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		6B5C2B86158F238D0012772E /* OnDeviceVPLEXTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B5C2BB6158F238E0012772E /* Build configuration list for PBXNativeTarget "OnDeviceVPLEXTest" */;
+			buildPhases = (
+				6B5C2B83158F238D0012772E /* Sources */,
+				6B5C2B84158F238D0012772E /* Frameworks */,
+				6B5C2B85158F238D0012772E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OnDeviceVPLEXTest;
+			productName = OnDeviceVPLEXTest;
+			productReference = 6B5C2B87158F238D0012772E /* OnDeviceVPLEXTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6B05A13C1589899D00E09F0B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+			};
+			buildConfigurationList = 6B05A13F1589899D00E09F0B /* Build configuration list for PBXProject "vplex" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6B05A13A1589899D00E09F0B;
+			productRefGroup = 6B05A1461589899D00E09F0B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6B05A1441589899D00E09F0B /* vplex */,
+				6B05A1541589899D00E09F0B /* vplexTests */,
+				6B5C2B86158F238D0012772E /* OnDeviceVPLEXTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6B05A1521589899D00E09F0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B05A1631589899D00E09F0B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B5C2B85158F238D0012772E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B5C2B92158F238D0012772E /* InfoPlist.strings in Resources */,
+				6BF9164A16BF997900FB543D /* LogReceiveURL in Resources */,
+				16D147F616F2F5690055C5D5 /* Default-568h@2x.png in Resources */,
+				16B9AA331798D69E00870F57 /* vplexTest.conf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6B05A1531589899D00E09F0B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6B05A1411589899D00E09F0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B05A2861589918600E09F0B /* vplex__file.c in Sources */,
+				6B05A2871589918600E09F0B /* vplex__named_socket.c in Sources */,
+				6B05A2881589918600E09F0B /* vplex__plat.c in Sources */,
+				6B05A2891589918600E09F0B /* vplex__powerman.c in Sources */,
+				6B05A28A1589918600E09F0B /* vplex__socket.c in Sources */,
+				6B05A28B1589918600E09F0B /* vplex__time.c in Sources */,
+				6B05A28C1589918600E09F0B /* vplex__wstring.c in Sources */,
+				6B05A28D1589918600E09F0B /* vplex_dataset.c in Sources */,
+				6B05A28E1589918600E09F0B /* vplex_ias.cpp in Sources */,
+				6B05A2901589918600E09F0B /* vplex_ipc_socket.c in Sources */,
+				6B05A2911589918600E09F0B /* vplex_list.c in Sources */,
+				6B05A2921589918600E09F0B /* vplex_math.c in Sources */,
+				6B05A2931589918600E09F0B /* vplex_mem_heap.c in Sources */,
+				6B05A2941589918600E09F0B /* vplex_no_trace.c in Sources */,
+				6B05A2951589918600E09F0B /* vplex_nus.cpp in Sources */,
+				6B05A2981589918600E09F0B /* vplex_queue.c in Sources */,
+				6B05A2991589918600E09F0B /* vplex_rwlock.c in Sources */,
+				6B05A29A1589918600E09F0B /* vplex_safe_serialization.c in Sources */,
+				6B05A29B1589918600E09F0B /* vplex_serialization.c in Sources */,
+				6B05A29E1589918600E09F0B /* vplex_soap_util.c in Sources */,
+				6B05A29F1589918600E09F0B /* vplex_socket.c in Sources */,
+				6B05A2A01589918600E09F0B /* vplex_strings.c in Sources */,
+				6B05A2A11589918600E09F0B /* vplex_strto.c in Sources */,
+				6B05A2A21589918600E09F0B /* vplex_syslog.c in Sources */,
+				6B05A2A31589918600E09F0B /* vplex_time.c in Sources */,
+				6B05A2A41589918600E09F0B /* vplex_trace.c in Sources */,
+				6B05A2A51589918600E09F0B /* vplex_utf_conversion.c in Sources */,
+				6B05A2A61589918600E09F0B /* vplex_vs_directory.cpp in Sources */,
+				6B05A2A81589918600E09F0B /* vplex_vs_directory_utils.cpp in Sources */,
+				16ADFA1818B8F05700982050 /* NSCallbackInputStream.mm in Sources */,
+				6B05A2A91589918600E09F0B /* vplex_xml_reader.c in Sources */,
+				6B05A2AA1589918600E09F0B /* vplex_xml_writer.c in Sources */,
+				6B05A2B9158991B900E09F0B /* vplexTest_common.c in Sources */,
+				6B05A2BB158991B900E09F0B /* vplexTest_math.c in Sources */,
+				6B05A2BC158991B900E09F0B /* vplexTest_mem_heap.c in Sources */,
+				6B05A2BD158991B900E09F0B /* vplexTest_safe_serialization.c in Sources */,
+				6B05A2BE158991B900E09F0B /* vplexTest_serialization.c in Sources */,
+				6B05A2BF158991B900E09F0B /* vplexTest_wstring.c in Sources */,
+				6B05A2C0158991B900E09F0B /* vplexTest_xml_reader.c in Sources */,
+				6B05A2C1158991B900E09F0B /* vplexTest_xml_writer.c in Sources */,
+				6B05A2C5158992F800E09F0B /* VPLEXTestWrapper.c in Sources */,
+				6B05A3CD1589D86D00E09F0B /* vplex_ans_message.pb.cc in Sources */,
+				6B05A3CF1589D86D00E09F0B /* vplex_common_types-xml.pb.cc in Sources */,
+				6B05A3D11589D86D00E09F0B /* vplex_common_types.pb.cc in Sources */,
+				6B05A3D31589D86D00E09F0B /* vplex_community_notifier.pb.cc in Sources */,
+				6B05A3D51589D86D00E09F0B /* vplex_community_service_types-xml.pb.cc in Sources */,
+				6B05A3D71589D86D00E09F0B /* vplex_community_service_types.pb.cc in Sources */,
+				6B05A3D91589D86D00E09F0B /* vplex_community_types-xml.pb.cc in Sources */,
+				6B05A3DB1589D86D00E09F0B /* vplex_community_types.pb.cc in Sources */,
+				6B05A3DD1589D86D00E09F0B /* vplex_ias_service_types-xml.pb.cc in Sources */,
+				6B05A3DF1589D86D00E09F0B /* vplex_ias_service_types.pb.cc in Sources */,
+				6B05A3E11589D86D00E09F0B /* vplex_nus_service_types-xml.pb.cc in Sources */,
+				6B05A3E31589D86D00E09F0B /* vplex_nus_service_types.pb.cc in Sources */,
+				6B05A3E51589D86D00E09F0B /* vplex_sync_agent_notifier.pb.cc in Sources */,
+				6B05A3E71589D86D00E09F0B /* vplex_vs_directory_service_types-xml.pb.cc in Sources */,
+				6B05A3E91589D86D00E09F0B /* vplex_vs_directory_service_types.pb.cc in Sources */,
+				6B902C56158B7070008C10FB /* ProtoXmlParseState.cpp in Sources */,
+				6B902C58158B7070008C10FB /* ProtoXmlParseStateImpl.cpp in Sources */,
+				167FF44A1610279D00434B30 /* vplex_shared_object.mm in Sources */,
+				167FF454161027C500434B30 /* SystemInfo.m in Sources */,
+				167FF4DE1610390500434B30 /* KeychainItemWrapper.m in Sources */,
+				16330D07163F7B15000ECFE7 /* vplex_http2.mm in Sources */,
+				16330D0F163FB97E000ECFE7 /* NSURLConnectionHelper.mm in Sources */,
+				6BB07DC5164B480B0024E2AB /* vplex_http_util.cpp in Sources */,
+				16D147DF16EF1CDE0055C5D5 /* vplex_soap.cpp in Sources */,
+				16494A521724E4EC00F2278D /* vplex_shared_credential.cpp in Sources */,
+				16494A5B17253AEA00F2278D /* vplex_shared_credential.pb.cc in Sources */,
+				16B9AA311798D67400870F57 /* vplexTest_http2.m in Sources */,
+				16B9AA361799C4A000870F57 /* vplexTest_http2.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B05A1501589899D00E09F0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16B9AA371799C4C000870F57 /* vplexTest_http2.m in Sources */,
+				6B5C2BE4158F26D00012772E /* VPLEXTestWrapper.c in Sources */,
+				6B05A1661589899D00E09F0B /* libvplexTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B5C2B83158F238D0012772E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16B9AA341798D6BC00870F57 /* vplexTest_http2.m in Sources */,
+				6B5C2BBC158F24470012772E /* VPLEXTestWrapper.c in Sources */,
+				6B5C2B94158F238D0012772E /* main.m in Sources */,
+				6B5C2B98158F238D0012772E /* AppDelegate.m in Sources */,
+				6B5C2BA1158F238D0012772E /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6B05A15C1589899D00E09F0B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6B05A1441589899D00E09F0B /* vplex */;
+			targetProxy = 6B05A15B1589899D00E09F0B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6B05A1611589899D00E09F0B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B05A1621589899D00E09F0B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6B5C2B90158F238D0012772E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B5C2B91158F238D0012772E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6B05A1671589899D00E09F0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
+					"VPL_PLAT_IS_ARM=1",
+					"IOS=1",
+					"VPL_HOST_IS_LITTLE_ENDIAN=1",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "../../../../gvm_core/vpl/posix_include/ ../../../../gvm_core/vpl/include/ ../../../../gvm_core/vplex/posix_include/ ../../../../gvm_core/vplex/include/ ../../../../gvm_core/external/protobuflib/ ../../../../gvm_core/internal/protoxml/ ../../../../gvm_core/vpl/tests/include/ ../../../../gvm_core/vplex/tests/include/ ../libvpl/libvpl/sdk/include/ ../../../../gvm_core/vplex/platform_ios/include/";
+			};
+			name = Debug;
+		};
+		6B05A1681589899D00E09F0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
+					"VPL_PLAT_IS_ARM=1",
+					"IOS=1",
+					"VPL_HOST_IS_LITTLE_ENDIAN=1",
+				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "../../../../gvm_core/vpl/posix_include/ ../../../../gvm_core/vpl/include/ ../../../../gvm_core/vplex/posix_include/ ../../../../gvm_core/vplex/include/ ../../../../gvm_core/external/protobuflib/ ../../../../gvm_core/internal/protoxml/ ../../../../gvm_core/vpl/tests/include/ ../../../../gvm_core/vplex/tests/include/ ../libvpl/libvpl/sdk/include/ ../../../../gvm_core/vplex/platform_ios/include/";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6B05A16A1589899D00E09F0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/libvplex.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "libvplex/vplex-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
+					"VPL_PLAT_IS_ARM=1",
+					"IOS=1",
+					"VPL_HOST_IS_LITTLE_ENDIAN=1",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../../../../Library/Developer/Xcode/DerivedData/PersonalCloud-fdgfjhbbmxskzxavdaelhuslrwfv/Build/Products/Debug-iphoneos\"",
+					"\"$(SRCROOT)/../../../../../../Library/Developer/Xcode/DerivedData/PersonalCloud-gjujzylnrzkcgcapwwwfpoahuwuh/Build/Products/Debug-iphoneos\"",
+					"\"$(SRCROOT)/../protobuf/build/Release-iphoneos\"",
+					"\"$(SRCROOT)/../libvpl/build/Release-iphoneos\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = vplex;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		6B05A16B1589899D00E09F0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/libvplex.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "libvplex/vplex-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
+					"VPL_PLAT_IS_ARM=1",
+					"IOS=1",
+					"VPL_HOST_IS_LITTLE_ENDIAN=1",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../../../../Library/Developer/Xcode/DerivedData/PersonalCloud-fdgfjhbbmxskzxavdaelhuslrwfv/Build/Products/Debug-iphoneos\"",
+					"\"$(SRCROOT)/../../../../../../Library/Developer/Xcode/DerivedData/PersonalCloud-gjujzylnrzkcgcapwwwfpoahuwuh/Build/Products/Debug-iphoneos\"",
+					"\"$(SRCROOT)/../protobuf/build/Release-iphoneos\"",
+					"\"$(SRCROOT)/../libvpl/build/Release-iphoneos\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = vplex;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		6B05A16D1589899D00E09F0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = "libvplexTests/vplexTests-Info.plist";
+				OTHER_LDFLAGS = "-lstdc++";
+				PRODUCT_NAME = vplexTests;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		6B05A16E1589899D00E09F0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = "libvplexTests/vplexTests-Info.plist";
+				OTHER_LDFLAGS = "-lstdc++";
+				PRODUCT_NAME = vplexTests;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		6B5C2BB7158F238E0012772E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OnDeviceVPLEXTest/OnDeviceVPLEXTest-Prefix.pch";
+				INFOPLIST_FILE = "OnDeviceVPLEXTest/OnDeviceVPLEXTest-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../libvpl/build/Release-iphoneos\"",
+				);
+				OTHER_LDFLAGS = "-lstdc++";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6B5C2BB8158F238E0012772E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OnDeviceVPLEXTest/OnDeviceVPLEXTest-Prefix.pch";
+				INFOPLIST_FILE = "OnDeviceVPLEXTest/OnDeviceVPLEXTest-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../libvpl/build/Release-iphoneos\"",
+				);
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "-lstdc++";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6B05A13F1589899D00E09F0B /* Build configuration list for PBXProject "vplex" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B05A1671589899D00E09F0B /* Debug */,
+				6B05A1681589899D00E09F0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B05A1691589899D00E09F0B /* Build configuration list for PBXNativeTarget "vplex" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B05A16A1589899D00E09F0B /* Debug */,
+				6B05A16B1589899D00E09F0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B05A16C1589899D00E09F0B /* Build configuration list for PBXNativeTarget "vplexTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B05A16D1589899D00E09F0B /* Debug */,
+				6B05A16E1589899D00E09F0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B5C2BB6158F238E0012772E /* Build configuration list for PBXNativeTarget "OnDeviceVPLEXTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B5C2BB7158F238E0012772E /* Debug */,
+				6B5C2BB8158F238E0012772E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6B05A13C1589899D00E09F0B /* Project object */;
+}

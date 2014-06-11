@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="horizontal"
+    android:gravity="center"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:padding="24dp">
+	
+    <LinearLayout android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:padding="5dp">
+        
+		<TextView android:text="@string/Prompt_UserName"
+            android:layout_gravity="left"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"></TextView>
+			
+		<EditText android:id="@+id/EditText_UserName" 
+			android:text=""
+			android:inputType="textWebEditText"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="8dp"></EditText>
+			
+		<TextView android:text="@string/Prompt_Password"
+            android:layout_gravity="left"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"></TextView>
+			
+		<EditText android:id="@+id/EditText_Password"
+			android:text=""
+			android:inputType="textPassword"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="8dp"></EditText>
+			
+        <Button android:id="@+id/Button_Login"
+            android:text="@string/Button_Login"
+            android:onClick="onClick_Login"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="40dp"
+            android:paddingLeft="40dp"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"></Button>
+            
+    </LinearLayout>
+    
+    <LinearLayout android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:padding="5dp">
+        
+	    <Button android:id="@+id/Button_NewUser"
+	        android:text="@string/Button_NewUser"
+	        android:onClick="onClick_NewUser"
+	        android:gravity="center"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:paddingRight="40dp"
+	        android:paddingLeft="40dp"
+	        android:paddingTop="18dp"
+	        android:paddingBottom="18dp"></Button>
+    </LinearLayout>
+    
+</LinearLayout>

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/58541/trunk/sw_x/tests/sync_config/syncConfigDbSchemaV2
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/48141/trunk/sw_x/tests/sync_config/syncConfigDbSchemaV2/BUILD
+END
+SyncConfigDbSchemaV02.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repo/!svn/ver/58541/trunk/sw_x/tests/sync_config/syncConfigDbSchemaV2/SyncConfigDbSchemaV02.cpp
+END
+MigrateDbV02ToCurrentDb.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repo/!svn/ver/48141/trunk/sw_x/tests/sync_config/syncConfigDbSchemaV2/MigrateDbV02ToCurrentDb.cpp
+END
+SyncConfigDbSchemaV02.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repo/!svn/ver/48141/trunk/sw_x/tests/sync_config/syncConfigDbSchemaV2/SyncConfigDbSchemaV02.hpp
+END

@@ -1,0 +1,45 @@
+From 1ac885f0a001286f86a2e51ffe4bbbbf14a1cc9f Mon Sep 17 00:00:00 2001
+From: wukon <wukonhsieh@gmail.com>
+Date: Tue, 16 Oct 2012 15:52:27 +0800
+Subject: [PATCH] For build workaround
+
+---
+ magick/common.h  |    2 +-
+ magick/texture.h |    8 ++++----
+ 2 files changed, 5 insertions(+), 5 deletions(-)
+
+diff --git a/magick/common.h b/magick/common.h
+index 74fe6b7..d486ea6 100644
+--- a/magick/common.h
++++ b/magick/common.h
+@@ -111,7 +111,7 @@ extern "C" {
+ 
+ */
+ #if !defined(__attribute__)
+-#  if (!defined(__GNUC__) || (__GNUC__ < 2 || __STRICT_ANSI__))
++#  if (!defined(__GNUC__) || (__GNUC__ < 2))
+ #    define __attribute__(x) /*nothing*/
+ #  else
+ #    if (((__GNUC__) > 3) || ((__GNUC__ == 3) && (__GNUC_MINOR__ >= 1))) /* 3.1+ */
+diff --git a/magick/texture.h b/magick/texture.h
+index 804c517..b241d55 100644
+--- a/magick/texture.h
++++ b/magick/texture.h
+@@ -21,10 +21,10 @@ extern "C" {
+ */
+ #include "magick/image.h"
+ #include "magick/error.h"
+-
+-extern MagickExport Image
+-  *ConstituteTextureImage(const unsigned long columns,const unsigned long rows,
+-			  const Image *texture,ExceptionInfo *exception);
++
++//extern MagickExport Image
++//  *ConstituteTextureImage(const unsigned long columns,const unsigned long rows,
++//			  const Image *texture,ExceptionInfo *exception);
+ 
+ extern MagickExport MagickPassFail
+   TextureImage(Image *,const Image *);
+-- 
+1.7.0.4
+

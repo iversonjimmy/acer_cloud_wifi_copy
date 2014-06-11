@@ -1,0 +1,80 @@
+#! /bin/csh -fb
+#
+#  This script creates a very basic jar file for running tests
+#  on an ANS cluster.  The make-export-java script creates a
+#  more complete set of tests, but requires some editing.
+# 
+
+set target  = ~/export
+set infra   = $BUILDROOT/infra
+set device  = $WORKAREA/sw_x/gvm_core/internal/ans/src
+
+set files   = (run-back run-back-once run-device run-device-1node \
+                run-device-2node run-device-4node run-device-all \
+                run-lots run-valgrind set_classpath set_classpath_csh \
+                server_keys device_types run-server)
+
+set ans_device_types_file  = $WORKAREA/sw_i/infra/modules/src/java/com/broadon/ans/device_types
+set ans_key_file           = $WORKAREA/sw_i/infra/modules/src/java/com/broadon/ans/server_keys
+
+rm -rf $target            || exit 1
+
+if (! -d $target) then
+    mkdir $target
+endif
+
+cd $target                || exit 1
+
+cp -f /dev/null sacrifice
+rm -rf *                  || exit 1
+
+rm -rf com conf javax META-INF org WEB-INFO jars RCS
+rm -f  libsetSockOpt.so simplelog.properties
+
+mkdir jars                || exit 1
+
+#
+#  Get the device libraries.
+#
+cp -r $infra/packages/ans/package/{32,64} $target         || exit 1
+
+cp $infra/packages/ans/package/ans.jar             jars/. || exit 1
+
+cp $infra/modules/wsclient/wsclient.jar            jars/. || exit 1
+cp $infra/modules/wstypes/wstypes.jar              jars/. || exit 1
+cp $infra/packages/javalib/package/jar/common.jar  jars/. || exit 1
+
+cp $infra/imports/lib/commons-logging-1.1.1.jar    jars/. || exit 1
+cp $infra/imports/lib/jaxrpc.jar                   jars/. || exit 1
+cp $infra/imports/lib/servlet.jar                  jars/. || exit 1
+cp $infra/imports/lib/axis.jar                     jars/. || exit 1
+cp $infra/imports/lib/commons-discovery-0.2.jar    jars/. || exit 1
+cp $infra/imports/lib/wsdl4j-1.5.1.jar             jars/. || exit 1
+cp $infra/imports/lib/mail.jar                     jars/. || exit 1
+cp $infra/imports/lib/activation.jar               jars/. || exit 1
+
+cp -r $WORKAREA/sw_i/infra/modules/ans/conf .             || exit 1
+
+(cd $device; make ans_circle ans_back)                    || exit 1
+cp $device/ans_circle $device/ans_back $target            || exit 1
+(cd $device/testing; cp $files $target)                   || exit 1
+
+cp $ans_device_types_file $ans_key_file $target/.         || exit 1
+
+
+#
+#  Create the tar image.
+#
+tar cf ~/java.tar .      || exit 1
+
+#
+#  Copy the tar image to the test cluster machines.
+#
+echo "Time for scp:"
+
+scp ../java.tar root@bertoni-vm:
+scp ../java.tar root@Bertoni-OL6A:
+scp ../java.tar root@Bertoni-OL6B:
+scp ../java.tar root@Bertoni-OL6C:
+
+echo "Done."

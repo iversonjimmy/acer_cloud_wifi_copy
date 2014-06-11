@@ -1,0 +1,92 @@
+##########
+# This is the buildbot test run configuration file for the 'win_desk' PRODUCT.
+##########
+
+##########
+# The following section describes reserved configuration variables.
+##########
+# DB Info
+# To prevent upload of results to the database, comment out at least one of these parameters.
+TH_DBNAME=testharness_v2
+TH_DBHOST=mysql.ctbg.acer.com
+TH_DBUSER=testharness
+TH_DBPWD=route2me
+
+# Name to use in the database for this run
+TH_RUN_NAME=win_desk_3.2_full_onWin7_against_lab18
+
+# Directory in which to save test run/test case output.
+# Results from each suite executed will be saved in a separate directory under this directory
+# This can be overridden with the -o testharness command line option.
+TH_OUTPUT_DIR=/tmp/testharness/output_win_desk_win7
+
+# Name of the file where a summary of the test results is written
+# This can be overridden with the -s testharness command line option.
+#TH_SUMMARY_FILE=/tmp/testharness/output/testharness_summary.out
+
+# Directory in which to look for test suites.
+# Default is the sw_x/tests directory in the same tree as the testharness script.
+# This can be overridden with the -t testharness command line option.
+#TH_TEST_SUITE_DIR=$WORKDIR/sw_x/tests
+
+# The list of suites to run and the order in which to run them.
+TH_SUITE=vpl::timeout=5
+TH_SUITE=vplex::timeout=5
+TH_SUITE=sync_config::timeout=10
+TH_SUITE=syncbox_test_file_sync::timeout=15
+TH_SUITE=syncbox_test_offline::timeout=15
+TH_SUITE=syncbox_test_file_conflict::timeout=15
+TH_SUITE=syncbox_test_sync_events::timeout=15
+TH_SUITE=publish_tools::timeout=15
+TH_SUITE=sdk_release_basic::timeout=12
+TH_SUITE=photo_share_auto::timeout=6
+TH_SUITE=sdk_release_mediametadata::timeout=15
+TH_SUITE=sdk_release_mediametadata_alt_tun::timeout=15
+TH_SUITE=sdk_release_mediametadata_download_from_acs::timeout=15
+TH_SUITE=sdk_release_mediametadata_virt_up_normal_down::timeout=15
+TH_SUITE=sdk_release_picstream::timeout=20
+TH_SUITE=sdk_release_picstream_index_only::timeout=10
+TH_SUITE=sdk_release_remotefile::timeout=10
+TH_SUITE=sdk_release_remotefile_alt_tun::timeout=10
+TH_SUITE=sdk_release_remotefile_vcs::timeout=10
+TH_SUITE=sdk_release_clouddoc::timeout=15
+TH_SUITE=sdk_release_transcode::timeout=15
+TH_SUITE=sdk_release_transcode_alt_tun::timeout=15
+TH_SUITE=sdk_release_transcode2::timeout=15
+TH_SUITE=sdk_release_transcode2_alt_tun::timeout=15
+TH_SUITE=regression_internal_direct::timeout=15
+TH_SUITE=regression_internal_direct_ts_packetloss::timeout=15
+TH_SUITE=regression_internal_direct_alt_tun::timeout=15
+# regression_proxy should be at least twice that of regression_proxy_alt_tun
+TH_SUITE=regression_proxy::timeout=30  
+TH_SUITE=regression_proxy_ts_packetloss::timeout=30  
+TH_SUITE=regression_proxy_alt_tun::timeout=15
+
+##########
+# Test-run-level environment variables go here.
+# They are set in the execution environment of every test case that is executed in this test run.
+##########
+
+# IP/name of the Windows machine to run the tests on
+TARGET_MACHINE1=b18-02
+TARGET_MACHINE2=b19-08
+TARGET_MACHINE=b18-02
+TARGET_USER=build
+CLOUDPC_NAME=b18-02
+
+TEST_MASTER_MACHINE=b18-02
+
+CCD_TEST_ACCOUNT=TOT_win7FullTest@igware.com
+CCD_TEST_ACCOUNT_1=TOT_win7FullTest_1@igware.com
+CCD_TEST_ACCOUNT_2=TOT_win7FullTest_2@igware.com
+
+USE_ARCHIVED_BUILD=true
+RUN_FULL_TEST=true
+
+# Lab to execute against
+LAB=lab18
+LAB_DOMAIN_NAME=pc-int.igware.net
+INTERNAL_LAB_DOMAIN_NAME=lab18
+VPLTEST_BRANCH="TOT"
+VPLTEST_SERVER_URL=ccd-http-test.ctbg.acer.com
+

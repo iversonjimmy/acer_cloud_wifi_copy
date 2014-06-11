@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repo/!svn/ver/34838/trunk/sw_x/tests/mdnsd/nearby_devices
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/34838/trunk/sw_x/tests/mdnsd/nearby_devices/BUILD
+END
+nearby_devices.c
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/34838/trunk/sw_x/tests/mdnsd/nearby_devices/nearby_devices.c
+END

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/59817/trunk/sw_x/gvm_core/daemons/ccd/include
+END
+ccd_types.proto
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/59649/trunk/sw_x/gvm_core/daemons/ccd/include/ccd_types.proto
+END
+ccd_core.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/59100/trunk/sw_x/gvm_core/daemons/ccd/include/ccd_core.h
+END
+ccdi.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/59434/trunk/sw_x/gvm_core/daemons/ccd/include/ccdi.hpp
+END
+ccdi_rpc.proto
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/59434/trunk/sw_x/gvm_core/daemons/ccd/include/ccdi_rpc.proto
+END
+ccdi_orig_types.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/52683/trunk/sw_x/gvm_core/daemons/ccd/include/ccdi_orig_types.h
+END
+ccd_features.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/59817/trunk/sw_x/gvm_core/daemons/ccd/include/ccd_features.h
+END

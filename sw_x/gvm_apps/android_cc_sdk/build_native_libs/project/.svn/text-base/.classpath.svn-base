@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="var" path="PBROOT/usr/lib/protobuf-lite.jar" sourcepath="/PBROOT/gvm_core/external/protobuf/protobuf-2.4.0a/java/src/main"/>
+	<classpathentry kind="var" path="PBROOT/gvm_apps/android_cc_sdk/sdk/libs/ccdi_types.jar"/>
+	<classpathentry kind="var" path="PBROOT/gvm_apps/android_cc_sdk/sdk/libs/ccdi_client.jar"/>
+	<classpathentry kind="var" path="PBROOT/gvm_apps/android_cc_sdk/sdk/libs/igware_common.jar"/>
+	<classpathentry kind="var" path="PBROOT/gvm_apps/android_cc_sdk/sdk/libs/mca_types.jar"/>
+	<classpathentry kind="var" path="PBROOT/gvm_apps/android_cc_sdk/sdk/libs/mca_client.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

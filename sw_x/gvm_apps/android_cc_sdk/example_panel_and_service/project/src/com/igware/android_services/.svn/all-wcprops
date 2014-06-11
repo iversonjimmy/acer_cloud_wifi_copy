@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repo/!svn/ver/59100/trunk/sw_x/gvm_apps/android_cc_sdk/example_panel_and_service/project/src/com/igware/android_services
+END
+CcdiClientLocalBinder.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/repo/!svn/ver/12651/trunk/sw_x/gvm_apps/android_cc_sdk/example_panel_and_service/project/src/com/igware/android_services/CcdiClientLocalBinder.java
+END
+McaService.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/repo/!svn/ver/18154/trunk/sw_x/gvm_apps/android_cc_sdk/example_panel_and_service/project/src/com/igware/android_services/McaService.java
+END
+CcdiService.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/repo/!svn/ver/41609/trunk/sw_x/gvm_apps/android_cc_sdk/example_panel_and_service/project/src/com/igware/android_services/CcdiService.java
+END
+ServiceSingleton.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/repo/!svn/ver/59100/trunk/sw_x/gvm_apps/android_cc_sdk/example_panel_and_service/project/src/com/igware/android_services/ServiceSingleton.java
+END

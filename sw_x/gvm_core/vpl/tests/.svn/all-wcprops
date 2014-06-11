@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/repo/!svn/ver/53999/trunk/sw_x/gvm_core/vpl/tests
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repo/!svn/ver/46945/trunk/sw_x/gvm_core/vpl/tests/BUILD
+END
+runTests.sh
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/681/trunk/sw_x/gvm_core/vpl/tests/runTests.sh
+END
+runTest.sh
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repo/!svn/ver/681/trunk/sw_x/gvm_core/vpl/tests/runTest.sh
+END

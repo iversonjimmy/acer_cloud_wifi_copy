@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/59611/trunk/sw_x/gvm_core/vpl/platform_win32/include
+END
+vpl__error.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repo/!svn/ver/43470/trunk/sw_x/gvm_core/vpl/platform_win32/include/vpl__error.h
+END
+vpl__th.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/25764/trunk/sw_x/gvm_core/vpl/platform_win32/include/vpl__th.h
+END
+vpl__atomic.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repo/!svn/ver/1226/trunk/sw_x/gvm_core/vpl/platform_win32/include/vpl__atomic.h
+END
+vplu__missing.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repo/!svn/ver/23266/trunk/sw_x/gvm_core/vpl/platform_win32/include/vplu__missing.h
+END
+vpl__plat.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/58684/trunk/sw_x/gvm_core/vpl/platform_win32/include/vpl__plat.h
+END
+vpl__lazy_init.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repo/!svn/ver/15458/trunk/sw_x/gvm_core/vpl/platform_win32/include/vpl__lazy_init.h
+END
+vpl__srwlock.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/13422/trunk/sw_x/gvm_core/vpl/platform_win32/include/vpl__srwlock.h
+END
+vpl__types.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repo/!svn/ver/54003/trunk/sw_x/gvm_core/vpl/platform_win32/include/vpl__types.h
+END
+vpl__conv.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/1226/trunk/sw_x/gvm_core/vpl/platform_win32/include/vpl__conv.h
+END
+vpl__impersonate.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repo/!svn/ver/58923/trunk/sw_x/gvm_core/vpl/platform_win32/include/vpl__impersonate.hpp
+END
+vpl__net.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/80/trunk/sw_x/gvm_core/vpl/platform_win32/include/vpl__net.h
+END
+vpl__fs.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/59611/trunk/sw_x/gvm_core/vpl/platform_win32/include/vpl__fs.h
+END
+vpl__socket.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repo/!svn/ver/41587/trunk/sw_x/gvm_core/vpl/platform_win32/include/vpl__socket.h
+END

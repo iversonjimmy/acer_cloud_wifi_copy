@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/106/trunk/sw_x/gvm_core/internal/iosc/include
+END
+iosccert.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/106/trunk/sw_x/gvm_core/internal/iosc/include/iosccert.h
+END
+sha1.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/106/trunk/sw_x/gvm_core/internal/iosc/include/sha1.h
+END
+iosc.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/106/trunk/sw_x/gvm_core/internal/iosc/include/iosc.h
+END
+iosctypes.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/106/trunk/sw_x/gvm_core/internal/iosc/include/iosctypes.h
+END
+csltypes.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/106/trunk/sw_x/gvm_core/internal/iosc/include/csltypes.h
+END

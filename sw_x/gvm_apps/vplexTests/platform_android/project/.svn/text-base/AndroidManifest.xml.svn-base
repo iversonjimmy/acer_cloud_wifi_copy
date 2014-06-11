@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<manifest package="com.igware.vplex.test" android:versionCode="203070275" android:versionName="2.3.7.275" xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-sdk android:minSdkVersion="8" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application android:debuggable="true" android:icon="@drawable/igicon" android:label="@string/app_name">
+	    <activity android:name=".VplexTestActivity" android:label="@string/app_name">
+	        <intent-filter>
+                        <action android:name="com.igware.action.START" />
+                </intent-filter>
+	    </activity>
+    </application>
+    
+</manifest>

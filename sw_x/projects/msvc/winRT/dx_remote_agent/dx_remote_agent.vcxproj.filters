@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>24fbc7ec-ee87-4a0e-bc54-8f378b400c17</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>6370ead2-8efe-46a2-b669-244f4e00f2fd</UniqueIdentifier>
+    </Filter>
+    <Page Include="Common\StandardStyles.xaml">
+      <Filter>Common</Filter>
+    </Page>
+    <Image Include="Assets\Logo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SmallLogo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.png">
+      <Filter>Assets</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="App.xaml.cpp" />
+    <ClCompile Include="MainPage.xaml.cpp" />
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_apps\dx_remote_agent\platform_winrt\dx_remote_agent_util_winrt.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_apps\dx_remote_agent\platform_winrt\dx_remote_agent_winrt.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\types\dx_remote_agent.pb.cc" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\HttpAgent.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\HttpAgentLocal.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\ts_testClient.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\rpc_server\ccdi_rpc-server.pb.cc" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\common_utils.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dx_remote_agent\dx_remote_agent.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dx_remote_agent\DxRemoteAgentListener.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dx_remote_agent\DxRemoteAgentManager.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dx_remote_agent\DxRemoteCCDAgent.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dx_remote_agent\DxRemoteFileTransferAgent.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dx_remote_agent\DxRemoteHTTPAgent.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dx_remote_agent\DxRemoteMSAAgent.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dx_remote_agent\DxRemoteOSAgent.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dx_remote_agent\DxRemoteQueryDeviceAgent.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dx_remote_agent\DxRemoteTSTestAgent.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dx_remote_agent\IDxRemoteAgent.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="App.xaml.h" />
+    <ClInclude Include="MainPage.xaml.h" />
+    <ClInclude Include="..\..\..\..\gvm_apps\dx_remote_agent\platform_winrt\dx_remote_agent_util_winrt.h" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\types\dx_remote_agent.pb.h" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\HttpAgent.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\HttpAgentLocal.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\common_utils.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dx_remote_agent\dx_remote_agent.h" />
+    <ClInclude Include="..\..\..\..\tests\dx_remote_agent\dx_remote_agent_util.h" />
+    <ClInclude Include="..\..\..\..\tests\dx_remote_agent\DxRemoteAgentListener.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dx_remote_agent\DxRemoteAgentManager.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dx_remote_agent\DxRemoteCCDAgent.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dx_remote_agent\DxRemoteFileTransferAgent.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dx_remote_agent\DxRemoteHTTPAgent.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dx_remote_agent\DxRemoteMSAAgent.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dx_remote_agent\DxRemoteOSAgent.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dx_remote_agent\DxRemoteQueryDeviceAgent.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dx_remote_agent\DxRemoteTSTestAgent.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dx_remote_agent\IDxRemoteAgent.h" />
+    <ClInclude Include="..\..\..\..\tests\dx_remote_agent\PrepareProtoBufSizeStream.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dx_remote_agent_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="MainPage.xaml" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,112 @@
+These are instructions on:
+ 1) how to set-up the testharness database; and
+ 2) how to configure a client to run tests and update results to the database (such as buildbot would).
+
+#########################
+# Installing the Database
+#########################
+
+If you already have a MySQL DB server, skip to step 6.
+
+1) Obtain mysql and copy it to the server that will host the MySQL database.
+   You can get this from http://pcstore.ctbg.acer.com/pc/tools/third_party/platform_linux/mysql-5.1.50-linux-i686-glibc23.tar.gz
+
+2) Unpackage MySQL and configure it to run.
+   prompt> gunzip mysql-5.1.50-linux-i686-glibc23.tar.gz
+   prompt> tar xf mysql-5.1.50-linux-i686-glibc23.tar
+   prompt> sudo mv mysql-5.1.50-linux-i686-glibc23 /usr/local
+   prompt> cd /usr/local
+   prompt> sudo groupadd mysql
+   prompt> sudo useradd -g mysql mysql
+   prompt> sudo ln -s /usr/local/mysql-5.1.50-linux-i686-glibc23 mysql
+   prompt> cd mysql
+   prompt> sudo chown -R mysql .
+   prompt> sudo chgrp -R mysql .
+   prompt> sudo scripts/mysql_install_db --user=mysql
+   prompt> sudo chown -R root .
+   prompt> sudo chown -R mysql data
+
+3) Start the DB server.
+   prompt> cd /usr/local/mysql/bin
+   prompt> sudo ./mysqld_safe --user=mysql &
+
+4) Create an administrative user. This example creates an admin user "root" with password "route2me".
+   Change the -h used here to the hostname on which you are installing.
+
+   prompt> cd /usr/local/mysql/bin
+   prompt> ./mysqladmin -u root password 'route2me'
+   prompt> ./mysqladmin -u root -h ubuntu password 'route2me'
+   !!! where ubuntu is the name of the host machine !!!
+
+5) Update the PATH to include mysql's bin directory.
+   prompt> echo "export PATH=$PATH:/usr/local/mysql/bin" >> ~/.bashrc
+
+6) Log in as the admin user to MySQL.
+   prompt> mysql -u root -p
+   Enter password: <give route2me here>
+
+7) Create a testharness database.
+   mysql> CREATE DATABASE IF NOT EXISTS testharness;
+   mysql> CREATE DATABASE IF NOT EXISTS testharness_v2;
+
+8) Create a testharness user that can log in over the network and locally and has full control of the testharness database.
+   mysql> CREATE USER 'testharness'@'localhost' IDENTIFIED BY 'route2me';
+   mysql> CREATE USER 'testharness'@'%' IDENTIFIED BY 'route2me';
+   mysql> GRANT ALL ON testharness.* TO 'testharness'@'localhost';
+   mysql> GRANT ALL ON testharness_v2.* TO 'testharness'@'localhost';
+   mysql> GRANT ALL ON testharness.* TO 'testharness'@'%';
+   mysql> GRANT ALL ON testharness_v2.* TO 'testharness'@'%';
+   mysql> exit
+
+9) Upload the testharness DB schema into the testharness database.
+   Note: the testharness_tables.sql file is found in source control under sw_x/tools/testharness/install/testharness_tables.sql
+
+   prompt> mysql -u testharness -p < ./testharness_tables_v2.sql
+
+
+#################################
+# Install Apache and PHP and MySQL for PHP Packages
+#################################
+Assuming that the server that hosts the database will also host the front-end, run these commands on that server.
+
+prompt> sudo apt-get install apache2
+prompt> sudo apt-get install php5
+prompt> sudo apt-get install libapache2-mod-php5
+prompt> sudo /etc/init.d/apache2 restart
+prompt> sudo apt-get install libapache2-mod-auth-mysql
+prompt> sudo apt-get install php5-mysql
+
+
+##########################
+# Install the Web Frontend
+##########################
+1) On the server that hosts the web front-end, copy the files stored in source control under sw_x/tools/testharness/frontend to wherever the webserver looks for html pages.  For apache, this is typically /var/www.  For intwww, this is under /var/www/html/tests.
+
+2) Edit the connect_to_db.php file.  Change the db connection parameters to connect to the correct database.
+ 
+
+###############################
+# Configure Python to use MySQL
+###############################
+Run these steps on a machine that will execute the testharness AND will be updating the database.
+It is likely that it is *not* the same machine that hosts the database and the web front-end.
+
+1) Install the python developer package.
+   prompt> sudo yum install python-devel
+
+2) Install zlib.
+   prompt> sudo yum install zlib
+
+3) Install MySQL-python.
+   prompt> sudo yum install MySQL-python
+
+4) Check that the module can be loaded:
+   prompt> python -c "import MySQLdb"
+   If nothing is returned and RC=0, then the module can be found.
+
+###############################
+# Start MySQL
+###############################
+   prompt> cd /usr/local/mysql/bin
+   prompt> sudo ./mysqld_safe --user=mysql &
+

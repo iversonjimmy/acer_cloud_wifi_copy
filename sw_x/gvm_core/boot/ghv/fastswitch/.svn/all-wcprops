@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repo/!svn/ver/1428/trunk/sw_x/gvm_core/boot/ghv/fastswitch
+END
+fastswitch.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/1428/trunk/sw_x/gvm_core/boot/ghv/fastswitch/fastswitch.c
+END
+acpi-api.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/59/trunk/sw_x/gvm_core/boot/ghv/fastswitch/acpi-api.h
+END
+acpi.c
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/1428/trunk/sw_x/gvm_core/boot/ghv/fastswitch/acpi.c
+END

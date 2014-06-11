@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repo/!svn/ver/18549/trunk/sw_x/installer/win32/SyncAgent
+END
+igw_restart.au3
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/6304/trunk/sw_x/installer/win32/SyncAgent/igw_restart.au3
+END
+igw_register.au3
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/8572/trunk/sw_x/installer/win32/SyncAgent/igw_register.au3
+END
+RemoveAppData.vbs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/13028/trunk/sw_x/installer/win32/SyncAgent/RemoveAppData.vbs
+END
+zh-tw.wxl
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/6384/trunk/sw_x/installer/win32/SyncAgent/zh-tw.wxl
+END
+License-zh-tw.rtf
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/1567/trunk/sw_x/installer/win32/SyncAgent/License-zh-tw.rtf
+END
+RemoveStartupShortcuts.vbs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repo/!svn/ver/9196/trunk/sw_x/installer/win32/SyncAgent/RemoveStartupShortcuts.vbs
+END
+makemsi.bat
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/1567/trunk/sw_x/installer/win32/SyncAgent/makemsi.bat
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/6110/trunk/sw_x/installer/win32/SyncAgent/README
+END
+en-us.wxl
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/6384/trunk/sw_x/installer/win32/SyncAgent/en-us.wxl
+END
+License-en-us.rtf
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/1567/trunk/sw_x/installer/win32/SyncAgent/License-en-us.rtf
+END
+igw_restart.exe
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/6304/trunk/sw_x/installer/win32/SyncAgent/igw_restart.exe
+END
+igw_register.exe
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/8572/trunk/sw_x/installer/win32/SyncAgent/igw_register.exe
+END
+SyncAgent.wxs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/18549/trunk/sw_x/installer/win32/SyncAgent/SyncAgent.wxs
+END
+Makefile.tools
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/6298/trunk/sw_x/installer/win32/SyncAgent/Makefile.tools
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/17842/trunk/sw_x/installer/win32/SyncAgent/Makefile
+END
+getImageFiles.sh
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/14026/trunk/sw_x/installer/win32/SyncAgent/getImageFiles.sh
+END

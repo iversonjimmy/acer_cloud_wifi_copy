@@ -1,0 +1,43 @@
+#!/bin/sh
+
+get_ipaddr() {
+    IPADDR=$(ip address show dev $IFACE | awk '/inet /{print $2}' | awk -F/ '{print $1}')
+}
+
+config_ipmasq() {
+    case "$MODE" in
+	start)
+	    iptables -t nat -A POSTROUTING -o $IFACE -j SNAT --to-source $IPADDR
+	    iptables -A FORWARD -d 192.168.0.0/16 -o $IFACE -j DROP
+	    ;;
+	stop)
+	    iptables -t nat -D POSTROUTING -o $IFACE -j SNAT --to-source $IPADDR
+	    iptables -D FORWARD -d 192.168.0.0/16 -o $IFACE -j DROP
+	    ;;
+esac
+}
+
+add_dex_rule() {
+    case "$MODE" in
+	start)
+	    iptables -t nat -N dex
+	    iptables -t nat -A PREROUTING -s 192.168.2.0/24 -d $IPADDR -j dex
+	    ;;
+	stop)
+	    iptables -t nat -D PREROUTING -s 192.168.2.0/24 -d $IPADDR -j dex
+	    iptables -t nat -X dex
+	    ;;
+    esac
+}
+
+case "$IFACE" in
+    eth0)
+	get_ipaddr
+	config_ipmasq
+	add_dex_rule
+	;;
+    eth1)
+	get_ipaddr
+	config_ipmasq
+	;;
+esac

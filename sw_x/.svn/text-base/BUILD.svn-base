@@ -1,0 +1,646 @@
+# Default targets, for when you just go to sw_x and type "make".
+pseudo(
+    name = 'default',
+    deps = {
+            'android':[
+                '/:android_cc_sdk',
+                '/:android_actool',
+                '/:android_dx_remote_agent',
+                '/:android_sync_config',
+                '/:tests',
+            ],
+            'ios':[
+                '/:all',
+            ],
+            'linux':[
+                '/:all',
+            ],
+            'cloudnode':[
+                '/:all',
+            ],
+            'msvc':[
+                '/:all',
+            ],
+           }[platform],
+)
+
+# temporary during 2.7 development
+if platform != 'ios' and platform != 'msvc':
+    pseudo(
+        name = 'ts2',
+        deps = ['/gvm_core/internal/Ts2:libTs2'],
+    )
+    pseudo(
+        name = 'ts2shim',
+        deps = ['/gvm_core/internal/Ts2Alt/Shim:libTs2Shim'],
+    )
+    pseudo(
+        name = 'ts2tests',
+        deps = ['/gvm_core/internal/Ts2:tests'],
+    )
+    pseudo(
+        name = 'ts2ext',
+        deps = [
+                '/gvm_core/internal/Ts2Alt/Ext:libTs2ExtClient',
+                '/gvm_core/internal/Ts2Alt/Ext:libTs2ExtServer',
+               ],
+    )
+
+pseudo(
+    name = 'all',
+    deps = ([
+        '/:daemons',
+        '/:tests',
+        '/:es_core',
+        '/:bvd',
+        ] if platform != 'msvc' and platform != 'ios' else [])
+        + {
+            'android':[
+                '/:default',
+            ],
+            'ios':[
+                '/gvm_core/daemons/ccd:ccdi_sdk',
+            ],
+            'linux':[
+                '/:test_ccd_login',
+                '/:test_picstream',
+                '/tests/sync_config/fileMonitorDelay:fileMonitorDelayTest',
+                '/tests/sync_config/syncConfig:syncConfigTest',
+                '/tests/sync_config/syncConfigDb:syncConfigDbTest',
+                '/tests/sync_config/syncConfigThreadPool:syncConfigThreadPoolTest',
+                '/tests/ccd/test_cr_upload:test_ccd_cr_upload',
+                '/tests/dxshell:dxshell',
+                '/gvm_apps/imltool:imltool',
+                '/gvm_apps/actool/platform_linux:actool_app',
+                '/gvm_apps/dx_remote_agent/platform_linux:dx_remote_agent',
+                '/gvm_core/daemons/ccd:ccd_cloudnode',
+                '/tests/dxshell:dxshell_cloudnode',
+                '/gvm_core/internal/image_transcode:libimage_transcode',
+                '/:exifBasicTest',
+            ],
+            'cloudnode':[
+                '/gvm_core/daemons/ccd:ccd_cloudnode',
+                '/:test_ccd_login',
+                '/tests/sync_config/syncConfig:syncConfigTest',
+                '/tests/ccd/test_cr_upload:test_ccd_cr_upload',
+                '/tests/dxshell:dxshell',
+                '/tests/dxshell:dxshell_cloudnode',
+                '/gvm_core/daemons/ccd:ccdi_sdk',
+                '/gvm_apps/repair_tool:repair_tool',
+                '/gvm_apps/imltool:imltool',
+                '/gvm_apps/actool/platform_linux:actool_app',
+                '/gvm_apps/dx_remote_agent/platform_linux:dx_remote_agent_cloudnode',
+                '/gvm_core/internal/image_transcode:libimage_transcode',
+                '/:exifBasicTest',
+            ],
+            'msvc':[
+                '/gvm_core/daemons/ccd:ccdi_sdk',
+            ],
+        }[platform],
+)
+
+if platform == 'msvc':
+    pseudo(
+        name = 'msvc_prebuild',
+        deps = [
+            '/gvm_core/internal/protorpc:proto_src',
+            '/gvm_core/daemons/ccd:ccdi_rpc',
+            '/gvm_core/daemons/ccd:ccd_types',
+            '/gvm_core/vplex/proto:ans_message_src',
+            '/gvm_core/vplex/proto:community_notifier_src',
+            '/gvm_core/vplex/proto:community_service_types_src',
+            '/gvm_core/vplex/proto:ias_service_types_src',
+            '/gvm_core/vplex/proto:nus_service_types_src',
+            '/gvm_core/vplex/proto:sync_agent_notifier_src',
+            '/gvm_core/vplex/proto:vs_directory_service_types_src',
+            '/gvm_core/vplex/proto:shared_credential_src',
+            '/tests/dxshell/types:dx_remote_agent_proto',
+            '/gvm_apps/acer/CCDMonitorService/platform_win:ccdmonsrv_defs',
+        ],
+    )
+    if product == 'msvc':
+        external_phony(
+            name = 'msvc_personal_cloud_all',
+            srcdir = '/devtools/projects/msvc',
+            deps = [
+                ':msvc_prebuild',
+                
+            ],
+        )
+    elif product == 'winrt':
+        external_phony(
+            name = 'msvc_personal_cloud_all',
+            srcdir = '/projects/msvc/winRT',
+            deps = [
+                ':msvc_prebuild',
+                
+            ],
+        )
+    elif product == 'woa':
+        external_phony(
+            name = 'msvc_personal_cloud_all',
+            srcdir = '/projects/msvc/winRT',
+            deps = [
+                ':msvc_prebuild',
+                
+            ],
+        )
+    else:
+        raise Exception('unsupported configuration')
+elif platform == 'ios':
+    external_phony(
+        name = 'ios_personal_cloud_all',
+        srcdir = '/projects/xcode/PersonalCloud',
+        deps = [
+            ':ios_prebuild',
+        ],
+    )
+    pseudo(
+        name = 'ios_prebuild',
+        deps = [
+            '/gvm_core/internal/protorpc:proto_src',
+            '/gvm_core/daemons/ccd:ccdi_rpc',
+            '/gvm_core/daemons/ccd:ccd_types',
+            '/gvm_core/vplex/proto:ans_message_src',
+            '/gvm_core/vplex/proto:community_notifier_src',
+            '/gvm_core/vplex/proto:community_service_types_src',
+            '/gvm_core/vplex/proto:ias_service_types_src',
+            '/gvm_core/vplex/proto:nus_service_types_src',
+            '/gvm_core/vplex/proto:sync_agent_notifier_src',
+            '/gvm_core/vplex/proto:vs_directory_service_types_src',
+            '/gvm_core/vplex/proto:shared_credential_src',
+            '/tests/dxshell/types:dx_remote_agent_proto',
+        ],
+    )
+else:
+    pseudo(
+        name = 'tests',
+        deps = [
+                '/gvm_core/vpl/tests:vplTest',
+                '/gvm_core/vplex/tests:vplexTest',
+                ]
+                +
+                (['/gvm_core/internal/vssi/tests/vs:vsTest',
+                  '/gvm_core/internal/vssi/tests/vss_auto_expire:vssExpireTest',
+                  '/:vs_psn',
+                  '/gvm_core/internal/vssts/tests/virtual_drive:virtual_drive',
+                  '/gvm_core/internal/vssi/tests/stream:vsStreamTest',
+                  '/tests/swupdate/runSync:runSync',
+                  '/gvm_core/internal/vssi/tests/loadgen_vss:loadgen_vss',
+                  '/gvm_core/internal/vssi/tests/loadgen_local:loadgen_local',
+                  '/gvm_core/internal/vssi/tests/loadgen_orbe:loadgen_orbe',
+                 ] if platform != 'android' else [])
+                +
+                (['/gvm_core/daemons/ccd/tests:tests',
+                  '/gvm_core/daemons/ccd/sdk/samples:all',
+                  '/gvm_core/vpl/tests:vplMonitorTest',
+                  '/tests/ccd/test_sync:test_ccd_sync',
+                  '/tests/ccd/test_sub_api:test_ccd_sub_api',
+                  '/tests/test_utils:test_utils',
+                  '/es_core/tests:tests',
+                  '/:TestPsnDatasetDB2',
+                  '/gvm_core/internal/simple_http/tests:test_parse_query_string',
+                  '/gvm_core/internal/Stream/tests:all',
+                  '/gvm_core/internal/pxd:pxd_client_test',
+                  ] if platform != 'android' else []),
+    )
+    
+    pseudo(
+        name = 'target_devtools',
+        deps = [
+                '/gvm_core/devtools/protorpcgen:protorpcgen',
+               ],
+    )
+    
+    if platform != 'android':
+        pseudo(
+            name = 'test_ccd_login',
+            deps = ['/tests/ccd/test_login:test_ccd_login'],
+        )
+        pseudo(
+            name = 'test_picstream',
+            deps = ['/tests/ccd/test_picstream:test_picstream'],
+        )
+    
+    if platform == 'android':
+        pseudo(
+            name = 'android_cc_sdk',
+            deps = ['/gvm_apps/android_cc_sdk:android_cc_sdk_all']
+        )
+        pseudo(
+            name = 'android_actool',
+            deps = ['/gvm_apps/actool/platform_android:actool_app']
+        )
+        pseudo(
+            name = 'android_dx_remote_agent',
+            deps = ['/gvm_apps/dx_remote_agent/platform_android:dx_remote_agent_apk']
+        )
+        pseudo(
+            name = 'android_sync_config',
+            deps = ['/tests/sync_config/syncConfig:syncConfigTest']
+        )
+
+    pseudo(
+        name = 'vpl',
+        deps = ['/gvm_core/vpl:libvplcore']
+    )
+    
+    pseudo(
+        name = 'libans',
+        deps = ['gvm_core/internal/ans:libans'],
+    )
+
+    pseudo(
+        name = 'libpxd',
+        deps = ['gvm_core/internal/pxd:libpxd'],
+    )
+
+    pseudo(
+        name = 'ans_device_test',
+        deps = ['gvm_core/internal/ans:ans_device_test'],
+    )
+    
+    pseudo(
+        name = 'libvplcore',
+        deps = ['/gvm_core/vpl:libvplcore']
+    )
+    
+    pseudo(
+        name = 'libvplexcore',
+        deps = ['/gvm_core/vplex:libvplexcore']
+    )
+    
+    pseudo(
+        name = 'vplex',
+        deps = ['/gvm_core/vplex:libvplex']
+    )
+    
+    pseudo(
+        name = 'vplex-shr',
+        deps = ['/gvm_core/vplex:libvplex-shr']
+    )
+    
+    pseudo(
+        name = 'ccd',
+        deps = ['/gvm_core/daemons/ccd']
+    )
+    
+    pseudo(
+        name = 'libcc-shr',
+        deps = ['/gvm_core/daemons/ccd:libcc-shr']
+    )
+    
+    pseudo(
+        name = 'libccd_client',
+        deps = ['/gvm_core/daemons/ccd:libccd_client']
+    )
+
+    pseudo(
+        name = 'libccd_client-shr',
+        deps = ['/gvm_core/daemons/ccd:libccd_client-shr']
+    )
+
+    pseudo(
+        name = 'libvssi',
+        deps = ['/gvm_core/internal/vssi:libvssi']
+    )
+
+    pseudo(
+        name = 'libvssi-shr',
+        deps = ['/gvm_core/internal/vssi:libvssi-shr']
+    )
+
+    daemons = []
+    # On Android, ccd can only be run as a shared library, invoked via JNI.
+    if platform == 'android':
+        daemons += ['/:libcc-shr']
+    elif host_platform_sub != 'msvc':
+        daemons += ['/:ccd']
+    
+    pseudo(
+        name = 'daemons',
+        deps = daemons,
+    )
+    
+    if es_is_kernel_module:
+        pseudo(
+            name = 'es_core',
+            deps = [
+                '/es_core:libescore',
+                '/es_core/kernel:escmod',
+#                '/es_core/kernel:test_decrypt_content',
+#                '/es_core/kernel:test_decrypt_secret_cred',
+            ]
+        )
+    else:
+        pseudo(
+            name = 'es_core',
+            deps = [
+                '/es_core:libescore',
+                '/es_core/esc:libesc_ul',
+                '/es_core/kernel:test_decrypt_content',
+                '/es_core/kernel:test_decrypt_secret_cred',
+            ]
+        )
+    
+    if es_is_kernel_module:
+        pseudo(
+            name = 'bvd',
+            deps = ['/gvm_core/os/bvd'],
+        )
+    else:
+        pseudo(
+            name = 'bvd',
+            deps = [],
+        )
+
+    pseudo(
+        name = 'repairTool',
+        deps = ['/gvm_apps/repair_tool:repair_tool'],
+    )
+    
+    pseudo(
+        name = 'vsTest',
+        deps = ['/gvm_core/internal/vssi/tests/vs:vsTest'],
+    )
+
+    pseudo(
+        name = 'vssExpireTest',
+        deps = ['/gvm_core/internal/vssi/tests/vss_auto_expire:vssExpireTest'],
+    )
+
+    pseudo(
+        name = 'vsTest_psn',
+        deps = ['/gvm_core/internal/vssi/tests/vs_psn:vsTest_psn_all'],
+    )
+
+    pseudo(
+        name = 'vs_psn',
+        deps = ['/gvm_core/internal/vssts/tests/vs_psn:vs_psn_all'],
+    )
+
+    pseudo(
+        name = 'vssi_virtual_drive_test',
+        deps = ['/gvm_core/internal/vssi/tests/virtual_drive:virtual_drive_test'],
+    )
+
+    pseudo(
+        name = 'virtual_drive_test',
+        deps = ['/gvm_core/internal/vssts/tests/virtual_drive:virtual_drive'],
+    )
+
+    pseudo(
+        name = 'vsStreamTest',
+        deps = ['/gvm_core/internal/vssi/tests/stream:vsStreamTest'],
+    )
+    
+    pseudo(
+        name = 'TestDatasetDB',
+        deps = ['/gvm_core/internal/datasetdb/tests:TestDatasetDB'],
+    )
+    
+    pseudo(
+        name = 'TestPsnDatasetDB',
+        deps = ['/storageNode/datasetdb/tests:TestDatasetDB'],
+    )
+    
+    pseudo(
+        name = 'TestPsnDatasetDB2',
+        deps = ['/storageNode/datasetdb2/tests:TestDatasetDB'],
+    )
+    
+    pseudo(
+        name = 'loadgen_vss',
+        deps = [
+                '/gvm_core/internal/vssi/tests/loadgen_vss:loadgen_vss',
+               ],
+    )
+
+    pseudo(
+        name = 'loadgen_local',
+        deps = [
+                '/gvm_core/internal/vssi/tests/loadgen_local:loadgen_local',
+               ],
+    )
+
+    pseudo(
+        name = 'loadgen_orbe',
+        deps = [
+                '/gvm_core/internal/vssi/tests/loadgen_orbe:loadgen_orbe',
+               ],
+    )
+
+    pseudo(
+        name = 'loadgen_proxy',
+        deps = [
+                '/gvm_core/internal/vssi/tests/loadgen_proxy:loadgen_proxy',
+               ],
+    )
+
+    pseudo(
+        name = 'exifBasicTest',
+        deps = ['/gvm_core/internal/exif_parser/tests/exifBasicTest:exifBasicTest'],
+    )
+    
+    if es_is_kernel_module:
+        pseudo(
+            name = 'bvdTest',
+            deps = ['/gvm_core/os/bvd/tests/bvdtest/:bvdTest'],
+        )
+    else:
+        pseudo(
+            name = 'bvdTest',
+            deps = [],
+        )
+
+# System libraries
+
+if platform == 'linux':
+    if host_platform_sub == 'centos':
+        libdir = '/usr/lib/'
+    else :
+        libdir = { 'i686': '/usr/lib/', 'x86_64': '/usr/lib32/' }[os.uname()[4]]
+
+    # To add to the build machine, try:
+    #   sudo apt-get install libcurl3-dev
+    #
+    # Infra builds are done on a RHEL5 derivative but
+    # the execution environment is RHEL6.  libcurl
+    # changes between the two so we need to statically link there.        
+    if host_platform_sub == 'ubuntu':
+        system_shared_cpp_lib(
+            name = 'libcurl',
+            file = libdir + 'libcurl.so',
+        )
+
+        system_static_cpp_lib(
+            name = 'libjpeg',
+            file = libdir + 'libjpeg.a',
+        )
+    elif host_platform_sub == 'centos':
+        system_shared_cpp_lib(
+            name = 'libcurl',
+            file = libdir + 'libcurl.so',
+        )
+
+        system_shared_cpp_lib(
+            name = 'libjpeg',
+            file = libdir + 'libjpeg.so',
+        )
+    else: # redhat
+        system_static_cpp_lib(
+            name = 'libcurl',
+            file = libdir + 'libcurl.a',
+            deps = ['/:libidn'],
+        )
+        system_static_cpp_lib(
+            name = 'libidn',
+            file = libdir + 'libidn.a',
+        )
+
+        system_static_cpp_lib(
+            name = 'libjpeg',
+            file = libdir + 'libjpeg.so',
+        )
+
+    system_shared_cpp_lib(
+        name = 'libdl',
+        file = libdir + 'libdl.so',
+    )
+    
+    system_shared_cpp_lib(
+        name = 'libm',
+        file = libdir + 'libm.so',
+    )
+    
+    system_shared_cpp_lib(
+        name = 'libpthread',
+        file = libdir + 'libpthread.so',
+    )
+    
+    system_shared_cpp_lib(
+        name = 'librt',
+        file = libdir + 'librt.so',
+    )
+    
+    system_shared_cpp_lib(
+        name = 'libopenssl',
+        file = libdir + 'libssl.so',
+        deps = ['/:libcrypto'],
+    )
+    
+    system_shared_cpp_lib(
+        name = 'libcrypto',
+        file = libdir + 'libcrypto.so',
+    )
+
+    system_static_cpp_lib(
+        name = 'libpng',
+        file = libdir + 'libpng.a',
+    )
+
+    system_static_cpp_lib(
+        name = 'libtiff',
+        file = libdir + 'libtiff.a',
+    )
+
+elif platform == 'cloudnode':
+
+    incdir = 'usr/include/'
+    libdir =  '$(CLOUDNODE_ROOTFS_ROOT)/lib/'
+    
+    system_shared_cpp_lib(
+        name = 'libpthread',
+        file = libdir + 'libpthread.so.0',
+    )
+
+    system_shared_cpp_lib(
+        name = 'librt',
+        file = libdir + 'librt.so',
+    )
+    
+    system_shared_cpp_lib(
+        name = 'libopenssl',
+        file = libdir + 'libssl.so',
+        deps = ['/:libcrypto'],
+    )
+    
+    system_shared_cpp_lib(
+        name = 'libdl',
+        file = libdir + 'libdl.so',
+    )
+
+    system_shared_cpp_lib(
+        name = 'libcurl',
+        file = libdir + 'libcurl.so',
+    )
+
+    system_shared_cpp_lib(
+        name = 'libm',
+        file = libdir + 'libm.so',
+    )
+    
+    system_shared_cpp_lib(
+        name = 'libcrypto',
+        file = libdir + 'libcrypto.so',
+    )
+
+    system_static_cpp_lib(
+        name = 'libpng',
+        file = libdir + 'libpng.a',
+    )
+
+    system_static_cpp_lib(
+        name = 'libjpeg',
+        file = libdir + 'libjpeg.a',
+    )
+
+    system_shared_cpp_lib(
+        name = 'libtiff',
+        file = libdir + 'libtiff.so',
+    )
+
+    system_shared_cpp_lib(
+        name = 'libz',
+        file = libdir + 'libz.so',
+    )
+
+elif platform == 'android':
+    
+    system_shared_cpp_lib(
+        name = 'libc',
+        file = '$(ANDROID_NDK_SYS_ROOT)/usr/lib/libc.so',
+        deps = ['/:libm'],
+    )
+    
+    system_shared_cpp_lib(
+        name = 'libdl',
+        file = '$(ANDROID_NDK_SYS_ROOT)/usr/lib/libdl.so',
+    )
+    
+    system_shared_cpp_lib(
+        name = 'liblog',
+        file = '$(ANDROID_NDK_SYS_ROOT)/usr/lib/liblog.so',
+    )
+    
+    system_shared_cpp_lib(
+        name = 'libm',
+        file = '$(ANDROID_NDK_SYS_ROOT)/usr/lib/libm.so',
+    )
+    
+    system_shared_cpp_lib(
+        name = 'libstdc++',
+        file = '$(ANDROID_NDK_SYS_ROOT)/usr/lib/libstdc++.so',
+        deps = ['/:libm'],
+    )
+    
+    system_static_cpp_lib(
+        name = 'libsupc++',
+        file = '$(ANDROID_NDK_ROOT)/toolchains/arm-linux-androideabi-4.4.3/prebuilt/linux-x86/arm-linux-androideabi/lib/armv7-a/libsupc++.a',
+    )
+    
+    system_static_cpp_lib(
+        name = 'libstlport_static',
+        file = '$(ANDROID_NDK_ROOT)/sources/cxx-stl/stlport/libs/armeabi/libstlport_static.a',
+        deps = ['/:libstdc++'],
+    )

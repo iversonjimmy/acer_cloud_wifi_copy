@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/32904/trunk/sw_x/gvm_core/vpl/tests/microbench/atomic
+END
+vpl_atomic_timing.c
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repo/!svn/ver/32904/trunk/sw_x/gvm_core/vpl/tests/microbench/atomic/vpl_atomic_timing.c
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/681/trunk/sw_x/gvm_core/vpl/tests/microbench/atomic/Makefile
+END

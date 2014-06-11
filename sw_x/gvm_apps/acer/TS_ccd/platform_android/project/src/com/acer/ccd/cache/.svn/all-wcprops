@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repo/!svn/ver/15022/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/cache
+END
+DBContent.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/cache/DBContent.java
+END
+DBManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repo/!svn/ver/15022/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/cache/DBManager.java
+END
+DBProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/cache/DBProvider.java
+END
+DBMediaInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/cache/DBMediaInfo.java
+END
+DBPreviewContent.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/cache/DBPreviewContent.java
+END
+DBUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/cache/DBUtil.java
+END
+DBDevice.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/cache/DBDevice.java
+END
+DBMusicPlaylist.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/cache/DBMusicPlaylist.java
+END
+DBSearchResult.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/cache/DBSearchResult.java
+END

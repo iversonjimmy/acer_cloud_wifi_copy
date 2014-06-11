@@ -1,0 +1,101 @@
+10
+
+dir
+59951
+https://src-us.ctbg.acer.com/repo/trunk/sw_x/projects/xcode/PersonalCloud
+https://src-us.ctbg.acer.com/repo
+
+
+
+2014-05-20T03:35:01.500505Z
+59817
+frank
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+187b5c42-a02b-43e7-ba74-80c9f8da41ab
+
+protobuf
+dir
+
+PersonalCloud.xcworkspace
+dir
+
+libCJSON
+dir
+
+dx_remote_agent
+dir
+
+libvplex
+dir
+
+media_metadata_shared_impl
+dir
+
+libvpl
+dir
+
+protorpc
+dir
+
+applescripts
+dir
+
+ccd
+dir
+
+libsqlite3
+dir
+
+DummyApp
+dir
+
+internal
+dir
+
+Makefile
+file
+
+
+
+
+2014-05-22T01:47:27.493888Z
+fc0d6dcb57758b6029979cda8eff4aa3
+2014-03-17T11:27:19.991808Z
+56625
+jimmy.horng
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3431
+

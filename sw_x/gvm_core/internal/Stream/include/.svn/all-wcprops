@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/57141/trunk/sw_x/gvm_core/internal/Stream/include
+END
+HttpStream_Helper.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repo/!svn/ver/54787/trunk/sw_x/gvm_core/internal/Stream/include/HttpStream_Helper.hpp
+END
+Stream.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/36090/trunk/sw_x/gvm_core/internal/Stream/include/Stream.hpp
+END
+HttpStream.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/48851/trunk/sw_x/gvm_core/internal/Stream/include/HttpStream.hpp
+END
+HttpReqHeader.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/36090/trunk/sw_x/gvm_core/internal/Stream/include/HttpReqHeader.hpp
+END
+HttpFileUploadStream.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repo/!svn/ver/57141/trunk/sw_x/gvm_core/internal/Stream/include/HttpFileUploadStream.hpp
+END
+HttpTsStream.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repo/!svn/ver/38966/trunk/sw_x/gvm_core/internal/Stream/include/HttpTsStream.hpp
+END
+SocketStream.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repo/!svn/ver/36090/trunk/sw_x/gvm_core/internal/Stream/include/SocketStream.hpp
+END
+HttpSocketStream.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/36090/trunk/sw_x/gvm_core/internal/Stream/include/HttpSocketStream.hpp
+END
+InStringStream.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repo/!svn/ver/36090/trunk/sw_x/gvm_core/internal/Stream/include/InStringStream.hpp
+END
+OutStringStream.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repo/!svn/ver/36090/trunk/sw_x/gvm_core/internal/Stream/include/OutStringStream.hpp
+END
+InStream.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/36090/trunk/sw_x/gvm_core/internal/Stream/include/InStream.hpp
+END
+HttpStringStream.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/36090/trunk/sw_x/gvm_core/internal/Stream/include/HttpStringStream.hpp
+END
+HttpRespHeader.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repo/!svn/ver/36090/trunk/sw_x/gvm_core/internal/Stream/include/HttpRespHeader.hpp
+END
+OutStream.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/36090/trunk/sw_x/gvm_core/internal/Stream/include/OutStream.hpp
+END
+HttpFileDownloadStream.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repo/!svn/ver/48323/trunk/sw_x/gvm_core/internal/Stream/include/HttpFileDownloadStream.hpp
+END

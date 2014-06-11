@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_remote_panel/project/res/drawable-ldpi
+END
+pause.png
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_remote_panel/project/res/drawable-ldpi/pause.png
+END
+resume.png
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_remote_panel/project/res/drawable-ldpi/resume.png
+END
+settings.png
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_remote_panel/project/res/drawable-ldpi/settings.png
+END
+unlink.png
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_remote_panel/project/res/drawable-ldpi/unlink.png
+END
+trash.png
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_remote_panel/project/res/drawable-ldpi/trash.png
+END
+rename.png
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_remote_panel/project/res/drawable-ldpi/rename.png
+END
+icon.png
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_remote_panel/project/res/drawable-ldpi/icon.png
+END
+igicon.png
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_remote_panel/project/res/drawable-ldpi/igicon.png
+END
+exit.png
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_remote_panel/project/res/drawable-ldpi/exit.png
+END
+logout.png
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_remote_panel/project/res/drawable-ldpi/logout.png
+END

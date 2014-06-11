@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/52127/trunk/sw_x/gvm_core/internal/vssi/tests/loadgen_orbe
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/31698/trunk/sw_x/gvm_core/internal/vssi/tests/loadgen_orbe/BUILD
+END
+vsTest_personal_cloud_data.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repo/!svn/ver/52127/trunk/sw_x/gvm_core/internal/vssi/tests/loadgen_orbe/vsTest_personal_cloud_data.hpp
+END
+loadgen_orbe.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repo/!svn/ver/31986/trunk/sw_x/gvm_core/internal/vssi/tests/loadgen_orbe/loadgen_orbe.cpp
+END
+manifest.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repo/!svn/ver/31698/trunk/sw_x/gvm_core/internal/vssi/tests/loadgen_orbe/manifest.cpp
+END
+vsTest_personal_cloud_data.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repo/!svn/ver/31698/trunk/sw_x/gvm_core/internal/vssi/tests/loadgen_orbe/vsTest_personal_cloud_data.cpp
+END
+manifest.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repo/!svn/ver/31698/trunk/sw_x/gvm_core/internal/vssi/tests/loadgen_orbe/manifest.h
+END

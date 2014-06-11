@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/52986/trunk/sw_x/gvm_core/daemons/ccd/client/include
+END
+ccdi_client_named_socket.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repo/!svn/ver/21938/trunk/sw_x/gvm_core/daemons/ccd/client/include/ccdi_client_named_socket.hpp
+END
+ccdi_client.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repo/!svn/ver/52986/trunk/sw_x/gvm_core/daemons/ccd/client/include/ccdi_client.hpp
+END
+ccdi_client_tcp.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repo/!svn/ver/22857/trunk/sw_x/gvm_core/daemons/ccd/client/include/ccdi_client_tcp.hpp
+END

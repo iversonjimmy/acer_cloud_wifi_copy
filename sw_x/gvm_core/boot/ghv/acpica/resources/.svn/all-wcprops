@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/resources
+END
+rsaddr.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/resources/rsaddr.c
+END
+rsinfo.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/resources/rsinfo.c
+END
+rsirq.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/resources/rsirq.c
+END
+rslist.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/resources/rslist.c
+END
+rsmisc.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/resources/rsmisc.c
+END
+rsutils.c
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/resources/rsutils.c
+END
+rscalc.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/resources/rscalc.c
+END
+rscreate.c
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/resources/rscreate.c
+END
+rsdump.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/resources/rsdump.c
+END
+rsxface.c
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/resources/rsxface.c
+END
+rsio.c
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/resources/rsio.c
+END
+rsmemory.c
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/resources/rsmemory.c
+END

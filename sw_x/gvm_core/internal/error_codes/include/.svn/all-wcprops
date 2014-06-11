@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/59678/trunk/sw_x/gvm_core/internal/error_codes/include
+END
+gvm_configuration.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repo/!svn/ver/48527/trunk/sw_x/gvm_core/internal/error_codes/include/gvm_configuration.h
+END
+gvm_errors.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/59678/trunk/sw_x/gvm_core/internal/error_codes/include/gvm_errors.h
+END

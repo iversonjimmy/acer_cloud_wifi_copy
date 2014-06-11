@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/58146/trunk/sw_x/gvm_core/internal/image_transcode/src_win32
+END
+image__transcode.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repo/!svn/ver/58146/trunk/sw_x/gvm_core/internal/image_transcode/src_win32/image__transcode.cpp
+END
+image__transcode.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repo/!svn/ver/29587/trunk/sw_x/gvm_core/internal/image_transcode/src_win32/image__transcode.h
+END
+aarot.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/52523/trunk/sw_x/gvm_core/internal/image_transcode/src_win32/aarot.hpp
+END

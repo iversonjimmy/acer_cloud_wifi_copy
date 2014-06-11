@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/40655/trunk/sw_x/gvm_core/internal/vssts/tests/psn_async
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/38043/trunk/sw_x/gvm_core/internal/vssts/tests/psn_async/BUILD
+END
+vsTest_vscs_async.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repo/!svn/ver/38043/trunk/sw_x/gvm_core/internal/vssts/tests/psn_async/vsTest_vscs_async.cpp
+END
+vsTest_vscs_async.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repo/!svn/ver/38043/trunk/sw_x/gvm_core/internal/vssts/tests/psn_async/vsTest_vscs_async.hpp
+END
+psn_async.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/40655/trunk/sw_x/gvm_core/internal/vssts/tests/psn_async/psn_async.cpp
+END

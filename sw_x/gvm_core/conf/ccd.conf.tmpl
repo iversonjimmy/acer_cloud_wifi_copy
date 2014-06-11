@@ -1,0 +1,48 @@
+//---------------------------
+// Please see sw_x/gvm_core/daemons/ccd/src_impl/config.c for the complete list of 
+// variables and default values.
+// To determine where the .conf file(s) belong at runtime, grep the CCD logs
+// for "Reading configuration from".
+//---------------------------
+// "//" Denotes a single-line comment.
+// Format: <var name> = <var value>\n
+// Empty lines are acceptable.
+// Variable names are case-insensitive.
+// Type conversion is up to the library user.
+//---------------------------
+
+infraDomain = ${DOMAIN}
+userGroup = ${GROUP}
+
+// Enables verbose logging.
+debugLog = 0
+
+// Write logs to the filesystem.  The exact behavior varies slightly per platform.
+// On Android: Only if the "/sdcard/acerCloudDebug/conf/ccd.conf" file exists, we will begin writing
+// logs to "/sdcard/acerCloudDebug/logs/".  After we parse the conf files, we will turn off the
+// log file if this is 0.
+enableLogFiles = 1
+
+//---------------------------
+// Sets if the HTTP traffic is logged.
+// 0 for false.
+// 1 for true.
+//---------------------------
+// SOAP calls to IAS
+// NOTE: Currently, this is always treated as true (see Bug 11687).
+debugIasHttp = 1
+
+// SOAP calls to NUS
+// NOTE: Currently, this is always treated as true (see Bug 11687).
+debugNusHttp = 1
+
+// SOAP calls to VSDS
+// NOTE: Currently, this is always treated as true (see Bug 11687).
+debugVsdsHttp = 1
+
+// Requests made via CCDIInfraHttp()
+debugInfraHttp = 1
+
+// Calls to VCS (REST + JSON)
+debugVcsHttp = 1
+//---------------------------

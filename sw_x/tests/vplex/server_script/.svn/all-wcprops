@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repo/!svn/ver/50286/trunk/sw_x/tests/vplex/server_script
+END
+app_common.py
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/50286/trunk/sw_x/tests/vplex/server_script/app_common.py
+END
+prod_server.py
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/31982/trunk/sw_x/tests/vplex/server_script/prod_server.py
+END
+rc_server.py
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/31982/trunk/sw_x/tests/vplex/server_script/rc_server.py
+END
+tot_server.py
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/31982/trunk/sw_x/tests/vplex/server_script/tot_server.py
+END
+default
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repo/!svn/ver/31982/trunk/sw_x/tests/vplex/server_script/default
+END
+simple_server.py
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/31703/trunk/sw_x/tests/vplex/server_script/simple_server.py
+END
+httpd.conf
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/31982/trunk/sw_x/tests/vplex/server_script/httpd.conf
+END
+dev_server.py
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/31982/trunk/sw_x/tests/vplex/server_script/dev_server.py
+END

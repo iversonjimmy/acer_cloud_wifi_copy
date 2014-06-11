@@ -1,0 +1,77 @@
+10
+
+dir
+59951
+https://src-us.ctbg.acer.com/repo/trunk/sw_x/gvm_core/internal/vssts
+https://src-us.ctbg.acer.com/repo
+
+
+
+2014-03-31T21:04:17.103431Z
+56879
+vincent.peng
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+187b5c42-a02b-43e7-ba74-80c9f8da41ab
+
+BUILD
+file
+
+
+
+
+2014-05-22T01:47:21.864881Z
+33b5bc0b23f4834058be3812b327f3b4
+2014-02-10T21:40:34.825939Z
+54820
+paulm
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+479
+
+shim
+dir
+
+wrapper
+dir
+
+tests
+dir
+
+include
+dir
+
+src
+dir
+

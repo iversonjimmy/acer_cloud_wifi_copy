@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2DBAE845-2071-4130-9649-97F6562B44DB}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>dxshell</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v90</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v90</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\media_metadata_shared_impl.props" />
+    <Import Project="..\internal_libs.props" />
+    <Import Project="..\..\..\..\gvm_apps\acer\CCDMonitorService\platform_win\CCDMonSrvClient.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\media_metadata_shared_impl.props" />
+    <Import Project="..\internal_libs.props" />
+    <Import Project="..\..\..\..\gvm_apps\acer\CCDMonitorService\platform_win\CCDMonSrvClient.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)/../../../tests/dxshell;$(SolutionDir)/../../../tests/dxshell/types;$(SolutionDir)/../../../tests/dx_remote_agent;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)/../../../tests/dxshell;$(SolutionDir)/../../../tests/dxshell/types;$(SolutionDir)/../../../tests/dx_remote_agent;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\tests\dxshell\autotest.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\autotest_basic.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\autotest_clouddoc.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\autotest_common_utils.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\autotest_mediametadata.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\autotest_picstream.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\autotest_picstreamIndexOnly.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\autotest_remotefile.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\autotest_streaming.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\autotest_transcode.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\ccdconfig.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\syncbox_test.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\autotest_util.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\ccd_utils.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\clouddochttp.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\picstreamhttp.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\common_utils.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\cr_test.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\dataset.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\dx_common.h" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\EventQueue.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\fs_test.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\mca_diag.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\minidms_test.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\photo_share_test.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\TargetDevice.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\TargetLocalDevice.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\TargetRemoteDevice.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\target_cmds.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\ts_test.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\vcs_test.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\vssi_stress_test.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\vssi_common.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\getopt_win.h" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\pipe_win.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\HttpAgent.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\HttpAgentLocal.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\HttpAgentRemote.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\RemoteAgent.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\stdafx.h" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\setup_stream_test.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\targetver.h" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\TimeStreamDownload.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\tests\dxshell\autotest.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\autotest_basic.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\autotest_clouddoc.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\autotest_common_utils.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\autotest_mediametadata.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\autotest_photo_share.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\autotest_picstream.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\autotest_picstreamIndexOnly.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\autotest_remotefile.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\autotest_streaming.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\autotest_transcode.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\syncbox_test.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\autotest_util.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\ccdconfig.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\ccd_utils.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\ccd_utils_win.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\clouddochttp.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\picstreamhttp.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\common_utils.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\cr_test.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\dataset.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\dxshell.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\EventQueue.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\fs_test.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\minidms_test.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\photo_share_test.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\rexe_test.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\ts_test.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\ts_testClient.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\ts_test_network_test.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\ts_test_configure_router.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\vcs_test.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\vssi_stress_test.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\vssi_common.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\getopt_win.c" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\getopt_long_win.c" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\pipe_win.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\HttpAgent.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\HttpAgentLocal.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\HttpAgentRemote.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\mca_diag.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\msa_diag.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\proc_cmd.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\RemoteAgent.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\setup_stream_test.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\swup_diag.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\TargetDevice.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\TargetLocalDevice.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\TargetRemoteDevice.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\target_cmds.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\TimeStreamDownload.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\types\dx_remote_agent.pb.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\gvm_apps\acer\CCDMonitorService\platform_win\CCDMonSrvClient\CCDMonSrvClient.vcxproj">
+      <Project>{0c0c1079-42c9-4381-ae75-db3cb46f4339}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\gvm_apps\actool\platform_win\actool_win.vcxproj">
+      <Project>{5a5fdc2f-621a-443b-9c6c-f14616f2aa51}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\CCDIClient\CCDIClient.vcxproj">
+      <Project>{e791a6b9-c726-4831-ba4e-867b7f11ff19}</Project>
+      <Private>true</Private>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\internal_libs\internal_libs.vcxproj">
+      <Project>{cdd83bcf-8b07-4da5-9cbe-ceace05a7f7b}</Project>
+      <Private>true</Private>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\media_metadata_shared_impl\media_metadata_shared_impl.vcxproj">
+      <Project>{85dffabc-a0b3-4517-8b00-7cf19e55a941}</Project>
+      <Private>true</Private>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\protorpc_client\protorpc_client.vcxproj">
+      <Project>{29edd377-4676-4a3a-a003-92d2235e5f2d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\vplex\vplex.vcxproj">
+      <Project>{7a28862d-2195-4d66-b9f6-e6e83f06e71f}</Project>
+      <Private>true</Private>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\vssi\vssi.vcxproj">
+      <Project>{213d0025-e8dc-404c-a189-376939463cf2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\vssts\vssts.vcxproj">
+      <Project>{e7b4846c-c46b-4dca-b3d7-340ed993d877}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

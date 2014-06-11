@@ -1,0 +1,8 @@
+K 10
+svn:ignore
+V 48
+dx_remote_agent.pb.h
+dx_remote_agent.pb.cc
+java
+
+END

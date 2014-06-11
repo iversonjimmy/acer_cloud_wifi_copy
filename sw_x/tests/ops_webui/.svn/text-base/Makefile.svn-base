@@ -1,0 +1,8 @@
+MY_TEST_NAME = infra_ops
+PRODUCT = linux
+
+# makefile included by all test makefiles
+include ../make/test_env.mk
+
+all: 
+	ssh build@ngreen-win1 'cd /cygdrive/c/testJars && java -jar runWebUITests.jar -browser firefox -log C:/Users/build/Desktop/apache-tomcat-6.0.32/webapps/ROOT/tests.log -etf testMiseditingContact testMovingNowhere testDownloadingWithChineseCharacters testInjectingIntoRealName testInjectingIntoLocation testInjectingIntoAboutMe testInjectingIntoEmail testEditingPersonalInfo testPictureChange testPasswordChange testEditingContact testWindows64BitCPDownload testWindows32BitCPDownload testWindowsClearfiMediaAppDownload testWindowsClearfiPhotoAppDownload testFolderMove testFolderCreation testFolderDeletion testFileMove testCloudCopy testDuplicationWhenCopied testUploadingDuplicates testCreateBadCharFolderName testCreateDuplicateFolderName testCreateEmptyFolderName testCreateWhitespaceFolderName testCreateInjectionFolderName testDuplicationWhenMoved testAndroidControlPanelDownload testAndroidClearFiMusicAppDownload testAndroidClearFiPhotoAppDownload testAndroidClearFiVideoAppDownload testRenameToInjection testRenameToBlank testRenameToSpaces testRenameToDuplicate testDownloading testUploading testCloudRemoval testNameSort testDateSort testSizeSort'

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/51915/trunk/sw_x/gvm_core/internal/media_metadata/impl
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/8815/trunk/sw_x/gvm_core/internal/media_metadata/impl/BUILD
+END
+media_metadata_utils.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repo/!svn/ver/50861/trunk/sw_x/gvm_core/internal/media_metadata/impl/media_metadata_utils.cpp
+END
+MediaMetadataCache.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repo/!svn/ver/51915/trunk/sw_x/gvm_core/internal/media_metadata/impl/MediaMetadataCache.cpp
+END
+media_metadata_utils.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repo/!svn/ver/50861/trunk/sw_x/gvm_core/internal/media_metadata/impl/media_metadata_utils.hpp
+END
+MediaMetadataCache.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repo/!svn/ver/50859/trunk/sw_x/gvm_core/internal/media_metadata/impl/MediaMetadataCache.hpp
+END

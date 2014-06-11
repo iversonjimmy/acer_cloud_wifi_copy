@@ -1,0 +1,116 @@
+<?xml version='1.0'?>
+<Wix xmlns='http://schemas.microsoft.com/wix/2006/wi'
+     xmlns:util='http://schemas.microsoft.com/wix/UtilExtension'>
+  <Product Id="*"
+           Name="!(loc.StrProdName)"
+           Language="!(loc.StrLang)"
+           Version="$(env.VERSION)"
+           Manufacturer="!(loc.StrManufacturer)"
+           UpgradeCode="68C6BEEA-84EB-4E1C-93C9-70EF204E450F">
+
+    <Package Description="!(loc.StrPkgDescription)"
+             Comments="!(loc.StrPkgComments)"
+             Manufacturer="!(loc.StrManufacturer)"
+             InstallerVersion="300"
+             Languages="!(loc.StrLang)"
+             Compressed="yes"
+             InstallScope="perMachine" 
+	     Id="*"
+             />
+
+    <Condition Message="!(loc.StrWin7OrLater)">
+      <![CDATA[Installed OR (VersionNT >= 601)]]>
+    </Condition>
+
+    <MajorUpgrade AllowDowngrades="yes" />
+
+<!-- 
+   disable interaction with Restart Manager
+   http://msdn.microsoft.com/en-us/library/aa370377%28v=VS.85%29.aspx
+-->
+    <Property Id="MSIRESTARTMANAGERCONTROL" Value="Disable" /> 
+
+    <Property Id="SAVEDATA" Secure="yes" />
+
+    <Media Id="1" Cabinet="StorageNode.cab" EmbedCab="yes" />
+
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder" Name="PFiles">
+        <Directory Id="iGware" Name="iGware">
+          <Directory Id="INSTALLDIR" Name="StorageNode">
+
+	    <Component Id="Co.StorageNode" Guid="C9C4D47A-939E-465B-A508-A430E65C8917">
+	      <File Id="Fi.storageNode.exe" Name="storageNode.exe"
+		    DiskId="1" Source="$(env.PBROOT)\storageNode\storageNode.exe" KeyPath="yes" />
+	    </Component>
+
+	    <Component Id="Co.SQLiteLibrary" Guid="2E9E5311-F29B-47FF-8C83-306C1C7001C5">
+	      <File Id="Fi.sqlite3.dll" Name="sqlite3.dll"
+		    DiskId="1" Source="$(env.SRCROOT)\storageNode\sqlite3\win32\sqlite3.dll" KeyPath="yes" />
+	    </Component>
+
+	    <Component Id="HelperLibraries" Guid="E1BFB259-F8F3-472B-993B-C2DF3A35064B">
+	      <File Id="pthreadGC2.dll" Name="pthreadGC2.dll"
+		    DiskId="1" Source="$(env.PBROOT)\usr\lib\pthreadGC2.dll" KeyPath="yes" />
+	      <File Id="cygcrypto098.dll" Name="cygcrypto-0.9.8.dll"
+		    DiskId="1" Source="$(env.PBROOT)\usr\bin\cygcrypto-0.9.8.dll" KeyPath="no" />
+	      <File Id="libcurl4.dll" Name="libcurl-4.dll"
+		    DiskId="1" Source="$(env.PBROOT)\usr\bin\libcurl-4.dll" KeyPath="no" />
+	      <File Id="cygssl098.dll" Name="cygssl-0.9.8.dll"
+		    DiskId="1" Source="$(env.PBROOT)\usr\bin\cygssl-0.9.8.dll" KeyPath="no" />
+	    </Component>
+
+	    <Component Id="Co.Product.Version" Guid="C000F079-0F62-4303-BB06-87F0CC1DE59E">
+	      <File Id="Fi.Product.Version" Name="Product.Version"
+		    DiskId="1" Source="Product.Version" KeyPath="yes" />
+	    </Component>
+	    <Component Id="Co.Title.Version" Guid="44039A2B-A870-4472-9451-B6ED190FF354">
+	      <File Id="Fi.Title.Version" Name="Title.Version"
+		    DiskId="1" Source="Title.Version" KeyPath="yes" />
+	    </Component>
+
+	  </Directory>
+	</Directory>
+      </Directory>
+    </Directory>
+
+    <DirectoryRef Id="TARGETDIR">
+      <Component Id="Co.RegistryEntries" Guid="1CD8C2D1-C7AD-4E3E-BB00-C4B903B9D6B6">
+	<RegistryKey Root="HKMU" Key="Software\iGware\Storage Node" Action="createAndRemoveOnUninstall">
+	  <RegistryValue Type="integer" Name="TitleVersion" Value="$(env.TITLE_VERSION)" KeyPath="yes" />
+	</RegistryKey>
+      </Component>
+    </DirectoryRef>
+
+    <Feature Id="AllComponents" Level="1">
+      <ComponentRef Id="Co.StorageNode" />
+      <ComponentRef Id="Co.Product.Version" />
+      <ComponentRef Id="Co.Title.Version" />
+      <ComponentRef Id="Co.SQLiteLibrary" />
+      <ComponentRef Id="HelperLibraries" />
+      <ComponentRef Id="Co.RegistryEntries" />
+    </Feature>
+
+    <CustomAction Id="CA.KillApps" Return="check" Impersonate="no" Execute="deferred"
+		  Script="vbscript">
+Set objWMIService = GetObject("winmgmts:\\.\root\cimv2")
+Set colItems = objWMIService.ExecQuery("Select * from Win32_Process Where Name = 'storageNode.exe'")
+For Each objItem in colItems
+  objItem.Terminate()
+Next
+    </CustomAction>
+
+    <CustomAction Id="CA.RemoveAppData" Return="ignore" Impersonate="no" Execute="deferred"
+		  BinaryKey="Bi.RemoveAppData" VBScriptCall="RemoveAppData"/>
+    <Binary Id="Bi.RemoveAppData" SourceFile="$(env.SRCROOT)\installer\win32\StorageNode\RemoveAppData.vbs" />
+
+    <InstallExecuteSequence>
+      <Custom Action="CA.KillApps" After="InstallInitialize">Installed</Custom>
+      <Custom Action="CA.RemoveAppData" Before="RemoveFiles">Installed AND NOT UPGRADINGPRODUCTCODE AND NOT SAVEDATA</Custom>
+    </InstallExecuteSequence>
+
+    <UIRef Id="WixUI_Minimal" />
+    <UIRef Id="WixUI_ErrorProgressText" />
+
+  </Product>
+</Wix>

@@ -1,0 +1,173 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/repo/!svn/ver/56465/trunk/sw_x/gvm_core/vpl/include
+END
+vpl_fs.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repo/!svn/ver/43428/trunk/sw_x/gvm_core/vpl/include/vpl_fs.h
+END
+vplu_version.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/80/trunk/sw_x/gvm_core/vpl/include/vplu_version.h
+END
+vpl_th.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repo/!svn/ver/21539/trunk/sw_x/gvm_core/vpl/include/vpl_th.h
+END
+scopeguard.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/48583/trunk/sw_x/gvm_core/vpl/include/scopeguard.hpp
+END
+vplu_debug.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repo/!svn/ver/36357/trunk/sw_x/gvm_core/vpl/include/vplu_debug.h
+END
+vplu_common.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/15304/trunk/sw_x/gvm_core/vpl/include/vplu_common.h
+END
+vplu_format.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/31675/trunk/sw_x/gvm_core/vpl/include/vplu_format.h
+END
+vpl_user.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/47394/trunk/sw_x/gvm_core/vpl/include/vpl_user.h
+END
+vplu_sstr.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/48593/trunk/sw_x/gvm_core/vpl/include/vplu_sstr.hpp
+END
+vpl_srwlock.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/13438/trunk/sw_x/gvm_core/vpl/include/vpl_srwlock.h
+END
+vpl_dynamic.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/80/trunk/sw_x/gvm_core/vpl/include/vpl_dynamic.h
+END
+vpl_net.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/32478/trunk/sw_x/gvm_core/vpl/include/vpl_net.h
+END
+vpl_shm.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/53378/trunk/sw_x/gvm_core/vpl/include/vpl_shm.h
+END
+vpl_socket.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repo/!svn/ver/54917/trunk/sw_x/gvm_core/vpl/include/vpl_socket.h
+END
+vplu_mutex_autolock.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/32430/trunk/sw_x/gvm_core/vpl/include/vplu_mutex_autolock.hpp
+END
+vpl_error.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/47394/trunk/sw_x/gvm_core/vpl/include/vpl_error.h
+END
+vplu_types.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/9087/trunk/sw_x/gvm_core/vpl/include/vplu_types.h
+END
+vpl_time.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/31584/trunk/sw_x/gvm_core/vpl/include/vpl_time.h
+END
+vplu_missing.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/16882/trunk/sw_x/gvm_core/vpl/include/vplu_missing.h
+END
+vpl_plat.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/56465/trunk/sw_x/gvm_core/vpl/include/vpl_plat.h
+END
+vpl_limits.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/80/trunk/sw_x/gvm_core/vpl/include/vpl_limits.h
+END
+vplu_atomic.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/99/trunk/sw_x/gvm_core/vpl/include/vplu_atomic.h
+END
+vpl_lazy_init.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/15416/trunk/sw_x/gvm_core/vpl/include/vpl_lazy_init.h
+END
+vpl_types.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/10025/trunk/sw_x/gvm_core/vpl/include/vpl_types.h
+END
+vpl_conv.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/53998/trunk/sw_x/gvm_core/vpl/include/vpl_conv.h
+END
+vplu.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repo/!svn/ver/32853/trunk/sw_x/gvm_core/vpl/include/vplu.h
+END
+vpl_string.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repo/!svn/ver/43542/trunk/sw_x/gvm_core/vpl/include/vpl_string.h
+END
+vpl_thread.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repo/!svn/ver/37078/trunk/sw_x/gvm_core/vpl/include/vpl_thread.h
+END

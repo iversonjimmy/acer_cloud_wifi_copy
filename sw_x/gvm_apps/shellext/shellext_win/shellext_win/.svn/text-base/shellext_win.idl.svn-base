@@ -1,0 +1,98 @@
+// shellext_win.idl : IDL source for shellext_win
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (shellext_win.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(F73EBA48-4BDE-41C7-A8DD-7337414B2760),
+	helpstring("IContextMenuShlExt Interface"),
+	pointer_default(unique)
+]
+interface IContextMenuShlExt : IUnknown{
+};
+[
+	object,
+	uuid(1B0DD5C4-F2A4-463B-B194-1409E5E79727),
+	helpstring("IACloudSyncedRF Interface"),
+	pointer_default(unique)
+]
+interface IACloudSyncedRF : IUnknown{
+};
+[
+	object,
+	uuid(05861A36-A2CA-4B5A-89EE-163B02161869),
+	helpstring("IACloudSyncedSF Interface"),
+	pointer_default(unique)
+]
+interface IACloudSyncedSF : IUnknown{
+};
+[
+	object,
+	uuid(5FACBBE2-9711-4D75-8FCD-383B822CD328),
+	helpstring("IACloudToBeSynced Interface"),
+	pointer_default(unique)
+]
+interface IACloudToBeSynced : IUnknown{
+};
+[
+	object,
+	uuid(63DFB78E-3BAE-4BCA-B4C9-A9D49269526E),
+	helpstring("IACloudSyncing Interface"),
+	pointer_default(unique)
+]
+interface IACloudSyncing : IUnknown{
+};
+[
+	uuid(BE7212AE-28FA-4489-88D7-86B970E2565D),
+	version(1.0),
+	helpstring("shellext_win 1.0 Type Library")
+]
+library shellext_winLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(08264889-8298-4B92-A6F2-6813E1BE356E),
+		helpstring("ContextMenuShlExt Class")
+	]
+	coclass ContextMenuShlExt
+	{
+		[default] interface IContextMenuShlExt;
+	};
+	[
+		uuid(5CCE71FA-9F61-4F24-9CD1-98D819B40D68),
+		helpstring("ACloudSyncedRF Class")
+	]
+	coclass ACloudSyncedRF
+	{
+		[default] interface IACloudSyncedRF;
+	};
+	[
+		uuid(5D5F18B7-D59B-4B18-A3E9-0A4BDCCCB699),
+		helpstring("ACloudSyncedSF Class")
+	]
+	coclass ACloudSyncedSF
+	{
+		[default] interface IACloudSyncedSF;
+	};
+	[
+		uuid(307523FA-DDC0-4068-983F-2A6B34627744),
+		helpstring("ACloudToBeSynced Class")
+	]
+	coclass ACloudToBeSynced
+	{
+		[default] interface IACloudToBeSynced;
+	};
+	[
+		uuid(C1E1456F-C2D8-4C96-870D-35F1E13941EE),
+		helpstring("ACloudSyncing Class")
+	]
+	coclass ACloudSyncing
+	{
+		[default] interface IACloudSyncing;
+	};
+};

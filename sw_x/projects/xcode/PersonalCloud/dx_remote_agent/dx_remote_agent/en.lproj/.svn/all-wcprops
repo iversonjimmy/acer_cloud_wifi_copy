@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repo/!svn/ver/24902/trunk/sw_x/projects/xcode/PersonalCloud/dx_remote_agent/dx_remote_agent/en.lproj
+END
+InfoPlist.strings
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repo/!svn/ver/24902/trunk/sw_x/projects/xcode/PersonalCloud/dx_remote_agent/dx_remote_agent/en.lproj/InfoPlist.strings
+END
+ViewController_iPhone.xib
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/repo/!svn/ver/24902/trunk/sw_x/projects/xcode/PersonalCloud/dx_remote_agent/dx_remote_agent/en.lproj/ViewController_iPhone.xib
+END
+ViewController_iPad.xib
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repo/!svn/ver/24902/trunk/sw_x/projects/xcode/PersonalCloud/dx_remote_agent/dx_remote_agent/en.lproj/ViewController_iPad.xib
+END

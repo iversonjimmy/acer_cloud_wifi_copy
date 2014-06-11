@@ -1,0 +1,18 @@
+include cloudnode_env_defs.mk
+
+cloudnode_build_tools: \
+				$(CLOUDNODE_CROSS_ROOT)/timestamp
+
+define DOWNLOAD_CLOUDNODE_TOOL
+	mkdir -p $(CLOUDNODE_TOOLS_DOWNLOAD)
+	#scp $(CLOUDNODE_PREBUILT_SCP_SRC)/$1 $(CLOUDNODE_TOOLS_DOWNLOAD)
+	wget --progress=dot:mega --timestamping --directory-prefix=$(CLOUDNODE_TOOLS_DOWNLOAD) $(CLOUDNODE_PREBUILT_DOWNLOAD_URL)/$1
+endef
+
+$(CLOUDNODE_CROSS_ROOT)/timestamp:
+	$(call DOWNLOAD_CLOUDNODE_TOOL,$(CLOUDNODE_CROSS_PACKAGE))
+	mkdir -p $(CLOUDNODE_CROSS_ROOT)
+	rm -fr $(CLOUDNODE_CROSS_ROOT)/* $(CLOUDNODE_TOOLS_DOWNLOAD)/cloudnode_cross
+	tar x -C $(CLOUDNODE_TOOLS_DOWNLOAD) -f $(CLOUDNODE_TOOLS_DOWNLOAD)/$(CLOUDNODE_CROSS_PACKAGE) && \
+	mv $(CLOUDNODE_TOOLS_DOWNLOAD)/cloudnode_cross/* $(CLOUDNODE_CROSS_ROOT) && \
+	date > $@

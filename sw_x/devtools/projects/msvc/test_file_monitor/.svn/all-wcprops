@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/42856/trunk/sw_x/devtools/projects/msvc/test_file_monitor
+END
+test_file_monitor.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repo/!svn/ver/42856/trunk/sw_x/devtools/projects/msvc/test_file_monitor/test_file_monitor.vcxproj
+END
+test_file_monitor.vcxproj.filters
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repo/!svn/ver/42856/trunk/sw_x/devtools/projects/msvc/test_file_monitor/test_file_monitor.vcxproj.filters
+END

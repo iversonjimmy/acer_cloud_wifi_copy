@@ -1,0 +1,5 @@
+TARGET_PRODUCT=generic_x86
+
+include android-x86.makedefs
+
+include android-x86.makerules

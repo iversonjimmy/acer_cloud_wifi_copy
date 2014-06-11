@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/58781/trunk/sw_x/gvm_core/internal/file_utils/src
+END
+util_encodebase64.c
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repo/!svn/ver/10436/trunk/sw_x/gvm_core/internal/file_utils/src/util_encodebase64.c
+END
+util_parsestricthex64.c
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repo/!svn/ver/10436/trunk/sw_x/gvm_core/internal/file_utils/src/util_parsestricthex64.c
+END
+util_cleanuppath.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/58379/trunk/sw_x/gvm_core/internal/file_utils/src/util_cleanuppath.cpp
+END
+util_rm_recursive.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repo/!svn/ver/43788/trunk/sw_x/gvm_core/internal/file_utils/src/util_rm_recursive.cpp
+END
+util_utf8.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/58781/trunk/sw_x/gvm_core/internal/file_utils/src/util_utf8.cpp
+END
+util_mime.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/49197/trunk/sw_x/gvm_core/internal/file_utils/src/util_mime.cpp
+END
+util_writefile.c
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repo/!svn/ver/21620/trunk/sw_x/gvm_core/internal/file_utils/src/util_writefile.c
+END
+util_readfile.c
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repo/!svn/ver/21620/trunk/sw_x/gvm_core/internal/file_utils/src/util_readfile.c
+END
+util_createpath.c
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/28527/trunk/sw_x/gvm_core/internal/file_utils/src/util_createpath.c
+END
+util_spawnthread.c
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repo/!svn/ver/17802/trunk/sw_x/gvm_core/internal/file_utils/src/util_spawnthread.c
+END

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repo/!svn/ver/59100/trunk/sw_x/gvm_apps/android_cc_sdk/example_panel_and_service/project
+END
+default.properties
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_panel_and_service/project/default.properties
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repo/!svn/ver/12639/trunk/sw_x/gvm_apps/android_cc_sdk/example_panel_and_service/project/.classpath
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_panel_and_service/project/.project
+END
+AndroidManifest.xml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repo/!svn/ver/25526/trunk/sw_x/gvm_apps/android_cc_sdk/example_panel_and_service/project/AndroidManifest.xml
+END
+.cproject
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_panel_and_service/project/.cproject
+END

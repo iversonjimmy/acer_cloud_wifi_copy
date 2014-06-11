@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repo/!svn/ver/15133/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/provider
+END
+CloudMediaColumns.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repo/!svn/ver/15022/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/provider/CloudMediaColumns.java
+END
+CameraRollStreamProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/provider/CameraRollStreamProvider.java
+END
+FavoriteProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/provider/FavoriteProvider.java
+END
+MediaProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repo/!svn/ver/15022/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/provider/MediaProvider.java
+END
+NotebookProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/provider/NotebookProvider.java
+END
+ThumbnailProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repo/!svn/ver/15133/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/provider/ThumbnailProvider.java
+END

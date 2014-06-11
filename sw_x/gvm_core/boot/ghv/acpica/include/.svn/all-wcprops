@@ -1,0 +1,209 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include
+END
+acdebug.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/acdebug.h
+END
+aclocal.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/aclocal.h
+END
+acglobal.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/acglobal.h
+END
+acapps.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/acapps.h
+END
+acnames.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/acnames.h
+END
+acevents.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/acevents.h
+END
+acpi.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/acpi.h
+END
+actables.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/actables.h
+END
+acstruct.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/acstruct.h
+END
+acmacros.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/acmacros.h
+END
+acrestyp.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/acrestyp.h
+END
+accommon.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/accommon.h
+END
+acparser.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/acparser.h
+END
+amlcode.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/amlcode.h
+END
+acutils.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/acutils.h
+END
+acoutput.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/acoutput.h
+END
+acinterp.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/acinterp.h
+END
+actbl1.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/actbl1.h
+END
+actbl2.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/actbl2.h
+END
+actypes.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/actypes.h
+END
+acexcep.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/acexcep.h
+END
+amlresrc.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/amlresrc.h
+END
+acpredef.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/acpredef.h
+END
+acconfig.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/acconfig.h
+END
+acpixf.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/acpixf.h
+END
+achware.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/achware.h
+END
+acobject.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/acobject.h
+END
+acpiosxf.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/acpiosxf.h
+END
+acopcode.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/acopcode.h
+END
+acresrc.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/acresrc.h
+END
+acdisasm.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/acdisasm.h
+END
+actbl.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/actbl.h
+END
+acnamesp.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/acnamesp.h
+END
+acdispat.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/acdispat.h
+END

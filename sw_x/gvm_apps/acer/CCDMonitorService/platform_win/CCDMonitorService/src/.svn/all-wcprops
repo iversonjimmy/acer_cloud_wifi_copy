@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repo/!svn/ver/56045/trunk/sw_x/gvm_apps/acer/CCDMonitorService/platform_win/CCDMonitorService/src
+END
+CCDMonSrv.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repo/!svn/ver/56045/trunk/sw_x/gvm_apps/acer/CCDMonitorService/platform_win/CCDMonitorService/src/CCDMonSrv.cpp
+END
+protobuf_file_reader.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/repo/!svn/ver/55986/trunk/sw_x/gvm_apps/acer/CCDMonitorService/platform_win/CCDMonitorService/src/protobuf_file_reader.cpp
+END
+RegKey.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repo/!svn/ver/55986/trunk/sw_x/gvm_apps/acer/CCDMonitorService/platform_win/CCDMonitorService/src/RegKey.cpp
+END
+protobuf_file_writer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/repo/!svn/ver/55986/trunk/sw_x/gvm_apps/acer/CCDMonitorService/platform_win/CCDMonitorService/src/protobuf_file_writer.cpp
+END

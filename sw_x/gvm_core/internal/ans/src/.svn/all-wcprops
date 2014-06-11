@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repo/!svn/ver/58469/trunk/sw_x/gvm_core/internal/ans/src
+END
+ans_device_test.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/58466/trunk/sw_x/gvm_core/internal/ans/src/ans_device_test.cpp
+END
+ans_device.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/56731/trunk/sw_x/gvm_core/internal/ans/src/ans_device.cpp
+END
+run-no-valgrind
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/16071/trunk/sw_x/gvm_core/internal/ans/src/run-no-valgrind
+END
+ans_back.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/56629/trunk/sw_x/gvm_core/internal/ans/src/ans_back.cpp
+END
+ans_circle.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/58468/trunk/sw_x/gvm_core/internal/ans/src/ans_circle.cpp
+END
+install-java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/43682/trunk/sw_x/gvm_core/internal/ans/src/install-java
+END
+install-export
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/43643/trunk/sw_x/gvm_core/internal/ans/src/install-export
+END
+run-keep
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/43233/trunk/sw_x/gvm_core/internal/ans/src/run-keep
+END
+run-noconnect
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/34284/trunk/sw_x/gvm_core/internal/ans/src/run-noconnect
+END
+Readme
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/52995/trunk/sw_x/gvm_core/internal/ans/src/Readme
+END
+run-keep-no-valgrind
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/43914/trunk/sw_x/gvm_core/internal/ans/src/run-keep-no-valgrind
+END
+ans_keep_test.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/58468/trunk/sw_x/gvm_core/internal/ans/src/ans_keep_test.cpp
+END
+run-until-fail
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/52637/trunk/sw_x/gvm_core/internal/ans/src/run-until-fail
+END
+noconnect.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/56629/trunk/sw_x/gvm_core/internal/ans/src/noconnect.cpp
+END
+gt
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/35540/trunk/sw_x/gvm_core/internal/ans/src/gt
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/58469/trunk/sw_x/gvm_core/internal/ans/src/Makefile
+END
+run-device-test
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/48599/trunk/sw_x/gvm_core/internal/ans/src/run-device-test
+END

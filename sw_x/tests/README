@@ -1,0 +1,8 @@
+This directory contains the test suites for automated testing.
+
+If making changes, please follow the GVM Automated Testing conventions:
+  http://intwww/wiki/index.php/GVM_HowTo_Write_A_GVM_Test_2.0
+
+If running tests, help can be found here:
+  http://intwww/wiki/index.php/GVM_Testharness_UserGuide_2.0
+

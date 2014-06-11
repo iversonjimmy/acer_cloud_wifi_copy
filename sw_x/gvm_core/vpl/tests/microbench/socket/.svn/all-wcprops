@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/31964/trunk/sw_x/gvm_core/vpl/tests/microbench/socket
+END
+vpl_socket_timing.c
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repo/!svn/ver/31964/trunk/sw_x/gvm_core/vpl/tests/microbench/socket/vpl_socket_timing.c
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/681/trunk/sw_x/gvm_core/vpl/tests/microbench/socket/Makefile
+END

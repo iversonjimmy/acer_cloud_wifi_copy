@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/repo/!svn/ver/56896/trunk/sw_x/gvm_core/vpl/posix_src
+END
+vpl__time.c
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/25794/trunk/sw_x/gvm_core/vpl/posix_src/vpl__time.c
+END
+vpl__strerror.c
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/24030/trunk/sw_x/gvm_core/vpl/posix_src/vpl__strerror.c
+END
+vpl__dynamic.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/13544/trunk/sw_x/gvm_core/vpl/posix_src/vpl__dynamic.c
+END
+vpl__srwlock.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/13417/trunk/sw_x/gvm_core/vpl/posix_src/vpl__srwlock.c
+END
+vpl__monitor_dir.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/32419/trunk/sw_x/gvm_core/vpl/posix_src/vpl__monitor_dir.cpp
+END
+vpl__net.c
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repo/!svn/ver/53221/trunk/sw_x/gvm_core/vpl/posix_src/vpl__net.c
+END
+vpl__shm.c
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repo/!svn/ver/53400/trunk/sw_x/gvm_core/vpl/posix_src/vpl__shm.c
+END
+vpl__fs.c
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/32505/trunk/sw_x/gvm_core/vpl/posix_src/vpl__fs.c
+END
+vpl__socket.c
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/56896/trunk/sw_x/gvm_core/vpl/posix_src/vpl__socket.c
+END
+vpl__error.c
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/35103/trunk/sw_x/gvm_core/vpl/posix_src/vpl__error.c
+END
+vpl__th.c
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/31110/trunk/sw_x/gvm_core/vpl/posix_src/vpl__th.c
+END
+vpl__thread_once.c
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/34246/trunk/sw_x/gvm_core/vpl/posix_src/vpl__thread_once.c
+END
+vpl__thread_synch.c
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/56454/trunk/sw_x/gvm_core/vpl/posix_src/vpl__thread_synch.c
+END

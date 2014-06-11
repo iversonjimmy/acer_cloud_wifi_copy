@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/platform
+END
+acwin64.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/platform/acwin64.h
+END
+acenv.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/platform/acenv.h
+END
+acmsvc.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/platform/acmsvc.h
+END
+acgvm.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/platform/acgvm.h
+END
+acfreebsd.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/platform/acfreebsd.h
+END
+acintel.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/platform/acintel.h
+END
+acgcc.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/platform/acgcc.h
+END
+acwin.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/platform/acwin.h
+END
+aclinux.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/platform/aclinux.h
+END
+acnetbsd.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/platform/acnetbsd.h
+END
+accygwin.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/platform/accygwin.h
+END
+acefi.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/platform/acefi.h
+END
+acos2.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/include/platform/acos2.h
+END

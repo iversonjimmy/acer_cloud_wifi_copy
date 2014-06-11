@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repo/!svn/ver/36781/trunk/sw_x/es_core/esc/core/ioscrypto
+END
+mem_clr.c
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/366/trunk/sw_x/es_core/esc/core/ioscrypto/mem_clr.c
+END
+mt64.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/169/trunk/sw_x/es_core/esc/core/ioscrypto/mt64.h
+END
+dev_cred.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/19255/trunk/sw_x/es_core/esc/core/ioscrypto/dev_cred.h
+END
+sha.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/29182/trunk/sw_x/es_core/esc/core/ioscrypto/sha.h
+END
+crypto_impl.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/19255/trunk/sw_x/es_core/esc/core/ioscrypto/crypto_impl.c
+END
+md32_common.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/366/trunk/sw_x/es_core/esc/core/ioscrypto/md32_common.h
+END
+iostypes.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/1428/trunk/sw_x/es_core/esc/core/ioscrypto/iostypes.h
+END
+mt19937-64.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/169/trunk/sw_x/es_core/esc/core/ioscrypto/mt19937-64.c
+END
+crypto_impl_defs.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/169/trunk/sw_x/es_core/esc/core/ioscrypto/crypto_impl_defs.h
+END
+crypto_ghv.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/169/trunk/sw_x/es_core/esc/core/ioscrypto/crypto_ghv.h
+END
+ioslibc.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/1428/trunk/sw_x/es_core/esc/core/ioscrypto/ioslibc.h
+END
+sha256_impl.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/36781/trunk/sw_x/es_core/esc/core/ioscrypto/sha256_impl.c
+END
+ghv_crypto_impl.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/19255/trunk/sw_x/es_core/esc/core/ioscrypto/ghv_crypto_impl.h
+END
+keystore_defs.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/169/trunk/sw_x/es_core/esc/core/ioscrypto/keystore_defs.h
+END

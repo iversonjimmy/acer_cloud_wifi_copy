@@ -1,0 +1,73 @@
+#! /usr/bin/perl
+#
+#  This program combines two gcov output files so that we can run two
+#  test programs and get the true total coverage of both programs.
+#
+
+use strict;
+
+my $name;
+my $line1;
+my $line2;
+my $count;
+my $code_lines;
+my $covered;
+my $empty;
+my $percent;
+
+$name = $0;
+
+if ($#ARGV != 1) {
+    print "Usage:  $name <file1> <file2>\n";
+    exit 1;
+}
+
+# print "$name:  Merging $ARGV[0] and $ARGV[1].\n";
+
+open(input1, $ARGV[0]);
+open(input2, $ARGV[1]);
+
+$count   = 0;
+$covered = 0;
+
+for (;;) {
+    $line1 = <input1>;
+    $line2 = <input2>;
+
+    last unless defined $line1 && defined $line2;
+
+    $count++;
+
+    if ($line1 =~ m/^        -:/) {
+        print $line1;
+        $covered++;
+        $empty++;
+    } elsif ($line1 !~ m/^    #####.*/) {
+        print $line1;
+        $covered++;
+        $code_lines++;
+    } elsif ($line2 !~  m/^    #####.*/) {
+        print $line2;
+        $covered++;
+        $code_lines++;
+    } else {
+        print $line2;
+        $code_lines++;
+    }
+}
+
+# $percent = int((($covered * 1000) / $count) + 0.5);
+# $percent = $percent / 10;
+
+# print "Coverage:  $covered / $count lines, $percent%\n";
+
+if ($code_lines == 0) {
+    print "No code was detected in the files!\n";
+    exit 1;
+}
+
+$covered -= $empty;
+$percent  = int((($covered * 1000) / $code_lines) + 0.5);
+$percent  = $percent / 10;
+
+print "Coverage:  $covered / $code_lines lines, $percent%\n"

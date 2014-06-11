@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets">
+    <Import Project="CCDIClient.props" Condition="'$(imported_CCDIClient_props)'==''"/>
+  </ImportGroup>
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <!--workaround for MSB4011 warning-->
+    <imported_media_metadata_shared_impl_props>true</imported_media_metadata_shared_impl_props>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)/../../../gvm_core/internal/media_metadata/common/include;$(SolutionDir)/../../../gvm_core/internal/protobuf_file_utils/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+</Project>

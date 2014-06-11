@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repo/!svn/ver/59681/trunk/sw_x/gvm_core/internal/vcs/include
+END
+vcs_share_util.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repo/!svn/ver/58499/trunk/sw_x/gvm_core/internal/vcs/include/vcs_share_util.hpp
+END
+vcs_file_url_operation_http.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repo/!svn/ver/56852/trunk/sw_x/gvm_core/internal/vcs/include/vcs_file_url_operation_http.hpp
+END
+vcs_defs.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/58499/trunk/sw_x/gvm_core/internal/vcs/include/vcs_defs.hpp
+END
+vcs_archive_access.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repo/!svn/ver/49580/trunk/sw_x/gvm_core/internal/vcs/include/vcs_archive_access.hpp
+END
+vcs_file_url_access.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/57267/trunk/sw_x/gvm_core/internal/vcs/include/vcs_file_url_access.hpp
+END
+vcs_v1_util.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/58557/trunk/sw_x/gvm_core/internal/vcs/include/vcs_v1_util.hpp
+END
+vcs_file_url_access_basic_impl.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repo/!svn/ver/56852/trunk/sw_x/gvm_core/internal/vcs/include/vcs_file_url_access_basic_impl.hpp
+END
+vcs_common.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/59681/trunk/sw_x/gvm_core/internal/vcs/include/vcs_common.hpp
+END
+vcs_errors.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/59555/trunk/sw_x/gvm_core/internal/vcs/include/vcs_errors.hpp
+END
+vcs_util.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/58499/trunk/sw_x/gvm_core/internal/vcs/include/vcs_util.hpp
+END

@@ -1,0 +1,86 @@
+10
+
+dir
+59951
+https://src-us.ctbg.acer.com/repo/trunk/sw_x/gvm_core/internal/exif_parser
+https://src-us.ctbg.acer.com/repo
+
+
+
+2013-08-30T08:12:40.497588Z
+45142
+jimmy.horng
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+187b5c42-a02b-43e7-ba74-80c9f8da41ab
+
+BUILD
+file
+
+
+
+
+2014-05-22T01:47:22.398867Z
+d8bb49e2158384303e61fe456bfc043a
+2012-11-08T19:30:01.693551Z
+29128
+frank
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+699
+
+src_ios
+dir
+
+tests
+dir
+
+include
+dir
+
+src_linux
+dir
+
+src_android
+dir
+
+common
+dir
+
+src_win32
+dir
+
+src_winrt
+dir
+

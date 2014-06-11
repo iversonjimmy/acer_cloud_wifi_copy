@@ -1,0 +1,441 @@
+//--------------------------------------------------------
+// Definitions shared among the different Media Metadata Cloud components.
+//
+// NOTE: This file is used by OPS (from the sw_i build), so please coordinate
+//   with sw_i before removing or modifying any existing fields.
+//--------------------------------------------------------
+
+package media_metadata;
+//%{INTERNAL
+option java_package = "igware.cloud.media_metadata.pb";
+option java_outer_classname = "MediaMetadata";
+//%}INTERNAL
+
+//--------------------------------------------------------
+// Shared definitions
+//--------------------------------------------------------
+
+/// For RPCs that don't take input parameters.
+message NoParamInput {
+}
+
+//---------------------------
+
+/// For RPCs that don't have any additional output parameters (all of the RPCs
+/// implicitly generate an int32 error code as part of the response).
+message NoParamOutput {
+}
+
+//---------------------------
+
+message MediaServerInfo {
+    
+    /// iGware format 64-bit Device ID.
+    required fixed64 cloud_device_id = 1;
+    
+    required string device_name = 2;
+    
+    required string uuid = 3;
+    
+    optional bool is_online = 4 [default = false];
+
+    optional bool is_linked = 5 [default = false];
+}
+
+enum MediaSource_t {
+    MEDIA_SOURCE_LIBRARY = 1;
+    MEDIA_SOURCE_ITUNES = 2;
+    MEDIA_SOURCE_WMP = 3;
+}
+
+enum MetadataSyncStateType_t {
+    /// Since the last scan, the dataset has been determined to be in-sync.
+    MSA_SYNC_STATE_IN_SYNC = 1;
+    
+    /// A scan has been completed and the sync agent is performing the pending actions.
+    MSA_SYNC_STATE_SYNCING = 2;
+   
+    /// There is syncing to do, and sync agent currently cannot sync.
+    MSA_SYNC_STATE_OUT_OF_SYNC = 3;
+
+    /// There is currently no metadata available.
+    /// (This is only used by MCA for state in which no metadata is found, but in sync.)
+    /// This means that MSA has not committed any data yet.
+    MSA_SYNC_STATE_NO_DATA = 4;
+};
+
+
+//---------------------------
+
+/// Corresponds to object.item.audioItem.musicTrack
+message MusicTrackFields {
+    
+    /// Location of the content file (absolute path on the server device).
+    required string absolute_path = 1;
+    
+    /// Song title.
+    required string title = 2;
+    
+    /// Track artist.
+    required string artist = 3;
+    
+    /// object_id of the "musicAlbum" that this track belongs to.
+    required string album_ref = 4;
+    
+    /// Track number within the album.
+    optional int32 track_number = 5;
+    
+    /// Song genre.
+    optional string genre = 6;
+    
+    /// Duration (in seconds).
+    optional uint64 duration_sec = 7;
+    
+    /// File size (in bytes).
+    optional uint64 file_size = 8;
+
+    /// File format.
+    optional string file_format = 9;
+
+    /// Taken Date, number of milliseconds since epoch.
+    optional uint64 date_time = 10;
+
+    /// Updated Date, number of milliseconds since epoch.
+    optional uint64 date_time_updated = 11;
+
+    /// Name of the album.
+    optional string album_name = 12;
+
+    /// Can be omitted to indicate "Various Artists".
+    optional string album_artist = 13;
+
+    /// Checksum of the file.
+    optional string checksum = 14;
+
+    /// Length of the checksum.
+    optional uint64 length = 15;
+
+    /// Name of the composer.
+    optional string composer = 16;
+
+    /// Disk number within the album.
+    optional string disk_number = 17;
+
+    /// Year of the track.
+    optional string year = 18;
+}
+
+/// Corresponds to object.container.album.musicAlbum
+message MusicAlbumFields {
+    
+    /// Name of the album.
+    required string album_name = 1;
+    
+    /// Can be omitted to indicate "Various Artists".
+    optional string album_artist = 2;
+    
+    /// Absolute path on the local device for album artwork thumbnail.
+    /// Corresponds to object.item.imageItem.photo.vendorAlbumArt ("http-get:*:image/jpeg:*")
+    optional string album_thumbnail = 3;
+
+    /// Total count of tracks in the album.
+    optional uint32 album_trackcount = 4;
+
+    /// Total file size of the tracks in the album.
+    optional uint64 album_tracksize = 5;
+
+}
+
+message MusicArtistFields {
+    /// Name of the artist.
+    required string artist = 1;
+
+    /// Total count of albums belonging to the artist.
+    required uint32 album_count = 2;
+
+    /// Total count of tracks belonging to the artist.
+    required uint32 track_count = 3;
+
+    /// Total size of music tracks belonging to the artist.
+    required uint64 item_total_size = 4;
+}
+
+message MusicGenreFields {
+    /// Song genre.
+    required string genre = 1;
+
+    /// Total count of tracks belonging to the genre.
+    required uint32 track_count = 2;
+
+    /// Total count of the albums belonging to the genre.
+    required uint32 album_count = 3;
+
+    /// Total size of music tracks belonging to the genre.
+    required uint64 item_total_size = 4;
+
+}
+
+/// Corresponds to object.item.videoItem
+message VideoItemFields {
+    
+    /// Location of the content file (absolute path on the server device).
+    required string absolute_path = 1;
+    
+    /// Title.
+    required string title = 2;
+    
+    /// Location of the thumbnail (absolute path on the server device).
+    optional string thumbnail = 3;
+    
+    /// Name of the album/folder that the video belongs to.
+    required string album_name = 4;
+    
+    /// Duration (in seconds).
+    optional uint64 duration_sec = 5;
+    
+    /// File size (in bytes).
+    optional uint64 file_size = 6;
+
+    /// Taken Date, number of milliseconds since epoch.
+    optional uint64 date_time = 7;
+
+    /// File format.
+    optional string file_format = 8;
+
+    /// Updated Date, number of milliseconds since epoch.
+    optional uint64 date_time_updated = 9;
+
+}
+
+message VideoAlbumFields {
+
+    /// Collection id of the album/folder
+    required string collection_id_ref = 1;
+
+    /// Name of the album/folder
+    required string album_name = 2;
+
+    /// Total count of the videos in the album/folder
+    required uint32 item_count = 3;
+
+    /// File size of the total videos in the album/folder
+    required uint64 item_total_size = 4;
+
+}
+
+/// Corresponds to object.item.imageItem
+message ImageItemFields {
+    
+    /// Location of the content file (absolute path on the server device).
+    required string absolute_path = 1;
+    
+    /// Title.
+    required string title = 2;
+    
+    /// Location of the thumbnail (absolute path on the server device).
+    optional string thumbnail = 3;
+    
+    /// Name of the album/folder that the image belongs to.
+    required string album_name = 4;
+    
+//%{INTERNAL
+    /// UPnP date format appears to be:
+    /// <yyyy>-<mm>-<dd>T<HH>:<MM>:<SS>[Z|((+|-)<HH>:<MM>)]
+    ///
+    /// - Time zone "Z" => UTC.
+    /// - Omitted time zone => local time.
+    /// .
+    /// Examples:
+    /// - 2011-08-01T15:00:59-08:00
+    /// - 2011-08-01T15:00:59Z
+    /// - 2011-08-01T15:00:59
+    /// .
+    //required string date_time = 5;
+//%}INTERNAL
+    /// Number of milliseconds since epoch.
+    required uint64 date_time = 5;
+    
+    /// File size (in bytes)
+    optional uint64 file_size = 6;
+
+    /// File format
+    optional string file_format = 9;
+
+    /// Updated Date, number of milliseconds since epoch.
+    optional uint64 date_time_updated = 10;
+
+    /// Dimensions
+    optional string dimensions = 11;
+
+    /// Orientation
+    optional uint32 orientation = 12;
+
+    /// comp_id
+    //for Photo 3.0 (PicStream)
+    optional string comp_id = 13;
+    
+    /// special_format_flag
+    optional uint32 special_format_flag = 14;
+
+    /// album_ref
+    optional string album_ref = 15;
+}
+
+message ImageAlbumFields {
+
+    /// Collection id of the album/folder. will be removed!!
+    // required string collection_id_ref = 1;
+
+    /// Name of the album/folder.
+    required string album_name = 2;
+
+    /// Total number of images in the album/folder.
+    optional uint32 item_count = 3;
+
+    /// Total size of all images in the album/folder.
+    optional uint64 item_total_size = 4;
+
+    /// Location of the thumbnail (absolute path on the server device).
+    optional string album_thumbnail = 5;
+
+    /// Modify Time
+    optional uint64 timestamp = 6;
+}
+
+message PlaylistFields {
+    
+    /// Name of the playlist.
+    required string playlist_name = 1;
+    
+    /// object_ids of the items in the playlist.
+    /// Order is preserved.
+    repeated string content_refs = 2;
+}
+
+message ContentDirectoryObject {
+    
+    /// Uniquely identifies this ContentDirectoryObject within this device.
+    /// There are no restrictions on the string.  It may be convenient to
+    /// use the ContentDirectory object "@id" property.
+    required string object_id = 1;
+    
+    /// XML blobs of optional data.
+    repeated string optional_fields = 2;
+    
+    /// Indicates which library is providing the content (iTunes, WMP, etc.)
+    required MediaSource_t source = 3;
+    
+    //---------------------
+    // One and only one of these fields should be present:
+    //---------------------
+    
+    optional MusicTrackFields music_track = 4;
+    
+    optional MusicAlbumFields music_album = 5;
+    
+    optional VideoItemFields video_item = 6;
+    
+    optional ImageItemFields photo_item = 7;
+    
+    optional PlaylistFields playlist = 8;
+
+    optional ImageAlbumFields photo_album = 9;
+}
+
+enum CatalogType_t {
+    MM_CATALOG_MUSIC = 1;
+    MM_CATALOG_PHOTO = 2;
+    MM_CATALOG_VIDEO = 3;
+}
+
+// Enum filter types of the sqlite query
+enum DBFilterType_t {
+    MCA_MDQUERY_MUSICTRACK  = 1;
+    MCA_MDQUERY_MUSICALBUM  = 2;
+    MCA_MDQUERY_MUSICARTIST = 3;
+    MCA_MDQUERY_MUSICGENRE  = 4;
+    MCA_MDQUERY_PHOTOITEM   = 5;
+    MCA_MDQUERY_PHOTOALBUM  = 6;
+    MCA_MDQUERY_VIDEOITEM   = 7;
+    MCA_MDQUERY_VIDEOALBUM  = 8;
+};
+
+// The output of MCA sqlite query
+message MCAMetadataQueryObject {
+
+    optional ContentDirectoryObject cdo = 1;
+
+    /// Collection id reference
+    optional string collection_id = 2;
+
+    //---------------------
+    // Extension fields for MCA sqlite APIs 
+    //---------------------
+
+    optional MusicArtistFields music_artist = 3;
+
+    optional MusicGenreFields music_genre = 4;
+
+    optional VideoAlbumFields video_album = 5;
+
+    //Move to ContentDirectoryObject for Virtual album
+    //optional ImageAlbumFields photo_album = 6;
+
+    /// HTTP URL that can be used to retrieve the content.
+    optional string url = 7;
+
+    /// HTTP URL that can be used to retrieve the thumbnail.
+    optional string thumbnail_url = 8;
+}
+
+// Dummy
+message GetMetadataSyncStateInput {
+}
+
+message GetMetadataSyncStateOutput {
+    /// Current sync state of metadata.
+    required MetadataSyncStateType_t sync_state = 1;
+
+    /// The timestamp at which current metadata is retrieved.
+    /// If omitted, it means no metadata file exists.
+    optional fixed64 metadata_update_time = 2;
+}
+
+message ListCollectionsOutput {
+    repeated string collection_id = 1;
+    repeated uint64 collection_timestamp = 2;
+}
+
+// Bug 10504: definition for MSAGetObjectMetadata
+enum MediaType_t {
+    MEDIA_MUSIC_TRACK = 1;
+    MEDIA_MUSIC_ALBUM = 2;
+    MEDIA_VIDEO = 3;
+    MEDIA_PHOTO = 4;
+    MEDIA_PHOTO_ALBUM = 5;
+    MEDIA_NONE = 6;
+}
+
+//-------------------------------------
+// MSAGetObjectMetadata
+//-------------------------------------
+// Input:
+message GetObjectMetadataInput {
+
+    /// Specify either the URL or the object ID.
+    optional string url = 1;
+    optional string object_id = 2;
+    optional CatalogType_t catalog_type = 3;
+}
+
+// Output:
+message GetObjectMetadataOutput {
+
+    required MediaType_t media_type = 1;
+    optional string absolute_path = 2;
+    optional string thumbnail = 3;
+    optional string file_format = 4;
+    optional string comp_id = 5;
+    optional uint32 special_format_flag = 6;
+}
+

@@ -1,0 +1,8 @@
+#! /bin/csh -fb
+
+set log = /tmp/server.log
+
+source ./setup-real
+rm -f  /tmp/pxd_circle.log.* /tmp/pxd_triangle.log.*
+
+./run-server | tee $log

@@ -1,0 +1,329 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6B173C95158A180000274168 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B173C94158A180000274168 /* Foundation.framework */; };
+		6B173CE4158A188500274168 /* ByteArrayProtoChannel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B173CBD158A188500274168 /* ByteArrayProtoChannel.cpp */; };
+		6B173CE5158A188500274168 /* ByteArrayProtoChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B173CBE158A188500274168 /* ByteArrayProtoChannel.h */; };
+		6B173CE6158A188500274168 /* FileProtoChannel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B173CC9158A188500274168 /* FileProtoChannel.cpp */; };
+		6B173CE7158A188500274168 /* FileProtoChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B173CCA158A188500274168 /* FileProtoChannel.h */; };
+		6B173CF0158A188500274168 /* ProtoChannel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B173CD8158A188500274168 /* ProtoChannel.cpp */; };
+		6B173CF1158A188500274168 /* ProtoChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B173CD9158A188500274168 /* ProtoChannel.h */; };
+		6B173CF2158A188500274168 /* ProtoRpc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B173CDA158A188500274168 /* ProtoRpc.cpp */; };
+		6B173CF3158A188500274168 /* ProtoRpc.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B173CDB158A188500274168 /* ProtoRpc.h */; };
+		6B173CF4158A188500274168 /* ProtoRpcClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B173CDC158A188500274168 /* ProtoRpcClient.cpp */; };
+		6B173CF5158A188500274168 /* ProtoRpcClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B173CDD158A188500274168 /* ProtoRpcClient.h */; };
+		6B173CF6158A188500274168 /* ProtoRpcClientAsync.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B173CDE158A188500274168 /* ProtoRpcClientAsync.cpp */; };
+		6B173CF7158A188500274168 /* ProtoRpcClientAsync.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B173CDF158A188500274168 /* ProtoRpcClientAsync.h */; };
+		6B173CF8158A188500274168 /* ProtoRpcServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B173CE0158A188500274168 /* ProtoRpcServer.h */; };
+		6B173CF9158A188500274168 /* rpc.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 6B173CE1158A188500274168 /* rpc.pb.cc */; };
+		6B173CFA158A188500274168 /* rpc.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B173CE2158A188500274168 /* rpc.pb.h */; };
+		6B173CFC158A18A400274168 /* log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B173CFB158A18A400274168 /* log.cpp */; };
+		6B173D00158A1A9900274168 /* log.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B173CFF158A1A9900274168 /* log.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6B173C91158A180000274168 /* libprotorpc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libprotorpc.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B173C94158A180000274168 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6B173CA2158A180000274168 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		6B173CA4158A180000274168 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		6B173CBD158A188500274168 /* ByteArrayProtoChannel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ByteArrayProtoChannel.cpp; sourceTree = "<group>"; };
+		6B173CBE158A188500274168 /* ByteArrayProtoChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ByteArrayProtoChannel.h; sourceTree = "<group>"; };
+		6B173CC9158A188500274168 /* FileProtoChannel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileProtoChannel.cpp; sourceTree = "<group>"; };
+		6B173CCA158A188500274168 /* FileProtoChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileProtoChannel.h; sourceTree = "<group>"; };
+		6B173CD8158A188500274168 /* ProtoChannel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ProtoChannel.cpp; sourceTree = "<group>"; };
+		6B173CD9158A188500274168 /* ProtoChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProtoChannel.h; sourceTree = "<group>"; };
+		6B173CDA158A188500274168 /* ProtoRpc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ProtoRpc.cpp; sourceTree = "<group>"; };
+		6B173CDB158A188500274168 /* ProtoRpc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProtoRpc.h; sourceTree = "<group>"; };
+		6B173CDC158A188500274168 /* ProtoRpcClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ProtoRpcClient.cpp; sourceTree = "<group>"; };
+		6B173CDD158A188500274168 /* ProtoRpcClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProtoRpcClient.h; sourceTree = "<group>"; };
+		6B173CDE158A188500274168 /* ProtoRpcClientAsync.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ProtoRpcClientAsync.cpp; sourceTree = "<group>"; };
+		6B173CDF158A188500274168 /* ProtoRpcClientAsync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProtoRpcClientAsync.h; sourceTree = "<group>"; };
+		6B173CE0158A188500274168 /* ProtoRpcServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProtoRpcServer.h; sourceTree = "<group>"; };
+		6B173CE1158A188500274168 /* rpc.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = rpc.pb.cc; sourceTree = "<group>"; };
+		6B173CE2158A188500274168 /* rpc.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rpc.pb.h; sourceTree = "<group>"; };
+		6B173CFB158A18A400274168 /* log.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = log.cpp; path = ../../../../gvm_core/internal/log/src/log.cpp; sourceTree = "<group>"; };
+		6B173CFF158A1A9900274168 /* log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = log.h; path = ../../../../gvm_core/internal/log/include/log.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6B173C8E158A180000274168 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B173C95158A180000274168 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6B173C86158A180000274168 = {
+			isa = PBXGroup;
+			children = (
+				6B173CFD158A196800274168 /* protorpc */,
+				6B173C93158A180000274168 /* Frameworks */,
+				6B173C92158A180000274168 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6B173C92158A180000274168 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6B173C91158A180000274168 /* libprotorpc.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6B173C93158A180000274168 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6B173C94158A180000274168 /* Foundation.framework */,
+				6B173CA2158A180000274168 /* SenTestingKit.framework */,
+				6B173CA4158A180000274168 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6B173CBB158A188500274168 /* protorpc */ = {
+			isa = PBXGroup;
+			children = (
+				6B173CBD158A188500274168 /* ByteArrayProtoChannel.cpp */,
+				6B173CBE158A188500274168 /* ByteArrayProtoChannel.h */,
+				6B173CC9158A188500274168 /* FileProtoChannel.cpp */,
+				6B173CCA158A188500274168 /* FileProtoChannel.h */,
+				6B173CD8158A188500274168 /* ProtoChannel.cpp */,
+				6B173CD9158A188500274168 /* ProtoChannel.h */,
+				6B173CDA158A188500274168 /* ProtoRpc.cpp */,
+				6B173CDB158A188500274168 /* ProtoRpc.h */,
+				6B173CDC158A188500274168 /* ProtoRpcClient.cpp */,
+				6B173CDD158A188500274168 /* ProtoRpcClient.h */,
+				6B173CDE158A188500274168 /* ProtoRpcClientAsync.cpp */,
+				6B173CDF158A188500274168 /* ProtoRpcClientAsync.h */,
+				6B173CE0158A188500274168 /* ProtoRpcServer.h */,
+				6B173CE1158A188500274168 /* rpc.pb.cc */,
+				6B173CE2158A188500274168 /* rpc.pb.h */,
+			);
+			name = protorpc;
+			path = ../../../../gvm_core/internal/protorpc;
+			sourceTree = "<group>";
+		};
+		6B173CFD158A196800274168 /* protorpc */ = {
+			isa = PBXGroup;
+			children = (
+				6B173CFE158A197A00274168 /* log */,
+				6B173CBB158A188500274168 /* protorpc */,
+			);
+			name = protorpc;
+			sourceTree = "<group>";
+		};
+		6B173CFE158A197A00274168 /* log */ = {
+			isa = PBXGroup;
+			children = (
+				6B173CFF158A1A9900274168 /* log.h */,
+				6B173CFB158A18A400274168 /* log.cpp */,
+			);
+			name = log;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		6B173C8F158A180000274168 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B173CE5158A188500274168 /* ByteArrayProtoChannel.h in Headers */,
+				6B173CE7158A188500274168 /* FileProtoChannel.h in Headers */,
+				6B173CF1158A188500274168 /* ProtoChannel.h in Headers */,
+				6B173CF3158A188500274168 /* ProtoRpc.h in Headers */,
+				6B173CF5158A188500274168 /* ProtoRpcClient.h in Headers */,
+				6B173CF7158A188500274168 /* ProtoRpcClientAsync.h in Headers */,
+				6B173CF8158A188500274168 /* ProtoRpcServer.h in Headers */,
+				6B173CFA158A188500274168 /* rpc.pb.h in Headers */,
+				6B173D00158A1A9900274168 /* log.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		6B173C90158A180000274168 /* protorpc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B173CB5158A180000274168 /* Build configuration list for PBXNativeTarget "protorpc" */;
+			buildPhases = (
+				6B173C8D158A180000274168 /* Sources */,
+				6B173C8E158A180000274168 /* Frameworks */,
+				6B173C8F158A180000274168 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = protorpc;
+			productName = protorpc;
+			productReference = 6B173C91158A180000274168 /* libprotorpc.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6B173C88158A180000274168 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+			};
+			buildConfigurationList = 6B173C8B158A180000274168 /* Build configuration list for PBXProject "protorpc" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6B173C86158A180000274168;
+			productRefGroup = 6B173C92158A180000274168 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6B173C90158A180000274168 /* protorpc */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6B173C8D158A180000274168 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B173CE4158A188500274168 /* ByteArrayProtoChannel.cpp in Sources */,
+				6B173CE6158A188500274168 /* FileProtoChannel.cpp in Sources */,
+				6B173CF0158A188500274168 /* ProtoChannel.cpp in Sources */,
+				6B173CF2158A188500274168 /* ProtoRpc.cpp in Sources */,
+				6B173CF4158A188500274168 /* ProtoRpcClient.cpp in Sources */,
+				6B173CF6158A188500274168 /* ProtoRpcClientAsync.cpp in Sources */,
+				6B173CF9158A188500274168 /* rpc.pb.cc in Sources */,
+				6B173CFC158A18A400274168 /* log.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6B173CB3158A180000274168 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
+					"VPL_PLAT_IS_ARM=1",
+					"IOS=1",
+					"VPL_HOST_IS_LITTLE_ENDIAN=1",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "../../../../gvm_core/external/protobuflib/ ../../../../gvm_core/vpl/posix_include/ ../../../../gvm_core/vpl/include/ ../../../../gvm_core/vplex/posix_include/ ../../../../gvm_core/vplex/include/ ../../../../gvm_core/vpl/platform_linux/include/ ../../../../gvm_core/vplex/platform_linux/include/ ../../../../gvm_core/internal/error_codes/include/";
+			};
+			name = Debug;
+		};
+		6B173CB4158A180000274168 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
+					"VPL_PLAT_IS_ARM=1",
+					"IOS=1",
+					"VPL_HOST_IS_LITTLE_ENDIAN=1",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "../../../../gvm_core/external/protobuflib/ ../../../../gvm_core/vpl/posix_include/ ../../../../gvm_core/vpl/include/ ../../../../gvm_core/vplex/posix_include/ ../../../../gvm_core/vplex/include/ ../../../../gvm_core/vpl/platform_linux/include/ ../../../../gvm_core/vplex/platform_linux/include/ ../../../../gvm_core/internal/error_codes/include/";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6B173CB6158A180000274168 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/protorpc.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		6B173CB7158A180000274168 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/protorpc.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6B173C8B158A180000274168 /* Build configuration list for PBXProject "protorpc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B173CB3158A180000274168 /* Debug */,
+				6B173CB4158A180000274168 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B173CB5158A180000274168 /* Build configuration list for PBXNativeTarget "protorpc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B173CB6158A180000274168 /* Debug */,
+				6B173CB7158A180000274168 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6B173C88158A180000274168 /* Project object */;
+}

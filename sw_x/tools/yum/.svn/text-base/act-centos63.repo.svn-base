@@ -1,0 +1,12 @@
+[CentOS6.3-repo-development]
+name=ACT CentOS 6.3 Repository - Development
+baseurl=http://linux-repo/CentOS/6.3/os/x86_64-development
+gpgcheck=0
+enabled=1
+
+[CentOS6.3-repo-additional]
+name=ACT CentOS 6.3 Repository - Additional
+baseurl=http://linux-repo/CentOS/6.3/os/x86_64-additional
+gpgcheck=0
+enabled=1
+

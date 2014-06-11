@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/repo/!svn/ver/23290/trunk/sw_x/es_core/kernel/linux
+END
+esc_mon.c
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/477/trunk/sw_x/es_core/kernel/linux/esc_mon.c
+END
+core_glue.c
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/1111/trunk/sw_x/es_core/kernel/linux/core_glue.c
+END
+esc_ioc.c
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repo/!svn/ver/1079/trunk/sw_x/es_core/kernel/linux/esc_ioc.c
+END
+Makefile.kmod
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repo/!svn/ver/1428/trunk/sw_x/es_core/kernel/linux/Makefile.kmod
+END
+escsvc.c
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/1079/trunk/sw_x/es_core/kernel/linux/escsvc.c
+END
+esc_ioc.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/256/trunk/sw_x/es_core/kernel/linux/esc_ioc.h
+END
+esc.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repo/!svn/ver/1095/trunk/sw_x/es_core/kernel/linux/esc.c
+END
+escsvc.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/1079/trunk/sw_x/es_core/kernel/linux/escsvc.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/1041/trunk/sw_x/es_core/kernel/linux/Makefile
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repo/!svn/ver/944/trunk/sw_x/es_core/kernel/linux/README
+END

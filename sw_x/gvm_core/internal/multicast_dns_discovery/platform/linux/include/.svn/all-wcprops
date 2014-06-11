@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repo/!svn/ver/34838/trunk/sw_x/gvm_core/internal/multicast_dns_discovery/platform/linux/include
+END
+mdd_mutex_platform.h
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repo/!svn/ver/34838/trunk/sw_x/gvm_core/internal/multicast_dns_discovery/platform/linux/include/mdd_mutex_platform.h
+END
+mdd_net_platform.h
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repo/!svn/ver/34838/trunk/sw_x/gvm_core/internal/multicast_dns_discovery/platform/linux/include/mdd_net_platform.h
+END
+mdd_fdutil_platform.h
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repo/!svn/ver/34838/trunk/sw_x/gvm_core/internal/multicast_dns_discovery/platform/linux/include/mdd_fdutil_platform.h
+END
+mdd_iface_platform.h
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repo/!svn/ver/34838/trunk/sw_x/gvm_core/internal/multicast_dns_discovery/platform/linux/include/mdd_iface_platform.h
+END
+mdd_socket_platform.h
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repo/!svn/ver/34838/trunk/sw_x/gvm_core/internal/multicast_dns_discovery/platform/linux/include/mdd_socket_platform.h
+END
+mdd_time_platform.h
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repo/!svn/ver/34838/trunk/sw_x/gvm_core/internal/multicast_dns_discovery/platform/linux/include/mdd_time_platform.h
+END

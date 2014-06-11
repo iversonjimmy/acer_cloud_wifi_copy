@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/29085/trunk/sw_x/gvm_core/internal/simple_http/tests
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/25608/trunk/sw_x/gvm_core/internal/simple_http/tests/BUILD
+END
+test_parse_query_string.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repo/!svn/ver/29085/trunk/sw_x/gvm_core/internal/simple_http/tests/test_parse_query_string.cpp
+END

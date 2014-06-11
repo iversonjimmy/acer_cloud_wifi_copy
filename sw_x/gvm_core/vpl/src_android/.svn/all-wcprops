@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repo/!svn/ver/56465/trunk/sw_x/gvm_core/vpl/src_android
+END
+vpl__plat.c
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/56465/trunk/sw_x/gvm_core/vpl/src_android/vpl__plat.c
+END
+vpl__java.c
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/53795/trunk/sw_x/gvm_core/vpl/src_android/vpl__java.c
+END
+vpl__srwlock.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/45551/trunk/sw_x/gvm_core/vpl/src_android/vpl__srwlock.c
+END
+vpl_java.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/49546/trunk/sw_x/gvm_core/vpl/src_android/vpl_java.h
+END

@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repo/!svn/ver/31287/trunk/sw_x/gvm_core/external/protobuf
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/28174/trunk/sw_x/gvm_core/external/protobuf/BUILD
+END
+java1.5.patch
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/493/trunk/sw_x/gvm_core/external/protobuf/java1.5.patch
+END
+zero-copy-impl.patch
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/49/trunk/sw_x/gvm_core/external/protobuf/zero-copy-impl.patch
+END
+platform_win.mk
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/10159/trunk/sw_x/gvm_core/external/protobuf/platform_win.mk
+END
+platform_linux.mk
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/1581/trunk/sw_x/gvm_core/external/protobuf/platform_linux.mk
+END
+platform_android.mk
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/1581/trunk/sw_x/gvm_core/external/protobuf/platform_android.mk
+END
+platform_cygwin.mk
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/10298/trunk/sw_x/gvm_core/external/protobuf/platform_cygwin.mk
+END
+platform_mac.mk
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/23410/trunk/sw_x/gvm_core/external/protobuf/platform_mac.mk
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/31287/trunk/sw_x/gvm_core/external/protobuf/Makefile
+END
+config.sub
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/445/trunk/sw_x/gvm_core/external/protobuf/config.sub
+END

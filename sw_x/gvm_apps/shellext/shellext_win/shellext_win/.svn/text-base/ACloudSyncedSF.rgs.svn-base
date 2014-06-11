@@ -1,0 +1,40 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {5D5F18B7-D59B-4B18-A3E9-0A4BDCCCB699} = s 'ACloudSyncedSF Class'
+		{
+			
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			
+		}
+	}
+}
+
+HKLM
+{
+  NoRemove SOFTWARE
+  {
+    NoRemove Microsoft
+    {
+      NoRemove Windows
+      {
+        NoRemove CurrentVersion
+        {
+          NoRemove Explorer
+          {
+            NoRemove ShellIconOverlayIdentifiers
+            {
+              ForceRemove ACloudSyncedSF = s '{5D5F18B7-D59B-4B18-A3E9-0A4BDCCCB699}'
+              {
+              }           
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/repo/!svn/ver/58907/trunk/sw_x/gvm_core/vplex/proto
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repo/!svn/ver/56496/trunk/sw_x/gvm_core/vplex/proto/BUILD
+END
+vplex_ias_service_types.proto
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/52641/trunk/sw_x/gvm_core/vplex/proto/vplex_ias_service_types.proto
+END
+vplex_shared_credential.proto
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/47634/trunk/sw_x/gvm_core/vplex/proto/vplex_shared_credential.proto
+END
+vplex_vs_directory_service_priv_types.proto
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repo/!svn/ver/58728/trunk/sw_x/gvm_core/vplex/proto/vplex_vs_directory_service_priv_types.proto
+END
+vplex_vs_directory_service_types.proto
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repo/!svn/ver/58044/trunk/sw_x/gvm_core/vplex/proto/vplex_vs_directory_service_types.proto
+END
+vplex_community_notifier.proto
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repo/!svn/ver/25734/trunk/sw_x/gvm_core/vplex/proto/vplex_community_notifier.proto
+END
+Make.common
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repo/!svn/ver/83/trunk/sw_x/gvm_core/vplex/proto/Make.common
+END
+vplex_ans_message.proto
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/49938/trunk/sw_x/gvm_core/vplex/proto/vplex_ans_message.proto
+END
+vplex_community_service_types.proto
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repo/!svn/ver/25734/trunk/sw_x/gvm_core/vplex/proto/vplex_community_service_types.proto
+END
+vplex_community_types.proto
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repo/!svn/ver/25734/trunk/sw_x/gvm_core/vplex/proto/vplex_community_types.proto
+END
+vplex_nus_service_types.proto
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/57443/trunk/sw_x/gvm_core/vplex/proto/vplex_nus_service_types.proto
+END
+vplex_sync_agent_notifier.proto
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repo/!svn/ver/21642/trunk/sw_x/gvm_core/vplex/proto/vplex_sync_agent_notifier.proto
+END
+vplex_common_types.proto
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/395/trunk/sw_x/gvm_core/vplex/proto/vplex_common_types.proto
+END

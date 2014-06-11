@@ -1,0 +1,21 @@
+#! /bin/csh -fb
+
+set program = `echo $0 | sed -e "s/lots/device/"`
+set log     = /tmp/run-lots.$$
+
+onintr leave
+
+echo "Running $program"
+
+while (1)
+    ./$program | tee $log || break
+    sleep 1
+end
+
+date
+echo "The log is in $log"
+exit 1
+
+leave:
+    echo "Interrupted!"
+    rm -f $log

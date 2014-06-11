@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FAD2AF7E-5406-4E65-8097-F4FFD3A56D0C}</ProjectGuid>
+    <RootNamespace>ccd</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v90</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v90</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v90</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v90</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\internal_libs.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\internal_libs.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\internal_libs.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\internal_libs.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(BUILDROOT)\build_msvc\$(SolutionName)\$(Configuration)\$(ProjectName)\$(Platform)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(BUILDROOT)\build_msvc\$(SolutionName)\$(Configuration)\$(ProjectName)\$(Platform)_obj\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(BUILDROOT)\build_msvc\$(SolutionName)\$(Configuration)\$(ProjectName)\$(Platform)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(BUILDROOT)\build_msvc\$(SolutionName)\$(Configuration)\$(ProjectName)\$(Platform)_obj\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(BUILDROOT)\build_msvc\$(SolutionName)\$(Configuration)\$(ProjectName)\$(Platform)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(BUILDROOT)\build_msvc\$(SolutionName)\$(Configuration)\$(ProjectName)\$(Platform)_obj\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(BUILDROOT)\build_msvc\$(SolutionName)\$(Configuration)\$(ProjectName)\$(Platform)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(BUILDROOT)\build_msvc\$(SolutionName)\$(Configuration)\$(ProjectName)\$(Platform)_obj\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)/../../../gvm_core/daemons/ccd/src_impl;$(SolutionDir)/../../../gvm_core/daemons/ccd/rpc_server;$(SolutionDir)/../../../gvm_core/daemons/ccd/include;$(SolutionDir)/../../../gvm_core/daemons/ccd/types/src;$(SolutionDir)/../../../gvm_core/internal/image_transcode/include;$(SolutionDir)/../../../gvm_core/internal/image_transcode/src_win32;$(SolutionDir)/../../../gvm_core/internal/exif_parser/include;$(SolutionDir)/../../../gvm_core/internal/pxd/include;$(SolutionDir)/../../../gvm_core/internal/Stream/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Wlanapi.lib;PowrProf.lib;setupapi.lib;shlwapi.lib;Propsys.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>wmainCRTStartup</EntryPointSymbol>
+      <AdditionalManifestDependencies>
+      </AdditionalManifestDependencies>
+    </Link>
+    <Manifest>
+      <AdditionalManifestFiles>$(ProjectDir)CCD.exe.manifest;</AdditionalManifestFiles>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)/../../../gvm_core/daemons/ccd/src_impl;$(SolutionDir)/../../../gvm_core/daemons/ccd/rpc_server;$(SolutionDir)/../../../gvm_core/daemons/ccd/include;$(SolutionDir)/../../../gvm_core/daemons/ccd/types/src;$(SolutionDir)/../../../gvm_core/internal/pxd/include;$(SolutionDir)/../../../gvm_core/internal/Stream/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Wlanapi.lib;PowrProf.lib;setupapi.lib;shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>$(SolutionDir)/../../../gvm_core/daemons/ccd/src_impl;$(SolutionDir)/../../../gvm_core/daemons/ccd/rpc_server;$(SolutionDir)/../../../gvm_core/daemons/ccd/include;$(SolutionDir)/../../../gvm_core/daemons/ccd/types/src;$(SolutionDir)/../../../gvm_core/internal/image_transcode/include;$(SolutionDir)/../../../gvm_core/internal/image_transcode/src_win32;$(SolutionDir)/../../../gvm_core/internal/exif_parser/include;$(SolutionDir)/../../../gvm_core/internal/pxd/include;$(SolutionDir)/../../../gvm_core/internal/Stream/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Wlanapi.lib;PowrProf.lib;setupapi.lib;shlwapi.lib;Propsys.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>wmainCRTStartup</EntryPointSymbol>
+      <AdditionalManifestDependencies>
+      </AdditionalManifestDependencies>
+    </Link>
+    <Manifest>
+      <AdditionalManifestFiles>$(ProjectDir)CCD.exe.manifest; </AdditionalManifestFiles>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>$(SolutionDir)/../../../gvm_core/daemons/ccd/src_impl;$(SolutionDir)/../../../gvm_core/daemons/ccd/rpc_server;$(SolutionDir)/../../../gvm_core/daemons/ccd/include;$(SolutionDir)/../../../gvm_core/daemons/ccd/types/src;$(SolutionDir)/../../../gvm_core/internal/pxd/include;$(SolutionDir)/../../../gvm_core/internal/Stream/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Wlanapi.lib;PowrProf.lib;setupapi.lib;shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\ans_connection.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\AsyncDatasetOps.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\AsyncUploadQueue.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\AutoLocks.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\cache.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\CachePlayer.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\ccd_build_info.c" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\ccd_core.cpp">
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Level1</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Level1</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Level1</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Level1</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\ccd_storage.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\ccd_util.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\ccdiimpl.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\ccdiquery.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\CloudDocMgr.cpp">
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Level1</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Level1</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Level1</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Level1</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\config.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\file_url_operation_ts.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpService.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_AtomicCounter.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_Ccd_Agent.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_Ccd_AsyncAgent.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_Ccd_Dispatcher.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_Ccd_Handler_clouddoc.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_Ccd_Handler_cmd.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_Ccd_Handler_ds.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_Ccd_Handler_Helper.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_Ccd_Handler_iotsdkapi.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_Ccd_Handler_mediafile.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_Ccd_Handler_minidms.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_Ccd_Handler_mm.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_Ccd_Handler_picstream.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_Ccd_Handler_rexe.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_Ccd_Handler_rf.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_Ccd_Handler_share.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_Ccd_ListenAgent.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_Ccd_MediaFile.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_Ccd_MediaFileSender.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_Ccd_MediaFsFile.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_Ccd_Server.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_Ccd_SocketAgent.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_HsToHttpAdapter.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_HsToTsAdapter.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_HsToVcsTranslator.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\HttpSvc_Utils.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\JsonHelper.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\LanDeviceInfoCache.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\McaDb.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\McaThumbMigrate.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\MediaMetadataServer.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\MsaDb.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\pin_manager.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\RouteManager.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\EventManagerPb.cpp">
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Level1</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Level1</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Level1</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Level1</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\ias_query.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\MediaMetadata.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\netman.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\NotificationQ.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\nus_query.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\picstream.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\query.cpp">
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Level1</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Level1</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Level1</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Level1</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\DeviceStateCache.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\stream_transaction.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\sw_update.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\SharedFiles.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\SyncDown.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\StatManager.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\SyncFeatureMgr.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\SyncUp.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\system_query.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\virtual_device.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\vsds_query.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\s3_proxy.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\vcs_archive_access_ccd.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\vcs_proxy.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\vcs_utils.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\win32\NlmEventSink.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\types\src\ccd_types.pb.cc" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\rpc_server\ccdi_rpc-server.pb.cc" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\types\src\ccdi_rpc.pb.cc" />
+    <ClCompile Include="..\..\..\..\gvm_core\daemons\ccd\src_impl\main.cpp">
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Level1</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Level1</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Level1</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Level1</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Ts2\LocalInfo\src\LocalInfo_Ccd.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\proto\vplex_sync_agent_notifier.pb.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\internal_libs\internal_libs.vcxproj">
+      <Project>{cdd83bcf-8b07-4da5-9cbe-ceace05a7f7b}</Project>
+      <Private>true</Private>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\media_metadata_shared_impl\media_metadata_shared_impl.vcxproj">
+      <Project>{85dffabc-a0b3-4517-8b00-7cf19e55a941}</Project>
+      <Private>true</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\protorpc_client\protorpc_client.vcxproj">
+      <Project>{29edd377-4676-4a3a-a003-92d2235e5f2d}</Project>
+      <Private>true</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\sqlite3\sqlite3.vcxproj">
+      <Project>{e46b2f38-5dbd-f7e2-310d-e60012cc722c}</Project>
+      <Private>true</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\vssi\vssi.vcxproj">
+      <Project>{213d0025-e8dc-404c-a189-376939463cf2}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ccd_info.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="CCD.exe.manifest">
+      <SubType>Designer</SubType>
+    </Manifest>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/50877/trunk/sw_x/projects/msvc/winRT/CCLibAndDeps
+END
+CCLibAndDeps.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/39924/trunk/sw_x/projects/msvc/winRT/CCLibAndDeps/CCLibAndDeps.vcxproj
+END
+CCLibAndDeps.vcxproj.filters
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repo/!svn/ver/23797/trunk/sw_x/projects/msvc/winRT/CCLibAndDeps/CCLibAndDeps.vcxproj.filters
+END
+dummy.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/23797/trunk/sw_x/projects/msvc/winRT/CCLibAndDeps/dummy.cpp
+END

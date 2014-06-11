@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/56019/trunk/sw_x/gvm_core/internal/InterruptibleSocket/tests
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repo/!svn/ver/56019/trunk/sw_x/gvm_core/internal/InterruptibleSocket/tests/BUILD
+END
+FreeBlockedReadTest.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repo/!svn/ver/56019/trunk/sw_x/gvm_core/internal/InterruptibleSocket/tests/FreeBlockedReadTest.cpp
+END
+SimpleIoTest.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repo/!svn/ver/56019/trunk/sw_x/gvm_core/internal/InterruptibleSocket/tests/SimpleIoTest.cpp
+END
+ConnectedSocketPair.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repo/!svn/ver/56019/trunk/sw_x/gvm_core/internal/InterruptibleSocket/tests/ConnectedSocketPair.cpp
+END
+ConnectedSocketPair.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repo/!svn/ver/56019/trunk/sw_x/gvm_core/internal/InterruptibleSocket/tests/ConnectedSocketPair.hpp
+END

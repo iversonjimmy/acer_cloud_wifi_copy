@@ -1,0 +1,27 @@
+#! /bin/sh
+#
+#  This script runs a 1000-device test for 1000 messages.
+#
+
+sysctl -w fs.file-max=1000000
+ulimit -n 1000000
+
+#
+#  Add more udp buffer space
+#
+sysctl -w net.core.rmem_max=67108864
+sysctl -w net.core.wmem_max=67108864
+sysctl -w net.core.netdev_max_backlog=30000
+sysctl -w net.ipv4.tcp_tw_reuse=1
+
+export ans_host=ans1.c2.lab9.routefree.com
+export inter_1=172.16.13.143
+
+ifconfig eth0:1 add $inter_1 255.255.255.0
+
+#export opts="-verbose:gc -Xmx2048m -server"
+export opts="-Xmx2048m -server"
+export ans_host=ans1.c2.lab9.routefree.com
+export ans_library_path=~/java
+
+java $opts -Djava.library.path=$ans_library_path -classpath ".:./jars/*" com.broadon.ans.test.AnsMultiDevice $ans_host $inter_1 1000 1000 > multi.out.small 2>&1 &

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repo/!svn/ver/32904/trunk/sw_x/gvm_core/vpl/tests/microbench
+END
+runTests.sh
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/681/trunk/sw_x/gvm_core/vpl/tests/microbench/runTests.sh
+END
+microbench.vpl.prog.mk
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/681/trunk/sw_x/gvm_core/vpl/tests/microbench/microbench.vpl.prog.mk
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/681/trunk/sw_x/gvm_core/vpl/tests/microbench/Makefile
+END

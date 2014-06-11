@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/repo/!svn/ver/59934/trunk/sw_x/tools
+END
+check_all_tests_executed.sh
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repo/!svn/ver/30411/trunk/sw_x/tools/check_all_tests_executed.sh
+END

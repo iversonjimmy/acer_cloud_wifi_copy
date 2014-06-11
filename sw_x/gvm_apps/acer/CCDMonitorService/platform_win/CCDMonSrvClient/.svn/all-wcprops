@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repo/!svn/ver/55986/trunk/sw_x/gvm_apps/acer/CCDMonitorService/platform_win/CCDMonSrvClient
+END
+CCDMonSrvClient.rc
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repo/!svn/ver/55986/trunk/sw_x/gvm_apps/acer/CCDMonitorService/platform_win/CCDMonSrvClient/CCDMonSrvClient.rc
+END
+CCDMonSrvClient.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repo/!svn/ver/55986/trunk/sw_x/gvm_apps/acer/CCDMonitorService/platform_win/CCDMonSrvClient/CCDMonSrvClient.vcxproj
+END
+resource.h
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repo/!svn/ver/55986/trunk/sw_x/gvm_apps/acer/CCDMonitorService/platform_win/CCDMonSrvClient/resource.h
+END
+CCDMonSrvClient.vcxproj.filters
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/repo/!svn/ver/55986/trunk/sw_x/gvm_apps/acer/CCDMonitorService/platform_win/CCDMonSrvClient/CCDMonSrvClient.vcxproj.filters
+END

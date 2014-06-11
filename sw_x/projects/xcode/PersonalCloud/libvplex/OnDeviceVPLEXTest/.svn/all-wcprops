@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repo/!svn/ver/56615/trunk/sw_x/projects/xcode/PersonalCloud/libvplex/OnDeviceVPLEXTest
+END
+OnDeviceVPLEXTest-Prefix.pch
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repo/!svn/ver/23954/trunk/sw_x/projects/xcode/PersonalCloud/libvplex/OnDeviceVPLEXTest/OnDeviceVPLEXTest-Prefix.pch
+END
+main.m
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repo/!svn/ver/23954/trunk/sw_x/projects/xcode/PersonalCloud/libvplex/OnDeviceVPLEXTest/main.m
+END
+AppDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repo/!svn/ver/23954/trunk/sw_x/projects/xcode/PersonalCloud/libvplex/OnDeviceVPLEXTest/AppDelegate.h
+END
+vplexTest.conf
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repo/!svn/ver/51893/trunk/sw_x/projects/xcode/PersonalCloud/libvplex/OnDeviceVPLEXTest/vplexTest.conf
+END
+ViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repo/!svn/ver/23954/trunk/sw_x/projects/xcode/PersonalCloud/libvplex/OnDeviceVPLEXTest/ViewController.h
+END
+AppDelegate.m
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repo/!svn/ver/47487/trunk/sw_x/projects/xcode/PersonalCloud/libvplex/OnDeviceVPLEXTest/AppDelegate.m
+END
+ViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repo/!svn/ver/23954/trunk/sw_x/projects/xcode/PersonalCloud/libvplex/OnDeviceVPLEXTest/ViewController.m
+END
+OnDeviceVPLEXTest-Info.plist
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repo/!svn/ver/31313/trunk/sw_x/projects/xcode/PersonalCloud/libvplex/OnDeviceVPLEXTest/OnDeviceVPLEXTest-Info.plist
+END

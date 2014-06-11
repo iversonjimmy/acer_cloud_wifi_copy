@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/namespace
+END
+nswalk.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/namespace/nswalk.c
+END
+nsdumpdv.c
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/namespace/nsdumpdv.c
+END
+nsutils.c
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/namespace/nsutils.c
+END
+nsaccess.c
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/namespace/nsaccess.c
+END
+nsnames.c
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/namespace/nsnames.c
+END
+nsinit.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/namespace/nsinit.c
+END
+nsrepair2.c
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/namespace/nsrepair2.c
+END
+nssearch.c
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/namespace/nssearch.c
+END
+nspredef.c
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/namespace/nspredef.c
+END
+nsdump.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/namespace/nsdump.c
+END
+nsobject.c
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/namespace/nsobject.c
+END
+nsxfobj.c
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/namespace/nsxfobj.c
+END
+nsparse.c
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/namespace/nsparse.c
+END
+nsxfname.c
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/namespace/nsxfname.c
+END
+nsload.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/namespace/nsload.c
+END
+nsrepair.c
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/namespace/nsrepair.c
+END
+nsxfeval.c
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/namespace/nsxfeval.c
+END
+nseval.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/namespace/nseval.c
+END
+nsalloc.c
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/namespace/nsalloc.c
+END

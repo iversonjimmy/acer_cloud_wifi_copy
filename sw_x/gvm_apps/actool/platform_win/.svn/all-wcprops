@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/57483/trunk/sw_x/gvm_apps/actool/platform_win
+END
+actool_win.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/8085/trunk/sw_x/gvm_apps/actool/platform_win/actool_win.cpp
+END
+actool_win.vcxproj.filters
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repo/!svn/ver/18501/trunk/sw_x/gvm_apps/actool/platform_win/actool_win.vcxproj.filters
+END
+stdafx.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/8085/trunk/sw_x/gvm_apps/actool/platform_win/stdafx.h
+END
+app.rc
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/8085/trunk/sw_x/gvm_apps/actool/platform_win/app.rc
+END
+Form1.resX
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/39871/trunk/sw_x/gvm_apps/actool/platform_win/Form1.resX
+END
+actool_win.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/20077/trunk/sw_x/gvm_apps/actool/platform_win/actool_win.vcxproj
+END
+app.ico
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/8085/trunk/sw_x/gvm_apps/actool/platform_win/app.ico
+END
+Form1.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/57483/trunk/sw_x/gvm_apps/actool/platform_win/Form1.h
+END
+stdafx.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/8085/trunk/sw_x/gvm_apps/actool/platform_win/stdafx.cpp
+END
+ReadMe.txt
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/8085/trunk/sw_x/gvm_apps/actool/platform_win/ReadMe.txt
+END
+AssemblyInfo.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/8085/trunk/sw_x/gvm_apps/actool/platform_win/AssemblyInfo.cpp
+END
+resource.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/8085/trunk/sw_x/gvm_apps/actool/platform_win/resource.h
+END

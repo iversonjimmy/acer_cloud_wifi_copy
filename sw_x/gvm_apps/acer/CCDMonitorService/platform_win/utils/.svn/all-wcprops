@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/55986/trunk/sw_x/gvm_apps/acer/CCDMonitorService/platform_win/utils
+END
+utils_strings.h
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repo/!svn/ver/55986/trunk/sw_x/gvm_apps/acer/CCDMonitorService/platform_win/utils/utils_strings.h
+END
+utils_ProtobufFileStream.h
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repo/!svn/ver/55986/trunk/sw_x/gvm_apps/acer/CCDMonitorService/platform_win/utils/utils_ProtobufFileStream.h
+END
+utils_ProtobufFileStream.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repo/!svn/ver/55986/trunk/sw_x/gvm_apps/acer/CCDMonitorService/platform_win/utils/utils_ProtobufFileStream.cpp
+END

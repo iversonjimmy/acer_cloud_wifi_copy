@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repo/!svn/ver/25449/trunk/sw_x/gvm_core/external/breakpad
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/8369/trunk/sw_x/gvm_core/external/breakpad/BUILD
+END
+breakpad_android.patch
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repo/!svn/ver/7300/trunk/sw_x/gvm_core/external/breakpad/breakpad_android.patch
+END
+platform_win.mk
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/7300/trunk/sw_x/gvm_core/external/breakpad/platform_win.mk
+END
+platform_linux.mk
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/7300/trunk/sw_x/gvm_core/external/breakpad/platform_linux.mk
+END
+platform_android.mk
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/7300/trunk/sw_x/gvm_core/external/breakpad/platform_android.mk
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/25449/trunk/sw_x/gvm_core/external/breakpad/Makefile
+END

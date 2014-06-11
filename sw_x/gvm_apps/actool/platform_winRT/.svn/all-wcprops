@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/44824/trunk/sw_x/gvm_apps/actool/platform_winRT
+END
+App.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/24265/trunk/sw_x/gvm_apps/actool/platform_winRT/App.xaml
+END
+pch.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/24265/trunk/sw_x/gvm_apps/actool/platform_winRT/pch.h
+END
+App.xaml.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/24265/trunk/sw_x/gvm_apps/actool/platform_winRT/App.xaml.cpp
+END
+MainPage.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/39871/trunk/sw_x/gvm_apps/actool/platform_winRT/MainPage.xaml
+END
+MainPage.xaml.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repo/!svn/ver/44824/trunk/sw_x/gvm_apps/actool/platform_winRT/MainPage.xaml.cpp
+END
+actool_winRT.vcxproj.filters
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repo/!svn/ver/24275/trunk/sw_x/gvm_apps/actool/platform_winRT/actool_winRT.vcxproj.filters
+END
+App.xaml.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/24265/trunk/sw_x/gvm_apps/actool/platform_winRT/App.xaml.h
+END
+MainPage.xaml.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/24265/trunk/sw_x/gvm_apps/actool/platform_winRT/MainPage.xaml.h
+END
+Package.appxmanifest
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repo/!svn/ver/40363/trunk/sw_x/gvm_apps/actool/platform_winRT/Package.appxmanifest
+END
+actool_winRT_TemporaryKey.pfx
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repo/!svn/ver/40363/trunk/sw_x/gvm_apps/actool/platform_winRT/actool_winRT_TemporaryKey.pfx
+END
+pch.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/24265/trunk/sw_x/gvm_apps/actool/platform_winRT/pch.cpp
+END
+actool_winRT.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repo/!svn/ver/40363/trunk/sw_x/gvm_apps/actool/platform_winRT/actool_winRT.vcxproj
+END

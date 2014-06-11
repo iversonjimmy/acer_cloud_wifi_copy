@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/59100/trunk/sw_x/gvm_apps/android_cc_sdk/example_service_only
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_service_only/BUILD
+END
+build.properties
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_service_only/build.properties
+END

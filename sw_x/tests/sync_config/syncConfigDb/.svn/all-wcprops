@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/49066/trunk/sw_x/tests/sync_config/syncConfigDb
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/32389/trunk/sw_x/tests/sync_config/syncConfigDb/BUILD
+END
+syncConfigDbTest.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repo/!svn/ver/49066/trunk/sw_x/tests/sync_config/syncConfigDb/syncConfigDbTest.cpp
+END

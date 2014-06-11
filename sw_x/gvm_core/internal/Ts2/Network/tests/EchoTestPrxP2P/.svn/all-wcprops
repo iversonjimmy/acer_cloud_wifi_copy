@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/49754/trunk/sw_x/gvm_core/internal/Ts2/Network/tests/EchoTestPrxP2P
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repo/!svn/ver/47287/trunk/sw_x/gvm_core/internal/Ts2/Network/tests/EchoTestPrxP2P/BUILD
+END
+PrxP2PClient.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repo/!svn/ver/48480/trunk/sw_x/gvm_core/internal/Ts2/Network/tests/EchoTestPrxP2P/PrxP2PClient.hpp
+END
+PrxP2PServer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repo/!svn/ver/49754/trunk/sw_x/gvm_core/internal/Ts2/Network/tests/EchoTestPrxP2P/PrxP2PServer.cpp
+END
+PrxP2PServer.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repo/!svn/ver/48480/trunk/sw_x/gvm_core/internal/Ts2/Network/tests/EchoTestPrxP2P/PrxP2PServer.hpp
+END
+PrxP2PClient.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repo/!svn/ver/48480/trunk/sw_x/gvm_core/internal/Ts2/Network/tests/EchoTestPrxP2P/PrxP2PClient.cpp
+END
+PrxP2PEchoTest.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repo/!svn/ver/48480/trunk/sw_x/gvm_core/internal/Ts2/Network/tests/EchoTestPrxP2P/PrxP2PEchoTest.cpp
+END

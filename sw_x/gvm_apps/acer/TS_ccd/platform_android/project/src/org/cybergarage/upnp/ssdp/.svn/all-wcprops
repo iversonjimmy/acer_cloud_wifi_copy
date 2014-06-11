@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/ssdp
+END
+SSDPPacket.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/ssdp/SSDPPacket.java
+END
+SSDPSearchSocketList.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/ssdp/SSDPSearchSocketList.java
+END
+SSDPNotifySocketList.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/ssdp/SSDPNotifySocketList.java
+END
+SSDPSearchSocket.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/ssdp/SSDPSearchSocket.java
+END
+SSDPSearchRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/ssdp/SSDPSearchRequest.java
+END
+SSDP.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/ssdp/SSDP.java
+END
+SSDPNotifySocket.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/ssdp/SSDPNotifySocket.java
+END
+SSDPNotifyRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/ssdp/SSDPNotifyRequest.java
+END
+HTTPUSocket.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/ssdp/HTTPUSocket.java
+END
+SSDPSearchResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/ssdp/SSDPSearchResponse.java
+END
+SSDPRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/ssdp/SSDPRequest.java
+END
+SSDPSearchResponseSocketList.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/ssdp/SSDPSearchResponseSocketList.java
+END
+SSDPSearchResponseSocket.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/ssdp/SSDPSearchResponseSocket.java
+END
+SSDPResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/ssdp/SSDPResponse.java
+END
+HTTPMUSocket.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/upnp/ssdp/HTTPMUSocket.java
+END

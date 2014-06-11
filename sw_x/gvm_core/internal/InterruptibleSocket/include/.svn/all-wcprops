@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/56678/trunk/sw_x/gvm_core/internal/InterruptibleSocket/include
+END
+InterruptibleSocket_SigBySockShutdown.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repo/!svn/ver/56678/trunk/sw_x/gvm_core/internal/InterruptibleSocket/include/InterruptibleSocket_SigBySockShutdown.hpp
+END
+InterruptibleSocket_SigByCmdSocket.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repo/!svn/ver/56678/trunk/sw_x/gvm_core/internal/InterruptibleSocket/include/InterruptibleSocket_SigByCmdSocket.hpp
+END
+InterruptibleSocket_SigByCmdPipe.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repo/!svn/ver/56678/trunk/sw_x/gvm_core/internal/InterruptibleSocket/include/InterruptibleSocket_SigByCmdPipe.hpp
+END
+InterruptibleSocket.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repo/!svn/ver/56678/trunk/sw_x/gvm_core/internal/InterruptibleSocket/include/InterruptibleSocket.hpp
+END

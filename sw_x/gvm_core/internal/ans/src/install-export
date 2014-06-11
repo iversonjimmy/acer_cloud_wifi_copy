@@ -1,0 +1,19 @@
+#! /bin/csh -fb
+#
+#  This script installs a minimal testing directory in
+#  ~/export for running the "gcov" target in the Makefile.
+#
+#  The ANS debug.jar and general sw_i infrastructure should
+#  be built first.
+#
+
+set base = $WORKAREA/sw_x/gvm_core/internal/ans/src
+
+mkdir ~/export                                || exit 1
+mkdir ~/export/jars                           || exit 1
+
+cp $base/testing/run-device-all   ~/export/.  || exit 1
+# cp $base/ans_circle               ~/export/.  || exit 1
+
+cp $BUILDROOT/infra/modules/ans/debug/debug.jar             ~/export/jars/. || exit 1
+cp $BUILDROOT/infra/imports/lib/commons-logging-1.1.1.jar   ~/export/jars/. || exit 1

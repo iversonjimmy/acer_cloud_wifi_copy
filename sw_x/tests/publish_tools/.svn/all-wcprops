@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repo/!svn/ver/57230/trunk/sw_x/tests/publish_tools
+END
+pubtests.sh
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/27799/trunk/sw_x/tests/publish_tools/pubtests.sh
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/57230/trunk/sw_x/tests/publish_tools/Makefile
+END
+pubtools_test_file_list.txt
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/20401/trunk/sw_x/tests/publish_tools/pubtools_test_file_list.txt
+END

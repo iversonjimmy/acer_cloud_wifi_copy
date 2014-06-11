@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/58137/trunk/sw_x/gvm_core/internal/media_metadata/common/include
+END
+media_metadata_errors.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repo/!svn/ver/43749/trunk/sw_x/gvm_core/internal/media_metadata/common/include/media_metadata_errors.hpp
+END
+media_metadata_types.proto
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repo/!svn/ver/58137/trunk/sw_x/gvm_core/internal/media_metadata/common/include/media_metadata_types.proto
+END

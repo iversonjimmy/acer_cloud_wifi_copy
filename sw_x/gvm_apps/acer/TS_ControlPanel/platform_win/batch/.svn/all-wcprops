@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/batch
+END
+remove_CVS.bat
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repo/!svn/ver/13840/trunk/sw_x/gvm_apps/acer/TS_ControlPanel/platform_win/batch/remove_CVS.bat
+END

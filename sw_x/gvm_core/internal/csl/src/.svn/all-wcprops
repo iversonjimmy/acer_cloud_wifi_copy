@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repo/!svn/ver/59558/trunk/sw_x/gvm_core/internal/csl/src
+END
+aes_api.c
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/51003/trunk/sw_x/gvm_core/internal/csl/src/aes_api.c
+END
+integer_math.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/1428/trunk/sw_x/gvm_core/internal/csl/src/integer_math.c
+END
+cslrsa_sign.c
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/1428/trunk/sw_x/gvm_core/internal/csl/src/cslrsa_sign.c
+END
+csl_impl.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/1428/trunk/sw_x/gvm_core/internal/csl/src/csl_impl.h
+END
+aes.c
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/51003/trunk/sw_x/gvm_core/internal/csl/src/aes.c
+END
+sha256.c
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repo/!svn/ver/1428/trunk/sw_x/gvm_core/internal/csl/src/sha256.c
+END
+algorithms.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/1428/trunk/sw_x/gvm_core/internal/csl/src/algorithms.c
+END
+tomcrypt_sha256.c
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/1040/trunk/sw_x/gvm_core/internal/csl/src/tomcrypt_sha256.c
+END
+cslhmac.c
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/26601/trunk/sw_x/gvm_core/internal/csl/src/cslhmac.c
+END
+cslaes.c
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repo/!svn/ver/1428/trunk/sw_x/gvm_core/internal/csl/src/cslaes.c
+END
+convrsa.c
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/1428/trunk/sw_x/gvm_core/internal/csl/src/convrsa.c
+END
+cslsha.c
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repo/!svn/ver/1428/trunk/sw_x/gvm_core/internal/csl/src/cslsha.c
+END
+aes_imp.c
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repo/!svn/ver/386/trunk/sw_x/gvm_core/internal/csl/src/aes_imp.c
+END
+elliptic_math.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/1428/trunk/sw_x/gvm_core/internal/csl/src/elliptic_math.c
+END
+convecc.c
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/1428/trunk/sw_x/gvm_core/internal/csl/src/convecc.c
+END
+md5.c
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/59558/trunk/sw_x/gvm_core/internal/csl/src/md5.c
+END
+csloaep.c
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/1428/trunk/sw_x/gvm_core/internal/csl/src/csloaep.c
+END
+tomcrypt_md5.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/59333/trunk/sw_x/gvm_core/internal/csl/src/tomcrypt_md5.c
+END
+cslrsa.c
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/16406/trunk/sw_x/gvm_core/internal/csl/src/cslrsa.c
+END
+cslecc.c
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/37081/trunk/sw_x/gvm_core/internal/csl/src/cslecc.c
+END
+poly_math.c
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/1428/trunk/sw_x/gvm_core/internal/csl/src/poly_math.c
+END
+sha1.c
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/1428/trunk/sw_x/gvm_core/internal/csl/src/sha1.c
+END

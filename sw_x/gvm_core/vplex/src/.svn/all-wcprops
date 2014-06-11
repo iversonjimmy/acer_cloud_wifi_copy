@@ -1,0 +1,197 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/repo/!svn/ver/58409/trunk/sw_x/gvm_core/vplex/src
+END
+vplex_vs_directory_priv.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/20780/trunk/sw_x/gvm_core/vplex/src/vplex_vs_directory_priv.h
+END
+vplex_xml_reader.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/55388/trunk/sw_x/gvm_core/vplex/src/vplex_xml_reader.c
+END
+vplex_queue.c
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repo/!svn/ver/83/trunk/sw_x/gvm_core/vplex/src/vplex_queue.c
+END
+vplex_socket.c
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repo/!svn/ver/47607/trunk/sw_x/gvm_core/vplex/src/vplex_socket.c
+END
+vplex_xml_writer.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/14498/trunk/sw_x/gvm_core/vplex/src/vplex_xml_writer.c
+END
+vplex_trace.c
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/30310/trunk/sw_x/gvm_core/vplex/src/vplex_trace.c
+END
+vplex_soap_util.c
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/14498/trunk/sw_x/gvm_core/vplex/src/vplex_soap_util.c
+END
+vplex_rwlock.c
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/83/trunk/sw_x/gvm_core/vplex/src/vplex_rwlock.c
+END
+vplex_nus_priv.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/54401/trunk/sw_x/gvm_core/vplex/src/vplex_nus_priv.h
+END
+vplex_strto.c
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/2057/trunk/sw_x/gvm_core/vplex/src/vplex_strto.c
+END
+vplex_http_util.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/58409/trunk/sw_x/gvm_core/vplex/src/vplex_http_util.cpp
+END
+vplex_ias.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/52647/trunk/sw_x/gvm_core/vplex/src/vplex_ias.cpp
+END
+vplex_private.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/30692/trunk/sw_x/gvm_core/vplex/src/vplex_private.h
+END
+vplex_syslog.c
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/1378/trunk/sw_x/gvm_core/vplex/src/vplex_syslog.c
+END
+vplex_ias_priv.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/54401/trunk/sw_x/gvm_core/vplex/src/vplex_ias_priv.h
+END
+vplex_ipc_socket.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/54605/trunk/sw_x/gvm_core/vplex/src/vplex_ipc_socket.c
+END
+vplex_dataset.c
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/83/trunk/sw_x/gvm_core/vplex/src/vplex_dataset.c
+END
+vplex_strings.c
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/19250/trunk/sw_x/gvm_core/vplex/src/vplex_strings.c
+END
+vplex_math.c
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/49933/trunk/sw_x/gvm_core/vplex/src/vplex_math.c
+END
+vplex_no_trace.c
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/3661/trunk/sw_x/gvm_core/vplex/src/vplex_no_trace.c
+END
+vplex_vs_directory_utils.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/155/trunk/sw_x/gvm_core/vplex/src/vplex_vs_directory_utils.cpp
+END
+vplex_time.c
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/83/trunk/sw_x/gvm_core/vplex/src/vplex_time.c
+END
+vplex_shared_credential.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/48052/trunk/sw_x/gvm_core/vplex/src/vplex_shared_credential.cpp
+END
+vplex_soap.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repo/!svn/ver/32890/trunk/sw_x/gvm_core/vplex/src/vplex_soap.cpp
+END
+vplex_utf_conversion.c
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/83/trunk/sw_x/gvm_core/vplex/src/vplex_utf_conversion.c
+END
+vplex_nus.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/19255/trunk/sw_x/gvm_core/vplex/src/vplex_nus.cpp
+END
+vplex_soap_priv.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/41608/trunk/sw_x/gvm_core/vplex/src/vplex_soap_priv.h
+END
+vplex_list.c
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/83/trunk/sw_x/gvm_core/vplex/src/vplex_list.c
+END
+vplex_mem_heap.c
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/23629/trunk/sw_x/gvm_core/vplex/src/vplex_mem_heap.c
+END
+vplex_safe_serialization.c
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/23629/trunk/sw_x/gvm_core/vplex/src/vplex_safe_serialization.c
+END
+vplex_vs_directory.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/56947/trunk/sw_x/gvm_core/vplex/src/vplex_vs_directory.cpp
+END
+vplex_serialization.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/48115/trunk/sw_x/gvm_core/vplex/src/vplex_serialization.c
+END

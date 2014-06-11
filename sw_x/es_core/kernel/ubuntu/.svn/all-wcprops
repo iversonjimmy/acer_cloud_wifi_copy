@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repo/!svn/ver/842/trunk/sw_x/es_core/kernel/ubuntu
+END
+linux-headers-2.6.32-21-generic-pae.tar.gz
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repo/!svn/ver/688/trunk/sw_x/es_core/kernel/ubuntu/linux-headers-2.6.32-21-generic-pae.tar.gz
+END
+linux-headers-2.6.32-21.tar.gz
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/688/trunk/sw_x/es_core/kernel/ubuntu/linux-headers-2.6.32-21.tar.gz
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/842/trunk/sw_x/es_core/kernel/ubuntu/Makefile
+END

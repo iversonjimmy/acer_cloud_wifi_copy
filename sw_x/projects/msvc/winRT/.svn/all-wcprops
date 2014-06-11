@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repo/!svn/ver/59817/trunk/sw_x/projects/msvc/winRT
+END
+vplex.props
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/50872/trunk/sw_x/projects/msvc/winRT/vplex.props
+END
+CCDIClient.props
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/50872/trunk/sw_x/projects/msvc/winRT/CCDIClient.props
+END
+internal_libs.props
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/56089/trunk/sw_x/projects/msvc/winRT/internal_libs.props
+END
+media_metadata_shared_impl.props
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repo/!svn/ver/50872/trunk/sw_x/projects/msvc/winRT/media_metadata_shared_impl.props
+END
+protorpc_client.props
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/50872/trunk/sw_x/projects/msvc/winRT/protorpc_client.props
+END
+internal_libs_woa.props
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/56101/trunk/sw_x/projects/msvc/winRT/internal_libs_woa.props
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/32058/trunk/sw_x/projects/msvc/winRT/Makefile
+END
+PersonalCloudAll.sln
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/39924/trunk/sw_x/projects/msvc/winRT/PersonalCloudAll.sln
+END

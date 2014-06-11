@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/repo/!svn/ver/57229/trunk/sw_x/tests/swupdate
+END
+ccd2.conf
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repo/!svn/ver/41681/trunk/sw_x/tests/swupdate/ccd2.conf
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/repo/!svn/ver/57229/trunk/sw_x/tests/swupdate/Makefile
+END
+syncWhitebox.py
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/57229/trunk/sw_x/tests/swupdate/syncWhitebox.py
+END
+ccd1.conf
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repo/!svn/ver/41681/trunk/sw_x/tests/swupdate/ccd1.conf
+END
+prepChroot.sh
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/41681/trunk/sw_x/tests/swupdate/prepChroot.sh
+END

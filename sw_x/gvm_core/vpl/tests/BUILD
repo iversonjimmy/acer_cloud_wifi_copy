@@ -1,0 +1,44 @@
+# Tests should be updated if the vpl code is made active.
+
+cpp_binary(
+    name = 'vplTest',
+    srcs = [
+        'src/vplTest.c',
+        'src/vplTest_conv.c',
+        'src/vplTest_common.c',
+        'src/vplTest_fs.c',
+        'src/vplTest_network.c',
+        'src/vplTest_plat.c',
+        'src/vplTest_platform_compliance.c',
+        'src/vplTest_srwlock.c',
+        'src/vplTest_thread.c',
+        'src/vplTest_time.c',
+    ] + ([
+          'src/vplTest_dynamic.c',
+          'src/vplTest_socket.c',
+         ] if platform != 'android' and platform != 'win' else []) +
+        ([
+          'src/vplTest_shm.c',
+         ] if platform == 'linux' or platform == 'linux_emb' or platform == 'cloudnode' else []),
+    includes = ['include'],
+    deps = [
+        '..:libvplcore',
+        ] + {
+        'android':['/:libc','/:liblog'],
+        'linux':[],
+        'msvc':[],
+		'linux_emb':[],
+        'cloudnode':[],
+    }[platform]
+)
+
+cpp_binary(
+    name = 'vplMonitorTest',
+    srcs = [
+        'monitor/monitorTest.cpp',
+    ],
+    includes = ['include'],
+    deps = [
+        '..:libvplcore',
+        ]
+)

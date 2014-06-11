@@ -1,0 +1,8 @@
+#! /bin/sh
+export ans_host=ans-c100.lab1.routefree.com
+
+. ./set_classpath
+
+echo "Using ANS server $ans_host"
+
+java -classpath $classpath com.broadon.ans.test.AnsDeviceTest

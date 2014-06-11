@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{151770FE-8137-424b-9FB1-B5A690473B8C}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\libvssi">
+      <UniqueIdentifier>{adb1d674-a7ab-413c-bcd4-d161cc93b781}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libcsl">
+      <UniqueIdentifier>{c4ece637-0ffb-4f6d-b632-fceaae68322f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{09BA6996-4516-4b15-A375-9A4B7D660B9E}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{119FE7A2-A7BB-4fef-BBEB-923C99335B4D}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\vssi\src\basic_vssi_wrapper.cpp">
+      <Filter>Source Files\libvssi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\vssi\src\vssi.c">
+      <Filter>Source Files\libvssi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\vssi\src\vssi_http.c">
+      <Filter>Source Files\libvssi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\vssi\src\vssi_internal.c">
+      <Filter>Source Files\libvssi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\vssi\src\vssi_tunnel.c">
+      <Filter>Source Files\libvssi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\vssi\src\vssi_vss.c">
+      <Filter>Source Files\libvssi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\aes.c">
+      <Filter>Source Files\libcsl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\aes_api.c">
+      <Filter>Source Files\libcsl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\aes_imp.c">
+      <Filter>Source Files\libcsl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\algorithms.c">
+      <Filter>Source Files\libcsl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\convecc.c">
+      <Filter>Source Files\libcsl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\convrsa.c">
+      <Filter>Source Files\libcsl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\cslaes.c">
+      <Filter>Source Files\libcsl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\cslecc.c">
+      <Filter>Source Files\libcsl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\cslhmac.c">
+      <Filter>Source Files\libcsl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\csloaep.c">
+      <Filter>Source Files\libcsl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\cslrsa.c">
+      <Filter>Source Files\libcsl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\cslrsa_sign.c">
+      <Filter>Source Files\libcsl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\cslsha.c">
+      <Filter>Source Files\libcsl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\elliptic_math.c">
+      <Filter>Source Files\libcsl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\integer_math.c">
+      <Filter>Source Files\libcsl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\poly_math.c">
+      <Filter>Source Files\libcsl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\sha1.c">
+      <Filter>Source Files\libcsl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\sha256.c">
+      <Filter>Source Files\libcsl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\tomcrypt_sha256.c">
+      <Filter>Source Files\libcsl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\md5.c">
+      <Filter>Source Files\libcsl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\tomcrypt_md5.c">
+      <Filter>Source Files\libcsl</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

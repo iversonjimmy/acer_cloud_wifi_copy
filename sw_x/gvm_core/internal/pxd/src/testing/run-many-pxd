@@ -1,0 +1,43 @@
+#! /bin/csh
+#
+#  This script just runs the "run-pxdtest" script until a failure occurs.
+#
+
+set log  = /tmp/run-pxdtest.log.$$
+
+unsetenv pxd_host
+setenv jars ./jars-unit
+
+onintr leave
+
+@ round = 0;
+
+if (! -d $WORKAREA) then
+    echo '$WORKAREA'" should be set to a valid workspace"
+    exit 1
+endif
+
+if (! -d $jars) then
+    mkdir $jars
+endif
+
+rm -f $jars/debug.jar
+rm -f $jars/commons-logging-1.1.1.jar
+cp -f $BUILDROOT/infra/modules/pxd/debug/debug.jar $jars/.           || exit 1
+cp -f $BUILDROOT/infra/imports/lib/commons-logging-1.1.1.jar $jars/. || exit 1
+
+while (1)
+    ./run-pxdtest >& $log
+
+    if ($status != 0) then
+        echo " === The PXD module test failed!"
+        exit 1
+    endif
+
+    @ round++;
+
+    echo " === Finished round" $round "at" `date`
+end
+
+leave:
+    rm -f $log

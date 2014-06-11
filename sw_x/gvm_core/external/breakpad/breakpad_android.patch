@@ -1,0 +1,42 @@
+diff -rup google-breakpad-read-only/src/third_party/lss/linux_syscall_support.h google-breakpad-read-only-patch/src/third_party/lss/linux_syscall_support.h
+--- google-breakpad-read-only/src/third_party/lss/linux_syscall_support.h	2011-07-14 09:53:19.000000000 -0700
++++ google-breakpad-read-only-patch/src/third_party/lss/linux_syscall_support.h	2011-07-14 10:55:23.189895971 -0700
+@@ -107,11 +107,14 @@ extern "C" {
+ #include <sys/resource.h>
+ #include <sys/time.h>
+ #include <sys/types.h>
+-#include <syscall.h>
++#include <sys/syscall.h>
+ #include <unistd.h>
+ #include <linux/unistd.h>
+ #include <endian.h>
+ 
++typedef unsigned long int ulong;
++typedef unsigned long long  __off64_t;
++
+ #ifdef __mips__
+ /* Include definitions of the ABI currently in use.                          */
+ #include <sgidefs.h>
+@@ -3012,8 +3015,10 @@ struct kernel_statfs {
+     #define __NR__sigprocmask __NR_sigprocmask
+     #define __NR__sigsuspend  __NR_sigsuspend
+     #define __NR__socketcall  __NR_socketcall
++#ifndef __ANDROID__
+     LSS_INLINE _syscall2(int, fstat64,             int, f,
+                          struct kernel_stat64 *, b)
++#endif
+     LSS_INLINE _syscall5(int, _llseek,     uint, fd, ulong, hi, ulong, lo,
+                          loff_t *, res, uint, wh)
+ #if !defined(__ARM_EABI__)
+@@ -3037,9 +3042,10 @@ struct kernel_statfs {
+                          int,                      b,
+                          unsigned long,            s)
+     #endif
++#ifndef __ANDROID__
+     LSS_INLINE _syscall2(int, stat64,              const char *, p,
+                          struct kernel_stat64 *, b)
+-
++#endif
+     LSS_INLINE int LSS_NAME(sigaction)(int signum,
+                                        const struct kernel_sigaction *act,
+                                        struct kernel_sigaction *oldact) {

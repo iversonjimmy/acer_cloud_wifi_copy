@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repo/!svn/ver/27702/trunk/sw_x/es_core/esc/core/base/include
+END
+iosendian.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/23840/trunk/sw_x/es_core/esc/core/base/include/iosendian.h
+END
+iosccert.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/16404/trunk/sw_x/es_core/esc/core/base/include/iosccert.h
+END
+esc_iosctypes.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/27702/trunk/sw_x/es_core/esc/core/base/include/esc_iosctypes.h
+END
+estypes.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/1428/trunk/sw_x/es_core/esc/core/base/include/estypes.h
+END
+iosc.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/16404/trunk/sw_x/es_core/esc/core/base/include/iosc.h
+END
+esi.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repo/!svn/ver/367/trunk/sw_x/es_core/esc/core/base/include/esi.h
+END
+testutils.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/169/trunk/sw_x/es_core/esc/core/base/include/testutils.h
+END
+iosctypes.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/27702/trunk/sw_x/es_core/esc/core/base/include/iosctypes.h
+END
+esitypes.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/16404/trunk/sw_x/es_core/esc/core/base/include/esitypes.h
+END
+es.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/169/trunk/sw_x/es_core/esc/core/base/include/es.h
+END

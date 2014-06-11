@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+     <LinearLayout android:id="@+id/top_buttons"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5px"
+        android:layout_marginBottom="5px"
+        android:layout_marginLeft="5px"
+        android:layout_marginRight="5px"
+        >
+        
+        <Button android:id="@+id/TypeOfTest"
+                android:text="@string/Login_Sequence"
+                android:onClick="onClick_TypeOfTest"
+                android:gravity="center"
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content"
+                android:layout_weight="1"    
+                android:focusable="false"       
+                ></Button>
+                
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+    <LinearLayout android:id="@+id/loginLogoutContainer"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5px"
+        android:layout_marginBottom="5px"
+        android:layout_marginLeft="5px"
+        android:layout_marginRight="5px"
+        android:visibility="gone"
+        >
+        
+        <Button android:id="@+id/loginLogout"
+                android:text="@string/runLoggedIn"
+                android:onClick="onClick_PickLoginLogout"
+                android:gravity="center"
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content"
+                android:layout_weight="1"    
+                android:focusable="false"       
+                ></Button>
+    </LinearLayout>
+        
+     <ScrollView
+            android:layout_weight="1"           
+            android:layout_width="fill_parent" 
+            android:layout_height="wrap_content" 
+            android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb"
+            android:scrollbarTrackVertical="@drawable/scrollbar_vertical_track"
+            android:background="#9400d3">
+    
+        <TextView  
+            android:id="@+id/textView" 
+            android:layout_width="fill_parent" 
+            android:layout_height="fill_parent" 
+            android:layout_gravity="left"
+            android:textColor="#ffff00"
+            />
+       
+       </ScrollView>
+       
+       
+       <LinearLayout android:id="@+id/bottom_buttons"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5px"
+        android:layout_marginBottom="5px"
+        android:layout_marginLeft="5px"
+        android:layout_marginRight="5px"
+        >
+        
+        <Button android:id="@+id/Start"
+                android:text="@string/Start"
+                android:onClick="onClick_Start"
+                android:gravity="center"
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content"
+                android:layout_weight="1"       
+                android:focusable="false"    
+                ></Button>
+                
+        <Button android:id="@+id/Run_Once"
+                android:text="@string/Run_Once"
+                android:onClick="onClick_Run_Once"
+                android:gravity="center"
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content"
+                android:layout_weight="1"     
+                android:focusable="false"      
+                ></Button>
+        <Button android:id="@+id/Stop"
+                android:text="@string/Stop"
+                android:onClick="onClick_Stop"
+                android:gravity="center"
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content"
+                android:layout_weight="1"  
+                android:focusable="false"         
+                ></Button>
+    </LinearLayout>
+
+</LinearLayout>

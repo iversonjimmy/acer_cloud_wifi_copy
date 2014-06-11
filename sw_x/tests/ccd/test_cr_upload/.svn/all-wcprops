@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repo/!svn/ver/41639/trunk/sw_x/tests/ccd/test_cr_upload
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/15564/trunk/sw_x/tests/ccd/test_cr_upload/BUILD
+END
+test_ccd_cr_upload.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/41639/trunk/sw_x/tests/ccd/test_cr_upload/test_ccd_cr_upload.cpp
+END

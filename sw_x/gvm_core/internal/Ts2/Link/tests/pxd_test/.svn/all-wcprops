@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/49793/trunk/sw_x/gvm_core/internal/Ts2/Link/tests/pxd_test
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/49088/trunk/sw_x/gvm_core/internal/Ts2/Link/tests/pxd_test/BUILD
+END
+pxd_test_server.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repo/!svn/ver/49793/trunk/sw_x/gvm_core/internal/Ts2/Link/tests/pxd_test/pxd_test_server.cpp
+END
+getopt_long.c
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repo/!svn/ver/49330/trunk/sw_x/gvm_core/internal/Ts2/Link/tests/pxd_test/getopt_long.c
+END
+getopt.c
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/49330/trunk/sw_x/gvm_core/internal/Ts2/Link/tests/pxd_test/getopt.c
+END
+pxd_test_common.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repo/!svn/ver/49330/trunk/sw_x/gvm_core/internal/Ts2/Link/tests/pxd_test/pxd_test_common.cpp
+END
+getopt.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/49330/trunk/sw_x/gvm_core/internal/Ts2/Link/tests/pxd_test/getopt.h
+END
+pxd_test_common.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repo/!svn/ver/49330/trunk/sw_x/gvm_core/internal/Ts2/Link/tests/pxd_test/pxd_test_common.hpp
+END
+pxd_test_client.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repo/!svn/ver/49793/trunk/sw_x/gvm_core/internal/Ts2/Link/tests/pxd_test/pxd_test_client.cpp
+END

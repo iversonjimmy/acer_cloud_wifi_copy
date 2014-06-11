@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/51757/trunk/sw_x/gvm_core/vplex/tests/src_ios
+END
+VPLEXTestWrapper.c
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/42325/trunk/sw_x/gvm_core/vplex/tests/src_ios/VPLEXTestWrapper.c
+END
+VPLEXTestWrapper.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/23845/trunk/sw_x/gvm_core/vplex/tests/src_ios/VPLEXTestWrapper.h
+END
+vplexTest_http2.m
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/51757/trunk/sw_x/gvm_core/vplex/tests/src_ios/vplexTest_http2.m
+END

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repo/!svn/ver/37146/trunk/sw_x/gvm_core/internal/p2p/test
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/36317/trunk/sw_x/gvm_core/internal/p2p/test/BUILD
+END
+p2p_test.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/37130/trunk/sw_x/gvm_core/internal/p2p/test/p2p_test.cpp
+END
+p2p_test_server.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/37146/trunk/sw_x/gvm_core/internal/p2p/test/p2p_test_server.cpp
+END

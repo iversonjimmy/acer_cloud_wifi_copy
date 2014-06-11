@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/repo/!svn/ver/1428/trunk/sw_x/gvm_core/boot/ghv
+END
+e820.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/repo/!svn/ver/1428/trunk/sw_x/gvm_core/boot/ghv/e820.c
+END
+ghv_guest.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repo/!svn/ver/62/trunk/sw_x/gvm_core/boot/ghv/ghv_guest.h
+END
+ghv_mem.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repo/!svn/ver/1428/trunk/sw_x/gvm_core/boot/ghv/ghv_mem.c
+END
+ghv_load.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repo/!svn/ver/1428/trunk/sw_x/gvm_core/boot/ghv/ghv_load.c
+END
+ghv_mem.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repo/!svn/ver/62/trunk/sw_x/gvm_core/boot/ghv/ghv_mem.h
+END
+ghv_load.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repo/!svn/ver/62/trunk/sw_x/gvm_core/boot/ghv/ghv_load.h
+END
+realmode.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repo/!svn/ver/1428/trunk/sw_x/gvm_core/boot/ghv/realmode.c
+END
+ghv_guest.c
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/1428/trunk/sw_x/gvm_core/boot/ghv/ghv_guest.c
+END
+init64.s
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/repo/!svn/ver/62/trunk/sw_x/gvm_core/boot/ghv/init64.s
+END

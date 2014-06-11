@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/upnp/common
+END
+ErrorListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/upnp/common/ErrorListener.java
+END
+ListenerList.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/upnp/common/ListenerList.java
+END
+DlnaListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/upnp/common/DlnaListener.java
+END
+DlnaAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/upnp/common/DlnaAction.java
+END
+ActionThreadCore.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/upnp/common/ActionThreadCore.java
+END
+Item.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/upnp/common/Item.java
+END

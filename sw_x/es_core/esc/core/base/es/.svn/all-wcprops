@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repo/!svn/ver/23266/trunk/sw_x/es_core/esc/core/base/es
+END
+es_et.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/169/trunk/sw_x/es_core/esc/core/base/es/es_et.cpp
+END
+es_storage.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/367/trunk/sw_x/es_core/esc/core/base/es/es_storage.h
+END
+es.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repo/!svn/ver/169/trunk/sw_x/es_core/esc/core/base/es/es.cpp
+END
+es_title.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/169/trunk/sw_x/es_core/esc/core/base/es/es_title.cpp
+END
+es_container.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/23266/trunk/sw_x/es_core/esc/core/base/es/es_container.cpp
+END
+es_ticket.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/169/trunk/sw_x/es_core/esc/core/base/es/es_ticket.cpp
+END
+es_tmd.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repo/!svn/ver/169/trunk/sw_x/es_core/esc/core/base/es/es_tmd.cpp
+END
+es_title.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repo/!svn/ver/169/trunk/sw_x/es_core/esc/core/base/es/es_title.h
+END
+es_container.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/169/trunk/sw_x/es_core/esc/core/base/es/es_container.h
+END
+es_ticket.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/169/trunk/sw_x/es_core/esc/core/base/es/es_ticket.h
+END
+es_cert.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/169/trunk/sw_x/es_core/esc/core/base/es/es_cert.cpp
+END
+es_device.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/366/trunk/sw_x/es_core/esc/core/base/es/es_device.cpp
+END
+cpp_c.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/16373/trunk/sw_x/es_core/esc/core/base/es/cpp_c.h
+END
+es_storage.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/169/trunk/sw_x/es_core/esc/core/base/es/es_storage.cpp
+END
+es_device.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/169/trunk/sw_x/es_core/esc/core/base/es/es_device.h
+END
+es_utils.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repo/!svn/ver/275/trunk/sw_x/es_core/esc/core/base/es/es_utils.h
+END

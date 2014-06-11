@@ -1,0 +1,93 @@
+
+ifndef ANDROID_EMULATOR_ROOT
+$(error Must define ANDROID_EMULATOR_ROOT)
+endif
+ifndef ANDROID_NDK_ROOT
+$(error Must define ANDROID_NDK_ROOT)
+endif
+ifndef SW_X_ROOT
+$(error Must define SW_X_ROOT)
+endif
+
+CROSS_COMPILE=$(ANDROID_NDK_ROOT)/toolchains/arm-eabi-4.4.0/prebuilt/linux-x86/bin/arm-eabi-
+ARCH=arm
+
+BLD_NAME=swx_arm_emulator_2.6.29
+COMMON=$(ANDROID_EMULATOR_ROOT)/$(BLD_NAME)
+TARBALL=$(ANDROID_EMULATOR_ROOT)/$(BLD_NAME).tar
+TARBALL_COMP=$(TARBALL).bz2
+
+BLD_ENV = CROSS_COMPILE=$(CROSS_COMPILE) ARCH=$(ARCH)
+
+ESMON=$(SW_X_ROOT)/gvm_core/os/esmon
+
+# The contents of the tarball
+TARBALL_FILES = arch include Makefile .config Module.symvers scripts
+TARBALL_CONTENTS = $(foreach d, $(TARBALL_FILES), $(BLD_NAME)/$d)
+
+default:
+	$(MAKE) -C $(COMMON) $(BLD_ENV)
+	cd $(ANDROID_EMULATOR_ROOT) ; \
+	tar cvf $(TARBALL) $(TARBALL_CONTENTS)
+	bzip2 $(TARBALL)
+
+build_tools:
+
+clean:
+	$(MAKE) -C $(COMMON) $(BLD_ENV) clean
+
+clobber: 
+	rm -rf $(COMMON)
+	rm -rf $(ANDROID_EMULATOR_ROOT)/$(BLD_NAME)-patch $(ANDROID_EMULATOR_ROOT)/$(BLD_NAME)-copy
+	rm -f $(TARBALL) $(TARBALL_COMP)
+
+dist:
+
+# debug
+printenv:
+	env
+	pwd
+	@echo esmon = $(ESMON)
+	@echo conts = $(TARBALL_CONTENTS)
+
+
+.PHONY: build_setup
+build_setup: setup_tools init_git prep_src
+
+.PHONY: setup_tools
+setup_tools:
+	@echo "Checking if archive.canonical.com is on the source list..."
+	@egrep -q "^deb.*archive.canonical.com.*partner" /etc/apt/sources.list
+	sudo apt-get -y -qq install git-core gnupg flex bison gperf	\
+	build-essential zip curl sun-java6-jdk zlib1g-dev gcc-multilib	\
+	g++-multilib libc6-dev-i386 lib32ncurses5-dev ia32-libs 	\
+	x11proto-core-dev libx11-dev lib32readline5-dev lib32z-dev	\
+	valgrind genisoimage
+
+.PHONY: init_git
+init_git: 
+	mkdir -p $(ANDROID_EMULATOR_ROOT)
+	(cd $(ANDROID_EMULATOR_ROOT); git clone git://android.git.kernel.org/kernel/common $(BLD_NAME))
+	(cd $(COMMON); git checkout --track -b android-goldfish-2.6.29 origin/archive/android-gldfish-2.6.29)
+
+# set up our config file, pull in esmon and patch the various Makefiles
+# and Kconfigs.
+$(ANDROID_EMULATOR_ROOT)/$(BLD_NAME)-patch:
+	#cd $(ANDROID_EMULATOR_ROOT) ; \
+	#cp -r $(BLD_NAME).orig $(BLD_NAME)
+	@echo "==> Patching $(COMMON)"
+	@cd $(COMMON); \
+	patch -p1 < $(ESMON)/emulator.patch; \
+	touch $@
+
+# copy in sources
+$(ANDROID_EMULATOR_ROOT)/$(BLD_NAME)-copy:
+	cp $(ESMON)/config.emulator $(COMMON)/.config
+	mkdir $(COMMON)/security/esmon
+	cp $(ESMON)/Makefile.emulator $(COMMON)/security/esmon/Makefile
+	cp $(ESMON)/Kconfig.emulator $(COMMON)/security/esmon/Kconfig
+	cp $(ESMON)/esmon.c $(ESMON)/esmon_api.h $(COMMON)/security/esmon
+	touch $@
+
+.PHONY: prep_src
+prep_src: $(ANDROID_EMULATOR_ROOT)/$(BLD_NAME)-patch $(ANDROID_EMULATOR_ROOT)/$(BLD_NAME)-copy

@@ -1,0 +1,205 @@
+# -*-Makefile-*-
+export PRODUCT=linux
+
+# makefile included by all sw_x/dist/igware.runtime makefiles
+include igware.runtime.common.mk
+# makefile included by all sw_x/dist/* makefiles
+include $(WORKDIR)/sw_x/dist/Makefile.common
+
+$(info HOST_PLATFORM="$(HOST_PLATFORM)")
+$(info HOST_ARCH="$(HOST_ARCH)")
+
+# --- this target should clean the machine before building the product
+.PHONY: clean
+clean:
+	rm -fr $(BUILDROOT)/*/$(PRODUCT)
+
+bump_build_number:
+	# get lock
+	ssh $(LOCK_USER)@$(LOCK_MASTER) "$(LOCK_SCRIPT) -a get -n build_number.$(BRANCH_NAME) -t exclusive -r $(BUILDER_NAME)"
+	# get the latest version of the file
+	svn update $(BUILD_NUMBER_FILE)
+	# increment the build number
+	echo $(shell echo $$(( $(BUILD_NUMBER) + 1 )) ) > $(BUILD_NUMBER_FILE)
+	# check the change in
+	svn ci -m 'bump $(BUILDER_NAME) build number' $(BUILD_NUMBER_FILE)
+	# release lock
+	ssh $(LOCK_USER)@$(LOCK_MASTER) "$(LOCK_SCRIPT) -a release -n build_number.$(BRANCH_NAME) -t exclusive -r $(BUILDER_NAME)"
+
+# --- this target should install any tools needed to build the product
+.PHONY: build_tools
+build_tools: bump_build_number
+
+# --- this target should build the product
+# Flags for gcc 4.1, which has several warning related bugs.
+export GCC_GXX_WARNINGS = \
+    -Wall -Wno-error \
+    -Wno-packed \
+    -Wpointer-arith \
+    -Wredundant-decls \
+    -Wstrict-aliasing=3 \
+    -Wswitch-enum \
+    -Wundef \
+    -Wwrite-strings \
+    -Wextra -Wno-unused-parameter \
+# end of list
+export C_CXX_FLAGS +=-fno-strict-aliasing 
+.PHONY: default
+default:
+	mkdir -p $(TMPDIR)
+	make -C $(WORKDIR)/sw_x default
+
+loadgen_vss:
+	mkdir -p $(TMPDIR)
+	make -C $(WORKDIR)/sw_x gvm_core/internal/vssi/tests/loadgen_vss/loadgen_vss
+
+# --- this target should archive any build outputs off to a different system
+export LOCAL_SAVE_DIR=$(WORKDIR)/dist_outputs
+export OUTPUT_TMPDIR=$(LOCAL_SAVE_DIR)/output
+export OUTPUT_TGZ=linux_output.$(BUILD_DATE).$(BUILD_VERSION).tar.gz
+export OUTPUT_LNK=linux_output.tar.gz
+export LOADGEN_TMPDIR=$(LOCAL_SAVE_DIR)/loadgen
+export DXSHELL_TMPDIR=$(LOCAL_SAVE_DIR)/dxshell
+export DXSHELL_TGZ=dxshell.$(BUILD_DATE).$(BUILD_VERSION).tar.gz
+export DXSHELL_LNK=dxshell.tar.gz
+
+.PHONY: dist
+dist:
+	# Copy all tests to its own directory (ccd executable is copied separately)
+	rm -rf $(LOCAL_SAVE_DIR)
+	mkdir -p $(LOCAL_SAVE_DIR)
+
+	# copying the tests and the build files needed to run the tests.
+	-rm -rf $(OUTPUT_TMPDIR)
+	mkdir -p $(OUTPUT_TMPDIR)
+	cp -pRf $(BUILDROOT) $(OUTPUT_TMPDIR)
+	# removing extra directories that are not used by the current tests.
+	rm -rf $(OUTPUT_TMPDIR)/buildroot/release/$(PRODUCT)/gvm_core/external
+	rm -rf $(OUTPUT_TMPDIR)/buildroot/release/$(PRODUCT)/tests/es/es_test_data.tar
+	rm -rf $(OUTPUT_TMPDIR)/buildroot/release/$(PRODUCT)/tests/media_agent_tests
+	rm -rf $(OUTPUT_TMPDIR)/buildroot/release/$(PRODUCT)/tests/syncWb
+
+	# tar up reduced buildroot; do not take the SRCROOT file since it will tie us to the build machine
+	cd $(OUTPUT_TMPDIR) && tar zcvf $(OUTPUT_TMPDIR)/$(OUTPUT_TGZ) --exclude=SRCROOT_stamp_sw_x *
+	ssh $(STORE_USER)@$(STORE_HOST) "mkdir -p $(PRODUCT_STORAGE_DIR)/linux_output"
+	scp $(OUTPUT_TMPDIR)/$(OUTPUT_TGZ) $(STORE_USER)@$(STORE_HOST):$(PRODUCT_STORAGE_DIR)/linux_output/$(OUTPUT_TGZ)
+	ssh $(STORE_USER)@$(STORE_HOST) "cd $(PRODUCT_STORAGE_DIR)/linux_output && rm -f $(OUTPUT_LNK) && ln -s $(OUTPUT_TGZ) $(OUTPUT_LNK)"
+
+	# copy ccd file separately
+	ssh $(STORE_USER)@$(STORE_HOST) "mkdir -p $(PRODUCT_STORAGE_DIR)/ccd"
+	scp $(BUILDROOT)/release/$(PRODUCT)/gvm_core/daemons/ccd/ccd  $(STORE_USER)@$(STORE_HOST):$(PRODUCT_STORAGE_DIR)/ccd/ccd.$(BUILD_DATE).$(BUILD_VERSION).sav
+	ssh $(STORE_USER)@$(STORE_HOST) "cd $(PRODUCT_STORAGE_DIR)/ccd && rm -f ccd && ln -s ccd.$(BUILD_DATE).$(BUILD_VERSION).sav ccd"
+
+	# copy loadgen file separately
+	-rm -rf $(LOADGEN_TMPDIR)
+	mkdir -p $(LOADGEN_TMPDIR)
+	cp $(BUILDROOT)/release/$(PRODUCT)/gvm_core/internal/vssi/tests/loadgen_vss/loadgen_vss $(LOADGEN_TMPDIR)
+	cp  $(WORKDIR)/sw_x/gvm_core/internal/vssi/tests/loadgen_vss/loadgen_runs.sh $(LOADGEN_TMPDIR)
+	scp $(STORE_USER)@$(STORE_HOST):/$(FS_TESTDATADIR)/loadgen/test.jpg $(LOADGEN_TMPDIR)/small_test.jpg
+	scp $(STORE_USER)@$(STORE_HOST):/$(FS_TESTDATADIR)/loadgen/664562420013928011.jpg $(LOADGEN_TMPDIR)/med_test.jpg
+	scp $(STORE_USER)@$(STORE_HOST):/$(FS_TESTDATADIR)/loadgen/JPG_101171.jpg $(LOADGEN_TMPDIR)/large_test.jpg
+	cd $(LOADGEN_TMPDIR) && tar cvzf $(LOADGEN_TMPDIR)/loadgen.tar.gz *
+	ssh $(STORE_USER)@$(STORE_HOST) "mkdir -p $(PRODUCT_STORAGE_DIR)/loadgen_vss"
+	scp $(LOADGEN_TMPDIR)/loadgen.tar.gz $(STORE_USER)@$(STORE_HOST):$(PRODUCT_STORAGE_DIR)/loadgen_vss/loadgen_vss.$(BUILD_DATE).$(BUILD_VERSION).tar.gz
+	ssh $(STORE_USER)@$(STORE_HOST) "cd $(PRODUCT_STORAGE_DIR)/loadgen_vss && rm -f loadgen_vss.tar.gz loadgen_vss && ln -s loadgen_vss.$(BUILD_DATE).$(BUILD_VERSION).tar.gz loadgen_vss.tar.gz"
+
+	# copy dxshell file separately
+	-rm -rf $(DXSHELL_TMPDIR)
+	mkdir -p $(DXSHELL_TMPDIR)
+	cp $(BUILDROOT)/release/$(PRODUCT)/tests/dxshell/dxshell $(DXSHELL_TMPDIR)
+	cp $(BUILDROOT)/release/$(PRODUCT)/tests/dxshell/dxshell_cloudnode $(DXSHELL_TMPDIR)
+	cp $(BUILDROOT)/release/$(PRODUCT)/gvm_core/daemons/ccd/ccd  $(DXSHELL_TMPDIR)
+	cp $(BUILDROOT)/release/$(PRODUCT)/gvm_core/daemons/ccd/ccd.debug  $(DXSHELL_TMPDIR)
+	cp $(BUILDROOT)/release/$(PRODUCT)/gvm_core/daemons/ccd/ccd_cloudnode  $(DXSHELL_TMPDIR)
+	cp $(BUILDROOT)/release/$(PRODUCT)/gvm_core/daemons/ccd/ccd_cloudnode.debug  $(DXSHELL_TMPDIR)
+	cp $(BUILDROOT)/release/$(PRODUCT)/gvm_apps/dx_remote_agent/platform_linux/dx_remote_agent $(DXSHELL_TMPDIR)
+	cp $(BUILDROOT)/release/$(PRODUCT)/gvm_apps/imltool/imltool $(DXSHELL_TMPDIR)
+	cp $(WORKDIR)/sw_x/tests/dxshell/checkStreamMultirangeResult_ref.out $(DXSHELL_TMPDIR)
+	cp $(WORKDIR)/sw_x/tests/dxshell/test.jpg $(DXSHELL_TMPDIR)
+	cp $(WORKDIR)/sw_x/tests/dxshell/test_thumb.jpg $(DXSHELL_TMPDIR)
+	cp $(WORKDIR)/sw_x/gvm_core/conf/ccd.conf.tmpl $(DXSHELL_TMPDIR)
+	cp $(WORKDIR)/sw_x/tests/dxshell/tools/* $(DXSHELL_TMPDIR)
+	cp $(WORKDIR)/sw_x/tests/ccd/valgrind.supp $(DXSHELL_TMPDIR)
+	cd $(DXSHELL_TMPDIR) && wget http://$(STORE_HOST):$(HTTP_PORT)/$(ARCHIVED_TESTDATADIR)/$(DXSHELL_INCLUDE_FILES)
+	cd $(DXSHELL_TMPDIR) && tar xvzf $(DXSHELL_INCLUDE_FILES) && rm -f $(DXSHELL_INCLUDE_FILES)
+	cd $(DXSHELL_TMPDIR) && tar cvzf $(LOCAL_SAVE_DIR)/$(DXSHELL_TGZ) *
+	ssh $(STORE_USER)@$(STORE_HOST) "mkdir -p $(PRODUCT_STORAGE_DIR)/dxshell"
+	scp $(LOCAL_SAVE_DIR)/$(DXSHELL_TGZ)  $(STORE_USER)@$(STORE_HOST):$(PRODUCT_STORAGE_DIR)/dxshell
+	ssh $(STORE_USER)@$(STORE_HOST) "cd $(PRODUCT_STORAGE_DIR)/dxshell && rm -f $(DXSHELL_LNK) && ln -s $(DXSHELL_TGZ) $(DXSHELL_LNK)"
+
+.PHONY: printenv
+printenv:
+	env
+	pwd
+
+# --- this target should clean the machine before running tests
+.PHONY: clean_tests
+clean_tests:
+
+# --- this target should install anything needed to test the product
+# --- assume that the build of the product and test of the product DO NOT occur on the same machine
+.PHONY: install_tests
+install_tests: get_idt_tool
+	# show the full-name of the test packages that are being retrieved
+	ssh $(STORE_USER)@$(STORE_HOST) "cd $(PRODUCT_STORAGE_DIR)/linux_output && ls -l $(OUTPUT_LNK)"
+	# get test package
+	scp $(STORE_USER)@$(STORE_HOST):$(PRODUCT_STORAGE_DIR)/linux_output/$(OUTPUT_LNK) $(WORKDIR)
+	# unpackage it
+	cd $(WORKDIR) && zcat $(OUTPUT_LNK) | tar xvf -
+
+.PHONY: get_idt_tool
+get_idt_tool:
+	mkdir -p $(WORKDIR)/sw_i/tools
+	scp $(STORE_USER)@$(STORE_HOST):$(FS_PC_INFRA_STORE_PATH)/idt/idt.zip $(WORKDIR)/sw_i/tools
+	cd $(WORKDIR)/sw_i/tools && unzip idt.zip
+
+# --- this target should execute the tests (usually using the testharness)
+.PHONY: run_tests
+run_tests:
+	$(WORKDIR)/sw_x/dist/igware.runtime/make_validated_links.sh -a save -u $(STORE_USER) -n $(STORE_HOST) -d $(PRODUCT_STORAGE_DIR) -s ccd -s dxshell
+	$(WORKDIR)/sw_x/tools/testharness/bin/testharness.py -c $(WORKDIR)/sw_x/tools/testharness/conf/runs/buildbot_tests.linux.$(LAB).run -o /tmp/testharness/output_linux/$(BUILD_DATE) -b $(STORE_USER)@$(STORE_HOST):/$(FS_STORE_TEST_PATH)/$(BRANCH_NAME)/$(BUILD_DATE)_linux_$(LAB) -k
+	# since the tests have passed, create the links indicating the build has been validated
+	$(WORKDIR)/sw_x/dist/igware.runtime/make_validated_links.sh -a link -u $(STORE_USER) -n $(STORE_HOST) -d $(PRODUCT_STORAGE_DIR)
+
+.PHONY: run_full_tests
+run_full_tests:
+	$(WORKDIR)/sw_x/dist/igware.runtime/make_validated_links.sh -a save -u $(STORE_USER) -n $(STORE_HOST) -d $(PRODUCT_STORAGE_DIR) -s ccd -s dxshell
+	$(WORKDIR)/sw_x/tools/testharness/bin/testharness.py -c $(WORKDIR)/sw_x/tools/testharness/conf/runs/buildbot_tests.linux.full.$(LAB).run -o /tmp/testharness/output_linux/$(BUILD_DATE) -b $(STORE_USER)@$(STORE_HOST):/$(FS_STORE_TEST_PATH)/$(BRANCH_NAME)/$(BUILD_DATE)_linux_$(LAB) -k
+	# since the tests have passed, create the links indicating the build has been validated
+	$(WORKDIR)/sw_x/dist/igware.runtime/make_validated_links.sh -a link -u $(STORE_USER) -n $(STORE_HOST) -d $(PRODUCT_STORAGE_DIR)
+
+# --- this target should report the test results
+.PHONY: report_test_results
+report_test_results:
+	# if the string "TEST RUN STATUS PASS" is not found in the summary output, then it's a fail
+	cat /tmp/testharness/output_linux/$(BUILD_DATE)/testharness_summary.out
+	grep "TEST RUN STATUS PASS" /tmp/testharness/output_linux/$(BUILD_DATE)/testharness_summary.out
+
+# --- this target run once to setup a machine for build and/or test
+SETUP_TMP=$(TMPDIR)/setup/
+EXT_PKG_SRC=http://$(TOOL_HOST):$(HTTP_PORT)/$(TOOL_PATH)/third_party/platform_linux
+
+.PHONY: build_setup
+build_setup: allow_sudo_usage
+	make -f $(WORKDIR)/sw_x/dist/igware.runtime/Makefile.linux centos_update_repo
+	make -f $(WORKDIR)/sw_x/dist/igware.runtime/Makefile.linux install_common_pkgs
+	sudo yum install compat-glibc-2.5-46.2.x86_64 php openssl-devel curl-devel libpng-devel libjpeg-devel libtiff-devel
+	make -f $(WORKDIR)/sw_x/dist/igware.runtime/Makefile.linux centos_install_32bit_pkgs
+	make -f $(WORKDIR)/sw_x/dist/igware.runtime/Makefile.linux centos_install_java_1.6
+
+# --- this target run once on all target machines to install packages required to run the tests
+.PHONY: test_setup
+test_setup: allow_sudo_usage
+	make -f $(WORKDIR)/sw_x/dist/igware.runtime/Makefile.linux centos_update_repo
+	make -f $(WORKDIR)/sw_x/dist/igware.runtime/Makefile.linux install_common_pkgs
+	make -f $(WORKDIR)/sw_x/dist/igware.runtime/Makefile.linux centos_install_32bit_pkgs
+	# machine must be able to password-less SSH to itself
+	cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+	# generate core file into a specific directory
+	sudo mkdir -p /tmp/core
+	sudo bash -c 'echo /tmp/core/core.%e.%p > /proc/sys/kernel/core_pattern'
+	# Create usable temp directory for test results
+	sudo mkdir -p /temp
+	sudo chmod 777 /temp
+	# manual step: make sure /tmp and /home/build are on the same filesystem
+	echo "MANUAL STEP: Make sure /tmp and /home/build are on the same filesystem; move /tmp to /home/tmp if necessary"

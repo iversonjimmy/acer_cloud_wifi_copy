@@ -1,0 +1,7 @@
+deb http://apt-master.ws.routefree.com/ubuntu_x64/ lucid main restricted
+deb http://apt-master.ws.routefree.com/ubuntu_x64/ lucid-updates main restricted
+deb http://apt-master.ws.routefree.com/ubuntu_x64/ lucid universe
+deb http://apt-master.ws.routefree.com/ubuntu_x64/ lucid-updates universe
+deb http://apt-master.ws.routefree.com/ubuntu_x64/ lucid multiverse
+deb http://apt-master.ws.routefree.com/ubuntu_x64/ lucid-updates multiverse
+deb http://apt-master.ws.routefree.com/ubuntu_x64-partner/ lucid partner

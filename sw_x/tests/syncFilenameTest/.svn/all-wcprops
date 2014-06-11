@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/repo/!svn/ver/57229/trunk/sw_x/tests/syncFilenameTest
+END
+syncFilenameTest.py
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/1515/trunk/sw_x/tests/syncFilenameTest/syncFilenameTest.py
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/57229/trunk/sw_x/tests/syncFilenameTest/Makefile
+END
+prepChroot.sh
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/1503/trunk/sw_x/tests/syncFilenameTest/prepChroot.sh
+END

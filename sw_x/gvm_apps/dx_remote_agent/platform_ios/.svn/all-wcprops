@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/53010/trunk/sw_x/gvm_apps/dx_remote_agent/platform_ios
+END
+dx_remote_agent_util_ios.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repo/!svn/ver/31409/trunk/sw_x/gvm_apps/dx_remote_agent/platform_ios/dx_remote_agent_util_ios.h
+END
+dx_remote_agent_util_ios.mm
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repo/!svn/ver/46086/trunk/sw_x/gvm_apps/dx_remote_agent/platform_ios/dx_remote_agent_util_ios.mm
+END
+dx_remote_agent_ios.mm
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repo/!svn/ver/31409/trunk/sw_x/gvm_apps/dx_remote_agent/platform_ios/dx_remote_agent_ios.mm
+END
+dx_remote_agent_util_ios.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repo/!svn/ver/53010/trunk/sw_x/gvm_apps/dx_remote_agent/platform_ios/dx_remote_agent_util_ios.cpp
+END

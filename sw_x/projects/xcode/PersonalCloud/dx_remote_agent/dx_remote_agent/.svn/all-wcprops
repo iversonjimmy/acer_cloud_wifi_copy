@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repo/!svn/ver/44653/trunk/sw_x/projects/xcode/PersonalCloud/dx_remote_agent/dx_remote_agent
+END
+main.m
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repo/!svn/ver/24902/trunk/sw_x/projects/xcode/PersonalCloud/dx_remote_agent/dx_remote_agent/main.m
+END
+AppDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repo/!svn/ver/24902/trunk/sw_x/projects/xcode/PersonalCloud/dx_remote_agent/dx_remote_agent/AppDelegate.h
+END
+AppDelegate.mm
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repo/!svn/ver/44653/trunk/sw_x/projects/xcode/PersonalCloud/dx_remote_agent/dx_remote_agent/AppDelegate.mm
+END
+ViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repo/!svn/ver/24902/trunk/sw_x/projects/xcode/PersonalCloud/dx_remote_agent/dx_remote_agent/ViewController.h
+END
+dx_remote_agent-Info.plist
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repo/!svn/ver/40990/trunk/sw_x/projects/xcode/PersonalCloud/dx_remote_agent/dx_remote_agent/dx_remote_agent-Info.plist
+END
+dx_remote_agent-Prefix.pch
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repo/!svn/ver/24902/trunk/sw_x/projects/xcode/PersonalCloud/dx_remote_agent/dx_remote_agent/dx_remote_agent-Prefix.pch
+END
+ViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repo/!svn/ver/24902/trunk/sw_x/projects/xcode/PersonalCloud/dx_remote_agent/dx_remote_agent/ViewController.m
+END
+dx_remote_agent.entitlements
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repo/!svn/ver/29187/trunk/sw_x/projects/xcode/PersonalCloud/dx_remote_agent/dx_remote_agent/dx_remote_agent.entitlements
+END

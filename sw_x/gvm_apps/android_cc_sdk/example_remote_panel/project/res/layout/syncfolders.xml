@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"> 
+    
+    <!-- Must declare the buttons first, so that the list view knows it's above something. -->
+    <LinearLayout android:id="@+id/buttons"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        
+        <Button android:id="@+id/parent" 
+            android:text="@string/Button_ParentFolder"	  		
+            android:layout_width="93px" 
+            android:layout_height="wrap_content"
+            android:layout_weight="1"    		
+    		android:layout_marginTop="30dip"/>
+            
+        <Button android:id="@+id/save" 
+            android:text="@string/Button_Save"	  		
+            android:layout_width="93px" 
+            android:layout_height="wrap_content"
+    		android:layout_weight="1"    		 
+    		android:layout_marginTop="30dip"/>
+            
+	</LinearLayout>
+	
+    <LinearLayout android:id="@+id/list"
+        android:orientation="horizontal"
+        android:layout_above="@id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true">
+        
+        <ListView android:id="@+id/android:list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+            
+        <TextView android:id="@android:id/empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Label_NoContent"/>
+            
+    </LinearLayout>
+    
+</RelativeLayout>

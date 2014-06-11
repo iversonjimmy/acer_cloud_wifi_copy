@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repo/!svn/ver/34930/trunk/sw_x/tests/mdnsd/publish
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repo/!svn/ver/34838/trunk/sw_x/tests/mdnsd/publish/BUILD
+END
+publish_test.c
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/34930/trunk/sw_x/tests/mdnsd/publish/publish_test.c
+END

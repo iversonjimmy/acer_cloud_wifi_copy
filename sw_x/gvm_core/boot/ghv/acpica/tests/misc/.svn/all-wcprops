@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/tests/misc
+END
+badcode.asl
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/tests/misc/badcode.asl
+END
+grammar.asl
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/tests/misc/grammar.asl
+END

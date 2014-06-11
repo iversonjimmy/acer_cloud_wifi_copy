@@ -1,0 +1,18 @@
+static_cpp_lib(
+    name = 'libexif_parser',
+    includes = [
+        'include',
+    ],
+    private_includes = (['src_android', '/gvm_core/vpl/src_android'] if platform == 'android' else[]),
+    srcs = ( 
+            (['src_linux/exif_parser.cpp', 'common/exif_util.cpp'] if platform == 'linux' or platform == 'linux_emb' or platform == 'cloudnode' else []) 
+            + (['src_android/exif_parser.cpp', 'common/exif_util.cpp'] if platform == 'android' else [])
+           ),
+    deps = (
+            [
+            '/gvm_core/vpl:libvplcore',
+            '/gvm_core/internal/log:liblog',
+            ] 
+            + (['/gvm_core/external/libexif:libexif'] if platform != 'android' else [])
+           )
+)

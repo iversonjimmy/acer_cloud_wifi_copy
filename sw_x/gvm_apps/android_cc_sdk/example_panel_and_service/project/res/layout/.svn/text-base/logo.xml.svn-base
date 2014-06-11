@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+    
+    <ImageView android:src="@drawable/igiconlogopage"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"></ImageView>
+        
+    <Button android:id="@+id/Button_OldUser"
+        android:text="@string/Button_OldUser"
+        android:onClick="onClick_OldUser"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="40dp"
+        android:paddingLeft="40dp"
+        android:paddingTop="18dp"
+        android:paddingBottom="18dp"></Button>
+        
+    <Button android:id="@+id/Button_NewUser"
+        android:text="@string/Button_NewUser"
+        android:onClick="onClick_NewUser"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="40dp"
+        android:paddingLeft="40dp"
+        android:paddingTop="18dp"
+        android:paddingBottom="18dp"></Button>
+        
+</LinearLayout>

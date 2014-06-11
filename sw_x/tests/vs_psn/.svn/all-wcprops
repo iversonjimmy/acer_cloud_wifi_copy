@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/repo/!svn/ver/57270/trunk/sw_x/tests/vs_psn
+END
+valgrind.supp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repo/!svn/ver/26902/trunk/sw_x/tests/vs_psn/valgrind.supp
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/repo/!svn/ver/57270/trunk/sw_x/tests/vs_psn/Makefile
+END

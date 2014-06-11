@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/repo/!svn/ver/1428/trunk/sw_x/gvm_core/boot/ghv/x86
+END
+exception.c
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/54/trunk/sw_x/gvm_core/boot/ghv/x86/exception.c
+END
+smp.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repo/!svn/ver/1428/trunk/sw_x/gvm_core/boot/ghv/x86/smp.c
+END
+interrupt.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/46/trunk/sw_x/gvm_core/boot/ghv/x86/interrupt.h
+END
+smpboot.s
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/59/trunk/sw_x/gvm_core/boot/ghv/x86/smpboot.s
+END
+smp.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repo/!svn/ver/59/trunk/sw_x/gvm_core/boot/ghv/x86/smp.h
+END
+int_handler.S
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/60/trunk/sw_x/gvm_core/boot/ghv/x86/int_handler.S
+END
+dt.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/repo/!svn/ver/46/trunk/sw_x/gvm_core/boot/ghv/x86/dt.c
+END
+int_handler_32.S
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/60/trunk/sw_x/gvm_core/boot/ghv/x86/int_handler_32.S
+END
+dt.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/repo/!svn/ver/46/trunk/sw_x/gvm_core/boot/ghv/x86/dt.h
+END
+apic.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repo/!svn/ver/46/trunk/sw_x/gvm_core/boot/ghv/x86/apic.c
+END
+int_handler_64.S
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/60/trunk/sw_x/gvm_core/boot/ghv/x86/int_handler_64.S
+END
+apic.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repo/!svn/ver/46/trunk/sw_x/gvm_core/boot/ghv/x86/apic.h
+END
+pt.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/repo/!svn/ver/54/trunk/sw_x/gvm_core/boot/ghv/x86/pt.c
+END
+x86.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repo/!svn/ver/46/trunk/sw_x/gvm_core/boot/ghv/x86/x86.c
+END
+pt.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/repo/!svn/ver/46/trunk/sw_x/gvm_core/boot/ghv/x86/pt.h
+END
+x86.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repo/!svn/ver/46/trunk/sw_x/gvm_core/boot/ghv/x86/x86.h
+END
+interrupt.c
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/46/trunk/sw_x/gvm_core/boot/ghv/x86/interrupt.c
+END

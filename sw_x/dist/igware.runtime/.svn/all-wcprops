@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repo/!svn/ver/59951/trunk/sw_x/dist/igware.runtime
+END
+Makefile.winrt
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/52193/trunk/sw_x/dist/igware.runtime/Makefile.winrt
+END
+Makefile.win_desk
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/59674/trunk/sw_x/dist/igware.runtime/Makefile.win_desk
+END
+exec_symstore.py
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/23077/trunk/sw_x/dist/igware.runtime/exec_symstore.py
+END
+Makefile.cloudnode
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/53818/trunk/sw_x/dist/igware.runtime/Makefile.cloudnode
+END
+product.version.number
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/59588/trunk/sw_x/dist/igware.runtime/product.version.number
+END
+Makefile.infra_ops
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/28392/trunk/sw_x/dist/igware.runtime/Makefile.infra_ops
+END
+Makefile.android
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/52193/trunk/sw_x/dist/igware.runtime/Makefile.android
+END
+igware.runtime.common.mk
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/32958/trunk/sw_x/dist/igware.runtime/igware.runtime.common.mk
+END
+winrt.execute_build.template
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repo/!svn/ver/24326/trunk/sw_x/dist/igware.runtime/winrt.execute_build.template
+END
+ios_test.sh
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/25016/trunk/sw_x/dist/igware.runtime/ios_test.sh
+END
+Makefile.woa
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/52193/trunk/sw_x/dist/igware.runtime/Makefile.woa
+END
+make_validated_links.sh
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/51893/trunk/sw_x/dist/igware.runtime/make_validated_links.sh
+END
+Makefile.linux_ol
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/51909/trunk/sw_x/dist/igware.runtime/Makefile.linux_ol
+END
+product.build.number
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/59951/trunk/sw_x/dist/igware.runtime/product.build.number
+END
+Makefile.ios
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/51757/trunk/sw_x/dist/igware.runtime/Makefile.ios
+END
+Makefile.cloudnode_test_linux
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repo/!svn/ver/54078/trunk/sw_x/dist/igware.runtime/Makefile.cloudnode_test_linux
+END
+winrt.generate_execute_build.sh
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repo/!svn/ver/24094/trunk/sw_x/dist/igware.runtime/winrt.generate_execute_build.sh
+END
+android.makerules
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/43851/trunk/sw_x/dist/igware.runtime/android.makerules
+END
+injectversion.py
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/32922/trunk/sw_x/dist/igware.runtime/injectversion.py
+END
+Makefile.linux
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/54412/trunk/sw_x/dist/igware.runtime/Makefile.linux
+END
+sign_msi.bat
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/3799/trunk/sw_x/dist/igware.runtime/sign_msi.bat
+END

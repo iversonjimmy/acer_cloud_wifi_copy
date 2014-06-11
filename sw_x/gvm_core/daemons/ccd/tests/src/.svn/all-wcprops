@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/54943/trunk/sw_x/gvm_core/daemons/ccd/tests/src
+END
+TestSyncUpJobs.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repo/!svn/ver/36755/trunk/sw_x/gvm_core/daemons/ccd/tests/src/TestSyncUpJobs.cpp
+END
+ccd_list_storage_nodes.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repo/!svn/ver/25383/trunk/sw_x/gvm_core/daemons/ccd/tests/src/ccd_list_storage_nodes.cpp
+END
+TestHttpSvcListener.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repo/!svn/ver/36090/trunk/sw_x/gvm_core/daemons/ccd/tests/src/TestHttpSvcListener.cpp
+END
+ccd_login.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/30077/trunk/sw_x/gvm_core/daemons/ccd/tests/src/ccd_login.cpp
+END
+ccd_ready_main.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repo/!svn/ver/25383/trunk/sw_x/gvm_core/daemons/ccd/tests/src/ccd_ready_main.cpp
+END
+TestSyncDownJobs.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repo/!svn/ver/54943/trunk/sw_x/gvm_core/daemons/ccd/tests/src/TestSyncDownJobs.cpp
+END
+TestHttpSvcRequest.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/36090/trunk/sw_x/gvm_core/daemons/ccd/tests/src/TestHttpSvcRequest.cpp
+END
+ccd_link_device.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/25383/trunk/sw_x/gvm_core/daemons/ccd/tests/src/ccd_link_device.cpp
+END
+ccd_register_storage_node.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repo/!svn/ver/25383/trunk/sw_x/gvm_core/daemons/ccd/tests/src/ccd_register_storage_node.cpp
+END
+ccd_shutdown_main.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repo/!svn/ver/25383/trunk/sw_x/gvm_core/daemons/ccd/tests/src/ccd_shutdown_main.cpp
+END
+ccdi_test_common.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repo/!svn/ver/52986/trunk/sw_x/gvm_core/daemons/ccd/tests/src/ccdi_test_common.cpp
+END
+ccd_syncbackdb_test.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repo/!svn/ver/27958/trunk/sw_x/gvm_core/daemons/ccd/tests/src/ccd_syncbackdb_test.cpp
+END

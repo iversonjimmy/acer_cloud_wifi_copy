@@ -1,0 +1,33 @@
+#! /bin/csh -fb
+
+# These kernel and process parameters need to be tuned to run a large
+# configuration:
+#
+#    sysctl -w fs.file-max=1000000
+#
+limit descriptors 1000000
+
+#
+#  The message interval is in milliseconds
+#
+set hostname         = /bin/hostname
+set device_count     =     2
+set message_interval = 10000
+
+$hostname > /dev/null
+
+if ($status != 0) then
+    echo "$hostname failed!"
+    exit 1
+endif
+
+set local            = `$hostname`
+set ans_host         = localhost
+#set ans_host         = ans-c100.lab1.routefree.com
+
+setenv ans_library_path ~/java
+
+set classpath = "/opt/broadon/pkgs/ans/*:/opt/broadon/pkgs/javalib/jar/common.jar:/opt/broadon/pkgs/wslib/jar/*"
+
+java -XX:+UseConcMarkSweepGC -Djava.library.path=$ans_library_path -classpath "$classpath" com.broadon.ans.test.AnsMultiDevice $ans_host $local $device_count $message_interval  linger
+date

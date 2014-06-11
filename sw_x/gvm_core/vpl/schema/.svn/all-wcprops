@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/repo/!svn/ver/80/trunk/sw_x/gvm_core/vpl/schema
+END
+achievements.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repo/!svn/ver/80/trunk/sw_x/gvm_core/vpl/schema/achievements.xsd
+END
+game_status.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/80/trunk/sw_x/gvm_core/vpl/schema/game_status.xsd
+END

@@ -1,0 +1,91 @@
+# This file should be included by all sw_x/dist makefiles
+
+# get all the external storage server information
+include $(WORKDIR)/sw_x/make/external_locations.mk
+
+SRCROOT?=$(WORKDIR)/sw_x
+
+LAB?=lab1
+BUILDER_NAME?=$(PRODUCT)
+ifndef BUILD_BRANCH
+    BRANCH_NAME?=ACT_SDK_TOT
+else
+    BRANCH_NAME?=$(BUILD_BRANCH)
+endif
+PRODUCT_STORAGE_DIR?=/$(FS_STORE_PATH)/$(BRANCH_NAME)/$(BUILDER_NAME)
+PRODUCT_STABLE_DIR?=/$(FS_STORE_PATH)/$(BRANCH_NAME)/stable_build_staging_dir
+ifndef BUILD_DATE
+    BUILD_DATE := $(shell date '+%Y%m%d-%H%M%S')
+endif
+MGMT_USER?=borelease
+MGMT_HOST?=filestore.routefree.com
+
+# TESTDATADIR should be used with HTTP access like wget or curl
+TESTDATADIR="$(TESTDATA_PATH)/dxdata"
+ARCHIVED_TESTDATADIR="pc/archived_test_data/dxdata"
+# FS_TESTDATADIR should be used when accessing the filesystem directly like with scp
+FS_TESTDATADIR="$(FS_TESTDATA_PATH)/dxdata"
+DXSHELL_INCLUDE_FILES := dxshell_files.20131212.tar.gz
+
+LOCK_USER:=build
+LOCK_MASTER:=pcstore.ctbg.acer.com
+LOCK_SCRIPT:=/home/build/build_scripts/buildbot_lock.sh
+
+.PHONY: oel_update_repo
+oel_update_repo:
+	# get the latest repo list
+	sudo cp -f $(WORKDIR)/sw_x/tools/yum/ULN-Base.repo /etc/yum.repos.d/ULN-Base.repo
+	sudo yum clean all
+
+.PHONY: centos_update_repo
+centos_update_repo:
+	# get the latest repo list
+	sudo cp -f $(WORKDIR)/sw_x/tools/yum/act-centos63.repo /etc/yum.repos.d
+	sudo yum clean all
+
+JAVA_DIR_1.6 := /opt/routefree/java1.6.0_26
+.PHONY: install_java_1.6
+install_java_1.6:
+	# install Sun JDK
+	sudo mkdir -p $(JAVA_DIR_1.6)
+	cd /tmp && wget http://$(TOOL_HOST):$(HTTP_PORT)/$(TOOL_PATH)/Java/java1.6.0_26.tgz
+	cd /tmp && sudo tar zxf java1.6.0_26.tgz -C $(JAVA_DIR_1.6)
+
+.PHONY: centos_install_32bit_pkgs
+centos_install_32bit_pkgs:
+ifeq ($(shell uname -m),x86_64)
+	sudo yum install glibc-devel.i686 libgcc.i686 libstdc++.i686 libcurl-devel.i686 libjpeg.i686 libpng.i686 libpng-devel.i686 libpng-static.i686 openssl-devel.i686 libjpeg-devel.i686
+endif
+
+.PHONY: install_common_pkgs
+install_common_pkgs:
+	sudo yum install rsync zlib python-devel MySQL-python zip unzip bind-utils openssh-clients make man wget traceroute patch curl ksh gcc-c++
+
+SETUP_TMP=$(TMPDIR)/setup/
+EXT_PKG_SRC=http://$(TOOL_HOST):$(HTTP_PORT)/$(TOOL_PATH)/third_party/platform_linux
+ifeq ($(shell uname -m),i386)
+	JDK_PKG:=jdk-6u20-linux-i586-rpm.bin
+	JRE_PKG:=jre-6u20-linux-i586-rpm.bin
+else ifeq ($(shell uname -m),i686)
+	JDK_PKG:=jdk-6u20-linux-i586-rpm.bin
+	JRE_PKG:=jre-6u20-linux-i586-rpm.bin
+else ifeq ($(shell uname -m),x86_64)
+	JDK_PKG:=jdk-6u20-linux-x64-rpm.bin
+	JRE_PKG:=jre-6u20-linux-x64-rpm.bin
+else
+$(error Unsupported hardware architecture: $(HOST_ARCH))
+endif
+.PHONY: centos_install_java_1.6
+centos_install_java_1.6:
+	rm -rf $(SETUP_TMP) && mkdir -p $(SETUP_TMP)
+	cd $(SETUP_TMP) && wget --progress=dot:mega $(EXT_PKG_SRC)/$(JDK_PKG) $(EXT_PKG_SRC)/$(JRE_PKG)
+	chmod +x $(SETUP_TMP)/$(JDK_PKG) $(SETUP_TMP)/$(JRE_PKG)
+	cd $(SETUP_TMP) && sudo ./$(JDK_PKG)
+	cd $(SETUP_TMP) && sudo ./$(JRE_PKG)
+	rm -rf $(SETUP_TMP)
+
+.PHONY: allow_sudo_usage
+allow_sudo_usage:
+	echo "The following is asking for the root user's password"
+	su - root -c "sed --in-place '/^%routefree .*/d' /etc/sudoers && echo '%routefree ALL=(ALL) ALL' >> /etc/sudoers"
+

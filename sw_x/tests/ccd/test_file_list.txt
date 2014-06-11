@@ -1,0 +1,8 @@
+usr/lib/pthreadGC2.dll
+usr/bin/cygcrypto-0.9.8.dll
+usr/bin/libcurl-4.dll
+usr/bin/cygssl-0.9.8.dll
+gvm_core/daemons/ccd/ccd.exe
+gvm_core/daemons/ccd/tests/ccd_ready_test.exe
+gvm_core/daemons/ccd/tests/ccd_shutdown_test.exe
+tests/ccd/test_sync/test_ccd_sync.exe

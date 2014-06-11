@@ -1,0 +1,64 @@
+#!/bin/sh
+
+# Any variables that are set at run-time are noted as @@VARIABLE@@.  See the
+# winrt.generate_execute_build.sh script that substitutes the @@VARIABLE@@
+# entries with their actual values.  It is executed by buildbot and buildbot
+# provides the environment variables that are used.
+
+check_result()
+{
+    RETURN_CODE=$1
+
+    if [ $RETURN_CODE -ne 0 ]; then
+        exit $RETURN_CODE
+    fi
+}
+
+
+echo -e "\n----environment variables----"
+export PRODUCT=winrt
+export WORKDIR=@@WORKDIR@@
+export BUILD_SVN_DATE="@@BUILD_SVN_DATE@@"
+export MTV_SVN_PATH=@@MTV_SVN_PATH@@
+export HOMEPATH=\\cygwin\\home\\build
+export BUILD_BRANCH=@@BUILD_BRANCH@@
+export BUILD_CVS_CO_TAG=@@BUILD_CVS_CO_TAG@@
+export BUILD_DATE=@@BUILD_DATE@@
+export IS_MTV_BUILD=@@IS_MTV_BUILD@@
+export VS110COMNTOOLS=C:\\Program\ Files\ \(x86\)\\Microsoft\ Visual\ Studio\ 11.0\\Common7\\Tools\\
+export TEMP=/tmp
+export temp=
+export tmp=
+export PATH="/usr/local/bin:/usr/bin:/cygdrive/c/Python27:/cygdrive/c/Python27/Scripts:/cygdrive/c/Windows/system32:/cygdrive/c/Windows:/cygdrive/c/Windows/System32/Wbem:/cygdrive/c/Windows/System32/WindowsPowerShell/v1.0:/cygdrive/c/Program Files (x86)/Microsoft ASP.NET/ASP.NET Web Pages/v1.0:/cygdrive/c/Program Files (x86)/Windows Kits/8.0/Windows Performance Toolkit:/cygdrive/c/Program Files/Microsoft SQL Server/110/Tools/Binn:/bin:/usr/lib/lapack"
+env
+
+echo -e "\n----clean out build area $WORKDIR----"
+if [ -d $WORKDIR ]; then
+    rm -rf $WORKDIR
+fi
+mkdir -p $WORKDIR
+
+echo -e "\n----checkout----"
+cd $WORKDIR
+svn checkout -r "{$BUILD_SVN_DATE}" $MTV_SVN_PATH/sw_x $MTV_SVN_PATH/pc_build
+check_result $?
+
+echo -e "\n----make clean----"
+cd $WORKDIR
+make -C sw_x/dist/igware.runtime -f Makefile.winrt clean
+check_result $?
+
+echo -e "\n----make build_tools----"
+cd $WORKDIR
+make -C sw_x/dist/igware.runtime -f Makefile.winrt build_tools
+check_result $?
+
+echo -e "\n----make default----"
+cd $WORKDIR
+make -C sw_x/dist/igware.runtime -f Makefile.winrt default
+check_result $?
+
+echo -e "\n----make dist----"
+cd $WORKDIR
+make -C sw_x/dist/igware.runtime -f Makefile.winrt dist
+check_result $?

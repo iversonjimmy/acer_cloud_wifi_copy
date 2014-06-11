@@ -1,0 +1,84 @@
+##########
+# This is the buildbot test run configuration file for the 'ios' PRODUCT.
+##########
+
+##########
+# The following section describes reserved configuration variables.
+##########
+# DB Info
+# To prevent upload of results to the database, comment out at least one of these parameters.
+#TH_DBNAME=testharness_v2
+#TH_DBHOST=mysql.ctbg.acer.com
+#TH_DBUSER=testharness
+#TH_DBPWD=route2me
+
+# Name to use in the database for this run
+TH_RUN_NAME=ios_3.2_against_lab16
+
+# Directory in which to save test run/test case output.
+# Results from each suite executed will be saved in a separate directory under this directory
+# This can be overridden with the -o testharness command line option.
+TH_OUTPUT_DIR=/tmp/testharness/output_ios
+
+# Name of the file where a summary of the test results is written
+# This can be overridden with the -s testharness command line option.
+#TH_SUMMARY_FILE=/tmp/testharness/output/testharness_summary.out
+
+# Directory in which to look for test suites.
+# Default is the sw_x/tests directory in the same tree as the testharness script.
+# This can be overridden with the -t testharness command line option.
+#TH_TEST_SUITE_DIR=$WORKDIR/sw_x/tests
+
+# The list of suites to run and the order in which to run them.
+# You can also optionally specify a timeout (in minutes) via the following
+# syntax: TH_SUITE=vpl::timeout=3
+TH_SUITE=sdk_release_basic::timeout=25
+TH_SUITE=sdk_release_mediametadata::timeout=30
+TH_SUITE=sdk_release_remotefile::timeout=30
+
+##########
+# Test-run-level environment variables go here.
+# They are set in the execution environment of every test case that is executed in this test run.
+##########
+
+# Lab to run against
+LAB=lab16
+LAB_DOMAIN_NAME=pc-prod.igware.net
+# Account to use for tests
+CCD_TEST_ACCOUNT=syncTesterMacBuilder1@igware.com
+
+# Settings for dxshell rc
+USE_ARCHIVED_BUILD=true
+DX_TARGET_PLAT=ios
+
+TEST_MASTER_MACHINE=b18-08
+TARGET_WIN32_CLOUDPC=127.0.0.1
+TARGET_WIN32_CLIENT=127.0.0.1
+TARGET_WIN32_MD=10.50.10.36
+TARGET_MAC_MINI=act-mac-builder3
+TARGET_IOS_DEVICE=10.50.10.38
+
+TARGET_USER=build
+TARGET_WIN32_CLIENT_USER=build
+TARGET_MAC_USER=build
+TARGET_MAC_KEYCHAIN=route2me
+
+TARGET_MACHINE_DEVICE_NAME=b18-08
+TARGET_WIN32_CLIENT_DEVICE_NAME=b18-08
+TARGET_IOS_DEVICE_NAME=iPhone
+
+TARGET_MACHINE_ALIAS=S-1-5-21-871735737-3788125764-673761111-1000
+TARGET_WIN32_CLIENT_ALIAS=S-1-5-21-871735737-3788125764-673761111-1011
+TARGET_PLATFORM_ALIAS=MD1
+
+CCD_TEST_ACCOUNT=PROD_iosTest@acercloud.org
+CCD_TEST_ACCOUNT=PROD_iosTest_1@acercloud.org
+CCD_TEST_ACCOUNT=PROD_iosTest_2@acercloud.org
+CCD_TEST_ACCOUNT_PASSWORD=password
+IDT_TOOLS=$(SRC_SWI)/tools/idt
+
+INTERNAL_LAB_DOMAIN_NAME=lab16.routefree.com
+
+# vplex tests settings
+VPLTEST_BRANCH="PROD"
+

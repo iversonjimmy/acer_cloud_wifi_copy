@@ -1,0 +1,30 @@
+#! /bin/csh -fb
+
+set tmpfile = $1
+set tmpfile = $tmpfile:t
+set tmpfile = /tmp/$tmpfile.log.$$
+
+onintr leave
+
+$1 |& tee $tmpfile
+
+if ($status != 0) then
+    echo " === $1 failed!"
+    echo " === The log is $tmpfile"
+    exit 1
+endif
+
+grep "^The pxd [a-z]* test passed." $tmpfile > /dev/null
+
+if ($status != 0) then
+    echo " === $1 failed!"
+    echo " === The log is $tmpfile"
+    exit 1
+endif
+
+rm -f $tmpfile
+exit 0
+
+leave:
+    rm -f $tmpfile
+    exit 1

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/54766/trunk/sw_x/gvm_core/internal/vssts/shim
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/38043/trunk/sw_x/gvm_core/internal/vssts/shim/BUILD
+END
+vssts_shim.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/54766/trunk/sw_x/gvm_core/internal/vssts/shim/vssts_shim.cpp
+END

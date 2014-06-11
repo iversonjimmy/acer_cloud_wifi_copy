@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		xmlns="urn:game_status.community.igware.com"
+		targetNamespace="urn:game_status.community.igware.com"
+		elementFormDefault="qualified"
+		attributeFormDefault="unqualified">
+
+	<xs:complexType name="IntParam_T">
+		<xs:attribute name="delimiters" type="xs:boolean" use="optional" default="false">
+			<xs:annotation>
+				<xs:documentation>
+				Specify "true" to include delimiters between groups of digits.
+				The actual delimiters used is based on the locale of the user
+				viewing the message. For example, 1000000 with delimiters would
+				be rendered as 1,000,000 for en_US.
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	
+	<xs:complexType name="EnumParam_T">
+		<xs:attribute name="enumIdRef" type="xs:integer" use="required">
+			<xs:annotation>
+				<xs:documentation>
+				Specify which Enum group to use for this parameter.
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	
+	<xs:complexType name="MessageParams_T">
+		<xs:sequence>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="IntParam" type="IntParam_T"/>
+				<xs:element name="EnumParam" type="EnumParam_T"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="Message_T">
+		<xs:sequence>
+			<xs:element name="Format" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>
+					The format string to localize and display to users.
+					To add parameters to the string,
+					specify the parameter number within backslashes.
+					For example, "Param 1 = \1\ and Param 2 = \2\".
+					Each parameter's type must be specified in "Params" and can
+					be either:
+					(1) a 64-bit signed integer or
+					(2) a nested string from a particular enumeration.
+					To actually render a single backslash, specify two backslashes.
+					(This is for the default locale.)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Params" type="MessageParams_T" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+					If the "Format" contains at least one parameter, this
+					element is required.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:nonNegativeInteger" use="required">
+			<xs:annotation>
+				<xs:documentation>
+				0-based index used in the API to refer to the status message.
+				The import utility will verify that the IDs start at 0
+				and are sequential.
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	
+	<xs:complexType name="EnumValue_T">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:annotation>
+					<xs:documentation>
+					The user-visible string.
+					</xs:documentation>
+				</xs:annotation>
+				<xs:attribute name="value" type="xs:long">
+					<xs:annotation>
+						<xs:documentation>
+						Specify the numeric value that will be used in the API
+						to refer to this particular EnumValue.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	
+	<xs:complexType name="Enum_T">
+		<xs:sequence>
+			<xs:element name="EnumValue" type="EnumValue_T" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>
+					List of {user-visible string, numeric value} pairs.
+					(This is for the default locale.)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="enumId" type="xs:nonNegativeInteger" use="required">
+			<xs:annotation>
+				<xs:documentation>
+				Numeric identifier for the Enum.
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	
+	<xs:complexType name="MessageLocalization_T">
+		<xs:sequence>
+			<xs:element name="Format" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>
+					Localized format string for the status message.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:nonNegativeInteger" use="required">
+			<xs:annotation>
+				<xs:documentation>
+				ID of the status message. This must match the ID for a status
+				message already defined within "Definitions" for this title.
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	
+	<xs:complexType name="EnumLocalization_T">
+		<xs:sequence>
+			<xs:element name="EnumValue" type="EnumValue_T"  maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>
+					Sequence of localized strings for the enumeration value.
+					The enumIds must match the enumIds for the default locale.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="enumId" type="xs:nonNegativeInteger" use="required">
+			<xs:annotation>
+				<xs:documentation>
+				ID of the Enum type. This must match the ID for an Enum already
+				defined within the "Definitions" for this title.
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	
+	<xs:complexType name="Localization_T">
+		<xs:sequence>
+			<xs:element name="Message" type="MessageLocalization_T"
+					minOccurs="0" maxOccurs="unbounded">
+			</xs:element>
+			<xs:element name="Enum" type="EnumLocalization_T"
+					minOccurs="0" maxOccurs="unbounded">
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="locale" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>
+				Specify the locale identification as "[language code]" or
+				"[language code]_[country_code]".
+				See ISO-639-1 for language codes and ISO-3166-1 for country codes.
+				Examples:
+				en
+				en_US
+				fr
+				fr_CA
+				fr_FR
+				ja
+				When looking up a string, we return the best match. If the
+				client requests "fr_FR" and there is no Localization_T
+				for "fr_FR", we try "fr". If there is no Localization_T
+				for that either, then we use the default values specified in the
+				Definitions_T.
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	
+	<xs:complexType name="Definitions_T">
+		<xs:sequence>
+			<xs:element name="Message" type="Message_T"
+					minOccurs="0" maxOccurs="unbounded">
+			</xs:element>
+			<xs:element name="Enum" type="Enum_T"
+					minOccurs="0" maxOccurs="unbounded">
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="StatusMessages_T">
+		<xs:sequence>
+			<xs:element name="Definitions" type="Definitions_T"
+					minOccurs="0" maxOccurs="1">
+			</xs:element>
+			<xs:element name="Localization" type="Localization_T"
+					minOccurs="0" maxOccurs="unbounded">
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:element name="StatusMessages" type="StatusMessages_T"/>
+	
+</xs:schema>

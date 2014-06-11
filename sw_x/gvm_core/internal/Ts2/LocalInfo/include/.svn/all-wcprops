@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/58871/trunk/sw_x/gvm_core/internal/Ts2/LocalInfo/include
+END
+LocalInfo_Ccd.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repo/!svn/ver/58871/trunk/sw_x/gvm_core/internal/Ts2/LocalInfo/include/LocalInfo_Ccd.hpp
+END
+LocalInfo_FixedValues.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repo/!svn/ver/58871/trunk/sw_x/gvm_core/internal/Ts2/LocalInfo/include/LocalInfo_FixedValues.hpp
+END
+LocalInfo_InfraHelper.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repo/!svn/ver/58871/trunk/sw_x/gvm_core/internal/Ts2/LocalInfo/include/LocalInfo_InfraHelper.hpp
+END
+LocalInfo.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/58871/trunk/sw_x/gvm_core/internal/Ts2/LocalInfo/include/LocalInfo.hpp
+END

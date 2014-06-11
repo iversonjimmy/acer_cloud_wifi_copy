@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/45373/trunk/sw_x/gvm_core/internal/vssi/include
+END
+vssi_error.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/30354/trunk/sw_x/gvm_core/internal/vssi/include/vssi_error.h
+END
+vssi.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/43896/trunk/sw_x/gvm_core/internal/vssi/include/vssi.h
+END
+basic_vssi_wrapper.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repo/!svn/ver/41922/trunk/sw_x/gvm_core/internal/vssi/include/basic_vssi_wrapper.h
+END
+vssi_types.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/45373/trunk/sw_x/gvm_core/internal/vssi/include/vssi_types.h
+END

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/59434/trunk/sw_x/gvm_core/daemons/ccd/client/src
+END
+ccdi_client_base.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repo/!svn/ver/1989/trunk/sw_x/gvm_core/daemons/ccd/client/src/ccdi_client_base.h
+END
+ccdi_client_protorpc.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repo/!svn/ver/59434/trunk/sw_x/gvm_core/daemons/ccd/client/src/ccdi_client_protorpc.cpp
+END

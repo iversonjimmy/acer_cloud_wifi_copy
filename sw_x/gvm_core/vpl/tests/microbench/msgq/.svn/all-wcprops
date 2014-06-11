@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/681/trunk/sw_x/gvm_core/vpl/tests/microbench/msgq
+END
+vpl_msgq_timing.c
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/681/trunk/sw_x/gvm_core/vpl/tests/microbench/msgq/vpl_msgq_timing.c
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/681/trunk/sw_x/gvm_core/vpl/tests/microbench/msgq/Makefile
+END

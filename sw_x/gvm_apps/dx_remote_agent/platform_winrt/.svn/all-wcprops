@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/53010/trunk/sw_x/gvm_apps/dx_remote_agent/platform_winrt
+END
+dx_remote_agent_util_winrt.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repo/!svn/ver/53010/trunk/sw_x/gvm_apps/dx_remote_agent/platform_winrt/dx_remote_agent_util_winrt.cpp
+END
+dx_remote_agent_winrt.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repo/!svn/ver/49861/trunk/sw_x/gvm_apps/dx_remote_agent/platform_winrt/dx_remote_agent_winrt.cpp
+END
+dx_remote_agent_util_winrt.h
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repo/!svn/ver/31325/trunk/sw_x/gvm_apps/dx_remote_agent/platform_winrt/dx_remote_agent_util_winrt.h
+END

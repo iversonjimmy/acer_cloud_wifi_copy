@@ -1,0 +1,12 @@
+#! /bin/tcsh -f
+
+setenv ans_host    bertoni-ol6a
+setenv device_host bertoni-ol6b
+setenv target_host bertoni-vm
+setenv udp_host    bertoni-ol6c
+
+setenv device_test_program "./ans_circle_s"
+
+set classpath = "./jars/*"
+
+java -classpath "$classpath" com.broadon.ans.test.AnsDeviceTest

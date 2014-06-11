@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory 
+        android:title="@string/SettingCategory_SyncSettings">
+        
+        <PreferenceScreen
+            android:key="screen_syncSettings"
+            android:title="@string/SettingScreenTitle_SyncSettings"
+            android:summary="@string/SettingScreenSummary_SyncSettings">
+            
+                <CheckBoxPreference
+                    android:key="setting_cameraSyncUpload"
+                    android:title="@string/SettingTitle_CameraSyncUpload"
+                    android:summary="@string/SettingSummary_CameraSyncUpload"
+                    android:defaultValue="false"/>
+                    
+                <CheckBoxPreference
+                    android:key="setting_cameraSyncDownload"
+                    android:title="@string/SettingTitle_CameraSyncDownload"
+                    android:summary="@string/SettingSummary_CameraSyncDownload"
+                    android:defaultValue="false"/>
+                    
+                <EditTextPreference
+                	android:key="setting_cameraSyncDownloadMaxSize"
+                	android:title="@string/SettingTitle_CameraSyncDownloadMaxSize"
+                	android:summary="@string/SettingSummary_CameraSyncDownloadMaxSize"/>
+                	
+                <EditTextPreference
+                	android:key="setting_cameraSyncDownloadMaxFiles"
+                	android:title="@string/SettingTitle_CameraSyncDownloadMaxFiles"
+                	android:summary="@string/SettingSummary_CameraSyncDownloadMaxFiles"/>
+                    
+                <CheckBoxPreference
+                    android:key="setting_notification"
+                    android:title="@string/SettingTitle_Notification"
+                    android:summary="@string/SettingSummary_Notification"
+                    android:defaultValue="true"/>
+                    
+        </PreferenceScreen>
+        
+    </PreferenceCategory>
+    
+</PreferenceScreen>

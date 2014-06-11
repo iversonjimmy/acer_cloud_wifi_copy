@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repo/!svn/ver/6379/trunk/sw_x/gvm_core/external/winhttp
+END
+libwinhttp.a
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/6379/trunk/sw_x/gvm_core/external/winhttp/libwinhttp.a
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repo/!svn/ver/6379/trunk/sw_x/gvm_core/external/winhttp/Makefile
+END

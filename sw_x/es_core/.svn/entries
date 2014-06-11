@@ -1,0 +1,83 @@
+10
+
+dir
+59951
+https://src-us.ctbg.acer.com/repo/trunk/sw_x/es_core
+https://src-us.ctbg.acer.com/repo
+
+
+
+2013-12-18T04:57:28.178305Z
+52688
+steveo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+187b5c42-a02b-43e7-ba74-80c9f8da41ab
+
+BUILD
+file
+
+
+
+
+2014-05-22T01:46:52.930899Z
+75ba1d234f235b332a0a1ec8dc4802f9
+2011-03-30T22:51:11.000000Z
+863
+jwesener
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+965
+
+kernel
+dir
+
+tests
+dir
+
+include
+dir
+
+user_local
+dir
+
+esc
+dir
+
+km_include
+dir
+
+user_kernel
+dir
+

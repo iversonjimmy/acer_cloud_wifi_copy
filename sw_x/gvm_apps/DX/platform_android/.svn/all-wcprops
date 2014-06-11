@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/51193/trunk/sw_x/gvm_apps/DX/platform_android
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/20463/trunk/sw_x/gvm_apps/DX/platform_android/BUILD
+END
+build.properties
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/15863/trunk/sw_x/gvm_apps/DX/platform_android/build.properties
+END

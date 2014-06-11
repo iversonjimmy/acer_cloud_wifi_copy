@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repo/!svn/ver/59817/trunk/sw_x/devtools/projects/msvc/CCD
+END
+CCD.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/59817/trunk/sw_x/devtools/projects/msvc/CCD/CCD.vcxproj
+END
+ccd_info.rc
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/20075/trunk/sw_x/devtools/projects/msvc/CCD/ccd_info.rc
+END
+CCD.vcxproj.filters
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/59817/trunk/sw_x/devtools/projects/msvc/CCD/CCD.vcxproj.filters
+END
+resource.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/20075/trunk/sw_x/devtools/projects/msvc/CCD/resource.h
+END
+CCD.exe.manifest
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/49318/trunk/sw_x/devtools/projects/msvc/CCD/CCD.exe.manifest
+END

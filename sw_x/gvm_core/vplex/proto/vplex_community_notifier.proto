@@ -1,0 +1,11 @@
+package vplex.community.notifier;
+
+option java_package = "igware.vplex.pb";
+option java_outer_classname = "CommunityNotifier";
+
+/// This is the first message a client receives upon connection to CSAN.  It is used
+/// to register the notifier connection with CS2 and receive the signing key.
+/// @deprecated CSAN is being replaced by ANS.
+message ConnectionId {
+    required fixed64 id = 1;
+}

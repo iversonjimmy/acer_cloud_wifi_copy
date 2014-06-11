@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7AE1B00E-753E-4F6A-A6A5-976A12AB4350}</ProjectGuid>
+    <RootNamespace>dx_remote_agent</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v90</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v90</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\..\gvm_apps\acer\CCDMonitorService\platform_win\CCDMonSrvClient.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\..\gvm_apps\acer\CCDMonitorService\platform_win\CCDMonSrvClient.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(BUILDROOT)\build_msvc\$(SolutionName)\$(Configuration)\$(ProjectName)\$(PlatformName)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IntDir>$(BUILDROOT)\build_msvc\$(SolutionName)\$(Configuration)\$(ProjectName)\$(PlatformName)_obj\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(BUILDROOT)\build_msvc\$(SolutionName)\$(Configuration)\$(ProjectName)\$(PlatformName)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IntDir>$(BUILDROOT)\build_msvc\$(SolutionName)\$(Configuration)\$(ProjectName)\$(PlatformName)_obj\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)/../../../tests/dx_remote_agent;$(SolutionDir)/../../../tests/dxshell;$(SolutionDir)/../../../tests/dxshell/types;$(SolutionDir)/../../../gvm_core/external/protobuflib;$(SolutionDir)/../../../gvm_core/vpl/include;$(SolutionDir)/../../../gvm_core/vplex/include;$(SolutionDir)/../../../gvm_core/daemons/ccd/client/include;$(SolutionDir)/../../../gvm_core/daemons/ccd/include;$(SolutionDir)/../../../gvm_core/vpl/platform_win32/include;$(SolutionDir)/../../../gvm_core/vplex/platform_win32/include;$(SolutionDir)/../../../gvm_core/internal/log/include;$(SolutionDir)/../../../gvm_core/internal/file_utils/include;$(SolutionDir)/../../../gvm_apps/dx_remote_agent/platform_windows;$(SolutionDir)/../../../gvm_core/internal/media_metadata/common/include;$(SolutionDir)/../../../gvm_core/internal/error_codes/include;$(SolutionDir)/../../../gvm_core/daemons/ccd/types/src;$(SolutionDir)/../../../gvm_core/vplex/proto;$(SolutionDir)/../../../gvm_core/internal/Ts2/include;$(SolutionDir)/../../../gvm_core/internal/Ts2Alt/Ext/src;$(SolutionDir)/../../../gvm_core/internal/Ts2/LocalInfo/include;$(SolutionDir)/../../../storageNode/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ws2_32.lib;Iphlpapi.lib;shell32.lib;Advapi32.lib;Ole32.lib</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(SolutionDir)/../../../tests/dx_remote_agent;$(SolutionDir)/../../../tests/dxshell;$(SolutionDir)/../../../tests/dxshell/types;$(SolutionDir)/../../../gvm_core/external/protobuflib;$(SolutionDir)/../../../gvm_core/vpl/include;$(SolutionDir)/../../../gvm_core/vplex/include;$(SolutionDir)/../../../gvm_core/daemons/ccd/client/include;$(SolutionDir)/../../../gvm_core/daemons/ccd/include;$(SolutionDir)/../../../gvm_core/vpl/platform_win32/include;$(SolutionDir)/../../../gvm_core/vplex/platform_win32/include;$(SolutionDir)/../../../gvm_core/internal/log/include;$(SolutionDir)/../../../gvm_core/internal/file_utils/include;$(SolutionDir)/../../../gvm_apps/dx_remote_agent/platform_windows;$(SolutionDir)/../../../gvm_core/internal/media_metadata/common/include;$(SolutionDir)/../../../gvm_core/internal/error_codes/include;$(SolutionDir)/../../../gvm_core/daemons/ccd/types/src;$(SolutionDir)/../../../gvm_core/vplex/proto;$(SolutionDir)/../../../gvm_core/internal/Ts2/include;$(SolutionDir)/../../../gvm_core/internal/Ts2Alt/Ext/src;$(SolutionDir)/../../../gvm_core/internal/Ts2/LocalInfo/include;$(SolutionDir)/../../../storageNode/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>ws2_32.lib;Iphlpapi.lib;shell32.lib;Advapi32.lib;Ole32.lib;oleaut32.lib</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\gvm_apps\dx_remote_agent\platform_windows\dx_remote_agent_util_win.h" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\common_utils.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\HttpAgent.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\HttpAgentLocal.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\HttpAgentRemote.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\RemoteAgent.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dxshell\types\dx_remote_agent.pb.h" />
+    <ClInclude Include="..\..\..\..\tests\dx_remote_agent\DxRemoteAgentListener.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dx_remote_agent\DxRemoteAgentManager.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dx_remote_agent\DxRemoteCCDAgent.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dx_remote_agent\DxRemoteFileTransferAgent.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dx_remote_agent\DxRemoteHTTPAgent.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dx_remote_agent\DxRemoteMSAAgent.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dx_remote_agent\DxRemoteOSAgent.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dx_remote_agent\DxRemoteQueryDeviceAgent.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dx_remote_agent\DxRemoteTSTestAgent.hpp" />
+    <ClInclude Include="..\..\..\..\tests\dx_remote_agent\dx_remote_agent.h" />
+    <ClInclude Include="..\..\..\..\tests\dx_remote_agent\dx_remote_agent_util.h" />
+    <ClInclude Include="..\..\..\..\tests\dx_remote_agent\IDxRemoteAgent.h" />
+    <ClInclude Include="..\..\..\..\tests\dx_remote_agent\PrepareProtoBufSizeStream.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\gvm_apps\dx_remote_agent\platform_windows\dx_remote_agent_util_win.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_apps\dx_remote_agent\platform_windows\dx_remote_agent_win.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\common_utils.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\HttpAgent.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\HttpAgentLocal.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\HttpAgentRemote.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\RemoteAgent.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\ts_testClient.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dxshell\types\dx_remote_agent.pb.cc" />
+    <ClCompile Include="..\..\..\..\tests\dx_remote_agent\DxRemoteAgentListener.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dx_remote_agent\DxRemoteAgentManager.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dx_remote_agent\DxRemoteCCDAgent.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dx_remote_agent\DxRemoteFileTransferAgent.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dx_remote_agent\DxRemoteHTTPAgent.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dx_remote_agent\DxRemoteMSAAgent.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dx_remote_agent\DxRemoteOSAgent.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dx_remote_agent\DxRemoteQueryDeviceAgent.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dx_remote_agent\DxRemoteTSTestAgent.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dx_remote_agent\dx_remote_agent.cpp" />
+    <ClCompile Include="..\..\..\..\tests\dx_remote_agent\IDxRemoteAgent.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\gvm_apps\acer\CCDMonitorService\platform_win\CCDMonSrvClient\CCDMonSrvClient.vcxproj">
+      <Project>{0c0c1079-42c9-4381-ae75-db3cb46f4339}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\CCDIClient\CCDIClient.vcxproj">
+      <Project>{e791a6b9-c726-4831-ba4e-867b7f11ff19}</Project>
+      <Private>true</Private>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\internal_libs\internal_libs.vcxproj">
+      <Project>{cdd83bcf-8b07-4da5-9cbe-ceace05a7f7b}</Project>
+      <Private>true</Private>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\media_metadata_shared_impl\media_metadata_shared_impl.vcxproj">
+      <Project>{85dffabc-a0b3-4517-8b00-7cf19e55a941}</Project>
+      <Private>true</Private>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\protorpc_client\protorpc_client.vcxproj">
+      <Project>{29edd377-4676-4a3a-a003-92d2235e5f2d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\vplex\vplex.vcxproj">
+      <Project>{7a28862d-2195-4d66-b9f6-e6e83f06e71f}</Project>
+      <Private>true</Private>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\vssts\vssts.vcxproj">
+      <Project>{e7b4846c-c46b-4dca-b3d7-340ed993d877}</Project>
+      <Private>true</Private>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

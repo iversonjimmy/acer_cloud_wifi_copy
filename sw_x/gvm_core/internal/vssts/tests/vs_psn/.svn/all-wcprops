@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/56879/trunk/sw_x/gvm_core/internal/vssts/tests/vs_psn
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/41487/trunk/sw_x/gvm_core/internal/vssts/tests/vs_psn/BUILD
+END
+vsTest_async_notification_events.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repo/!svn/ver/46885/trunk/sw_x/gvm_core/internal/vssts/tests/vs_psn/vsTest_async_notification_events.cpp
+END
+vsTest_personal_cloud_data.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repo/!svn/ver/39207/trunk/sw_x/gvm_core/internal/vssts/tests/vs_psn/vsTest_personal_cloud_data.hpp
+END
+vsTest_dbeh.sh
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repo/!svn/ver/53620/trunk/sw_x/gvm_core/internal/vssts/tests/vs_psn/vsTest_dbeh.sh
+END
+vsTest_vscs_async.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repo/!svn/ver/55197/trunk/sw_x/gvm_core/internal/vssts/tests/vs_psn/vsTest_vscs_async.cpp
+END
+vsTest_async_notification_events.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repo/!svn/ver/39207/trunk/sw_x/gvm_core/internal/vssts/tests/vs_psn/vsTest_async_notification_events.hpp
+END
+vsTest_psn.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repo/!svn/ver/56879/trunk/sw_x/gvm_core/internal/vssts/tests/vs_psn/vsTest_psn.cpp
+END
+vsTest_vscs_async.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repo/!svn/ver/39207/trunk/sw_x/gvm_core/internal/vssts/tests/vs_psn/vsTest_vscs_async.hpp
+END
+vsTest_personal_cloud_data.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repo/!svn/ver/50747/trunk/sw_x/gvm_core/internal/vssts/tests/vs_psn/vsTest_personal_cloud_data.cpp
+END

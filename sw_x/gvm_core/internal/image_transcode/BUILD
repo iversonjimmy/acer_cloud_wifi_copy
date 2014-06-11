@@ -1,0 +1,70 @@
+static_cpp_lib(
+    name = 'libimage_transcode',
+    includes = [
+        'include',
+        ] + {
+            'linux':[
+                'src_cloudnode',
+            ],
+            'linux_emb':[
+                'src_cloudnode',
+            ],
+            'cloudnode':[
+                'src_cloudnode',
+            ],
+            'android':[
+                'src_android',
+                '/gvm_core/vpl/src_android',
+            ],
+        }[platform],
+    srcs = {
+            'linux':[
+                'src/image_transcode.cpp',
+                'src_cloudnode/image__transcode.cpp',
+            ],
+            'linux_emb':[
+                'src/image_transcode.cpp',
+                'src_cloudnode/image__transcode.cpp',
+            ],
+            'cloudnode':[
+                'src/image_transcode.cpp',
+                'src_cloudnode/image__transcode.cpp',
+            ],
+            'android':[
+                'src/image_transcode.cpp',
+                'src_android/image__transcode.cpp',
+            ],
+           }[platform],
+
+    deps = {
+            'linux':[
+                # '/gvm_core/external/magick++:libgraphicsmagick',
+                # '/gvm_core/external/magick++:libgraphicsmagick++',
+                '/:libm',
+                '/:libpthread',
+                '/gvm_core/vpl:libvplcore',
+                '/gvm_core/internal/log:liblog',
+            ],
+            'linux_emb':[
+                # '/gvm_core/external/magick++:libgraphicsmagick',
+                # '/gvm_core/external/magick++:libgraphicsmagick++',
+                '/:libm',
+                '/:libpthread',
+                '/gvm_core/vpl:libvplcore',
+                '/gvm_core/internal/log:liblog',
+            ],
+            'cloudnode':[
+                # '/gvm_core/external/magick++:libgraphicsmagick',
+                # '/gvm_core/external/magick++:libgraphicsmagick++',
+                '/:libm',
+                '/:libpthread',
+                '/gvm_core/vpl:libvplcore',
+                '/gvm_core/internal/log:liblog',
+            ],
+            'android':[
+                '/:libm',
+                '/gvm_core/vpl:libvplcore',
+                '/gvm_core/internal/log:liblog',
+            ],
+          }[platform],
+)

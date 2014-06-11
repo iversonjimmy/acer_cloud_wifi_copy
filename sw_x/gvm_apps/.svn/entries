@@ -1,0 +1,61 @@
+10
+
+dir
+59951
+https://src-us.ctbg.acer.com/repo/trunk/sw_x/gvm_apps
+https://src-us.ctbg.acer.com/repo
+
+
+
+2014-05-12T02:52:12.203612Z
+59274
+chester.huang
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+187b5c42-a02b-43e7-ba74-80c9f8da41ab
+
+imltool
+dir
+
+repair_tool
+dir
+
+actool
+dir
+
+vplexTests
+dir
+
+syncConfigTest
+dir
+
+dx_remote_agent
+dir
+
+android_cc_sdk
+dir
+
+shellext
+dir
+
+acer
+dir
+
+DX
+dir
+
+outlook
+dir
+

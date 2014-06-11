@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/dispatcher
+END
+dswstate.c
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/dispatcher/dswstate.c
+END
+dsopcode.c
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/dispatcher/dsopcode.c
+END
+dswexec.c
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/dispatcher/dswexec.c
+END
+dsmethod.c
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/dispatcher/dsmethod.c
+END
+dsutils.c
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/dispatcher/dsutils.c
+END
+dswscope.c
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/dispatcher/dswscope.c
+END
+dsmthdat.c
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/dispatcher/dsmthdat.c
+END
+dsfield.c
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/dispatcher/dsfield.c
+END
+dsinit.c
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/dispatcher/dsinit.c
+END
+dsobject.c
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/dispatcher/dsobject.c
+END
+dswload.c
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/dispatcher/dswload.c
+END

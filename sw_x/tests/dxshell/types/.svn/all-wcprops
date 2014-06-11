@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repo/!svn/ver/59258/trunk/sw_x/tests/dxshell/types
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repo/!svn/ver/21898/trunk/sw_x/tests/dxshell/types/BUILD
+END
+dx_remote_agent.proto
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/59258/trunk/sw_x/tests/dxshell/types/dx_remote_agent.proto
+END

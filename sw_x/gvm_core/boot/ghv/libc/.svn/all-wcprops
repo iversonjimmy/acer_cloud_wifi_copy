@@ -1,0 +1,125 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/repo/!svn/ver/1428/trunk/sw_x/gvm_core/boot/ghv/libc
+END
+quad.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repo/!svn/ver/45/trunk/sw_x/gvm_core/boot/ghv/libc/quad.h
+END
+bsd_types.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/45/trunk/sw_x/gvm_core/boot/ghv/libc/bsd_types.h
+END
+umoddi3.c
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/1428/trunk/sw_x/gvm_core/boot/ghv/libc/umoddi3.c
+END
+string.c
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/1428/trunk/sw_x/gvm_core/boot/ghv/libc/string.c
+END
+bits.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repo/!svn/ver/45/trunk/sw_x/gvm_core/boot/ghv/libc/bits.h
+END
+assert.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/45/trunk/sw_x/gvm_core/boot/ghv/libc/assert.h
+END
+qdivrem.c
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/1428/trunk/sw_x/gvm_core/boot/ghv/libc/qdivrem.c
+END
+malloc.c
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/1428/trunk/sw_x/gvm_core/boot/ghv/libc/malloc.c
+END
+udivdi3.c
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/1428/trunk/sw_x/gvm_core/boot/ghv/libc/udivdi3.c
+END
+types.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repo/!svn/ver/41/trunk/sw_x/gvm_core/boot/ghv/libc/types.h
+END
+string.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/41/trunk/sw_x/gvm_core/boot/ghv/libc/string.h
+END
+malloc.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/41/trunk/sw_x/gvm_core/boot/ghv/libc/malloc.h
+END
+compiler.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/45/trunk/sw_x/gvm_core/boot/ghv/libc/compiler.h
+END
+valloc.c
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/45/trunk/sw_x/gvm_core/boot/ghv/libc/valloc.c
+END
+bitmap.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/45/trunk/sw_x/gvm_core/boot/ghv/libc/bitmap.h
+END
+kprintf.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repo/!svn/ver/45/trunk/sw_x/gvm_core/boot/ghv/libc/kprintf.h
+END
+sprintf.c
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/1428/trunk/sw_x/gvm_core/boot/ghv/libc/sprintf.c
+END
+valloc.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/45/trunk/sw_x/gvm_core/boot/ghv/libc/valloc.h
+END
+memset.c
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/1428/trunk/sw_x/gvm_core/boot/ghv/libc/memset.c
+END
+memcpy.c
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/1428/trunk/sw_x/gvm_core/boot/ghv/libc/memcpy.c
+END

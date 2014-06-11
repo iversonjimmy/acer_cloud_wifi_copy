@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Acer Cloud</string>
+    <string name="auth_label_account_name">Acer Cloud</string>
+    <string name="activity_title">Register acerCloud Account</string>
+    
+    <!-- sign in activity -->
+    <string name="signin_label_title">Welcome</string>
+    <string name="signin_label_summery">acerCloud automatically syncs your data across all your computers, mobile phones and tablets, and share information among devices through acerCloud. If you already have an acerCloud account, you can sign in to start synchronization and share your data easily.</string>
+    <string name="signin_label_dont_have_account">Don\'t have an acerCloud Account?</string>
+    <string name="signin_label_signup">How to sign up an Acer ID?</string>
+    <string name="signin_label_account_info">Enter account information</string>
+    <string name="signin_label_email">Email</string>
+    <string name="signin_label_remember_account">Please remember my account</string>
+    <string name="signin_label_forgot_password"><u>Forget password?</u></string>
+    <string name="signin_button_signin">Sign in</string>
+    <string name="signin_dialog_title_incorrect">Incorrect</string>
+    <string name="signin_dialog_content_incorrent">The username and password you entered is incorrect.</string>
+    <string name="signin_dialog_title_reset_account">Reset your account</string>
+    <string name="signin_dialog_content_no_account">No account with that email address exists.</string>
+    <string name="signin_dialog_content_reset_account">An email has been sent to %s with further instructions.</string>
+    <string name="signin_dialog_title_nonacer_limitation">Limit Non-Acer Devices</string>
+    <string name="signin_dialog_content_nonacer_limitation">acerCloud does not support Non-Acer devices to sign up accounts. You should start to sign up from Acer devices first.</string>
+    <string name="signin_dialog_button_submit">Submit</string>
+    
+    <!-- sign up activity -->
+    <string name="signup_label_summery">To use acerCloud Service, you must enter the name, password and email the basic information required to register with your acer Cloud account.</string>
+    <string name="signup_label_name">Name</string>
+    <string name="signup_hint_firstname">First name</string>
+    <string name="signup_hint_lastname">Last name</string>
+    <string name="signup_label_email">Your Email (As Acer account name)</string>
+    <string name="signup_hint_email">Type a Email</string>
+    <string name="signup_hint_confirm_email">Confirm Email</string>
+    <string name="signup_label_send_confirm_email">We will send a confirmation email at this account.</string>
+    <string name="signup_label_remember_account">Please remember my account</string>
+    <string name="signup_hint_password">Type a Password</string>
+    <string name="signup_label_min_char">( 8-characters minimum )</string>
+    
+    <!-- logout activity -->
+    <string name="logout_label_logout">acerCloud account is being logged out, please wait a moment...</string>
+    <string name="logout_label_login">Login to acerCloud, please wait a moment...</string>
+    
+    <!-- progressing activity -->
+    <string name="processing_label_summery">Your device needs to communicate with acerCloud servers to set up your account. This may take up to five minutes.</string>
+    <string name="processing_label_processing_signup">Signing up...</string>
+    <string name="processing_label_processing_signin">Signing in...</string>
+    
+    <!-- finish activity -->
+    <string name="finish_label_summery">Your acerCloud account is almost done. We will send account validation confirm form via email. Therefore you need receive your email account for account validation. Thank you very much for taking the time to register your acerCloud account.</string>
+    
+    <!-- Toast message -->
+    <string name="message_cannot_add_account">acerCloud does not allow you to sing in multiple accounts. If you want to use another account, please change user account first.</string>
+    <string name="message_email_invalid">Your Email format is invalid!</string>
+    <string name="message_email_empty">Please fill in your Email!</string>
+    <string name="message_password_empty">Please fill in your Password!</string>
+    <string name="message_unknown_error">An unknown error has occurred!</string>
+    <string name="message_email_exists">Email name has been registered!</string>
+    <string name="message_firstname_empty">Please fill in your First name!</string>
+    <string name="message_lastname_empty">Please fill in your Last name!</string>
+    <string name="message_confirm_email_invalid">Confirm E-mail does not match!</string>
+    <string name="message_devicename_has_disallowedchars">The device name cannot contain tabs, carriage returns, or these characters: %1$s</string>
+    <string name="message_id_length_not_enough">User Name must be between 6 and 32 characters</string>
+    <string name="message_pw_length_not_enough">Password must be between 6 and 32 characters</string>
+    
+    <!-- common string -->
+
+    <!-- Device Management activity -->
+    <string name="device_label_registrered_devices">Registered Devices</string>
+    <string name="device_label_item_title_acer">Acer Devices</string>
+    <string name="device_label_item_title_non_acer">Non-Acer Devices</string>
+    <string name="device_label_type_phone">Android Smartphone</string>
+    <string name="device_label_type_tablet">Android Tablet</string>
+    <string name="device_label_type_pc">Windows 7</string>
+    <string name="device_label_type_unknown">Unknown system</string>
+
+    <!-- common -->
+    <string name="label_password">Password</string>
+    <string name="button_back">Back</string>
+    <string name="button_next">Next</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="button_finish">Finish</string>
+    <string name="button_settings">Settings</string>
+
+    <!-- sync label name -->
+    <string name="sync_label_notebook">Notebook</string>
+    <string name="sync_label_favorite">Browser Favorite</string>
+    <string name="sync_label_camera_roll_stream">Camera roll stream</string>
+
+    <!-- used in igware ac panel -->
+    <!-- CcdiService -->
+    
+    <string name="igware_cloud_client_label">Acer Control Panel Service</string>
+    <string name="igware_cloud_client_started">Acer Control Panel Service started</string>
+    <string name="igware_cloud_client_stopped">Acer Control Panel Service stopped</string>
+    <string name="igware_cloud_client_failed_start">Failed to start Acer Control Panel Service</string>
+    
+    <!-- CcdiServiceBinder -->
+    
+    <!-- Notifications  -->
+    <string name="Msg_NotificationSyncComplete">Sync complete!</string>
+    <string name="Msg_NotificationErrorInfraConnectionLost">Lost server connection!</string>
+    <string name="Msg_NotificationErrorStorageConnectionLost">Lost connection to storage node:</string>
+    <string name="Msg_NotificationCannotAccessFolder">Cannot access folder:</string>
+    <string name="Msg_NotificationOutOfSpace">Folder is out of memory space:</string>
+    <string name="Msg_NotificationQuotaReached">Memory quota limit reached!</string>
+    
+    <!-- CcdActivityDelegate -->
+    
+    <string name="Msg_LoggingOut">Logging out...</string>
+    
+    <string name="Msg_Refreshing">Refreshing...</string>
+    
+    <string name="Label_UnlinkDeviceFailed">Unlink device failed</string>    
+    <string name="Msg_UnlinkingDevice">Unlinking the device...</string>
+    <string name="Msg_UnlinkedDevice">Unlinked the device.</string>
+    
+    <string name="Label_PauseSyncFailed">Pause sync agent failed</string>
+    <string name="Msg_PausingSync">Pausing sync agent...</string>
+    <string name="Msg_PausedSync">Paused sync agent</string>
+    
+    <string name="Label_ResumeSyncFailed">Resume sync agent failed</string>
+    <string name="Msg_ResumingSync">Resuming sync agent...</string>
+    <string name="Msg_ResumedSync">Resumed sync agent</string>
+    <!-- Utils -->
+    
+    <string name="Msg_ErrorCode">Error code: %1$d</string>
+    
+    <string name="VPL_ERR_UNREACH">Error: Server is unreachable</string>
+    <string name="VPL_ERR_INVALID_LOGIN">Error: Incorrect user name or password</string>
+    
+    <string name="CCDI_ERROR_PARAMETER">Error: Bad function parameter</string>
+    <string name="CCDI_ERROR_QUERY_TYPE">Error: Invalid query type</string>
+    <string name="CCDI_ERROR_INVALID_SIZE">Error: Invalid size</string>
+    <string name="CCDI_ERROR_ADD_CACHE_USER">Error: Add cache user</string>
+    <string name="CCDI_ERROR_REMOVE_CACHE_USER">Error: Remove cache user</string>
+    <string name="CCDI_ERROR_SHUTDOWN_TITLE">Error: Shutdown title</string>
+    <string name="CCDI_ERROR_FAIL">Error: Failure</string>
+    <string name="CCDI_ERROR_AGAIN">Error: Again</string>
+    <string name="CCDI_ERROR_ADD_EVENT">Error: Add event</string>
+    <string name="CCDI_ERROR_GET_EVENTS">Error: Get events</string>
+    <string name="CCDI_ERROR_NO_CACHED_USERS">Error: No cached users</string>
+    <string name="CCDI_ERROR_LOGGED_IN">Error: Already logged in</string>
+    <string name="CCDI_ERROR_OUT_OF_MEM">Error: Out of memory</string>
+    <string name="CCDI_ERROR_NOT_GAME">Error: Not a game process</string>
+    <string name="CCDI_ERROR_COMMIT_SAVE_DATA">Error: Commit save data</string>
+    <string name="CCDI_ERROR_BAD_RESPONSE">Error: Bad response</string>
+    <string name="CCDI_ERROR_GET_SESSION_DATA">Error: Get session data</string>
+    <string name="CCDI_ERROR_REMOVE_USER_TITLE">Error: Remove user title</string>
+    <string name="CCDI_ERROR_FAKE_USER">Error: Fake user</string>
+    <string name="CCDI_ERROR_NO_PASSWORD">Error: No password</string>
+    <string name="CCDI_ERROR_NO_EVENTS">Error: No events</string>
+    <string name="CCDI_ERROR_ADD_NOTIFICATION">Error: Add notification</string>
+    <string name="CCDI_ERROR_ACHIEVE_INDEX">Error: Unknown achievement index</string>
+    <string name="CCDI_ERROR_SORT_CRITERIA">Error: Invalid sorting criteria key</string>
+    <string name="CCDI_ERROR_RPC_FAILURE">Error: RPC failure</string>
+    
+    <string name="CCD_ERROR_PARAMETER">Error: Bad function parameter</string>
+    <string name="CCD_ERROR_HTTP_STATUS">Error: HTTP status</string>
+    <string name="CCD_ERROR_USER_NOT_FOUND">Error: User not found</string>
+    <string name="CCD_ERROR_FOPEN">Error: Fopen</string>
+    <string name="CCD_ERROR_MKDIR">Error: Mkdir</string>
+    <string name="CCD_ERROR_OPENDIR">Error: Opendir</string>
+    <string name="CCD_ERROR_PARSE_CONTENT">Error: Parse content</string>
+    <string name="CCD_ERROR_SIGNATURE_INVALID">Error: Invalid signature</string>
+    <string name="CCD_ERROR_NOT_IMPLEMENTED">Error: Not implemented</string>
+    <string name="CCD_ERROR_RENAME">Error: Rename</string>
+    <string name="CCD_ERROR_MKSTEMP">Error: Mkstemp</string>
+    <string name="CCD_ERROR_SIGNED_IN">Error: User already signed in</string>
+    <string name="CCD_ERROR_NOT_SIGNED_IN">Error: User not signed in</string>
+    <string name="CCD_ERROR_OFFLINE_MODE">Error: Invalid for offline mode</string>
+    <string name="CCD_ERROR_WRONG_USER_ID">Error: Wrong user id</string>
+    <string name="CCD_ERROR_TITLE_NOT_FOUND">Error: Title not found</string>
+    <string name="CCD_ERROR_NO_CACHED_USERS">Error: No cached users</string>
+    <string name="CCD_ERROR_ES_FAIL">Error: ES failure</string>
+    <string name="CCD_ERROR_ECDK_FAIL">Error: ECDK failure</string>
+    <string name="CCD_ERROR_NOMEM">Error: No memory left</string>
+    <string name="CCD_ERROR_CS_FAIL">Error: CS failure</string>
+    <string name="CCD_ERROR_WRONG_STATE">Error: Wrong state</string>
+    <string name="CCD_ERROR_LOCK_FAILED">Error: Lock failed</string>
+    <string name="CCD_ERROR_SOCKET_RECV">Error: Socket recv</string>
+    <string name="CCD_ERROR_INTERNAL">Error: Internal</string>
+    <string name="CCD_ERROR_TITLE_EXISTS">Error: Title already exists</string>
+    <string name="CCD_ERROR_STATVFS">Error: Statvs failure</string>
+    <string name="CCD_ERROR_DISK_SERIALIZE">Error: Disk serialization</string>
+    <string name="CCD_ERROR_NOT_INIT">Error: Not initialized</string>
+    <string name="CCD_ERROR_ALREADY_INIT">Error: Already initialized</string>
+    <string name="CCD_ERROR_BAD_SERVER_RESPONSE">Error: Bad server response</string>
+    <string name="CCD_ERROR_VSDS_FAIL">Error: VSDS failure</string>
+    <string name="CCD_ERROR_NEED_PRIVILEGE">Error: Need elevated privilege</string>
+    <string name="CCD_ERROR_NEED_PASSWORD">Error: Need password</string>
+    <string name="CCD_ERROR_PASSWORD_NOT_ALLOWED">Error: Password not allowed</string>
+    <string name="CCD_ERROR_SAVE_LOCATION_NOT_FOUND">Error: Save location not found</string>
+    <string name="CCD_ERROR_OUT_OF_BVS_DEVICES">Error: Out of BVS devices</string>
+    <string name="CCD_ERROR_TITLE_RUNNING">Error: A title is already running</string>
+    <string name="CCD_ERROR_ATTEST_FAILED">Error: Attestation failure</string>
+    <string name="OPS_ERROR_REGISER_USERNAME">Error: You must enter a username</string>
+    <string name="OPS_ERROR_REGISER_EMAIL">Error: You must fill in a valid email address</string>
+    <string name="OPS_ERROR_REGISER_PSW">Error: You must enter a password</string>
+    
+    <!-- may be deleted later  -->
+    <string name="Label_CameraSyncFolder">My Camera Photos</string>
+</resources>

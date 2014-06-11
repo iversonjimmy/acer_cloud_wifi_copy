@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets">
+    <Import Project="vplex.props" Condition="'$(imported_vplex_props)'==''"/>
+  </ImportGroup>
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <!--workaround for MSB4011 warning-->
+    <imported_protorpc_client_props>true</imported_protorpc_client_props>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)/../../../gvm_core/internal/protoxml;$(SolutionDir)/../../../gvm_core/internal/protorpc;$(SolutionDir)/../../../gvm_core/internal/error_codes/include;$(SolutionDir)/../../../gvm_core/internal/file_utils/include;$(SolutionDir)/../../../gvm_core/internal/log/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+</Project>

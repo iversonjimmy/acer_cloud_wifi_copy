@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repo/!svn/ver/59100/trunk/sw_x/gvm_apps/android_cc_sdk/build_native_libs/project
+END
+default.properties
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/build_native_libs/project/default.properties
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repo/!svn/ver/12639/trunk/sw_x/gvm_apps/android_cc_sdk/build_native_libs/project/.classpath
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/build_native_libs/project/.project
+END
+AndroidManifest.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repo/!svn/ver/25526/trunk/sw_x/gvm_apps/android_cc_sdk/build_native_libs/project/AndroidManifest.xml
+END
+.cproject
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/build_native_libs/project/.cproject
+END

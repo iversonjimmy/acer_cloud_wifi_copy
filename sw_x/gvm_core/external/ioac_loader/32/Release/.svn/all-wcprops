@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/31317/trunk/sw_x/gvm_core/external/ioac_loader/32/Release
+END
+inteldll.dll
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/31317/trunk/sw_x/gvm_core/external/ioac_loader/32/Release/inteldll.dll
+END
+customer.dll
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/22372/trunk/sw_x/gvm_core/external/ioac_loader/32/Release/customer.dll
+END

@@ -1,0 +1,24 @@
+#! /bin/csh -fb
+
+onintr leave
+
+set log  = /tmp/ans_keep_test.log.$$
+set iter = 0
+
+while (1)
+    make ans_keep_test
+
+    ./ans_keep_test --no-valgrind |& tee $log || break;
+
+    sleep 2
+    @ iter++;
+    echo " === Finished iteration $iter"
+end
+
+echo "The log is $log"
+
+exit 1
+
+leave:
+    rm -f $log
+    echo "Interrupted"

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 31
+/repo/!svn/ver/59951/trunk/sw_x
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/repo/!svn/ver/55986/trunk/sw_x/BUILD
+END
+BUILD.defs
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/repo/!svn/ver/29176/trunk/sw_x/BUILD.defs
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/repo/!svn/ver/51852/trunk/sw_x/Makefile
+END

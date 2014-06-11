@@ -1,0 +1,30 @@
+#! /bin/csh -fb
+
+set log = /tmp/noconnect.log.$$
+
+#
+#  ans_host should point to a valid machine that's not running ANS, or
+#  an invalid DNS name.  Those choices test different code paths.
+#
+setenv ans_host    no-such-host
+setenv ans_blob    001C00034C86E4807EC7B53E2C08532115C7F03E00000139AE6D13AD00050030D6E15A43A2F56968A82BD1345358CF206867846CDBF9ECCAA7F4A7EDB9903AA2D41B6411A6625C2FD7487E15574C904E0020F1CD06F4153E0564D002E37ECD7B0C7A72CA6524295BE73B73A0C58BF3BAEE3D00208B77D1357A2FD4E62A08D2FAD956320E9F2758CA22D1C24CF769E224B9F0E6CF0020E027B9C69ED6751ED0D6C54B74CB9D084317FF7FEEFE97B8FD097E8E2A63BB3F0014002AEEF74ADB24E8789AB9D551D3C1495A2B3349
+setenv ans_key     0DD1928E4DFFEEA6C32EFFA95EBB49700E48DBC6
+setenv ans_user    5514346034295715134
+setenv ans_device  3172877339046965310
+
+onintr leave
+
+while (1)
+    ./noconnect |& tee $log
+
+    if ($status != 0) then
+        echo "*** noconnect failed"
+        exit 1
+    endif
+
+    echo " === noconnect test passed."
+    sleep 1
+end
+
+leave:
+    rm -f $log

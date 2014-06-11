@@ -1,0 +1,49 @@
+Running the Server Unit Test
+
+    The run-pxdtest script runs one round of the PXD server unit test.  It
+assumes the required jar files have been installed and the environment
+variable "jars" points to the relevant directory.
+
+    The run-many-pxd installs the jars required for the server unit test and
+executes the run-pxdtest repeatedly until a failure occurs.
+
+
+Running the PXD Server
+
+    The setup-real script installs all the jars needed to run a complete
+instance of the PXD server:
+    $ ./setup-real
+
+Once setup-real has been run, this directory can be saved into a tar file and
+moved to other machines.  To start the server on a remote machine, use:
+    $ tar cvf ~/pxd.tar .
+    $ scp ~/pxd.tar root@<host name>:
+
+    # mkdir  ~/pxd
+    # cd     ~/pxd
+    # tar xf ~/pxd.tar
+    # export jars=./jars-real
+    # export pxd_ans_dns=<ans host>
+    # ./run-server
+
+You might need to copy the appropriate libsetSockOpt.so version to the remote
+machine if the architecture (64-bit vs 32-bit) is not the same as the machine
+on which you ran setup-real.  See setup-real for the location of the libraries.
+
+   If you wish to specify the PXD cluster name for the instance, you must set
+the pxd.cluster setconf variable.  Otherwise, the run-server script sets the
+output of the hostname program as the cluster name.  The script uses the same
+logic to set the pxd.name and pxd.members values.
+
+    The start-real script invokes setup-real, and then starts an instance of
+the PXD demon on the current machine using the run-server script.  It must be
+run as root because the PXD demon uses reserved TCP ports.  Most likely, you
+will need to set the pxd_ans_dns environment variable:
+    # export pxd_ans_dns=<ans host>
+    # ./start-real
+
+Running Tests Against a Server
+
+    The run-triangle-bw script runs two programs, pxd_triangle and pxd_bw,
+repeatedly until failure.  These two tests use standard PXD and ANS servers,
+although they require that login checking be disabled.

@@ -1,0 +1,401 @@
+import "ccdi_rpc.proto";
+import "vplex_vs_directory_service_types.proto";
+
+package ccd;
+
+option java_package = "igware.gvm.pb";
+option java_outer_classname = "CcdTypes";
+
+// TODO: copy & paste from CCDI
+message CameraRollDownloadDirSpecInternal {
+
+    required string dir = 1;
+
+    /// (optional) Max size limit (bytes) for the data to consume on local storage.
+    /// If set to 0, there's no limit enforced.  If the size of the files is
+    /// over the limit, the oldest files are deleted locally until the size is
+    /// under the limit.
+    optional uint32 max_size = 7 [default = 0];
+
+    /// (optional) Max files limit for the data to consume on local storage.  If set to
+    /// 0, there's no limit enforced.  If the number of the files is over the
+    /// limit, the oldest files are deleted locally until the size is under the
+    /// limit.
+    optional uint32 max_files = 8 [default = 0];
+
+    // The amount of free space by percentage PicStream should leave on
+    // the volume.  PicStream photos can potentially be deleted until 
+    // the there is enough free space to meet the percentage.  When this
+    // is not specified, this will clear any existing setting and is equal 
+    // to 0% -- all space on disk may be potentially used.
+    optional uint32 preserve_free_disk_percentage = 9 [default = 0];
+
+    // The amount of free space in bytes PicStream should leave on
+    // the volume.  PicStream photos can potentially be deleted until 
+    // there is enough free space to meet the free bytes value.  When this
+    // is not specified, this will clear any existing setting and is equal 
+    // to 0 bytes -- all space on disk may be potentially used.
+    optional uint64 preserve_free_disk_size_bytes = 10 [default = 0];
+}
+
+//------------------------------------
+
+/// Data that we want to access before a user is logged in.
+message CachedUserSummary {
+
+    required fixed64 user_id = 1;
+
+    required string username = 2;
+
+    optional string account_id = 5;
+    
+    /// The cached cluster name that CCD should try first when constructing a server URL:
+    /// "www-c<cluster id>.<domain name>".
+    /// The login server will correct us if we should be using a different cluster for this user.
+    optional int64 cluster_id = 7;
+}
+
+message CachedUserSummaryList {
+    repeated CachedUserSummary users = 1;
+}
+
+//------------------------------------
+
+/// Credentials for communicating with the infrastructure.
+message UserSession {
+    
+    /// Handle to use when sending requests to the infrastructure.
+    optional fixed64 session_handle = 1;
+
+    /// Session secret, for generating service tickets.
+    /// Can be empty for older sessions; if so, have the user log in again to populate this field.
+    optional bytes session_secret = 2;
+
+    /// Service ticket for IAS (20 bytes).
+    optional bytes ias_ticket = 4;
+    
+    /// Service ticket for OPS (20 bytes).
+    optional bytes ops_ticket = 5;
+    
+    /// Service ticket for Community Services (20 bytes).
+    optional bytes cs_ticket = 6;
+    
+    /// Service ticket for Virtual Storage (20 bytes)
+    optional bytes vs_ticket = 7;
+    
+    /// ECDK ticket for ECommerce in-game purchases (20 bytes).
+    optional bytes ec_ticket = 8;
+    
+    /// Key to use when encrypting information for ANS.
+    optional bytes ans_session_key = 9;
+    
+    /// Payload from IAS GetSessionKey to send to ANS.
+    optional bytes ans_login_blob = 10;
+
+    /// @deprecated Use vs_ticket instead.  For backwards compatibility, vs_ticket will also be in this field.
+    /// Service ticket for Remote Files
+    optional bytes rf_ticket = 11;
+    
+    /// Key to use when encrypting information for PXD.
+    optional bytes pxd_session_key = 12;
+    
+    /// Payload from IAS GetSessionKey to send to PXD.
+    optional bytes pxd_login_blob = 13;
+    
+    /// Server CCD only
+    /// Key to use when a server CCD encrypting and signing CCD credential from client CCD.
+    optional bytes ccd_server_key = 14;
+    
+    /// Client CCD only
+    /// CCD-to-CCD credentials for different server CCDs.
+    repeated CCDToCCDCredential ccd_creds = 15;
+
+    /// Client Instance ID
+    optional uint32 instance_id = 16;
+}
+
+/// Credentials for communicating between CCD-to-CCD.
+/// This is used for establishing a Tunnel communication between client CCD and server CCD.
+message CCDToCCDCredential {
+    /// Target server CCD user id;
+    required fixed64 ccd_svr_user_id = 1;
+    
+    /// Target server CCD device id;
+    required fixed64 ccd_svr_device_id = 2;
+    
+    /// Target server CCD instance id;
+    required uint32 ccd_svr_inst_id = 3;
+    
+    /// Key to use when encrypting information for CCD-to-CCD connection.
+    required bytes ccd_session_key = 4;
+    
+    /// Payload from IAS GetSessionKey to send to server CCD.
+    required bytes ccd_login_blob = 5;
+}
+
+//------------------------------------
+
+message CachedDataset {
+    
+    required vplex.vsDirectory.DatasetDetail details = 1;
+    
+    /// Hash to avoid retrieving the details if they have not changed.
+    /// If this is omitted, the details will always be refreshed during login.
+    optional string details_hash = 2;
+
+    // This field is obsolete, but to avoid conflict for previously stored cache files,
+    // we must never reuse tag "3" within this message type again.
+    //optional DatasetSyncStateSummaryInternal sync_state_summary = 3;
+}
+
+message CachedSubscription {
+
+    required vplex.vsDirectory.Subscription details = 1;
+    
+    /// Hash to avoid retrieving the details if they have not changed.
+    /// If this is omitted, the details will always be refreshed during login.
+    optional string details_hash = 2;
+    
+    /// Cached absolute local path for this subscription's "device root".
+    /// Needs to be updated when the subscription details change or the
+    /// "local root" changes.
+    required string abs_device_root = 3;
+}
+
+message PicstreamDir {
+    /// Path to picstream source directory
+    required string directory = 1;
+    
+    /// Once a picstream source directory is assigned an index, it is kept at
+    /// the same index between restarts.  The touch file in the internal
+    /// directory representing this PicStream path is simply labeled with the
+    /// index number, so this internal variable needs to stay consistent.
+    // (Too late to change now, but this probably should have been uint32.)
+    required fixed64 index = 2;
+    
+    /// Since picstream settings can be set whether picstream module is
+    /// initialized or not (we don't expose module initialization status to
+    /// the CCDI API consumer), we need to track whether a user has recently
+    /// changed this setting in order to know when to delete the picstream
+    /// source touch file.  Set to true when user changes the PicstreamDir
+    /// message, and back to false once the picstream_src state is reset.
+    optional bool never_init = 3;
+}
+
+message CachedStatEvent {
+    required string app_id = 1;
+    required string event_id = 2;
+    required uint64 start_time_ms = 3;
+    optional uint64 end_time_ms = 4;
+    required uint32 event_count = 5 [default = 1];
+    optional string event_info = 6;
+    optional bool   limit_reached = 7;
+}
+
+message MediaMetadataThumbMigrateInternal {
+    /// Source directory for the migration.
+    optional string mm_thumb_src_dir = 1;
+
+    // Destination directory for the migration.
+    optional string mm_thumb_dest_dir = 2;
+
+    /// When true, in migration delete phase.  The delete phase
+    /// is where the dest directory is already used, and all
+    /// that remains is the deletion of the src.
+    optional bool mm_delete_phase = 3;
+}
+
+message SyncBoxSettings {
+    /// True if user enabled the sync feature.
+    optional bool enable_sync = 1 [default = false];
+
+    /// Local filesystem path for the sync feature.
+    optional string sync_feature_path = 2;
+
+    /// Following local setting state may not be always coherent with infra 
+    /// state. A coherent flag is added to provide subsequent operation to
+    /// determine if local state or cached infra state to be used to represent
+    /// infra state. (Note that cached infra state is updated through
+    /// VSDS update thread while local state is updated through CCDI API.
+    /// 
+    /// i) If coherent flag == true, local state is known to be in sync with
+    /// infra state. local state should be used.
+    /// ii) If coherent flag == false, it is uncertain if local state is
+    /// in sync with infra. Cached infra state is used.
+    ///
+    /// After an app sets local state, if all infra calls have successful 
+    /// responses, the local state should be coherent with infra. In that case,
+    /// coherent flag is set to true. 
+    /// However, before successful responses are received, the local settings 
+    /// may not be coherent with the infra state. coherent flag is set false.
+    optional bool is_archive_storage = 3 [default = false];
+
+    optional bool coherent = 4 [default = false];
+
+    optional string syncbox_staging_area_abs_path = 5;
+
+    optional fixed64 syncbox_dataset_id = 6;
+
+}
+
+message CachedUserDetails {
+    
+    // This field is obsolete, but to avoid conflict for previously stored cache files,
+    // we must never reuse tag "3" within this message type again.
+    // repeated TaggedUserSpecificTitleLaunchData launch_data_list = 3;
+
+    /// List of the user's owned datasets.
+    repeated CachedDataset datasets = 1;
+    
+    /// List of the user's subscriptions for this device.
+    repeated CachedSubscription subscriptions = 2;
+
+    // This field is obsolete, but to avoid conflict for previously stored cache files,
+    // we must never reuse tag "8" within this message type again.
+    // optional string my_cloud_root = 8;
+
+    // This field is obsolete, but to avoid conflict for previously stored cache files,
+    // we must never reuse tag "12" within this message type again.
+    // optional fixed64 my_camera_roll_upload_enable = 12;
+    
+    // This field is obsolete, but to avoid conflict for previously stored cache files,
+    // we must never reuse tag "11" within this message type again.
+    // required bool is_fake_user = 11;
+    
+    repeated vplex.vsDirectory.DeviceInfo cached_devices = 14;
+    
+    // This field is obsolete, but to avoid conflict for previously stored cache files,
+    // we must never reuse tag "13" within this message type again.
+    //repeated CachedStorageNode cached_storage_nodes = 13;
+    
+    required UserSession session = 6;
+
+    /// All known user storage for the user.
+    repeated vplex.vsDirectory.UserStorage cached_user_storage = 15;
+    
+    /// True if user disables background data (default enabled)
+    optional bool disable_background_data = 16;
+    
+    /// True if user disables auto-sync (default enabled)
+    optional bool disable_auto_sync = 17;
+    
+    /// True if user disables mobile network syncing (default enabled)
+    optional bool disable_mobile_network_data = 18 [default = true];
+    
+    /// Camera upload directories
+    repeated PicstreamDir camera_upload_dirs = 19;
+    
+    /// True if we need to trigger camera roll enable after PicStream initializes.
+    /// Temporarily needed until module initialization code done.
+    optional bool enable_camera_roll_trigger = 20;
+
+    /// Only 1 entry is supported for now.
+    repeated CameraRollDownloadDirSpecInternal picstream_download_dirs_full_res = 32;
+
+    /// Only 1 entry is supported for now.
+    repeated CameraRollDownloadDirSpecInternal picstream_download_dirs_low_res = 33;
+
+    /// Only 1 entry is supported for now.
+    repeated CameraRollDownloadDirSpecInternal picstream_download_dirs_thumbnail = 41;
+
+    /// True if user enabled the "Notes" sync feature.
+    optional bool enable_notes_sync = 23 [default = false];
+
+    /// Local filesystem path for the "Notes" sync feature.
+    optional string notes_sync_path = 26;
+
+    // This list stores the reported Client Statistics events.
+    // Should have only 1 item for each event_id, the start_time is last report time.
+    // StatManager will load/store this list when start/stop.
+    // Also see stat_event_wait_list.
+    repeated CachedStatEvent stat_event_list = 24;
+
+    // This list stores the unreported Client Statistics events.
+    // StatManager will load/store this list when start/stop.
+    // Also see stat_event_list.
+    repeated CachedStatEvent stat_event_wait_list = 38;
+
+    /// True if user enabled the "Cloud Doc" sync feature.
+    optional bool enable_clouddoc_sync = 25 [default = true];
+
+    /// When present, mm_thumb_download_path is the base
+    /// media_metadata directory path where the metadata
+    /// thumbnails are held for music, photo, and video.
+    optional string mm_thumb_download_path = 34;
+
+    /// When present, there is an ongoing media metadata thumbnail migration.
+    optional MediaMetadataThumbMigrateInternal migrate_mm_thumb_download_path = 35;
+
+    /// When missing or false, media_metadata thumbnail sync is enabled.
+    /// When set to true, media_metadata thumbnail sync is disabled.
+    /// Deprecated as of 2.6, see mm_thumb_sync_disabled_types.
+    optional bool mm_thumb_sync_disabled = 36;
+
+    optional bool picstream_storage_conservation_dropping_mode = 37 [default = false];
+
+    /// List of media_metadata thumbnail types for which sync is disabled.
+    /// As of 2.6, each of the three types can be individually enabled or disabled.
+    repeated SyncFeature_t mm_thumb_sync_disabled_types = 39;
+
+    /// If true, this means that the cached data has been upgraded to 
+    /// include support for mm_thumb_sync_disabled_types.
+    optional bool mm_thumb_sync_converted = 40;
+
+    optional SyncBoxSettings syncbox_sync_settings = 42;
+
+    /// If true, this means the local device just created its Syncbox dataset and
+    /// will be hosting Archive Storage for the dataset.
+    /// After the SyncConfig local database for this dataset is created, this flag is set as false.
+    /// If the SyncConfig local database is ever lost, we must create a new dataset to
+    /// safely recover.
+    optional bool allow_syncbox_archive_storage_create_db = 43;
+
+    /// If not zero, it means CCD needs to recreate the local device's Syncbox dataset to recover
+    /// from a lost SyncConfig local database.
+    /// This stores the dataset id that needs to be deleted from infra.
+    /// We will delete the dataset right before creating a new one.
+    optional fixed64 need_to_recreate_syncbox_dataset = 44;
+
+    /// Stores the dataset id for the local device's Syncbox dataset if it is hosting archive storage.
+    /// This is to ensure that we only set allow_syncbox_archive_storage_create_db to true
+    /// once per dataset.
+    optional fixed64 local_syncbox_archive_storage_dataset_id = 45;
+
+    // ***
+    // NOTE: If adding new fields, avoid reusing tags 8, 11, 12, and 13.
+    // ***
+}
+
+//------------------------------------
+
+message CachedUserData {
+    required CachedUserSummary summary = 1;
+    required CachedUserDetails details = 2;
+}
+
+//------------------------------------
+
+/// Main CCD state that we want to be able to reload from disk if CCD restarts
+/// or crashes.
+message CCDMainState {
+    
+    optional fixed64 logged_in_user = 1 [default = 0];
+    
+    // This field is obsolete, but to avoid conflict for previously stored cache files,
+    // we must never reuse tag "2" within this message type again.
+    //optional fixed64 running_title = 2 [default = 0];
+    
+    // This field is obsolete, but to avoid conflict for previously stored cache files,
+    // we must never reuse tag "3" within this message type again.
+    //optional int32 menu_owner_player_index = 3 [default = -1];
+    
+    /// If positive, CCD will restart in background mode, expecting CCDIUpdateSystemState 
+    /// to be called with perform_background_tasks==true at least once each interval.
+    optional int32 background_mode_interval_sec = 4 [default = -1];
+
+    repeated LoggedOutUser logged_out_users = 5;
+    
+    // ***
+    // NOTE: If adding new fields, avoid reusing tags 2 and 3.
+    // ***
+}

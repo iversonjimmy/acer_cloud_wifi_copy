@@ -1,0 +1,5 @@
+These are the headers that are used by modules that can be built as
+either a kernel module or userland library. (hypervisor too?)
+
+TODO: This isn't specific to es_core, so it probably belongs at a different location in the tree.
+TODO: The prefix "km_" might not be the best choice either; please suggest something better if you have an idea.

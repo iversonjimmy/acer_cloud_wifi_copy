@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repo/!svn/ver/50079/trunk/sw_x/gvm_apps/android_cc_sdk/example_remote_panel/project
+END
+default.properties
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_remote_panel/project/default.properties
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repo/!svn/ver/12639/trunk/sw_x/gvm_apps/android_cc_sdk/example_remote_panel/project/.classpath
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_remote_panel/project/.project
+END
+AndroidManifest.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repo/!svn/ver/25526/trunk/sw_x/gvm_apps/android_cc_sdk/example_remote_panel/project/AndroidManifest.xml
+END

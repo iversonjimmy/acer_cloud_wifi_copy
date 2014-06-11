@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repo/!svn/ver/50529/trunk/sw_x/gvm_core/internal/pxd/include
+END
+pxd_client.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/50529/trunk/sw_x/gvm_core/internal/pxd/include/pxd_client.h
+END
+pxd_event.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/36502/trunk/sw_x/gvm_core/internal/pxd/include/pxd_event.h
+END
+pxd_log.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/46762/trunk/sw_x/gvm_core/internal/pxd/include/pxd_log.h
+END
+pxd_mtwist.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/38840/trunk/sw_x/gvm_core/internal/pxd/include/pxd_mtwist.h
+END
+pxd_packet.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/48939/trunk/sw_x/gvm_core/internal/pxd/include/pxd_packet.h
+END
+pxd_util.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/37208/trunk/sw_x/gvm_core/internal/pxd/include/pxd_util.h
+END

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repo/!svn/ver/1015/trunk/sw_x/gvm_core/internal/es_types/include
+END
+estypes.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/315/trunk/sw_x/gvm_core/internal/es_types/include/estypes.h
+END
+cfm.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/1015/trunk/sw_x/gvm_core/internal/es_types/include/cfm.h
+END
+esitypes.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/315/trunk/sw_x/gvm_core/internal/es_types/include/esitypes.h
+END

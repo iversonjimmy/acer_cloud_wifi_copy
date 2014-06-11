@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repo/!svn/ver/59105/trunk/sw_x/tests/dxshell/tools
+END
+dxupdate_win32
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/57229/trunk/sw_x/tests/dxshell/tools/dxupdate_win32
+END
+Remote_Agent_Launcher.py
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/59105/trunk/sw_x/tests/dxshell/tools/Remote_Agent_Launcher.py
+END
+App_Launcher.py
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/57252/trunk/sw_x/tests/dxshell/tools/App_Launcher.py
+END
+App_Launcher.sh
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/50166/trunk/sw_x/tests/dxshell/tools/App_Launcher.sh
+END
+dxupdate_ul
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/57229/trunk/sw_x/tests/dxshell/tools/dxupdate_ul
+END

@@ -1,0 +1,20 @@
+#! /bin/csh -fb
+
+onintr leave
+
+set log = /tmp/ans_device_test.log.$$
+
+while (1)
+    make ans_device_test            || break;
+    ./ans_device_test |& tee $log   || break;
+
+    sleep 2
+end
+
+echo "The log is $log"
+
+exit 1
+
+leave:
+    rm -f $log
+    echo "Interrupted"

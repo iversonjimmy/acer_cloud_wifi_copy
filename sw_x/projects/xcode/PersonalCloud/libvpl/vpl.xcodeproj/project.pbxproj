@@ -1,0 +1,857 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1691407F170F3522006EAEFE /* vpl__plat.m in Sources */ = {isa = PBXBuildFile; fileRef = 1691407E170F3522006EAEFE /* vpl__plat.m */; };
+		16BACB7C18D0305B00B31D6F /* vpl__mac_time.c in Sources */ = {isa = PBXBuildFile; fileRef = 16BACB7B18D0305B00B31D6F /* vpl__mac_time.c */; };
+		16D147D616EF0D8C0055C5D5 /* NSDirectoryWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 16D147D416EF0D8C0055C5D5 /* NSDirectoryWrapper.h */; };
+		16D147D716EF0D8C0055C5D5 /* NSDirectoryWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 16D147D516EF0D8C0055C5D5 /* NSDirectoryWrapper.mm */; };
+		16D147D916EF0DB30055C5D5 /* NSDirectoryWrapper-C-Interface.h in Headers */ = {isa = PBXBuildFile; fileRef = 16D147D816EF0DB30055C5D5 /* NSDirectoryWrapper-C-Interface.h */; };
+		16D147F216F2EC970055C5D5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16D147F116F2EC970055C5D5 /* Default-568h@2x.png */; };
+		6B05A1141589898000E09F0B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B05A1131589898000E09F0B /* Foundation.framework */; };
+		6B05A1221589898000E09F0B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B05A1211589898000E09F0B /* SenTestingKit.framework */; };
+		6B05A1241589898000E09F0B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B05A1231589898000E09F0B /* UIKit.framework */; };
+		6B05A1251589898000E09F0B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B05A1131589898000E09F0B /* Foundation.framework */; };
+		6B05A1281589898000E09F0B /* libvpl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B05A1101589898000E09F0B /* libvpl.a */; };
+		6B05A12E1589898000E09F0B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B05A12C1589898000E09F0B /* InfoPlist.strings */; };
+		6B05A1311589898000E09F0B /* libvplTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A1301589898000E09F0B /* libvplTests.m */; };
+		6B05A1FE15898BAD00E09F0B /* vpl__atomic.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B05A1E015898BAD00E09F0B /* vpl__atomic.h */; };
+		6B05A20115898BAD00E09F0B /* vpl__error.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B05A1E315898BAD00E09F0B /* vpl__error.h */; };
+		6B05A20415898BAD00E09F0B /* vpl__plat.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B05A1E615898BAD00E09F0B /* vpl__plat.h */; };
+		6B05A20515898BAD00E09F0B /* vpl__socket.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B05A1E715898BAD00E09F0B /* vpl__socket.h */; };
+		6B05A20615898BAD00E09F0B /* vpl__th.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B05A1E815898BAD00E09F0B /* vpl__th.h */; };
+		6B05A20715898BAD00E09F0B /* vpl__types.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B05A1E915898BAD00E09F0B /* vpl__types.h */; };
+		6B05A20815898BAD00E09F0B /* vpl__plat.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A1EB15898BAD00E09F0B /* vpl__plat.c */; };
+		6B05A20915898BAD00E09F0B /* vpl__dynamic.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A1ED15898BAD00E09F0B /* vpl__dynamic.c */; };
+		6B05A20A15898BAD00E09F0B /* vpl__error.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A1EE15898BAD00E09F0B /* vpl__error.c */; };
+		6B05A20B15898BAD00E09F0B /* vpl__fs.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A1EF15898BAD00E09F0B /* vpl__fs.c */; };
+		6B05A20C15898BAD00E09F0B /* vpl__monitor_dir.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A1F015898BAD00E09F0B /* vpl__monitor_dir.cpp */; };
+		6B05A20D15898BAD00E09F0B /* vpl__net.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A1F115898BAD00E09F0B /* vpl__net.c */; };
+		6B05A20E15898BAD00E09F0B /* vpl__socket.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A1F215898BAD00E09F0B /* vpl__socket.c */; };
+		6B05A20F15898BAD00E09F0B /* vpl__srwlock.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A1F315898BAD00E09F0B /* vpl__srwlock.c */; };
+		6B05A21015898BAD00E09F0B /* vpl__strerror.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A1F415898BAD00E09F0B /* vpl__strerror.c */; };
+		6B05A21115898BAD00E09F0B /* vpl__th.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A1F515898BAD00E09F0B /* vpl__th.c */; };
+		6B05A21215898BAD00E09F0B /* vpl__thread_once.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A1F615898BAD00E09F0B /* vpl__thread_once.c */; };
+		6B05A21315898BAD00E09F0B /* vpl__thread_synch.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A1F715898BAD00E09F0B /* vpl__thread_synch.c */; };
+		6B05A21415898BAD00E09F0B /* vpl__time.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A1F815898BAD00E09F0B /* vpl__time.c */; };
+		6B05A21515898BAD00E09F0B /* vpl_assert.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B05A1FA15898BAD00E09F0B /* vpl_assert.h */; };
+		6B05A21615898BAD00E09F0B /* vpl_debug.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A1FB15898BAD00E09F0B /* vpl_debug.c */; };
+		6B05A21715898BAD00E09F0B /* vpl_version.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A1FC15898BAD00E09F0B /* vpl_version.c */; };
+		6B05A21815898BAD00E09F0B /* vplu_strnlen.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A1FD15898BAD00E09F0B /* vplu_strnlen.c */; };
+		6B05A22C15898BE400E09F0B /* vplTest_common.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A21C15898BE400E09F0B /* vplTest_common.c */; };
+		6B05A22D15898BE400E09F0B /* vplTest_conv.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A21D15898BE400E09F0B /* vplTest_conv.c */; };
+		6B05A22F15898BE400E09F0B /* vplTest_dynamic.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A21F15898BE400E09F0B /* vplTest_dynamic.c */; };
+		6B05A23115898BE400E09F0B /* vplTest_fs.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A22115898BE400E09F0B /* vplTest_fs.c */; };
+		6B05A23215898BE400E09F0B /* vplTest_network.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A22215898BE400E09F0B /* vplTest_network.c */; };
+		6B05A23315898BE400E09F0B /* vplTest_plat.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A22315898BE400E09F0B /* vplTest_plat.c */; };
+		6B05A23415898BE400E09F0B /* vplTest_platform_compliance.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A22415898BE400E09F0B /* vplTest_platform_compliance.c */; };
+		6B05A23515898BE400E09F0B /* vplTest_socket.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A22515898BE400E09F0B /* vplTest_socket.c */; };
+		6B05A23615898BE400E09F0B /* vplTest_srwlock.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A22615898BE400E09F0B /* vplTest_srwlock.c */; };
+		6B05A23715898BE400E09F0B /* vplTest_thread.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A22715898BE400E09F0B /* vplTest_thread.c */; };
+		6B05A23815898BE400E09F0B /* vplTest_time.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A22815898BE400E09F0B /* vplTest_time.c */; };
+		6B05A23915898BE400E09F0B /* vplTest_fs.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A22A15898BE400E09F0B /* vplTest_fs.m */; };
+		6B05A23F15898D0A00E09F0B /* VPLTestWrapper.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A23D15898D0A00E09F0B /* VPLTestWrapper.c */; };
+		BF27442E159472EC00330576 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B05A1231589898000E09F0B /* UIKit.framework */; };
+		BF27442F159472EC00330576 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B05A1131589898000E09F0B /* Foundation.framework */; };
+		BF274430159472EC00330576 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B5C2B50158F229B0012772E /* CoreGraphics.framework */; };
+		BF274436159472EC00330576 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF274434159472EC00330576 /* InfoPlist.strings */; };
+		BF274438159472EC00330576 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF274437159472EC00330576 /* main.m */; };
+		BF27443C159472EC00330576 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF27443B159472EC00330576 /* AppDelegate.m */; };
+		BF27444A1594736200330576 /* LogReceiveURL in Resources */ = {isa = PBXBuildFile; fileRef = BF2744491594736200330576 /* LogReceiveURL */; };
+		BF27444E159473BA00330576 /* VPLTestWrapper.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A23D15898D0A00E09F0B /* VPLTestWrapper.c */; };
+		BF274450159473C700330576 /* libvpl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B05A1101589898000E09F0B /* libvpl.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6B05A1261589898000E09F0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B05A1071589898000E09F0B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B05A10F1589898000E09F0B;
+			remoteInfo = libvpl;
+		};
+		BF27444C159473AB00330576 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B05A1071589898000E09F0B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B05A10F1589898000E09F0B;
+			remoteInfo = vpl;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1691407E170F3522006EAEFE /* vpl__plat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = vpl__plat.m; path = ../../../../gvm_core/vpl/src_use_cocoa/vpl__plat.m; sourceTree = "<group>"; };
+		16BACB7B18D0305B00B31D6F /* vpl__mac_time.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = vpl__mac_time.c; path = ../../../../gvm_core/vpl/src_use_cocoa/vpl__mac_time.c; sourceTree = "<group>"; };
+		16BACB7D18D030E600B31D6F /* vpl__mac_time.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vpl__mac_time.h; path = ../../../../gvm_core/vpl/src_use_cocoa/vpl__mac_time.h; sourceTree = "<group>"; };
+		16D147D416EF0D8C0055C5D5 /* NSDirectoryWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDirectoryWrapper.h; sourceTree = "<group>"; };
+		16D147D516EF0D8C0055C5D5 /* NSDirectoryWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NSDirectoryWrapper.mm; sourceTree = "<group>"; };
+		16D147D816EF0DB30055C5D5 /* NSDirectoryWrapper-C-Interface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDirectoryWrapper-C-Interface.h"; sourceTree = "<group>"; };
+		16D147F116F2EC970055C5D5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		6B05A1101589898000E09F0B /* libvpl.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libvpl.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B05A1131589898000E09F0B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6B05A1171589898000E09F0B /* vpl-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "vpl-Prefix.pch"; sourceTree = "<group>"; };
+		6B05A1201589898000E09F0B /* vplTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vplTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B05A1211589898000E09F0B /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		6B05A1231589898000E09F0B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		6B05A12B1589898000E09F0B /* vplTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "vplTests-Info.plist"; sourceTree = "<group>"; };
+		6B05A12D1589898000E09F0B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6B05A12F1589898000E09F0B /* libvplTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = libvplTests.h; sourceTree = "<group>"; };
+		6B05A1301589898000E09F0B /* libvplTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = libvplTests.m; sourceTree = "<group>"; };
+		6B05A1E015898BAD00E09F0B /* vpl__atomic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vpl__atomic.h; sourceTree = "<group>"; };
+		6B05A1E315898BAD00E09F0B /* vpl__error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vpl__error.h; sourceTree = "<group>"; };
+		6B05A1E615898BAD00E09F0B /* vpl__plat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vpl__plat.h; sourceTree = "<group>"; };
+		6B05A1E715898BAD00E09F0B /* vpl__socket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vpl__socket.h; sourceTree = "<group>"; };
+		6B05A1E815898BAD00E09F0B /* vpl__th.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vpl__th.h; sourceTree = "<group>"; };
+		6B05A1E915898BAD00E09F0B /* vpl__types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vpl__types.h; sourceTree = "<group>"; };
+		6B05A1EB15898BAD00E09F0B /* vpl__plat.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vpl__plat.c; sourceTree = "<group>"; };
+		6B05A1ED15898BAD00E09F0B /* vpl__dynamic.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vpl__dynamic.c; sourceTree = "<group>"; };
+		6B05A1EE15898BAD00E09F0B /* vpl__error.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vpl__error.c; sourceTree = "<group>"; };
+		6B05A1EF15898BAD00E09F0B /* vpl__fs.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vpl__fs.c; sourceTree = "<group>"; };
+		6B05A1F015898BAD00E09F0B /* vpl__monitor_dir.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vpl__monitor_dir.cpp; sourceTree = "<group>"; };
+		6B05A1F115898BAD00E09F0B /* vpl__net.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vpl__net.c; sourceTree = "<group>"; };
+		6B05A1F215898BAD00E09F0B /* vpl__socket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vpl__socket.c; sourceTree = "<group>"; };
+		6B05A1F315898BAD00E09F0B /* vpl__srwlock.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vpl__srwlock.c; sourceTree = "<group>"; };
+		6B05A1F415898BAD00E09F0B /* vpl__strerror.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vpl__strerror.c; sourceTree = "<group>"; };
+		6B05A1F515898BAD00E09F0B /* vpl__th.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vpl__th.c; sourceTree = "<group>"; };
+		6B05A1F615898BAD00E09F0B /* vpl__thread_once.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vpl__thread_once.c; sourceTree = "<group>"; };
+		6B05A1F715898BAD00E09F0B /* vpl__thread_synch.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vpl__thread_synch.c; sourceTree = "<group>"; };
+		6B05A1F815898BAD00E09F0B /* vpl__time.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vpl__time.c; sourceTree = "<group>"; };
+		6B05A1FA15898BAD00E09F0B /* vpl_assert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vpl_assert.h; sourceTree = "<group>"; };
+		6B05A1FB15898BAD00E09F0B /* vpl_debug.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vpl_debug.c; sourceTree = "<group>"; };
+		6B05A1FC15898BAD00E09F0B /* vpl_version.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vpl_version.c; sourceTree = "<group>"; };
+		6B05A1FD15898BAD00E09F0B /* vplu_strnlen.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplu_strnlen.c; sourceTree = "<group>"; };
+		6B05A21C15898BE400E09F0B /* vplTest_common.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplTest_common.c; sourceTree = "<group>"; };
+		6B05A21D15898BE400E09F0B /* vplTest_conv.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplTest_conv.c; sourceTree = "<group>"; };
+		6B05A21F15898BE400E09F0B /* vplTest_dynamic.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplTest_dynamic.c; sourceTree = "<group>"; };
+		6B05A22115898BE400E09F0B /* vplTest_fs.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplTest_fs.c; sourceTree = "<group>"; };
+		6B05A22215898BE400E09F0B /* vplTest_network.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplTest_network.c; sourceTree = "<group>"; };
+		6B05A22315898BE400E09F0B /* vplTest_plat.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplTest_plat.c; sourceTree = "<group>"; };
+		6B05A22415898BE400E09F0B /* vplTest_platform_compliance.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplTest_platform_compliance.c; sourceTree = "<group>"; };
+		6B05A22515898BE400E09F0B /* vplTest_socket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplTest_socket.c; sourceTree = "<group>"; };
+		6B05A22615898BE400E09F0B /* vplTest_srwlock.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplTest_srwlock.c; sourceTree = "<group>"; };
+		6B05A22715898BE400E09F0B /* vplTest_thread.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplTest_thread.c; sourceTree = "<group>"; };
+		6B05A22815898BE400E09F0B /* vplTest_time.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vplTest_time.c; sourceTree = "<group>"; };
+		6B05A22A15898BE400E09F0B /* vplTest_fs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vplTest_fs.m; sourceTree = "<group>"; };
+		6B05A23D15898D0A00E09F0B /* VPLTestWrapper.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = VPLTestWrapper.c; sourceTree = "<group>"; };
+		6B05A23E15898D0A00E09F0B /* VPLTestWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPLTestWrapper.h; sourceTree = "<group>"; };
+		6B5C2B50158F229B0012772E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BF27442C159472EC00330576 /* OnDeviceVPLTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnDeviceVPLTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF274433159472EC00330576 /* OnDeviceTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OnDeviceTest-Info.plist"; sourceTree = "<group>"; };
+		BF274435159472EC00330576 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BF274437159472EC00330576 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BF274439159472EC00330576 /* OnDeviceTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OnDeviceTest-Prefix.pch"; sourceTree = "<group>"; };
+		BF27443A159472EC00330576 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BF27443B159472EC00330576 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BF2744491594736200330576 /* LogReceiveURL */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LogReceiveURL; path = ../../LogReceiveURL; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6B05A10D1589898000E09F0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B05A1141589898000E09F0B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B05A11C1589898000E09F0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B05A1221589898000E09F0B /* SenTestingKit.framework in Frameworks */,
+				6B05A1241589898000E09F0B /* UIKit.framework in Frameworks */,
+				6B05A1251589898000E09F0B /* Foundation.framework in Frameworks */,
+				6B05A1281589898000E09F0B /* libvpl.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF274429159472EC00330576 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF274450159473C700330576 /* libvpl.a in Frameworks */,
+				BF27442E159472EC00330576 /* UIKit.framework in Frameworks */,
+				BF27442F159472EC00330576 /* Foundation.framework in Frameworks */,
+				BF274430159472EC00330576 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1691407D170F34E2006EAEFE /* src_use_cocoa */ = {
+			isa = PBXGroup;
+			children = (
+				1691407E170F3522006EAEFE /* vpl__plat.m */,
+				16BACB7D18D030E600B31D6F /* vpl__mac_time.h */,
+				16BACB7B18D0305B00B31D6F /* vpl__mac_time.c */,
+			);
+			name = src_use_cocoa;
+			sourceTree = "<group>";
+		};
+		16D147D316EF0D3D0055C5D5 /* NSDirectoryWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				16D147D416EF0D8C0055C5D5 /* NSDirectoryWrapper.h */,
+				16D147D516EF0D8C0055C5D5 /* NSDirectoryWrapper.mm */,
+				16D147D816EF0DB30055C5D5 /* NSDirectoryWrapper-C-Interface.h */,
+			);
+			path = NSDirectoryWrapper;
+			sourceTree = "<group>";
+		};
+		6B05A1051589898000E09F0B = {
+			isa = PBXGroup;
+			children = (
+				16D147F116F2EC970055C5D5 /* Default-568h@2x.png */,
+				16D147D316EF0D3D0055C5D5 /* NSDirectoryWrapper */,
+				6B05A21915898BB400E09F0B /* vpl_test */,
+				6B05A1DD15898B5C00E09F0B /* vpl */,
+				6B05A1151589898000E09F0B /* libvpl */,
+				6B05A1291589898000E09F0B /* libvplTests */,
+				BF274431159472EC00330576 /* OnDeviceTest */,
+				6B05A1121589898000E09F0B /* Frameworks */,
+				6B05A1111589898000E09F0B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6B05A1111589898000E09F0B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6B05A1101589898000E09F0B /* libvpl.a */,
+				6B05A1201589898000E09F0B /* vplTests.octest */,
+				BF27442C159472EC00330576 /* OnDeviceVPLTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6B05A1121589898000E09F0B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6B05A1131589898000E09F0B /* Foundation.framework */,
+				6B05A1211589898000E09F0B /* SenTestingKit.framework */,
+				6B05A1231589898000E09F0B /* UIKit.framework */,
+				6B5C2B50158F229B0012772E /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6B05A1151589898000E09F0B /* libvpl */ = {
+			isa = PBXGroup;
+			children = (
+				6B05A1161589898000E09F0B /* Supporting Files */,
+			);
+			path = libvpl;
+			sourceTree = "<group>";
+		};
+		6B05A1161589898000E09F0B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6B05A1171589898000E09F0B /* vpl-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6B05A1291589898000E09F0B /* libvplTests */ = {
+			isa = PBXGroup;
+			children = (
+				6B05A12F1589898000E09F0B /* libvplTests.h */,
+				6B05A1301589898000E09F0B /* libvplTests.m */,
+				6B05A12A1589898000E09F0B /* Supporting Files */,
+			);
+			path = libvplTests;
+			sourceTree = "<group>";
+		};
+		6B05A12A1589898000E09F0B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6B05A12B1589898000E09F0B /* vplTests-Info.plist */,
+				6B05A12C1589898000E09F0B /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6B05A1DD15898B5C00E09F0B /* vpl */ = {
+			isa = PBXGroup;
+			children = (
+				1691407D170F34E2006EAEFE /* src_use_cocoa */,
+				6B05A1DE15898BAD00E09F0B /* platform_linux */,
+				6B05A1EC15898BAD00E09F0B /* posix_src */,
+				6B05A1F915898BAD00E09F0B /* src */,
+			);
+			name = vpl;
+			sourceTree = "<group>";
+		};
+		6B05A1DE15898BAD00E09F0B /* platform_linux */ = {
+			isa = PBXGroup;
+			children = (
+				6B05A1DF15898BAD00E09F0B /* include */,
+				6B05A1EA15898BAD00E09F0B /* src */,
+			);
+			name = platform_linux;
+			path = ../../../../gvm_core/vpl/platform_linux;
+			sourceTree = "<group>";
+		};
+		6B05A1DF15898BAD00E09F0B /* include */ = {
+			isa = PBXGroup;
+			children = (
+				6B05A1E015898BAD00E09F0B /* vpl__atomic.h */,
+				6B05A1E315898BAD00E09F0B /* vpl__error.h */,
+				6B05A1E615898BAD00E09F0B /* vpl__plat.h */,
+				6B05A1E715898BAD00E09F0B /* vpl__socket.h */,
+				6B05A1E815898BAD00E09F0B /* vpl__th.h */,
+				6B05A1E915898BAD00E09F0B /* vpl__types.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		6B05A1EA15898BAD00E09F0B /* src */ = {
+			isa = PBXGroup;
+			children = (
+				6B05A1EB15898BAD00E09F0B /* vpl__plat.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		6B05A1EC15898BAD00E09F0B /* posix_src */ = {
+			isa = PBXGroup;
+			children = (
+				6B05A1ED15898BAD00E09F0B /* vpl__dynamic.c */,
+				6B05A1EE15898BAD00E09F0B /* vpl__error.c */,
+				6B05A1EF15898BAD00E09F0B /* vpl__fs.c */,
+				6B05A1F015898BAD00E09F0B /* vpl__monitor_dir.cpp */,
+				6B05A1F115898BAD00E09F0B /* vpl__net.c */,
+				6B05A1F215898BAD00E09F0B /* vpl__socket.c */,
+				6B05A1F315898BAD00E09F0B /* vpl__srwlock.c */,
+				6B05A1F415898BAD00E09F0B /* vpl__strerror.c */,
+				6B05A1F515898BAD00E09F0B /* vpl__th.c */,
+				6B05A1F615898BAD00E09F0B /* vpl__thread_once.c */,
+				6B05A1F715898BAD00E09F0B /* vpl__thread_synch.c */,
+				6B05A1F815898BAD00E09F0B /* vpl__time.c */,
+			);
+			name = posix_src;
+			path = ../../../../gvm_core/vpl/posix_src;
+			sourceTree = "<group>";
+		};
+		6B05A1F915898BAD00E09F0B /* src */ = {
+			isa = PBXGroup;
+			children = (
+				6B05A1FA15898BAD00E09F0B /* vpl_assert.h */,
+				6B05A1FB15898BAD00E09F0B /* vpl_debug.c */,
+				6B05A1FC15898BAD00E09F0B /* vpl_version.c */,
+				6B05A1FD15898BAD00E09F0B /* vplu_strnlen.c */,
+			);
+			name = src;
+			path = ../../../../gvm_core/vpl/src;
+			sourceTree = "<group>";
+		};
+		6B05A21915898BB400E09F0B /* vpl_test */ = {
+			isa = PBXGroup;
+			children = (
+				6B05A21A15898BE400E09F0B /* src */,
+				6B05A22915898BE400E09F0B /* src_ios */,
+			);
+			name = vpl_test;
+			sourceTree = "<group>";
+		};
+		6B05A21A15898BE400E09F0B /* src */ = {
+			isa = PBXGroup;
+			children = (
+				6B05A21C15898BE400E09F0B /* vplTest_common.c */,
+				6B05A21D15898BE400E09F0B /* vplTest_conv.c */,
+				6B05A21F15898BE400E09F0B /* vplTest_dynamic.c */,
+				6B05A22115898BE400E09F0B /* vplTest_fs.c */,
+				6B05A22215898BE400E09F0B /* vplTest_network.c */,
+				6B05A22315898BE400E09F0B /* vplTest_plat.c */,
+				6B05A22415898BE400E09F0B /* vplTest_platform_compliance.c */,
+				6B05A22515898BE400E09F0B /* vplTest_socket.c */,
+				6B05A22615898BE400E09F0B /* vplTest_srwlock.c */,
+				6B05A22715898BE400E09F0B /* vplTest_thread.c */,
+				6B05A22815898BE400E09F0B /* vplTest_time.c */,
+			);
+			name = src;
+			path = ../../../../gvm_core/vpl/tests/src;
+			sourceTree = "<group>";
+		};
+		6B05A22915898BE400E09F0B /* src_ios */ = {
+			isa = PBXGroup;
+			children = (
+				6B05A23D15898D0A00E09F0B /* VPLTestWrapper.c */,
+				6B05A23E15898D0A00E09F0B /* VPLTestWrapper.h */,
+				6B05A22A15898BE400E09F0B /* vplTest_fs.m */,
+			);
+			name = src_ios;
+			path = ../../../../gvm_core/vpl/tests/src_ios;
+			sourceTree = "<group>";
+		};
+		BF274431159472EC00330576 /* OnDeviceTest */ = {
+			isa = PBXGroup;
+			children = (
+				BF27443A159472EC00330576 /* AppDelegate.h */,
+				BF27443B159472EC00330576 /* AppDelegate.m */,
+				BF274432159472EC00330576 /* Supporting Files */,
+				BF2744491594736200330576 /* LogReceiveURL */,
+			);
+			path = OnDeviceTest;
+			sourceTree = "<group>";
+		};
+		BF274432159472EC00330576 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BF274433159472EC00330576 /* OnDeviceTest-Info.plist */,
+				BF274434159472EC00330576 /* InfoPlist.strings */,
+				BF274437159472EC00330576 /* main.m */,
+				BF274439159472EC00330576 /* OnDeviceTest-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		6B05A10E1589898000E09F0B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B05A1FE15898BAD00E09F0B /* vpl__atomic.h in Headers */,
+				6B05A20115898BAD00E09F0B /* vpl__error.h in Headers */,
+				6B05A20415898BAD00E09F0B /* vpl__plat.h in Headers */,
+				6B05A20515898BAD00E09F0B /* vpl__socket.h in Headers */,
+				6B05A20615898BAD00E09F0B /* vpl__th.h in Headers */,
+				6B05A20715898BAD00E09F0B /* vpl__types.h in Headers */,
+				6B05A21515898BAD00E09F0B /* vpl_assert.h in Headers */,
+				16D147D616EF0D8C0055C5D5 /* NSDirectoryWrapper.h in Headers */,
+				16D147D916EF0DB30055C5D5 /* NSDirectoryWrapper-C-Interface.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		6B05A10F1589898000E09F0B /* vpl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B05A1341589898000E09F0B /* Build configuration list for PBXNativeTarget "vpl" */;
+			buildPhases = (
+				6B05A10C1589898000E09F0B /* Sources */,
+				6B05A10D1589898000E09F0B /* Frameworks */,
+				6B05A10E1589898000E09F0B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = vpl;
+			productName = libvpl;
+			productReference = 6B05A1101589898000E09F0B /* libvpl.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		6B05A11F1589898000E09F0B /* vplTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B05A1371589898000E09F0B /* Build configuration list for PBXNativeTarget "vplTests" */;
+			buildPhases = (
+				6B05A11B1589898000E09F0B /* Sources */,
+				6B05A11C1589898000E09F0B /* Frameworks */,
+				6B05A11D1589898000E09F0B /* Resources */,
+				6B05A11E1589898000E09F0B /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6B05A1271589898000E09F0B /* PBXTargetDependency */,
+			);
+			name = vplTests;
+			productName = libvplTests;
+			productReference = 6B05A1201589898000E09F0B /* vplTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		BF27442B159472EC00330576 /* OnDeviceVPLTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF27443D159472EC00330576 /* Build configuration list for PBXNativeTarget "OnDeviceVPLTest" */;
+			buildPhases = (
+				BF274428159472EC00330576 /* Sources */,
+				BF274429159472EC00330576 /* Frameworks */,
+				BF27442A159472EC00330576 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF27444D159473AB00330576 /* PBXTargetDependency */,
+			);
+			name = OnDeviceVPLTest;
+			productName = OnDeviceTest;
+			productReference = BF27442C159472EC00330576 /* OnDeviceVPLTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6B05A1071589898000E09F0B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+			};
+			buildConfigurationList = 6B05A10A1589898000E09F0B /* Build configuration list for PBXProject "vpl" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6B05A1051589898000E09F0B;
+			productRefGroup = 6B05A1111589898000E09F0B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6B05A10F1589898000E09F0B /* vpl */,
+				6B05A11F1589898000E09F0B /* vplTests */,
+				BF27442B159472EC00330576 /* OnDeviceVPLTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6B05A11D1589898000E09F0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B05A12E1589898000E09F0B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF27442A159472EC00330576 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF274436159472EC00330576 /* InfoPlist.strings in Resources */,
+				BF27444A1594736200330576 /* LogReceiveURL in Resources */,
+				16D147F216F2EC970055C5D5 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6B05A11E1589898000E09F0B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6B05A10C1589898000E09F0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B05A20815898BAD00E09F0B /* vpl__plat.c in Sources */,
+				6B05A20915898BAD00E09F0B /* vpl__dynamic.c in Sources */,
+				6B05A20A15898BAD00E09F0B /* vpl__error.c in Sources */,
+				6B05A20B15898BAD00E09F0B /* vpl__fs.c in Sources */,
+				6B05A20C15898BAD00E09F0B /* vpl__monitor_dir.cpp in Sources */,
+				6B05A20D15898BAD00E09F0B /* vpl__net.c in Sources */,
+				6B05A20E15898BAD00E09F0B /* vpl__socket.c in Sources */,
+				6B05A20F15898BAD00E09F0B /* vpl__srwlock.c in Sources */,
+				6B05A21015898BAD00E09F0B /* vpl__strerror.c in Sources */,
+				6B05A21115898BAD00E09F0B /* vpl__th.c in Sources */,
+				6B05A21215898BAD00E09F0B /* vpl__thread_once.c in Sources */,
+				6B05A21315898BAD00E09F0B /* vpl__thread_synch.c in Sources */,
+				6B05A21415898BAD00E09F0B /* vpl__time.c in Sources */,
+				6B05A21615898BAD00E09F0B /* vpl_debug.c in Sources */,
+				6B05A21715898BAD00E09F0B /* vpl_version.c in Sources */,
+				6B05A21815898BAD00E09F0B /* vplu_strnlen.c in Sources */,
+				6B05A22C15898BE400E09F0B /* vplTest_common.c in Sources */,
+				6B05A22D15898BE400E09F0B /* vplTest_conv.c in Sources */,
+				6B05A22F15898BE400E09F0B /* vplTest_dynamic.c in Sources */,
+				6B05A23115898BE400E09F0B /* vplTest_fs.c in Sources */,
+				6B05A23215898BE400E09F0B /* vplTest_network.c in Sources */,
+				16BACB7C18D0305B00B31D6F /* vpl__mac_time.c in Sources */,
+				6B05A23315898BE400E09F0B /* vplTest_plat.c in Sources */,
+				6B05A23415898BE400E09F0B /* vplTest_platform_compliance.c in Sources */,
+				6B05A23515898BE400E09F0B /* vplTest_socket.c in Sources */,
+				6B05A23615898BE400E09F0B /* vplTest_srwlock.c in Sources */,
+				6B05A23715898BE400E09F0B /* vplTest_thread.c in Sources */,
+				6B05A23815898BE400E09F0B /* vplTest_time.c in Sources */,
+				6B05A23915898BE400E09F0B /* vplTest_fs.m in Sources */,
+				16D147D716EF0D8C0055C5D5 /* NSDirectoryWrapper.mm in Sources */,
+				1691407F170F3522006EAEFE /* vpl__plat.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B05A11B1589898000E09F0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B05A1311589898000E09F0B /* libvplTests.m in Sources */,
+				6B05A23F15898D0A00E09F0B /* VPLTestWrapper.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF274428159472EC00330576 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF27444E159473BA00330576 /* VPLTestWrapper.c in Sources */,
+				BF274438159472EC00330576 /* main.m in Sources */,
+				BF27443C159472EC00330576 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6B05A1271589898000E09F0B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6B05A10F1589898000E09F0B /* vpl */;
+			targetProxy = 6B05A1261589898000E09F0B /* PBXContainerItemProxy */;
+		};
+		BF27444D159473AB00330576 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6B05A10F1589898000E09F0B /* vpl */;
+			targetProxy = BF27444C159473AB00330576 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6B05A12C1589898000E09F0B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B05A12D1589898000E09F0B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BF274434159472EC00330576 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF274435159472EC00330576 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6B05A1321589898000E09F0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
+					"VPL_PLAT_IS_ARM=1",
+					"IOS=1",
+					"VPL_HOST_IS_LITTLE_ENDIAN=1",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "../../../../gvm_core/vpl/posix_include/ ../../../../gvm_core/vpl/include/ ../../../../gvm_core/vpl/tests/include/ ./libvpl/sdk/include/";
+			};
+			name = Debug;
+		};
+		6B05A1331589898000E09F0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
+					"VPL_PLAT_IS_ARM=1",
+					"IOS=1",
+					"VPL_HOST_IS_LITTLE_ENDIAN=1",
+				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "../../../../gvm_core/vpl/posix_include/ ../../../../gvm_core/vpl/include/ ../../../../gvm_core/vpl/tests/include/ ./libvpl/sdk/include/";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6B05A1351589898000E09F0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/libvpl.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				HEADER_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = vpl;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		6B05A1361589898000E09F0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/libvpl.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				HEADER_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = vpl;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		6B05A1381589898000E09F0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = "libvplTests/vplTests-Info.plist";
+				PRODUCT_NAME = vplTests;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		6B05A1391589898000E09F0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = "libvplTests/vplTests-Info.plist";
+				PRODUCT_NAME = vplTests;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		BF27443E159472EC00330576 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OnDeviceTest/OnDeviceTest-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					../../../../gvm_core/vpl/posix_include/,
+					../../../../gvm_core/vpl/include/,
+					../../../../gvm_core/vpl/tests/include/,
+					./libvpl/sdk/include/,
+				);
+				INFOPLIST_FILE = "OnDeviceTest/OnDeviceTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BF27443F159472EC00330576 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OnDeviceTest/OnDeviceTest-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					../../../../gvm_core/vpl/posix_include/,
+					../../../../gvm_core/vpl/include/,
+					../../../../gvm_core/vpl/tests/include/,
+					./libvpl/sdk/include/,
+				);
+				INFOPLIST_FILE = "OnDeviceTest/OnDeviceTest-Info.plist";
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6B05A10A1589898000E09F0B /* Build configuration list for PBXProject "vpl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B05A1321589898000E09F0B /* Debug */,
+				6B05A1331589898000E09F0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B05A1341589898000E09F0B /* Build configuration list for PBXNativeTarget "vpl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B05A1351589898000E09F0B /* Debug */,
+				6B05A1361589898000E09F0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B05A1371589898000E09F0B /* Build configuration list for PBXNativeTarget "vplTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B05A1381589898000E09F0B /* Debug */,
+				6B05A1391589898000E09F0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF27443D159472EC00330576 /* Build configuration list for PBXNativeTarget "OnDeviceVPLTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF27443E159472EC00330576 /* Debug */,
+				BF27443F159472EC00330576 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6B05A1071589898000E09F0B /* Project object */;
+}

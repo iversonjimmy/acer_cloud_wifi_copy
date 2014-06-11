@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/59258/trunk/sw_x/gvm_apps/dx_remote_agent/platform_linux
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/59258/trunk/sw_x/gvm_apps/dx_remote_agent/platform_linux/BUILD
+END
+dx_remote_agent_util_linux.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repo/!svn/ver/55515/trunk/sw_x/gvm_apps/dx_remote_agent/platform_linux/dx_remote_agent_util_linux.cpp
+END
+dx_remote_agent_linux.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repo/!svn/ver/54230/trunk/sw_x/gvm_apps/dx_remote_agent/platform_linux/dx_remote_agent_linux.cpp
+END
+dx_remote_agent_util_linux.h
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repo/!svn/ver/31772/trunk/sw_x/gvm_apps/dx_remote_agent/platform_linux/dx_remote_agent_util_linux.h
+END

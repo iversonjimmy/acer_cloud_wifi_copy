@@ -1,0 +1,3 @@
+#! /bin/csh -fb
+
+./manage `hostname` set-cluster logging-level warn cluster off remove off session off sleep off wakeup off keep off

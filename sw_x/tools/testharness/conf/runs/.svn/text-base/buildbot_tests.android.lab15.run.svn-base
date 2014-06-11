@@ -1,0 +1,69 @@
+##########
+# This is the buildbot test run configuration file for the 'android' PRODUCT.
+##########
+
+##########
+# The following section describes reserved configuration variables.
+##########
+# DB Info
+# To prevent upload of results to the database, comment out at least one of these parameters.
+TH_DBNAME=testharness_v2
+TH_DBHOST=mysql.ctbg.acer.com
+TH_DBUSER=testharness
+TH_DBPWD=route2me
+
+# Name to use in the database for this run
+TH_RUN_NAME=android_3.2_against_lab15
+
+# Directory in which to save test run/test case output.
+# Results from each suite executed will be saved in a separate directory under this directory
+# This can be overridden with the -o testharness command line option.
+TH_OUTPUT_DIR=/tmp/testharness/output_android
+
+# Name of the file where a summary of the test results is written
+# This can be overridden with the -s testharness command line option.
+#TH_SUMMARY_FILE=/tmp/testharness/output/testharness_summary.out
+
+# Directory in which to look for test suites.
+# Default is the sw_x/tests directory in the same tree as the testharness script.
+# This can be overridden with the -t testharness command line option.
+#TH_TEST_SUITE_DIR=$WORKDIR/sw_x/tests
+
+# The list of suites to run and the order in which to run them.
+TH_SUITE=sdk_release_basic::timeout=20
+TH_SUITE=sdk_release_mediametadata::timeout=25
+TH_SUITE=sdk_release_picstream::timeout=30
+TH_SUITE=sdk_release_picstream_index_only::timeout=10
+TH_SUITE=sdk_release_remotefile::timeout=30
+TH_SUITE=sdk_release_clouddoc::timeout=25
+
+##########
+# Test-run-level environment variables go here.
+# They are set in the execution environment of every test case that is executed in this test run.
+##########
+USE_ARCHIVED_BUILD=true
+DX_TARGET_PLAT=android
+
+TEST_MASTER_MACHINE=dx-master-2
+TARGET_WIN32_CLOUDPC=127.0.0.1
+TARGET_WIN32_CLIENT=127.0.0.1
+TARGET_WIN32_MD=127.0.0.1
+#TARGET_ANDROID=10.50.10.54
+TARGET_ANDROID=android-device-rc
+
+TARGET_USER=build
+TARGET_MACHINE_DEVICE_NAME=dx-master-2
+TARGET_WIN32_CLIENT_DEVICE_NAME=dx-master-2
+TARGET_ANDROID_DEVICE_NAME=HTC/HTC\\ Desire\\ S
+
+TARGET_MACHINE_ALIAS=S-1-5-21-2608422119-1956775364-1154770872-1000
+TARGET_WIN32_CLIENT_ALIAS=S-1-5-21-2608422119-1956775364-1154770872-1011
+TARGET_PLATFORM_ALIAS=MD1
+
+CCD_TEST_ACCOUNT=RC_androidTest@acercloud.org
+CCD_TEST_ACCOUNT_1=RC_androidTest_1@acercloud.org
+CCD_TEST_ACCOUNT_2=RC_androidTest_2@acercloud.org
+CCD_TEST_ACCOUNT_PASSWORD=password
+IDT_TOOLS=$(SRC_SWI)/tools/idt
+LAB_DOMAIN_NAME=pc.igware.net
+INTERNAL_LAB_DOMAIN_NAME=lab15.routefree.com

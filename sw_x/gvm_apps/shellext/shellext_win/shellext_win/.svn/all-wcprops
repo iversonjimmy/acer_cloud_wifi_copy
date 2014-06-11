@@ -1,0 +1,215 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/59136/trunk/sw_x/gvm_apps/shellext/shellext_win/shellext_win
+END
+stdafx.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repo/!svn/ver/8500/trunk/sw_x/gvm_apps/shellext/shellext_win/shellext_win/stdafx.h
+END
+cloud.ico
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/59136/trunk/sw_x/gvm_apps/shellext/shellext_win/shellext_win/cloud.ico
+END
+ShlExtUtility.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repo/!svn/ver/58317/trunk/sw_x/gvm_apps/shellext/shellext_win/shellext_win/ShlExtUtility.h
+END
+ACloudSyncing.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repo/!svn/ver/58317/trunk/sw_x/gvm_apps/shellext/shellext_win/shellext_win/ACloudSyncing.cpp
+END
+syncing.ico
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repo/!svn/ver/59136/trunk/sw_x/gvm_apps/shellext/shellext_win/shellext_win/syncing.ico
+END
+app.config
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/8500/trunk/sw_x/gvm_apps/shellext/shellext_win/shellext_win/app.config
+END
+shellext_win.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repo/!svn/ver/8500/trunk/sw_x/gvm_apps/shellext/shellext_win/shellext_win/shellext_win.cpp
+END
+ACloudSyncedSF.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repo/!svn/ver/58317/trunk/sw_x/gvm_apps/shellext/shellext_win/shellext_win/ACloudSyncedSF.cpp
+END
+ContextMenuShlExt.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repo/!svn/ver/8500/trunk/sw_x/gvm_apps/shellext/shellext_win/shellext_win/ContextMenuShlExt.h
+END
+targetver.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repo/!svn/ver/8500/trunk/sw_x/gvm_apps/shellext/shellext_win/shellext_win/targetver.h
+END
+ACloudSyncedRF.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repo/!svn/ver/8500/trunk/sw_x/gvm_apps/shellext/shellext_win/shellext_win/ACloudSyncedRF.h
+END
+ContextMenuShlExt.rgs
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repo/!svn/ver/8500/trunk/sw_x/gvm_apps/shellext/shellext_win/shellext_win/ContextMenuShlExt.rgs
+END
+synced.ico
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repo/!svn/ver/59136/trunk/sw_x/gvm_apps/shellext/shellext_win/shellext_win/synced.ico
+END
+ACloudSyncedRF.rgs
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repo/!svn/ver/8500/trunk/sw_x/gvm_apps/shellext/shellext_win/shellext_win/ACloudSyncedRF.rgs
+END
+dllmain.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repo/!svn/ver/8500/trunk/sw_x/gvm_apps/shellext/shellext_win/shellext_win/dllmain.cpp
+END
+shellext_win.def
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repo/!svn/ver/8500/trunk/sw_x/gvm_apps/shellext/shellext_win/shellext_win/shellext_win.def
+END
+to-be-synced.ico
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repo/!svn/ver/59136/trunk/sw_x/gvm_apps/shellext/shellext_win/shellext_win/to-be-synced.ico
+END
+shellext_win.rc
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repo/!svn/ver/59136/trunk/sw_x/gvm_apps/shellext/shellext_win/shellext_win/shellext_win.rc
+END
+stdafx.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/8500/trunk/sw_x/gvm_apps/shellext/shellext_win/shellext_win/stdafx.cpp
+END
+ShlExtUtility.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repo/!svn/ver/58317/trunk/sw_x/gvm_apps/shellext/shellext_win/shellext_win/ShlExtUtility.cpp
+END
+resource.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repo/!svn/ver/59136/trunk/sw_x/gvm_apps/shellext/shellext_win/shellext_win/resource.h
+END
+ACloudToBeSynced.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repo/!svn/ver/8500/trunk/sw_x/gvm_apps/shellext/shellext_win/shellext_win/ACloudToBeSynced.h
+END
+ACloudToBeSynced.rgs
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repo/!svn/ver/8500/trunk/sw_x/gvm_apps/shellext/shellext_win/shellext_win/ACloudToBeSynced.rgs
+END
+ContextMenuShlExt.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repo/!svn/ver/58317/trunk/sw_x/gvm_apps/shellext/shellext_win/shellext_win/ContextMenuShlExt.cpp
+END
+ACloudSyncedRF.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repo/!svn/ver/58317/trunk/sw_x/gvm_apps/shellext/shellext_win/shellext_win/ACloudSyncedRF.cpp
+END
+ACloudSyncing.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repo/!svn/ver/8500/trunk/sw_x/gvm_apps/shellext/shellext_win/shellext_win/ACloudSyncing.h
+END
+ACloudSyncedSF.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repo/!svn/ver/8500/trunk/sw_x/gvm_apps/shellext/shellext_win/shellext_win/ACloudSyncedSF.h
+END
+ACloudSyncing.rgs
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repo/!svn/ver/8500/trunk/sw_x/gvm_apps/shellext/shellext_win/shellext_win/ACloudSyncing.rgs
+END
+syncbox.ico
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repo/!svn/ver/59136/trunk/sw_x/gvm_apps/shellext/shellext_win/shellext_win/syncbox.ico
+END
+shellext_win.rgs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repo/!svn/ver/8500/trunk/sw_x/gvm_apps/shellext/shellext_win/shellext_win/shellext_win.rgs
+END
+ACloudSyncedSF.rgs
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repo/!svn/ver/8500/trunk/sw_x/gvm_apps/shellext/shellext_win/shellext_win/ACloudSyncedSF.rgs
+END
+shellext_winps.def
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repo/!svn/ver/8500/trunk/sw_x/gvm_apps/shellext/shellext_win/shellext_win/shellext_winps.def
+END
+dllmain.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repo/!svn/ver/8500/trunk/sw_x/gvm_apps/shellext/shellext_win/shellext_win/dllmain.h
+END
+ACloudToBeSynced.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repo/!svn/ver/58317/trunk/sw_x/gvm_apps/shellext/shellext_win/shellext_win/ACloudToBeSynced.cpp
+END
+shellext_win.idl
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repo/!svn/ver/8500/trunk/sw_x/gvm_apps/shellext/shellext_win/shellext_win/shellext_win.idl
+END

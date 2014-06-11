@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/tables
+END
+tbinstal.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/tables/tbinstal.c
+END
+tbfadt.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/tables/tbfadt.c
+END
+tbfind.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/tables/tbfind.c
+END
+tbutils.c
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/tables/tbutils.c
+END
+tbxfroot.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/tables/tbxfroot.c
+END
+tbxface.c
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/tables/tbxface.c
+END

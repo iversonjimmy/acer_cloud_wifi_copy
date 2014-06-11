@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repo/!svn/ver/44638/trunk/sw_x/gvm_core/external/ioac_loader
+END
+CustomerLibLoader.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repo/!svn/ver/44638/trunk/sw_x/gvm_core/external/ioac_loader/CustomerLibLoader.cpp
+END
+PreDefineData.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/31305/trunk/sw_x/gvm_core/external/ioac_loader/PreDefineData.h
+END
+netcfgx.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/22371/trunk/sw_x/gvm_core/external/ioac_loader/netcfgx.h
+END
+customer.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/31305/trunk/sw_x/gvm_core/external/ioac_loader/customer.h
+END

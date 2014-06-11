@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/46530/trunk/sw_x/gvm_core/internal/db_utils/src
+END
+util_open_db_handle.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repo/!svn/ver/46530/trunk/sw_x/gvm_core/internal/db_utils/src/util_open_db_handle.cpp
+END
+db_util_check_macros.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repo/!svn/ver/42617/trunk/sw_x/gvm_core/internal/db_utils/src/db_util_check_macros.cpp
+END

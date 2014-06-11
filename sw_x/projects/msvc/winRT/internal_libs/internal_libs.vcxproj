@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCTargetsPath Condition="'$(VCTargetsPath11)' != '' and '$(VSVersion)' == '' and '$(VisualStudioVersion)' == ''">$(VCTargetsPath11)</VCTargetsPath>
+  </PropertyGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B7F4D1F1-1617-4BC4-BDF5-DC82B3AF6B0E}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>internal_libs2</RootNamespace>
+    <ProjectName>internal_libs</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WindowsAppContainer>true</WindowsAppContainer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <WindowsAppContainer>true</WindowsAppContainer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\internal_libs.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\internal_libs.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\internal_libs.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\internal_libs.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\internal_libs.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\internal_libs.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(BUILDROOT)\build_winrt\$(SolutionName)\$(Configuration)\$(ProjectName)\$(Platform)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <OutDir>$(BUILDROOT)\build_woa\$(SolutionName)\$(Configuration)\$(ProjectName)\$(Platform)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IntDir>$(BUILDROOT)\build_winrt\$(SolutionName)\$(Configuration)\$(ProjectName)\$(Platform)_obj\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <IntDir>$(BUILDROOT)\build_woa\$(SolutionName)\$(Configuration)\$(ProjectName)\$(Platform)_obj\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(BUILDROOT)\build_winrt\$(SolutionName)\$(Configuration)\$(ProjectName)\$(Platform)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <OutDir>$(BUILDROOT)\build_woa\$(SolutionName)\$(Configuration)\$(ProjectName)\$(Platform)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IntDir>$(BUILDROOT)\build_winrt\$(SolutionName)\$(Configuration)\$(ProjectName)\$(Platform)_obj\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <IntDir>$(BUILDROOT)\build_woa\$(SolutionName)\$(Configuration)\$(ProjectName)\$(Platform)_obj\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(BUILDROOT)\build_winrt\$(SolutionName)\$(Configuration)\$(ProjectName)\$(Platform)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IntDir>$(BUILDROOT)\build_winrt\$(SolutionName)\$(Configuration)\$(ProjectName)\$(Platform)_obj\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(BUILDROOT)\build_winrt\$(SolutionName)\$(Configuration)\$(ProjectName)\$(Platform)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IntDir>$(BUILDROOT)\build_winrt\$(SolutionName)\$(Configuration)\$(ProjectName)\$(Platform)_obj\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;WINAPI_FAMILY=WINAPI_PARTITION_APP;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4125;4127;4200;4512;4996;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;WINAPI_FAMILY=WINAPI_PARTITION_APP;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4125;4127;4200;4512;4996;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;WINAPI_FAMILY=WINAPI_PARTITION_APP;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4125;4127;4200;4512;4996;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;WINAPI_FAMILY=WINAPI_PARTITION_APP;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4125;4127;4200;4512;4996;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <MinimalRebuild>true</MinimalRebuild>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;WINAPI_FAMILY=WINAPI_PARTITION_APP;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4125;4127;4200;4512;4996;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <MinimalRebuild>true</MinimalRebuild>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;WINAPI_FAMILY=WINAPI_PARTITION_APP;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4125;4127;4200;4512;4996;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <MinimalRebuild>true</MinimalRebuild>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\es_core\esc\core\base\esi\esi_core.c" />
+    <ClCompile Include="..\..\..\..\es_core\esc\core\base\ioscrypto\bsl.c" />
+    <ClCompile Include="..\..\..\..\es_core\esc\core\base\ioscrypto\keyglobals.c" />
+    <ClCompile Include="..\..\..\..\es_core\esc\core\base\ioscrypto\keystore.c" />
+    <ClCompile Include="..\..\..\..\es_core\esc\core\base\ioscrypto\wrapper.c" />
+    <ClCompile Include="..\..\..\..\es_core\esc\core\ec\core_glue.c" />
+    <ClCompile Include="..\..\..\..\es_core\esc\core\ec\ec_cache.c" />
+    <ClCompile Include="..\..\..\..\es_core\esc\core\ec\ec_core.c" />
+    <ClCompile Include="..\..\..\..\es_core\esc\core\ec\ec_pers.c" />
+    <ClCompile Include="..\..\..\..\es_core\esc\core\ec\istorage_impl.c" />
+    <ClCompile Include="..\..\..\..\es_core\esc\core\es\es_container.c" />
+    <ClCompile Include="..\..\..\..\es_core\esc\core\es\es_device.c" />
+    <ClCompile Include="..\..\..\..\es_core\esc\core\es\es_storage.c" />
+    <ClCompile Include="..\..\..\..\es_core\esc\core\ioscrypto\crypto_impl.c" />
+    <ClCompile Include="..\..\..\..\es_core\esc\core\ioscrypto\mt19937-64.c" />
+    <ClCompile Include="..\..\..\..\es_core\user_local\escore_base.c" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\ans\src\ans_device.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\conf\src\conf.c" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\contentfile\src\contentfile.c" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\aes.c" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\aes_api.c" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\aes_imp.c" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\algorithms.c" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\convecc.c" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\convrsa.c" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\cslaes.c" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\cslecc.c" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\cslhmac.c" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\csloaep.c" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\cslrsa.c" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\cslrsa_sign.c" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\cslsha.c" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\elliptic_math.c" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\integer_math.c" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\md5.c" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\poly_math.c" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\sha1.c" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\sha256.c" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\tomcrypt_md5.c" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\csl\src\tomcrypt_sha256.c" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\db_utils\src\db_util_check_macros.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\db_utils\src\util_open_db_handle.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\datasetdb\src\DatasetDB.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\datasetdb\src\unicode_upcase_table.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\datasetdb\src\utf8.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\es_core_utils\src\util_tmdgetcontentinfo.c" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\es_viewer\src\cfmviewer.c" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\es_viewer\src\tikviewer.c" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\es_viewer\src\tmdviewer.c" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\exif_parser\src_winrt\exif_parser.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\file_utils\src\util_mime.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\file_utils\src\util_readfile.c" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\file_utils\src\util_spawnthread.c" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\file_utils\src\util_utf8.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\file_utils\src\util_writefile.c" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\InterruptibleSocket\src\InterruptibleSocket.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\InterruptibleSocket\src\InterruptibleSocket_SigBySockShutdown.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\simple_http\src\http_request.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\simple_http\src\http_request_async.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\simple_http\src\http_response.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Stream\src\HttpFileDownloadStream.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Stream\src\HttpFileUploadStream.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Stream\src\HttpReqHeader.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Stream\src\HttpRespHeader.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Stream\src\HttpSocketStream.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Stream\src\HttpStream.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Stream\src\HttpStream_Helper.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Stream\src\HttpStringStream.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Stream\src\HttpTsStream.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Stream\src\InStringStream.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Stream\src\OutStringStream.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Stream\src\SocketStream.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\vssi\src\basic_vssi_wrapper.cpp" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\vssi\src\vssi.c" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\vssi\src\vssi_http.c" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\vssi\src\vssi_internal.c" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\vssi\src\vssi_tunnel.c" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\vssi\src\vssi_vss.c" />
+    <ClCompile Include="..\..\..\..\gvm_core\internal\cJSON2\src\cJSON2.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\internal_libs_winrt\internal_libs_winrt.vcxproj">
+      <Project>{83b76c42-0415-44c2-a68d-2f5c6fd3f6ba}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\media_metadata_shared_impl\media_metadata_shared_impl.vcxproj">
+      <Project>{85dffabc-a0b3-4517-8b00-7cf19e55a941}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\protorpc_client\protorpc_client.vcxproj">
+      <Project>{684d6897-c275-47f4-80f3-fed474faa381}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\sqlite3\sqlite3.vcxproj">
+      <Project>{e46b2f38-5dbd-f7e2-310d-e60012cc722c}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

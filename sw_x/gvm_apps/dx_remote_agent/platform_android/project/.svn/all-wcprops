@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repo/!svn/ver/59274/trunk/sw_x/gvm_apps/dx_remote_agent/platform_android/project
+END
+default.properties
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repo/!svn/ver/20343/trunk/sw_x/gvm_apps/dx_remote_agent/platform_android/project/default.properties
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repo/!svn/ver/21899/trunk/sw_x/gvm_apps/dx_remote_agent/platform_android/project/.classpath
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repo/!svn/ver/21899/trunk/sw_x/gvm_apps/dx_remote_agent/platform_android/project/.project
+END
+AndroidManifest.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repo/!svn/ver/43372/trunk/sw_x/gvm_apps/dx_remote_agent/platform_android/project/AndroidManifest.xml
+END

@@ -1,0 +1,242 @@
+// Input and output types for infrastructure services.
+// This .proto is used to generate the client-side SOAP client.
+// It needs to match the infra-side WSDL/XSD.
+// When editing this file, be sure to also update
+// sw_i/infra/modules/ias/WebContent/IdentityAuthentication.wsdl and/or
+// sw_i/infra/modules/ias/WebContent/BaseTypes.xsd.
+
+option java_package = "igware.vplex.pb";
+option java_outer_classname = "IasServiceTypes";
+
+package vplex.ias;
+
+message AbstractRequestType {
+    required string Version = 1;
+    required string MessageId = 2;
+    optional fixed64 DeviceId = 3;
+    // Currently unused; comment out to shrink code size.
+    //optional bytes DeviceToken = 4;
+    //optional string AccountId = 5;
+    //optional string AccountToken = 6;
+    optional string Region = 7;
+    optional string Country = 8;
+    optional string Language = 9;
+    optional fixed64 SessionHandle = 10;
+    // ticket is 20 bytes
+    optional bytes ServiceTicket = 11;
+    optional string ServiceId = 12;
+}
+
+message AbstractResponseType {
+    required string Version = 1;
+    optional fixed64 DeviceId = 2;
+    required string MessageId = 3;
+    required fixed64 TimeStamp = 4;
+    required sint32 ErrorCode = 5;
+    optional string ErrorMessage = 6;
+    optional bool ServiceStandbyMode = 7;
+}
+
+//==========================================
+// CheckVirtualDeviceCredentialsRenewal
+//==========================================
+
+message CheckVirtualDeviceCredentialsRenewalRequestType {
+    required AbstractRequestType _inherited = 1;
+    required fixed64 IssueDate = 2;
+    required fixed64 SerialNumber = 3;
+}
+
+message CheckVirtualDeviceCredentialsRenewalResponseType {
+    required AbstractResponseType _inherited = 1;
+    required fixed64 ExpectedSerialNumber = 2;
+}
+
+//==========================================
+// GetSessionKey
+//==========================================
+message StrAttributeType {
+    required string AttributeName = 1;
+    required string AttributeValue = 2;
+}
+
+message GetSessionKeyRequestType {
+    required AbstractRequestType _inherited = 1;
+    required string Type = 2;
+    repeated StrAttributeType KeyAttributes = 3;
+    optional bytes EncryptedSessionKey = 4;
+}
+
+message GetSessionKeyResponseType {
+    required AbstractResponseType _inherited = 1;
+    optional bytes SessionKey = 2;
+    optional bytes EncryptedSessionKey = 3;
+    optional uint32 InstanceId = 4;
+}
+
+//==========================================
+// Login
+//==========================================
+
+message LoginRequestType {
+    required AbstractRequestType _inherited = 1;
+    optional string Username = 2;
+    required string Namespace = 3;
+    optional string Password = 4;
+    optional string WeakToken = 5;
+    optional string PairingToken = 11;
+    optional bool ACEulaAgreed = 10;
+    // It's required in the WSDL, but not in the Java implementation.
+    //optional sint32 ModuleId = 6;
+    // We never set these in client code:
+    //optional bool MakeForeground = 7;
+    //optional string persistentCredentials = 8;
+    //optional string additionalKey = 9;
+}
+
+message LoginResponseType {
+    required AbstractResponseType _inherited = 1;
+    required fixed64 SessionHandle = 2;
+    required bytes SessionSecret = 3;
+    optional string AccountId = 4;
+    required fixed64 UserId = 5;
+    optional string DisplayName = 6;
+    optional string WeakToken = 7;
+    optional fixed64 OldFgSessionHandle = 8;
+    optional string StorageRegion = 9;
+    optional int64 StorageClusterId = 10;
+    optional string persistentCredentials = 11;
+}
+
+//==========================================
+// Logout
+//==========================================
+
+message LogoutRequestType {
+    required AbstractRequestType _inherited = 1;
+    // It's required in the WSDL, but not in the Java implementation.
+    //optional sint32 ModuleId = 2;
+}
+
+message LogoutResponseType {
+    required AbstractResponseType _inherited = 1;
+}
+
+//==========================================
+// RegisterVirtualDevice
+//==========================================
+
+message RegisterVirtualDeviceRequestType {
+    required AbstractRequestType _inherited = 1;
+    required string Username = 2;
+    optional string Password = 3;
+    required bytes HardwareInfo = 4;
+    required string DeviceName = 5;
+    optional string Namespace = 6;
+    optional string WeakToken = 7;
+    optional string PairingToken = 8;
+}
+
+message RegisterVirtualDeviceResponseType {
+    required AbstractResponseType _inherited = 1;
+    optional bytes RenewalToken = 2;
+}
+
+//==========================================
+// RenewVirtualDeviceCredentials
+//==========================================
+
+message RenewVirtualDeviceCredentialsRequestType {
+    required AbstractRequestType _inherited = 1;
+    required fixed64 SerialNumber = 2;
+    required fixed64 IssueDate = 3;
+    required bytes RenewalToken = 4;
+}
+
+message RenewVirtualDeviceCredentialsResponseType {
+    required AbstractResponseType _inherited = 1;
+    optional bytes SecretDeviceCredentials = 2;
+    optional bytes ClearDeviceCredentials = 3;
+    optional bytes RenewalToken = 4;
+    optional bytes AttestProgram = 5;
+    required fixed64 IssueDate = 6;
+    required fixed64 SerialNumber = 7;
+    optional bytes AttestTMD = 8;
+    optional bytes DeviceCert = 9;
+    optional bytes PlatformKey = 10;
+}
+
+//==========================================
+// GetServerKey
+//==========================================
+
+message GetServerKeyRequestType {
+    required AbstractRequestType _inherited = 1;
+    required fixed64 UserId = 2;
+}
+
+message GetServerKeyResponseType {
+    required AbstractResponseType _inherited = 1;
+    optional bytes ServerKey = 2;
+}
+
+//==========================================
+// RequestPairing
+//==========================================
+
+message RequestPairingRequestType {
+    required AbstractRequestType _inherited = 1;
+    optional bytes HostHardwareId = 2;
+    optional fixed64 HostDeviceId = 3;
+    required bytes DeviceHardwareId = 4;
+    optional string PIN = 5;
+    repeated StrAttributeType PairingAttributes = 6;
+}
+
+message RequestPairingResponseType {
+    required AbstractResponseType _inherited = 1;
+    required string PairingToken = 2;
+}
+
+//==========================================
+// RespondToPairingRequest
+//==========================================
+
+message RespondToPairingRequestRequestType {
+    required AbstractRequestType _inherited = 1;
+    required string TransactionId = 2;
+    required bool AcceptedPairing = 3;
+}
+
+message RespondToPairingRequestResponseType {
+    required AbstractResponseType _inherited = 1;
+}
+
+//==========================================
+// RequestPairingPin
+//==========================================
+
+message RequestPairingPinRequestType {
+    required AbstractRequestType _inherited = 1;
+}
+
+message RequestPairingPinResponseType {
+    required AbstractResponseType _inherited = 1;
+    required string PairingPin = 2;
+}
+
+//==========================================
+// GetPairingStatus
+//==========================================
+
+message GetPairingStatusRequestType {
+    required AbstractRequestType _inherited = 1;
+    required string PairingToken = 2;
+}
+
+message GetPairingStatusResponseType {
+    required AbstractResponseType _inherited = 1;
+    required string Status = 2;
+    optional string Username = 3;
+}
+

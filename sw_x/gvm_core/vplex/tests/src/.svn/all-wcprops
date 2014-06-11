@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repo/!svn/ver/57730/trunk/sw_x/gvm_core/vplex/tests/src
+END
+vplexTest.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/47789/trunk/sw_x/gvm_core/vplex/tests/src/vplexTest.cpp
+END
+vplexTest_http2.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/57730/trunk/sw_x/gvm_core/vplex/tests/src/vplexTest_http2.cpp
+END
+vplexTest_xml_reader.c
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/32577/trunk/sw_x/gvm_core/vplex/tests/src/vplexTest_xml_reader.c
+END
+vplexTest_common.c
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/681/trunk/sw_x/gvm_core/vplex/tests/src/vplexTest_common.c
+END
+vplexTest_math.c
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/52827/trunk/sw_x/gvm_core/vplex/tests/src/vplexTest_math.c
+END
+vplexTest_mem_heap.c
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/14498/trunk/sw_x/gvm_core/vplex/tests/src/vplexTest_mem_heap.c
+END
+vplexTest_safe_serialization.c
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/681/trunk/sw_x/gvm_core/vplex/tests/src/vplexTest_safe_serialization.c
+END
+vplexTest_xml_writer.c
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/32600/trunk/sw_x/gvm_core/vplex/tests/src/vplexTest_xml_writer.c
+END
+vplexTest_serialization.c
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/14498/trunk/sw_x/gvm_core/vplex/tests/src/vplexTest_serialization.c
+END
+vplexTest_wstring.c
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/1256/trunk/sw_x/gvm_core/vplex/tests/src/vplexTest_wstring.c
+END

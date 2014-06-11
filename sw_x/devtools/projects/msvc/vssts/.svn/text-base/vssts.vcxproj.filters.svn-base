@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\libvssts">
+      <UniqueIdentifier>{78192bb1-7c29-4ac3-842a-dae67bf2a1ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libvsstsshim">
+      <UniqueIdentifier>{9b38b53c-e063-4af0-8302-d8b582e01137}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libvsswrapper">
+      <UniqueIdentifier>{eb9f424c-3dcd-471d-8d04-5e866538b105}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libtsextclient">
+      <UniqueIdentifier>{f2214714-fb8d-448e-bb58-63c4b589bd6f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\vssts\src\vssts.cpp">
+      <Filter>Source Files\libvssts</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\vssts\src\vssts_internal.cpp">
+      <Filter>Source Files\libvssts</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\vssts\shim\vssts_shim.cpp">
+      <Filter>Source Files\libvsstsshim</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\vssts\wrapper\vssts_wrapper.cpp">
+      <Filter>Source Files\libvsswrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\vssts\wrapper\wrapper_glue.cpp">
+      <Filter>Source Files\libvsswrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Ts2Alt\ext\src\ts_ext_client.cpp">
+      <Filter>Source Files\libtsextclient</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\Ts2Alt\ext\src\ts_ext_pkt.cpp">
+      <Filter>Source Files\libtsextclient</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

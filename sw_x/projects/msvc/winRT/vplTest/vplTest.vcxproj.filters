@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{0aa369c5-ecfa-4e50-a79d-4f26199f3a0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\vplTest">
+      <UniqueIdentifier>{ea69a2c7-bcd2-4bfc-951c-b474535767e0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\gvm_core\vpl\tests\src\vplTest.c">
+      <Filter>Source Files\vplTest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vpl\tests\src\vplTest_conv.c">
+      <Filter>Source Files\vplTest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vpl\tests\src\vplTest_dynamic.c">
+      <Filter>Source Files\vplTest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vpl\tests\src\vplTest_fs.c">
+      <Filter>Source Files\vplTest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vpl\tests\src\vplTest_network.c">
+      <Filter>Source Files\vplTest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vpl\tests\src\vplTest_plat.c">
+      <Filter>Source Files\vplTest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vpl\tests\src\vplTest_platform_compliance.c">
+      <Filter>Source Files\vplTest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vpl\tests\src\vplTest_socket.c">
+      <Filter>Source Files\vplTest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vpl\tests\src\vplTest_srwlock.c">
+      <Filter>Source Files\vplTest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vpl\tests\src\vplTest_thread.c">
+      <Filter>Source Files\vplTest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vpl\tests\src\vplTest_time.c">
+      <Filter>Source Files\vplTest</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,3 @@
+#! /bin/csh -fb
+
+./manage `hostname` dump-cluster-stats

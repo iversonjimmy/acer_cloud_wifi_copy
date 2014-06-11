@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/parser
+END
+psargs.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/parser/psargs.c
+END
+pswalk.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/parser/pswalk.c
+END
+pstree.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/parser/pstree.c
+END
+psutils.c
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/parser/psutils.c
+END
+psxface.c
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/parser/psxface.c
+END
+psloop.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/parser/psloop.c
+END
+psopcode.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/parser/psopcode.c
+END
+psscope.c
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/parser/psscope.c
+END
+psparse.c
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/parser/psparse.c
+END

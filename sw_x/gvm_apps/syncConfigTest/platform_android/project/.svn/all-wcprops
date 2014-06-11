@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repo/!svn/ver/50716/trunk/sw_x/gvm_apps/syncConfigTest/platform_android/project
+END
+default.properties
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repo/!svn/ver/34462/trunk/sw_x/gvm_apps/syncConfigTest/platform_android/project/default.properties
+END
+AndroidManifest.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repo/!svn/ver/36280/trunk/sw_x/gvm_apps/syncConfigTest/platform_android/project/AndroidManifest.xml
+END

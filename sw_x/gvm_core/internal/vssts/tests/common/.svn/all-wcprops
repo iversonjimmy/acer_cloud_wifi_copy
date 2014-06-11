@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/38043/trunk/sw_x/gvm_core/internal/vssts/tests/common
+END
+vsTest_infra.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/38043/trunk/sw_x/gvm_core/internal/vssts/tests/common/vsTest_infra.cpp
+END
+vsTest_infra.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/38043/trunk/sw_x/gvm_core/internal/vssts/tests/common/vsTest_infra.hpp
+END

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/55992/trunk/sw_x/gvm_core/internal/Ts2Alt/Ext/src
+END
+ts_ext_server.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/54434/trunk/sw_x/gvm_core/internal/Ts2Alt/Ext/src/ts_ext_server.hpp
+END
+ts_ext_client.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/55768/trunk/sw_x/gvm_core/internal/Ts2Alt/Ext/src/ts_ext_client.cpp
+END
+ts_ext_pkt.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/54434/trunk/sw_x/gvm_core/internal/Ts2Alt/Ext/src/ts_ext_pkt.cpp
+END
+ts_ext_client.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/54434/trunk/sw_x/gvm_core/internal/Ts2Alt/Ext/src/ts_ext_client.hpp
+END
+ts_ext_pkt.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/55063/trunk/sw_x/gvm_core/internal/Ts2Alt/Ext/src/ts_ext_pkt.hpp
+END
+ts_ext_server.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/55992/trunk/sw_x/gvm_core/internal/Ts2Alt/Ext/src/ts_ext_server.cpp
+END

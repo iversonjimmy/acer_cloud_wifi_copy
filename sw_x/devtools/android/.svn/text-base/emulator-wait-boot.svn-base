@@ -1,0 +1,21 @@
+#!/bin/bash
+
+searchstr=BOOT_COMPLETED
+logfile=$1
+count=0
+interval=5 # seconds
+timeout=600 # seconds
+
+echo "waiting for emulator boot to finish, timeout of $timeout seconds"
+
+while [ $count -lt $timeout ]; do
+    output=`grep $searchstr $logfile`
+    if [ "$output" != "" ]; then
+        echo "emulator boot finished in $count seconds"
+        exit 0
+    fi
+    sleep $interval
+    count=$[$count + $interval]
+done
+
+echo "emulator boot has timed out after $timeout seconds"

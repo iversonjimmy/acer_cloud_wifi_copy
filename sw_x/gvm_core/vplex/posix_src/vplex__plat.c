@@ -1,0 +1,131 @@
+/*
+*                Copyright (C) 2005, BroadOn Communications Corp.
+*
+*   These coded instructions, statements, and computer programs contain
+*   unpublished  proprietary information of BroadOn Communications Corp.,
+*   and  are protected by Federal copyright law. They may not be disclosed
+*   to  third  parties or copied or duplicated in any form, in whole or in
+*   part, without the prior written consent of BroadOn Communications Corp.
+*
+*/
+
+#include "vplex_plat.h"
+
+#include <stdarg.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <errno.h>
+
+#include "vplex_assert.h"
+#include "vplex_trace.h"
+
+#if defined __GLIBC__ && !defined __UCLIBC__
+#include <execinfo.h>
+#endif
+
+int VPL_GetLocalHostname(char *name, size_t len)
+{
+    int rv = VPL_OK;
+    int rc;
+
+    if (name == NULL) {
+        return VPL_ERR_INVALID;
+    }
+
+    rc = gethostname(name, len);
+
+    if (rc == -1) {
+        rv = VPLError_XlatErrno(errno);
+    }
+
+    return rv;
+}
+
+#ifdef VPL_NO_ASSERT
+  // We are going to provide an empty stub, for callers who get compiled
+  // with VPL_NO_ASSERT *NOT* defined.
+  #undef VPLAssert_Failed
+  void VPLAssert_Failed(char const* file, char const* func, int line, char const* formatMsg, ...);
+#endif //VPL_NO_ASSERT
+
+/// Apparently specific to glibc.
+/// Need to link with "-rdynamic" to get the function names.
+/// @note Functions marked 'static' will not have their names included.
+#if defined __GLIBC__ && !defined __UCLIBC__
+void VPLStack_Trace(void)
+{
+#ifdef __GLIBC__
+    /* Obtain a backtrace and print it to stdout. */
+    void* return_addresses[100]; // Max size of 100 is arbitrary, but should be good enough for debugging.
+    size_t size = backtrace(return_addresses, 100);
+    int stdout_fileno = fileno(stdout);
+    // backtrace_symbols_fd seems to skip the printf buffer, so we need to flush now to
+    // make sure all previous printfs are output first.
+    fflush(stdout);
+    backtrace_symbols_fd(return_addresses, size, stdout_fileno);
+
+    char** strings = backtrace_symbols(return_addresses, size);
+    if (strings == NULL) {
+        VPLTRACE_LOG_ALWAYS(VPLTRACE_GRP_VPL, VPL_SG_MISC, "backtrace_symbols failed: %d", errno);
+    } else {
+        int j;
+        for (j = 0; j < size; j++) {
+            VPLTRACE_LOG_ALWAYS(VPLTRACE_GRP_VPL, VPL_SG_MISC, "%s", strings[j]);
+        }
+        free(strings);
+    }
+#else
+    printf("(Backtrace support disabled.)\n");
+    VPLTRACE_LOG_ALWAYS(VPLTRACE_GRP_VPL, VPL_SG_MISC, "(Backtrace support disabled.)");
+#endif // __GLIBC_
+}
+#endif
+
+void
+VPLAssert_Failed(char const* file, char const* func, int line, char const* formatMsg, ...)
+#ifdef VPL_NO_ASSERT
+{
+    // Do nothing here.
+    UNUSED(file);
+    UNUSED(func);
+    UNUSED(line);
+    UNUSED(formatMsg);
+}
+#else   // !VPL_NO_ASSERT
+{
+    va_list args;
+
+    if (func != NULL) {
+        printf("ASSERTION FAILED: %s:%s:%d:\n", file, func, line);
+    }
+    else {
+        printf("ASSERTION FAILED: %s:%d:\n", file, line);
+    }
+
+    va_start(args, formatMsg);
+    vprintf(formatMsg, args);
+    va_end(args);
+    printf("\n");
+    
+    // Also log to VPLTrace, in case stdout is being discarded.
+    {
+        VPLTrace_TraceEx(TRACE_ALWAYS, file, line, func, true, VPLTRACE_GRP_VPL, VPL_SG_MISC,
+                "ASSERTION FAILED!");
+        // man page says it's safe to use va_start/va_end multiple times.
+        va_start(args, formatMsg);
+        VPLTrace_VTraceEx(TRACE_ALWAYS, file, line, func, true, VPLTRACE_GRP_VPL, VPL_SG_MISC,
+                formatMsg, args);
+        va_end(args);
+    }
+    #if defined __GLIBC__ && !defined __UCLIBC__ 
+    VPLStack_Trace();
+    #endif
+    
+    // One last flush now, in case we are about to crash.
+    fflush(stdout);
+
+#ifndef VPL_NO_BREAK_ON_ASSERT
+    abort();
+#endif
+}
+#endif  // !VPL_NO_ASSERT -- ASSERT() is to be a no-op

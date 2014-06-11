@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repo/!svn/ver/26603/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/stubs
+END
+substitute.cc
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repo/!svn/ver/445/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/stubs/substitute.cc
+END
+structurally_valid.cc
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repo/!svn/ver/445/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/stubs/structurally_valid.cc
+END
+substitute.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repo/!svn/ver/445/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/stubs/substitute.h
+END
+stl_util-inl.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repo/!svn/ver/445/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/stubs/stl_util-inl.h
+END
+once.cc
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repo/!svn/ver/23804/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/stubs/once.cc
+END
+hash.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repo/!svn/ver/445/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/stubs/hash.h
+END
+once.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repo/!svn/ver/1060/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/stubs/once.h
+END
+strutil.cc
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repo/!svn/ver/23716/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/stubs/strutil.cc
+END
+common.cc
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repo/!svn/ver/23804/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/stubs/common.cc
+END
+strutil.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repo/!svn/ver/493/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/stubs/strutil.h
+END
+common.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repo/!svn/ver/23804/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/stubs/common.h
+END
+map-util.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repo/!svn/ver/445/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/stubs/map-util.h
+END

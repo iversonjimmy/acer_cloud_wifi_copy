@@ -1,0 +1,8 @@
+source.dir=src:src2:src3:src4:src5:src6:src7
+key.store=iGware.keystore
+key.alias=iGware-devel
+key.store.password=changeme
+key.alias.password=changeme
+
+# Suppress the silly "includeantruntime" warning.
+build.sysclasspath=last

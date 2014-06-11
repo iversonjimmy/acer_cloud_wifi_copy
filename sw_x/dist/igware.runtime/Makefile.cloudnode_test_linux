@@ -1,0 +1,84 @@
+# -*-Makefile-*-
+export PRODUCT=linux
+export TEST_TARGET_IS_CLOUDNODE=1
+
+# makefile included by all sw_x/dist/igware.runtime makefiles
+include igware.runtime.common.mk
+# makefile included by all sw_x/dist/* makefiles
+include $(WORKDIR)/sw_x/dist/Makefile.common
+export TEST_CONTENT_DIR=/$(FS_STORE_PATH)/$(BRANCH_NAME)/cloudnode
+
+.PHONY: printenv
+printenv:
+	env
+	pwd
+
+# --- this target should clean the machine before running tests
+.PHONY: clean_tests
+clean_tests:
+
+# --- this target should install anything needed to test the product
+# --- assume that the build of the product and test of the product DO NOT occur on the same machine
+TEST_TGZ="$(PRODUCT)_output.tar.gz"
+.PHONY: install_tests
+install_tests: get_idt_tool
+	# show the full-name of the test packages that are being retrieved
+	ssh $(STORE_USER)@$(STORE_HOST) "cd $(PRODUCT_STORAGE_DIR)/linux_output && ls -l $(TEST_TGZ)"
+	# get test package
+	scp $(STORE_USER)@$(STORE_HOST):$(PRODUCT_STORAGE_DIR)/linux_output/$(TEST_TGZ) $(WORKDIR)
+	# unpackage it
+	cd $(WORKDIR) && zcat $(TEST_TGZ) | tar xvf -
+	# replace regular ccd/dxshell with cloud node version
+	mv $(WORKDIR)/buildroot/release/linux/gvm_core/daemons/ccd/ccd $(WORKDIR)/buildroot/release/linux/gvm_core/daemons/ccd/ccd.orig
+	mv $(WORKDIR)/buildroot/release/linux/tests/dxshell/dxshell $(WORKDIR)/buildroot/release/linux/tests/dxshell/dxshell.orig
+	cp $(WORKDIR)/buildroot/release/linux/gvm_core/daemons/ccd/ccd_cloudnode $(WORKDIR)/buildroot/release/linux/gvm_core/daemons/ccd/ccd
+	cp $(WORKDIR)/buildroot/release/linux/tests/dxshell/dxshell_cloudnode $(WORKDIR)/buildroot/release/linux/tests/dxshell/dxshell
+
+.PHONY: get_idt_tool
+get_idt_tool:
+	mkdir -p $(WORKDIR)/sw_i/tools
+	scp $(STORE_USER)@$(STORE_HOST):$(FS_PC_INFRA_STORE_PATH)/idt/idt.zip $(WORKDIR)/sw_i/tools
+	cd $(WORKDIR)/sw_i/tools && unzip idt.zip
+
+# --- this target should execute the tests (usually using the testharness)
+.PHONY: run_tests
+run_tests:
+	$(WORKDIR)/sw_x/dist/igware.runtime/make_validated_links.sh -a save -u $(STORE_USER) -n $(STORE_HOST) -d $(TEST_CONTENT_DIR) -s ccd_cloudnode -s CloudNodeClientSDK -s dxshell_cloudnode
+	$(WORKDIR)/sw_x/tools/testharness/bin/testharness.py -c $(WORKDIR)/sw_x/tools/testharness/conf/runs/buildbot_tests.cloudnode.$(PRODUCT).$(LAB).run -o /tmp/testharness/output_cloudnode_$(PRODUCT)/$(BUILD_DATE) -b $(STORE_USER)@$(STORE_HOST):/$(FS_STORE_TEST_PATH)/$(BRANCH_NAME)/$(BUILD_DATE)_cloudnode_$(PRODUCT)_$(LAB) -k
+	# since the tests have passed, create the links indicating the build has been validated
+	$(WORKDIR)/sw_x/dist/igware.runtime/make_validated_links.sh -a link -u $(STORE_USER) -n $(STORE_HOST) -d $(TEST_CONTENT_DIR) -p linux
+
+.PHONY: run_full_tests
+run_full_tests:
+	$(WORKDIR)/sw_x/dist/igware.runtime/make_validated_links.sh -a save -u $(STORE_USER) -n $(STORE_HOST) -d $(TEST_CONTENT_DIR) -s ccd_cloudnode -s CloudNodeClientSDK -s dxshell_cloudnode
+	$(WORKDIR)/sw_x/tools/testharness/bin/testharness.py -c $(WORKDIR)/sw_x/tools/testharness/conf/runs/buildbot_tests.cloudnode.$(PRODUCT).full.$(LAB).run -o /tmp/testharness/output_cloudnode_$(PRODUCT)/$(BUILD_DATE) -b $(STORE_USER)@$(STORE_HOST):/$(FS_STORE_TEST_PATH)/$(BRANCH_NAME)/$(BUILD_DATE)_cloudnode_$(PRODUCT)_$(LAB) -k
+	# since the tests have passed, create the links indicating the build has been validated
+	$(WORKDIR)/sw_x/dist/igware.runtime/make_validated_links.sh -a link -u $(STORE_USER) -n $(STORE_HOST) -d $(TEST_CONTENT_DIR) -p linux
+
+# --- this target should report the test results
+.PHONY: report_test_results
+report_test_results:
+	# if the string "TEST RUN STATUS PASS" is not found in the summary output, then it's a fail
+	cat /tmp/testharness/output_cloudnode_$(PRODUCT)/$(BUILD_DATE)/testharness_summary.out
+	grep "TEST RUN STATUS PASS" /tmp/testharness/output_cloudnode_$(PRODUCT)/$(BUILD_DATE)/testharness_summary.out
+
+# --- this target run once to setup a machine for build and/or test
+.PHONY: build_setup
+build_setup: 
+
+# --- this target run once on all target machines to install packages required to run the tests
+.PHONY: test_setup
+test_setup: allow_sudo_usage
+	make -f $(WORKDIR)/sw_x/dist/igware.runtime/Makefile.cloudnode_test_linux centos_update_repo
+	make -f $(WORKDIR)/sw_x/dist/igware.runtime/Makefile.cloudnode_test_linux install_common_pkgs
+	make -f $(WORKDIR)/sw_x/dist/igware.runtime/Makefile.cloudnode_test_linux centos_install_32bit_pkgs
+	# machine must be able to password-less SSH to itself
+	cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+	# generate core file into a specific directory
+	sudo mkdir -p /tmp/core
+	sudo bash -c 'echo /tmp/core/core.%e.%p > /proc/sys/kernel/core_pattern'
+	# Create usable temp directory for test results
+	sudo mkdir -p /temp
+	sudo chmod 777 /temp
+	# manual step: make sure /tmp and /home/build are on the same filesystem
+	echo "MANUAL STEP: Make sure /tmp and /home/build are on the same filesystem; move /tmp to /home/tmp if necessary"

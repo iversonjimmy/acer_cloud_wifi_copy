@@ -1,0 +1,36 @@
+#! /bin/csh -fb
+
+set infra    = $BUILDROOT/infra
+set classes  = $infra/modules/pxd/debug
+set library  = libsetSockOpt.so
+
+setenv jars ./jars-real
+
+rm -rf com $jars conf igware lib $library
+
+mkdir $jars
+
+cp $infra/modules/pxd/libpxd.jar                  $jars/. || exit 1
+cp $infra/modules/wsclient/wsclient.jar           $jars/. || exit 1
+cp $infra/modules/wstypes/wstypes.jar             $jars/. || exit 1
+cp $infra/imports/lib/jaxrpc.jar                  $jars/. || exit 1
+cp $infra/modules/ans/libans.jar                  $jars/. || exit 1
+cp $infra/lib/protobuf.jar                        $jars/. || exit 1
+cp $infra/packages/javalib/package/jar/common.jar $jars/. || exit 1
+cp $infra/imports/lib/commons-logging-1.1.1.jar   $jars/. || exit 1
+cp $infra/imports/lib/jaxrpc.jar                  $jars/. || exit 1
+cp $infra/imports/lib/servlet.jar                 $jars/. || exit 1
+cp $infra/imports/lib/axis.jar                    $jars/. || exit 1
+cp $infra/imports/lib/commons-discovery-0.2.jar   $jars/. || exit 1
+cp $infra/imports/lib/wsdl4j-1.5.1.jar            $jars/. || exit 1
+cp $infra/imports/lib/mail.jar                    $jars/. || exit 1
+cp $infra/imports/lib/activation.jar              $jars/. || exit 1
+
+mkdir conf                                                || exit 1
+cp -r $WORKAREA/sw_i/infra/modules/pxd/conf/* conf/.      || exit 1
+
+if (`uname -i` == "x86_64") then
+    cp -r $BUILDROOT/infra/packages/pxd/package/64/$library . || exit 1
+else
+    cp -r $BUILDROOT/infra/packages/pxd/package/32/$library . || exit 1
+endif

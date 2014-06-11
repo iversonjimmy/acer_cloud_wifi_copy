@@ -1,0 +1,52 @@
+This documents shows the connection and packet flow for each
+pxd_client library routine that communicates with a PXD server.
+"<-" denotes a packet received by the PXD client (either a
+client CCD or a server CCD).  "->" denotes a packet going to
+the PXD demon.
+
+If there are two packet types for a single arrow, either might
+be sent.  For example:
+    <- Send_pxd_response
+       Reject_pxd_credentials
+means that the packet might get either Send_pxd_response or
+Reject_pxd_credentials as a response.
+
+pxd_open
+    .  connect to the PXD server
+    <- Send_pxd_challenge
+    -> Send_pxd_login
+    <- Send_pxd_response
+       Reject_pxd_credentials
+
+pxd_declare
+    -> Declare_server
+    <- Send_pxd_response
+
+pxd_lookup
+    -> Query_server_declaration
+    <- Send_server_declaration
+       Send_pxd_response
+
+pxd_connect
+    -> Start_connection_attempt
+    <- Send_pxd_response
+       *** Once this packet is sent, switch to the mirror horde
+    <- Send_ccd_challenge
+    -> Send_ccd_login
+    <- Reject_ccd_credentials
+       Send_ccd_response
+
+pxd_receive
+    <- ANS pxd_connect_request
+    .  connect to the PXD server
+    <- Send_pxd_challenge
+    -> Send_pxd_login
+    <- Reject_pxd_credentials
+       Send_pxd_response
+    -> Start_proxy_connection
+    <- Send_pxd_response
+       *** Once this packet is sent, switch to the mirror horde
+    -> Send_ccd_challenge
+    <- Send_ccd_login
+    -> Reject_ccd_credentials
+       Send_ccd_response

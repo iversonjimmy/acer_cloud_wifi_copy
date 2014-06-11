@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repo/!svn/ver/15022/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/xml
+END
+AttributeList.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/xml/AttributeList.java
+END
+XML.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/xml/XML.java
+END
+NodeList.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/xml/NodeList.java
+END
+Attribute.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/xml/Attribute.java
+END
+Node.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/xml/Node.java
+END
+ParserException.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/xml/ParserException.java
+END
+Parser.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/xml/Parser.java
+END

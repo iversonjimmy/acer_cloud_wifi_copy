@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repo/!svn/ver/15133/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/service
+END
+DlnaService.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repo/!svn/ver/15022/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/service/DlnaService.java
+END
+NotebookSyncAdapterService.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/service/NotebookSyncAdapterService.java
+END
+DlnaServiceWrapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/service/DlnaServiceWrapper.java
+END
+IDlnaService.aidl
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/service/IDlnaService.aidl
+END
+CalendarSyncAdapterService.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/service/CalendarSyncAdapterService.java
+END
+CcdBackgroundService.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/repo/!svn/ver/15133/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/service/CcdBackgroundService.java
+END
+CameraRollStreamSyncAdapterService.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/repo/!svn/ver/15133/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/service/CameraRollStreamSyncAdapterService.java
+END
+ContactsSyncAdapterService.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/service/ContactsSyncAdapterService.java
+END
+IDlnaServiceCallback.aidl
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/service/IDlnaServiceCallback.aidl
+END
+FavoriteSyncAdapterService.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/service/FavoriteSyncAdapterService.java
+END

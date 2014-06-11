@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/37081/trunk/sw_x/es_core/esc/core/base/ioscrypto
+END
+bsl.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/37081/trunk/sw_x/es_core/esc/core/base/ioscrypto/bsl.c
+END
+wrapper.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/169/trunk/sw_x/es_core/esc/core/base/ioscrypto/wrapper.c
+END
+bsl.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/16405/trunk/sw_x/es_core/esc/core/base/ioscrypto/bsl.h
+END
+keystore.c
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/16405/trunk/sw_x/es_core/esc/core/base/ioscrypto/keystore.c
+END
+bsl_defs.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/169/trunk/sw_x/es_core/esc/core/base/ioscrypto/bsl_defs.h
+END
+crypto_impl.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/16405/trunk/sw_x/es_core/esc/core/base/ioscrypto/crypto_impl.h
+END
+keystore.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/16405/trunk/sw_x/es_core/esc/core/base/ioscrypto/keystore.h
+END
+keyglobals.c
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/169/trunk/sw_x/es_core/esc/core/base/ioscrypto/keyglobals.c
+END

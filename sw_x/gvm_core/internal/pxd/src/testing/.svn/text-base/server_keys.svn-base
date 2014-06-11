@@ -1,0 +1,6 @@
+file-key-1  2012/06/14  1AEcd12345678890abcdefABCDE1
+  file-key-2  2012/06/15  2AEcd12345678890abcdefABCDE1
+  bad-line
+# This file should be installed by ops.
+
+base-key 2012/06/14 2F70543766994E5842412BA5F6EB9016eb31906B

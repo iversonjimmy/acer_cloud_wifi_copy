@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repo/!svn/ver/58242/trunk/sw_x/gvm_core/internal/pxd/src
+END
+pxd_test.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/38576/trunk/sw_x/gvm_core/internal/pxd/src/pxd_test.h
+END
+pxd_mtwist.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/47964/trunk/sw_x/gvm_core/internal/pxd/src/pxd_mtwist.cpp
+END
+state.doc
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/46028/trunk/sw_x/gvm_core/internal/pxd/src/state.doc
+END
+tc.awk
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/37573/trunk/sw_x/gvm_core/internal/pxd/src/tc.awk
+END
+pxd_circle.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/46922/trunk/sw_x/gvm_core/internal/pxd/src/pxd_circle.cpp
+END
+Readme
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/52660/trunk/sw_x/gvm_core/internal/pxd/src/Readme
+END
+pxd_triangle.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/53373/trunk/sw_x/gvm_core/internal/pxd/src/pxd_triangle.cpp
+END
+pxd_packet_test.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/50229/trunk/sw_x/gvm_core/internal/pxd/src/pxd_packet_test.cpp
+END
+pxd_packet.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/52998/trunk/sw_x/gvm_core/internal/pxd/src/pxd_packet.cpp
+END
+pxd_bw.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/53374/trunk/sw_x/gvm_core/internal/pxd/src/pxd_bw.cpp
+END
+tc
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/43425/trunk/sw_x/gvm_core/internal/pxd/src/tc
+END
+pxd_util.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/37521/trunk/sw_x/gvm_core/internal/pxd/src/pxd_util.cpp
+END
+pxd_client_test.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/51159/trunk/sw_x/gvm_core/internal/pxd/src/pxd_client_test.cpp
+END
+pxd_client.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/58205/trunk/sw_x/gvm_core/internal/pxd/src/pxd_client.cpp
+END
+gt
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/43425/trunk/sw_x/gvm_core/internal/pxd/src/gt
+END
+pxd_event_test.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/44913/trunk/sw_x/gvm_core/internal/pxd/src/pxd_event_test.cpp
+END
+pxd_log.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/49991/trunk/sw_x/gvm_core/internal/pxd/src/pxd_log.cpp
+END
+pxd_event.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/58241/trunk/sw_x/gvm_core/internal/pxd/src/pxd_event.cpp
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/58203/trunk/sw_x/gvm_core/internal/pxd/src/Makefile
+END

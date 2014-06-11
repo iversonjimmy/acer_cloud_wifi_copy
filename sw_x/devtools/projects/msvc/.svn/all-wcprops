@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/repo/!svn/ver/59817/trunk/sw_x/devtools/projects/msvc
+END
+vplex.props
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/50828/trunk/sw_x/devtools/projects/msvc/vplex.props
+END
+CCDIClient.props
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/50828/trunk/sw_x/devtools/projects/msvc/CCDIClient.props
+END
+MSVC sw_x common.props
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repo/!svn/ver/50828/trunk/sw_x/devtools/projects/msvc/MSVC%20sw_x%20common.props
+END
+PersonalCloudCSharp.sln
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/51632/trunk/sw_x/devtools/projects/msvc/PersonalCloudCSharp.sln
+END
+README_PersonalCloudCSharp.txt
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/54119/trunk/sw_x/devtools/projects/msvc/README_PersonalCloudCSharp.txt
+END
+internal_libs.props
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/56058/trunk/sw_x/devtools/projects/msvc/internal_libs.props
+END
+media_metadata_shared_impl.props
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repo/!svn/ver/50828/trunk/sw_x/devtools/projects/msvc/media_metadata_shared_impl.props
+END
+protorpc_client.props
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/50828/trunk/sw_x/devtools/projects/msvc/protorpc_client.props
+END
+README.txt
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repo/!svn/ver/31666/trunk/sw_x/devtools/projects/msvc/README.txt
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/57852/trunk/sw_x/devtools/projects/msvc/Makefile
+END
+PersonalCloudAll.sln
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/58358/trunk/sw_x/devtools/projects/msvc/PersonalCloudAll.sln
+END

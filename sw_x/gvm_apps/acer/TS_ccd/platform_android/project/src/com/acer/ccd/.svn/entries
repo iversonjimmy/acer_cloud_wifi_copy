@@ -1,0 +1,58 @@
+10
+
+dir
+59951
+https://src-us.ctbg.acer.com/repo/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd
+https://src-us.ctbg.acer.com/repo
+
+
+
+2013-11-21T01:52:15.940983Z
+51193
+steveo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+187b5c42-a02b-43e7-ba74-80c9f8da41ab
+
+serviceclient
+dir
+
+service
+dir
+
+upnp
+dir
+
+cache
+dir
+
+receiver
+dir
+
+debug
+dir
+
+authenticator
+dir
+
+provider
+dir
+
+ui
+dir
+
+util
+dir
+

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/repo/!svn/ver/16916/trunk/sw_x/gvm_core/vpl/src
+END
+vpl_version.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repo/!svn/ver/80/trunk/sw_x/gvm_core/vpl/src/vpl_version.c
+END
+vpl_assert.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repo/!svn/ver/13544/trunk/sw_x/gvm_core/vpl/src/vpl_assert.h
+END
+vpl_debug.c
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/16916/trunk/sw_x/gvm_core/vpl/src/vpl_debug.c
+END
+vplu_strnlen.c
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/2057/trunk/sw_x/gvm_core/vpl/src/vplu_strnlen.c
+END

@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/util
+END
+ThreadCore.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/util/ThreadCore.java
+END
+ListenerList.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/util/ListenerList.java
+END
+Mutex.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/util/Mutex.java
+END
+StringUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/util/StringUtil.java
+END
+Debug.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/util/Debug.java
+END
+FileUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/util/FileUtil.java
+END
+TimerUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/org/cybergarage/util/TimerUtil.java
+END

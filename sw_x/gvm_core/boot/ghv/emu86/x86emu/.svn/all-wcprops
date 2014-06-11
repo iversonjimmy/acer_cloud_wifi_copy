@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repo/!svn/ver/1428/trunk/sw_x/gvm_core/boot/ghv/emu86/x86emu
+END
+x86emu.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/42/trunk/sw_x/gvm_core/boot/ghv/emu86/x86emu/x86emu.h
+END
+regs.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/42/trunk/sw_x/gvm_core/boot/ghv/emu86/x86emu/regs.h
+END
+x86emu_types.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/1428/trunk/sw_x/gvm_core/boot/ghv/emu86/x86emu/x86emu_types.h
+END
+ops.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repo/!svn/ver/42/trunk/sw_x/gvm_core/boot/ghv/emu86/x86emu/ops.h
+END
+decode.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/42/trunk/sw_x/gvm_core/boot/ghv/emu86/x86emu/decode.h
+END
+x86emui.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/42/trunk/sw_x/gvm_core/boot/ghv/emu86/x86emu/x86emui.h
+END
+debug.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/42/trunk/sw_x/gvm_core/boot/ghv/emu86/x86emu/debug.h
+END
+prim_ops.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/42/trunk/sw_x/gvm_core/boot/ghv/emu86/x86emu/prim_ops.h
+END

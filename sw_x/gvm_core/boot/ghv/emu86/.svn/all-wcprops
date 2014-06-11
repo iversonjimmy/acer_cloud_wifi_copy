@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/repo/!svn/ver/1428/trunk/sw_x/gvm_core/boot/ghv/emu86
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/42/trunk/sw_x/gvm_core/boot/ghv/emu86/LICENSE
+END
+ops.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repo/!svn/ver/42/trunk/sw_x/gvm_core/boot/ghv/emu86/ops.c
+END
+decode.c
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repo/!svn/ver/42/trunk/sw_x/gvm_core/boot/ghv/emu86/decode.c
+END
+ops2.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repo/!svn/ver/42/trunk/sw_x/gvm_core/boot/ghv/emu86/ops2.c
+END
+prim_ops.c
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/42/trunk/sw_x/gvm_core/boot/ghv/emu86/prim_ops.c
+END

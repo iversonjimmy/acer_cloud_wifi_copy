@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/generate/lint
+END
+std64.lnt
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/generate/lint/std64.lnt
+END
+options.lnt
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/generate/lint/options.lnt
+END
+lint.bat
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/generate/lint/lint.bat
+END
+readme.txt
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/generate/lint/readme.txt
+END
+std32.lnt
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/generate/lint/std32.lnt
+END
+lset.bat
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/generate/lint/lset.bat
+END
+std16.lnt
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/generate/lint/std16.lnt
+END
+files.lnt
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/generate/lint/files.lnt
+END

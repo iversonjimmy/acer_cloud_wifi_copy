@@ -1,0 +1,80 @@
+10
+
+dir
+59951
+https://src-us.ctbg.acer.com/repo/trunk/sw_x/tests/sync_config
+https://src-us.ctbg.acer.com/repo
+
+
+
+2014-05-21T00:29:58.400273Z
+59872
+steveo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+187b5c42-a02b-43e7-ba74-80c9f8da41ab
+
+syncConfigDbSchemaV2
+dir
+
+syncConfig
+dir
+
+syncConfigThreadPool
+dir
+
+fileMonitorDelay
+dir
+
+syncConfigDb
+dir
+
+syncConfigLargeTest
+dir
+
+Makefile
+file
+
+
+
+
+2014-05-22T01:47:24.306875Z
+f2ca48e17d72dd2a6cea1ea3618d6d09
+2013-11-15T04:34:58.264540Z
+50712
+rlee
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+470
+

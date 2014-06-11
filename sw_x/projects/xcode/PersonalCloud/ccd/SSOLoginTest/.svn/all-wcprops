@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/46294/trunk/sw_x/projects/xcode/PersonalCloud/ccd/SSOLoginTest
+END
+main.m
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repo/!svn/ver/28619/trunk/sw_x/projects/xcode/PersonalCloud/ccd/SSOLoginTest/main.m
+END
+SSOLoginTest-Info.plist
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repo/!svn/ver/28619/trunk/sw_x/projects/xcode/PersonalCloud/ccd/SSOLoginTest/SSOLoginTest-Info.plist
+END
+AppDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repo/!svn/ver/28619/trunk/sw_x/projects/xcode/PersonalCloud/ccd/SSOLoginTest/AppDelegate.h
+END
+SSOLoginTest-Prefix.pch
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repo/!svn/ver/28619/trunk/sw_x/projects/xcode/PersonalCloud/ccd/SSOLoginTest/SSOLoginTest-Prefix.pch
+END
+AppDelegate.mm
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repo/!svn/ver/46294/trunk/sw_x/projects/xcode/PersonalCloud/ccd/SSOLoginTest/AppDelegate.mm
+END
+Default.png
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repo/!svn/ver/28619/trunk/sw_x/projects/xcode/PersonalCloud/ccd/SSOLoginTest/Default.png
+END

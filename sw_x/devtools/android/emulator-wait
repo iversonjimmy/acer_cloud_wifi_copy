@@ -1,0 +1,21 @@
+#!/bin/bash
+
+searchstr=$1
+logfile=$2
+count=0
+interval=3 # seconds
+timeout=600 # seconds
+
+echo "waiting for emulator message <$searchstr>, timeout of $timeout seconds"
+
+while [ $count -lt $timeout ]; do
+    output=`grep "$searchstr" $logfile`
+    if [ "$output" != "" ]; then
+        echo "get message <$searchstr> after waiting for $count seconds"
+        exit 0
+    fi
+    sleep $interval
+    count=$[$count + $interval]
+done
+
+echo "waiting for message <$searchstr> has timed out after $timeout seconds"

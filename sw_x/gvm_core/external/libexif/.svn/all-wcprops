@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repo/!svn/ver/40811/trunk/sw_x/gvm_core/external/libexif
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/28946/trunk/sw_x/gvm_core/external/libexif/BUILD
+END
+platform_cloudnode.mk
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/40811/trunk/sw_x/gvm_core/external/libexif/platform_cloudnode.mk
+END
+libexif-0.6.21.tar.gz
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/28946/trunk/sw_x/gvm_core/external/libexif/libexif-0.6.21.tar.gz
+END
+platform_linux.mk
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/40811/trunk/sw_x/gvm_core/external/libexif/platform_linux.mk
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/40811/trunk/sw_x/gvm_core/external/libexif/Makefile
+END

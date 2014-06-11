@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/repo/!svn/ver/3798/trunk/sw_x/tools/license
+END
+pad_file_size.py
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repo/!svn/ver/1787/trunk/sw_x/tools/license/pad_file_size.py
+END
+verisign-code-signing.pfx
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/3798/trunk/sw_x/tools/license/verisign-code-signing.pfx
+END
+publish_file.py
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/1787/trunk/sw_x/tools/license/publish_file.py
+END

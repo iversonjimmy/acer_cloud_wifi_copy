@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/49754/trunk/sw_x/gvm_core/internal/Ts2/Link/tests/EchoTest
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/47964/trunk/sw_x/gvm_core/internal/Ts2/Link/tests/EchoTest/BUILD
+END
+TcpDinClient.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repo/!svn/ver/49754/trunk/sw_x/gvm_core/internal/Ts2/Link/tests/EchoTest/TcpDinClient.cpp
+END
+TcpDinEchoTest.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repo/!svn/ver/47964/trunk/sw_x/gvm_core/internal/Ts2/Link/tests/EchoTest/TcpDinEchoTest.cpp
+END
+TcpDinClient.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repo/!svn/ver/47270/trunk/sw_x/gvm_core/internal/Ts2/Link/tests/EchoTest/TcpDinClient.hpp
+END
+TcpDinServer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repo/!svn/ver/49754/trunk/sw_x/gvm_core/internal/Ts2/Link/tests/EchoTest/TcpDinServer.cpp
+END
+TcpDinServer.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repo/!svn/ver/48480/trunk/sw_x/gvm_core/internal/Ts2/Link/tests/EchoTest/TcpDinServer.hpp
+END

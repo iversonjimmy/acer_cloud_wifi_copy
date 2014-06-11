@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/40483/trunk/sw_x/tests/sync_config/syncConfigThreadPool
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/39716/trunk/sw_x/tests/sync_config/syncConfigThreadPool/BUILD
+END
+syncConfigThreadPoolTest.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repo/!svn/ver/40483/trunk/sw_x/tests/sync_config/syncConfigThreadPool/syncConfigThreadPoolTest.cpp
+END

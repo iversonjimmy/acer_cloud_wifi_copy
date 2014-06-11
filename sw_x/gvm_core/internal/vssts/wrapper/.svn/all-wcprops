@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/55080/trunk/sw_x/gvm_core/internal/vssts/wrapper
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/38043/trunk/sw_x/gvm_core/internal/vssts/wrapper/BUILD
+END
+wrapper_glue.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repo/!svn/ver/40737/trunk/sw_x/gvm_core/internal/vssts/wrapper/wrapper_glue.hpp
+END
+vssts_wrapper.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repo/!svn/ver/46885/trunk/sw_x/gvm_core/internal/vssts/wrapper/vssts_wrapper.cpp
+END
+wrapper_glue.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repo/!svn/ver/55080/trunk/sw_x/gvm_core/internal/vssts/wrapper/wrapper_glue.cpp
+END

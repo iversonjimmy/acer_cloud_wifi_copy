@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/58781/trunk/sw_x/gvm_core/internal/file_utils/include
+END
+gvm_utils.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repo/!svn/ver/10058/trunk/sw_x/gvm_core/internal/file_utils/include/gvm_utils.h
+END
+gvm_assert.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/584/trunk/sw_x/gvm_core/internal/file_utils/include/gvm_assert.h
+END
+gvm_thread_utils.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repo/!svn/ver/45550/trunk/sw_x/gvm_core/internal/file_utils/include/gvm_thread_utils.h
+END
+gvm_misc_utils.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/15912/trunk/sw_x/gvm_core/internal/file_utils/include/gvm_misc_utils.h
+END
+util_mime.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/49197/trunk/sw_x/gvm_core/internal/file_utils/include/util_mime.hpp
+END
+gvm_rm_utils.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/40606/trunk/sw_x/gvm_core/internal/file_utils/include/gvm_rm_utils.hpp
+END
+gvm_file_utils.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/31898/trunk/sw_x/gvm_core/internal/file_utils/include/gvm_file_utils.h
+END
+gvm_file_utils.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repo/!svn/ver/58781/trunk/sw_x/gvm_core/internal/file_utils/include/gvm_file_utils.hpp
+END

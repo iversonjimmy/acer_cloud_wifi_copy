@@ -1,0 +1,98 @@
+10
+
+dir
+59951
+https://src-us.ctbg.acer.com/repo/trunk/sw_x/gvm_core/vpl
+https://src-us.ctbg.acer.com/repo
+
+
+
+2014-05-16T03:09:51.850601Z
+59626
+yl.lin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+187b5c42-a02b-43e7-ba74-80c9f8da41ab
+
+BUILD
+file
+
+
+
+
+2014-05-22T01:46:58.695875Z
+b9cdaa6211070b6ec12d2478ca653c53
+2014-05-01T18:00:53.917311Z
+58624
+jack
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4919
+
+schema
+dir
+
+java_android
+dir
+
+tests
+dir
+
+include
+dir
+
+platform_linux
+dir
+
+posix_include
+dir
+
+platform_win32
+dir
+
+platform_winRT
+dir
+
+src
+dir
+
+src_android
+dir
+
+src_use_cocoa
+dir
+
+posix_src
+dir
+

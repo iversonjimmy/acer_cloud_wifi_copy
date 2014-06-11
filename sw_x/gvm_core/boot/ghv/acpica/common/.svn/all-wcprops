@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/common
+END
+adisasm.c
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/common/adisasm.c
+END
+dmtbinfo.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/common/dmtbinfo.c
+END
+getopt.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/common/getopt.c
+END
+adwalk.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/common/adwalk.c
+END
+adfile.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/common/adfile.c
+END
+dmextern.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/common/dmextern.c
+END
+dmrestag.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/common/dmrestag.c
+END
+dmtable.c
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/common/dmtable.c
+END
+dmtbdump.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/common/dmtbdump.c
+END

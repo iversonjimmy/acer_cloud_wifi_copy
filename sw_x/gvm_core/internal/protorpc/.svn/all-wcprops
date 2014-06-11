@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repo/!svn/ver/54250/trunk/sw_x/gvm_core/internal/protorpc
+END
+ProtoChannel.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/884/trunk/sw_x/gvm_core/internal/protorpc/ProtoChannel.h
+END
+FileProtoChannel.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/20524/trunk/sw_x/gvm_core/internal/protorpc/FileProtoChannel.h
+END
+ProtoRpcServer.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/47780/trunk/sw_x/gvm_core/internal/protorpc/ProtoRpcServer.h
+END
+ProtoRpcClientAsync.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/14735/trunk/sw_x/gvm_core/internal/protorpc/ProtoRpcClientAsync.cpp
+END
+rpc.proto
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/54249/trunk/sw_x/gvm_core/internal/protorpc/rpc.proto
+END
+ProtoRpcClient.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/3661/trunk/sw_x/gvm_core/internal/protorpc/ProtoRpcClient.cpp
+END
+ProtoRpc.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/81/trunk/sw_x/gvm_core/internal/protorpc/ProtoRpc.cpp
+END
+ProtoRpcClientAsync.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repo/!svn/ver/12971/trunk/sw_x/gvm_core/internal/protorpc/ProtoRpcClientAsync.h
+END
+ProtoRpcClient.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/1968/trunk/sw_x/gvm_core/internal/protorpc/ProtoRpcClient.h
+END
+ProtoRpc.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/47780/trunk/sw_x/gvm_core/internal/protorpc/ProtoRpc.h
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/51757/trunk/sw_x/gvm_core/internal/protorpc/BUILD
+END
+ByteArrayProtoChannel.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repo/!svn/ver/10537/trunk/sw_x/gvm_core/internal/protorpc/ByteArrayProtoChannel.cpp
+END
+ByteArrayProtoChannel.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repo/!svn/ver/382/trunk/sw_x/gvm_core/internal/protorpc/ByteArrayProtoChannel.h
+END
+README.txt
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/54250/trunk/sw_x/gvm_core/internal/protorpc/README.txt
+END
+FileProtoChannel.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/23261/trunk/sw_x/gvm_core/internal/protorpc/FileProtoChannel.cpp
+END
+ProtoChannel.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/2057/trunk/sw_x/gvm_core/internal/protorpc/ProtoChannel.cpp
+END

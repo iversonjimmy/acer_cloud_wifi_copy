@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/59693/trunk/sw_x/tests/syncbox_test_file_conflict
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/59693/trunk/sw_x/tests/syncbox_test_file_conflict/Makefile
+END

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repo/!svn/ver/33989/trunk/sw_x/gvm_apps/vplexTests/platform_android/project/jni
+END
+vplextest_jni.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repo/!svn/ver/33989/trunk/sw_x/gvm_apps/vplexTests/platform_android/project/jni/vplextest_jni.cpp
+END
+com_igware_vplex_test_VplexNative.h
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repo/!svn/ver/33989/trunk/sw_x/gvm_apps/vplexTests/platform_android/project/jni/com_igware_vplex_test_VplexNative.h
+END

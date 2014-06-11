@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{44d79a74-1d14-4af3-adde-f9571457816c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\vplTest">
+      <UniqueIdentifier>{b8947b22-24d1-4178-b4b7-aa479219d6b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\vplTest_winRT">
+      <UniqueIdentifier>{5f713333-3f8d-4304-a4f2-04cf403e4cf9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\gvm_core\vpl\tests\src\vplTest_common.c">
+      <Filter>Source Files\vplTest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vpl\tests\src_msvc\getopt.c">
+      <Filter>Source Files\vplTest_winRT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vpl\tests\src_msvc\getopt_long.c">
+      <Filter>Source Files\vplTest_winRT</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
+

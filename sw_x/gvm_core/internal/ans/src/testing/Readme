@@ -1,0 +1,71 @@
+    This directory contains scripts for running some of the module
+tests for the ANS server.
+
+    Your PATH environment variable ($path for csh users) must point to
+the currently-supported java binary in /opt/routefree.  Currently,
+        $ export PATH=/opt/routefree/java1.6/bin/:$PATH
+is correct.  The default java installation often doesn't seem to work
+with the jar files from the Acer build.
+
+run-anstest, run-many-ans
+
+        The run-anstest script runs the basic code coverage tests
+    for the ANS server once.  The script contains instructions on
+    how to set it up, but the run-many-ans script automates some
+    of the steps, and runs the test repeatedly, dumping the log to
+    /tmp.
+
+        To run either script, you will need to have a source tree
+    and build the debug.jar file:
+
+        $ cd $WORKAREA/sw_i/infra/modules/ans
+        $ make debug.jar
+
+    You might also need to build the sw_i tree itself.  See the wiki
+    for instructions:
+        http://intwww.routefree.com/wiki/index.php/Infrastructure_Build_Instructions
+
+    Most of the other scripts in this directory are run against an ANS
+cluster.  The cluster needs to have the IAS login checks disabled:
+        $ ansManager <ANS cluster DNS> set-cluster login-checks off
+To install the ansManager program:
+        $ cd $WORKAREA/sw_i/infra/modules/ans
+        $ make install
+        $ su
+        # /sbin/pkinst $BUILDROOT/infra/packages/ans/ans.pkg 
+        # exit
+The ansManager script will be in
+        /opt/broadon/pkgs/ans/bin
+
+    You might need to set the credentials age limit to tell the
+server to accept credentials coded into the scripts:
+        $ ansManager <ANS cluster DNS> set-cluster credentials-age-limit 4000
+
+    The make-export script creates a java.tar file in your home
+directory that can be extracted to run the actual test scripts.
+This script also exports the tar file to a test cluster.  You will
+need to update it to point to your test cluster, if you have one,
+or delete those lines.  The ANS package must be built before running
+the make-export script:
+        $ cd $WORKAREA/sw_i/infra/modules/ans
+        $ make install
+
+    To run the programs:
+        $ mkdir ~/java
+        $ cd ~/java
+        $ tar xvf ../java.tar
+The tar image can be extracted to any directory.  Using ~/java is
+not required.
+
+    The PATH environment variable needs to point to a supported
+version of java, typically in /opt/routefree.  Enter:
+        $ which java
+to check that the path is correct.
+
+    At this point, you'll need to edit the run-device* and run-back*
+scripts to point to your test cluster, and run them.  run-lots can
+be used to do repeated runs of the run-device script, and you can
+make symbolic links to it to run other files.
+
+    The make-export-java script is harder to use, but installs more scripts.
+See the script for more details.

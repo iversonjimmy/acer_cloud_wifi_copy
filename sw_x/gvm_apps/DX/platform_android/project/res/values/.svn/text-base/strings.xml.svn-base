@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>    
+    <string name="app_name">DX</string>
+
+    <string name="ok">ok</string>
+    <string name="cancel">cancel</string>
+    
+    <string name="Start">Start</string>
+    <string name="Run_Once">Run Once</string>
+    <string name="Stop">Stop</string>
+
+    <string name="runLoggedIn">Run Test Logged In</string>
+    <string name="runLoggedOut">Run Test Logged Out</string>
+
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+
+    <string name="uploadCancelled">Upload cancelled</string>
+    <string name="downloadGuidCancelled">Download custom guid cancelled</string>
+    
+    <string name="pick_a_test">Pick a test</string>
+    <string name="Login_Sequence">Login Sequence Test</string>
+    <string name="Upload_Download">Upload Download Test</string>
+    <string name="Media_Client">Media Client Test</string>
+    <string name="NumberOfTimesToStreamMedia">Media Stream Config</string>
+    <string name="Sw_Update">Software Update Test</string>
+    <string name="Download_Acer_Apps">Download Acer Apps</string>
+    <string name="DownloadCustomGuid">Download Custom GUID</string>
+    <string name="changeUserNamePassword">Change Username/Password</string>
+    
+    <string name="uploadLog">Upload log to OPS</string>
+    <string name="enterDescription">Enter Description</string>
+    <string name="enterGuid">Enter GUID</string>
+
+    <string name="NumberOfTimesToStreamMediaTitle">Please enter the number of times to stream each media file (between 1 and 1000):</string>
+    <string name="NumberOfTimesToStreamMediaCancelled">Media Stream Config cancelled</string>
+    <string name="NumberOfTimesToStreamMediaWrong">Wrong value for Media Stream Config, please try again</string>
+    
+    <string name="removeAcerAccount">Please remove Acer account before using DX</string>
+
+    <string name="Label_CameraSyncFolder">My Camera Photos</string>
+    
+    <string name="Msg_ErrorCode">Error code: %1$d</string>
+    
+    <string name="VPL_ERR_UNREACH">Error: Server is unreachable</string>
+    <string name="VPL_ERR_INVALID_LOGIN">Error: Incorrect user name or password</string>
+    
+    <string name="CCDI_ERROR_PARAMETER">Error: Bad function parameter</string>
+    <string name="CCDI_ERROR_QUERY_TYPE">Error: Invalid query type</string>
+    <string name="CCDI_ERROR_INVALID_SIZE">Error: Invalid size</string>
+    <string name="CCDI_ERROR_ADD_CACHE_USER">Error: Add cache user</string>
+    <string name="CCDI_ERROR_REMOVE_CACHE_USER">Error: Remove cache user</string>
+    <string name="CCDI_ERROR_SHUTDOWN_TITLE">Error: Shutdown title</string>
+    <string name="CCDI_ERROR_FAIL">Error: Failure</string>
+    <string name="CCDI_ERROR_AGAIN">Error: Again</string>
+    <string name="CCDI_ERROR_ADD_EVENT">Error: Add event</string>
+    <string name="CCDI_ERROR_GET_EVENTS">Error: Get events</string>
+    <string name="CCDI_ERROR_NO_CACHED_USERS">Error: No cached users</string>
+    <string name="CCDI_ERROR_LOGGED_IN">Error: Already logged in</string>
+    <string name="CCDI_ERROR_OUT_OF_MEM">Error: Out of memory</string>
+    <string name="CCDI_ERROR_NOT_GAME">Error: Not a game process</string>
+    <string name="CCDI_ERROR_COMMIT_SAVE_DATA">Error: Commit save data</string>
+    <string name="CCDI_ERROR_BAD_RESPONSE">Error: Bad response</string>
+    <string name="CCDI_ERROR_GET_SESSION_DATA">Error: Get session data</string>
+    <string name="CCDI_ERROR_REMOVE_USER_TITLE">Error: Remove user title</string>
+    <string name="CCDI_ERROR_FAKE_USER">Error: Fake user</string>
+    <string name="CCDI_ERROR_NO_PASSWORD">Error: No password</string>
+    <string name="CCDI_ERROR_NO_EVENTS">Error: No events</string>
+    <string name="CCDI_ERROR_ADD_NOTIFICATION">Error: Add notification</string>
+    <string name="CCDI_ERROR_ACHIEVE_INDEX">Error: Unknown achievement index</string>
+    <string name="CCDI_ERROR_SORT_CRITERIA">Error: Invalid sorting criteria key</string>
+    <string name="CCDI_ERROR_RPC_FAILURE">Error: RPC failure</string>
+    
+    <string name="CCD_ERROR_PARAMETER">Error: Bad function parameter</string>
+    <string name="CCD_ERROR_HTTP_STATUS">Error: HTTP status</string>
+    <string name="CCD_ERROR_USER_NOT_FOUND">Error: User not found</string>
+    <string name="CCD_ERROR_FOPEN">Error: Fopen</string>
+    <string name="CCD_ERROR_MKDIR">Error: Mkdir</string>
+    <string name="CCD_ERROR_OPENDIR">Error: Opendir</string>
+    <string name="CCD_ERROR_PARSE_CONTENT">Error: Parse content</string>
+    <string name="CCD_ERROR_SIGNATURE_INVALID">Error: Invalid signature</string>
+    <string name="CCD_ERROR_NOT_IMPLEMENTED">Error: Not implemented</string>
+    <string name="CCD_ERROR_RENAME">Error: Rename</string>
+    <string name="CCD_ERROR_MKSTEMP">Error: Mkstemp</string>
+    <string name="CCD_ERROR_SIGNED_IN">Error: User already signed in</string>
+    <string name="CCD_ERROR_NOT_SIGNED_IN">Error: User not signed in</string>
+    <string name="CCD_ERROR_OFFLINE_MODE">Error: Invalid for offline mode</string>
+    <string name="CCD_ERROR_WRONG_USER_ID">Error: Wrong user id</string>
+    <string name="CCD_ERROR_TITLE_NOT_FOUND">Error: Title not found</string>
+    <string name="CCD_ERROR_NO_CACHED_USERS">Error: No cached users</string>
+    <string name="CCD_ERROR_ES_FAIL">Error: ES failure</string>
+    <string name="CCD_ERROR_ECDK_FAIL">Error: ECDK failure</string>
+    <string name="CCD_ERROR_NOMEM">Error: No memory left</string>
+    <string name="CCD_ERROR_CS_FAIL">Error: CS failure</string>
+    <string name="CCD_ERROR_WRONG_STATE">Error: Wrong state</string>
+    <string name="CCD_ERROR_LOCK_FAILED">Error: Lock failed</string>
+    <string name="CCD_ERROR_SOCKET_RECV">Error: Socket recv</string>
+    <string name="CCD_ERROR_INTERNAL">Error: Internal</string>
+    <string name="CCD_ERROR_TITLE_EXISTS">Error: Title already exists</string>
+    <string name="CCD_ERROR_STATVFS">Error: Statvs failure</string>
+    <string name="CCD_ERROR_DISK_SERIALIZE">Error: Disk serialization</string>
+    <string name="CCD_ERROR_NOT_INIT">Error: Not initialized</string>
+    <string name="CCD_ERROR_ALREADY_INIT">Error: Already initialized</string>
+    <string name="CCD_ERROR_BAD_SERVER_RESPONSE">Error: Bad server response</string>
+    <string name="CCD_ERROR_VSDS_FAIL">Error: VSDS failure</string>
+    <string name="CCD_ERROR_NEED_PRIVILEGE">Error: Need elevated privilege</string>
+    <string name="CCD_ERROR_NEED_PASSWORD">Error: Need password</string>
+    <string name="CCD_ERROR_PASSWORD_NOT_ALLOWED">Error: Password not allowed</string>
+    <string name="CCD_ERROR_SAVE_LOCATION_NOT_FOUND">Error: Save location not found</string>
+    <string name="CCD_ERROR_OUT_OF_BVS_DEVICES">Error: Out of BVS devices</string>
+    <string name="CCD_ERROR_TITLE_RUNNING">Error: A title is already running</string>
+    <string name="CCD_ERROR_ATTEST_FAILED">Error: Attestation failure</string>
+    <string name="OPS_ERROR_REGISER_USERNAME">Error: You must enter a username</string>
+    <string name="OPS_ERROR_REGISER_EMAIL">Error: You must fill in a valid email address</string>
+    <string name="OPS_ERROR_REGISER_PSW">Error: You must enter a password</string>
+    
+</resources>

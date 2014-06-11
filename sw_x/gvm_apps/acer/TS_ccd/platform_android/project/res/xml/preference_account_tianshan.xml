@@ -1,0 +1,25 @@
+<PreferenceScreen
+	xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+            android:title="Data and Synchronization" />
+    <CheckBoxPreference
+    	android:key="tianshan_account_contacts"
+    	android:title="Contacts sync"
+    	android:summary="Sync with MS Outlook and Acer Contacts"
+    	android:defaultValue="true"/>
+    <CheckBoxPreference
+    	android:key="tianshan_account_calendar"
+    	android:title="Calendar sync"
+    	android:summary="Sync with MS Outlook and Acer Calendar"
+    	android:defaultValue="true"/>
+    <CheckBoxPreference
+    	android:key="tianshan_account_notebook"
+    	android:title="Notebook sync"
+    	android:summary="Sync with MS Outlook and Acer Notebook"
+    	android:defaultValue="true"/>
+    <CheckBoxPreference
+    	android:key="tianshan_account_favorites"
+    	android:title="Favorites sync"
+    	android:summary="Sync with Firefox,Chrome and IE"
+    	android:defaultValue="true"/>
+</PreferenceScreen>

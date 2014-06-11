@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/repo/!svn/ver/25449/trunk/sw_x/gvm_core/external/curl
+END
+platform_win.mk
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/1260/trunk/sw_x/gvm_core/external/curl/platform_win.mk
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/25449/trunk/sw_x/gvm_core/external/curl/Makefile
+END

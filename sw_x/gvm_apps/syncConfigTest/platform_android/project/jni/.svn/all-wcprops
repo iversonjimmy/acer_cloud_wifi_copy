@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repo/!svn/ver/36280/trunk/sw_x/gvm_apps/syncConfigTest/platform_android/project/jni
+END
+syncconfigtest_jni.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repo/!svn/ver/36280/trunk/sw_x/gvm_apps/syncConfigTest/platform_android/project/jni/syncconfigtest_jni.cpp
+END
+com_igware_sync_config_test_SyncConfigNative.h
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/repo/!svn/ver/34462/trunk/sw_x/gvm_apps/syncConfigTest/platform_android/project/jni/com_igware_sync_config_test_SyncConfigNative.h
+END

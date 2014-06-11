@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repo/!svn/ver/59896/trunk/sw_x/gvm_core/internal/sync_config/src
+END
+SyncConfigOneWayUpImpl.fragment.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repo/!svn/ver/59556/trunk/sw_x/gvm_core/internal/sync_config/src/SyncConfigOneWayUpImpl.fragment.cpp
+END
+SyncConfigUtil.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repo/!svn/ver/56852/trunk/sw_x/gvm_core/internal/sync_config/src/SyncConfigUtil.cpp
+END
+SyncConfigOneWayDownImpl.fragment.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repo/!svn/ver/59556/trunk/sw_x/gvm_core/internal/sync_config/src/SyncConfigOneWayDownImpl.fragment.cpp
+END
+SyncConfigTwoWayImpl.fragment.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repo/!svn/ver/59896/trunk/sw_x/gvm_core/internal/sync_config/src/SyncConfigTwoWayImpl.fragment.cpp
+END
+SyncConfig.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repo/!svn/ver/59891/trunk/sw_x/gvm_core/internal/sync_config/src/SyncConfig.cpp
+END
+SyncConfigThreadPool.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repo/!svn/ver/52094/trunk/sw_x/gvm_core/internal/sync_config/src/SyncConfigThreadPool.cpp
+END
+FileMonitorDelayQ.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repo/!svn/ver/52202/trunk/sw_x/gvm_core/internal/sync_config/src/FileMonitorDelayQ.cpp
+END
+SyncConfigDb.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/59678/trunk/sw_x/gvm_core/internal/sync_config/src/SyncConfigDb.cpp
+END
+FileMonitorDelayQ.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repo/!svn/ver/43127/trunk/sw_x/gvm_core/internal/sync_config/src/FileMonitorDelayQ.hpp
+END

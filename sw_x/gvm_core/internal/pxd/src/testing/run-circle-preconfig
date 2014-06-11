@@ -1,0 +1,11 @@
+#! /bin/csh -fb
+
+setenv  region           "testing"
+
+while (1)
+    ./run-fast ../pxd_circle
+
+    if ($status != 0) then
+        break;
+    endif
+end

@@ -1,0 +1,2 @@
+# TODO: get default from BUILD defs
+export CONFIG_ES=km

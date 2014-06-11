@@ -1,0 +1,1535 @@
+//
+//  Copyright 2011 iGware Inc.
+//  All Rights Reserved.
+//
+//  THIS SOFTWARE CONTAINS CONFIDENTIAL INFORMATION AND
+//  TRADE SECRETS OF IGWARE INC.
+//  USE, DISCLOSURE OR REPRODUCTION IS PROHIBITED WITHOUT
+//  THE PRIOR EXPRESS WRITTEN PERMISSION OF IGWARE INC.
+//
+
+//--------------------------------------------------------
+/// @file
+/// Input and output types for Virtual Storage services.
+//% This file is the basis for generated types used by vplex_vs_directory.h
+//% functions.
+//% This file is also depended upon by the VSDS server, which should
+//% be updated when this file is modified.
+//--------------------------------------------------------
+
+package vplex.vsDirectory;
+
+import "vplex_common_types.proto";
+
+option java_package = "igware.vplex.pb";
+option java_outer_classname = "VsDirectoryServiceTypes";
+
+//%{INTERNAL
+//==========================================
+// General request-related messages
+//==========================================
+
+message APIVersion {
+  optional string version = 1 [default = "1.0"];
+}
+
+message Error {
+    required sint32 errorCode = 1;
+
+    optional string errorDetail = 2;
+}
+
+message SessionInfo {
+    required fixed64 sessionHandle = 1;
+
+    // ticket is 20 bytes
+    required bytes serviceTicket = 2;
+}
+
+message ETicketData {
+    required bytes eTicket = 1;
+    repeated bytes certificate = 2;
+}
+
+message Localization {
+    required string language = 1;
+    required string country = 2;
+    required string region = 3;
+}
+
+message TitleData {
+    required string titleId = 1;
+    required int32 detailHash = 2;
+    required int32 ticketVersion = 3;
+    required bool useOnlineETicket = 4;
+    required bool useOfflineETicket = 5;
+}
+
+message TitleDetail {
+    required string titleId = 1;
+    required string titleVersion = 2;
+    required string tmdUrl = 3;
+    repeated ContentDetail contents = 4;
+    optional string name = 5;
+    optional string iconUrl = 6;
+    optional string imageUrl = 7;
+    optional string publisher = 8;
+    optional string genre = 9;
+    optional vplex.common.ContentRating contentRating = 10;
+    optional vplex.common.ContentRating altContentRating = 11;
+}
+
+message ContentDetail {
+    required string contentId = 1;
+    required string contentLocation = 2;
+}
+
+message SaveData {
+    required string titleId = 1;
+    required string saveLocation = 2;
+}
+
+message TitleTicket {
+    required string titleId = 1;
+    required ETicketData eTicket = 2;
+}
+//%}INTERNAL
+
+//% TODO: rename to SubscriptionDetail
+message Subscription {
+    optional fixed64 datasetId = 1;
+    optional string datasetName = 2;
+    optional string filter = 3;
+    optional string deviceRoot = 4;
+    optional string datasetRoot = 5;
+    optional bool uploadOk = 6;
+    optional bool downloadOk = 7;
+    optional bool uploadDeleteOk = 8;
+    optional bool downloadDeleteOk = 9;
+    optional string datasetLocation = 10;
+    optional string contentType = 11;
+    optional string createdFor = 12;
+    optional fixed64 maxSize = 13;
+    optional fixed64 maxFiles = 14;
+    optional fixed64 creationTime = 15;
+}
+
+//%{INTERNAL
+message SyncDirectory {
+    required string localPath = 1;
+    required string serverPath = 2;
+    required bool privateFlag = 3;
+}
+
+/// TODO: rename to SubscriptionData
+message DatasetData {
+    required fixed64 datasetId = 1;
+    required int32 detailHash = 2;
+}
+//%}INTERNAL
+
+/// Types of dataset
+enum DatasetType {
+    USER =           1;
+    CAMERA =         2; // deprecated
+    CLEAR_FI =       3;
+    CR_UP =          4;
+    CR_DOWN =        5;
+    PIM =            6; // deprecated
+    CACHE =          7;
+    PIM_CONTACTS =   8;
+    PIM_EVENTS =     9;
+    PIM_NOTES =      10;
+    PIM_TASKS =      11;
+    PIM_FAVORITES =  12;
+    MEDIA =          13;
+    MEDIA_METADATA = 14;
+    FS =             15;
+    VIRT_DRIVE =     16;
+    CLEARFI_MEDIA =  17; // deprecated
+    USER_CONTENT_METADATA =  18;
+    SYNCBOX =        19;
+    SBM =            20;
+    SWM =            21;
+}
+
+message DatasetDetail {
+    required fixed64 datasetId = 1;
+    required string datasetName = 2;
+    required string contentType = 3;
+    optional string createdFor = 4;
+    optional string externalId = 5;
+    required fixed64 lastUpdated = 6;
+    optional string storageClusterName = 7;
+    optional string storageClusterHostName = 8;
+    optional int32 storageClusterPort = 9;
+    optional string datasetLocation = 10;
+    optional fixed64 sizeOnDisk = 11;
+    optional DatasetType datasetType = 12;
+    optional fixed64 linkedTo = 13;
+    optional fixed64 clusterId = 14;
+    optional fixed64 userId = 15;
+    optional bool suspendedFlag = 16;
+    optional fixed64 primaryStorageId = 17;
+    optional fixed64 deleteDataAfter = 18;
+    repeated fixed64 archiveStorageDeviceId = 19;
+    optional string displayName = 20;
+}
+
+message StoredDataset {
+    required fixed64 userId = 1;
+    required fixed64 datasetId = 2;
+    required DatasetType datasetType = 3;
+    required fixed64 dataRetentionTime = 4;
+    optional fixed64 storageClusterId = 5;
+    optional fixed64 primaryStorageId = 6;
+    optional fixed64 secondaryStorageId = 7;
+    optional fixed64 backupStorageId = 8;
+}
+
+message DeviceInfo {
+    required fixed64 deviceId = 1;
+    required string deviceClass = 2;
+    optional string deviceName = 3;
+    optional bool isAcer = 4;
+    optional bool hasCamera = 5;
+    optional string osVersion = 6;
+    optional string protocolVersion = 7;
+    optional bool isVirtDrive = 8; // deprecated
+    optional bool isMediaServer = 9; // deprecated
+    optional bool featureMediaServerCapable = 10;
+    optional bool featureVirtDriveCapable = 11;
+    optional bool featureRemoteFileAccessCapable = 12;
+    optional bool featureFSDatasetTypeCapable = 13;
+    optional string modelNumber = 14;
+    optional string buildInfo = 15;
+    optional bool featureVirtSyncCapable = 16;
+    optional bool featureMyStorageServerCapable = 17;
+}
+
+enum RouteType {
+    INVALID_ROUTE =   0;
+    DIRECT_INTERNAL = 1;
+    DIRECT_EXTERNAL = 2;
+    PROXY =           3;
+}
+
+enum ProtocolType {
+    INVALID_PROTOCOL =0;
+    VS =              1;
+}
+
+enum PortType {
+    INVALID_PORT =       0;
+    PORT_VSSI =          1;
+    PORT_HTTP =          2;
+    PORT_CLEARFI =       3;
+    PORT_CLEARFI_SECURE =4;
+}
+
+message StorageAccessPort {
+    required PortType portType = 1;
+    required int32 port = 2;
+}
+
+message StorageAccess {
+    required RouteType routeType = 1;
+    required ProtocolType protocol = 2;
+    required string server = 3;
+    repeated StorageAccessPort ports = 4;
+}
+
+message DeviceAccessTicket {
+    required fixed64 deviceId = 1;
+    required bytes accessTicket = 2;
+}
+
+message UserStorage {
+    required fixed64 storageClusterId = 1;
+    optional string storageName = 2;
+    optional int32 storageType = 3;
+    required fixed64 usageLimit = 4;
+    optional bool isVirtDrive = 5;   // deprecated
+    optional bool isMediaServer = 6; // deprecated
+    optional fixed64 accessHandle = 7;
+    optional bytes accessTicket = 8;
+    repeated StorageAccess storageAccess = 9;
+    optional bool featureMediaServerEnabled = 10;
+    optional bool featureVirtDriveEnabled = 11;
+    optional bool featureRemoteFileAccessEnabled = 12;
+    optional bool featureFSDatasetTypeEnabled = 13;
+    optional bytes devSpecAccessTicket = 14;
+    optional bool featureCloudDocEnabled = 15;
+    optional bool featureVirtSyncEnabled = 16;
+    optional bool featureMyStorageServerEnabled = 17;
+
+    //% NOTE: Be sure to update Util_IsUserStorageEqual() if adding new fields.
+}   
+
+message UpdatedDataset {
+    required fixed64 datasetId = 1;
+    required fixed64 clusterId = 2;
+    required fixed64 userId = 3;
+    required DatasetType datasetType = 4;
+    required string datasetName = 5;
+    required fixed64 lastUpdated = 6;
+    optional fixed64 destDatasetId = 7;
+    optional fixed64 primaryVersion = 8;
+}
+
+message DatasetFilter {
+    required string name = 1;
+    required string value = 2;
+}   
+
+//%{INTERNAL
+
+message MssDetail {
+    required fixed64 mssId = 1;
+    required string mssName = 2;
+    optional bool inactiveFlag = 3;
+}   
+
+message StorageUnitDetail {
+    required fixed64 storageId = 1;
+    repeated fixed64 mssIds = 2;
+    optional bool inactiveFlag = 3;
+}   
+
+message BrsDetail {
+    required fixed64 brsId = 1;
+    required string brsName = 2;
+    optional bool inactiveFlag = 3;
+}
+
+message BrsStorageUnitDetail {
+    required fixed64 brsStorageId = 1;
+    required fixed64 brsId = 2;
+    optional bool inactiveFlag = 3;
+}
+
+message BackupStatus {
+    required fixed64 userId = 1;
+    required fixed64 datasetId = 2;
+    required fixed64 lastBackupTime = 3;
+    required fixed64 lastBackupVersion = 4;
+    optional fixed64 lastArchiveTime = 5;
+    optional fixed64 lastArchiveVersion = 6;
+}
+
+/// Subscription role types when adding a subscription
+enum SubscriptionRole {
+    GENERAL =        0;
+    PRODUCER =       1;
+    CONSUMER =       2;
+    CLEARFI_SERVER = 3; // deprecated
+    CLEARFI_CLIENT = 4; // deprecated
+    WRITER =         5;
+    READER =         6;
+}
+
+
+//==========================================
+// Service request input and output messages
+//==========================================
+
+/// GetSaveTickets
+/// Get a user's eTickets needed to access save state data.
+/// This call is only needed once per user, since all save states use the
+/// same keys.
+message GetSaveTicketsInput {
+    required SessionInfo session = 1;
+
+    required fixed64 deviceId = 2;
+    required bytes certificate = 3;
+}
+message GetSaveTicketsOutput {
+    required Error error = 1;
+
+    optional ETicketData encryptionTicket = 2;
+    optional ETicketData signingTicket = 3;
+}
+
+/// GetSaveData
+/// Get the save info for a given set of titles. The titles need not be owned by the
+/// user. The save info provides the online location for the save state data.
+message GetSaveDataInput {
+    required SessionInfo session = 1;
+
+    repeated string titleIds = 2;
+}
+message GetSaveDataOutput {
+    required Error error = 1;
+
+    repeated SaveData data = 2;
+}
+
+/// GetOwnedTitles
+/// Will get the summary data of all titles owned by the user.
+message GetOwnedTitlesInput {
+    required SessionInfo session = 1;
+
+    required Localization l10n = 2;
+}
+message GetOwnedTitlesOutput {
+    required Error error = 1;
+
+    repeated TitleData titleData = 2;
+}
+
+/// GetTitles
+/// Will return summary data for all existing requested titles.
+message GetTitlesInput {
+    required SessionInfo session = 1;
+
+    required Localization l10n = 2;
+    repeated string titleIds = 3;
+}
+message GetTitlesOutput {
+    required Error error = 1;
+
+    repeated TitleData titleData = 2;
+}
+
+/// GetTitleDetails
+/// Get the detailed information for a list of titles.
+message GetTitleDetailsInput {
+    required SessionInfo session = 1;
+
+    required Localization l10n = 2;
+    repeated string titleIds = 3;
+}
+message GetTitleDetailsOutput {
+    required Error error = 1;
+
+    repeated TitleDetail titleDetails = 2;
+}
+
+/// GetAttestationChallenge
+/// Get a challenge to complete to attest to the authenticity of this device.
+/// The challenge TMD contains a hash of the challenge and the certificate
+/// chain for the TMD concatenated to the end.
+message GetAttestationChallengeInput {
+    required SessionInfo session = 1;
+
+    required fixed64 deviceId = 2;
+}
+message GetAttestationChallengeOutput {
+    required Error error = 1;
+
+    optional bytes challenge = 2;
+    optional bytes challengeTmd = 3;
+}
+
+/// AuthenticateDevice
+/// Pass the response from a successfully run attestation challenge back to
+/// attest to the authenticity of this device. If the server agrees that the
+/// response is correct, the embedded common key for this attestation session
+/// will be cached for use when retrieving online title tickets.
+message AuthenticateDeviceInput {
+    required SessionInfo session = 1;
+
+    required bytes challengeResponse = 2;
+    required bytes deviceCertificate = 3;
+}
+message AuthenticateDeviceOutput {
+    required Error error = 1;
+}
+
+/// GetOnlineTitleTicket
+/// Get the online (use-once) title ticket for a specific title. The eTicket
+/// requested will only be returned if the user owns the title, the device has
+/// a current valid attestation and the device cert matches the device ID.
+/// The online eTicket will be encoded using the device's public key (from the
+/// device cert) and the temporary common key stored on successful attestation.
+message GetOnlineTitleTicketInput {
+    required SessionInfo session = 1;
+
+    required fixed64 deviceId = 2;
+    required bytes deviceCertificate = 3;
+    required string titleId = 4;
+}
+message GetOnlineTitleTicketOutput {
+    required Error error = 1;
+
+    optional ETicketData eTicket = 2;
+}
+
+///GetOfflineTitleTickets
+/// Get the offline (permanent) title tickets for a specific set of titles.
+/// Each eTicket requested will only be returned if the user owns the title
+/// and the device cert matches the device ID.
+/// The offline eTicket will be encoded using the device's public key (from the
+/// device cert) and the platform common key.
+message GetOfflineTitleTicketsInput {
+    required SessionInfo session = 1;
+
+    required fixed64 deviceId = 2;
+    required bytes deviceCertificate = 3;
+    repeated string titleIds = 4;
+}
+message GetOfflineTitleTicketsOutput {
+    required Error error = 1;
+
+    repeated TitleTicket titleTickets = 2;
+}
+
+/// ListOwnedDataSets
+/// List all datasets owned by the user_id
+message ListOwnedDataSetsInput {
+    required SessionInfo session = 1;
+    
+    required fixed64 userId = 2;
+    optional fixed64 deviceId = 3;
+    optional string version = 4;
+}
+message ListOwnedDataSetsOutput { 
+    required Error error = 1;
+
+    repeated DatasetDetail datasets = 2;
+}
+
+/// GetDatasetDetails
+/// Get the details for a given dataset.
+message GetDatasetDetailsInput {
+    required SessionInfo session = 1;
+
+    required fixed64 userId = 2;
+    required fixed64 datasetId = 3;
+    optional string version = 4;
+}
+message GetDatasetDetailsOutput {
+    required Error error = 1;
+
+    optional DatasetDetail datasetDetail = 2;
+}
+
+/// AddDataSet
+/// Add a dataset
+message AddDataSetInput {
+    required SessionInfo session = 1;
+    
+    required fixed64 userId = 2;
+    required string datasetName = 3;
+    required DatasetType datasetTypeId = 4;
+    optional fixed64 storageClusterId = 5;
+    optional string version = 6;
+}
+message AddDataSetOutput { 
+    required Error error = 1;
+  
+    optional fixed64 datasetId = 2;
+}
+
+/// AddCameraDataset
+/// Create a new dataset intended for uploading pictures from a device with a camera. 
+message AddCameraDatasetInput {
+    required SessionInfo session = 1;
+
+    required fixed64 userId = 2;
+    required string datasetName = 3;
+    required string createdFor = 4;
+    optional string version = 5;
+}
+message AddCameraDatasetOutput {
+    required Error error = 1;
+
+    optional fixed64 datasetId = 2;
+}
+
+/// DeleteDataSet
+/// Delete a dataset
+message DeleteDataSetInput {
+    required SessionInfo session = 1;
+    
+    required fixed64 userId = 2;
+    optional fixed64 datasetId = 3;
+    optional string datasetName = 4;
+    optional string version = 5;
+}
+message DeleteDataSetOutput { 
+    required Error error = 1;
+}
+
+/// RenameDataSet
+/// Rename a dataset
+message RenameDataSetInput {
+    required SessionInfo session = 1;
+    
+    required fixed64 userId = 2;
+    optional fixed64 datasetId = 3;
+    optional string datasetName = 4;
+    required string datasetNameNew = 5;
+    optional string version = 6;
+}
+message RenameDataSetOutput { 
+    required Error error = 1;
+}
+
+/// SetDataSetCache
+/// Set a cache dataset for a master dataset.
+message SetDataSetCacheInput {
+    required SessionInfo session = 1;
+
+    required fixed64 userId = 2;
+    required fixed64 datasetId = 3;
+    optional fixed64 cacheDatasetId = 4;
+    optional string version = 5;
+}
+message SetDataSetCacheOutput {
+    required Error error = 1;
+}
+
+/// RemoveDeviceFromSubscriptions
+/// Remove all subscriptions for the device_id
+message RemoveDeviceFromSubscriptionsInput {
+    required SessionInfo session = 1;
+    
+    required fixed64 userId = 2;
+    required fixed64 deviceId = 3;
+    optional string version = 4;
+}
+message RemoveDeviceFromSubscriptionsOutput { 
+    required Error error = 1;
+}
+
+/// ListSubscriptions
+/// List all subscriptions owned by the device_id
+message ListSubscriptionsInput {
+    required SessionInfo session = 1;
+    
+    required fixed64 userId = 2;
+    required fixed64 deviceId = 3;
+    optional string version = 4;
+}
+message ListSubscriptionsOutput { 
+    required Error error = 1;
+
+    repeated Subscription subscriptions = 2;
+}
+
+/// AddSubscriptions
+/// Add subscriptions for the device_id
+message AddSubscriptionsInput {
+    required SessionInfo session = 1;
+    
+    required fixed64 userId = 2;
+    required fixed64 deviceId = 3;
+    repeated Subscription subscriptions = 4;
+    optional string version = 5;
+}
+message AddSubscriptionsOutput { 
+    required Error error = 1;
+}
+
+/// AddUserDatasetSubscription
+/// Add a subscription to an existing "USERDATA" dataset.
+message AddUserDatasetSubscriptionInput {
+    required SessionInfo session = 1;
+
+    required fixed64 userId = 2;
+    required fixed64 deviceId = 3;
+    required fixed64 datasetId = 4;
+    optional string deviceRoot = 5;
+    optional string filter = 6;
+    optional string version = 7;
+}
+message AddUserDatasetSubscriptionOutput {
+    required Error error = 1;
+}
+
+/// AddCameraSubscription
+/// Add a subscription to an existing "CAMERA" dataset as the device uploading photos. 
+message AddCameraSubscriptionInput {
+    required SessionInfo session = 1;
+
+    required fixed64 userId = 2;
+    required fixed64 deviceId = 3;
+    required fixed64 datasetId = 4;
+    optional string deviceRoot = 5;
+    optional string filter = 6;
+    optional string version = 7;
+}
+message AddCameraSubscriptionOutput {
+    required Error error = 1;
+}
+
+/// AddDatasetSubscription
+/// Add a subscription to an existing dataset
+message AddDatasetSubscriptionInput {
+    required SessionInfo session = 1;
+
+    required fixed64 userId = 2;
+    required fixed64 deviceId = 3;
+    required fixed64 datasetId = 4;
+
+    optional DatasetType datasetType = 5;
+    optional SubscriptionRole role = 6 [default = GENERAL];
+
+    optional string deviceRoot = 7;
+    optional string filter = 8;
+    optional fixed64 maxSize = 9;
+    optional fixed64 maxFiles = 10;
+    optional string version = 11;
+}
+message AddDatasetSubscriptionOutput {
+    required Error error = 1;
+}
+
+/// DeleteSubscriptions
+/// Delete subscriptions for the device_id
+message DeleteSubscriptionsInput {
+    required SessionInfo session = 1;
+    
+    required fixed64 userId = 2;
+    required fixed64 deviceId = 3;
+    repeated string datasetNames = 4;
+    repeated fixed64 datasetIds = 5;
+    optional string version = 6;
+}
+message DeleteSubscriptionsOutput { 
+    required Error error = 1;
+}
+
+/// UpdateSubscriptionFilter
+/// Update subscription filter for the device_id
+message UpdateSubscriptionFilterInput {
+    required SessionInfo session = 1;
+    
+    required fixed64 userId = 2;
+    required fixed64 deviceId = 3;
+    optional string datasetName = 4;
+    optional fixed64 datasetId = 5;
+    optional string filter = 6;
+    optional string version = 7;
+}
+message UpdateSubscriptionFilterOutput { 
+    required Error error = 1;
+}
+
+/// UpdateSubscriptionLimits
+/// Update subscription limits for the device_id
+message UpdateSubscriptionLimitsInput {
+    required SessionInfo session = 1;
+    
+    required fixed64 userId = 2;
+    required fixed64 deviceId = 3;
+    optional string datasetName = 4;
+    optional fixed64 datasetId = 5;
+    optional string filter = 6;
+    optional fixed64 maxSize = 7;
+    optional fixed64 maxFiles = 8;
+    optional string version = 9;
+}
+message UpdateSubscriptionLimitsOutput { 
+    required Error error = 1;
+}
+
+/// GetSubscriptionDetailsForDevice
+/// Get the subscription details for all user's subscriptions for the specified device. 
+message GetSubscriptionDetailsForDeviceInput {
+    required SessionInfo session = 1;
+
+    required fixed64 userId = 2;
+    required fixed64 deviceId = 3;
+    optional string version = 4;
+}
+message GetSubscriptionDetailsForDeviceOutput {
+    required Error error = 1;
+
+    repeated Subscription subscriptions = 2;
+}
+
+/// GetCloudInfo
+/// Get the cloud info for the user and the specified device. This function is a wrapper of
+/// GetLinkedDevices, GetSubscriptionDetailsForDevice, ListOwnedDataSets, ListUserStorage
+message GetCloudInfoInput {
+    required SessionInfo session = 1;
+
+    required fixed64 userId = 2;
+    required fixed64 deviceId = 3;
+    optional string version = 4;
+}
+message GetCloudInfoOutput {
+    required Error error = 1;
+
+    repeated DeviceInfo devices = 2;
+    repeated DatasetDetail datasets = 3;
+    repeated Subscription subscriptions = 4;
+    repeated UserStorage storageAssignments = 5;
+}
+
+/// GetSubscribedDatasets
+/// Will get the summary data of all titles owned by the user.
+message GetSubscribedDatasetsInput {
+    required SessionInfo session = 1;
+
+    required fixed64 deviceId = 2;
+    required Localization l10n = 3;
+    optional string version = 4;
+}
+message GetSubscribedDatasetsOutput {
+    required Error error = 1;
+
+    repeated TitleData titleData = 2;
+    repeated DatasetData datasetData = 3;
+}
+
+/// GetSubscriptionDetails
+/// Get detailed subscription information for a list of subscribed datasets.
+message GetSubscriptionDetailsInput {
+    required SessionInfo session = 1;
+
+    required fixed64 userId = 2;
+    required fixed64 deviceId = 3;
+    repeated fixed64 datasetIds = 4;
+    optional string version = 5;
+}
+message GetSubscriptionDetailsOutput {
+    required Error error = 1;
+
+    repeated Subscription subscriptions = 2;
+}
+
+/// LinkDevice
+/// Link a specific device to a user
+message LinkDeviceInput {
+    required SessionInfo session = 1;
+
+    required fixed64 userId = 2;
+    required fixed64 deviceId = 3;
+    required string deviceClass = 4;
+    optional string deviceName = 5;
+    optional bool isAcer = 6;
+    optional bool hasCamera = 7;
+    optional string osVersion = 8;
+    optional string protocolVersion = 9;
+    optional string version = 10;
+    optional string modelNumber = 11;
+    optional string buildInfo = 12;
+}
+message LinkDeviceOutput {
+    required Error error = 1;
+}
+
+/// UnlinkDevice
+/// Remove the link between device and user
+message UnlinkDeviceInput {
+    required SessionInfo session = 1;
+
+    required fixed64 userId = 2;
+    required fixed64 deviceId = 3;
+    optional string version = 4;
+}
+message UnlinkDeviceOutput {
+    required Error error = 1;
+}
+
+/// SetDeviceName
+/// Set name of a specific device
+message SetDeviceNameInput {
+    required SessionInfo session = 1;
+
+    required fixed64 userId = 2;
+    required fixed64 deviceId = 3;
+    required string deviceName = 4;
+    optional string version = 5;
+}
+message SetDeviceNameOutput {
+    required Error error = 1;
+}
+
+/// UpdateDeviceInfo
+/// Update info of a specific device
+message UpdateDeviceInfoInput {
+    required SessionInfo session = 1;
+
+    required fixed64 userId = 2;
+    required fixed64 deviceId = 3;
+    optional string deviceName = 4;
+    optional string osVersion = 5;
+    optional string protocolVersion = 6;
+    optional string version = 7;
+    optional string modelNumber = 8;
+    optional string buildInfo = 9;
+}
+message UpdateDeviceInfoOutput {
+    required Error error = 1;
+}
+
+/// GetDeviceLinkState
+/// Set current link state for a device.
+message GetDeviceLinkStateInput {
+    required SessionInfo session = 1;
+
+    required fixed64 userId = 2;
+    required fixed64 deviceId = 3;
+    optional string version = 4;
+}
+message GetDeviceLinkStateOutput {
+    required Error error = 1;
+
+    required bool linked = 2;
+}
+
+/// GetDeviceName
+/// Get name of a specific device
+message GetDeviceNameInput {
+    required SessionInfo session = 1;
+
+    required fixed64 userId = 2;
+    required fixed64 deviceId = 3;
+    optional string version = 4;
+}
+message GetDeviceNameOutput {
+    required Error error = 1;
+
+    optional string deviceName = 2;
+}
+
+/// GetLinkedDevices
+/// Get the detailed information for a list of linked devices.
+message GetLinkedDevicesInput {
+    required SessionInfo session = 1;
+
+    required fixed64 userId = 2;
+    optional string version = 3;
+}
+message GetLinkedDevicesOutput {
+    required Error error = 1;
+
+    repeated DeviceInfo devices = 2;
+}
+
+/// GetLoginSession
+/// Get the login session parameters for a given session ID (user ID and VirtualStorage service ticket).
+message GetLoginSessionInput {
+    required SessionInfo session = 1;
+    required fixed64 userId = 2;
+    optional fixed64 deviceId = 3;
+    required fixed64 sessionHandle = 4;
+    optional string version = 5;
+}
+message GetLoginSessionOutput {
+    required Error error = 1;
+
+    optional fixed64 userId = 2;
+    optional bytes serviceTicket = 3;
+}
+
+/// CreatePersonalStorageNode
+/// Create a new Personal Storage Node.
+message CreatePersonalStorageNodeInput {
+    required SessionInfo session = 1;
+    required fixed64 userId = 2;
+    required fixed64 clusterId = 3;
+    required string clusterName = 4;
+    optional bool virtDriveCapable = 5; // deprecated
+    optional bool mediaServerCapable = 6; // deprecated
+
+    optional bool featureMediaServerCapable = 7;
+    optional bool featureVirtDriveCapable = 8;
+    optional bool featureRemoteFileAccessCapable = 9;
+    optional bool featureFSDatasetTypeCapable = 10;
+    // NOTE: If we add any new "capable" bits in the future, make sure that we provide an API to
+    //   allow CCD to update these bits and avoid the problem described by Frank in the
+    //   description of bug 7741: https://bugs.ctbg.acer.com/show_bug.cgi?id=7741#c0
+    //   See also https://bugs.ctbg.acer.com/show_bug.cgi?id=11714
+
+    optional string version = 11;
+    optional bool featureVirtSyncCapable = 12;
+    optional bool featureMyStorageServerCapable = 13;
+    // NOTE: If we add any new "capable" bits in the future, make sure that we provide an API to
+    //   allow CCD to update these bits.
+    //   See also https://bugs.ctbg.acer.com/show_bug.cgi?id=11714
+}
+message CreatePersonalStorageNodeOutput {
+    required Error error = 1;
+}
+
+/// GetAsyncNoticeServer
+/// Get the server address for the Asynchronous Notification Server (ANS) the personal Storage Node should connect to
+message GetAsyncNoticeServerInput {
+    required SessionInfo session = 1;
+    required fixed64 userId = 2;
+    required fixed64 clusterId = 3;
+    optional string version = 4;
+}
+message GetAsyncNoticeServerOutput {
+    required Error error = 1;
+
+    optional string address = 2;
+    optional int32 port = 3;
+    optional fixed64 clusterId = 4;
+}
+
+/// UpdateStorageNodeConnection
+/// Update the connectivity information for a Personal Storage node. 
+message UpdateStorageNodeConnectionInput {
+    required SessionInfo session = 1;
+    required fixed64 userId = 2;
+    required fixed64 clusterId = 3;
+    required string reportedName = 4;
+    required int32 reportedPort = 5;
+    required int32 reportedHTTPPort = 6;
+    optional fixed64 proxyClusterId = 7;
+    optional int32 proxyConnectionCookie = 8;
+    optional int32 reportedClearFiPort = 9;
+    optional int32 reportedClearFiSecurePort = 10;
+    optional fixed64 accessHandle = 11;
+    optional bytes accessTicket = 12;
+    repeated DeviceAccessTicket accessTickets = 13; // deprecated
+    optional string version = 14;
+}
+message UpdateStorageNodeConnectionOutput {
+    required Error error = 1;
+}
+
+/// UpdateStorageNodeFeatures
+/// Update the feature information for a Personal Storage node.
+message UpdateStorageNodeFeaturesInput {
+    required SessionInfo session = 1;
+    required fixed64 userId = 2;
+    required fixed64 clusterId = 3;
+    optional bool isVirtDrive = 4; // deprecated
+    optional bool isMediaServer = 5; // deprecated
+    optional bool featureMediaServerEnabled = 6;
+    optional bool featureVirtDriveEnabled = 7;
+    optional bool featureRemoteFileAccessEnabled = 8;
+    optional bool featureFSDatasetTypeEnabled = 9;
+    optional string version = 10;
+    optional bool featureVirtSyncEnabled = 11;
+    optional bool featureMyStorageServerEnabled = 12;
+}
+message UpdateStorageNodeFeaturesOutput {
+    required Error error = 1;
+}
+
+/// GetPSNDatasetLocation
+/// Get storage unit and cluster IDs associated with a given dataset.
+message GetPSNDatasetLocationInput {
+    required SessionInfo session = 1;
+    required fixed64 userId = 2;
+    required fixed64 datasetUserId = 3;
+    required fixed64 datasetId = 4;
+    optional string version = 5;
+}
+message GetPSNDatasetLocationOutput {
+    required Error error = 1;
+
+    optional fixed64 storageClusterId = 2;
+    /// Don't need storage uit IDs for now.
+}
+
+/// UpdatePSNDatasetStatus
+/// Update the current status for a PSN-hosted dataset at storage.
+message UpdatePSNDatasetStatusInput {
+    required SessionInfo session = 1;
+    required fixed64 userId = 2;
+    required fixed64 datasetUserId = 3;
+    required fixed64 datasetId = 4;
+    required fixed64 clusterId = 5;
+    required fixed64 datasetSize = 6;
+    required fixed64 datasetVersion = 7;
+    optional string version = 8;
+}
+message UpdatePSNDatasetStatusOutput {
+    required Error error = 1;
+}
+
+/// AddUserStorage
+/// Assign a user space on a storage cluster.
+message AddUserStorageInput {
+    required SessionInfo session = 1;
+
+    required fixed64 userId = 2;
+    required fixed64 storageClusterId = 3;
+    required string storageName = 4;
+    required fixed64 usageLimit = 5;
+    optional string version = 6;
+}
+message AddUserStorageOutput {
+    required Error error = 1;
+}
+
+/// DeleteUserStorage
+/// Delete user space on a storage cluster.
+message DeleteUserStorageInput {
+    required SessionInfo session = 1;
+
+    required fixed64 userId = 2;
+    required fixed64 storageClusterId = 3;
+    optional string version = 4;
+}
+message DeleteUserStorageOutput {
+    required Error error = 1;
+}
+
+/// ChangeUserStorageName
+/// Rename storage space assigned to a user.
+message ChangeUserStorageNameInput {
+    required SessionInfo session = 1;
+
+    required fixed64 userId = 2;
+    required fixed64 storageClusterId = 3;
+    required string newStorageName = 4;
+    optional string version = 5;
+}
+message ChangeUserStorageNameOutput {
+    required Error error = 1;
+}
+
+/// ChangeUserStorageQuota
+/// Rename storage space assigned to a user.
+message ChangeUserStorageQuotaInput {
+    required SessionInfo session = 1;
+
+    required fixed64 userId = 2;
+    required fixed64 storageClusterId = 3;
+    required fixed64 newLimit = 4;
+    optional string version = 5;
+}
+message ChangeUserStorageQuotaOutput {
+    required Error error = 1;
+}
+
+/// ListUserStorage
+/// List all user storage assigned to a user. 
+message ListUserStorageInput {
+    required SessionInfo session = 1;
+
+    required fixed64 userId = 2;
+    optional fixed64 deviceId = 3;
+    optional string version = 4;
+}
+message ListUserStorageOutput {
+    required Error error = 1;
+
+    repeated UserStorage storageAssignments = 2;
+}
+
+/// @deprecated CCD should use GetCloudInfo instead, which returns a list of UserStorage instead.
+/// GetUserStorageAddress
+/// Get the direct and proxy address information for a user's storage unit.
+/// Intended use: Get PSN address information for clear.fi server connection.
+message GetUserStorageAddressInput {
+    required SessionInfo session = 1;
+
+    required fixed64 userId = 2;
+    required fixed64 storageClusterId = 3;
+    optional string version = 4;
+}
+
+//%}INTERNAL
+
+/// @deprecated Use UserStorage instead.
+/// Used by ccd_types.proto, should be used by GetStorageAddressOutput, but it's too late
+/// to change the API.  The next API version should use this.
+message UserStorageAddress {
+    optional string direct_address = 1;          ///< external direct address
+    optional int32  direct_port = 2;             ///< direct connection port
+    optional string proxy_address = 3;           ///< proxy server address
+    optional int32  proxy_port = 4;              ///< proxy server port
+    optional string internal_direct_address = 5; ///< LAN/internal direct address
+    optional int32  direct_secure_port = 6;      ///< direct connection port for secure connections
+    optional fixed64 access_handle = 7;
+    optional bytes access_ticket = 8;
+
+    //% NOTE: Be sure to update Util_IsUserStorageAddressEqual() if changing this.
+}
+
+//%{INTERNAL
+
+/// @deprecated Use UserStorage instead.
+message GetUserStorageAddressOutput {
+    required Error error = 1;
+
+    /// See "message UserStorageAddress" above when creating next API.
+    optional string directAddress = 2;         ///< external direct address
+    optional int32  directPort = 3;            ///< direct connection port
+    optional string proxyAddress = 4;          ///< proxy server address
+    optional int32  proxyPort = 5;             ///< proxy server port
+    optional string internalDirectAddress = 6; ///< LAN/internal direct address
+    optional int32  directSecurePort = 7;      ///< direct connection port for secure connections
+    optional fixed64 accessHandle = 8;
+    optional bytes accessTicket = 9;
+}
+
+/// AssignUserDatacenterStorage
+/// Assign a user space on a datacenter storage cluster.
+message AssignUserDatacenterStorageInput {
+    required fixed64 userId = 1;
+    required string region = 2;
+    required fixed64 usageLimit = 3;
+    optional fixed64 storageClusterId = 4;
+    optional fixed64 primaryStorageId = 5;
+    optional fixed64 secondaryStorageId = 6;
+    optional string version = 7;
+}
+message AssignUserDatacenterStorageOutput {
+    required Error error = 1;
+
+    optional UserStorage storageAssignment = 2;
+}
+
+/// GetStorageUnitForDataset
+/// @deprecated Use GetDatasetStatus instead.
+/// Get Storage Unit Id associated with a given dataset. If none, return 0 as the storage Id.
+message GetStorageUnitForDatasetInput {
+    required fixed64 userId = 1;
+    required fixed64 datasetId = 2;
+    optional string version = 3;
+}
+message GetStorageUnitForDatasetOutput {
+    required Error error = 1;
+
+    optional fixed64 storageClusterId = 2;
+    optional fixed64 primaryStorageId = 3;
+    optional fixed64 secondaryStorageId = 4;
+    optional fixed64 backupStorageId = 5;
+}
+
+/// GetStoredDatasets
+/// Get list of datasets stored on a particular storage unit. VSS only.
+message GetStoredDatasetsInput {
+    required fixed64 clusterId = 1;
+    required fixed64 storageId = 2;
+    optional string version = 3;
+}
+message GetStoredDatasetsOutput {
+    required Error error = 1;
+
+    repeated StoredDataset datasets = 2;
+}
+
+/// GetProxyConnectionForCluster (DEPRECATED)
+/// Get the proxy connection cookie value for a given storage cluster (personal storage node).
+message GetProxyConnectionForClusterInput {
+    required fixed64 clusterId = 1;
+    optional string version = 2;
+}
+message GetProxyConnectionForClusterOutput {
+    required Error error = 1;
+
+    optional fixed32 cookie = 2;
+}
+
+/// SendMessageToPSN
+/// Send a message to a specific Personal Storage Node via its connection to ANS.
+message SendMessageToPSNInput {
+    required fixed64 clusterId = 1;
+    required bytes message = 2;
+    optional string version = 3;
+}
+message SendMessageToPSNOutput {
+    required Error error = 1;
+}
+
+/// ChangeStorageUnitForDataset
+/// Change Storage Unit Id associated with a dataset, creating an entry if needed.
+message ChangeStorageUnitForDatasetInput {
+    required fixed64 userId = 1;
+    required fixed64 datasetId = 2;
+    required fixed64 currentStorageId = 3;
+    required fixed64 newStorageId = 4;
+    optional string version = 5;
+}
+message ChangeStorageUnitForDatasetOutput {
+    required Error error = 1;
+
+    optional fixed64 storageId = 2;
+}
+
+/// CreateStorageCluster
+/// Create a new storage cluster. The storage cluster may be an infrastructure cluster or a Personal Storage Node. 
+message CreateStorageClusterInput {
+    required fixed64 clusterId = 1;
+    required string clusterName = 2;
+    optional int32 clusterType = 3;
+    optional string region = 4;
+    optional string version = 5;
+}
+message CreateStorageClusterOutput {
+    required Error error = 1;
+}
+
+/// GetMssInstancesForCluster
+/// Get list of all MSS instances for a given cluster. 
+message GetMssInstancesForClusterInput {
+    required fixed64 clusterId = 1;
+    optional string version = 2;
+}
+message GetMssInstancesForClusterOutput {
+    required Error error = 1;
+
+    repeated MssDetail mssInstances = 2;
+}
+
+/// GetStorageUnitsForCluster
+/// Get list of all storage units for a given cluster.
+message GetStorageUnitsForClusterInput {
+    required fixed64 clusterId = 1;
+    optional string version = 2;
+}
+message GetStorageUnitsForClusterOutput {
+    required Error error = 1;
+
+    repeated StorageUnitDetail storageUnits = 2;
+}
+
+/// GetBrsInstancesForCluster
+/// Get list of all BRS instances for a given cluster.
+message GetBrsInstancesForClusterInput {
+    required fixed64 clusterId = 1;
+    optional string version = 2;
+}
+message GetBrsInstancesForClusterOutput {
+    required Error error = 1;
+
+    repeated BrsDetail brsInstances = 2;
+}
+
+/// GetBrsStorageUnitsForCluster
+/// Get list of all BRS storage units for a given cluster.
+message GetBrsStorageUnitsForClusterInput {
+    required fixed64 clusterId = 1;
+    optional string version = 2;
+}
+message GetBrsStorageUnitsForClusterOutput {
+    required Error error = 1;
+
+    repeated BrsStorageUnitDetail brsStorageUnits = 2;
+}
+
+/// ChangeStorageAssignmentsForDataset
+/// Update the current backup status for a dataset at storage
+message ChangeStorageAssignmentsForDatasetInput {
+    required fixed64 userId = 1;
+    required fixed64 datasetId = 2;
+    required fixed64 clusterId = 3;
+    required fixed64 primaryStorageId = 4;
+    required fixed64 secondaryStorageId = 5;
+    required fixed64 backupStorageId = 6;
+    optional string version = 7;
+}
+message ChangeStorageAssignmentsForDatasetOutput {
+    required Error error = 1;
+}
+
+/// UpdateDatasetStatus
+/// Update the current status for a dataset at storage.
+message UpdateDatasetStatusInput {
+    required fixed64 userId = 1;
+    required fixed64 datasetId = 2;
+    required fixed64 clusterId = 3;
+    required fixed64 storageId = 4;
+    required fixed64 datasetSize = 5;
+    required fixed64 datasetVersion = 6;
+    optional string version = 7;
+    optional bool ansNotificationOff = 8;
+}
+message UpdateDatasetStatusOutput {
+    required Error error = 1;
+}
+
+/// UpdateDatasetBackupStatus
+/// Update the current backup status for a dataset at storage
+message UpdateDatasetBackupStatusInput {
+    required fixed64 userId = 1;
+    required fixed64 datasetId = 2;
+    required fixed64 clusterId = 3;
+    required fixed64 backupStorageId = 4;
+    required fixed64 datasetVersion = 5;
+    optional string version = 6;
+}
+message UpdateDatasetBackupStatusOutput {
+    required Error error = 1;
+}
+
+/// UpdateDatasetArchiveStatus
+/// Update the current archive status for a dataset at storage
+message UpdateDatasetArchiveStatusInput {
+    required fixed64 userId = 1;
+    required fixed64 datasetId = 2;
+    required fixed64 clusterId = 3;
+    required fixed64 backupStorageId = 4;
+    required fixed64 datasetVersion = 5;
+    optional string version = 6;
+}
+message UpdateDatasetArchiveStatusOutput {
+    required Error error = 1;
+}
+ 
+/// GetDatasetStatus
+/// Get the current status for a dataset at storage
+message GetDatasetStatusInput {
+    required fixed64 userId = 1;
+    required fixed64 datasetId = 2;
+    optional string version = 3;
+}
+message GetDatasetStatusOutput {
+    required Error error = 1;
+
+    optional fixed64 clusterId = 2;
+    optional fixed64 primaryStorageId = 3;
+    optional fixed64 primaryDatasetSize = 4;
+    optional fixed64 primaryDatasetVersion = 5;
+    optional fixed64 secondaryStorageId = 6;
+    optional fixed64 secondaryDatasetSize = 7;
+    optional fixed64 secondaryDatasetVersion = 8;
+    optional fixed64 backupStorageId = 9;
+    optional DatasetType datasetType = 10;
+    optional fixed64 deleteDataAfter = 11;
+    optional fixed64 backupDatasetVersion = 12;
+    optional fixed64 archiveDatasetVersion = 13;
+    optional bool suspendedFlag = 14;
+}
+
+/// StoreDeviceEvent
+/// store device events
+message StoreDeviceEventInput {
+    required SessionInfo session = 1;
+    required fixed64 userId = 2;
+    required fixed64 deviceId = 3;
+    repeated EventInfo eventInfos = 4;
+    optional string version = 5;
+}
+message StoreDeviceEventOutput {
+    required Error error = 1;
+    optional fixed32 successCount = 2;
+    optional fixed32 errorCount = 3;
+    optional fixed32 nextReportTime = 4;
+}
+
+message EventInfo {
+    required string appId = 1;
+    required string eventId = 2;
+    required fixed64 startTime = 3;
+    optional fixed64 endTime = 4;
+    optional fixed32 eventCount = 5;
+    optional bool limitReached = 6;
+    optional string eventInfo = 7;
+}
+
+/// GetLinkedDatasetStatus
+/// Get the current status for the dataset linked to a dataset at storage
+message GetLinkedDatasetStatusInput {
+    required fixed64 userId = 1;
+    required fixed64 datasetId = 2;
+    optional string version = 3;
+}
+message GetLinkedDatasetStatusOutput {
+    required Error error = 1;
+
+    optional fixed64 linkedDatasetId = 2;
+    optional fixed64 clusterId = 3;
+    optional fixed64 primaryStorageId = 4;
+    optional fixed64 primaryDatasetSize = 5;
+    optional fixed64 primaryDatasetVersion = 6;
+    optional fixed64 secondaryStorageId = 7;
+    optional fixed64 secondaryDatasetSize = 8;
+    optional fixed64 secondaryDatasetVersion = 9;
+    optional fixed64 backupStorageId = 10;
+    optional DatasetType datasetType = 11;
+    optional bool suspendedFlag = 12;
+}
+
+/// GetUserQuotaStatus
+/// Get the user's quota status for a cluster
+message GetUserQuotaStatusInput {
+    required fixed64 userId = 1;
+    required fixed64 clusterId = 2;
+    optional string version = 3;
+}
+message GetUserQuotaStatusOutput {
+    required Error error = 1;
+
+    optional fixed64 quotaLimit = 2;
+    optional fixed64 currentUsage = 3;
+}
+
+/// GetDatasetsToBackup
+/// Get a list of datasets that need to be backed-up to a given backup storage unit
+message GetDatasetsToBackupInput {
+    required fixed64 backupStorageId = 1;
+    required fixed64 userId = 2;
+    required fixed64 datasetId = 3;
+    required fixed32 count = 4;
+    optional fixed64 clusterId = 5;
+    optional string version = 6;
+}
+message GetDatasetsToBackupOutput {
+    required Error error = 1;
+
+    repeated BackupStatus datasetsToBackup = 2;
+}
+
+/// GetBRSHostName
+/// Get BRS instance host name for a given ID
+message GetBRSHostNameInput {
+    required fixed64 clusterId = 1;
+    required fixed64 backupStorageId = 2;
+    optional string version = 3;
+}
+message GetBRSHostNameOutput {
+    required Error error = 1;
+
+    optional string hostName = 2;
+}
+
+/// GetBackupStorageUnitsForBrs
+/// Get a list of BRS storage units for a given BRS server
+message GetBackupStorageUnitsForBrsInput {
+    required fixed64 clusterId = 1;
+    required fixed64 brsId = 2;
+    optional string version = 3;
+}
+message GetBackupStorageUnitsForBrsOutput {
+    required Error error = 1;
+    repeated fixed64 backupStorageIds = 2;
+}
+
+/// GetUpdatedDatasets
+/// Get a list of datasets that need to be backed-up to a given backup storage unit
+message GetUpdatedDatasetsInput {
+    required string version = 1;
+
+    required fixed64 clusterId = 2;
+    required fixed64 startTime = 3;
+    required fixed64 endTime = 4;
+    required fixed32 count = 5;
+    repeated DatasetFilter filters = 6;
+}
+message GetUpdatedDatasetsOutput {
+    required Error error = 1;
+
+    repeated UpdatedDataset datasets = 2;
+}
+
+/// AddDatasetArchiveStorageDevice
+/// Add the archive storage association for a dataset
+message AddDatasetArchiveStorageDeviceInput {
+    required fixed64 datasetId = 1;
+    repeated fixed64 archiveStorageDeviceId  = 2;
+    required SessionInfo session = 3;
+    required fixed64 userId = 4;
+    optional string version = 5;
+}
+message AddDatasetArchiveStorageDeviceOutput {
+    required Error error = 1;
+}
+
+/// RemoveDatasetArchiveStorageDevice
+/// Remove the archive storage association for a dataset
+message RemoveDatasetArchiveStorageDeviceInput {
+    required fixed64 datasetId = 1;
+    repeated fixed64 archiveStorageDeviceId  = 2;
+    required SessionInfo session = 3;
+    required fixed64 userId = 4;
+    optional string version = 5;
+}
+message RemoveDatasetArchiveStorageDeviceOutput {
+    required Error error = 1;
+}
+
+//%}INTERNAL

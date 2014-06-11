@@ -1,0 +1,14 @@
+#! /bin/csh -fb
+
+foreach host (`cat ~root/java/machines`)
+	echo ============ $host
+	echo " "
+	ssh $host cat /proc/cpuinfo /proc/meminfo
+	echo " "
+	echo " "
+	echo " "
+	echo " "
+	echo " "
+	echo " "
+	echo " "
+end

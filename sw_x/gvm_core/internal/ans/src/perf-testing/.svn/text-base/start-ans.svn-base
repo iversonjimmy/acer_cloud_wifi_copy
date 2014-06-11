@@ -1,0 +1,19 @@
+#
+# This script is used to start the ANS server for performance testing.
+#
+setconf ans.jre.max 32000
+setconf ans.jre.mode 64
+
+/opt/init.d/S78ans stop
+sleep 2
+/opt/init.d/S78ans start
+echo "Waiting for the server to start."
+sleep 20
+./manage localhost set-server message off subscribe off login-checks off cluster off keep off connect off device off cio on logging-level warn stats-interval 600000 
+./manage localhost set-server-device jitter 2000
+
+./manage localhost set-device-type  non-android  120  30  6      0   -1   -1     30  10 3   1     45
+./manage localhost set-device-type  android        0  30  6      0   -1   -1    180  10 3   1     45
+./manage localhost set-device-type  default      120  30  6     -1   -1   -1      0   0 0   1     45
+
+./manage localhost inject-cluster "Started the test server"

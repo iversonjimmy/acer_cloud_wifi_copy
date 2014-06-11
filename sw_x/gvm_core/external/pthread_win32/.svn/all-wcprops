@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/1257/trunk/sw_x/gvm_core/external/pthread_win32
+END
+pthread.tar.gzip
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/1257/trunk/sw_x/gvm_core/external/pthread_win32/pthread.tar.gzip
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/1257/trunk/sw_x/gvm_core/external/pthread_win32/Makefile
+END

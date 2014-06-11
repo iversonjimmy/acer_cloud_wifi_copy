@@ -1,0 +1,5 @@
+android_common_build_setup: 
+	sudo apt-get install g++ sun-java6-jdk ksh zip curl
+ifeq ($(shell uname -m),x86_64)
+	sudo apt-get install ia32-libs
+endif

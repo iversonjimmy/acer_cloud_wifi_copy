@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repo/!svn/ver/59732/trunk/sw_x/gvm_core/vplex/platform_win32/src
+END
+vplex__http2.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/59732/trunk/sw_x/gvm_core/vplex/platform_win32/src/vplex__http2.cpp
+END
+vplex__powerman.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/22836/trunk/sw_x/gvm_core/vplex/platform_win32/src/vplex__powerman.cpp
+END
+vplex__socket.c
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repo/!svn/ver/34666/trunk/sw_x/gvm_core/vplex/platform_win32/src/vplex__socket.c
+END
+vplex__math.c
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/49934/trunk/sw_x/gvm_core/vplex/platform_win32/src/vplex__math.c
+END
+vplex__named_socket.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repo/!svn/ver/32001/trunk/sw_x/gvm_core/vplex/platform_win32/src/vplex__named_socket.cpp
+END
+vplex__plat_winsock.c
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repo/!svn/ver/31619/trunk/sw_x/gvm_core/vplex/platform_win32/src/vplex__plat_winsock.c
+END
+vplex__wstring.c
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repo/!svn/ver/1226/trunk/sw_x/gvm_core/vplex/platform_win32/src/vplex__wstring.c
+END
+vplex__time.c
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/26062/trunk/sw_x/gvm_core/vplex/platform_win32/src/vplex__time.c
+END
+vplex__file.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repo/!svn/ver/59006/trunk/sw_x/gvm_core/vplex/platform_win32/src/vplex__file.cpp
+END
+vplex__plat.c
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/29006/trunk/sw_x/gvm_core/vplex/platform_win32/src/vplex__plat.c
+END

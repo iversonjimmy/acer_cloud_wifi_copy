@@ -1,0 +1,52 @@
+package CCDMonSrv;
+
+enum REQTYPE {
+    NEW_CCD = 1;
+    CLOSE_CCD = 2;
+    CLOSE_DISABLE_CCD = 3;
+    CLOSE_CCDMS = 4;
+    SET_IOAC = 5;
+        GET_WLAN_PROFILE = 6;
+        LAUNCH_VDRIVE_INSTALLER = 7;
+        LAUNCH_IOAC_NET_TOOL = 8;
+        LAUNCH_TOOL = 9;
+        CCDMONSRV_INTERNAL = 10;
+    LAUNCH_INSTALLER = 11;
+}
+
+enum RESULT {
+    SUCCESS = 0;
+    ERROR_INVALID_INPUT = 1;
+    ERROR_CREATE_PROCESS = 2;
+    ERROR_TERMINATE_PROCESS = 3;
+    ERROR_TERMINATE_PROCESS_LOGOUT = 4;
+    ERROR_EMPTY_USER = 5;
+        ERROR_FILE_ABSENT = 6;
+    ERROR_PATH_ABSENT = 7;
+    ERROR_UNKNOWN = 999;
+}
+
+enum IOAC_OPTION {
+    DISABLE = 0;
+    ENABLE = 1;
+}
+
+message TRUSTEE {
+    required string sid = 1;
+    required fixed64 attr = 2;
+}
+
+message REQINPUT {
+    required string sid = 1;
+    optional string localPath = 2;
+    required REQTYPE type = 3;
+    optional IOAC_OPTION ioac_option = 4;
+    repeated TRUSTEE trustees = 5;
+        optional string argv = 6;
+    optional fixed32 instanceNum = 7;
+}
+
+message REQOUTPUT {
+    required RESULT result = 1;
+    optional string message = 2;
+}

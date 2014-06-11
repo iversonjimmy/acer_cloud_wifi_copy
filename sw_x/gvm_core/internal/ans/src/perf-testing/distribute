@@ -1,0 +1,13 @@
+#! /bin/csh -fb
+
+cd ~root/java
+
+foreach i (`cat automatic-hosts`)
+	scp ~root/java.tar $i":"
+	ssh $i "cd java; rm -rf com jars org; tar xf ../java.tar"
+end
+
+foreach i (`cat manual-hosts`)
+	scp ~root/java.tar $i":"
+	ssh $i "cd java; rm -rf com; tar xf ../java.tar ./com"
+end

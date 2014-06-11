@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/59450/trunk/sw_x/projects/msvc/winRT/dx_remote_agent
+END
+App.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/24054/trunk/sw_x/projects/msvc/winRT/dx_remote_agent/App.xaml
+END
+pch.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/24054/trunk/sw_x/projects/msvc/winRT/dx_remote_agent/pch.h
+END
+App.xaml.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repo/!svn/ver/24054/trunk/sw_x/projects/msvc/winRT/dx_remote_agent/App.xaml.cpp
+END
+MainPage.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repo/!svn/ver/24138/trunk/sw_x/projects/msvc/winRT/dx_remote_agent/MainPage.xaml
+END
+MainPage.xaml.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/44692/trunk/sw_x/projects/msvc/winRT/dx_remote_agent/MainPage.xaml.cpp
+END
+dx_remote_agent.vcxproj.filters
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repo/!svn/ver/59450/trunk/sw_x/projects/msvc/winRT/dx_remote_agent/dx_remote_agent.vcxproj.filters
+END
+App.xaml.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/24054/trunk/sw_x/projects/msvc/winRT/dx_remote_agent/App.xaml.h
+END
+MainPage.xaml.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repo/!svn/ver/24902/trunk/sw_x/projects/msvc/winRT/dx_remote_agent/MainPage.xaml.h
+END
+Package.appxmanifest
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repo/!svn/ver/24054/trunk/sw_x/projects/msvc/winRT/dx_remote_agent/Package.appxmanifest
+END
+dx_remote_agent_TemporaryKey.pfx
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repo/!svn/ver/40491/trunk/sw_x/projects/msvc/winRT/dx_remote_agent/dx_remote_agent_TemporaryKey.pfx
+END
+pch.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/24054/trunk/sw_x/projects/msvc/winRT/dx_remote_agent/pch.cpp
+END
+dx_remote_agent.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repo/!svn/ver/59450/trunk/sw_x/projects/msvc/winRT/dx_remote_agent/dx_remote_agent.vcxproj
+END

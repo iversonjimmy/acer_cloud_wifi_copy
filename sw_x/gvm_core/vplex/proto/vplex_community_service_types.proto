@@ -1,0 +1,16 @@
+// Input and output types for vplex community services.
+// This file is the basis for generated types used in vplex
+// community methods and the community services wsdl server
+// CS2.  When editing this file, both locations need to be
+// updated.
+option java_package = "igware.vplex.pb";
+option java_outer_classname = "CommunityServiceTypes";
+
+package vplex.community;
+
+message SessionInfo {
+    required fixed64 sessionHandle = 1;
+    
+    // ticket is 20 bytes
+    required bytes serviceTicket = 2;
+}

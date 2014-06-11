@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/repo/!svn/ver/44552/trunk/sw_x/make/makegen
+END
+custom.py
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/repo/!svn/ver/42719/trunk/sw_x/make/makegen/custom.py
+END
+internal_defs.py
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repo/!svn/ver/11533/trunk/sw_x/make/makegen/internal_defs.py
+END
+system_targets.py
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repo/!svn/ver/7515/trunk/sw_x/make/makegen/system_targets.py
+END
+extern_targets.py
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/11305/trunk/sw_x/make/makegen/extern_targets.py
+END
+shared_cpp_lib.py
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/19502/trunk/sw_x/make/makegen/shared_cpp_lib.py
+END
+pseudo.py
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/repo/!svn/ver/7515/trunk/sw_x/make/makegen/pseudo.py
+END
+static_cpp_lib.py
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/19502/trunk/sw_x/make/makegen/static_cpp_lib.py
+END
+android_app.py
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repo/!svn/ver/44552/trunk/sw_x/make/makegen/android_app.py
+END
+protobuf.py
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repo/!svn/ver/23404/trunk/sw_x/make/makegen/protobuf.py
+END
+cpp_binary.py
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repo/!svn/ver/8796/trunk/sw_x/make/makegen/cpp_binary.py
+END

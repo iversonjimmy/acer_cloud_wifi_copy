@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/44882/trunk/sw_x/gvm_core/vplex/platform_linux/include
+END
+vplex__plat.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repo/!svn/ver/44882/trunk/sw_x/gvm_core/vplex/platform_linux/include/vplex__plat.h
+END
+vplex__http2.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repo/!svn/ver/41086/trunk/sw_x/gvm_core/vplex/platform_linux/include/vplex__http2.hpp
+END

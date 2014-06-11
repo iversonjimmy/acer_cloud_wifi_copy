@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/tools/acpisrc
+END
+ascase.c
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/tools/acpisrc/ascase.c
+END
+asconvrt.c
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/tools/acpisrc/asconvrt.c
+END
+asremove.c
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/tools/acpisrc/asremove.c
+END
+asfile.c
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/tools/acpisrc/asfile.c
+END
+asutils.c
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/tools/acpisrc/asutils.c
+END
+osunixdir.c
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/tools/acpisrc/osunixdir.c
+END
+asmain.c
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/tools/acpisrc/asmain.c
+END
+acpisrc.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/tools/acpisrc/acpisrc.h
+END
+astable.c
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/tools/acpisrc/astable.c
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/tools/acpisrc/Makefile
+END

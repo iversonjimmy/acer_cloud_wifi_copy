@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/upnp/dmr
+END
+DMRAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/upnp/dmr/DMRAction.java
+END
+DMRTool.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/upnp/dmr/DMRTool.java
+END
+MediaAudioControl.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/upnp/dmr/MediaAudioControl.java
+END
+MediaImageControl.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/upnp/dmr/MediaImageControl.java
+END
+ConnectionMeta.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/upnp/dmr/ConnectionMeta.java
+END
+DMRActionListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/upnp/dmr/DMRActionListener.java
+END
+MediaAVControl.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/upnp/dmr/MediaAVControl.java
+END
+MediaVideoControl.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/upnp/dmr/MediaVideoControl.java
+END
+DMRMeta.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/upnp/dmr/DMRMeta.java
+END
+MediaBaseControl.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/upnp/dmr/MediaBaseControl.java
+END
+DmrActionList.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/upnp/dmr/DmrActionList.java
+END

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repo/!svn/ver/56576/trunk/sw_x/gvm_core/internal/vssts/src
+END
+vssts_internal.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/56576/trunk/sw_x/gvm_core/internal/vssts/src/vssts_internal.cpp
+END
+vssts.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/55768/trunk/sw_x/gvm_core/internal/vssts/src/vssts.cpp
+END
+vssts_internal.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/55423/trunk/sw_x/gvm_core/internal/vssts/src/vssts_internal.hpp
+END
+vss_comm.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/38547/trunk/sw_x/gvm_core/internal/vssts/src/vss_comm.h
+END

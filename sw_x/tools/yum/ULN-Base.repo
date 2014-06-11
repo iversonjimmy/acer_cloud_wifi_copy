@@ -1,0 +1,10 @@
+[updates]
+name=Oracle-$releasever - Updates
+baseurl=http://pcstore.ctbg.acer.com/linux_repo/oracle/EL5U2/updates/i386
+gpgcheck=0
+
+[base]
+name=Oracle-$releasever - Base
+baseurl=http://pcstore.ctbg.acer.com/linux_repo/oracle/EL5U2/base/i386
+gpgcheck=0
+

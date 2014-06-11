@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir>$(BUILDROOT)\build_msvc\$(SolutionName)\$(Configuration)\$(ProjectName)\$(PlatformName)\</OutDir>
+    <IntDir>$(BUILDROOT)\build_msvc\$(SolutionName)\$(Configuration)\$(ProjectName)\$(PlatformName)_obj\</IntDir>
+    <!--workaround for MSB4011 warning-->
+    <imported_MSVC_sw_x_common_props>true</imported_MSVC_sw_x_common_props>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <ProgramDataBaseFileName>$(IntDir)$(TargetName)_obj.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ProjectReference />
+  </ItemDefinitionGroup>
+</Project>

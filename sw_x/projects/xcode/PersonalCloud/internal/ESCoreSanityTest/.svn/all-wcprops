@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repo/!svn/ver/24053/trunk/sw_x/projects/xcode/PersonalCloud/internal/ESCoreSanityTest
+END
+main.m
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repo/!svn/ver/24053/trunk/sw_x/projects/xcode/PersonalCloud/internal/ESCoreSanityTest/main.m
+END
+AppDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repo/!svn/ver/24053/trunk/sw_x/projects/xcode/PersonalCloud/internal/ESCoreSanityTest/AppDelegate.h
+END
+ViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repo/!svn/ver/24053/trunk/sw_x/projects/xcode/PersonalCloud/internal/ESCoreSanityTest/ViewController.h
+END
+AppDelegate.m
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repo/!svn/ver/24053/trunk/sw_x/projects/xcode/PersonalCloud/internal/ESCoreSanityTest/AppDelegate.m
+END
+ESCoreSanityTest.c
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repo/!svn/ver/24053/trunk/sw_x/projects/xcode/PersonalCloud/internal/ESCoreSanityTest/ESCoreSanityTest.c
+END
+ViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repo/!svn/ver/24053/trunk/sw_x/projects/xcode/PersonalCloud/internal/ESCoreSanityTest/ViewController.m
+END
+ESCoreSanityTest-Info.plist
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repo/!svn/ver/24053/trunk/sw_x/projects/xcode/PersonalCloud/internal/ESCoreSanityTest/ESCoreSanityTest-Info.plist
+END
+ESCoreSanityTest-Prefix.pch
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repo/!svn/ver/24053/trunk/sw_x/projects/xcode/PersonalCloud/internal/ESCoreSanityTest/ESCoreSanityTest-Prefix.pch
+END

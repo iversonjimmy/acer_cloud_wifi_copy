@@ -1,0 +1,244 @@
+<?xml version='1.0'?>
+<Wix xmlns='http://schemas.microsoft.com/wix/2006/wi'
+     xmlns:util='http://schemas.microsoft.com/wix/UtilExtension'>
+
+<?if $(var.IsX64) = yes ?>
+<?define UpgradeCode = "E9CC155E-36A3-4B3C-AE26-0901C02AD8F7" ?>
+<?define Platform = "x64" ?>
+<?else ?>
+<?define UpgradeCode = "3155C28E-65BB-4913-B052-B747A73981ED" ?>
+<?define Platform = "x86" ?>
+<?endif ?>
+
+  <Product Id="*"
+           Name="!(loc.StrProdName)"
+           Language="!(loc.StrLang)"
+           Version="$(env.VERSION)"
+           Manufacturer="!(loc.StrManufacturer)"
+           UpgradeCode="$(var.UpgradeCode)">
+
+    <Package Description="!(loc.StrPkgDescription)"
+             Comments="!(loc.StrPkgComments)"
+             Manufacturer="!(loc.StrManufacturer)"
+             InstallerVersion="300"
+             Languages="!(loc.StrLang)"
+             Compressed="yes"
+             InstallScope="perMachine" 
+	     Id="*"
+	     Platform="$(var.Platform)"
+             />
+
+    <Condition Message="!(loc.StrWin7OrLater)">
+      <![CDATA[Installed OR (VersionNT >= 601)]]>
+    </Condition>
+
+    <MajorUpgrade AllowDowngrades="yes" />
+
+<!-- 
+   disable interaction with Restart Manager
+   http://msdn.microsoft.com/en-us/library/aa370377%28v=VS.85%29.aspx
+-->
+    <Property Id="MSIRESTARTMANAGERCONTROL" Value="Disable" /> 
+
+    <Property Id="SAVEDATA" Secure="yes" />
+
+    <Media Id="1" Cabinet="SyncAgent.cab" EmbedCab="yes" />
+
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="Di.P32.iGware" Name="iGware">
+          <Directory Id="PF32DIR" Name="SyncAgent">
+
+	    <Component Id="Co.CCD" Guid="2EFA4AB1-24D5-458D-A1D2-C915D059DCD1">
+	      <File Id="Fi.ccd.exe" Name="ccd.exe"
+		    DiskId="1" Source="$(env.PBROOT)\PersonalCloudAll\Release\ccd\Win32\ccd.exe" KeyPath="yes" />
+	    </Component>
+
+	    <Component Id="Co.ACTool" Guid="9390529F-370D-40C2-BD28-5798D94FBA9F">
+	      <File Id="Fi.actool_win.exe" Name="actool_win.exe"
+		    DiskId="1" Source="$(env.PBROOT)\PersonalCloudAll\Release\actool_win\Win32\actool_win.exe" KeyPath="yes">
+	      </File>
+	    </Component>
+	    <Component Id="Co.ccd.conf.tmpl" Guid="7A3E0943-241F-490B-B3F8-C7216F6D3F17">
+	      <File Id="Fi.ccd.conf.tmpl" Name="ccd.conf.tmpl"
+		    DiskId="1" Source="$(env.SRCROOT)\gvm_core\conf\ccd.conf.tmpl" KeyPath="yes">
+	      </File>
+	    </Component>
+
+	    <Directory Id="Dir.Acer" Name="Acer">
+	      <Component Id="Co.Acer.ClientApp" Guid="07ED6A0A-0AB1-4602-BF7E-46EC10E13613">
+		<File Id="Fi.Acer.acpanel_win.exe" Name="acpanel_win.exe"
+		      DiskId="1" Source="$(env.PBROOT)\TS_ControlPanel\Win32\Release\acpanel_win.exe" KeyPath="yes">
+		  <Shortcut Id="SC.Acer.ClientApp.StartMenu" Directory="AcerProgramMenuDir" Name="acerCloud"
+			    WorkingDirectory="Dir.Acer" Advertise="yes" Icon="Ic.acer.acpanel.exe" IconIndex="0" />
+		  <Shortcut Id="SC.Acer.ClientApp.Desktop" Directory="DesktopFolder" Name="acerCloud"
+			    WorkingDirectory="Dir.Acer" Advertise="yes" Icon="Ic.acer.acpanel.exe" IconIndex="0" />
+		</File>
+	      </Component>
+	      <Component Id="Co.Acer.ClientApp.Helper" Guid="FE3BCD94-1ACA-4FF3-8AFA-C9EF44F19157">
+		<File Id="Fi.Acer.Interop.IWshRuntimeLibrary.dll" Name="Interop.IWshRuntimeLibrary.1.0.dll"
+		      DiskId="1" Source="$(env.PBROOT)\TS_ControlPanel\Win32\Release\Interop.IWshRuntimeLibrary.1.0.dll" KeyPath="yes">
+		</File>
+	      </Component>
+	      <Component Id="Co.Acer.ClientApp.Jayrock" Guid="B631B108-B52B-4329-9B2E-4709D87865CE">
+		<File Id="Fi.Acer.Jayrock.Json.dll" Name="Jayrock.Json.dll"
+		      DiskId="1" Source="$(env.PBROOT)\TS_ControlPanel\Win32\Release\Jayrock.Json.dll" KeyPath="yes">
+		</File>
+	      </Component>
+
+	      <Directory Id="Dir.Acer.ClientApp.Images" Name="images">
+		<Component Id="Co.Acer.ClientApp.Images" Guid="C7D852CF-0C1B-4C8A-AE85-D04F2C23FF30" KeyPath="yes">
+		  <?foreach IMAGEFILE in $(env.IMAGEFILES_A)?>
+		  <File Id="Fi.Acer.$(var.IMAGEFILE)" Name="$(var.IMAGEFILE)"
+			DiskId="1" Source="$(env.SRCROOT)\gvm_apps\acer\TS_ControlPanel\platform_win\images\$(var.IMAGEFILE)" KeyPath="no">
+		  </File>
+		  <?endforeach?>
+		</Component>
+		<Directory Id="Dir.Acer.ClientApp.Images.ControlPanel" Name="ControlPanel">
+		  <Component Id="Co.Acer.ClientApp.Images.ControlPanel" Guid="0690A455-E354-4C84-BEE7-36F122A87D76" KeyPath="yes">
+		    <?foreach IMAGEFILE in $(env.IMAGEFILES_A_CP)?>
+		    <File Id="Fi.Acer.$(var.IMAGEFILE)" Name="$(var.IMAGEFILE)"
+			  DiskId="1" Source="$(env.SRCROOT)\gvm_apps\acer\TS_ControlPanel\platform_win\images\ControlPanel\$(var.IMAGEFILE)" KeyPath="no">
+		    </File>
+		    <?endforeach?>
+		  </Component>
+		</Directory>
+		<Directory Id="Dir.Acer.ClientApp.Images.SignUp" Name="SignUp">
+		  <Component Id="Co.Acer.ClientApp.Images.SignUp" Guid="4724AA11-64D8-4044-A22D-A9D56502685B" KeyPath="yes">
+		    <?foreach IMAGEFILE in $(env.IMAGEFILES_A_SU)?>
+<!--		    <File Id="Fi.Acer.$(var.IMAGEFILE)" Name="$(var.IMAGEFILE)" -->
+		    <File Name="$(var.IMAGEFILE)"
+			  DiskId="1" Source="$(env.SRCROOT)\gvm_apps\acer\TS_ControlPanel\platform_win\images\SignUp\$(var.IMAGEFILE)" KeyPath="no">
+		    </File>
+		    <?endforeach?>
+		  </Component>
+		</Directory>
+	      </Directory>
+	    </Directory>
+
+	    <Component Id="HelperLibraries" Guid="F906264A-38FA-4C6A-AB64-19485BDAB33F">
+	      <File Id="pthreadGC2.dll" Name="pthreadGC2.dll"
+		    DiskId="1" Source="$(env.PBROOT)\usr\lib\pthreadGC2.dll" KeyPath="yes" />
+	      <File Id="cygcrypto098.dll" Name="cygcrypto-0.9.8.dll"
+		    DiskId="1" Source="$(env.PBROOT)\usr\bin\cygcrypto-0.9.8.dll" KeyPath="no" />
+	      <File Id="libcurl4.dll" Name="libcurl-4.dll"
+		    DiskId="1" Source="$(env.PBROOT)\usr\bin\libcurl-4.dll" KeyPath="no" />
+	      <File Id="cygssl098.dll" Name="cygssl-0.9.8.dll"
+		    DiskId="1" Source="$(env.PBROOT)\usr\bin\cygssl-0.9.8.dll" KeyPath="no" />
+	    </Component>
+
+	    <Component Id="Co.Product.Version" Guid="F7CE98F0-E4D8-4647-B9F4-06A83D61207D">
+	      <File Id="Fi.Product.Version" Name="Product.Version"
+		    DiskId="1" Source="Product.Version" KeyPath="yes" />
+	    </Component>
+	    <Component Id="Co.Title.Version" Guid="BCC1A2F1-C0C1-40B8-A587-3666635348C5">
+	      <File Id="Fi.Title.Version" Name="Title.Version"
+		    DiskId="1" Source="Title.Version" KeyPath="yes" />
+	    </Component>
+
+	  </Directory>
+	</Directory>
+      </Directory>  <!-- ProgramFilesFolder -->
+
+      <Directory Id="ProgramMenuFolder" Name="Programs">
+	<Directory Id="AcerProgramMenuDir" Name="Acer">
+	  <Component Id="AcerProgramMenuDir" Guid="E16FFCA7-E726-4B5D-9614-57B5CC82BE55">
+	    <RemoveFolder Id="AcerProgramMenuDir" On="uninstall" />
+	    <RegistryValue Root="HKCU" Key="Software\Acer\acerCloud" Type="string" Value="" KeyPath="yes" />
+	  </Component>
+	</Directory>
+      </Directory>
+
+      <Directory Id="DesktopFolder" Name="Desktop" />
+    </Directory>  <!-- TARGETDIR -->
+
+    <DirectoryRef Id="TARGETDIR">
+      <Merge Id="Me.CRT32" DiskId="1" Language="0"
+	     SourceFile="C:\Program Files (x86)\Common Files\Merge Modules\Microsoft_VC90_CRT_x86.msm" />
+      <Merge Id="Me.CRT32.policy" DiskId="1" Language="0"
+	     SourceFile="C:\Program Files (x86)\Common Files\Merge Modules\policy_9_0_Microsoft_VC90_CRT_x86.msm" />
+      <Merge Id="Me.ATL32" DiskId="1" Language="0"
+	     SourceFile="C:\Program Files (x86)\Common Files\Merge Modules\Microsoft_VC90_ATL_x86.msm" />
+      <Merge Id="Me.ATL32.policy" DiskId="1" Language="0"
+	     SourceFile="C:\Program Files (x86)\Common Files\Merge Modules\policy_9_0_Microsoft_VC90_ATL_x86.msm" />
+<?if $(var.IsX64) = yes ?>
+      <Merge Id="Me.CRT64" DiskId="1" Language="0"
+	     SourceFile="C:\Program Files (x86)\Common Files\Merge Modules\Microsoft_VC90_CRT_x86_x64.msm" />
+      <Merge Id="Me.CRT64.policy" DiskId="1" Language="0"
+	     SourceFile="C:\Program Files (x86)\Common Files\Merge Modules\policy_9_0_Microsoft_VC90_CRT_x86_x64.msm" />
+      <Merge Id="Me.ATL64" DiskId="1" Language="0"
+	     SourceFile="C:\Program Files (x86)\Common Files\Merge Modules\Microsoft_VC90_ATL_x86_x64.msm" />
+      <Merge Id="Me.ATL64.policy" DiskId="1" Language="0"
+	     SourceFile="C:\Program Files (x86)\Common Files\Merge Modules\policy_9_0_Microsoft_VC90_ATL_x86_x64.msm" />
+<?endif ?>
+    </DirectoryRef>
+
+    <DirectoryRef Id="TARGETDIR">
+      <Component Id="Co.RegistryEntries" Guid="5D946857-4A93-4514-889C-9FB3CB434FE0">
+	<RegistryKey Root="HKMU" Key="Software\iGware\Sync Agent" Action="createAndRemoveOnUninstall">
+	  <RegistryValue Type="integer" Name="TitleVersion" Value="$(env.TITLE_VERSION)" KeyPath="yes" />
+	</RegistryKey>
+      </Component>
+    </DirectoryRef>
+
+    <Feature Id="AllComponents" Level="1">
+      <Feature Id="Fe.SyncAgent" Title="iGware My Cloud" Level="1">
+	<ComponentRef Id="Co.CCD" />
+	<ComponentRef Id="Co.Acer.ClientApp" />
+	<ComponentRef Id="Co.Acer.ClientApp.Helper" />
+	<ComponentRef Id="Co.Acer.ClientApp.Jayrock" />
+	<ComponentRef Id="Co.Acer.ClientApp.Images" />
+	<ComponentRef Id="Co.Acer.ClientApp.Images.ControlPanel" />
+	<ComponentRef Id="Co.Acer.ClientApp.Images.SignUp" />
+	<ComponentRef Id="Co.ACTool" />
+	<ComponentRef Id="Co.ccd.conf.tmpl" />
+	<ComponentRef Id="Co.Product.Version" />
+	<ComponentRef Id="Co.Title.Version" />
+	<ComponentRef Id="HelperLibraries" />
+	<ComponentRef Id="AcerProgramMenuDir" />
+	<ComponentRef Id="Co.RegistryEntries" />
+      </Feature>
+      <Feature Id="Fe.VCRedist" Title="Visual C++ 9.0 Runtime" AllowAdvertise="no" Display="hidden" Level="1">
+	<MergeRef Id="Me.CRT32" />
+	<MergeRef Id="Me.CRT32.policy" />
+	<MergeRef Id="Me.ATL32" />
+	<MergeRef Id="Me.ATL32.policy" />
+<?if $(var.IsX64) = yes ?>
+	<MergeRef Id="Me.CRT64" />
+	<MergeRef Id="Me.CRT64.policy" />
+	<MergeRef Id="Me.ATL64" />
+	<MergeRef Id="Me.ATL64.policy" />
+<?endif ?>
+      </Feature>
+    </Feature>
+
+    <Icon Id="Ic.acer.acpanel.exe" SourceFile="$(env.SRCROOT)\gvm_apps\acer\TS_ControlPanel\platform_win\app.ico" />
+
+    <CustomAction Id="CA.KillApps" Return="check" Impersonate="no" Execute="deferred"
+		  Script="vbscript">
+Set objWMIService = GetObject("winmgmts:\\.\root\cimv2")
+Set colItems = objWMIService.ExecQuery("Select * from Win32_Process Where Name = 'ccd.exe' Or Name = 'acpanel_win.exe'")
+For Each objItem in colItems
+  objItem.Terminate()
+Next
+    </CustomAction>
+
+    <CustomAction Id="CA.RemoveStartupShortcuts" Return="ignore" Impersonate="no" Execute="deferred"
+		  BinaryKey="Bi.RemoveStartupShortcuts" VBScriptCall="RemoveStartupShortcuts"/>
+    <Binary Id="Bi.RemoveStartupShortcuts" SourceFile="$(env.SRCROOT)\installer\win32\SyncAgent\RemoveStartupShortcuts.vbs" />
+
+    <CustomAction Id="CA.RemoveAppData" Return="ignore" Impersonate="no" Execute="deferred"
+		  BinaryKey="Bi.RemoveAppData" VBScriptCall="RemoveAppData"/>
+    <Binary Id="Bi.RemoveAppData" SourceFile="$(env.SRCROOT)\installer\win32\SyncAgent\RemoveAppData.vbs" />
+
+    <InstallExecuteSequence>
+      <Custom Action="CA.KillApps" After="InstallInitialize">Installed</Custom>
+      <Custom Action="CA.RemoveStartupShortcuts" Before="RemoveShortcuts">Installed AND NOT UPGRADINGPRODUCTCODE</Custom>
+      <Custom Action="CA.RemoveAppData" Before="RemoveFiles">Installed AND NOT UPGRADINGPRODUCTCODE AND NOT SAVEDATA</Custom>
+    </InstallExecuteSequence>
+
+    <UIRef Id="WixUI_Minimal" />
+    <UIRef Id="WixUI_ErrorProgressText" />
+
+  </Product>
+</Wix>

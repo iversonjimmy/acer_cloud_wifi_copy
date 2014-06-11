@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/repo/!svn/ver/41681/trunk/sw_x/tests/swupdate/runSync
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/41681/trunk/sw_x/tests/swupdate/runSync/BUILD
+END
+swuTest.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/41681/trunk/sw_x/tests/swupdate/runSync/swuTest.cpp
+END
+ccdStop.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/41681/trunk/sw_x/tests/swupdate/runSync/ccdStop.cpp
+END
+runSync.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/41681/trunk/sw_x/tests/swupdate/runSync/runSync.cpp
+END
+ccdLogin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/41681/trunk/sw_x/tests/swupdate/runSync/ccdLogin.cpp
+END
+ccdLogout.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/41681/trunk/sw_x/tests/swupdate/runSync/ccdLogout.cpp
+END
+ccdSync.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/41681/trunk/sw_x/tests/swupdate/runSync/ccdSync.cpp
+END
+ccdStart.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/41681/trunk/sw_x/tests/swupdate/runSync/ccdStart.cpp
+END
+swuTool.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/41681/trunk/sw_x/tests/swupdate/runSync/swuTool.cpp
+END

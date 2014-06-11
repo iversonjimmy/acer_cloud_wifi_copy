@@ -1,0 +1,43 @@
+##########
+# This is the buildbot test run configuration file for the 'win32_ul' PRODUCT.
+##########
+
+##########
+# The following section describes reserved configuration variables.
+##########
+# DB Info
+# To prevent upload of results to the database, comment out at least one of these parameters.
+#TH_DBNAME = testharness_v2
+TH_DBHOST = jsoel
+TH_DBUSER = testharness
+TH_DBPWD = route2me
+
+# Name to use in the database for this run
+TH_RUN_NAME = jsaito_test_run
+
+# Directory in which to save test run/test case output.
+# Results from each suite executed will be saved in a separate directory under this directory
+# This can be overridden with the -o testharness command line option.
+TH_OUTPUT_DIR = /tmp/testharness/jsaito_test_run
+
+# Name of the file where a summary of the test results is written
+# This can be overridden with the -s testharness command line option.
+#TH_SUMMARY_FILE = /tmp/testharness/output/testharness_summary.out
+
+# Directory in which to look for test suites.
+# Default is the sw_x/tests directory in the same tree as the testharness script.
+# This can be overridden with the -t testharness command line option.
+TH_TEST_SUITE_DIR = /home/jsaito/work/top/sw_x/tools/testharness/tests
+
+# The list of suites to run and the order in which to run them.
+TH_SUITE = standard
+#TH_SUITE = target_override::target=daily
+#TH_SUITE = timeout_override::timeout=2
+#TH_SUITE = timeout_negative::timeout=2
+#TH_SUITE = multiple_suite_configs::timeout=2::target=daily
+
+##########
+# Test-run-level environment variables go here.
+# They are set in the execution environment of every test case that is executed in this test run.
+##########
+

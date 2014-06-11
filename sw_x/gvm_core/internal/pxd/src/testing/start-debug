@@ -1,0 +1,35 @@
+#! /bin/csh -fb
+
+set infra   = $BUILDROOT/infra
+set classes = $infra/modules/pxd/debug
+set log     = /tmp/server.log
+
+setenv jars  ./jars-debug
+
+rm -rf com $jars conf igware
+
+mkdir $jars
+
+cp $infra/modules/pxd/debug/debug.jar             $jars/. || exit 1
+cp $infra/packages/javalib/package/jar/common.jar $jars/. || exit 1
+cp $infra/imports/lib/commons-logging-1.1.1.jar   $jars/. || exit 1
+cp $infra/imports/lib/jaxrpc.jar                  $jars/. || exit 1
+cp $infra/imports/lib/servlet.jar                 $jars/. || exit 1
+cp $infra/imports/lib/axis.jar                    $jars/. || exit 1
+cp $infra/imports/lib/commons-discovery-0.2.jar   $jars/. || exit 1
+cp $infra/imports/lib/wsdl4j-1.5.1.jar            $jars/. || exit 1
+cp $infra/imports/lib/mail.jar                    $jars/. || exit 1
+cp $infra/imports/lib/activation.jar              $jars/. || exit 1
+
+mkdir conf                                                || exit 1
+cp -r $WORKAREA/sw_i/infra/modules/pxd/conf/* ./conf/.    || exit 1
+
+rm -f  /tmp/pxd_circle.log.* /tmp/pxd_triangle.log.*
+
+if (`uname -i` == "x86_64") then
+    cp -r $BUILDROOT/infra/packages/pxd/package/64/libsetSockOpt.so . || exit 1
+else
+    cp -r $BUILDROOT/infra/packages/pxd/package/32/libsetSockOpt.so . || exit 1
+endif
+
+./run-server | tee $log

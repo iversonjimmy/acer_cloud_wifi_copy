@@ -1,0 +1,38 @@
+How to build and test user-kernel mode esc kernel module (escmod.ko)
+
+
+The official way to build escmod.ko is to
+
+  cd .../sw_x
+  make PRODUCT=linux_km es_core
+
+The above will build against the Ubuntu kernel 2.6.32-21-generic-pae.
+If you would like to build against your own kernel, 
+add LOCAL_BUILD=1, as in
+
+  cd .../sw_x
+  LOCAL_BUILD=1 make PRODUCT=linux_km es_core
+
+The escmod.ko built with LOCAL_BUILD=1 goes into a separate directory,
+so you may build both versions of escmod.ko in the same work directory.
+
+
+The official way to test escmod.ko is to
+
+  cd .../sw_x/tests/es
+  make PRODUCT=linux_km default
+
+The test requires you to be able to sudo to root to run some commands.
+If you see errors trying to sudo, please check and modify /etc/sudoers (using visudo)
+and add
+
+  username ALL=NOPASSWD: /sbin/insmod, /sbin/rmmod, /bin/chmod
+
+where username should be your username.
+
+If you would like to test escmod.ko built with LOCAL_BUILD=1, 
+add LOCAL_BUILD=1, as in
+
+  cd .../sw_x/tests/es
+  LOCAL_BUILD=1 make PRODUCT=linux_km default
+

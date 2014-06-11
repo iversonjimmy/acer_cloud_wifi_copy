@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/debugger
+END
+dbstats.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/debugger/dbstats.c
+END
+dbinput.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/debugger/dbinput.c
+END
+dbutils.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/debugger/dbutils.c
+END
+dbhistry.c
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/debugger/dbhistry.c
+END
+dbdisply.c
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/debugger/dbdisply.c
+END
+dbexec.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/debugger/dbexec.c
+END
+dbcmds.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/debugger/dbcmds.c
+END
+dbxface.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/debugger/dbxface.c
+END
+dbfileio.c
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/debugger/dbfileio.c
+END

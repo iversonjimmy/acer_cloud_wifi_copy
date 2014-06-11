@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{d9bb2de1-1b9e-436e-8abe-88022bde667d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\vplexTest">
+      <UniqueIdentifier>{05ae8e35-a642-44b4-bcfd-748697c02fd0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\tests\src\vplexTest_wstring.c">
+      <Filter>Source Files\vplexTest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\tests\src\vplexTest_xml_reader.c">
+      <Filter>Source Files\vplexTest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\tests\src\vplexTest_xml_writer.c">
+      <Filter>Source Files\vplexTest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\tests\src\vplexTest.cpp">
+      <Filter>Source Files\vplexTest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\tests\src\vplexTest_common.c">
+      <Filter>Source Files\vplexTest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\tests\src\vplexTest_math.c">
+      <Filter>Source Files\vplexTest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\tests\src\vplexTest_mem_heap.c">
+      <Filter>Source Files\vplexTest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\tests\src\vplexTest_safe_serialization.c">
+      <Filter>Source Files\vplexTest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\tests\src\vplexTest_serialization.c">
+      <Filter>Source Files\vplexTest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\tests\src\vplexTest_http2.cpp">
+      <Filter>Source Files\vplexTest</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

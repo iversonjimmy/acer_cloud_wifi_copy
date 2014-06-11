@@ -1,0 +1,9 @@
+#! /bin/csh -fb
+
+cd ~/java
+
+while (1)
+    ./manage imperial update-devices
+    ./manage imperial update-keep-alive
+    sleep 40
+end

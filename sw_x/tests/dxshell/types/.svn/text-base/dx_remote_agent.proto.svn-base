@@ -1,0 +1,249 @@
+package igware.dxshell;
+
+option java_package = "com.igware.dxshell.pb";
+option java_outer_classname = "DxRemoteAgent";
+
+// Error code range -15950 to -15999 is reserved for DX Remote Agent.
+// http://intwww.routefree.com/wiki/index.php/Error_Codes_by_Subsystem
+enum ErrorCode {
+    DX_SUCCESS = 0;
+    DX_ERR_UNKNOWN_REQUEST_TYPE = -15951;
+    DX_ERR_UNEXPECTED_ERROR = -15952;
+    DX_ERR_BAD_URL = -15953;
+    DX_ERR_BAD_REQUEST = -15954;
+    DX_ERR_IO_ERROR = -15955;
+    DX_ERR_IO_HTTPAGENT_ERROR = -15956;
+}
+
+enum RequestType {
+    
+    /// Followed by a serialized protorpc request.
+    /// Expected response is a serialized protorpc response.
+    DX_REQUEST_PROTORPC = 1;
+
+    /// TODO: bug 439    
+    /// Followed by a serialized HttpGetInput message.
+    /// Expected response is a 4-byte size, followed by a serialized HttpGetOutput message.
+    // TODO: this is poorly-named, since it is also used for PUT/POST/DELETE/etc requests.
+    DX_REQUEST_HTTP_GET = 2;
+    
+    /// Expected response is a 4-byte size, followed by a serialized QueryDeviceOutput message.
+    DX_REQUEST_QUERY_DEVICE = 3;
+    
+    DX_REQUEST_DXREMOTE_PROTOCOL = 4;
+    
+    DX_REQUEST_DXREMOTE_MSA = 5;
+    
+    DX_REQUEST_DXREMOTE_TRANSFER_FILES = 6;
+    
+    DX_REQUEST_DXREMOTE_TS_TEST = 7;
+}
+
+enum HttpAgentCommandType {
+    DX_HTTP_GET = 0;
+    DX_HTTP_GET_EXTENDED = 1;
+    DX_HTTP_GET_RESPONSE_BACK = 2;
+    DX_HTTP_PUT = 3;
+    DX_HTTP_POST = 4;
+    DX_HTTP_DELETE = 5;
+    DX_HTTP_HEAD = 6;
+    DX_HTTP_OPTIONS  = 7;
+    DX_HTTP_TRACE = 8;
+    DX_HTTP_CONNECT = 9;
+}
+
+// TODO: this is poorly-named, since it is also used for PUT/POST/DELETE/etc requests.
+message HttpGetInput {
+    required HttpAgentCommandType command_type = 1;
+    required string url = 2;
+    optional uint32 max_bytes = 3;
+    optional uint64 maxbytes_delay = 4 [default = 0];
+    optional bool use_media_player = 5 [default = false];
+    repeated string headers = 6;
+    optional string file_save_response = 7 [default = ""];
+    optional bytes payload = 8 [default = ""];
+    optional string file = 9 [default = ""];
+}
+
+// if there are negative enum on one of fields, then it will catch RumTimeException when serializing to byte array.
+// This is a known issue on Protobuf 2.4.0a version. And it only happens in java programming language.
+// So we use a walk around to avoid this. We replaced the ErrorCode enum with int32 and made some changes on android dx_remote_agent.
+// For details, please see https://code.google.com/p/protobuf/issues/detail?id=256.
+// TODO: this is poorly-named, since it is also used for PUT/POST/DELETE/etc requests.
+message HttpGetOutput {
+    required int32 error_code = 1;
+    optional string error_msg = 2;
+    required uint64 total_bytes = 3;
+    optional bytes response = 4;
+    optional int32 httpagent_response = 5;
+    optional int32 httpagent_statuscode = 6;
+}
+
+message QueryDeviceOutput {
+    required string device_name = 1;
+    required string device_class = 2;
+    required string os_version = 3;
+    required bool is_acer_device = 4 [default = false];
+    required bool device_has_camera = 5 [default = false];
+}
+
+message DxRemoteMessage {
+    enum Command {
+        COMMAND_NONE = 0;
+        LAUNCH_PROCESS = 1;
+        KILL_PROCESS = 2;
+        GET_CONNECTED_ANDROID_IP = 3;
+        LAUNCH_CONNECTED_ANDROID_DXREMOTEAGENT = 4;
+        CLEAN_CC = 5;
+        VPLFS_OPENDIR = 6;
+        VPLFS_READDIR = 7;
+        VPLFS_CLOSEDIR = 8;
+        VPLFS_STAT = 9;
+        UTIL_RM_DASH_RF = 10;
+        VPLDIR_CREATE = 11;
+        VPLFILE_RENAME = 12;
+        COPYFILE = 13;
+        VPLFILE_DELETE = 14;
+        GET_UPLOAD_PATH = 15;
+        SET_CLEARFI_MODE = 16;
+        STOP_CONNECTED_ANDROID_DXREMOTEAGENT = 17;
+        LAUNCH_CONNECTED_ANDROID_CC_SERVICE = 18;
+        STOP_CONNECTED_ANDROID_CC_SERVICE = 19;
+        PUSH_LOCAL_CONF_TO_SHARED_OBJECT = 20;
+        PULL_SHARED_CONF_TO_LOCAL_OBJECT = 21;
+        GET_CONNECTED_ANDROID_CCD_LOG = 22;
+        CLEAN_CONNECTED_ANDROID_CCD_LOG = 23;
+        GET_CCD_ROOT_PATH = 24;
+        GET_ALIAS_PATH = 25;
+        READ_LIBRARY = 26;
+        CHECK_CONNECTED_ANDROID_NET_STATUS = 27;
+        RESTART_CONNECTED_ANDROID_DXREMOTEAGENT = 28;
+        SET_PERMISSION = 29;
+        VPLFILE_TOUCH = 30;
+    }
+    
+    required Command command = 1;
+    
+    enum ArgumentName {
+        DXARGUMENT_NONE = 0;
+        DXARGUMENTFILENAME = 1;
+        DXARGUMENTEXECUTEARG = 2;
+        DXARGUMENT_IP = 3;
+        DXARGUMENTDIRNAME = 4;
+    }
+    
+    message DxRemoteArgument {
+        required ArgumentName name = 1;
+        optional string value = 2;
+    }
+    
+    repeated DxRemoteArgument argument = 2;
+    
+    enum DxRemote_VPLFS_file_type_t {
+        DxRemote_VPLFS_TYPE_FILE = 0;
+        DxRemote_VPLFS_TYPE_DIR = 1;
+        DxRemote_VPLFS_TYPE_OTHER = 2;
+    }
+    
+    message DxRemote_VPLFS_dir_t {
+        required string dir_path = 1;
+        required string alias = 2;
+    }
+    
+    message DxRemote_VPLFS_dirent_t {
+        required DxRemote_VPLFS_file_type_t type = 1;
+        required string filename = 2;
+    }
+    
+    message DxRemote_VPLFS_stat_t {
+        required uint64 size = 1;
+        required DxRemote_VPLFS_file_type_t type = 2;
+        required int64 atime = 3;
+        required int64 mtime = 4;
+        required int64 ctime = 5;
+        required int32 isHidden = 6;
+        required int32 isSymLink = 7;
+    }
+
+    message DxRemote_LibraryInfo {
+        required string type = 1;
+        required string virt_path = 2;
+        required string real_path = 3;
+    }
+
+    optional DxRemote_VPLFS_dir_t dir_folder = 3;
+    optional DxRemote_VPLFS_dirent_t folderDirent = 4;
+    optional DxRemote_VPLFS_stat_t file_stat = 5;
+    optional int32 vpl_return_code = 6;
+    optional int32 create_dir_mode = 7;
+    optional string rename_source = 8;
+    optional string rename_destination = 9;
+    repeated DxRemote_LibraryInfo lib_info = 10;
+}
+
+message DxRemoteMSA {
+    enum Function {
+        MSABeginCatalog = 1;
+        MSACommitCatalog = 2;
+        MSAEndCatalog = 3;
+        MSABeginMetadataTransaction = 4;
+        MSAUpdateMetadata = 5;
+        MSADeleteMetadata = 6;
+        MSACommitMetadataTransaction = 7;
+        MSAGetMetadataSyncState = 8;
+        MSADeleteCollection = 9;
+        MSADeleteCatalog = 10;
+        MSAListCollections = 11;
+        MSAGetCollectionDetails = 12;
+    }
+    
+    required Function func = 1;
+    optional int32 func_return = 2;
+    optional bytes msa_input = 3;
+    optional bytes msa_output = 4;
+}
+
+enum DxRemoteAgentPacket {
+    DX_REMOTE_REQUEST_SIZE = 1;
+    DX_REMOTE_FILE_TRANS_PKT_SIZE = 2048;
+    DX_REMOTE_PKT_SIZE = 4096;
+}
+
+enum DxRemoteAgentFileTransfer_Type {
+    DX_REMOTE_PUSH_FILE = 0;
+    DX_REMOTE_GET_FILE = 1;
+}
+
+message DxRemoteFileTransfer {
+    required DxRemoteAgentFileTransfer_Type type = 1;
+    required int32 vpl_return_code = 2;
+    optional int32 raw_error = 3;
+    optional string path_on_agent = 4;
+    optional bytes data = 5;
+    optional uint64 file_size = 6;
+}
+
+message DxRemoteTSTest {
+    optional int32 return_value = 1;
+    optional string error_msg = 2;
+    
+    message TSOpenParms {
+        optional uint64 user_id = 1;
+        optional uint64 device_id = 2;
+        optional string service_name = 3;
+        optional string credentials = 4;
+        optional uint64 flags = 5;
+        optional uint64 timeout = 6;
+    }
+
+    optional TSOpenParms ts_open_parms = 3;
+    
+    optional int32  test_id = 4;
+    optional int32  log_enable_level = 5;
+    optional uint32 xfer_cnt = 6;
+    optional uint32 xfer_size = 7;
+    optional uint32 num_test_iterations = 8;
+    optional uint32 num_clients = 9;
+    optional int32  client_write_delay = 10;
+    optional int32  server_read_delay = 11;
+}

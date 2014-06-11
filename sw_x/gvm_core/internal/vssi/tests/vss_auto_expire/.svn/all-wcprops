@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/32698/trunk/sw_x/gvm_core/internal/vssi/tests/vss_auto_expire
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/29447/trunk/sw_x/gvm_core/internal/vssi/tests/vss_auto_expire/BUILD
+END
+vsTest_expire_data.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repo/!svn/ver/29447/trunk/sw_x/gvm_core/internal/vssi/tests/vss_auto_expire/vsTest_expire_data.hpp
+END
+vsTest.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repo/!svn/ver/32698/trunk/sw_x/gvm_core/internal/vssi/tests/vss_auto_expire/vsTest.cpp
+END
+vsTest_expire_data.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repo/!svn/ver/29447/trunk/sw_x/gvm_core/internal/vssi/tests/vss_auto_expire/vsTest_expire_data.cpp
+END

@@ -1,0 +1,21 @@
+#! /bin/csh -fb
+
+while (1)
+    ./run-test ../pxd_client_test
+
+    if ($status != 0) then
+        break;
+    endif
+
+    ./run-test ../pxd_packet_test
+
+    if ($status != 0) then
+        break;
+    endif
+
+    ./run-test ../pxd_event_test
+
+    if ($status != 0) then
+        break;
+    endif
+end

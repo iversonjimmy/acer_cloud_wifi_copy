@@ -1,0 +1,20 @@
+diff -cBr external.orig/busybox/Android.mk external/busybox/Android.mk
+*** external.orig/busybox/Android.mk	2011-04-12 12:43:37.844893154 -0700
+--- external/busybox/Android.mk	2011-04-12 13:03:08.223332446 -0700
+***************
+*** 12,18 ****
+  include $(BUILD_STATIC_LIBRARY)
+  
+  
+! SUBMAKE := make -s -C $(LOCAL_PATH) CC=$(CC)
+  KERNEL_MODULES_DIR?=/system/lib/modules
+  
+  BUSYBOX_SRC_FILES = $(shell cat $(LOCAL_PATH)/busybox-$(BUSYBOX_CONFIG).sources) \
+--- 12,18 ----
+  include $(BUILD_STATIC_LIBRARY)
+  
+  
+! SUBMAKE := make -s --no-print-directory -C $(LOCAL_PATH) CC=$(CC)
+  KERNEL_MODULES_DIR?=/system/lib/modules
+  
+  BUSYBOX_SRC_FILES = $(shell cat $(LOCAL_PATH)/busybox-$(BUSYBOX_CONFIG).sources) \

@@ -1,0 +1,121 @@
+#! /bin/sh
+#
+#  This script is used to run ANS servers from the command line for the cluster
+#  integration test.  It sets the required environment variables and paths, and
+#  starts the server.  The required jar files and ANS classes must be installed
+#  before running this script.  This script runs the set_classpath script to
+#  point Java at the appropriate files.
+#
+#  In addition to the Java class files, the appropriate libsetSockOpt.so JNI
+#  library should be placed in the current directory if you want to use those
+#  functions.
+#
+#  Note that this script assumes that some setconf variables have been set, and
+#  invokes printconf to retrieve the values.
+#
+
+export LD_LIBRARY_PATH=`pwd`
+
+export ans_sleep_interval=5
+export ans_sleep_timeout=120
+export ans_wakeup_interval=5
+export ans_stats_interval=600
+
+export ans_cluster=`/sbin/printconf ans.cluster`
+export ans_name=`/sbin/printconf ans.name`
+export ans_members=`/sbin/printconf ans.members`
+export ans_ias_host="ias.lab1.routefree.com"
+export ans_login_checks="false"
+export ans_library_path=`pwd`
+
+export ans_logging_level=debug
+export ans_use_apache=false
+export ans_stamp_each=true
+
+export ans_enable_cio=true
+export ans_enable_hio=true
+export ans_enable_sio=true
+export ans_enable_cph=true
+export ans_enable_crypto=true
+export ans_enable_wakeup=true
+export ans_enable_sleep=true
+export ans_enable_cluster=true
+export ans_enable_keep=true
+
+if [ "$ans_cluster" == "" ]
+then
+    echo "The setconf variables ans.cluster, ans.name, and ans.members must be set."
+    exit 1
+fi
+
+ulimit -n 1048576
+
+sysctl -w fs.file-max=2000000
+
+sysctl -w net.core.netdev_max_backlog=2500
+sysctl -w net.core.rmem_default=4096
+sysctl -w net.core.wmem_default=4096
+
+sysctl -w net.ipv4.tcp_rmem='1024 16384 65536'
+sysctl -w net.ipv4.tcp_wmem='1024 16384 65536'
+sysctl -w net.ipv4.tcp_mem='2097152 2321440 2621440'
+sysctl -w net.ipv4.tcp_tw_reuse=1
+sysctl -w net.ipv4.tcp_max_tw_buckets=1200000
+sysctl -w net.ipv4.tcp_keepalive_time=60
+sysctl -w net.ipv4.tcp_keepalive_intvl=30
+sysctl -w net.ipv4.tcp_keepalive_probes=3
+
+#
+#  These settings are useful for avoiding flood attacks, so we
+#  should enable them for testing at some point in case they
+#  cause some problem somehow.
+#
+sysctl -w net.ipv4.tcp_syncookies=1
+sysctl -w net.ipv4.tcp_max_syn_backlog=10000
+sysctl -w net.core.netdev_max_backlog=10000
+sysctl -w net.ipv4.icmp_echo_ignore_broadcasts=1
+sysctl -w net.ipv4.conf.all.accept_redirects=0
+sysctl -w net.ipv4.conf.all.send_redirects=0
+sysctl -w net.ipv4.conf.all.accept_source_route=0
+sysctl -w net.ipv4.conf.all.forwarding=0
+sysctl -w net.ipv4.conf.all.mc_forwarding=0
+sysctl -w net.ipv4.conf.all.rp_filter=1
+
+#
+#  Flush the routing tables to enforce some of the settings we've changed.
+#
+
+sysctl -w net.ipv4.route.flush=1
+
+export opts="-XX:-PrintGCTimeStamps -verbose:gc -XX:+UseConcMarkSweepGC -Xmx2048m -server"
+
+if [ `uname -i` == "x86_64" ]
+then
+    export opts=$opts" -d64"
+else
+    export opts=$opts" -d32"
+fi
+
+echo $opts
+
+#
+#  If the libsetSockOpt library is installed in subdirectories, point to the
+#  correct one.
+#
+if [ -d 32 -a `uname -m` != "x86_64" ]
+then
+   export ans_library_path=`pwd`/32
+fi
+
+if [ -d 64 -a `uname -m` == "x86_64" ]
+then
+   export ans_library_path=`pwd`/64
+fi
+
+
+# strace="strace -f"
+
+. ./set_classpath
+export PATH=/usr/java/jre1.7.0_15/bin:$PATH
+
+$strace java $opts -classpath "$classpath" -Djava.library.path=$ans_library_path com.broadon.ans.AnsServer $ans_cluster $ans_name $ans_members

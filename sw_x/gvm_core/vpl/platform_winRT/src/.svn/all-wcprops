@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/57796/trunk/sw_x/gvm_core/vpl/platform_winRT/src
+END
+vpl__plat.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/56465/trunk/sw_x/gvm_core/vpl/platform_winRT/src/vpl__plat.cpp
+END
+vpl__monitor_dir.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repo/!svn/ver/28133/trunk/sw_x/gvm_core/vpl/platform_winRT/src/vpl__monitor_dir.cpp
+END
+vpl__net.c
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/57796/trunk/sw_x/gvm_core/vpl/platform_winRT/src/vpl__net.c
+END
+vpl__socket.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/53099/trunk/sw_x/gvm_core/vpl/platform_winRT/src/vpl__socket.cpp
+END
+vpl__fs_winrt.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repo/!svn/ver/43470/trunk/sw_x/gvm_core/vpl/platform_winRT/src/vpl__fs_winrt.cpp
+END
+vpl__th.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/57737/trunk/sw_x/gvm_core/vpl/platform_winRT/src/vpl__th.cpp
+END

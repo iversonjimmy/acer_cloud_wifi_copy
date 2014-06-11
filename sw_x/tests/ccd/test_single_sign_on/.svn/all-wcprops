@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repo/!svn/ver/33361/trunk/sw_x/tests/ccd/test_single_sign_on
+END
+test_single_sign_on.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repo/!svn/ver/30065/trunk/sw_x/tests/ccd/test_single_sign_on/test_single_sign_on.h
+END
+test_single_sign_on.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/33361/trunk/sw_x/tests/ccd/test_single_sign_on/test_single_sign_on.cpp
+END

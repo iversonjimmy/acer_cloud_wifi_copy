@@ -1,0 +1,70 @@
+10
+
+dir
+59951
+https://src-us.ctbg.acer.com/repo/trunk/sw_x/gvm_core/external
+https://src-us.ctbg.acer.com/repo
+
+
+
+2013-08-16T06:51:50.574919Z
+44638
+wukon.hsieh
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+187b5c42-a02b-43e7-ba74-80c9f8da41ab
+
+protobuf
+dir
+
+ioac_loader
+dir
+
+magick++
+dir
+
+libexif
+dir
+
+openssl
+dir
+
+sqlite3
+dir
+
+curl
+dir
+
+acra
+dir
+
+protobuflib
+dir
+
+jackson
+dir
+
+breakpad
+dir
+
+pthread_win32
+dir
+
+cJSON
+dir
+
+winhttp
+dir
+

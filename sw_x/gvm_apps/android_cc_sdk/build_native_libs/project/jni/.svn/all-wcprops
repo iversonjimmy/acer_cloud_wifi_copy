@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/59100/trunk/sw_x/gvm_apps/android_cc_sdk/build_native_libs/project/jni
+END
+mca-jni.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/build_native_libs/project/jni/mca-jni.cpp
+END
+Android.mk
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/build_native_libs/project/jni/Android.mk
+END
+com_igware_android_services_McaService.h
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/build_native_libs/project/jni/com_igware_android_services_McaService.h
+END
+ccd-jni.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repo/!svn/ver/59100/trunk/sw_x/gvm_apps/android_cc_sdk/build_native_libs/project/jni/ccd-jni.cpp
+END
+com_igware_android_services_ServiceSingleton.h
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/repo/!svn/ver/59100/trunk/sw_x/gvm_apps/android_cc_sdk/build_native_libs/project/jni/com_igware_android_services_ServiceSingleton.h
+END

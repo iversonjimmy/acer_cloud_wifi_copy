@@ -1,0 +1,268 @@
+diff -rupN protobuf-2.4.0a/java/src/main/java/com/google/protobuf/GeneratedMessage.java protobuf-2.4.0a-patched/java/src/main/java/com/google/protobuf/GeneratedMessage.java
+--- protobuf-2.4.0a/java/src/main/java/com/google/protobuf/GeneratedMessage.java	2011-02-02 06:08:39.000000000 -0800
++++ protobuf-2.4.0a-patched/java/src/main/java/com/google/protobuf/GeneratedMessage.java	2011-03-10 15:46:48.000000000 -0800
+@@ -421,7 +421,7 @@ public abstract class GeneratedMessage e
+       return true;
+     }
+ 
+-    @Override
++    //@Override
+     public final UnknownFieldSet getUnknownFields() {
+       return unknownFields;
+     }
+@@ -445,7 +445,7 @@ public abstract class GeneratedMessage e
+      */
+     private class BuilderParentImpl implements BuilderParent {
+ 
+-      @Override
++      //@Override
+       public void markDirty() {
+         onChanged();
+       }
+@@ -1130,7 +1130,7 @@ public abstract class GeneratedMessage e
+     // obtained.
+     return new GeneratedExtension<ContainingType, Type>(
+         new ExtensionDescriptorRetriever() {
+-          @Override
++          //@Override
+           public FieldDescriptor getDescriptor() {
+             return scope.getDescriptorForType().getExtensions()
+                 .get(descriptorIndex);
+@@ -1225,7 +1225,7 @@ public abstract class GeneratedMessage e
+         throw new IllegalStateException("Already initialized.");
+       }
+       descriptorRetriever = new ExtensionDescriptorRetriever() {
+-          @Override
++          //@Override
+           public FieldDescriptor getDescriptor() {
+             return descriptor;
+           }
+diff -rupN protobuf-2.4.0a/java/src/main/java/com/google/protobuf/RepeatedFieldBuilder.java protobuf-2.4.0a-patched/java/src/main/java/com/google/protobuf/RepeatedFieldBuilder.java
+--- protobuf-2.4.0a/java/src/main/java/com/google/protobuf/RepeatedFieldBuilder.java	2011-02-02 06:08:40.000000000 -0800
++++ protobuf-2.4.0a-patched/java/src/main/java/com/google/protobuf/RepeatedFieldBuilder.java	2011-03-10 15:46:49.000000000 -0800
+@@ -573,7 +573,7 @@ public class RepeatedFieldBuilder
+     }
+   }
+ 
+-  @Override
++  //@Override
+   public void markDirty() {
+     onChanged();
+   }
+diff -rupN protobuf-2.4.0a/java/src/main/java/com/google/protobuf/SingleFieldBuilder.java protobuf-2.4.0a-patched/java/src/main/java/com/google/protobuf/SingleFieldBuilder.java
+--- protobuf-2.4.0a/java/src/main/java/com/google/protobuf/SingleFieldBuilder.java	2011-02-02 06:08:40.000000000 -0800
++++ protobuf-2.4.0a-patched/java/src/main/java/com/google/protobuf/SingleFieldBuilder.java	2011-03-10 15:46:49.000000000 -0800
+@@ -234,7 +234,7 @@ public class SingleFieldBuilder
+     }
+   }
+ 
+-  @Override
++  //@Override
+   public void markDirty() {
+     onChanged();
+   }
+diff -rupN protobuf-2.4.0a/java/src/main/java/com/google/protobuf/SmallSortedMap.java protobuf-2.4.0a-patched/java/src/main/java/com/google/protobuf/SmallSortedMap.java
+--- protobuf-2.4.0a/java/src/main/java/com/google/protobuf/SmallSortedMap.java	2011-02-02 06:08:39.000000000 -0800
++++ protobuf-2.4.0a-patched/java/src/main/java/com/google/protobuf/SmallSortedMap.java	2011-03-10 15:46:49.000000000 -0800
+@@ -411,22 +411,22 @@ class SmallSortedMap<K extends Comparabl
+       this.value = value;
+     }
+ 
+-    @Override
++    //@Override
+     public K getKey() {
+       return key;
+     }
+ 
+-    @Override
++    //@Override
+     public V getValue() {
+       return value;
+     }
+ 
+-    @Override
++    //@Override
+     public int compareTo(Entry other) {
+       return getKey().compareTo(other.getKey());
+     }
+ 
+-    @Override
++    //@Override
+     public V setValue(V newValue) {
+       checkMutable();
+       final V oldValue = this.value;
+@@ -469,12 +469,12 @@ class SmallSortedMap<K extends Comparabl
+    */
+   private class EntrySet extends AbstractSet<Map.Entry<K, V>> {
+ 
+-    @Override
++    //@Override
+     public Iterator<Map.Entry<K, V>> iterator() {
+       return new EntryIterator();
+     }
+ 
+-    @Override
++    //@Override
+     public int size() {
+       return SmallSortedMap.this.size();
+     }
+@@ -535,13 +535,13 @@ class SmallSortedMap<K extends Comparabl
+     private boolean nextCalledBeforeRemove;
+     private Iterator<Map.Entry<K, V>> lazyOverflowIterator;
+ 
+-    @Override
++    //@Override
+     public boolean hasNext() {
+       return (pos + 1) < entryList.size() ||
+           getOverflowIterator().hasNext();
+     }
+ 
+-    @Override
++    //@Override
+     public Map.Entry<K, V> next() {
+       nextCalledBeforeRemove = true;
+       // Always increment pos so that we know whether the last returned value
+@@ -552,7 +552,7 @@ class SmallSortedMap<K extends Comparabl
+       return getOverflowIterator().next();
+     }
+ 
+-    @Override
++    //@Override
+     public void remove() {
+       if (!nextCalledBeforeRemove) {
+         throw new IllegalStateException("remove() was called before next()");
+@@ -589,22 +589,22 @@ class SmallSortedMap<K extends Comparabl
+   private static class EmptySet {
+ 
+     private static final Iterator<Object> ITERATOR = new Iterator<Object>() {
+-      @Override
++      //@Override
+       public boolean hasNext() {
+         return false;
+       }
+-      @Override
++      //@Override
+       public Object next() {
+         throw new NoSuchElementException();
+       }
+-      @Override
++      //@Override
+       public void remove() {
+         throw new UnsupportedOperationException();
+       }
+     };
+ 
+     private static final Iterable<Object> ITERABLE = new Iterable<Object>() {
+-      @Override
++      //@Override
+       public Iterator<Object> iterator() {
+         return ITERATOR;
+       }
+diff -rupN protobuf-2.4.0a/java/src/main/java/com/google/protobuf/UnmodifiableLazyStringList.java protobuf-2.4.0a-patched/java/src/main/java/com/google/protobuf/UnmodifiableLazyStringList.java
+--- protobuf-2.4.0a/java/src/main/java/com/google/protobuf/UnmodifiableLazyStringList.java	2011-02-02 06:08:40.000000000 -0800
++++ protobuf-2.4.0a-patched/java/src/main/java/com/google/protobuf/UnmodifiableLazyStringList.java	2011-03-10 15:46:49.000000000 -0800
+@@ -50,22 +50,22 @@ public class UnmodifiableLazyStringList 
+     this.list = list;
+   }
+ 
+-  @Override
++  //@Override
+   public String get(int index) {
+     return list.get(index);
+   }
+ 
+-  @Override
++  //@Override
+   public int size() {
+     return list.size();
+   }
+ 
+-  @Override
++  //@Override
+   public ByteString getByteString(int index) {
+     return list.getByteString(index);
+   }
+ 
+-  @Override
++  //@Override
+   public void add(ByteString element) {
+     throw new UnsupportedOperationException();
+   }
+@@ -75,47 +75,47 @@ public class UnmodifiableLazyStringList 
+     return new ListIterator<String>() {
+       ListIterator<String> iter = list.listIterator(index);
+ 
+-      @Override
++      //@Override
+       public boolean hasNext() {
+         return iter.hasNext();
+       }
+ 
+-      @Override
++      //@Override
+       public String next() {
+         return iter.next();
+       }
+ 
+-      @Override
++      //@Override
+       public boolean hasPrevious() {
+         return iter.hasPrevious();
+       }
+ 
+-      @Override
++      //@Override
+       public String previous() {
+         return iter.previous();
+       }
+ 
+-      @Override
++      //@Override
+       public int nextIndex() {
+         return iter.nextIndex();
+       }
+ 
+-      @Override
++      //@Override
+       public int previousIndex() {
+         return iter.previousIndex();
+       }
+ 
+-      @Override
++      //@Override
+       public void remove() {
+         throw new UnsupportedOperationException();
+       }
+ 
+-      @Override
++      //@Override
+       public void set(String o) {
+         throw new UnsupportedOperationException();
+       }
+ 
+-      @Override
++      //@Override
+       public void add(String o) {
+         throw new UnsupportedOperationException();
+       }
+@@ -127,17 +127,17 @@ public class UnmodifiableLazyStringList 
+     return new Iterator<String>() {
+       Iterator<String> iter = list.iterator();
+ 
+-      @Override
++      //@Override
+       public boolean hasNext() {
+         return iter.hasNext();
+       }
+ 
+-      @Override
++      //@Override
+       public String next() {
+         return iter.next();
+       }
+ 
+-      @Override
++      //@Override
+       public void remove() {
+         throw new UnsupportedOperationException();
+       }

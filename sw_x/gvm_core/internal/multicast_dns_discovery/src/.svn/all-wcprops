@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/34930/trunk/sw_x/gvm_core/internal/multicast_dns_discovery/src
+END
+xht.c
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repo/!svn/ver/34838/trunk/sw_x/gvm_core/internal/multicast_dns_discovery/src/xht.c
+END
+mdd.c
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repo/!svn/ver/34930/trunk/sw_x/gvm_core/internal/multicast_dns_discovery/src/mdd.c
+END
+mdnsd.c
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/34930/trunk/sw_x/gvm_core/internal/multicast_dns_discovery/src/mdnsd.c
+END
+sdtxt.c
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/34838/trunk/sw_x/gvm_core/internal/multicast_dns_discovery/src/sdtxt.c
+END
+1035.c
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repo/!svn/ver/34930/trunk/sw_x/gvm_core/internal/multicast_dns_discovery/src/1035.c
+END
+xht.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repo/!svn/ver/34838/trunk/sw_x/gvm_core/internal/multicast_dns_discovery/src/xht.h
+END
+mdnsd.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/34838/trunk/sw_x/gvm_core/internal/multicast_dns_discovery/src/mdnsd.h
+END
+sdtxt.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/34838/trunk/sw_x/gvm_core/internal/multicast_dns_discovery/src/sdtxt.h
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repo/!svn/ver/34838/trunk/sw_x/gvm_core/internal/multicast_dns_discovery/src/README
+END
+1035.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repo/!svn/ver/34930/trunk/sw_x/gvm_core/internal/multicast_dns_discovery/src/1035.h
+END

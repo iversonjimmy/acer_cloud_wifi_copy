@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/33873/trunk/sw_x/gvm_core/internal/vssi/tests/common
+END
+vsTest_vscs_common.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repo/!svn/ver/33873/trunk/sw_x/gvm_core/internal/vssi/tests/common/vsTest_vscs_common.cpp
+END
+vsTest_worker.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/24950/trunk/sw_x/gvm_core/internal/vssi/tests/common/vsTest_worker.cpp
+END
+vsTest_vscs_common.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repo/!svn/ver/31576/trunk/sw_x/gvm_core/internal/vssi/tests/common/vsTest_vscs_common.hpp
+END
+vsTest_worker.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repo/!svn/ver/21419/trunk/sw_x/gvm_core/internal/vssi/tests/common/vsTest_worker.h
+END
+vsTest_infra.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repo/!svn/ver/33873/trunk/sw_x/gvm_core/internal/vssi/tests/common/vsTest_infra.cpp
+END
+vsTest_infra.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repo/!svn/ver/33873/trunk/sw_x/gvm_core/internal/vssi/tests/common/vsTest_infra.hpp
+END

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/repo/!svn/ver/2194/trunk/sw_x/tests/fattr_db_test
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repo/!svn/ver/2194/trunk/sw_x/tests/fattr_db_test/BUILD
+END
+db_test.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/2194/trunk/sw_x/tests/fattr_db_test/db_test.cpp
+END

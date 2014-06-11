@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repo/!svn/ver/50079/trunk/sw_x/gvm_apps/DX/platform_android/project/src/com/acer/dx/util
+END
+Defs.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repo/!svn/ver/15889/trunk/sw_x/gvm_apps/DX/platform_android/project/src/com/acer/dx/util/Defs.java
+END
+TimeFormatter.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repo/!svn/ver/15889/trunk/sw_x/gvm_apps/DX/platform_android/project/src/com/acer/dx/util/TimeFormatter.java
+END
+CBCommand.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repo/!svn/ver/15889/trunk/sw_x/gvm_apps/DX/platform_android/project/src/com/acer/dx/util/CBCommand.java
+END
+Utility.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repo/!svn/ver/15889/trunk/sw_x/gvm_apps/DX/platform_android/project/src/com/acer/dx/util/Utility.java
+END
+Debug.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repo/!svn/ver/15889/trunk/sw_x/gvm_apps/DX/platform_android/project/src/com/acer/dx/util/Debug.java
+END
+CcdSdkDefines.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repo/!svn/ver/15889/trunk/sw_x/gvm_apps/DX/platform_android/project/src/com/acer/dx/util/CcdSdkDefines.java
+END
+Network.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repo/!svn/ver/15889/trunk/sw_x/gvm_apps/DX/platform_android/project/src/com/acer/dx/util/Network.java
+END
+InternalDefines.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repo/!svn/ver/43011/trunk/sw_x/gvm_apps/DX/platform_android/project/src/com/acer/dx/util/InternalDefines.java
+END
+FileInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repo/!svn/ver/15889/trunk/sw_x/gvm_apps/DX/platform_android/project/src/com/acer/dx/util/FileInfo.java
+END
+L.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repo/!svn/ver/20008/trunk/sw_x/gvm_apps/DX/platform_android/project/src/com/acer/dx/util/L.java
+END
+Defines.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repo/!svn/ver/43011/trunk/sw_x/gvm_apps/DX/platform_android/project/src/com/acer/dx/util/Defines.java
+END
+Dlna.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repo/!svn/ver/15889/trunk/sw_x/gvm_apps/DX/platform_android/project/src/com/acer/dx/util/Dlna.java
+END

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repo/!svn/ver/31681/trunk/sw_x/gvm_core/external/sqlite3
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/23718/trunk/sw_x/gvm_core/external/sqlite3/BUILD
+END
+sqlite3.c
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/31681/trunk/sw_x/gvm_core/external/sqlite3/sqlite3.c
+END
+sqlite3.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/31681/trunk/sw_x/gvm_core/external/sqlite3/sqlite3.h
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/31681/trunk/sw_x/gvm_core/external/sqlite3/README
+END

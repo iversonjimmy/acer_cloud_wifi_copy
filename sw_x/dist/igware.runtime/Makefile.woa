@@ -1,0 +1,177 @@
+# -*-Makefile-*-
+export PRODUCT=woa
+
+# makefile included by all sw_x/dist/igware.runtime makefiles
+include igware.runtime.common.mk
+# makefile included by all sw_x/dist/* makefiles
+include $(WORKDIR)/sw_x/dist/Makefile.common
+
+export LOCAL_SAVE_DIR=/tmp
+export LOB=lab1
+
+# --- this target should clean the machine before building the product
+.PHONY: clean
+clean:
+	rm -fr $(BUILDROOT)/*/$(PRODUCT)
+	rm -fr $(BUILDROOT)/build_$(PRODUCT)
+
+bump_build_number:
+	# get lock
+	ssh $(LOCK_USER)@$(LOCK_MASTER) "$(LOCK_SCRIPT) -a get -n build_number.$(BRANCH_NAME) -t exclusive -r $(PRODUCT)"
+	# get the latest version of the file
+	svn update $(BUILD_NUMBER_FILE)
+	# increment the build number
+	echo $(shell echo $$(( $(BUILD_NUMBER) + 1 )) ) > $(BUILD_NUMBER_FILE)
+	# check the change in
+	svn ci -m 'bump $(PRODUCT) build number' $(BUILD_NUMBER_FILE)
+	# release lock
+	ssh $(LOCK_USER)@$(LOCK_MASTER) "$(LOCK_SCRIPT) -a release -n build_number.$(BRANCH_NAME) -t exclusive -r $(PRODUCT)"
+
+# --- this target should install any tools needed to build the product
+.PHONY: build_tools
+build_tools: bump_build_number
+
+# --- this target should build the product
+.PHONY: default
+default:
+	mkdir -p $(TMPDIR)
+	make -C $(WORKDIR)/sw_x default
+
+# --- this target should archive any build outputs off to a different system
+export SAVE_ZIP=CloudClientSDK.$(BUILD_DATE).$(BUILD_VERSION).zip
+export LNK_NAME=CloudClientSDK.zip
+export REMOTE_SAVE_DIR=$(PRODUCT_STORAGE_DIR)/CloudClientSDK
+
+export SAVE_ZIP2=test_ccd.$(BUILD_DATE).$(BUILD_VERSION).zip
+export LNK_NAME2=test_ccd.zip
+export REMOTE_SAVE_DIR2=$(PRODUCT_STORAGE_DIR)/test_ccd
+
+export SAVE_ZIP3=test_vpl_metro.$(BUILD_DATE).$(BUILD_VERSION).zip
+export LNK_NAME3=test_vpl_metro.zip
+export REMOTE_SAVE_DIR3=$(PRODUCT_STORAGE_DIR)/test_vpl_metro
+
+export SAVE_ZIP4=test_vplex_metro.$(BUILD_DATE).$(BUILD_VERSION).zip
+export LNK_NAME4=test_vplex_metro.zip
+export REMOTE_SAVE_DIR4=$(PRODUCT_STORAGE_DIR)/test_vplex_metro
+
+export SAVE_ZIP5=test_ccd_single_sign_on.$(BUILD_DATE).$(BUILD_VERSION).zip
+export LNK_NAME5=test_ccd_single_sign_on.zip
+export REMOTE_SAVE_DIR5=$(PRODUCT_STORAGE_DIR)/test_ccd_single_sign_on
+
+export SAVE_ZIP6=dx_remote_agent_winrt.$(BUILD_DATE).$(BUILD_VERSION).zip
+export LNK_NAME6=dx_remote_agent_winrt.zip
+export REMOTE_SAVE_DIR6=$(PRODUCT_STORAGE_DIR)/dx_remote_agent_winrt
+
+.PHONY: dist
+dist:
+	# save off all .lib and header files
+	rm -Rf $(LOCAL_SAVE_DIR)
+	mkdir -p $(LOCAL_SAVE_DIR)
+
+	# Zip up the Cloud Client SDK and save it off.
+	cd $(BUILDROOT)/release/woa/gvm_core/daemons/ccd/sdk && \
+		zip -Tr $(LOCAL_SAVE_DIR)/$(SAVE_ZIP) *
+	ssh $(STORE_USER)@$(STORE_HOST) "mkdir -p $(REMOTE_SAVE_DIR)"
+	scp $(LOCAL_SAVE_DIR)/$(SAVE_ZIP) $(STORE_USER)@$(STORE_HOST):$(REMOTE_SAVE_DIR)/$(SAVE_ZIP)
+	ssh $(STORE_USER)@$(STORE_HOST) "cd $(REMOTE_SAVE_DIR) && rm -f $(LNK_NAME) && ln -s $(SAVE_ZIP) $(LNK_NAME)"
+	rm -f $(LOCAL_SAVE_DIR)/$(SAVE_ZIP)
+
+	# Zip up the test_ccd metro app and save it off.
+	#cp $(BUILDROOT)/build_winrt/PersonalCloudAll/Release/metro_app_utilities/Win32/metro_app_utilities.exe $(BUILDROOT)/release/winrt/tests/test_ccd
+	cd $(BUILDROOT)/release/woa/tests/test_ccd && \
+		zip -Tr $(LOCAL_SAVE_DIR)/$(SAVE_ZIP2) *
+	ssh $(STORE_USER)@$(STORE_HOST) "mkdir -p $(REMOTE_SAVE_DIR2)"
+	scp $(LOCAL_SAVE_DIR)/$(SAVE_ZIP2) $(STORE_USER)@$(STORE_HOST):$(REMOTE_SAVE_DIR2)/$(SAVE_ZIP2)
+	ssh $(STORE_USER)@$(STORE_HOST) "cd $(REMOTE_SAVE_DIR2) && rm -f $(LNK_NAME2) && ln -s $(SAVE_ZIP2) $(LNK_NAME2)"
+	rm -f $(LOCAL_SAVE_DIR)/$(SAVE_ZIP2)
+
+	# Zip up the test_vpl_metro metro app and save it off.
+	#cp $(BUILDROOT)/build_winrt/PersonalCloudAll/Release/metro_app_utilities/Win32/metro_app_utilities.exe $(BUILDROOT)/release/winrt/tests/test_vpl_metro
+	cd $(BUILDROOT)/release/woa/tests/test_vpl_metro && \
+		zip -Tr $(LOCAL_SAVE_DIR)/$(SAVE_ZIP3) *
+	ssh $(STORE_USER)@$(STORE_HOST) "mkdir -p $(REMOTE_SAVE_DIR3)"
+	scp $(LOCAL_SAVE_DIR)/$(SAVE_ZIP3) $(STORE_USER)@$(STORE_HOST):$(REMOTE_SAVE_DIR3)/$(SAVE_ZIP3)
+	ssh $(STORE_USER)@$(STORE_HOST) "cd $(REMOTE_SAVE_DIR3) && rm -f $(LNK_NAME3) && ln -s $(SAVE_ZIP3) $(LNK_NAME3)"
+	rm -f scp $(LOCAL_SAVE_DIR)/$(SAVE_ZIP3)
+
+	# Zip up the test_vplex_metro metro app and save it off.
+	#cp $(BUILDROOT)/build_winrt/PersonalCloudAll/Release/metro_app_utilities/Win32/metro_app_utilities.exe $(BUILDROOT)/release/winrt/tests/test_vplex_metro
+	cd $(BUILDROOT)/release/woa/tests/test_vplex_metro && \
+		zip -Tr $(LOCAL_SAVE_DIR)/$(SAVE_ZIP4) *
+	ssh $(STORE_USER)@$(STORE_HOST) "mkdir -p $(REMOTE_SAVE_DIR4)"
+	scp $(LOCAL_SAVE_DIR)/$(SAVE_ZIP4) $(STORE_USER)@$(STORE_HOST):$(REMOTE_SAVE_DIR4)/$(SAVE_ZIP4)
+	ssh $(STORE_USER)@$(STORE_HOST) "cd $(REMOTE_SAVE_DIR4) && rm -f $(LNK_NAME4) && ln -s $(SAVE_ZIP4) $(LNK_NAME4)"
+	rm -f scp $(LOCAL_SAVE_DIR)/$(SAVE_ZIP4)
+
+	# Zip up the test_ccd_single_sign_on metro app and save it off.
+	#cp $(BUILDROOT)/build_winrt/PersonalCloudAll/Release/metro_app_utilities/Win32/metro_app_utilities.exe $(BUILDROOT)/release/winrt/tests/test_ccd_single_sign_on
+	cd $(BUILDROOT)/release/woa/tests/test_ccd_single_sign_on && \
+		zip -Tr $(LOCAL_SAVE_DIR)/$(SAVE_ZIP5) *
+	ssh $(STORE_USER)@$(STORE_HOST) "mkdir -p $(REMOTE_SAVE_DIR5)"
+	scp $(LOCAL_SAVE_DIR)/$(SAVE_ZIP5) $(STORE_USER)@$(STORE_HOST):$(REMOTE_SAVE_DIR5)/$(SAVE_ZIP5)
+	ssh $(STORE_USER)@$(STORE_HOST) "cd $(REMOTE_SAVE_DIR5) && rm -f $(LNK_NAME5) && ln -s $(SAVE_ZIP5) $(LNK_NAME5)"
+	rm -f $(LOCAL_SAVE_DIR)/$(SAVE_ZIP5)
+	
+	# Zip up the dx_remote_agent metro app and save it off.
+	#cp $(BUILDROOT)/build_winrt/PersonalCloudAll/Release/metro_app_utilities/Win32/metro_app_utilities.exe $(BUILDROOT)/release/winrt/tests/dx_remote_agent
+	cd $(BUILDROOT)/release/woa/tests/dx_remote_agent && \
+		zip -Tr $(LOCAL_SAVE_DIR)/$(SAVE_ZIP6) *
+	ssh $(STORE_USER)@$(STORE_HOST) "mkdir -p $(REMOTE_SAVE_DIR6)"
+	scp $(LOCAL_SAVE_DIR)/$(SAVE_ZIP6) $(STORE_USER)@$(STORE_HOST):$(REMOTE_SAVE_DIR6)/$(SAVE_ZIP6)
+	ssh $(STORE_USER)@$(STORE_HOST) "cd $(REMOTE_SAVE_DIR6) && rm -f $(LNK_NAME6) && ln -s $(SAVE_ZIP6) $(LNK_NAME6)"
+	rm -f $(LOCAL_SAVE_DIR)/$(SAVE_ZIP6)
+
+# --- print helpful info
+.PHONY: printenv
+printenv:
+	env
+	pwd
+
+# --- this target should clean the machine before running tests
+.PHONY: clean_tests
+clean_tests:
+
+# --- this target should install anything needed to test the product
+# --- assume that the build of the product and test of the product DO NOT occur on the same machine
+.PHONY: install_tests
+install_tests: get_idt_tool
+
+.PHONY: get_idt_tool
+get_idt_tool:
+	mkdir -p $(WORKDIR)/sw_i/tools
+	scp $(STORE_USER)@$(STORE_HOST):$(FS_PC_INFRA_STORE_PATH)/idt/idt.zip $(WORKDIR)/sw_i/tools
+	cd $(WORKDIR)/sw_i/tools && unzip idt.zip
+
+# --- this target should execute the tests (usually using the testharness)
+.PHONY: run_tests
+run_tests:
+	$(WORKDIR)/sw_x/dist/igware.runtime/make_validated_links.sh -a save -u $(STORE_USER) -n $(STORE_HOST) -d $(PRODUCT_STORAGE_DIR) -s CloudClientSDK -s dx_remote_agent_winrt
+	$(WORKDIR)/sw_x/tools/testharness/bin/testharness.py -c $(WORKDIR)/sw_x/tools/testharness/conf/runs/buildbot_tests.$(PRODUCT).$(LAB).run -o /tmp/testharness/output_$(PRODUCT)/$(BUILD_DATE) -b $(STORE_USER)@$(STORE_HOST):/$(FS_STORE_TEST_PATH)/$(BRANCH_NAME)/$(BUILD_DATE)_$(PRODUCT)_$(LAB) -k
+	# since the tests have passed, create the links indicating the build has been validated
+	$(WORKDIR)/sw_x/dist/igware.runtime/make_validated_links.sh -a link -u $(STORE_USER) -n $(STORE_HOST) -d $(PRODUCT_STORAGE_DIR)
+
+.PHONY: run_full_tests
+run_full_tests:
+	$(WORKDIR)/sw_x/dist/igware.runtime/make_validated_links.sh -a save -u $(STORE_USER) -n $(STORE_HOST) -d $(PRODUCT_STORAGE_DIR) -s CloudClientSDK -s dx_remote_agent_winrt
+	$(WORKDIR)/sw_x/tools/testharness/bin/testharness.py -c $(WORKDIR)/sw_x/tools/testharness/conf/runs/buildbot_tests.$(PRODUCT).full.$(LAB).run -o /tmp/testharness/output_$(PRODUCT)/$(BUILD_DATE) -b $(STORE_USER)@$(STORE_HOST):/$(FS_STORE_TEST_PATH)/$(BRANCH_NAME)/$(BUILD_DATE)_$(PRODUCT)_$(LAB) -k
+	# since the tests have passed, create the links indicating the build has been validated
+	$(WORKDIR)/sw_x/dist/igware.runtime/make_validated_links.sh -a link -u $(STORE_USER) -n $(STORE_HOST) -d $(PRODUCT_STORAGE_DIR)
+
+# --- this target should report the test results
+.PHONY: report_test_results
+report_test_results:
+	# if the string "TEST RUN STATUS PASS" is not found in the summary output, then it's a fail
+	cat /tmp/testharness/output_$(BUILDER_NAME)/$(BUILD_DATE)/testharness_summary.out
+	grep "TEST RUN STATUS PASS" /tmp/testharness/output_$(BUILDER_NAME)/$(BUILD_DATE)/testharness_summary.out
+
+# --- this target run once to setup a machine for build and/or test
+.PHONY: build_setup
+build_setup:
+	@echo !!! This builder currently requires manual setup.
+	@echo !!! Please see http://www.ctbg.acer.com/wiki/index.php/Building_sw_x_for_WOA
+
+.PHONY: test_setup
+test_setup: allow_sudo_usage
+	make -f $(WORKDIR)/sw_x/dist/igware.runtime/Makefile.woa centos_update_repo
+	make -f $(WORKDIR)/sw_x/dist/igware.runtime/Makefile.woa install_common_pkgs
+	make -f $(WORKDIR)/sw_x/dist/igware.runtime/Makefile.woa centos_install_32bit_pkgs

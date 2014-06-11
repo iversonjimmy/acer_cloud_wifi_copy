@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repo/!svn/ver/20517/trunk/sw_x/gvm_apps/android_cc_sdk/build_jars/project/src/com/igware/ccdi_android
+END
+CcdiClientRemoteBinder.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repo/!svn/ver/20517/trunk/sw_x/gvm_apps/android_cc_sdk/build_jars/project/src/com/igware/ccdi_android/CcdiClientRemoteBinder.java
+END
+ICcdiAidlRpc.aidl
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/build_jars/project/src/com/igware/ccdi_android/ICcdiAidlRpc.aidl
+END
+AbstractCcdiClient.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/build_jars/project/src/com/igware/ccdi_android/AbstractCcdiClient.java
+END

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+STORE_HOST="pcstore.ctbg.acer.com"
+HTTP_PORT="8001"
+STORE_PATH="pc/builds_by_MTV"
+#STORE_PATH="pc/builds_by_TPE"
+if [ "$TEST_BRANCH" = "" ]; then
+    TEST_BRANCH="GVM-ANDROID_TOT"
+fi
+
+wget http://$STORE_HOST:$HTTP_PORT/$STORE_PATH/$TEST_BRANCH/linux/dxshell/dxshell.tar.gz -O dxshell.tar.gz
+tar xzvf dxshell.tar.gz
+

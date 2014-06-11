@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/46302/trunk/sw_x/projects/msvc/winRT/test_ccd_single_sign_on
+END
+test_ccd_single_sign_on.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repo/!svn/ver/40364/trunk/sw_x/projects/msvc/winRT/test_ccd_single_sign_on/test_ccd_single_sign_on.vcxproj
+END
+App.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repo/!svn/ver/26279/trunk/sw_x/projects/msvc/winRT/test_ccd_single_sign_on/App.xaml
+END
+pch.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repo/!svn/ver/26279/trunk/sw_x/projects/msvc/winRT/test_ccd_single_sign_on/pch.h
+END
+App.xaml.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repo/!svn/ver/26279/trunk/sw_x/projects/msvc/winRT/test_ccd_single_sign_on/App.xaml.cpp
+END
+MainPage.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repo/!svn/ver/26279/trunk/sw_x/projects/msvc/winRT/test_ccd_single_sign_on/MainPage.xaml
+END
+MainPage.xaml.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repo/!svn/ver/46302/trunk/sw_x/projects/msvc/winRT/test_ccd_single_sign_on/MainPage.xaml.cpp
+END
+App.xaml.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repo/!svn/ver/26279/trunk/sw_x/projects/msvc/winRT/test_ccd_single_sign_on/App.xaml.h
+END
+test_ccd_single_sign_on.vcxproj.filters
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repo/!svn/ver/26279/trunk/sw_x/projects/msvc/winRT/test_ccd_single_sign_on/test_ccd_single_sign_on.vcxproj.filters
+END
+MainPage.xaml.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repo/!svn/ver/26279/trunk/sw_x/projects/msvc/winRT/test_ccd_single_sign_on/MainPage.xaml.h
+END
+Package.appxmanifest
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repo/!svn/ver/26279/trunk/sw_x/projects/msvc/winRT/test_ccd_single_sign_on/Package.appxmanifest
+END
+pch.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repo/!svn/ver/26279/trunk/sw_x/projects/msvc/winRT/test_ccd_single_sign_on/pch.cpp
+END
+test_ccd_single_sign_on_TemporaryKey.pfx
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repo/!svn/ver/40364/trunk/sw_x/projects/msvc/winRT/test_ccd_single_sign_on/test_ccd_single_sign_on_TemporaryKey.pfx
+END

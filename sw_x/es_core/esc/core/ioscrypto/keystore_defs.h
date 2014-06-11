@@ -1,0 +1,2 @@
+#define KEY_STORE_MAX_SIZE 100
+#define KEY_META_MAX_SIZE  100

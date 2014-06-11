@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" 
+	android:layout_height="match_parent">
+	
+    <ImageView android:id="@+id/Image_SyncFolderImage"
+        android:src="@drawable/unchecked" 
+        android:layout_alignParentLeft="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"/>
+        
+    <ImageView android:id="@+id/Image_FolderIcon"
+        android:src="@drawable/folder" 
+        android:scaleType="center"
+        android:layout_alignParentRight="true"
+        android:layout_width="40dp"
+        android:layout_height="40dp"/>
+        
+    <TextView android:id="@+id/Text_SyncFolderRow"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/Image_SyncFolderImage"
+        android:layout_toLeftOf="@id/Image_FolderIcon"
+        android:layout_weight="1"
+        android:layout_gravity="left|center_vertical"
+        android:layout_marginLeft="10dp"/>
+        
+</RelativeLayout>

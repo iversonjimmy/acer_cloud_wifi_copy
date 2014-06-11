@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/repo/!svn/ver/26/trunk/sw_x/dist/gvm.android.os
+END
+makeAndroid.sh
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/24/trunk/sw_x/dist/gvm.android.os/makeAndroid.sh
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repo/!svn/ver/26/trunk/sw_x/dist/gvm.android.os/Makefile
+END

@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/56615/trunk/sw_x/projects/xcode/PersonalCloud/ccd/SanityTest
+END
+main.m
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/23845/trunk/sw_x/projects/xcode/PersonalCloud/ccd/SanityTest/main.m
+END
+CCLibSanityTest.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repo/!svn/ver/34311/trunk/sw_x/projects/xcode/PersonalCloud/ccd/SanityTest/CCLibSanityTest.cpp
+END
+TestArguments
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repo/!svn/ver/32809/trunk/sw_x/projects/xcode/PersonalCloud/ccd/SanityTest/TestArguments
+END
+CCDTestAccount
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repo/!svn/ver/24507/trunk/sw_x/projects/xcode/PersonalCloud/ccd/SanityTest/CCDTestAccount
+END
+CCDTestAccountPassword
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repo/!svn/ver/24507/trunk/sw_x/projects/xcode/PersonalCloud/ccd/SanityTest/CCDTestAccountPassword
+END
+SanityAppDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repo/!svn/ver/23845/trunk/sw_x/projects/xcode/PersonalCloud/ccd/SanityTest/SanityAppDelegate.h
+END
+CCLibSanityTest.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repo/!svn/ver/24507/trunk/sw_x/projects/xcode/PersonalCloud/ccd/SanityTest/CCLibSanityTest.h
+END
+SanityTest-Info.plist
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repo/!svn/ver/24280/trunk/sw_x/projects/xcode/PersonalCloud/ccd/SanityTest/SanityTest-Info.plist
+END
+SanityAppDelegate.mm
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repo/!svn/ver/33276/trunk/sw_x/projects/xcode/PersonalCloud/ccd/SanityTest/SanityAppDelegate.mm
+END
+SanityTest-Prefix.pch
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repo/!svn/ver/23845/trunk/sw_x/projects/xcode/PersonalCloud/ccd/SanityTest/SanityTest-Prefix.pch
+END
+CCLibSanityTest.mm
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repo/!svn/ver/23845/trunk/sw_x/projects/xcode/PersonalCloud/ccd/SanityTest/CCLibSanityTest.mm
+END

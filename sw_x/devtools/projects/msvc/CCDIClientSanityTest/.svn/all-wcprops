@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/34316/trunk/sw_x/devtools/projects/msvc/CCDIClientSanityTest
+END
+stdafx.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repo/!svn/ver/10066/trunk/sw_x/devtools/projects/msvc/CCDIClientSanityTest/stdafx.h
+END
+CCDIClientSanityTest.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repo/!svn/ver/21864/trunk/sw_x/devtools/projects/msvc/CCDIClientSanityTest/CCDIClientSanityTest.vcxproj
+END
+targetver.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repo/!svn/ver/10066/trunk/sw_x/devtools/projects/msvc/CCDIClientSanityTest/targetver.h
+END
+CCDIClientSanityTest.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repo/!svn/ver/34316/trunk/sw_x/devtools/projects/msvc/CCDIClientSanityTest/CCDIClientSanityTest.cpp
+END
+CCDIClientSanityTest.vcxproj.filters
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repo/!svn/ver/18501/trunk/sw_x/devtools/projects/msvc/CCDIClientSanityTest/CCDIClientSanityTest.vcxproj.filters
+END
+stdafx.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repo/!svn/ver/10066/trunk/sw_x/devtools/projects/msvc/CCDIClientSanityTest/stdafx.cpp
+END
+ReadMe.txt
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repo/!svn/ver/10066/trunk/sw_x/devtools/projects/msvc/CCDIClientSanityTest/ReadMe.txt
+END

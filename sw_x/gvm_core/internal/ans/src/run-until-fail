@@ -1,0 +1,33 @@
+#! /bin/csh -fb
+
+onintr leave
+
+set log = /tmp/run-until.log.$$
+
+while (1)
+    make test |& tee $log || break;
+
+    grep "==[0-9]*== ERROR SUMMARY: 0 errors from" $log > /dev/null
+
+    if ($status == 1) then
+        echo "Got an error from valgrind"
+        break;
+    endif
+
+    grep "==[0-9]*== LEAK SUMMARY" $log > /dev/null
+
+    if ($status == 0) then
+        echo "valgrind found a memory leak"
+        break;
+    endif
+
+    sleep 2
+end
+
+echo "The log is $log"
+
+exit 1
+
+leave:
+    rm -f $log
+    echo "Interrupted"

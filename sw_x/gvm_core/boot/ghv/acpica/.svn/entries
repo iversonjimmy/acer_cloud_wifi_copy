@@ -1,0 +1,184 @@
+10
+
+dir
+59951
+https://src-us.ctbg.acer.com/repo/trunk/sw_x/gvm_core/boot/ghv/acpica
+https://src-us.ctbg.acer.com/repo
+
+
+
+2011-01-07T08:49:12.000000Z
+43
+mcui
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+187b5c42-a02b-43e7-ba74-80c9f8da41ab
+
+include
+dir
+
+executer
+dir
+
+debugger
+dir
+
+os_specific
+dir
+
+dispatcher
+dir
+
+changes.txt
+file
+
+
+
+
+2014-05-22T01:47:07.886141Z
+ede4bbd40a16763e9951c979880f067f
+2011-01-07T08:49:12.000000Z
+43
+mcui
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+427861
+
+common
+dir
+
+generate
+dir
+
+parser
+dir
+
+namespace
+dir
+
+hardware
+dir
+
+README
+file
+
+
+
+
+2014-05-22T01:47:07.886909Z
+30908153705a5941f853fe8623053831
+2011-01-07T08:49:12.000000Z
+43
+mcui
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1896
+
+tools
+dir
+
+tests
+dir
+
+events
+dir
+
+osunixxf.c
+file
+
+
+
+
+2014-05-22T01:47:07.886909Z
+d37630a3ff7c73c420a1e12e42fc682d
+2011-01-07T08:49:12.000000Z
+43
+mcui
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+31513
+
+resources
+dir
+
+compiler
+dir
+
+tables
+dir
+
+utilities
+dir
+
+disassembler
+dir
+

@@ -1,0 +1,1025 @@
+c_and_cxx_flags = ''
+cloudnode_c_cxx_flags = '-DCLOUDNODE=1'
+
+if es_is_kernel_module:
+    c_and_cxx_flags += '-DES_IS_KERNEL_MODULE=1 '
+else:
+    c_and_cxx_flags += '-DES_IS_KERNEL_MODULE=0 '
+
+# TEMPORARY for TS2 development/integration
+ts2_no_pxd = os.environ.get('TS2_NO_PXD', '0')
+if ts2_no_pxd != '0':
+    c_and_cxx_flags += '-DTS2_NO_PXD '
+
+enable_cc_sdk = (
+        product == 'msvc' or
+        product == 'winrt' or
+        product == 'woa' or
+        product == 'ios' or
+        product == 'cloudnode')
+
+app_links_directly_to_ccd = (product == 'ios' or product == 'winrt' or product == 'woa')
+
+# NOTE: CCDI client should not be used on Android.  IPC is only available at the Java layer.
+enable_ccdi_client = (not app_links_directly_to_ccd) and product != 'android'
+
+protobuf(
+    name = 'ccd_types',
+    protofile = 'ccd_types.proto',
+    input_path = 'include',
+    deps = [
+            '/gvm_core/daemons/ccd:ccdi_rpc',
+           ],
+    cpp_out = 'types/src',
+    java_out = 'types/java',
+)
+
+protobuf(
+    name = 'ccdi_rpc',
+    protofile = 'ccdi_rpc.proto',
+    input_path = 'include',
+    deps = [
+            '/gvm_core/internal/media_metadata/common:media_metadata_types_proto',
+            '/gvm_core/vplex/proto:vs_directory_service_types_src',
+           ],
+    cpp_out = 'types/src',
+    rpc_client_out = 'rpc_client',
+    rpc_async_client_out = 'rpc_client',
+    rpc_server_out = 'rpc_server',
+    java_out = 'types/java',
+    rpc_client_java_out = 'client/java',
+    #csharp_out = ('types/csharp' if platform == 'msvc' else None),
+    #rpc_client_csharp_out = ('client/csharp' if platform == 'msvc' else None),
+)
+
+# For iOS and Microsoft platforms, we use the project files instead of declaring the static_cpp_lib targets here.
+if platform != 'ios' and platform != 'msvc':
+    static_cpp_lib(
+        name = 'libccd_types',
+        includes = ['types/src'],
+        cflags = c_and_cxx_flags,
+        cxxflags = c_and_cxx_flags,
+        srcs = [
+                'types/src/ccd_types.pb.cc',
+                'types/src/ccdi_rpc.pb.cc',
+               ],
+        deps = [
+                ':ccd_types',
+                '/gvm_core/internal/media_metadata/common:libmedia_metadata_common',
+                '/gvm_core/vplex:libvplex',
+               ],
+    )
+    
+    # NOTE: Not supported for Android, iOS, and WinRT.
+    #if enable_ccdi_client: # The 'if' is commented out because these are still referenced by the top level BUILD file.
+    static_cpp_lib(
+        name = 'libccd_client',
+        includes = ['include', 'client/include'],
+        private_includes = ['rpc_client', '$(PBROOT)/build_info/include'],
+        cflags = c_and_cxx_flags,
+        cxxflags = c_and_cxx_flags,
+        srcs = [
+                'rpc_client/ccdi_rpc-client.pb.cc',
+                'rpc_client/ccdi_rpc-client-async.pb.cc',
+                'client/src/ccdi_client_protorpc.cpp',
+               ],
+        deps = [
+                '/gvm_core/daemons/ccd:libccd_types',
+                '/gvm_core/internal/error_codes:liberror_codes',
+                '/gvm_core/internal/log:liblog',
+                '/gvm_core/internal/mini_ucf:libmini_ucf',
+               ],
+    )
+
+    shared_cpp_lib (
+        name = 'libccd_client-shr',
+        srcs = [],
+        deps = [':libccd_client'],
+        soname = 'libccd_client.so.1'
+    )
+    
+    libcc_includes = ['include']
+    
+    libcc_private_includes = (
+                           [
+                            'types/src',
+                            'src_impl',
+                            'rpc_client',
+                            'rpc_server',
+                            '$(PBROOT)/build_info/include',
+                            '/gvm_core/internal/vssi/include',
+                            '/gvm_core/internal/vssi/src',
+                            '/gvm_core/internal/Ts2/include',
+                            '/gvm_core/internal/Ts2Alt/Ext/src',
+                           ]
+                 )
+    libcc_srcs = (
+               [
+                'src_impl/ans_connection.cpp',
+                'src_impl/AsyncDatasetOps.cpp',
+                'src_impl/AutoLocks.cpp',
+                'src_impl/cache.cpp',
+                'src_impl/CachePlayer.cpp',
+                'src_impl/ccd_build_info.c',
+                'src_impl/ccd_core.cpp',
+                'src_impl/ccd_storage.cpp',
+                'src_impl/ccd_util.cpp',
+                'src_impl/ccdiimpl.cpp',
+                'src_impl/ccdiquery.cpp',
+                'src_impl/CloudDocMgr.cpp',
+                'src_impl/config.cpp',
+                'src_impl/DeviceStateCache.cpp',
+                'src_impl/EventManagerPb.cpp',
+                'src_impl/NotificationQ.cpp',
+                'src_impl/ias_query.cpp',
+                'src_impl/JsonHelper.cpp',
+                'src_impl/McaThumbMigrate.cpp',
+                'src_impl/MediaMetadata.cpp',
+                'src_impl/McaDb.cpp',
+                'src_impl/netman.cpp',
+                'src_impl/nus_query.cpp',
+                'src_impl/picstream.cpp',
+                'src_impl/query.cpp',
+                'src_impl/SharedFiles.cpp',
+                'src_impl/stream_transaction.cpp',
+                'src_impl/sw_update.cpp',
+                'src_impl/SyncDown.cpp',
+                'src_impl/SyncFeatureMgr.cpp',
+                'src_impl/SyncUp.cpp',
+                'src_impl/system_query.cpp',
+                'src_impl/virtual_device.cpp',
+                'src_impl/vsds_query.cpp',
+                'src_impl/LanDeviceInfoCache.cpp',
+                'src_impl/RouteManager.cpp',
+                'src_impl/AsyncUploadQueue.cpp',
+                'src_impl/s3_proxy.cpp',
+                'src_impl/vcs_archive_access_ccd.cpp',
+                'src_impl/file_url_operation_ts.cpp',
+                'src_impl/vcs_proxy.cpp',
+                'src_impl/vcs_utils.cpp',
+                'src_impl/pin_manager.cpp',
+                'rpc_server/ccdi_rpc-server.pb.cc',
+                'src_impl/StatManager.cpp',
+                'src_impl/HttpService.cpp',
+                'src_impl/HttpSvc_AtomicCounter.cpp',
+                'src_impl/HttpSvc_Ccd_Agent.cpp',
+                'src_impl/HttpSvc_Ccd_AsyncAgent.cpp',
+                'src_impl/HttpSvc_Ccd_Dispatcher.cpp',
+                'src_impl/HttpSvc_Ccd_Handler_clouddoc.cpp',
+                'src_impl/HttpSvc_Ccd_Handler_cmd.cpp',
+                'src_impl/HttpSvc_Ccd_Handler_ds.cpp',
+                'src_impl/HttpSvc_Ccd_Handler_Helper.cpp',
+                'src_impl/HttpSvc_Ccd_Handler_mediafile.cpp',
+                'src_impl/HttpSvc_Ccd_Handler_mm.cpp',
+                'src_impl/HttpSvc_Ccd_Handler_picstream.cpp',
+                'src_impl/HttpSvc_Ccd_Handler_minidms.cpp',
+                'src_impl/HttpSvc_Ccd_Handler_rexe.cpp',
+                'src_impl/HttpSvc_Ccd_Handler_rf.cpp',
+                'src_impl/HttpSvc_Ccd_Handler_share.cpp',
+                'src_impl/HttpSvc_Ccd_ListenAgent.cpp',
+                'src_impl/HttpSvc_Ccd_MediaFile.cpp',
+                'src_impl/HttpSvc_Ccd_MediaFileSender.cpp',
+                'src_impl/HttpSvc_Ccd_MediaFsFile.cpp',
+                'src_impl/HttpSvc_Ccd_Server.cpp',
+                'src_impl/HttpSvc_Ccd_SocketAgent.cpp',
+                'src_impl/HttpSvc_HsToHttpAdapter.cpp',
+                'src_impl/HttpSvc_HsToTsAdapter.cpp',
+                'src_impl/HttpSvc_HsToVcsTranslator.cpp',
+                'src_impl/HttpSvc_Utils.cpp',
+                'src_impl/HttpSvc_Ccd_Handler_iotsdkapi.cpp',
+                '../../internal/Ts2/LocalInfo/src/LocalInfo_Ccd.cpp',
+               ]
+               + ([
+                'src_impl/MediaMetadataServer.cpp',
+                'src_impl/MsaDb.cpp',
+                  ] if platform == 'msvc' or platform == 'linux' or platform == 'cloudnode' else [])
+              )
+    
+    libcc_deps = (
+               [
+                '/es_core:libescore',
+                '/gvm_core/daemons/ccd:libccd_types',
+                '/gvm_core/internal/ans:libans',
+                '/gvm_core/internal/pxd:libpxd',
+                '/gvm_core/internal/cJSON2:libcJSON2',
+                '/gvm_core/internal/conf:libconf',
+                '/gvm_core/internal/db_utils:libdb_utils',
+                '/gvm_core/internal/error_codes:liberror_codes',
+                '/gvm_core/internal/es_types:libes_types',
+                '/gvm_core/internal/es_viewer:libes_viewer',
+                '/gvm_core/internal/file_utils:libfile_utils',
+                '/gvm_core/internal/log:liblog',
+                '/gvm_core/internal/media_metadata/common:libmedia_metadata_common',
+                '/gvm_core/internal/mini_ucf:libmini_ucf',
+                '/gvm_core/internal/protobuf_file_utils:libprotobuf_file_utils',
+                '/gvm_core/internal/protorpc',
+                '/gvm_core/internal/sync_config_manager:libsync_config_manager',
+                '/gvm_core/vplex:libvplex',
+                '/gvm_core/internal/media_metadata/impl:libmedia_metadata_priv',
+                '/gvm_core/internal/simple_http:libsimple_http',
+                '/gvm_core/internal/exif_parser:libexif_parser',
+                '/gvm_core/internal/Stream:libStream',
+                '/gvm_core/internal/image_transcode:libimage_transcode',
+                '/gvm_core/internal/Ts2Alt/Shim:libTs2Shim',
+                '/gvm_core/internal/Ts2Alt/Ext:libTs2ExtServer',
+                '/gvm_core/internal/Ts2/LocalInfo:libTs2LocalInfo',
+#                '/gvm_core/internal/Ts2/LocalInfo:libTs2LocalInfoFV',
+#                '/gvm_core/internal/Ts2/LocalInfo:libTs2LocalInfoGH',
+#                '/gvm_core/internal/Ts2/LocalInfo:libTs2LocalInfoIH',
+               ]
+              )
+    
+    static_cpp_lib(
+        name = 'libcc',
+        includes = libcc_includes,
+        private_includes = libcc_private_includes,
+        cflags = c_and_cxx_flags,
+        cxxflags = c_and_cxx_flags,
+        srcs = libcc_srcs,
+        deps = libcc_deps + (['/storageNode:libStorageNode'] if platform != 'android' else []),
+    )
+    
+    static_cpp_lib(
+        name = 'libcc_for_cloudnode',
+        includes = libcc_includes,
+        private_includes = libcc_private_includes,
+        cflags = c_and_cxx_flags + cloudnode_c_cxx_flags,
+        cxxflags = c_and_cxx_flags + cloudnode_c_cxx_flags,
+        srcs = libcc_srcs,
+        deps = libcc_deps + (['/storageNode:libStorageNodeForCloudNode'] if platform != 'android' else []),
+    )
+    
+    shared_cpp_lib(
+        name = 'libcc-shr',
+        srcs = [],
+        deps = [':libcc'],
+        soname = 'libcc.so.1',
+    )
+    
+    # NOTE: Not supported for Android, iOS, and WinRT.
+    cpp_binary(
+        name = 'ccd',
+        includes = [],
+        srcs = [
+                'src_impl/main.cpp',
+               ],
+        deps = [
+                ':libcc',
+               ],
+    )
+    
+    # NOTE: Not supported for Android, iOS, and WinRT.
+    cpp_binary(
+        name = 'ccd_cloudnode',
+        includes = [],
+        srcs = [
+                'src_impl/main.cpp',
+               ],
+        deps = [
+                ':libcc_for_cloudnode',
+               ],
+    )
+
+if enable_cc_sdk:
+    if product == 'cloudnode':
+        cc_sdk_plat_specific_input = [
+            '$(SRCROOT)/gvm_core/vpl/platform_linux/include/vpl__atomic.h',
+            '$(SRCROOT)/gvm_core/vpl/posix_include/vpl__conv.h',
+            '$(SRCROOT)/gvm_core/vpl/platform_linux/include/vpl__error.h',
+            '$(SRCROOT)/gvm_core/vpl/posix_include/vpl__fs.h',
+            '$(SRCROOT)/gvm_core/vpl/posix_include/vpl__lazy_init.h',
+            '$(SRCROOT)/gvm_core/vpl/posix_include/vpl__net.h',
+            '$(SRCROOT)/gvm_core/vpl/platform_linux/include/vpl__plat.h',
+            '$(SRCROOT)/gvm_core/vpl/platform_linux/include/vpl__socket.h',
+            '$(SRCROOT)/gvm_core/vpl/posix_include/vpl__srwlock.h',
+            '$(SRCROOT)/gvm_core/vpl/platform_linux/include/vpl__th.h',
+            '$(SRCROOT)/gvm_core/vpl/platform_linux/include/vpl__types.h',
+            '$(SRCROOT)/gvm_core/vpl/posix_include/vplu__missing.h',
+            '$(SRCROOT)/gvm_core/vplex/platform_linux/include/vplex__plat.h',
+        ]
+    elif product == 'ios':
+        cc_sdk_plat_specific_input = [
+            '$(SRCROOT)/gvm_core/vpl/platform_linux/include/vpl__atomic.h',
+            '$(SRCROOT)/gvm_core/vpl/posix_include/vpl__conv.h',
+            '$(SRCROOT)/gvm_core/vpl/platform_linux/include/vpl__error.h',
+            '$(SRCROOT)/gvm_core/vpl/posix_include/vpl__fs.h',
+            '$(SRCROOT)/gvm_core/vpl/posix_include/vpl__lazy_init.h',
+            '$(SRCROOT)/gvm_core/vpl/posix_include/vpl__net.h',
+            '$(SRCROOT)/gvm_core/vpl/platform_linux/include/vpl__plat.h',
+            '$(SRCROOT)/gvm_core/vpl/platform_linux/include/vpl__socket.h',
+            '$(SRCROOT)/gvm_core/vpl/posix_include/vpl__srwlock.h',
+            '$(SRCROOT)/gvm_core/vpl/platform_linux/include/vpl__th.h',
+            '$(SRCROOT)/gvm_core/vpl/platform_linux/include/vpl__types.h',
+            '$(SRCROOT)/gvm_core/vpl/posix_include/vplu__missing.h',
+            '$(SRCROOT)/gvm_core/vplex/platform_linux/include/vplex__plat.h',
+        ]
+    elif product == 'msvc' or product == 'winrt' or product == 'woa':
+        cc_sdk_plat_specific_input = [
+            '$(SRCROOT)/gvm_core/vpl/platform_win32/include/vpl__atomic.h',
+            '$(SRCROOT)/gvm_core/vpl/platform_win32/include/vpl__conv.h',
+            '$(SRCROOT)/gvm_core/vpl/platform_win32/include/vpl__error.h',
+            '$(SRCROOT)/gvm_core/vpl/platform_win32/include/vpl__fs.h',
+            '$(SRCROOT)/gvm_core/vpl/platform_win32/include/vpl__lazy_init.h',
+            '$(SRCROOT)/gvm_core/vpl/platform_win32/include/vpl__net.h',
+            '$(SRCROOT)/gvm_core/vpl/platform_win32/include/vpl__plat.h',
+            '$(SRCROOT)/gvm_core/vpl/platform_win32/include/vpl__socket.h',
+            '$(SRCROOT)/gvm_core/vpl/platform_win32/include/vpl__srwlock.h',
+            '$(SRCROOT)/gvm_core/vpl/platform_win32/include/vpl__th.h',
+            '$(SRCROOT)/gvm_core/vpl/platform_win32/include/vpl__types.h',
+            '$(SRCROOT)/gvm_core/vpl/platform_win32/include/vplu__missing.h',
+            '$(SRCROOT)/gvm_core/vplex/platform_win32/include/vplex__plat.h',
+           ]
+    else:
+        raise Exception("Need to add new product!")
+    
+    custom(
+        name = 'cc_sdk_plat_specific',
+        input = [
+            '$(SRCROOT)/make/scripts/remove_internal_source.py',
+        ]
+        + cc_sdk_plat_specific_input 
+        + (['%self.srcdir%/client/include/ccdi_client.hpp',
+           ] if enable_ccdi_client else
+           ['%self.srcdir%/include/ccd_core.h'])
+        + ([
+            '$(SRCROOT)/gvm_core/vpl/posix_include/vpl__monitor_dir.h',
+            '$(SRCROOT)/gvm_core/external/protobuflib/google/protobuf/stubs/once.h',
+            '$(SRCROOT)/gvm_core/external/protobuflib/google/protobuf/descriptor.h',
+            '$(SRCROOT)/gvm_core/external/protobuflib/google/protobuf/descriptor.pb.h',
+            '$(SRCROOT)/gvm_core/external/protobuflib/google/protobuf/reflection_ops.h',
+            '$(SRCROOT)/gvm_core/external/protobuflib/google/protobuf/wire_format.h',
+            '$(SRCROOT)/gvm_core/external/protobuflib/google/protobuf/wire_format_lite.h',
+            '$(SRCROOT)/gvm_core/external/protobuflib/google/protobuf/wire_format_lite_inl.h',
+           ] if product == 'cloudnode' else [])
+        ,
+        output = [
+            '%self.builddir%/sdk/include/vpl__atomic.h',
+            '%self.builddir%/sdk/include/vpl__conv.h',
+            '%self.builddir%/sdk/include/vpl__error.h',
+            '%self.builddir%/sdk/include/vpl__fs.h',
+            '%self.builddir%/sdk/include/vpl__lazy_init.h',
+            '%self.builddir%/sdk/include/vpl__net.h',
+            '%self.builddir%/sdk/include/vpl__plat.h',
+            '%self.builddir%/sdk/include/vpl__socket.h',
+            '%self.builddir%/sdk/include/vpl__srwlock.h',
+            '%self.builddir%/sdk/include/vpl__th.h',
+            '%self.builddir%/sdk/include/vpl__types.h',
+            '%self.builddir%/sdk/include/vplu__missing.h',
+            '%self.builddir%/sdk/include/vplex__plat.h',
+        ]
+        + (['%self.builddir%/sdk/include/ccdi_client.hpp',
+           ] if product != 'winrt' and product != 'woa' and product != 'ios' else
+           ['%self.builddir%/sdk/include/ccd_core.h'])
+        + ([
+            '%self.builddir%/sdk/include/vpl__monitor_dir.h',
+            '%self.builddir%/sdk/include/google/protobuf/stubs/once.h',
+            '%self.builddir%/sdk/include/google/protobuf/descriptor.h',
+            '%self.builddir%/sdk/include/google/protobuf/descriptor.pb.h',
+            '%self.builddir%/sdk/include/google/protobuf/reflection_ops.h',
+            '%self.builddir%/sdk/include/google/protobuf/wire_format.h',
+            '%self.builddir%/sdk/include/google/protobuf/wire_format_lite.h',
+            '%self.builddir%/sdk/include/google/protobuf/wire_format_lite_inl.h',
+           ] if product == 'cloudnode' else [])
+        ,
+        builddirs = [
+        ],
+        recipe = [
+            'rm -rf %(self.builddir)s/sdk',
+            'mkdir -p %(self.builddir)s/sdk/doc',
+            'mkdir -p %(self.builddir)s/sdk/include/google/protobuf/io',
+            'mkdir -p %(self.builddir)s/sdk/include/google/protobuf/stubs',
+            'mkdir -p %(self.builddir)s/sdk/lib',
+            'mkdir -p %(self.builddir)s/sdk/samples/src',
+    
+            'cp -f %(in2)s %(out1)s',
+            'cp -f %(in3)s %(out2)s',
+            'cp -f %(in4)s %(out3)s',
+            'cp -f %(in5)s %(out4)s',
+            'cp -f %(in6)s %(out5)s',
+            'cp -f %(in7)s %(out6)s',
+            'cp -f %(in8)s %(out7)s',
+            'cp -f %(in9)s %(out8)s',
+            'cp -f %(in10)s %(out9)s',
+            'cp -f %(in11)s %(out10)s',
+            'cp -f %(in12)s %(out11)s',
+            'cp -f %(in13)s %(out12)s',
+            'cp -f %(in14)s %(out13)s',
+            'cp -f %(in15)s %(out14)s',
+        ]
+        + ([
+            'cp -f %(in16)s %(out15)s',
+            'cp -f %(in17)s %(out16)s',
+            'cp -f %(in18)s %(out17)s',           
+            'cp -f %(in19)s %(out18)s',
+            'cp -f %(in20)s %(out19)s',
+            'cp -f %(in21)s %(out20)s',
+            'cp -f %(in22)s %(out21)s',
+            'cp -f %(in23)s %(out22)s',
+           ] if product == 'cloudnode' else [])
+        ,
+    )
+    
+    custom(
+        name = 'cc_sdk_common',
+        deps = [
+            ':cc_sdk_plat_specific'
+        ],
+        input = [
+            '$(SRCROOT)/make/scripts/remove_internal_source.py',
+            
+            '%self.srcdir%/include/ccdi.hpp',
+            '%self.srcdir%/include/ccd_features.h',
+            
+            '%self.srcdir%/types/src/ccdi_rpc.pb.h',
+            '%self.srcdir%/types/src/ccd_types.pb.h',
+            '$(SRCROOT)/gvm_core/vplex/proto/vplex_common_types.pb.h',
+            '$(SRCROOT)/gvm_core/vplex/proto/vplex_community_types.pb.h',
+            '$(SRCROOT)/gvm_core/vplex/proto/vplex_vs_directory_service_types.pb.h',
+            '$(SRCROOT)/gvm_core/internal/media_metadata/common/include/media_metadata_types.pb.h',
+            
+            '%self.srcdir%/include/ccdi_rpc.proto',
+            '%self.srcdir%/include/ccd_types.proto',
+            '$(SRCROOT)/gvm_core/vplex/proto/vplex_common_types.proto',
+            '$(SRCROOT)/gvm_core/vplex/proto/vplex_community_types.proto',
+            '$(SRCROOT)/gvm_core/vplex/proto/vplex_vs_directory_service_types.proto',
+            '$(SRCROOT)/gvm_core/internal/media_metadata/common/include/media_metadata_types.proto',
+            
+            '$(SRCROOT)/gvm_core/internal/error_codes/include/gvm_configuration.h',
+            '$(SRCROOT)/gvm_core/internal/error_codes/include/gvm_errors.h',
+            
+            '$(SRCROOT)/gvm_core/vpl/include/vpl_conv.h',
+            '$(SRCROOT)/gvm_core/vpl/include/vpl_error.h',
+            '$(SRCROOT)/gvm_core/vpl/include/vpl_fs.h',
+            '$(SRCROOT)/gvm_core/vpl/include/vpl_lazy_init.h',
+            '$(SRCROOT)/gvm_core/vpl/include/vpl_limits.h',
+            '$(SRCROOT)/gvm_core/vpl/include/vpl_net.h',
+            '$(SRCROOT)/gvm_core/vpl/include/vpl_plat.h',
+            '$(SRCROOT)/gvm_core/vpl/include/vpl_socket.h',
+            '$(SRCROOT)/gvm_core/vpl/include/vpl_srwlock.h',
+            '$(SRCROOT)/gvm_core/vpl/include/vpl_string.h',
+            '$(SRCROOT)/gvm_core/vpl/include/vpl_th.h',
+            '$(SRCROOT)/gvm_core/vpl/include/vpl_thread.h',
+            '$(SRCROOT)/gvm_core/vpl/include/vpl_time.h',
+            '$(SRCROOT)/gvm_core/vpl/include/vpl_types.h',
+            '$(SRCROOT)/gvm_core/vpl/include/vpl_user.h',
+            
+            '$(SRCROOT)/gvm_core/vpl/include/vplu.h',
+            '$(SRCROOT)/gvm_core/vpl/include/vplu_atomic.h',
+            '$(SRCROOT)/gvm_core/vpl/include/vplu_common.h',
+            '$(SRCROOT)/gvm_core/vpl/include/vplu_debug.h',
+            '$(SRCROOT)/gvm_core/vpl/include/vplu_format.h',
+            '$(SRCROOT)/gvm_core/vpl/include/vplu_missing.h',
+            '$(SRCROOT)/gvm_core/vpl/include/vplu_mutex_autolock.hpp',
+            '$(SRCROOT)/gvm_core/vpl/include/vplu_types.h',
+            '$(SRCROOT)/gvm_core/vpl/include/vplu_version.h',
+            
+            '$(SRCROOT)/gvm_core/vplex/include/vplex_community_types.h',
+            '$(SRCROOT)/gvm_core/vplex/include/vplex_error.h',
+            '$(SRCROOT)/gvm_core/vplex/include/vplex_plat.h',
+            '$(SRCROOT)/gvm_core/vplex/include/vplex_time.h',
+            '$(SRCROOT)/gvm_core/vplex/include/vplex_trace.h',
+            '$(SRCROOT)/gvm_core/vplex/include/vplex_user.h',
+            
+            '$(SRCROOT)/gvm_core/external/protobuflib/google/protobuf/io/coded_stream.h',
+            '$(SRCROOT)/gvm_core/external/protobuflib/google/protobuf/stubs/common.h',
+            '$(SRCROOT)/gvm_core/external/protobuflib/google/protobuf/extension_set.h',
+            '$(SRCROOT)/gvm_core/external/protobuflib/google/protobuf/generated_message_reflection.h',
+            '$(SRCROOT)/gvm_core/external/protobuflib/google/protobuf/generated_message_util.h',
+            '$(SRCROOT)/gvm_core/external/protobuflib/google/protobuf/message.h',
+            '$(SRCROOT)/gvm_core/external/protobuflib/google/protobuf/message_lite.h',
+            '$(SRCROOT)/gvm_core/external/protobuflib/google/protobuf/repeated_field.h',
+            '$(SRCROOT)/gvm_core/external/protobuflib/google/protobuf/unknown_field_set.h',
+            
+            '%self.srcdir%/sdk/samples/src/logout.cpp',
+            '%self.srcdir%/sdk/samples/src/setup_sync_agent.cpp',
+            '%self.srcdir%/sdk/samples/src/vssi.cpp',
+            
+            '$(SRCROOT)/gvm_core/internal/vssi/include/vssi.h',
+            '$(SRCROOT)/gvm_core/internal/vssi/include/vssi_error.h',
+            '$(SRCROOT)/gvm_core/internal/vssi/include/vssi_types.h',
+            
+            '$(SRCROOT)/gvm_core/internal/vssts/include/vssts.hpp',
+            '$(SRCROOT)/gvm_core/internal/vssts/include/vssts_error.hpp',
+            '$(SRCROOT)/gvm_core/internal/vssts/include/vssts_types.hpp',
+            
+            '$(SRCROOT)/gvm_core/internal/log/include/log.h',
+        ],
+        output = [
+            '%self.builddir%/sdk/include/ccdi.hpp',
+            '%self.builddir%/sdk/include/ccd_features.h',
+            
+            '%self.builddir%/sdk/include/ccdi_rpc.pb.h',
+            '%self.builddir%/sdk/include/ccd_types.pb.h',
+            '%self.builddir%/sdk/include/vplex_common_types.pb.h',
+            '%self.builddir%/sdk/include/vplex_community_types.pb.h',
+            '%self.builddir%/sdk/include/vplex_vs_directory_service_types.pb.h',
+            '%self.builddir%/sdk/include/media_metadata_types.pb.h',
+            
+            '%self.builddir%/sdk/doc/ccdi_rpc.proto',
+            '%self.builddir%/sdk/doc/ccd_types.proto',
+            '%self.builddir%/sdk/doc/vplex_common_types.proto',
+            '%self.builddir%/sdk/doc/vplex_community_types.proto',
+            '%self.builddir%/sdk/doc/vplex_vs_directory_service_types.proto',
+            '%self.builddir%/sdk/doc/media_metadata_types.proto',
+            
+            '%self.builddir%/sdk/include/gvm_configuration.h',
+            '%self.builddir%/sdk/include/gvm_errors.h',
+            
+            '%self.builddir%/sdk/include/vpl_conv.h',
+            '%self.builddir%/sdk/include/vpl_error.h',
+            '%self.builddir%/sdk/include/vpl_fs.h',
+            '%self.builddir%/sdk/include/vpl_lazy_init.h',
+            '%self.builddir%/sdk/include/vpl_limits.h',
+            '%self.builddir%/sdk/include/vpl_net.h',
+            '%self.builddir%/sdk/include/vpl_plat.h',
+            '%self.builddir%/sdk/include/vpl_socket.h',
+            '%self.builddir%/sdk/include/vpl_srwlock.h',
+            '%self.builddir%/sdk/include/vpl_string.h',
+            '%self.builddir%/sdk/include/vpl_th.h',
+            '%self.builddir%/sdk/include/vpl_thread.h',
+            '%self.builddir%/sdk/include/vpl_time.h',
+            '%self.builddir%/sdk/include/vpl_types.h',
+            '%self.builddir%/sdk/include/vpl_user.h',
+            
+            '%self.builddir%/sdk/include/vplu.h',
+            '%self.builddir%/sdk/include/vplu_atomic.h',
+            '%self.builddir%/sdk/include/vplu_common.h',
+            '%self.builddir%/sdk/include/vplu_debug.h',
+            '%self.builddir%/sdk/include/vplu_format.h',
+            '%self.builddir%/sdk/include/vplu_missing.h',
+            '%self.builddir%/sdk/include/vplu_mutex_autolock.hpp',
+            '%self.builddir%/sdk/include/vplu_types.h',
+            '%self.builddir%/sdk/include/vplu_version.h',
+            
+            '%self.builddir%/sdk/include/vplex_community_types.h',
+            '%self.builddir%/sdk/include/vplex_error.h',
+            '%self.builddir%/sdk/include/vplex_plat.h',
+            '%self.builddir%/sdk/include/vplex_time.h',
+            '%self.builddir%/sdk/include/vplex_trace.h',
+            '%self.builddir%/sdk/include/vplex_user.h',
+            
+            '%self.builddir%/sdk/include/google/protobuf/io/coded_stream.h',
+            '%self.builddir%/sdk/include/google/protobuf/stubs/common.h',
+            '%self.builddir%/sdk/include/google/protobuf/extension_set.h',
+            '%self.builddir%/sdk/include/google/protobuf/generated_message_reflection.h',
+            '%self.builddir%/sdk/include/google/protobuf/generated_message_util.h',
+            '%self.builddir%/sdk/include/google/protobuf/message.h',
+            '%self.builddir%/sdk/include/google/protobuf/message_lite.h',
+            '%self.builddir%/sdk/include/google/protobuf/repeated_field.h',
+            '%self.builddir%/sdk/include/google/protobuf/unknown_field_set.h',
+            
+            '%self.builddir%/sdk/samples/src/logout.cpp',
+            '%self.builddir%/sdk/samples/src/setup_sync_agent.cpp',
+            '%self.builddir%/sdk/samples/src/vssi.cpp',
+            
+            '%self.builddir%/sdk/include/vssi.h',
+            '%self.builddir%/sdk/include/vssi_error.h',
+            '%self.builddir%/sdk/include/vssi_types.h',
+            
+            '%self.builddir%/sdk/include/vssts.hpp',
+            '%self.builddir%/sdk/include/vssts_error.hpp',
+            '%self.builddir%/sdk/include/vssts_types.hpp',
+            
+            '%self.builddir%/sdk/include/log.h',
+        ],
+        builddirs = [
+        ],
+        recipe = [
+            'cp -f %(in2)s %(out1)s',
+            'cp -f %(in3)s %(out2)s',
+            
+            'cp -f %(in4)s %(out3)s',
+            'cp -f %(in5)s %(out4)s',
+            'cp -f %(in6)s %(out5)s',
+            'cp -f %(in7)s %(out6)s',
+            'cp -f %(in8)s %(out7)s',
+            'cp -f %(in9)s %(out8)s',
+            
+            'cp -f %(in10)s %(out9)s',
+            'cp -f %(in11)s %(out10)s',
+            'cp -f %(in12)s %(out11)s',
+            'cp -f %(in13)s %(out12)s',
+            'cp -f %(in14)s %(out13)s',
+            'cp -f %(in15)s %(out14)s',
+            
+            'cp -f %(in16)s %(out15)s',
+            'cp -f %(in17)s %(out16)s',
+            
+            'cp -f %(in18)s %(out17)s',
+            'cp -f %(in19)s %(out18)s',
+            'cp -f %(in20)s %(out19)s',
+            'cp -f %(in21)s %(out20)s',
+            'cp -f %(in22)s %(out21)s',
+            'cp -f %(in23)s %(out22)s',
+            'cp -f %(in24)s %(out23)s',
+            'cp -f %(in25)s %(out24)s',
+            'cp -f %(in26)s %(out25)s',
+            'cp -f %(in27)s %(out26)s',
+            'cp -f %(in28)s %(out27)s',
+            'cp -f %(in29)s %(out28)s',
+            'cp -f %(in30)s %(out29)s',
+            'cp -f %(in31)s %(out30)s',
+            'cp -f %(in32)s %(out31)s',
+    
+            'cp -f %(in33)s %(out32)s',
+            'cp -f %(in34)s %(out33)s',
+            'cp -f %(in35)s %(out34)s',
+            'cp -f %(in36)s %(out35)s',
+            'cp -f %(in37)s %(out36)s',
+            'cp -f %(in38)s %(out37)s',
+            'cp -f %(in39)s %(out38)s',
+            'cp -f %(in40)s %(out39)s',
+            'cp -f %(in41)s %(out40)s',
+            
+            'cp -f %(in42)s %(out41)s',
+            'cp -f %(in43)s %(out42)s',
+            'cp -f %(in44)s %(out43)s',
+            'cp -f %(in45)s %(out44)s',
+            'cp -f %(in46)s %(out45)s',
+            'cp -f %(in47)s %(out46)s',
+            
+            'cp -f %(in48)s %(out47)s',
+            'cp -f %(in49)s %(out48)s',
+            'cp -f %(in50)s %(out49)s',
+            'cp -f %(in51)s %(out50)s',
+            'cp -f %(in52)s %(out51)s',
+            'cp -f %(in53)s %(out52)s',
+            'cp -f %(in54)s %(out53)s',
+            'cp -f %(in55)s %(out54)s',
+            'cp -f %(in56)s %(out55)s',
+            
+            'cp -f %(in57)s %(out56)s',
+            'cp -f %(in58)s %(out57)s',
+            'cp -f %(in59)s %(out58)s',
+            
+            'cp -f %(in60)s %(out59)s',
+            'cp -f %(in61)s %(out60)s',
+            'cp -f %(in62)s %(out61)s',
+            
+            'cp -f %(in63)s %(out62)s',
+            'cp -f %(in64)s %(out63)s',
+            'cp -f %(in65)s %(out64)s',
+            
+            'cp -f %(in66)s %(out65)s',
+        ],
+    )
+    
+    if platform == 'msvc':
+        if product == 'msvc':
+            lib_srcs = [
+                '$(BUILDROOT)/build_msvc/PersonalCloudAll/Release/CCDIClientAndDeps/Win32/CCDIClientAndDeps.lib',
+                '$(BUILDROOT)/build_msvc/PersonalCloudAll/Debug/CCDIClientAndDeps/Win32/CCDIClientAndDeps.lib',
+                
+                '%self.srcdir%/sdk/samples/vsprojects/CloudClientSDK.sln',
+                '%self.srcdir%/sdk/samples/vsprojects/logout/logout.vcproj',
+                '%self.srcdir%/sdk/samples/vsprojects/setup_sync_agent/setup_sync_agent.vcproj',
+                
+                '$(BUILDROOT)/build_msvc/PersonalCloudAll/Release/vssi/Win32/vssi.lib',
+                '$(BUILDROOT)/build_msvc/PersonalCloudAll/Release/vssi/Win32_obj/vssi_obj.pdb',
+                '$(BUILDROOT)/build_msvc/PersonalCloudAll/Debug/vssi/Win32/vssi.lib',
+                '$(BUILDROOT)/build_msvc/PersonalCloudAll/Debug/vssi/Win32_obj/vssi_obj.pdb',
+                
+                '$(BUILDROOT)/build_msvc/PersonalCloudAll/Release/vssts/Win32/vssts.lib',
+                '$(BUILDROOT)/build_msvc/PersonalCloudAll/Release/vssts/Win32_obj/vssts_obj.pdb',
+                '$(BUILDROOT)/build_msvc/PersonalCloudAll/Debug/vssts/Win32/vssts.lib',
+                '$(BUILDROOT)/build_msvc/PersonalCloudAll/Debug/vssts/Win32_obj/vssts_obj.pdb',
+                
+                '$(BUILDROOT)/build_msvc/PersonalCloudAll/Release/CCDIClient/Win32_obj/ccdiclient_obj.pdb',
+                '$(BUILDROOT)/build_msvc/PersonalCloudAll/Debug/CCDIClient/Win32_obj/ccdiclient_obj.pdb',
+                '$(BUILDROOT)/build_msvc/PersonalCloudAll/Release/media_metadata_shared_impl/Win32_obj/media_metadata_shared_impl_obj.pdb',
+                '$(BUILDROOT)/build_msvc/PersonalCloudAll/Debug/media_metadata_shared_impl/Win32_obj/media_metadata_shared_impl_obj.pdb',
+                '$(BUILDROOT)/build_msvc/PersonalCloudAll/Release/protorpc_client/Win32_obj/protorpc_client_obj.pdb',
+                '$(BUILDROOT)/build_msvc/PersonalCloudAll/Debug/protorpc_client/Win32_obj/protorpc_client_obj.pdb',
+                '$(BUILDROOT)/build_msvc/PersonalCloudAll/Release/internal_libs/Win32_obj/internal_libs_obj.pdb',
+                '$(BUILDROOT)/build_msvc/PersonalCloudAll/Debug/internal_libs/Win32_obj/internal_libs_obj.pdb',
+                '$(BUILDROOT)/build_msvc/PersonalCloudAll/Release/vplex/Win32_obj/vplex_obj.pdb',
+                '$(BUILDROOT)/build_msvc/PersonalCloudAll/Debug/vplex/Win32_obj/vplex_obj.pdb',
+                
+            ]
+            lib_dests = [
+                '%self.builddir%/sdk/lib/Release/Win32/CCDIClientAndDeps.lib',
+                '%self.builddir%/sdk/lib/Debug/Win32/CCDIClientAndDeps.lib',
+                
+                '%self.builddir%/sdk/vsprojects/CloudClientSDK.sln',
+                '%self.builddir%/sdk/vsprojects/logout/logout.vcproj',
+                '%self.builddir%/sdk/vsprojects/setup_sync_agent/setup_sync_agent.vcproj',
+                
+                '%self.builddir%/sdk/lib/Release/Win32/vssi.lib',
+                '%self.builddir%/sdk/lib/Release/Win32/vssi_obj.pdb',
+                '%self.builddir%/sdk/lib/Debug/Win32/vssi.lib',
+                '%self.builddir%/sdk/lib/Debug/Win32/vssi_obj.pdb',
+
+                '%self.builddir%/sdk/lib/Release/Win32/vssts.lib',
+                '%self.builddir%/sdk/lib/Release/Win32/vssts_obj.pdb',
+                '%self.builddir%/sdk/lib/Debug/Win32/vssts.lib',
+                '%self.builddir%/sdk/lib/Debug/Win32/vssts_obj.pdb',
+
+                '%self.builddir%/sdk/lib/Release/Win32/ccdiclient_obj.pdb',
+                '%self.builddir%/sdk/lib/Debug/Win32/ccdiclient_obj.pdb',
+                '%self.builddir%/sdk/lib/Release/Win32/media_metadata_shared_impl_obj.pdb',
+                '%self.builddir%/sdk/lib/Debug/Win32/media_metadata_shared_impl_obj.pdb',
+                '%self.builddir%/sdk/lib/Release/Win32/protorpc_client_obj.pdb',
+                '%self.builddir%/sdk/lib/Debug/Win32/protorpc_client_obj.pdb',
+                '%self.builddir%/sdk/lib/Release/Win32/internal_libs_obj.pdb',
+                '%self.builddir%/sdk/lib/Debug/Win32/internal_libs_obj.pdb',
+                '%self.builddir%/sdk/lib/Release/Win32/vplex_obj.pdb',
+                '%self.builddir%/sdk/lib/Debug/Win32/vplex_obj.pdb',
+            ]
+            lib_recipes = [
+                'mkdir -p %(self.builddir)s/sdk/lib/Release/Win32/',
+                'mkdir -p %(self.builddir)s/sdk/lib/Debug/Win32/',
+                'mkdir -p %(self.builddir)s/sdk/vsprojects/logout/',
+                'mkdir -p %(self.builddir)s/sdk/vsprojects/setup_sync_agent/',
+                'cp -f %(in2)s %(out1)s',
+                'cp -f %(in3)s %(out2)s',
+                
+                'unix2dos < %(in4)s > %(out3)s',
+                'unix2dos < %(in5)s > %(out4)s',
+                'unix2dos < %(in6)s > %(out5)s',
+                
+                'cp -f %(in7)s %(out6)s',
+                'cp -f %(in8)s %(out7)s',
+                'cp -f %(in9)s %(out8)s',
+                'cp -f %(in10)s %(out9)s',
+                'cp -f %(in11)s %(out10)s',
+                'cp -f %(in12)s %(out11)s',
+                'cp -f %(in13)s %(out12)s',
+                'cp -f %(in14)s %(out13)s',
+                'cp -f %(in15)s %(out14)s',
+                'cp -f %(in16)s %(out15)s',
+                'cp -f %(in17)s %(out16)s',
+                'cp -f %(in18)s %(out17)s',
+                'cp -f %(in19)s %(out18)s',
+                'cp -f %(in20)s %(out19)s',
+                'cp -f %(in21)s %(out20)s',
+                'cp -f %(in22)s %(out21)s',
+                'cp -f %(in23)s %(out22)s',
+                'cp -f %(in24)s %(out23)s',
+            ]
+        elif product == 'winrt':
+            lib_srcs = [
+                '$(BUILDROOT)/build_winrt/PersonalCloudAll/Release/CCLibAndDeps/Win32/CCLibAndDeps.lib',
+                '$(BUILDROOT)/build_winrt/PersonalCloudAll/Debug/CCLibAndDeps/Win32/CCLibAndDeps.lib',
+                
+                '$(BUILDROOT)/build_winrt/PersonalCloudAll/Release/test_vpl_metro/Win32/test_vpl_metro.pdb',
+                '$(BUILDROOT)/build_winrt/PersonalCloudAll/Debug/test_vpl_metro/Win32/test_vpl_metro.pdb',
+                '$(BUILDROOT)/build_winrt/PersonalCloudAll/Release/test_vplex_metro/Win32/test_vplex_metro.pdb',
+                '$(BUILDROOT)/build_winrt/PersonalCloudAll/Debug/test_vplex_metro/Win32/test_vplex_metro.pdb',
+                '$(BUILDROOT)/build_winrt/PersonalCloudAll/Release/test_ccd/Win32/test_ccd.pdb',
+                '$(BUILDROOT)/build_winrt/PersonalCloudAll/Debug/test_ccd/Win32/test_ccd.pdb',
+                '$(BUILDROOT)/build_winrt/PersonalCloudAll/Release/test_ccd_single_sign_on/Win32/test_ccd_single_sign_on.pdb',
+                '$(BUILDROOT)/build_winrt/PersonalCloudAll/Debug/test_ccd_single_sign_on/Win32/test_ccd_single_sign_on.pdb',
+                '$(BUILDROOT)/build_winrt/PersonalCloudAll/Release/dx_remote_agent/Win32/dx_remote_agent.pdb',
+                '$(BUILDROOT)/build_winrt/PersonalCloudAll/Debug/dx_remote_agent/Win32/dx_remote_agent.pdb',
+                
+                '$(BUILDROOT)/release/winrt/actool_winRT/actool_winRT_1.0.0.0_Win32_Test',
+                
+                '%self.srcdir%/sdk/samples/vsprojects/CloudClientSDK.sln',
+                '%self.srcdir%/sdk/samples/vsprojects/logout/logout.vcproj',
+                '%self.srcdir%/sdk/samples/vsprojects/setup_sync_agent/setup_sync_agent.vcproj',
+            ]
+            lib_dests = [
+                '%self.builddir%/sdk/lib/Release/Win32/CCDIClientAndDeps.lib',
+                '%self.builddir%/sdk/lib/Debug/Win32/CCDIClientAndDeps.lib',
+                
+                '$(BUILDROOT)/release/winrt/tests/test_vpl_metro/test_vpl_metro_1.0.0.0_Win32_Test/test_vpl_metro.pdb',
+                '$(BUILDROOT)/release/winrt/tests/test_vpl_metro/test_vpl_metro_1.0.0.0_Win32_Debug_Test/test_vpl_metro.pdb',
+                '$(BUILDROOT)/release/winrt/tests/test_vplex_metro/test_vplex_metro_1.0.0.0_Win32_Test/test_vplex_metro.pdb',
+                '$(BUILDROOT)/release/winrt/tests/test_vplex_metro/test_vplex_metro_1.0.0.0_Win32_Debug_Test/test_vplex_metro.pdb',
+                '$(BUILDROOT)/release/winrt/tests/test_ccd/test_ccd_1.0.0.0_Win32_Test/test_ccd.pdb',
+                '$(BUILDROOT)/release/winrt/tests/test_ccd/test_ccd_1.0.0.0_Win32_Debug_Test/test_ccd.pdb',
+                '$(BUILDROOT)/release/winrt/tests/test_ccd_single_sign_on/test_ccd_single_sign_on_1.0.0.0_Win32_Test/test_ccd_single_sign_on.pdb',
+                '$(BUILDROOT)/release/winrt/tests/test_ccd_single_sign_on/test_ccd_single_sign_on_1.0.0.0_Win32_Debug_Test/test_ccd_single_sign_on.pdb',
+                '$(BUILDROOT)/release/winrt/tests/dx_remote_agent/dx_remote_agent_1.0.0.0_Win32_Test/dx_remote_agent.pdb',
+                '$(BUILDROOT)/release/winrt/tests/dx_remote_agent/dx_remote_agent_1.0.0.0_Win32_Debug_Test/dx_remote_agent.pdb',
+                
+                '%self.builddir%/sdk/actool_winRT',
+                
+                '%self.builddir%/sdk/vsprojects/CloudClientSDK.sln',
+                '%self.builddir%/sdk/vsprojects/logout/logout.vcproj',
+                '%self.builddir%/sdk/vsprojects/setup_sync_agent/setup_sync_agent.vcproj',
+            ]
+            lib_recipes = [
+                'mkdir -p %(self.builddir)s/sdk/lib/Release/Win32/',
+                'mkdir -p %(self.builddir)s/sdk/lib/Debug/Win32/',
+                'mkdir -p %(self.builddir)s/sdk/actool_winRT/',
+                'mkdir -p %(self.builddir)s/sdk/vsprojects/logout/',
+                'mkdir -p %(self.builddir)s/sdk/vsprojects/setup_sync_agent/',
+                'cp -f %(in2)s %(out1)s',
+                'cp -f %(in3)s %(out2)s',
+                'cp -f %(in4)s %(out3)s',
+                'cp -f %(in5)s %(out4)s',
+                'cp -f %(in6)s %(out5)s',
+                'cp -f %(in7)s %(out6)s',
+                'cp -f %(in8)s %(out7)s',
+                'cp -f %(in9)s %(out8)s',
+                'cp -f %(in10)s %(out9)s',
+                'cp -f %(in11)s %(out10)s',
+                'cp -f %(in12)s %(out11)s',
+                'cp -f %(in13)s %(out12)s',
+                
+                'rm -rf %(out13)s',
+                'mv -f %(in14)s %(out13)s',
+                
+                'unix2dos < %(in15)s > %(out14)s',
+                'unix2dos < %(in16)s > %(out15)s',
+                'unix2dos < %(in17)s > %(out16)s',
+                'rm -rf $(BUILDROOT)/release/winrt/actool_winRT',
+            ]
+        elif product == 'woa':
+            lib_srcs = [
+                '$(BUILDROOT)/build_woa/PersonalCloudAll/Release/CCLibAndDeps/ARM/CCLibAndDeps.lib',
+                '$(BUILDROOT)/build_woa/PersonalCloudAll/Debug/CCLibAndDeps/ARM/CCLibAndDeps.lib',
+                '$(BUILDROOT)/release/winrt/actool_winRT/actool_winRT_1.0.0.0_ARM_Test',
+                '$(BUILDROOT)/release/winrt/tests/',
+                
+                '$(BUILDROOT)/build_woa/PersonalCloudAll/Release/test_vpl_metro/ARM/test_vpl_metro.pdb',
+                '$(BUILDROOT)/build_woa/PersonalCloudAll/Debug/test_vpl_metro/ARM/test_vpl_metro.pdb',
+                '$(BUILDROOT)/build_woa/PersonalCloudAll/Release/test_vplex_metro/ARM/test_vplex_metro.pdb',
+                '$(BUILDROOT)/build_woa/PersonalCloudAll/Debug/test_vplex_metro/ARM/test_vplex_metro.pdb',
+                '$(BUILDROOT)/build_woa/PersonalCloudAll/Release/test_ccd/ARM/test_ccd.pdb',
+                '$(BUILDROOT)/build_woa/PersonalCloudAll/Debug/test_ccd/ARM/test_ccd.pdb',
+                '$(BUILDROOT)/build_woa/PersonalCloudAll/Release/test_ccd_single_sign_on/ARM/test_ccd_single_sign_on.pdb',
+                '$(BUILDROOT)/build_woa/PersonalCloudAll/Debug/test_ccd_single_sign_on/ARM/test_ccd_single_sign_on.pdb',
+                '$(BUILDROOT)/build_woa/PersonalCloudAll/Release/dx_remote_agent/ARM/dx_remote_agent.pdb',
+                '$(BUILDROOT)/build_woa/PersonalCloudAll/Debug/dx_remote_agent/ARM/dx_remote_agent.pdb',
+                
+                '%self.srcdir%/sdk/samples/vsprojects/CloudClientSDK.sln',
+                '%self.srcdir%/sdk/samples/vsprojects/logout/logout.vcproj',
+                '%self.srcdir%/sdk/samples/vsprojects/setup_sync_agent/setup_sync_agent.vcproj',
+            ]
+            lib_dests = [
+                '%self.builddir%/sdk/lib/Release/ARM/CCDIClientAndDeps.lib',
+                '%self.builddir%/sdk/lib/Debug/ARM/CCDIClientAndDeps.lib',
+                '%self.builddir%/sdk/actool_winRT',
+                '$(BUILDROOT)/release/woa/',
+                
+                '$(BUILDROOT)/release/woa/tests/test_vpl_metro/test_vpl_metro_1.0.0.0_ARM_Test/test_vpl_metro.pdb',
+                '$(BUILDROOT)/release/woa/tests/test_vpl_metro/test_vpl_metro_1.0.0.0_ARM_Debug_Test/test_vpl_metro.pdb',
+                '$(BUILDROOT)/release/woa/tests/test_vplex_metro/test_vplex_metro_1.0.0.0_ARM_Test/test_vplex_metro.pdb',
+                '$(BUILDROOT)/release/woa/tests/test_vplex_metro/test_vplex_metro_1.0.0.0_ARM_Debug_Test/test_vplex_metro.pdb',
+                '$(BUILDROOT)/release/woa/tests/test_ccd/test_ccd_1.0.0.0_ARM_Test/test_ccd.pdb',
+                '$(BUILDROOT)/release/woa/tests/test_ccd/test_ccd_1.0.0.0_ARM_Debug_Test/test_ccd.pdb',
+                '$(BUILDROOT)/release/woa/tests/test_ccd_single_sign_on/test_ccd_single_sign_on_1.0.0.0_ARM_Test/test_ccd_single_sign_on.pdb',
+                '$(BUILDROOT)/release/woa/tests/test_ccd_single_sign_on/test_ccd_single_sign_on_1.0.0.0_ARM_Debug_Test/test_ccd_single_sign_on.pdb',
+                '$(BUILDROOT)/release/woa/tests/dx_remote_agent/dx_remote_agent_1.0.0.0_ARM_Test/dx_remote_agent.pdb',
+                '$(BUILDROOT)/release/woa/tests/dx_remote_agent/dx_remote_agent_1.0.0.0_ARM_Debug_Test/dx_remote_agent.pdb',
+                
+                '%self.builddir%/sdk/vsprojects/CloudClientSDK.sln',
+                '%self.builddir%/sdk/vsprojects/logout/logout.vcproj',
+                '%self.builddir%/sdk/vsprojects/setup_sync_agent/setup_sync_agent.vcproj',
+            ]
+            lib_recipes = [
+                'mkdir -p %(self.builddir)s/sdk/lib/Release/ARM/',
+                'mkdir -p %(self.builddir)s/sdk/lib/Debug/ARM/',
+                'mkdir -p %(self.builddir)s/sdk/actool_winRT/',
+                'mkdir -p %(self.builddir)s/sdk/vsprojects/logout/',
+                'mkdir -p %(self.builddir)s/sdk/vsprojects/setup_sync_agent/',
+                'rm -rf $(BUILDROOT)/release/woa/tests/',
+                'cp -f %(in2)s %(out1)s',
+                'cp -f %(in3)s %(out2)s',
+                'mv -f %(in4)s %(out3)s',
+                'mv -f %(in5)s %(out4)s',
+                
+                'cp -f %(in6)s %(out5)s',
+                'cp -f %(in7)s %(out6)s',
+                'cp -f %(in8)s %(out7)s',
+                'cp -f %(in9)s %(out8)s',
+                'cp -f %(in10)s %(out9)s',
+                'cp -f %(in11)s %(out10)s',
+                'cp -f %(in12)s %(out11)s',
+                'cp -f %(in13)s %(out12)s',
+                'cp -f %(in14)s %(out13)s',
+                'cp -f %(in15)s %(out14)s',
+                
+                'unix2dos < %(in16)s > %(out15)s',
+                'unix2dos < %(in17)s > %(out16)s',
+                'unix2dos < %(in18)s > %(out17)s',
+                'rm -rf $(BUILDROOT)/release/winrt/',
+            ]
+        
+        # lib_srcs should all be generated by the MSVC build.
+        # (But we can't list them there as outputs because it's external_phony.)
+        # Without this, make wouldn't know how to build the inputs for 'ccdi_sdk'.
+        # There should be no need to explicitly declare this as ccdi_sdk's deps.
+        custom(
+            name = 'msvc_personal_cloud_all_dummy',
+            deps = ['/:msvc_personal_cloud_all'],
+            input = [],
+            output = lib_srcs,
+            builddirs = [],
+            recipe = [],
+        )
+    elif platform == 'ios':
+        # TODO: bug 1719: these are not the paths we want
+        lib_srcs = [
+            '$(SRCROOT)/projects/xcode/PersonalCloud/ccd/build/Release-iphoneos/libccd.a',
+            '$(SRCROOT)/projects/xcode/PersonalCloud/ccd/build/Debug-iphoneos/libccd.a',
+        ]
+        lib_dests = [
+            '%self.builddir%/sdk/lib/Release/libccd.a',
+            '%self.builddir%/sdk/lib/Debug/libccd.a',
+        ]
+        lib_recipes = [
+            'mkdir -p %(self.builddir)s/sdk/lib/Release/',
+            'mkdir -p %(self.builddir)s/sdk/lib/Debug/',
+            'cp -f %(in2)s %(out1)s',
+            'cp -f %(in3)s %(out2)s',
+        ]
+        
+        # lib_srcs should all be generated by the xcode build.
+        # (But we can't list them there because it's external_phony.)
+        # Without this, make wouldn't know how to build the inputs for 'ccdi_sdk'.
+        # There should be no need to explicitly declare this as ccdi_sdk's deps.
+        custom(
+            name = 'ios_personal_cloud_all_dummy',
+            deps = ['/:ios_personal_cloud_all'],
+            input = [],
+            output = lib_srcs,
+            builddirs = [],
+            recipe = [],
+        )
+    elif platform == 'cloudnode':
+        lib_srcs = [
+            '%self.builddir%/libccd_client.a',
+            '%self.builddir%/libccd_types.a',
+            '%self.builddir%/../../external/protobuflib/protobuflib.a',
+            '%self.builddir%/../../internal/protorpc/protorpc.a',
+            '%self.builddir%/../../internal/media_metadata/common/libmedia_metadata_common.a',
+            '%self.builddir%/../../internal/vssi/libvssi.a',
+            '%self.builddir%/../../internal/vssts/libvssts.a',
+            '%self.builddir%/../../internal/vssts/shim/libvsstsshim.a',
+            '%self.builddir%/../../internal/vssts/wrapper/libvsstswrapper.a',
+            '%self.builddir%/../../internal/csl/libcsl.a',
+            '%self.builddir%/../../internal/log/liblog.a',
+            '%self.builddir%/../../vpl/libvplcore.a',
+            '%self.builddir%/../../vplex/libvplex.a',
+            '%self.builddir%/../../vplex/libvplexcore.a',
+            '%self.builddir%/../../vplex/proto/proto.a',
+            '%self.builddir%/../../internal/Ts2Alt/Ext/libTs2ExtClient.a',
+           ]  + ([
+             '%self.builddir%/../../external/protobuflib/protobuflib-shr.so',
+              ] if platform == 'cloudnode' else [
+           ])
+        lib_dests = [
+            '%self.builddir%/sdk/lib/libccd_client.a',
+            '%self.builddir%/sdk/lib/libccd_types.a',
+            '%self.builddir%/sdk/lib/libprotobuf.a',
+            '%self.builddir%/sdk/lib/libprotorpc.a',
+            '%self.builddir%/sdk/lib/libmedia_metadata_common.a',
+            '%self.builddir%/sdk/lib/libvssi.a',
+            '%self.builddir%/sdk/lib/libvssts.a',
+            '%self.builddir%/sdk/lib/libvsstsshim.a',
+            '%self.builddir%/sdk/lib/libvsstswrapper.a',
+            '%self.builddir%/sdk/lib/libcsl.a',
+            '%self.builddir%/sdk/lib/liblog.a',
+            '%self.builddir%/sdk/lib/libvplcore.a',
+            '%self.builddir%/sdk/lib/libvplex.a',
+            '%self.builddir%/sdk/lib/libvplexcore.a',
+            '%self.builddir%/sdk/lib/libvplexproto.a',
+            '%self.builddir%/sdk/lib/libTs2ExtClient.a',
+           ]  + ([
+             '%self.builddir%/sdk/lib/libprotobuf-shr.so',
+              ] if platform == 'cloudnode' else [
+           ])
+        lib_recipes = [
+            'cp -f %(in2)s %(out1)s',
+            'cp -f %(in3)s %(out2)s',
+            'cp -f %(in4)s %(out3)s',
+            'cp -f %(in5)s %(out4)s',
+            'cp -f %(in6)s %(out5)s',
+            'cp -f %(in7)s %(out6)s',
+            'cp -f %(in8)s %(out7)s',
+            'cp -f %(in9)s %(out8)s',
+            'cp -f %(in10)s %(out9)s',
+            'cp -f %(in11)s %(out10)s',
+            'cp -f %(in12)s %(out11)s',
+            'cp -f %(in13)s %(out12)s',
+            'cp -f %(in14)s %(out13)s',
+            'cp -f %(in15)s %(out14)s',
+            'cp -f %(in16)s %(out15)s',
+            'cp -f %(in17)s %(out16)s',
+           ] + (
+            [
+             'cp -f %(in18)s %(out17)s',
+            ] if platform == 'cloudnode' else []
+           )
+    else:
+        raise Exception("Need to add new product!")
+    
+    custom(
+        name = 'ccdi_sdk',
+        deps = [
+            ':cc_sdk_common',
+            # The inputs (lib_srcs) implicitly declare additional dependencies.
+        ],
+        input = [
+            '$(SRCROOT)/make/scripts/remove_internal_source.py',
+        ] + lib_srcs,
+        output = [
+        ] + lib_dests,
+        builddirs = [
+        ],
+        recipe = [
+        ] + lib_recipes,
+    )

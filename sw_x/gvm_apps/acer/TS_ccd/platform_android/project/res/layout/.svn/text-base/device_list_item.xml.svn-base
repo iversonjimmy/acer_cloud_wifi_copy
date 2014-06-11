@@ -1,0 +1,41 @@
+<RelativeLayout
+    android:id="@+id/device_item_wrapper"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@+id/device_item_image_icon"
+        android:layout_width="wrap_content"
+        android:src="@drawable/device_item_icon_1"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true">
+    </ImageView>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dip"
+        android:orientation="vertical"
+        android:layout_toRightOf="@+id/device_item_image_icon"
+        android:layout_centerVertical="true">
+        
+        <TextView
+	        android:layout_width="wrap_content"
+	        android:id="@+id/device_item_label_devicename"
+	        android:text="TextView"
+	        android:layout_height="wrap_content"></TextView>
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:id="@+id/device_item_label_devicetype"
+	        android:text="TextView"
+	        android:layout_height="wrap_content"></TextView>
+    </LinearLayout>
+    
+    <CheckBox
+        android:id="@+id/device_item_checkbox_link"
+        android:layout_width="wrap_content"
+        android:text=""
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"></CheckBox>
+</RelativeLayout>

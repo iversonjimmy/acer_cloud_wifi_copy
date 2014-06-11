@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+<TextView  
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content" 
+    android:layout_gravity="left"
+    android:text="@string/Prompt_DomainName"
+    />
+<EditText android:id="@+id/EditText_DomainName" 
+	android:text=""
+	android:inputType="textWebEditText"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_marginBottom="8dp">
+	<requestFocus />
+</EditText>
+
+<TextView  
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content" 
+    android:layout_gravity="left"
+    android:text="@string/Prompt_BrandName"
+    />
+<EditText android:id="@+id/EditText_BrandName" 
+	android:text=""
+	android:inputType="textWebEditText"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_marginBottom="8dp">
+	<requestFocus />
+</EditText>
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="left"
+    android:text="@string/Prompt_UserGroup" 
+    />
+<EditText android:id="@+id/EditText_UserGroup" 
+	android:text=""
+	android:inputType="textWebEditText"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_marginBottom="8dp">
+</EditText>
+
+<LinearLayout
+    android:id="@+id/buttons"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/Button_Save"
+        android:layout_width="53px"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dip"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:onClick="onClick_Save"
+        android:text="@string/Button_Save" />
+
+    <Button
+        android:id="@+id/Button_Cancel"
+        android:layout_width="53px"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dip"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:onClick="onClick_Cancel"
+        android:text="@string/Button_Cancel" />
+
+    <Button
+        android:id="@+id/Button_Delete"
+        android:layout_width="53px"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dip"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:onClick="onClick_Delete"
+        android:text="@string/Button_Delete" />
+</LinearLayout>
+
+</LinearLayout>

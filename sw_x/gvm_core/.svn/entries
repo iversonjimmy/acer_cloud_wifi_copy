@@ -1,0 +1,58 @@
+10
+
+dir
+59951
+https://src-us.ctbg.acer.com/repo/trunk/sw_x/gvm_core
+https://src-us.ctbg.acer.com/repo
+
+
+
+2014-05-21T10:16:33.980492Z
+59929
+alex.lin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+187b5c42-a02b-43e7-ba74-80c9f8da41ab
+
+devtools
+dir
+
+vpl
+dir
+
+external
+dir
+
+boot
+dir
+
+conf
+dir
+
+daemons
+dir
+
+demos
+dir
+
+docs
+dir
+
+internal
+dir
+
+vplex
+dir
+

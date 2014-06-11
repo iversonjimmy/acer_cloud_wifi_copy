@@ -1,0 +1,40 @@
+10
+
+dir
+59951
+https://src-us.ctbg.acer.com/repo/trunk/sw_x/gvm_core/boot/ghv/acpica/tools
+https://src-us.ctbg.acer.com/repo
+
+
+
+2011-01-07T08:49:12.000000Z
+43
+mcui
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+187b5c42-a02b-43e7-ba74-80c9f8da41ab
+
+acpiexec
+dir
+
+acpixtract
+dir
+
+acpisrc
+dir
+
+examples
+dir
+

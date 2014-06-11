@@ -1,0 +1,5 @@
+TARGET_PRODUCT=vm
+
+include android-x86.makedefs
+
+include android-x86.makerules

@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/56879/trunk/sw_x/gvm_core/internal/vssi/tests/vs
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/18147/trunk/sw_x/gvm_core/internal/vssi/tests/vs/BUILD
+END
+vsTest_personal_cloud_data.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repo/!svn/ver/29459/trunk/sw_x/gvm_core/internal/vssi/tests/vs/vsTest_personal_cloud_data.hpp
+END
+vsTest_personal_cloud_http.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repo/!svn/ver/28282/trunk/sw_x/gvm_core/internal/vssi/tests/vs/vsTest_personal_cloud_http.cpp
+END
+vsTest_vscs_async.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/46397/trunk/sw_x/gvm_core/internal/vssi/tests/vs/vsTest_vscs_async.cpp
+END
+vsTest_personal_cloud_http.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repo/!svn/ver/20925/trunk/sw_x/gvm_core/internal/vssi/tests/vs/vsTest_personal_cloud_http.hpp
+END
+vsTest.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/56879/trunk/sw_x/gvm_core/internal/vssi/tests/vs/vsTest.cpp
+END
+vsTest_camera_roll.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repo/!svn/ver/25481/trunk/sw_x/gvm_core/internal/vssi/tests/vs/vsTest_camera_roll.cpp
+END
+vsTest_vscs_async.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/29459/trunk/sw_x/gvm_core/internal/vssi/tests/vs/vsTest_vscs_async.hpp
+END
+vsTest_personal_cloud_data.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repo/!svn/ver/29459/trunk/sw_x/gvm_core/internal/vssi/tests/vs/vsTest_personal_cloud_data.cpp
+END
+vsTest_camera_roll.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repo/!svn/ver/25481/trunk/sw_x/gvm_core/internal/vssi/tests/vs/vsTest_camera_roll.hpp
+END

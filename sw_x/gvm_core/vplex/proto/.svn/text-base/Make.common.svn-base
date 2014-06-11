@@ -1,0 +1,38 @@
+#
+# Make rules common to all target platforms.
+# This file is included by the individual target makefiles in the
+# lower level platform build directories.
+#
+
+MODULE_NAME = vplex_types
+
+# List of .proto files for generated source
+PROTOXMLFILES = \
+	vplex_common_types.proto \
+	vplex_community_service_types.proto \
+	vplex_community_types.proto \
+	vplex_vs_directory_service_types.proto \
+# end of list
+PROTOCCFILES = \
+	$(PROTOXMLFILES) \
+	vplex_community_notifier.proto \
+# end of list
+PROTOFILES = $(PROTOCCFILES)
+
+# This isn't strictly needed, because the headers will be installed under $(ROOT).
+# But it causes the compiler to use the local headers when emitting error messages,
+# which helps the IDE direct you to the actual source file that you need to fix.
+LCINCS += -I.
+LCXXINCS += -I.
+
+GENERATED_HEADERS = $(addprefix ../,$(PROTOCCFILES:.proto=.pb.h))
+GENERATED_HEADERS += $(addprefix ../,$(PROTOXMLFILES:.proto=-xml.pb.h))
+HFILES = $(GENERATED_HEADERS)
+
+GENERATED_CXXFILES = $(PROTOCCFILES:.proto=.pb.cc)
+GENERATED_CXXFILES += $(PROTOXMLFILES:.proto=-xml.pb.cc)
+CXXFILES = $(GENERATED_CXXFILES)
+
+VPATH = ..
+
+LDIRT += $(addprefix ../,*.pb.h *.pb.cc)

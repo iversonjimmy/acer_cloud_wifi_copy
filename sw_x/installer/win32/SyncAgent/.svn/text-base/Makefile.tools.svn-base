@@ -1,0 +1,8 @@
+AUT2EXE := "C:/Program Files (x86)/AutoIt3/Aut2Exe/Aut2Exe.exe"
+
+ICONFILE := "C:/Program Files (x86)/AutoIt3/Aut2Exe/Icons/SETUP04.ICO"
+
+%.exe: %.au3
+	$(AUT2EXE) /in $< /x86 /console /icon $(ICONFILE) /out $@
+
+default all: igw_register.exe igw_restart.exe

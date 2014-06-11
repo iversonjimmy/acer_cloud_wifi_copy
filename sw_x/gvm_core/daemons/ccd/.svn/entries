@@ -1,0 +1,126 @@
+10
+
+dir
+59951
+https://src-us.ctbg.acer.com/repo/trunk/sw_x/gvm_core/daemons/ccd
+https://src-us.ctbg.acer.com/repo
+
+
+
+2014-05-21T02:36:31.651446Z
+59886
+yl.lin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+187b5c42-a02b-43e7-ba74-80c9f8da41ab
+
+java_client
+dir
+
+BUILD
+file
+
+
+
+
+2014-05-22T01:47:13.549888Z
+46960181d07bf10b83a711fe7ae6c22c
+2014-05-20T03:35:01.500505Z
+59817
+frank
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+50679
+
+sdk
+dir
+
+rpc_client
+dir
+
+tests
+dir
+
+include
+dir
+
+types
+dir
+
+java_types
+dir
+
+src_impl
+dir
+
+rpc_server
+dir
+
+README.txt
+file
+
+
+
+
+2014-05-22T01:47:13.549888Z
+813ada9abf58cfe959c852b0bea59044
+2013-05-31T00:44:10.020322Z
+37688
+steveo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+237
+
+client
+dir
+

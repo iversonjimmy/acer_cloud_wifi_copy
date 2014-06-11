@@ -1,0 +1,136 @@
+10
+
+dir
+59951
+https://src-us.ctbg.acer.com/repo/trunk/sw_x/gvm_core/internal
+https://src-us.ctbg.acer.com/repo
+
+
+
+2014-05-21T10:16:33.980492Z
+59929
+alex.lin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+187b5c42-a02b-43e7-ba74-80c9f8da41ab
+
+media_metadata
+dir
+
+ans
+dir
+
+fattr_db
+dir
+
+conf
+dir
+
+pxd
+dir
+
+datasetdb
+dir
+
+sync_config_manager
+dir
+
+cJSON2
+dir
+
+file_utils
+dir
+
+es_core_utils
+dir
+
+multicast_dns_discovery
+dir
+
+sync_config
+dir
+
+p2p
+dir
+
+error_codes
+dir
+
+Ts2
+dir
+
+Ts2Alt
+dir
+
+protobuf_file_utils
+dir
+
+log
+dir
+
+csl
+dir
+
+sig
+dir
+
+vssts
+dir
+
+protoxml
+dir
+
+image_transcode
+dir
+
+vssi
+dir
+
+simple_http
+dir
+
+es_viewer
+dir
+
+mini_ucf
+dir
+
+Stream
+dir
+
+es_types
+dir
+
+vcs
+dir
+
+iosc
+dir
+
+InterruptibleSocket
+dir
+
+db_utils
+dir
+
+exif_parser
+dir
+
+protorpc
+dir
+
+contentfile
+dir
+

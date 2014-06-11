@@ -1,0 +1,26 @@
+#! /bin/csh -fb
+
+cd ~root/java
+
+echo "Killing the test processes."
+
+foreach i (`cat automatic-hosts manual-hosts`)
+    ssh $i "killall java"
+end
+
+sleep 5
+
+foreach i (`cat automatic-hosts manual-hosts`)
+    ssh $i "killall -9 java"
+end
+
+echo "Waiting for the ports to become available."
+
+sleep 60
+
+foreach i (`cat automatic-hosts manual-hosts`)
+	echo " === Starting $i"
+	ssh $i "cd java; ./run-multi-local"
+end
+
+echo "Finished starting the clients at "`date`"."

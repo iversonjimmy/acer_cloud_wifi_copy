@@ -1,0 +1,107 @@
+package vplex.syncagent.notifier;
+
+option java_package = "igware.vplex.pb";
+option java_outer_classname = "SyncAgentNotifier";
+
+/// A user's dataset description has changed via another source and should be
+/// refreshed.
+message DatasetUpdate {
+    
+    /// UserId that the update is for.
+    required fixed64 recipient_uid = 1;
+    
+    /// The dataset that has been modified.
+    required fixed64 dataset_id = 2;
+}
+
+/// A user's dataset data has changed via another source and should be
+/// refreshed.
+message DatasetContentUpdate {
+
+    /// UserId that the update is for.
+    required fixed64 recipient_uid = 1;
+
+    /// The dataset that has been modified.
+    required fixed64 dataset_id = 2;
+}
+
+/// A device's subscription has changed via another source and should be refreshed.
+message SubscriptionUpdate {
+
+    /// UserId that the update is for.
+    required fixed64 recipient_uid = 1;
+
+    /// The device of the subscription.
+    required fixed64 device_id = 2;
+
+    /// The dataset of the subscription that has been modified.
+    required fixed64 dataset_id = 3;
+}
+
+message DeviceUnlinked {
+    
+    /// UserId that the update is for.
+    required fixed64 recipient_uid = 1;
+    
+    /// The device that was unlinked.
+    required fixed64 device_id = 2;
+}
+
+message DeviceLinked {
+    
+    /// UserId that the update is for.
+    required fixed64 recipient_uid = 1;
+    
+    /// The device that was linked.
+    required fixed64 device_id = 2;
+}
+
+message DeviceUpdate{
+
+    /// UserId that the update is for.
+    required fixed64 recipient_uid = 1;
+
+    /// The device that was updated.
+    required fixed64 device_id = 2;
+}
+
+/// Sent by the infra when it receives a VSDS UpdateStorageNodeConnection request to
+/// update the IP address/port (reported and detected) of a user's Storage Node.
+message PSNConnectionUpdate {
+    
+    /// UserId that the update is for.
+    required fixed64 recipient_uid = 1;
+    
+    /// The PSN that has connection updated.
+    required fixed64 cluster_id = 2;
+}
+
+/// A Storage Node was added or deleted.
+/// Sent by the infra when it receives a VSDS AddUserStorage request or DeleteUserStorage request.
+message UserStorageUpdate {
+    
+    /// UserId that the update is for.
+    required fixed64 recipient_uid = 1;
+}
+
+/// Async notification message from ANS (see #ANS_TYPE_SYNC_AGENT in vplex_ans_message.proto).
+/// This may contain any number of notifications.
+message SyncAgentNotification {
+
+    repeated UserStorageUpdate user_storage_update = 1;
+
+    repeated DatasetUpdate dataset_update = 2;
+
+    repeated DatasetContentUpdate dataset_content_update = 3;
+
+    repeated SubscriptionUpdate subscription_update = 4;
+
+    repeated DeviceUnlinked device_unlinked = 5;
+
+    repeated PSNConnectionUpdate psn_connection_update = 6;
+
+    repeated DeviceLinked device_linked = 7;
+
+    repeated DeviceUpdate device_update = 8;
+
+}

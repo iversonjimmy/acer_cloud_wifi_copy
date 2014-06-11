@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/40513/trunk/sw_x/projects/msvc/winRT/test_vplex_metro
+END
+App.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/25298/trunk/sw_x/projects/msvc/winRT/test_vplex_metro/App.xaml
+END
+pch.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/25298/trunk/sw_x/projects/msvc/winRT/test_vplex_metro/pch.h
+END
+App.xaml.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repo/!svn/ver/25298/trunk/sw_x/projects/msvc/winRT/test_vplex_metro/App.xaml.cpp
+END
+MainPage.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/25840/trunk/sw_x/projects/msvc/winRT/test_vplex_metro/MainPage.xaml
+END
+MainPage.xaml.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repo/!svn/ver/40513/trunk/sw_x/projects/msvc/winRT/test_vplex_metro/MainPage.xaml.cpp
+END
+test_vplex_metro.vcxproj.filters
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repo/!svn/ver/25298/trunk/sw_x/projects/msvc/winRT/test_vplex_metro/test_vplex_metro.vcxproj.filters
+END
+App.xaml.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/25298/trunk/sw_x/projects/msvc/winRT/test_vplex_metro/App.xaml.h
+END
+MainPage.xaml.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repo/!svn/ver/25840/trunk/sw_x/projects/msvc/winRT/test_vplex_metro/MainPage.xaml.h
+END
+Package.appxmanifest
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repo/!svn/ver/25767/trunk/sw_x/projects/msvc/winRT/test_vplex_metro/Package.appxmanifest
+END
+test_vplex_metro_TemporaryKey.pfx
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repo/!svn/ver/40364/trunk/sw_x/projects/msvc/winRT/test_vplex_metro/test_vplex_metro_TemporaryKey.pfx
+END
+pch.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/25298/trunk/sw_x/projects/msvc/winRT/test_vplex_metro/pch.cpp
+END
+test_vplex_metro.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repo/!svn/ver/40364/trunk/sw_x/projects/msvc/winRT/test_vplex_metro/test_vplex_metro.vcxproj
+END

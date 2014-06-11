@@ -1,0 +1,6 @@
+<sync-adapter
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:contentAuthority="com.acer.android.camerarollstream"
+    android:accountType="com.acer.accounts.ACERCLOUD"
+    android:userVisible="true"
+/>

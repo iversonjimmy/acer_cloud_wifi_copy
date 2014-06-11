@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/56752/trunk/sw_x/gvm_apps/acer/CCDMonitorService/platform_win
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/55986/trunk/sw_x/gvm_apps/acer/CCDMonitorService/platform_win/BUILD
+END
+CCDMonSrvClient.props
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repo/!svn/ver/55986/trunk/sw_x/gvm_apps/acer/CCDMonitorService/platform_win/CCDMonSrvClient.props
+END
+CCDMonitorService.props
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repo/!svn/ver/55986/trunk/sw_x/gvm_apps/acer/CCDMonitorService/platform_win/CCDMonitorService.props
+END

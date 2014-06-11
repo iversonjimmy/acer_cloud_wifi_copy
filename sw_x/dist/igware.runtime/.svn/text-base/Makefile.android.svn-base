@@ -1,0 +1,172 @@
+# -*-Makefile-*-
+export PRODUCT := android
+export HOST_PLATFORM := linux
+export APKDIR := /opt/broadon/shareddata/downloads/installer
+
+# makefile included by all sw_x/dist/igware.runtime makefiles
+include igware.runtime.common.mk
+# makefile included by all sw_x/dist/* makefiles
+include $(WORKDIR)/sw_x/dist/Makefile.common
+include $(WORKDIR)/sw_x/devtools/android/android_env_defs.mk
+
+$(info HOST_PLATFORM="$(HOST_PLATFORM)")
+$(info HOST_ARCH="$(HOST_ARCH)")
+
+APK_VERSION = $(PRODUCT_VERSION_NUMBER).$(BUILD_NUMBER)
+
+export BUILD_INFO := "$(BUILD_DATE) $(BUILD_BRANCH)"
+
+export LOCAL_SAVE_DIR := /tmp/$(BUILDER_NAME)
+
+# --- this target should clean the machine before building the product
+clean:
+	rm -fr $(BUILDROOT)/*/$(PRODUCT)
+
+bump_build_number:
+	# get lock
+	ssh $(LOCK_USER)@$(LOCK_MASTER) "$(LOCK_SCRIPT) -a get -n build_number.$(BRANCH_NAME) -t exclusive -r $(BUILDER_NAME)"
+	# get the latest version of the file
+	svn update $(BUILD_NUMBER_FILE)
+	# increment the build number
+	echo $(shell echo $$(( $(BUILD_NUMBER) + 1 )) ) > $(BUILD_NUMBER_FILE)
+	# check the change in
+	svn ci -m 'bump $(BUILDER_NAME) build number' $(BUILD_NUMBER_FILE)
+	# release lock
+	ssh $(LOCK_USER)@$(LOCK_MASTER) "$(LOCK_SCRIPT) -a release -n build_number.$(BRANCH_NAME) -t exclusive -r $(BUILDER_NAME)"
+
+# --- this target should install any tools needed to build the product
+# NOTE: This target repurposed to bump up the build number and the title version before running any other steps
+build_tools: bump_build_number
+
+# --- this target should build the product
+default:
+	python injectversion.py "../../gvm_apps/actool/platform_android/project/AndroidManifest.xml"
+	python injectversion.py "../../gvm_apps/android_cc_sdk/build_jars/project/AndroidManifest.xml"
+	python injectversion.py "../../gvm_apps/android_cc_sdk/build_native_libs/project/AndroidManifest.xml"
+	python injectversion.py "../../gvm_apps/android_cc_sdk/example_service_only/project/AndroidManifest.xml"
+	python injectversion.py "../../gvm_apps/dx_remote_agent/platform_android/project/AndroidManifest.xml"
+	python injectversion.py "../../gvm_apps/android_cc_sdk/example_remote_panel/project/AndroidManifest.xml"
+	python injectversion.py "../../gvm_apps/android_cc_sdk/example_panel_and_service/project/AndroidManifest.xml"
+	mkdir -p $(TMPDIR)
+	make -C $(WORKDIR)/sw_x default
+
+export ANDROIDCCSDK=AndroidCloudClientSDK
+export SAVE_ZIP=$(ANDROIDCCSDK).$(BUILD_DATE).$(APK_VERSION).zip
+export LNK_NAME=$(ANDROIDCCSDK).zip
+export REMOTE_SAVE_DIR=$(PRODUCT_STORAGE_DIR)/$(ANDROIDCCSDK)
+
+	# we change the naming convention here to avoid collision: 
+	#      SAVE_TGZ -> OUTPUT_SAVE_TGZ, REMOTE_SAVE_DIR -> OUTPUT_REMOTE_SAVE_DIR
+	export OUTPUT_SAVE_TGZ=$(PRODUCT)_output.$(BUILD_DATE).$(BUILD_VERSION).tar.gz
+	export OUTPUT_REMOTE_SAVE_DIR=$(PRODUCT_STORAGE_DIR)/$(PRODUCT)_output
+	export OUTPUT_LNK_NAME=$(PRODUCT)_output.tar.gz
+
+# archive the outputs
+copy_to_store:
+	# IGWARE ACTOOL
+	ssh $(STORE_USER)@$(STORE_HOST) "mkdir -p $(PRODUCT_STORAGE_DIR)/actool_app-release"
+	scp $(BUILDROOT)/release/$(PRODUCT)/gvm_apps/actool/platform_android/actool_app/bin/actool_app-release.apk $(STORE_USER)@$(STORE_HOST):$(PRODUCT_STORAGE_DIR)/actool_app-release/actool_app-release.$(BUILD_DATE).$(APK_VERSION).apk
+	ssh $(STORE_USER)@$(STORE_HOST) "cd $(PRODUCT_STORAGE_DIR)/actool_app-release && rm -f actool_app-release.apk && ln -s actool_app-release.$(BUILD_DATE).$(APK_VERSION).apk actool_app-release.apk"
+
+	# DXShell Remote Agent
+	ssh $(STORE_USER)@$(STORE_HOST) "mkdir -p $(PRODUCT_STORAGE_DIR)/dx_remote_agent-release"
+	scp $(BUILDROOT)/release/$(PRODUCT)/gvm_apps/dx_remote_agent/platform_android/dx_remote_agent_apk/bin/dx_remote_agent_apk-release.apk $(STORE_USER)@$(STORE_HOST):$(PRODUCT_STORAGE_DIR)/dx_remote_agent-release/dx_remote_agent-release.$(BUILD_DATE).$(APK_VERSION).apk
+	ssh $(STORE_USER)@$(STORE_HOST) "cd $(PRODUCT_STORAGE_DIR)/dx_remote_agent-release && rm -f dx_remote_agent-release.apk && ln -s dx_remote_agent-release.$(BUILD_DATE).$(APK_VERSION).apk dx_remote_agent-release.apk"
+
+	# Basic CCD Service (for use with DXShell Remote Agent)
+	ssh $(STORE_USER)@$(STORE_HOST) "mkdir -p $(PRODUCT_STORAGE_DIR)/cc_service_for_dx-release"
+	scp $(BUILDROOT)/release/$(PRODUCT)/gvm_apps/android_cc_sdk/example_service_only/example_service_only_apk/bin/example_service_only_apk-release.apk $(STORE_USER)@$(STORE_HOST):$(PRODUCT_STORAGE_DIR)/cc_service_for_dx-release/cc_service_for_dx-release.$(BUILD_DATE).$(APK_VERSION).apk
+	ssh $(STORE_USER)@$(STORE_HOST) "cd $(PRODUCT_STORAGE_DIR)/cc_service_for_dx-release && rm -f cc_service_for_dx-release.apk && ln -s cc_service_for_dx-release.$(BUILD_DATE).$(APK_VERSION).apk cc_service_for_dx-release.apk"
+
+	# tar up run_tests targets
+	mkdir -p $(LOCAL_SAVE_DIR)
+	cd $(BUILDROOT) && tar zcvf $(LOCAL_SAVE_DIR)/$(OUTPUT_SAVE_TGZ) \
+	 release/$(PRODUCT)/gvm_apps/vplexTests \
+	 release/$(PRODUCT)/gvm_apps/syncConfigTest	 
+	ssh $(STORE_USER)@$(STORE_HOST) "mkdir -p $(OUTPUT_REMOTE_SAVE_DIR)"
+	scp $(LOCAL_SAVE_DIR)/$(OUTPUT_SAVE_TGZ) $(STORE_USER)@$(STORE_HOST):$(OUTPUT_REMOTE_SAVE_DIR)/$(OUTPUT_SAVE_TGZ)
+	ssh $(STORE_USER)@$(STORE_HOST) "cd $(OUTPUT_REMOTE_SAVE_DIR) && rm -f $(OUTPUT_LNK_NAME) && ln -s $(OUTPUT_SAVE_TGZ) $(OUTPUT_LNK_NAME)"
+	rm -f $(LOCAL_SAVE_DIR)/$(OUTPUT_SAVE_TGZ)
+
+	# Zip up the Cloud Client SDK and save it off.
+	-rm -rf $(LOCAL_SAVE_DIR)/$(ANDROIDCCSDK)
+	mkdir -p $(LOCAL_SAVE_DIR)/$(ANDROIDCCSDK)/unstripped
+	cp $(BUILDROOT)/release/$(PRODUCT)/gvm_apps/android_cc_sdk/build_native_libs/libccd-jni.so $(LOCAL_SAVE_DIR)/$(ANDROIDCCSDK)/unstripped
+	cp -Rf $(BUILDROOT)/release/$(PRODUCT)/gvm_apps/android_cc_sdk/sdk/* $(LOCAL_SAVE_DIR)/$(ANDROIDCCSDK)
+	cd $(LOCAL_SAVE_DIR)/$(ANDROIDCCSDK) && \
+		zip -Tr $(LOCAL_SAVE_DIR)/$(SAVE_ZIP) * --exclude \*/\.svn/\*
+	ssh $(STORE_USER)@$(STORE_HOST) "mkdir -p $(REMOTE_SAVE_DIR)"
+	scp $(LOCAL_SAVE_DIR)/$(SAVE_ZIP) $(STORE_USER)@$(STORE_HOST):$(REMOTE_SAVE_DIR)/$(SAVE_ZIP)
+	ssh $(STORE_USER)@$(STORE_HOST) "cd $(REMOTE_SAVE_DIR) && rm -f $(LNK_NAME) && ln -s $(SAVE_ZIP) $(LNK_NAME)"
+	rm -f $(LOCAL_SAVE_DIR)/$(SAVE_ZIP)
+
+# --- this target should archive any build outputs off to a different system
+dist: copy_to_store
+
+# debug 
+printenv:
+	env
+	pwd
+
+# --- this target should clean the machine before running tests
+clean_tests:
+
+# --- this target should install anything needed to test the product
+# --- assume that the build of the product and test of the product DO NOT occur on the same machine
+TEST_TGZ="$(PRODUCT)_output.tar.gz"
+install_tests: get_idt_tool
+	# get test android package
+	mkdir -p $(BUILDROOT)
+	scp  $(STORE_USER)@$(STORE_HOST):$(OUTPUT_REMOTE_SAVE_DIR)/$(TEST_TGZ) $(BUILDROOT)
+	cd $(BUILDROOT) && tar zxvf $(TEST_TGZ) 
+
+.PHONY: get_idt_tool
+get_idt_tool:
+	mkdir -p $(WORKDIR)/sw_i/tools
+	scp $(STORE_USER)@$(STORE_HOST):$(FS_PC_INFRA_STORE_PATH)/idt/idt.zip $(WORKDIR)/sw_i/tools
+	cd $(WORKDIR)/sw_i/tools && unzip idt.zip
+
+# --- this target should execute the tests (usually using the testharness)
+.PHONY: run_tests
+run_tests:
+	$(WORKDIR)/sw_x/dist/igware.runtime/make_validated_links.sh -a save -u $(STORE_USER) -n $(STORE_HOST) -d $(PRODUCT_STORAGE_DIR) -s AndroidCloudClientSDK -s actool_app-release -s dx_remote_agent-release -s cc_service_for_dx-release
+	$(WORKDIR)/sw_x/tools/testharness/bin/testharness.py -c $(WORKDIR)/sw_x/tools/testharness/conf/runs/buildbot_tests.$(PRODUCT).$(LAB).run -o /tmp/testharness/output_$(PRODUCT)/$(BUILD_DATE) -b $(STORE_USER)@$(STORE_HOST):/$(FS_STORE_TEST_PATH)/$(BRANCH_NAME)/$(BUILD_DATE)_$(PRODUCT)_$(LAB) -k
+	# since the tests have passed, create the links indicating the build has been validated
+	$(WORKDIR)/sw_x/dist/igware.runtime/make_validated_links.sh -a link -u $(STORE_USER) -n $(STORE_HOST) -d $(PRODUCT_STORAGE_DIR)
+
+.PHONY: run_full_tests
+run_full_tests:
+	$(WORKDIR)/sw_x/dist/igware.runtime/make_validated_links.sh -a save -u $(STORE_USER) -n $(STORE_HOST) -d $(PRODUCT_STORAGE_DIR) -s AndroidCloudClientSDK -s actool_app-release -s dx_remote_agent-release -s cc_service_for_dx-release
+	$(WORKDIR)/sw_x/tools/testharness/bin/testharness.py -c $(WORKDIR)/sw_x/tools/testharness/conf/runs/buildbot_tests.$(PRODUCT).full.$(LAB).run -o /tmp/testharness/output_$(PRODUCT)/$(BUILD_DATE) -b $(STORE_USER)@$(STORE_HOST):/$(FS_STORE_TEST_PATH)/$(BRANCH_NAME)/$(BUILD_DATE)_$(PRODUCT)_$(LAB) -k
+	# since the tests have passed, create the links indicating the build has been validated
+	$(WORKDIR)/sw_x/dist/igware.runtime/make_validated_links.sh -a link -u $(STORE_USER) -n $(STORE_HOST) -d $(PRODUCT_STORAGE_DIR)
+
+# --- this target should report the test results
+.PHONY: report_test_results
+report_test_results:
+	# if the string "TEST RUN STATUS PASS" is not found in the summary output, then it's a fail
+	cat /tmp/testharness/output_$(PRODUCT)/$(BUILD_DATE)/testharness_summary.out
+	grep "TEST RUN STATUS PASS" /tmp/testharness/output_$(PRODUCT)/$(BUILD_DATE)/testharness_summary.out
+
+# --- this target run once to setup a machine for build and/or test
+# For developers: You may need to execute this target as the root user if you don't have sufficient sudo privileges.
+# For build machines: Execute this target as the build user - you will need to provide the sudo password.
+.PHONY: build_setup
+build_setup: allow_sudo_usage
+	make -f $(WORKDIR)/sw_x/dist/igware.runtime/Makefile.android centos_update_repo
+	make -f $(WORKDIR)/sw_x/dist/igware.runtime/Makefile.android install_common_pkgs
+	make -f $(WORKDIR)/sw_x/dist/igware.runtime/Makefile.android centos_install_32bit_pkgs
+	make -f $(WORKDIR)/sw_x/dist/igware.runtime/Makefile.android centos_install_java_1.6
+
+# --- this target run once on all target machines to install packages required to run the tests
+.PHONY: test_setup
+test_setup: allow_sudo_usage
+	make -f $(WORKDIR)/sw_x/dist/igware.runtime/Makefile.android centos_update_repo
+	make -f $(WORKDIR)/sw_x/dist/igware.runtime/Makefile.android install_common_pkgs
+	make -f $(WORKDIR)/sw_x/dist/igware.runtime/Makefile.android centos_install_32bit_pkgs
+	make -f $(WORKDIR)/sw_x/dist/igware.runtime/Makefile.android $(ANDROID_SDK_ROOT)/timestamp
+	make -f $(WORKDIR)/sw_x/dist/igware.runtime/Makefile.android $(ANDROID_AVD_ROOT)/timestamp
+
+$(ANDROID_SDK_ROOT)/timestamp $(ANDROID_AVD_ROOT)/timestamp:
+	$(MAKE) -C $(WORKDIR)/sw_x/devtools/android $@ SRCROOT=$(SRCROOT)
+

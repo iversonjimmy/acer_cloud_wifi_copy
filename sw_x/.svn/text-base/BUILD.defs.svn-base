@@ -1,0 +1,15 @@
+# This file sets up the environment seen by all BUILD files.
+# Additional variables can be defined here and so on.
+
+product = env('PRODUCT',None)
+platform = env('PLATFORM',None)
+target_arch = env('ARCH',None)
+buildtype = env('BUILDTYPE','debug')
+config_es = env('CONFIG_ES',None)
+host_platform = env('HOST_PLATFORM',None)
+host_platform_sub = env('HOST_PLATFORM_SUB',None)
+
+build_target_is_posix = (platform in ['android', 'linux', 'cloudnode'])
+
+# Kernel module vs user-land.
+es_is_kernel_module = (config_es in ['km', 'hyp']) # TODO: Does 'hyp' belong here?

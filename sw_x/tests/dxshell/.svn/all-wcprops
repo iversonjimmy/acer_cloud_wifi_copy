@@ -1,0 +1,641 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/repo/!svn/ver/59945/trunk/sw_x/tests/dxshell
+END
+autotest_common_utils.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/58806/trunk/sw_x/tests/dxshell/autotest_common_utils.cpp
+END
+cr_test.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repo/!svn/ver/59284/trunk/sw_x/tests/dxshell/cr_test.cpp
+END
+TimeStreamDownload.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/57931/trunk/sw_x/tests/dxshell/TimeStreamDownload.hpp
+END
+targetver.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repo/!svn/ver/19940/trunk/sw_x/tests/dxshell/targetver.h
+END
+autotest_transcode.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/59294/trunk/sw_x/tests/dxshell/autotest_transcode.cpp
+END
+pipe_win.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repo/!svn/ver/41116/trunk/sw_x/tests/dxshell/pipe_win.cpp
+END
+common_utils.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/58734/trunk/sw_x/tests/dxshell/common_utils.hpp
+END
+autotest_mediametadata.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/59390/trunk/sw_x/tests/dxshell/autotest_mediametadata.hpp
+END
+test.jpg
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/repo/!svn/ver/19947/trunk/sw_x/tests/dxshell/test.jpg
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repo/!svn/ver/59351/trunk/sw_x/tests/dxshell/BUILD
+END
+RemoteAgent.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repo/!svn/ver/45324/trunk/sw_x/tests/dxshell/RemoteAgent.hpp
+END
+autotest_picstream.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/59736/trunk/sw_x/tests/dxshell/autotest_picstream.cpp
+END
+ts_testClient.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/59347/trunk/sw_x/tests/dxshell/ts_testClient.cpp
+END
+ts_test_configure_router.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/59258/trunk/sw_x/tests/dxshell/ts_test_configure_router.cpp
+END
+ccd_utils_win.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/57230/trunk/sw_x/tests/dxshell/ccd_utils_win.cpp
+END
+proc_cmd.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repo/!svn/ver/59835/trunk/sw_x/tests/dxshell/proc_cmd.cpp
+END
+picstreamhttp.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/56619/trunk/sw_x/tests/dxshell/picstreamhttp.cpp
+END
+autotest_clouddoc.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/58156/trunk/sw_x/tests/dxshell/autotest_clouddoc.hpp
+END
+syncbox_test.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/57171/trunk/sw_x/tests/dxshell/syncbox_test.hpp
+END
+HttpAgent.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repo/!svn/ver/35253/trunk/sw_x/tests/dxshell/HttpAgent.cpp
+END
+minidms_test.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/49196/trunk/sw_x/tests/dxshell/minidms_test.cpp
+END
+vcs_test.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repo/!svn/ver/57751/trunk/sw_x/tests/dxshell/vcs_test.hpp
+END
+clouddochttp.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/50105/trunk/sw_x/tests/dxshell/clouddochttp.hpp
+END
+target_cmds.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repo/!svn/ver/57924/trunk/sw_x/tests/dxshell/target_cmds.hpp
+END
+ts_test_network_test.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/59258/trunk/sw_x/tests/dxshell/ts_test_network_test.hpp
+END
+dxshell.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repo/!svn/ver/57230/trunk/sw_x/tests/dxshell/dxshell.cpp
+END
+rexe_test.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repo/!svn/ver/55289/trunk/sw_x/tests/dxshell/rexe_test.hpp
+END
+autotest.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repo/!svn/ver/59390/trunk/sw_x/tests/dxshell/autotest.cpp
+END
+autotest_photo_share.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/59053/trunk/sw_x/tests/dxshell/autotest_photo_share.hpp
+END
+autotest_picstreamIndexOnly.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/59374/trunk/sw_x/tests/dxshell/autotest_picstreamIndexOnly.cpp
+END
+HttpAgentRemote.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repo/!svn/ver/58650/trunk/sw_x/tests/dxshell/HttpAgentRemote.cpp
+END
+autotest_util.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/59863/trunk/sw_x/tests/dxshell/autotest_util.hpp
+END
+TargetDevice.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/59258/trunk/sw_x/tests/dxshell/TargetDevice.hpp
+END
+fs_test.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repo/!svn/ver/59613/trunk/sw_x/tests/dxshell/fs_test.hpp
+END
+ccd_utils.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repo/!svn/ver/59390/trunk/sw_x/tests/dxshell/ccd_utils.hpp
+END
+HttpAgentLocal.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/58992/trunk/sw_x/tests/dxshell/HttpAgentLocal.hpp
+END
+autotest_basic.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/58156/trunk/sw_x/tests/dxshell/autotest_basic.hpp
+END
+getopt_win.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repo/!svn/ver/31004/trunk/sw_x/tests/dxshell/getopt_win.c
+END
+photo_share_test.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/59434/trunk/sw_x/tests/dxshell/photo_share_test.hpp
+END
+setup_stream_test.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/32263/trunk/sw_x/tests/dxshell/setup_stream_test.hpp
+END
+autotest_remotefile.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/59448/trunk/sw_x/tests/dxshell/autotest_remotefile.cpp
+END
+ccdconfig.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repo/!svn/ver/57691/trunk/sw_x/tests/dxshell/ccdconfig.hpp
+END
+getopt_win.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repo/!svn/ver/31004/trunk/sw_x/tests/dxshell/getopt_win.h
+END
+mca_diag.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repo/!svn/ver/59465/trunk/sw_x/tests/dxshell/mca_diag.cpp
+END
+virtdrive_cmds.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/23871/trunk/sw_x/tests/dxshell/virtdrive_cmds.cpp
+END
+dataset.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repo/!svn/ver/57470/trunk/sw_x/tests/dxshell/dataset.cpp
+END
+autotest_streaming.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/58156/trunk/sw_x/tests/dxshell/autotest_streaming.hpp
+END
+TargetLocalDevice.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/59258/trunk/sw_x/tests/dxshell/TargetLocalDevice.hpp
+END
+EventQueue.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/47468/trunk/sw_x/tests/dxshell/EventQueue.cpp
+END
+vssi_stress_test.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/57227/trunk/sw_x/tests/dxshell/vssi_stress_test.cpp
+END
+TargetRemoteDevice.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/59258/trunk/sw_x/tests/dxshell/TargetRemoteDevice.hpp
+END
+dx_common.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repo/!svn/ver/59390/trunk/sw_x/tests/dxshell/dx_common.h
+END
+ts_test.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repo/!svn/ver/59258/trunk/sw_x/tests/dxshell/ts_test.hpp
+END
+stdafx.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/repo/!svn/ver/19940/trunk/sw_x/tests/dxshell/stdafx.h
+END
+checkStreamMultirangeResult_ref.out
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repo/!svn/ver/24063/trunk/sw_x/tests/dxshell/checkStreamMultirangeResult_ref.out
+END
+vssi_common.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repo/!svn/ver/31004/trunk/sw_x/tests/dxshell/vssi_common.hpp
+END
+TimeStreamDownload.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/57931/trunk/sw_x/tests/dxshell/TimeStreamDownload.cpp
+END
+msa_diag.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repo/!svn/ver/59111/trunk/sw_x/tests/dxshell/msa_diag.cpp
+END
+autotest_common_utils.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/58806/trunk/sw_x/tests/dxshell/autotest_common_utils.hpp
+END
+cr_test.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repo/!svn/ver/59284/trunk/sw_x/tests/dxshell/cr_test.hpp
+END
+common_utils.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/59331/trunk/sw_x/tests/dxshell/common_utils.cpp
+END
+autotest_mediametadata.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/59468/trunk/sw_x/tests/dxshell/autotest_mediametadata.cpp
+END
+RemoteAgent.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repo/!svn/ver/59032/trunk/sw_x/tests/dxshell/RemoteAgent.cpp
+END
+test_thumb.jpg
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/19947/trunk/sw_x/tests/dxshell/test_thumb.jpg
+END
+autotest_transcode.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/58156/trunk/sw_x/tests/dxshell/autotest_transcode.hpp
+END
+pipe_win.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repo/!svn/ver/41116/trunk/sw_x/tests/dxshell/pipe_win.hpp
+END
+autotest_picstream.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/58156/trunk/sw_x/tests/dxshell/autotest_picstream.hpp
+END
+autotest_clouddoc.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/59294/trunk/sw_x/tests/dxshell/autotest_clouddoc.cpp
+END
+syncbox_test.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/59870/trunk/sw_x/tests/dxshell/syncbox_test.cpp
+END
+ccd_utils_linux.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repo/!svn/ver/57471/trunk/sw_x/tests/dxshell/ccd_utils_linux.cpp
+END
+vcs_test.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repo/!svn/ver/59941/trunk/sw_x/tests/dxshell/vcs_test.cpp
+END
+ts_test_configure_router.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/57953/trunk/sw_x/tests/dxshell/ts_test_configure_router.hpp
+END
+clouddochttp.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/51153/trunk/sw_x/tests/dxshell/clouddochttp.cpp
+END
+picstreamhttp.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/55025/trunk/sw_x/tests/dxshell/picstreamhttp.hpp
+END
+target_cmds.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repo/!svn/ver/58113/trunk/sw_x/tests/dxshell/target_cmds.cpp
+END
+ts_test_network_test.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/59903/trunk/sw_x/tests/dxshell/ts_test_network_test.cpp
+END
+getopt_long_win.c
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/31004/trunk/sw_x/tests/dxshell/getopt_long_win.c
+END
+rexe_test.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repo/!svn/ver/56297/trunk/sw_x/tests/dxshell/rexe_test.cpp
+END
+HttpAgent.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repo/!svn/ver/57392/trunk/sw_x/tests/dxshell/HttpAgent.hpp
+END
+autotest_photo_share.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/59834/trunk/sw_x/tests/dxshell/autotest_photo_share.cpp
+END
+minidms_test.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/48730/trunk/sw_x/tests/dxshell/minidms_test.hpp
+END
+autotest_util.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/59863/trunk/sw_x/tests/dxshell/autotest_util.cpp
+END
+TargetDevice.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/44038/trunk/sw_x/tests/dxshell/TargetDevice.cpp
+END
+fs_test.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repo/!svn/ver/59908/trunk/sw_x/tests/dxshell/fs_test.cpp
+END
+ccd_utils.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repo/!svn/ver/59462/trunk/sw_x/tests/dxshell/ccd_utils.cpp
+END
+HttpAgentLocal.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/58992/trunk/sw_x/tests/dxshell/HttpAgentLocal.cpp
+END
+autotest_basic.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/59294/trunk/sw_x/tests/dxshell/autotest_basic.cpp
+END
+photo_share_test.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/59945/trunk/sw_x/tests/dxshell/photo_share_test.cpp
+END
+setup_stream_test.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/58734/trunk/sw_x/tests/dxshell/setup_stream_test.cpp
+END
+autotest.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repo/!svn/ver/41116/trunk/sw_x/tests/dxshell/autotest.hpp
+END
+autotest_picstreamIndexOnly.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/59351/trunk/sw_x/tests/dxshell/autotest_picstreamIndexOnly.hpp
+END
+ccdconfig.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repo/!svn/ver/57705/trunk/sw_x/tests/dxshell/ccdconfig.cpp
+END
+HttpAgentRemote.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repo/!svn/ver/47846/trunk/sw_x/tests/dxshell/HttpAgentRemote.hpp
+END
+autotest_streaming.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/59686/trunk/sw_x/tests/dxshell/autotest_streaming.cpp
+END
+TargetLocalDevice.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/59258/trunk/sw_x/tests/dxshell/TargetLocalDevice.cpp
+END
+TargetRemoteDevice.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/59258/trunk/sw_x/tests/dxshell/TargetRemoteDevice.cpp
+END
+swup_diag.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repo/!svn/ver/59559/trunk/sw_x/tests/dxshell/swup_diag.cpp
+END
+ts_test.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repo/!svn/ver/59299/trunk/sw_x/tests/dxshell/ts_test.cpp
+END
+autotest_remotefile.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/59154/trunk/sw_x/tests/dxshell/autotest_remotefile.hpp
+END
+mca_diag.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repo/!svn/ver/58076/trunk/sw_x/tests/dxshell/mca_diag.hpp
+END
+virtdrive_cmds.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/23860/trunk/sw_x/tests/dxshell/virtdrive_cmds.hpp
+END
+dataset.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repo/!svn/ver/28201/trunk/sw_x/tests/dxshell/dataset.hpp
+END
+syncbox_test_event.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/58635/trunk/sw_x/tests/dxshell/syncbox_test_event.hpp
+END
+EventQueue.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/46932/trunk/sw_x/tests/dxshell/EventQueue.hpp
+END
+vssi_stress_test.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/31004/trunk/sw_x/tests/dxshell/vssi_stress_test.hpp
+END
+vssi_common.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repo/!svn/ver/31004/trunk/sw_x/tests/dxshell/vssi_common.cpp
+END

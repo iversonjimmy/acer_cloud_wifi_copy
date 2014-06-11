@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/28319/trunk/sw_x/gvm_core/internal/protobuf_file_utils/include
+END
+protobuf_file_writer.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repo/!svn/ver/28319/trunk/sw_x/gvm_core/internal/protobuf_file_utils/include/protobuf_file_writer.hpp
+END
+protobuf_file_reader.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repo/!svn/ver/28319/trunk/sw_x/gvm_core/internal/protobuf_file_utils/include/protobuf_file_reader.hpp
+END

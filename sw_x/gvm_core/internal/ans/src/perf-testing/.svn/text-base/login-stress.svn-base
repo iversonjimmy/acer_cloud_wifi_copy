@@ -1,0 +1,24 @@
+#! /bin/csh -fb
+
+cd ~/java
+
+set counter = 1
+
+while (1)
+    echo "Starting round $counter at "`date`
+    @ counter++
+    ./manage ans1.c2.lab9.routefree.com inject-cluster "Starting round $counter"
+    ./manage ans1.c2.lab9.routefree.com dump-cluster-stats
+    sleep 2
+    ./start-clients
+    ./manage ans1.c2.lab9.routefree.com inject-cluster "The client for round $counter have been started"
+
+    foreach i (1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18)
+        sleep 60
+        echo ""; echo ""; echo ""; echo ""; echo ""
+        echo ==== $i ===============================================================
+        ./get-status
+        ./manage ans1.c2.lab9.routefree.com inject-cluster "Round $counter, time $i"
+        ./manage ans1.c2.lab9.routefree.com dump-cluster-stats
+    end
+end

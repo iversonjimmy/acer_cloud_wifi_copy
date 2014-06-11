@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repo/!svn/ver/9348/trunk/sw_x/gvm_apps/outlook/outlook2010
+END
+ThisAddIn.Designer.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/8969/trunk/sw_x/gvm_apps/outlook/outlook2010/ThisAddIn.Designer.xml
+END
+ThisAddIn.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repo/!svn/ver/8969/trunk/sw_x/gvm_apps/outlook/outlook2010/ThisAddIn.Designer.cs
+END
+ThisAddIn.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/9348/trunk/sw_x/gvm_apps/outlook/outlook2010/ThisAddIn.cs
+END
+outlook2010.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/9160/trunk/sw_x/gvm_apps/outlook/outlook2010/outlook2010.csproj
+END

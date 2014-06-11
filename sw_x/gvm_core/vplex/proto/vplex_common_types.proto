@@ -1,0 +1,20 @@
+//% Modifying this file may affect the VSDS server, which should
+//% be updated when this file is modified.
+
+package vplex.common;
+
+option java_package = "igware.vplex.pb";
+option java_outer_classname = "CommonTypes";
+
+message ContentRating {
+    
+    /// ESRB, CERO, PEGI, etc.
+    optional string rating_system = 1;
+    
+    /// Rating value, based on the rating system (EC, E, E10, T, M, AO for ESRB).
+    optional string rating_value = 2;
+    
+    /// Allowed values are based on the rating system ("Alcohol Reference", "Blood", "Violence",
+    /// etc. for ESRB).
+    repeated string content_descriptors = 3;
+}

@@ -1,0 +1,155 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/repo/!svn/ver/59450/trunk/sw_x/tests/dx_remote_agent
+END
+DxRemoteAgentManager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/59450/trunk/sw_x/tests/dx_remote_agent/DxRemoteAgentManager.cpp
+END
+dx_remote_agent.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/57306/trunk/sw_x/tests/dx_remote_agent/dx_remote_agent.cpp
+END
+DxRemoteHTTPAgent.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/57373/trunk/sw_x/tests/dx_remote_agent/DxRemoteHTTPAgent.cpp
+END
+DxRemoteAgentManager.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/59450/trunk/sw_x/tests/dx_remote_agent/DxRemoteAgentManager.hpp
+END
+dx_remote_agent_util.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/57234/trunk/sw_x/tests/dx_remote_agent/dx_remote_agent_util.h
+END
+DxRemoteMSAAgent.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/50172/trunk/sw_x/tests/dx_remote_agent/DxRemoteMSAAgent.cpp
+END
+DxRemoteOSAgent.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/57622/trunk/sw_x/tests/dx_remote_agent/DxRemoteOSAgent.cpp
+END
+dx_remote_agent.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/50172/trunk/sw_x/tests/dx_remote_agent/dx_remote_agent.h
+END
+DxRemoteHTTPAgent.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/50172/trunk/sw_x/tests/dx_remote_agent/DxRemoteHTTPAgent.hpp
+END
+DxRemoteFileTransferAgent.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repo/!svn/ver/57237/trunk/sw_x/tests/dx_remote_agent/DxRemoteFileTransferAgent.cpp
+END
+DxRemoteQueryDeviceAgent.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/50172/trunk/sw_x/tests/dx_remote_agent/DxRemoteQueryDeviceAgent.cpp
+END
+DxRemoteMSAAgent.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/50172/trunk/sw_x/tests/dx_remote_agent/DxRemoteMSAAgent.hpp
+END
+DxRemoteAgentListener.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/57249/trunk/sw_x/tests/dx_remote_agent/DxRemoteAgentListener.cpp
+END
+DxRemoteOSAgent.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/57622/trunk/sw_x/tests/dx_remote_agent/DxRemoteOSAgent.hpp
+END
+DxRemoteTSTestAgent.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/59258/trunk/sw_x/tests/dx_remote_agent/DxRemoteTSTestAgent.cpp
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repo/!svn/ver/50864/trunk/sw_x/tests/dx_remote_agent/BUILD
+END
+IDxRemoteAgent.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/50172/trunk/sw_x/tests/dx_remote_agent/IDxRemoteAgent.cpp
+END
+DxRemoteFileTransferAgent.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repo/!svn/ver/50172/trunk/sw_x/tests/dx_remote_agent/DxRemoteFileTransferAgent.hpp
+END
+DxRemoteCCDAgent.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/57331/trunk/sw_x/tests/dx_remote_agent/DxRemoteCCDAgent.cpp
+END
+DxRemoteAgentListener.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/50172/trunk/sw_x/tests/dx_remote_agent/DxRemoteAgentListener.hpp
+END
+DxRemoteQueryDeviceAgent.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/50172/trunk/sw_x/tests/dx_remote_agent/DxRemoteQueryDeviceAgent.hpp
+END
+DxRemoteTSTestAgent.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/59258/trunk/sw_x/tests/dx_remote_agent/DxRemoteTSTestAgent.hpp
+END
+IDxRemoteAgent.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/50172/trunk/sw_x/tests/dx_remote_agent/IDxRemoteAgent.h
+END
+DxRemoteCCDAgent.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/50172/trunk/sw_x/tests/dx_remote_agent/DxRemoteCCDAgent.hpp
+END
+PrepareProtoBufSizeStream.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repo/!svn/ver/50172/trunk/sw_x/tests/dx_remote_agent/PrepareProtoBufSizeStream.hpp
+END

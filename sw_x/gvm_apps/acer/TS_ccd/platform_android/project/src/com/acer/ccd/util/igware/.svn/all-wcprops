@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repo/!svn/ver/50079/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/util/igware
+END
+Utils.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repo/!svn/ver/50079/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/util/igware/Utils.java
+END
+Dataset.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repo/!svn/ver/15022/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/util/igware/Dataset.java
+END
+Filter.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repo/!svn/ver/15022/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/util/igware/Filter.java
+END
+Subfolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repo/!svn/ver/15133/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/util/igware/Subfolder.java
+END
+SyncListItem.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/util/igware/SyncListItem.java
+END
+Constants.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repo/!svn/ver/15022/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/util/igware/Constants.java
+END
+DownloadProgress.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/util/igware/DownloadProgress.java
+END

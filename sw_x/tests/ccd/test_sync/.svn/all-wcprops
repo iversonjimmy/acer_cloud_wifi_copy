@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repo/!svn/ver/32709/trunk/sw_x/tests/ccd/test_sync
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repo/!svn/ver/20943/trunk/sw_x/tests/ccd/test_sync/BUILD
+END
+test_ccd_sync.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/32709/trunk/sw_x/tests/ccd/test_sync/test_ccd_sync.cpp
+END

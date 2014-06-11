@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/repo/!svn/ver/50785/trunk/sw_x/devtools/android
+END
+android_env_defs.mk
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/33946/trunk/sw_x/devtools/android/android_env_defs.mk
+END
+emulator-wait
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/34380/trunk/sw_x/devtools/android/emulator-wait
+END
+emulator-wait-boot
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/13158/trunk/sw_x/devtools/android/emulator-wait-boot
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repo/!svn/ver/50785/trunk/sw_x/devtools/android/Makefile
+END

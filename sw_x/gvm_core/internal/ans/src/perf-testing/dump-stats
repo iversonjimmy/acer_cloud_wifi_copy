@@ -1,0 +1,6 @@
+#! /bin/csh -fb
+
+while (1)
+    ./manage ans1.c2.lab9.routefree.com dump-cluster-stats >& /dev/null
+    sleep 600
+end

@@ -1,0 +1,66 @@
+
+ifneq ($(MAKECMDGOALS), build_setup)
+ifndef ANDROID_X86_ROOT
+$(error Must define ANDROID_X86_ROOT)
+endif
+endif
+
+MAKEDIR=$(shell pwd)
+
+MANIFEST = $(ANDROID_X86_ROOT)/.repo/manifest.xml
+
+.PHONY: repo_sync
+repo_sync:
+	(cd $(ANDROID_X86_ROOT); $(REPO) sync)
+
+$(ANDROID_X86_ROOT)/x86-patch:
+	(cd $(ANDROID_X86_ROOT)/external; patch -p1 < $(MAKEDIR)/android-x86.patch)
+	touch $@
+
+default: $(MANIFEST) repo_sync $(ANDROID_X86_ROOT)/x86-patch
+	$(MAKE) -C $(ANDROID_X86_ROOT) iso_img usb_img TARGET_PRODUCT=$(TARGET_PRODUCT)
+
+build_tools:
+	mkdir -p $(REPO_DIR)
+	curl -sS http://android.git.kernel.org/repo > $(REPO)
+	chmod a+x $(REPO)
+	mkdir -p $(ANDROID_X86_ROOT)
+	(cd $(ANDROID_X86_ROOT); $(REPO) init -u source:/home/products/git/third_party/android-x86.git.sf.net/manifest.git -b gingerbread-x86 -m igware-default.xml )
+
+clean:
+	$(MAKE) -C $(ANDROID_X86_ROOT) clean
+
+dist:
+
+# debug
+printenv:
+	env
+	pwd
+
+
+$(MANIFEST):
+	@/bin/echo -e "Please initialize the repo first:\n\trepo init -u source:/home/products/git/third_party/android-x86.git.sf.net/manifest.git -b gingerbread-x86 -m igware-default.xml"
+	@false
+
+.PHONE: build_setup
+build_setup: setup_tools init_repo
+
+.PHONY: setup_tools
+setup_tools:
+	# check that the igware /etc/apt/sources.list file is being used
+	grep apt-master.ws.routefree.com /etc/apt/sources.list
+	sudo apt-get update
+	sudo apt-get -y -qq install git-core gnupg flex bison gperf	\
+	build-essential zip curl sun-java6-jdk zlib1g-dev gcc-multilib	\
+	g++-multilib libc6-dev-i386 lib32ncurses5-dev ia32-libs 	\
+	x11proto-core-dev libx11-dev lib32readline5-dev lib32z-dev	\
+	valgrind genisoimage
+	mkdir -p $(REPO_DIR)
+	curl -sS http://android.git.kernel.org/repo > $(REPO)
+	chmod a+x $(REPO)
+	@echo setup_tools done
+
+.PHONE: init_repo
+init_repo: 
+	mkdir -p $(ANDROID_X86_ROOT)
+	(cd $(ANDROID_X86_ROOT); $(REPO) init -u source:/home/products/git/third_party/android-x86.git.sf.net/manifest.git -b gingerbread-x86 -m igware-default.xml )

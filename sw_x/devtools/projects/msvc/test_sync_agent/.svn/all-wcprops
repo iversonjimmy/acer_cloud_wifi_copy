@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/42786/trunk/sw_x/devtools/projects/msvc/test_sync_agent
+END
+test_sync_agent.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repo/!svn/ver/42786/trunk/sw_x/devtools/projects/msvc/test_sync_agent/test_sync_agent.vcxproj
+END
+test_sync_agent.vcxproj.filters
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repo/!svn/ver/28384/trunk/sw_x/devtools/projects/msvc/test_sync_agent/test_sync_agent.vcxproj.filters
+END

@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repo/!svn/ver/49201/trunk/sw_x/gvm_core/internal/vssi/src
+END
+vssi_vss.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/39184/trunk/sw_x/gvm_core/internal/vssi/src/vssi_vss.c
+END
+vssi_internal.c
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/47833/trunk/sw_x/gvm_core/internal/vssi/src/vssi_internal.c
+END
+vssi_http.c
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/38860/trunk/sw_x/gvm_core/internal/vssi/src/vssi_http.c
+END
+vssi.c
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repo/!svn/ver/47833/trunk/sw_x/gvm_core/internal/vssi/src/vssi.c
+END
+vssi_vss.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/39184/trunk/sw_x/gvm_core/internal/vssi/src/vssi_vss.h
+END
+basic_vssi_wrapper.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repo/!svn/ver/46397/trunk/sw_x/gvm_core/internal/vssi/src/basic_vssi_wrapper.cpp
+END
+vssi_internal.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/32085/trunk/sw_x/gvm_core/internal/vssi/src/vssi_internal.h
+END
+vssi_http.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/5231/trunk/sw_x/gvm_core/internal/vssi/src/vssi_http.h
+END
+vssi_tunnel.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/49201/trunk/sw_x/gvm_core/internal/vssi/src/vssi_tunnel.c
+END
+vss_comm.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/30327/trunk/sw_x/gvm_core/internal/vssi/src/vss_comm.h
+END

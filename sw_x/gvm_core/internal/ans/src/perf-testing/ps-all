@@ -1,0 +1,8 @@
+#! /bin/csh -fb
+
+cd ~root/java
+
+foreach i (`cat automatic-hosts manual-hosts`)
+	echo ==== $i
+	ssh $i "ps -ef | grep java | grep -v grep"
+end

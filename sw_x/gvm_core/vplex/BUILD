@@ -1,0 +1,149 @@
+# TODO clean up vplex_trace for android...
+static_cpp_lib(
+    name = 'libvplexcore',
+    srcs = [
+        'src/vplex_dataset.c',
+        'src/vplex_http_util.cpp',
+        'src/vplex_ipc_socket.c',
+        'src/vplex_list.c',
+        'src/vplex_math.c',
+        'src/vplex_mem_heap.c',
+        'src/vplex_no_trace.c',
+        'src/vplex_queue.c',
+        'src/vplex_safe_serialization.c',
+        'src/vplex_serialization.c',
+        'src/vplex_socket.c',
+        'src/vplex_strings.c',
+        'src/vplex_syslog.c',
+        'src/vplex_time.c',
+        'src/vplex_trace.c',
+        'src/vplex_utf_conversion.c',
+    ]
+    + ([
+        'src/vplex_rwlock.c',
+       ] if not platform == 'android' else [])
+    + ([
+        'posix_src/vplex__named_socket.c',
+        'posix_src/vplex__plat.c',
+        'posix_src/vplex__powerman.c',
+        'posix_src/vplex__socket.c',
+        'posix_src/vplex__time.c',
+        'posix_src/vplex__file.c',
+       ] 
+       )
+    + {
+       'android':[
+                 ],
+       'linux':[
+                'posix_src/vplex__wstring.c',
+               ],
+       'linux_emb':[
+                'posix_src/vplex__wstring.c',
+               ],
+       'cloudnode':[
+                'posix_src/vplex__wstring.c',
+               ],
+      }[platform],
+    includes = [
+                'include',
+                'src',
+               ]
+               + {
+                  'android':[
+                             'posix_include',
+                             'platform_linux/include',
+                            ],
+                  'linux':[
+                           'posix_include',
+                           'platform_linux/include',
+                          ],
+                  'linux_emb':[
+                           'posix_include',
+                           'platform_linux/include',
+                          ],
+                  'cloudnode':[
+                           'posix_include',
+                           'platform_linux/include',
+                          ],
+                  }[platform],
+    deps = [
+            '/gvm_core/vpl:libvplcore',
+            '/gvm_core/internal/iosc:libiosc',
+           ] + {
+               'android':['/:libc','/:liblog'],
+               'linux':[],
+			   'linux_emb':[],
+               'cloudnode':[],
+           }[platform]
+)
+
+static_cpp_lib(
+    name = 'libvplex',
+    srcs = [
+        'src/vplex_ias.cpp',
+        'src/vplex_nus.cpp',
+        'src/vplex_soap_util.c',
+        'src/vplex_soap.cpp',
+        'src/vplex_strto.c',
+        'src/vplex_vs_directory_utils.cpp',
+        'src/vplex_vs_directory.cpp',
+        'src/vplex_xml_reader.c',
+        'src/vplex_xml_writer.c',
+    ]
+    + {
+       'android':[
+                'src_android/vplex_http2.cpp',
+                'src_android/vplex_plat.cpp',
+                 ],
+       'linux':[
+                'src_use_curl/vplex_http2.cpp',
+               ],
+       'linux_emb':[
+                'src_use_curl/vplex_http2.cpp',
+               ],
+       'cloudnode':[
+                'src_use_curl/vplex_http2.cpp',
+               ],
+      }[platform],
+    includes = ['include'],
+    private_includes = {
+            'android':['src_android', '/gvm_core/vpl/src_android'],
+            'linux':['src_use_curl'],
+            'linux_emb':['src_use_curl'],
+            'cloudnode':['src_use_curl'],
+        }[platform],
+    deps = [
+            'proto',
+            'proto:xml',
+            ':libvplexcore',
+           ]
+           + {
+              'android':[
+                       '/:libc',
+                       '/:libstdc++',
+                        '/gvm_core/external/protobuflib:protobuflib',
+                        ],
+              'linux':[
+                       '/:libcurl',
+                       '/:libopenssl',
+                        '/gvm_core/external/protobuflib:protobuflib',
+                      ],
+              'linux_emb':[
+                       '/:libcurl',
+                       '/:libopenssl',
+                        '/gvm_core/external/protobuflib:protobuflib',
+                      ],
+              'cloudnode':[
+                       '/:libcurl',
+                       '/:libopenssl',
+                        '/gvm_core/external/protobuflib:protobuflib-shr',
+                      ],
+              }[platform],
+)
+
+shared_cpp_lib(
+    name = 'libvplex-shr',
+    srcs = [],
+    deps = [':libvplex'],
+    soname = 'libvplex.so.1',
+)

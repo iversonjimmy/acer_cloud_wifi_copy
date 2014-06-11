@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repo/!svn/ver/38/trunk/sw_x/gvm_core/internal/conf/tests
+END
+conf_test.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/38/trunk/sw_x/gvm_core/internal/conf/tests/conf_test.c
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/38/trunk/sw_x/gvm_core/internal/conf/tests/Makefile
+END

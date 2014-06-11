@@ -1,0 +1,74 @@
+    To run module tests, or do much of anything, you need to build the
+dependent libraries:
+    $ export PRODUCT=linux
+    $ export DEBUG=1
+    $ cd $WORKAREA/sw_x
+    $ make es_core vplex vpl
+You might need to install valgrind:
+    # yum install valgrind
+Then you can run
+    $ make test
+in this directory.
+
+    The cluster_test target in the Makefile runs a unit test against
+a running ANS test cluster.  To set up this test, run:
+    $ cd $WORKAREA/sw_i/infra/modules/ans; make debug.jar
+    $ cd $WORKAREA/sw_x/gvm_core/internal/ans/src/
+    $ ./install-java
+If the sw_i build hasn't been run, you probably will need to run
+that to get the Apache commons logging jar.
+
+    The install-java script creates and installs the ~/java directory.
+After running it, you must edit the run-device-all script in ~/java
+to point at your test cluster.  Finally, run:
+    $ make cluster_test
+to run the cluster unit test.
+
+    To run code coverage, you'll need to edit the testing/run-device-all
+script to point at an ANS test cluster, and then run:
+    $ ./install-export
+Then
+    $ make gcov
+should run and produce coverage output in the ./gcov subdirectory.
+
+    There are two basic module tests for the ans_device.cpp file. The
+ans_device_test program runs basic coverage and correctness tests
+for most of the code.  The ans_keep_test program runs fairly careful
+tests of the keep-alive logic.  Together, these two tests
+cover much of the library.
+
+    The ans_keep_test measures wall-clock time to check correctness.
+Unfortunately, valgrind has unusual thread scheduling thread and adds
+other delays, making the timing check unreliable, even with a relaxed
+tolerance.  The ans_keep_test can be given the command-line argument
+"--no-valgrind".  This flag tells the program that it can use a tighter
+tolerance when checking the wall-clock required.  Even with the tighter
+tolerance, the ans_keep_test program fails far less frequently without
+valgrind.
+
+    The ans_circle program runs against a live test cluster, and provides
+coverage of a number of additional features not yet covered by the module
+tests.
+
+    There are some scripts for running tests repeatedly in this
+directory:
+
+    run-keep              runs the keep-alive test
+    run-keep-no-valgrind  runs the keep-alive test without valgrind
+    run-noconnect         runs the noconnect test
+    run-no-valgrind       runs ans_device_test without valgrind
+    run-until-fail        runs "make test"
+
+The "testing" and "perf-testing" subdirectories contain more scripts
+for doing module and performance testing, respectively.  Check the
+"Readme" file in those directories for more information.
+
+
+Makefile Targets
+-------- -------
+    all                 Runs "make setup unit_test"
+    cluster_test        Runs ans_circle once
+    gcov                Runs a code coverage test
+    install             Installs ans_circle in ~/java and makes ans_back
+    setup               Builds the sw_x dependencies and the Java code
+    test, unit_test     Runs the ans_device_test and ans_keep_test programs

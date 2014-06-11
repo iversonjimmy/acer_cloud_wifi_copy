@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/48235/trunk/sw_x/devtools/projects/eclipse/msvc_include
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/48230/trunk/sw_x/devtools/projects/eclipse/msvc_include/.project
+END
+.cproject
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repo/!svn/ver/48230/trunk/sw_x/devtools/projects/eclipse/msvc_include/.cproject
+END
+README.txt
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repo/!svn/ver/48235/trunk/sw_x/devtools/projects/eclipse/msvc_include/README.txt
+END

@@ -1,0 +1,3855 @@
+//
+//  Copyright 2011 iGware Inc.
+//  All Rights Reserved.
+//
+//  THIS SOFTWARE CONTAINS CONFIDENTIAL INFORMATION AND
+//  TRADE SECRETS OF IGWARE INC.
+//  USE, DISCLOSURE OR REPRODUCTION IS PROHIBITED WITHOUT
+//  THE PRIOR EXPRESS WRITTEN PERMISSION OF IGWARE INC.
+//
+
+//--------------------------------------------------------
+/// @file
+/// Cloud Client APIs.
+//--------------------------------------------------------
+
+package ccd;
+
+//%{INTERNAL
+// This file relies on plugins to generate service code.
+option cc_generic_services = false; 
+option java_generic_services = false;
+option py_generic_services = false;
+option java_package = "igware.gvm.pb";
+option java_outer_classname = "CcdiRpc";
+//%}INTERNAL
+
+import "media_metadata_types.proto";
+import "vplex_vs_directory_service_types.proto";
+
+//--------------------------------------------------------
+// Shared definitions
+//--------------------------------------------------------
+
+/// For RPCs that don't take input parameters.
+message NoParamRequest {
+}
+
+//%{INTERNAL
+/// For RPCs that simply take a local player index.
+message PlayerIndexRequest {
+    required int32 player_index = 1;
+}
+//%}INTERNAL
+
+/// For RPCs that simply take a User ID.
+message UserIdRequest {
+    required fixed64 user_id = 1;
+}
+
+/// For RPCs that don't have any additional output parameters (all of the CCDI RPCs
+/// implicitly generate an int32 error code as part of the response).
+message NoParamResponse {
+}
+
+enum InfraHttpService_t {
+
+    /// OPS, automatic.
+    /// By default this should do what you want:
+    /// If no user is specified, it will use the central/default URL (www.<domain>).
+    /// If a user is specified, it will use that user's clusterId (www-c<clusterId>.<domain>).
+    INFRA_HTTP_SERVICE_OPS = 1;
+    
+    /// OPS, explicit central.
+    /// You should generally use #INFRA_HTTP_SERVICE_OPS unless you know for sure that you need this instead.
+    /// You can use this if you want to specify user credentials yet still use the central/default URL.
+    INFRA_HTTP_SERVICE_OPS_CENTRAL = 2;
+    
+    /// OPS, explicit regional.
+    /// Uses the user's clusterId (so this enforces that you must always specify a user along with this).
+    INFRA_HTTP_SERVICE_OPS_REGIONAL = 3;
+    
+    /// Currently internal use only.  Service in development -- not available/stable.
+    INFRA_HTTP_SERVICE_VCS = 4;
+};
+
+enum LocalHttpService_t {
+
+    /// Remote Files, as used by AcerCloud Files 1.0
+    LOCAL_HTTP_SERVICE_REMOTE_FILES = 1;
+};
+
+//--------------------------------------------------------
+// Basic Operations
+//--------------------------------------------------------
+
+//-------------------------------------
+// GetSystemState
+// Retrieve various information about the current state of the Cloud Client.
+//-------------------------------------
+message CurrentPlayer {
+    /// The User ID, assigned by the infrastructure when the user is created.
+    /// 0 indicates that the slot does not currently have a user signed-in.
+    required fixed64 user_id = 1;
+    
+    /// The display name chosen by the user (omitted when #user_id is 0).
+    optional string username = 2;
+    
+  //%{INTERNAL
+    // Obsolete: do not reuse:
+    //optional bool connected_to_infra = 3;
+    
+    /// Account that the user belongs to (omitted when #user_id is 0).
+    optional string account_id = 4;
+    
+    /// Indicates if the user is currently in "elevated privileges mode" (his/her password is
+    /// stored in memory for purposes of privileged operations such as purchasing).
+    /// This is enabled via ElevatePrivileges() and disabled when the user signs out or when
+    /// CCD expires the "elevated privileges mode" as per its policies.
+    optional bool has_elevated_privileges = 5 [default = false];
+  //%}INTERNAL
+}
+
+message CurrentPlayers {
+    /// Array of user slots.
+    /// For Windows and Android, there should only be 1.
+    //% The length should always be equal to the platform-defined "MAX_PLAYERS".
+    repeated CurrentPlayer players = 1;
+}
+
+//%{INTERNAL
+message DiskInfo {
+    
+    /// Total size of the disk, measured in bytes.
+    required uint64 total_size_bytes = 1;
+    
+    /// Amount of free disk space available to non-root users, measured in bytes.
+    required uint64 free_space_bytes = 2;
+    
+    /// Number of inodes available to non-root users.
+    optional uint64 available_inodes = 3;
+}
+//%}INTERNAL
+
+message NetworkInfo {
+    
+    /// Omitted if the proxy agent is not running.
+    optional uint32 proxy_agent_port = 1;
+
+    /// Omitted if the media server is not running.
+    optional uint32 media_server_port = 2;
+
+    /// Omitted if the virtual drive is not running.
+    optional uint32 virtual_drive_port = 3;
+
+    /// Omitted if the tunnel service is not running.
+    optional uint32 tunnel_service_port = 4;
+
+    /// Omitted if the external tunnel service is not running.
+    optional uint32 ext_tunnel_service_port = 5;
+}
+
+enum IoacStatusSummary_t {
+    /// IOAC hardware has not been probed yet.
+    /// Currently, we will not check for IOAC hardware until an ANS connection has been established.
+    IOAC_STATUS_SUMMARY_INACTIVE = 1;
+    
+    /// A network change has occurred; updating.
+    IOAC_STATUS_SUMMARY_UPDATING = 4;
+    
+    /// IOAC hardware was found, and we are waiting for personalized configuration info from ANS.
+    IOAC_STATUS_SUMMARY_GETTING_INFO = 5;
+    
+    /// IOAC hardware was configured, but UDP packet path has not been verified yet.
+    IOAC_STATUS_SUMMARY_TESTING = 6;
+    
+    /// IOAC hardware was configured and UDP packet path has been verified.
+    IOAC_STATUS_SUMMARY_GOOD = 7;
+    
+    /// IOAC hardware was configured, but the UDP packet path appears to be blocked.
+    IOAC_STATUS_SUMMARY_UDP_FILTERED = 8;
+    
+    /// No IOAC hardware detected.
+    IOAC_STATUS_SUMMARY_FAIL_NO_HARDWARE = 9;
+    
+    /// DNS-lookup for server hostname failed. 
+    IOAC_STATUS_SUMMARY_FAIL_RESOLVE_SERVER = 10;
+    
+    /// Unexpected failure; the logs may have more info.
+    IOAC_STATUS_SUMMARY_FAIL_INTERNAL = 11;
+}
+
+/// Adapter-specific warnings.
+message IoacAdapterWarnings {
+    
+    optional bool magic_packet_not_supported = 16;
+    
+    optional bool offload_arp_not_supported = 17;
+    
+    optional bool offload_ns_not_supported = 18;
+    
+    optional bool offload_80211_rsn_rekey_not_supported = 19;
+    
+    optional bool offload_arp_failed = 20;
+    
+    optional bool enable_keepalive_failed = 21;
+}
+
+message IoacAdapterStatus {
+    required string guid = 1;
+    
+    optional IoacStatusSummary_t summary = 4;
+
+    optional IoacAdapterWarnings warnings = 5;
+}
+
+message IoacOverallStatus {
+    required IoacStatusSummary_t summary = 1;
+    
+    repeated IoacAdapterStatus adapters = 2;
+
+    // Adapter-independent warnings:
+    
+    optional bool warn_sleep_not_supported = 16;
+}
+
+message GetSystemStateInput {
+    
+    /// Set to true to retrieve the local device_id.
+    optional bool get_device_id = 4 [default = false];
+    
+    /// Set to true to get the state of all user slots.
+    //% This works when offline.
+    /// This never accesses the infrastructure.
+    optional bool get_players = 2 [default = false];
+
+    /// Set to true to get the list of logged-in users.
+    optional bool get_users = 10 [default = false];
+
+    /// Set to true to get the list of recently-logged-out users.
+    optional bool get_logged_out_users = 13 [default = false];
+
+  //%{INTERNAL
+    /// Set to true to query the disk for total space, free space, etc.
+    optional bool get_disk_info = 5 [default = false];
+    
+    /// Set to true to get the current device locale.
+    optional bool get_device_locale = 8 [default = false];
+  //%}INTERNAL
+    
+    /// Set to true to get information about addresses/ports.
+    optional bool get_network_info = 9 [default = false];
+    
+    /// Set to true to get information about IOAC hardware.
+    optional bool get_ioac_status = 11 [default = false];
+
+    /// Set to true to query if the IOAC feature is enabled for this OS user.
+    optional bool get_enable_ioac = 14 [default = false];
+
+    /// Set to true to query if the IOAC feature is already in use by a different OS user.
+    optional bool get_ioac_already_in_use = 15 [default = false];
+
+    /// *****
+    /// NOTE: This is currently intended for TESTING ONLY; please rely on the platform default
+    /// (which is 30*60 for Android, and 0 for everything else).
+    /// *****
+    /// Set to true to get background interval sec value.
+    optional bool get_background_mode_interval_sec = 12;
+    
+    /// Set to true to retrieve only mobile network is available setting
+    optional bool get_only_mobile_network_available = 21;
+    
+    /// Set to true to retrieve whether streaming is preventing CCD from going
+    /// into NO_SYNC status.
+    optional bool get_stream_power_mode = 22;
+    
+    /// Set to true to retrieve what ccd has determined to be the current power
+    /// mode.
+    optional bool get_power_mode = 23;
+
+    /// Set to true to retrieve the PD (Proxy Daemon) instance id.
+    optional bool get_pd_instance_id = 24;
+}
+
+message PowerStatus {
+    required PowerMode_t power_mode = 1;
+}
+
+message CurrentUser {
+    /// The User ID, assigned by the infrastructure when the user is created.
+    /// Must always be a valid user (0 is not allowed here).
+    required fixed64 user_id = 1;
+
+    /// The username associated with user_id.
+    required string username = 2;
+}
+
+message LoggedOutUser {
+    /// The User ID, assigned by the infrastructure when the user is created.
+    /// Must always be a valid user (0 is not allowed here).
+    required fixed64 user_id = 1;
+    
+    /// The username associated with user_id.
+    required string username = 2;
+
+    /// The reason that the user was logged out.
+    required LogoutReason_t reason = 3;
+}
+
+message GetSystemStateOutput {
+    
+    /// Only present if #get_device_id was true in the request.
+    optional fixed64 device_id = 4;
+    
+    /// Only present if #get_players was true in the request.
+    optional CurrentPlayers players = 2;
+    
+    /// Only present if #get_users was true in the request.
+    repeated CurrentUser users = 10;
+    
+    /// Only present if #get_logged_out_users was true in the request.
+    /// Can be empty.  The list is sorted with the most recent logout first.
+    repeated LoggedOutUser logged_out_users = 13;
+
+  //%{INTERNAL
+    /// Only present if #get_disk_info was true in the request.
+    optional DiskInfo disk_info = 5;
+    
+    /// Only present if #get_device_locale was true in the request.
+    optional string device_locale = 8;
+  //%}INTERNAL
+    
+    /// Only present if #get_network_info was true in the request.
+    optional NetworkInfo network_info = 9;
+    
+    /// Only present if #get_ioac_status was true in the request.
+    optional IoacOverallStatus ioac_status = 11;
+    
+    /// Only present if #get_background_mode_interval_sec was true in request.
+    optional sint32 background_mode_interval_sec = 12;
+    
+    /// Only present if #get_only_mobile_network_available was true in the request.
+    optional bool only_mobile_network_available = 21;
+
+    /// Only present if #get_enable_ioac was true in the request.
+    optional bool enable_ioac = 14;
+
+    /// Only present if #get_ioac_already_in_use was true in the request.
+    optional bool ioac_already_in_use = 15;
+
+    /// Only present if #get_stream_power_mode was true in the request.
+    optional bool stream_power_mode = 22;
+    
+    /// Only present if #get_power_mode was true in the request.
+    optional PowerStatus power_mode_status = 23;
+
+    /// Only present if #get_pd_instance_id was true in the request.
+    optional string pd_instance_id = 24;  // DEPRECATED - use pd_instance_id_num below
+    optional uint32 pd_instance_id_num = 25;
+
+}
+
+//-------------------------------------
+// Login
+// Sign-in a user and attempt to connect him/her to the infrastructure.
+//-------------------------------------
+message LoginInput {
+  //%{INTERNAL
+    /// The player slot (corresponds to a physical controller) to sign-in under.
+    optional int32 player_index = 1 [default = 0];
+  //%}INTERNAL
+    
+    /// Username to sign-in as.
+    required string user_name = 2;
+    
+    /// Specify the user's password.
+    optional string password = 3;
+    
+    /// Specify the pairing token.
+    /// One and only one of "password" and "pairing_token" must be set.
+    optional string pairing_token = 15;
+    
+    /// Specify if the user accepted the Acer Cloud End User License Agreement.
+    /// If omitted, the client software does not support showing the EULA (backward compat for
+    /// older clients).
+    /// If true, the user accepted the EULA.
+    /// If false, the user was not presented with the EULA yet, but the client indicates that it
+    /// knows how to handle IAS error 440 (by presenting the EULA and calling Login again after the
+    /// user accepts the EULA).
+    optional bool ac_eula_agreed = 14;
+    
+  //%{INTERNAL
+    /// If the requested user is already signed-in at #player_index, the request
+    /// will normally return immediately without changing anything.  To disable
+    /// this behavior, set this to false.
+    optional bool skip_if_already_correct = 5 [default = true];
+  //%}INTERNAL
+}
+
+message LoginOutput {
+    
+    /// On success, contains the actual user id for the user name.
+    required fixed64 user_id = 1;
+    
+}
+
+//-------------------------------------
+// Logout
+// End a user's session from the local device.
+// Note that calling this is unnecessary if you previously called
+// UnlinkDevice to unlink the local device.
+//-------------------------------------
+message LogoutInput {
+  //%{INTERNAL  
+    /// Specify the player index, user id, or both.
+    /// If both are specified, the call will fail if the specified user ID
+    /// isn't signed-in under the specified player slot.
+    /// If neither are specified, it will use player index 0.
+    optional int32 player_index = 1;
+  //%}INTERNAL
+    
+    /// Optional.  If specified, the call will fail if that
+    /// user is not actually logged in.
+    optional fixed64 local_user_id = 2;
+    
+    /// By default, the function will log a warning if there is no user to
+    /// log out.  Set this to false to disable this logging.
+    optional bool warn_if_no_user = 9 [default = true];
+}
+
+// Output: NoParamResponse
+
+//-------------------------------------
+// InfraHttpRequest
+// Make an HTTP request to the infrastructure on behalf
+// of a locally signed-in user.
+//-------------------------------------
+enum InfraHttpRequestMethod_t {
+    INFRA_HTTP_METHOD_GET = 1;
+    INFRA_HTTP_METHOD_POST = 2;
+};
+
+message InfraHttpRequestInput {
+    
+    /// Specify which local user (if any) is making the request.
+    /// If specified, the local user's credentials will be appended to the request.
+    optional fixed64 user_id = 1;
+    
+    /// CCD will maintain a configuration of infra services and their URL prefixes and ports.
+    required InfraHttpService_t service = 2;
+    
+    /// Indicates whether a HTTP or a HTTPS connection should be used. 
+    required bool secure = 3 [default = true];
+    
+    /// Which HTTP "METHOD" to use.
+    optional InfraHttpRequestMethod_t method = 4 [default = INFRA_HTTP_METHOD_GET];
+    
+    /// URL suffix that will be appended to the service URL prefix.
+    required string url_suffix = 5;
+    
+    /// Post data to include with the request.
+    /// *** Important ***
+    /// If your post_data contains any sensitive user information (such as passwords,
+    ///   payment information, service tickets, credentials, etc), you must ask a CCD developer to
+    ///   add a pattern to the logging blacklists (VPL_LogHttpBuffer and Util_LogSensitiveString)
+    ///   to prevent this information from being included in the logs.
+    /// *****************
+    optional string post_data = 6;
+    
+    /// If true, then CCD will attempt to send the user's password with the request (only certain server
+    /// operations require this).
+    /// If CCD is not currently in "elevated privileges mode" for the requesting user, this will
+    /// return #CCD_ERROR_NEED_PRIVILEGE.  The API client should then prompt for the password, call
+    /// ElevatePrivileges(), and reissue this request.
+    /// (This field is ignored when user_id is omitted.)
+    optional bool privileged_operation = 7 [default = false];
+}
+
+message InfraHttpRequestOutput {
+    
+    /// HTTP response code.
+    required int32 response_code = 1;
+    
+    /// The payload from the response.
+    optional string http_response = 2;
+}
+
+//-------------------------------------
+// RegisterStorageNode
+// Register the local device as the user's storage node.
+//-------------------------------------
+message RegisterStorageNodeInput {
+    
+    /// User making the request; must be signed-in on the local device.
+    required fixed64 user_id = 1;
+}
+
+// Output: NoParamResponse
+
+//-------------------------------------
+// UnregisterStorageNode
+// Undo a previous call to RegisterStorageNode.
+//-------------------------------------
+message UnregisterStorageNodeInput {
+    
+    /// User making the request; must be signed-in on the local device.
+    required fixed64 user_id = 1;
+    
+    /// Device that should no longer be a StorageNode.  Omit this field to
+    /// unregister the local device.
+    optional fixed64 device_id = 2;
+}
+
+// Output: NoParamResponse
+
+//-------------------------------------
+// UpdateStorageNode
+// Update features of a storage node.
+//-------------------------------------
+message RemoteFileAccessControlDirSpec {
+
+    /// Directory name in native format.  Can only set one of "dir" or "name".
+    /// ex: c:\test
+    optional string dir = 1;
+
+    /// The "name" attribute in RF response.  Can only set one of "dir" or "name".
+    /// ex: Computer/C
+    optional string name = 2;
+
+    /// Specify if the dir/name is set by the user.
+    /// If dir/name is set by app internally(ex. monitoring Library change), this should set to false.
+    required bool is_user = 3;
+
+    /// Allow or disallow the dir.
+    /// "disallow" is only permitted for top level dirs (Drives, Libraries, Desktop...)
+    required bool is_allowed = 4;
+}
+
+//% TODO: This isn't actually part of the API, but this is the most
+//%   convenient place to put this for now, since we want to use this
+//%   from both CCD src_impl and storageNode.
+message RemoteFileAccessControlDirs {
+    repeated RemoteFileAccessControlDirSpec dirs = 1;
+}
+
+message UpdateStorageNodeInput {
+    
+    /// User making the request; must be signed-in on the local device.
+    required fixed64 user_id = 1;
+
+    /// Device that is a StorageNode to be updated.  Omit this field to
+    /// update the local device.
+    optional fixed64 device_id = 2;
+
+    /// Enable/disable media streaming.
+    optional bool feature_media_server_enabled = 3;
+
+    /// Enable/disable virtual drive support.
+    optional bool feature_virt_drive_enabled = 4;
+
+    /// Enable/disable remote filesystem access to this device.
+    optional bool feature_remote_file_access_enabled = 5;
+
+    /// Enable/disable this device to serve as Archive Storage for the "My Storage" feature.
+    optional bool feature_my_storage_server_enabled = 8;
+
+    /// Will add to RemoteFile AccessControl List.
+    /// Use remove_remotefile_access_control_dir to remove unwanted directories.
+    optional RemoteFileAccessControlDirSpec add_remotefile_access_control_dir = 6;
+
+    /// Will remove from RemoteFile AccessControl List.
+    /// Must match a dir that was previously added by add_remotefile_access_control_dir.
+    optional RemoteFileAccessControlDirSpec remove_remotefile_access_control_dir = 7;
+}
+
+// Output: NoParamResponse
+
+//-------------------------------------
+// ReportLanDevices
+// Report discovered LAN devices.
+//-------------------------------------
+enum LanDeviceType_t {
+    LAN_DEVICE_TYPE_CLOUD_NODE = 1;
+}
+
+enum LanInterfaceType_t {
+    LAN_INTERFACE_TYPE_USB3 = 1;
+    LAN_INTERFACE_TYPE_ETH = 2;
+    LAN_INTERFACE_TYPE_WIFI = 3;
+}
+
+message LanDeviceRouteInfo {
+
+    /// Type of interface - USB3, Ethernet, or WiFi.
+    required LanInterfaceType_t type = 1;
+
+    /// IPv4 address of the device.
+    optional string ip_v4_address = 2;
+
+    /// IPv6 address of the device.
+    optional string ip_v6_address = 3;
+
+    /// Port number of the media server.
+    optional uint32 media_server_port = 4;
+
+    /// Port number of the virtual drive.
+    optional uint32 virtual_drive_port = 5;
+
+    /// Port number of the web front.
+    optional uint32 web_front_port = 6;
+
+    /// Port nuber of the tunnel service.
+    optional uint32 tunnel_service_port = 7;
+
+    /// Port nuber of the external tunnel service.
+    optional uint32 ext_tunnel_service_port = 8;
+}
+
+message LanDeviceInfo {
+
+    /// Type of device.
+    required LanDeviceType_t type = 1;
+
+    /// Unique identifier for the device (device ID may not be available).
+    required string uuid = 2;
+
+    /// Device name.
+    required string device_name = 3;
+
+    /// Device ID of the device.
+    optional fixed64 device_id = 4;
+
+    /// Route information to the device.
+    required LanDeviceRouteInfo route_info = 5;
+
+    /// Special notifications (e.g. disk full, firmware update, password change).
+    optional uint32 notifications = 6;
+
+    // TODO: Bug 11662: questionable doc comment:
+    /// User making the request; must be signed-in on the local device.
+    optional fixed64 user_id = 7;
+
+    /// PD (Proxy Daemon) instance id.
+    optional string pd_instance_id = 8;  // DEPRECATED - use pd_instance_id_num below
+    optional uint32 pd_instance_id_num = 9;
+
+}
+
+message ReportLanDevicesInput {
+    
+    /// List of devices discovered on the local area network.
+    repeated LanDeviceInfo infos = 1;
+}
+
+// Output: NoParamResponse
+
+//-------------------------------------
+// ListLanDevices
+// List discovered LAN devices.
+//-------------------------------------
+
+message ListLanDevicesInput {
+
+    /// If user is not specified, then return all devices regardless of
+    /// what filters are specified.
+    optional fixed64 user_id = 1;
+    
+    /// Include unregistered devices (i.e. device ID is 0).
+    optional bool include_unregistered = 2;
+
+    /// Include registered devices not linked to the current user.
+    optional bool include_registered_but_not_linked = 3;
+
+    /// Include devices linked to the current user.
+    optional bool include_linked = 4;
+}
+
+message ListLanDevicesOutput {
+    
+    /// List of devices discovered on the local area network.
+    repeated LanDeviceInfo infos = 1;
+}
+
+//-------------------------------------
+// ListStorageNodeDatasets
+// List datasets on storage node
+//-------------------------------------
+
+message DatasetItem {
+
+    /// The user ID of the dataset's owner
+    required fixed64 user_id = 1;
+
+    /// The dataset ID for the dataset
+    required fixed64 dataset_id = 2;
+}
+
+message ListStorageNodeDatasetsOutput {
+    
+    /// Details of each dataset managed by the storage node
+    repeated DatasetItem datasets = 1;
+}
+
+//-------------------------------------------
+// CCDWin32StartParams
+// Passing trustees for file access control
+//-------------------------------------------
+
+message TrusteeItem {
+
+    /// Security identifier of the trustee
+    required string sid = 1;
+
+    /// Attribute of the trustee
+    required fixed64 attr = 2;
+}
+
+message CCDWin32StartParams {
+
+    /// List of trustees
+    repeated TrusteeItem trustees = 1;
+}
+
+//--------------------------------------------------------
+// Personal Cloud
+//--------------------------------------------------------
+
+//-------------------------------------
+// AddDataset
+// (For Sync Agent UI)
+// Create a new dataset for the user.
+// The dataset will not be sync'ed until a device subscribes to it.
+//-------------------------------------
+enum NewDatasetType_t {
+    NEW_DATASET_TYPE_CAMERA = 1;
+    NEW_DATASET_TYPE_MEDIA = 2;
+    NEW_DATASET_TYPE_USER = 3;
+    NEW_DATASET_TYPE_CACHE = 4;
+    NEW_DATASET_TYPE_FS = 5;
+};
+
+message AddDatasetInput {
+
+    /// User making the request; must be signed-in on the local device.
+    required fixed64 user_id = 1;
+    
+    /// User-provided name for the new dataset.
+    /// The name must be unique across all of the specified user's datasets.
+    required string dataset_name = 2;
+    
+    /// Specify which type of dataset to create.
+    required NewDatasetType_t dataset_type = 3;
+}
+
+message AddDatasetOutput {
+    
+    /// Unique identifier for the new dataset.
+    required fixed64 dataset_id = 1;
+}
+
+//-------------------------------------
+// AddSyncSubscription
+// @deprecated Sync is now feature-based instead of subscription-based.  Use the UpdateAppState
+//    and/or UpdateSyncSettings APIs to specify which data you want CCD to sync.
+// (For Sync Agent UI)
+// Create a subscription to a dataset for the specified device.
+//-------------------------------------
+/// @deprecated Sync is now feature-based instead of subscription-based.  Use the UpdateAppState
+///    and/or UpdateSyncSettings APIs to specify which data you want CCD to sync.
+enum SyncSubscriptionType_t {
+    
+    /// A normal subscription.  All changes will be synced.
+    /// Use for general sync folder or PIM data.
+    SUBSCRIPTION_TYPE_NORMAL = 1;
+    
+    /// The device will only upload additions and modifications.  It will not
+    /// download anything or upload deletions.
+    /// @deprecated Use is deprecated.
+    SUBSCRIPTION_TYPE_CAMERA = 2;
+
+    /// The device will only upload additions and modifications.  It will not
+    /// download anything or upload deletions.
+    /// Use for CameraRoll upload.
+    SUBSCRIPTION_TYPE_PRODUCER = 3;
+
+    /// The device will only download additions and modifications. it will not
+    /// upload anything or download deletions.
+    /// Use for CameraRoll download.
+    SUBSCRIPTION_TYPE_CONSUMER = 4;
+    
+    /// The device will upload additions, modifications, and deletions. It will
+    /// not download anything.
+    /// Use for clear.fi server
+    SUBSCRIPTION_TYPE_CLEARFI_SERVER = 5;
+
+    /// The device will download additions, modification, and deletions. It
+    /// will not upload anything.
+    /// Use for clear.fi client
+    SUBSCRIPTION_TYPE_CLEARFI_CLIENT = 6;
+};
+
+/// @deprecated Sync is now feature-based instead of subscription-based.  Use the UpdateAppState
+///    and/or UpdateSyncSettings APIs to specify which data you want CCD to sync.
+message AddSyncSubscriptionInput {
+    
+    /// User making the request; must be signed-in on the local device.
+    required fixed64 user_id = 1;
+    
+    /// Specify which device will be subscribing.
+    /// This can be omitted to indicate the local device.
+    optional fixed64 device_id = 2;
+    
+    /// Specify the dataset to subscribe to.
+    /// Must be the ID of an existing dataset for this user.
+    required fixed64 dataset_id = 3;
+    
+    /// Specify the type of subscription.
+    required SyncSubscriptionType_t subscription_type = 4;
+    
+    /// (optional) Path to the sync folder on the subscribed device. 
+    /// It can be an absolute path (e.g. "E:/" or "/myCloud"), or it can be
+    /// relative to the client-maintained "local root" (e.g. "$LOCALROOT/MyStuff").
+    /// If not provided, the deviceRoot will be set to "$LOCALROOT/<dataset_name>".
+    optional string device_root = 5;
+    
+    /// (optional) Filter specification to apply to this subscription.
+    optional string filter = 6;
+
+    /// (optional) Max size limit (bytes) for this dataset on local storage.
+    /// If set to 0, there's no limit enforced.  If the size of the files is
+    /// over the limit, the oldest files are deleted locally until the size is
+    /// under the limit.  Subscription must have upload_delete_ok set to false
+    /// for this variable to have effect.
+    optional fixed64 max_size = 7;
+
+    /// (optional) Max files limit for this dataset on local storage.  If set to
+    /// 0, there's no limit enforced.  If the number of the files is over the
+    /// limit, the oldest files are deleted locally until the size is under the
+    /// limit.  Subscription must have upload_delete_ok set to false for this
+    /// variable to have effect.
+    optional fixed64 max_files = 8;
+}
+
+// Output: NoParamResponse
+
+//-------------------------------------
+// DeleteDataset
+// (For Sync Agent UI)
+// Delete a dataset for the user.
+//-------------------------------------
+message DeleteDatasetInput {
+
+    /// User making the request; must be signed-in on the local device.
+    required fixed64 user_id = 1;
+
+    /// Identifier of the dataset to delete.
+    required fixed64 dataset_id = 2;
+}
+
+// Output: NoParamResponse
+
+//-------------------------------------
+// DeleteSyncSubscriptions
+// @deprecated Sync is now feature-based instead of subscription-based.  Use the UpdateAppState
+//    and/or UpdateSyncSettings APIs to specify which data you want CCD to sync.
+// (For Sync Agent UI)
+// Remove one or more subscriptions for the specified device.
+//-------------------------------------
+/// @deprecated Sync is now feature-based instead of subscription-based.  Use the UpdateAppState
+///    and/or UpdateSyncSettings APIs to specify which data you want CCD to sync.
+message DeleteSyncSubscriptionsInput {
+    
+    /// User making the request; must be signed-in on the local device.
+    required fixed64 user_id = 1;
+    
+    /// Datasets to unsubscribe from.
+    repeated fixed64 dataset_ids = 2;
+    
+    /// Specify which device will be unsubscribing.
+    /// This can be omitted to indicate the local device.
+    optional fixed64 device_id = 3;
+}
+
+// Output: NoParamResponse
+
+//-------------------------------------
+// EventsCreateQueue
+// Creates a new event queue and returns a handle to it.
+// Each queue is tracked independently to avoid interference among multiple CCDI clients.
+// The queue will be deleted if it becomes full, so you should dequeue events
+// in a timely manner.
+//-------------------------------------
+message EventsCreateQueueInput {
+    
+    // No params yet; eventually we may allow setting a filter.
+}
+
+message EventsCreateQueueOutput {
+    
+    /// A handle to the new queue.
+    /// Use this to retrieve the events.
+    required fixed64 queue_handle = 1;
+}
+
+//-------------------------------------
+// EventsDestroyQueue
+// Allows CCD to immediately destroy the queue, freeing resources and waking any callers
+// waiting in EventsDequeue.
+//-------------------------------------
+message EventsDestroyQueueInput {
+    
+    /// Specify which queue to destroy.
+    required fixed64 queue_handle = 1;
+}
+
+// Output: NoParamResponse
+
+//-------------------------------------
+// EventsDequeue
+// Dequeues (and returns) one or more events from an event queue.
+// If this returns #CCD_ERROR_NO_QUEUE, the queue no longer exists.  If this happens
+// (and you didn't explicitly call EventsDestroyQueue), then you should assume that the
+// queue was deleted because it became full or CCD was restarted - either way,
+// events have probably been lost, so you should create a new queue
+// and then query CCD for an update of the info that you are interested in.
+//-------------------------------------
+message EventsDequeueInput {
+    
+    /// Specify a queue that was previously created via EventsCreateQueue.
+    required fixed64 queue_handle = 1;
+    
+    /// The maximum number of #CcdiEvent elements to return.
+    /// If omitted, all queued events will be returned.
+    optional uint32 max_count = 2;
+    
+    /// (Only applies when the queue is empty) the amount of time (in milliseconds)
+    /// to wait for the queue to become non-empty (or be destroyed) before returning.
+    /// As soon as there is at least one event ready, the call will always return without
+    /// further delay.
+    /// Specify 0 to have the call immediately return (with an empty list in the output)
+    /// when there are no queued events.
+    /// Specify -1 to have the call block until an event is ready (or the queue is destroyed).
+    /// Note that the return code will be success (0) if the timeout is reached and no events
+    /// are available.
+    optional int32 timeout = 3 [default = 0];
+}
+
+//--------
+
+/// For Windows and Linux, all features are always enabled.
+/// For Android, each feature is only enabled when the app is in the foreground (or if the user allows background sync).
+/// For WinRT and iOS, each feature is only enabled when the app is in the foreground.
+enum SyncFeature_t {
+
+    SYNC_FEATURE_PHOTO_METADATA = 1;
+    SYNC_FEATURE_PHOTO_THUMBNAILS = 2;
+
+    SYNC_FEATURE_MUSIC_METADATA = 3;
+    SYNC_FEATURE_MUSIC_THUMBNAILS = 4;
+
+    SYNC_FEATURE_VIDEO_METADATA = 5;
+    SYNC_FEATURE_VIDEO_THUMBNAILS = 6;
+
+    SYNC_FEATURE_PLAYLISTS = 7;
+
+    SYNC_FEATURE_NOTES = 20;
+
+    SYNC_FEATURE_SYNCBOX = 30;
+
+    SYNC_FEATURE_PICSTREAM_UPLOAD = 40;
+    // NOTE: indexes 41 - 49 are reserved for internal use.
+
+    SYNC_FEATURE_PICSTREAM_DOWNLOAD_FULL_RES = 50;
+    // NOTE: indexes 51 - 59 are reserved for internal use.
+
+    SYNC_FEATURE_PICSTREAM_DOWNLOAD_LOW_RES = 60;
+    // NOTE: indexes 61 - 69 are reserved for internal use.
+
+    SYNC_FEATURE_PICSTREAM_DOWNLOAD_THUMBNAIL = 70;
+
+    SYNC_FEATURE_PICSTREAM_DELETION = 80;
+
+    SYNC_FEATURE_SHARED_FILES_PHOTOS_SHARED_BY_ME = 81;
+    SYNC_FEATURE_SHARED_FILES_PHOTOS_SHARED_WITH_ME = 82;
+
+    //SYNC_FEATURE_CLOUD_DOC = ;
+
+    //SYNC_FEATURE_VIRTUAL_DRIVE = 10;
+
+    /// Only supported for Windows and Linux.
+    SYNC_FEATURE_MEDIA_METADATA_UPLOAD = 100; //< This one isn't currently used.
+    SYNC_FEATURE_METADATA_PHOTO_INDEX_UPLOAD = 101;
+    SYNC_FEATURE_METADATA_PHOTO_THUMB_UPLOAD = 102;
+    SYNC_FEATURE_METADATA_MUSIC_INDEX_UPLOAD = 103;
+    SYNC_FEATURE_METADATA_MUSIC_THUMB_UPLOAD = 104;
+    SYNC_FEATURE_METADATA_VIDEO_INDEX_UPLOAD = 105;
+    SYNC_FEATURE_METADATA_VIDEO_THUMB_UPLOAD = 106;
+
+    // NOTE: indexes 107 - 200 are reserved for internal use.
+}
+
+enum DatasetSyncStateType_t {
+
+    /// Since the last scan, the data has been determined to be in-sync.
+    CCD_SYNC_STATE_IN_SYNC = 1;
+
+    /// A scan has been completed and the sync agent is performing the pending actions.
+    CCD_SYNC_STATE_SYNCING = 2;
+
+    /// There is syncing to do, and an error has occurred such that syncing cannot happen.
+    CCD_SYNC_STATE_OUT_OF_SYNC = 3;
+};
+
+/// Currently generated for:
+/// - SYNC_FEATURE_PHOTO_METADATA
+/// - SYNC_FEATURE_PHOTO_THUMBNAILS
+/// - SYNC_FEATURE_MUSIC_METADATA
+/// - SYNC_FEATURE_MUSIC_THUMBNAILS
+/// - SYNC_FEATURE_VIDEO_METADATA
+/// - SYNC_FEATURE_VIDEO_THUMBNAILS
+/// - SYNC_FEATURE_PLAYLISTS
+/// - SYNC_FEATURE_NOTES
+/// - SYNC_FEATURE_PICSTREAM_UPLOAD
+/// - SYNC_FEATURE_PICSTREAM_DOWNLOAD_FULL_RES
+/// - SYNC_FEATURE_PICSTREAM_DOWNLOAD_LOW_RES
+/// - SYNC_FEATURE_METADATA_PHOTO_INDEX_UPLOAD
+/// - SYNC_FEATURE_METADATA_PHOTO_THUMB_UPLOAD
+/// - SYNC_FEATURE_METADATA_MUSIC_INDEX_UPLOAD
+/// - SYNC_FEATURE_METADATA_MUSIC_THUMB_UPLOAD
+/// - SYNC_FEATURE_METADATA_VIDEO_INDEX_UPLOAD
+/// - SYNC_FEATURE_METADATA_VIDEO_THUMB_UPLOAD
+/// .
+message EventSyncFeatureStatusChange {
+
+    required SyncFeature_t feature = 1;
+
+    required FeatureSyncStateSummary status = 2;
+
+    /// Only valid when feature is SYNC_FEATURE_VIRTUAL_DRIVE.
+    /// Specifies which device's virtual drive this event is for.
+    optional fixed64 device_id = 8;
+}
+
+enum CcdApp_t {
+
+    /// Default value, to indicate an app that doesn't use the sync config functionality.
+    CCD_APP_DEFAULT = 0;
+
+    /// Photos only.
+    CCD_APP_PHOTO = 1;
+
+    /// Music and playlists.
+    CCD_APP_MUSIC = 2;
+
+    /// Videos only.
+    CCD_APP_VIDEO = 3;
+
+    /// Music, videos, and playlists.
+    CCD_APP_MUSIC_AND_VIDEO = 4;
+
+    /// Photos, music, videos, and playlists.
+    CCD_APP_ALL_MEDIA = 5;
+}
+
+//--------
+// CcdiEvent
+//--------
+
+enum DeviceInfoChangeType_t {
+    // Device was just linked to this user's account.
+    DEVICE_INFO_CHANGE_TYPE_LINK = 1;
+    // Device was unlinked from this user.
+    DEVICE_INFO_CHANGE_TYPE_UNLINK = 2;
+    // Device was renamed.
+    DEVICE_INFO_CHANGE_TYPE_UPDATE = 3;
+}
+
+message EventDeviceInfoChange {
+    
+    required fixed64 device_id = 1;
+    
+    required DeviceInfoChangeType_t change_type = 2;
+    
+    optional string device_name = 3;
+
+    optional string protocol_version = 4;
+}
+
+message EventDeviceConnectionChange {
+
+    required fixed64 device_id = 1;
+    
+    required DeviceConnectionStatus status = 2;
+}
+
+message EventDatasetContentChange {
+
+    required fixed64 dataset_id = 1;
+}
+
+message EventDatasetChange {
+    // list of latest dataset_id owned by user
+    repeated fixed64 dataset_id = 1;
+}
+
+message PairingRequestAttribute {
+    // Attribute key.
+    required string key = 1;
+
+    // Attribute value of the key.
+    required string value = 2;
+}
+
+message EventPairingRequest {
+    // pairing_attributes is not used by CCD.
+    // This information is provided to application directly.
+    repeated PairingRequestAttribute pairing_attributes = 1;
+
+    // transaction_id is passed to the application for CCDIRespondToPairingRequest.
+    required string transaction_id = 2;
+}
+
+enum StorageNodeChangeType_t {
+    // A StorageNode was created (a device was chosen as a CloudPC).
+    STORAGE_NODE_CHANGE_TYPE_CREATED = 1;
+    // A StorageNode was deleted (a device is no longer a CloudPC).
+    STORAGE_NODE_CHANGE_TYPE_DELETED = 2;
+    // A StorageNode's details (such as IP/port) have changed.
+    STORAGE_NODE_CHANGE_TYPE_UPDATED = 3;
+}
+
+message EventStorageNodeChange {
+    
+    required fixed64 device_id = 1;
+    
+    required StorageNodeChangeType_t change_type = 2;
+}
+
+message EventUserLogin {
+    
+    /// The user that was just logged-in.
+    required fixed64 user_id = 1;
+}
+
+enum LogoutReason_t {
+    
+    /// Placeholder value; should not be used.
+    LOGOUT_REASON_UNSPECIFIED = 1;
+    
+    /// An explicit CCDI Logout request was made.
+    LOGOUT_REASON_CCDI_LOGOUT = 2;
+    
+    /// The local device was unlinked from the user's account.
+    LOGOUT_REASON_DEVICE_UNLINKED = 3;
+    
+    /// The user's session was invalidated (probably due to password change).
+    LOGOUT_REASON_SESSION_INVALID = 4;
+    
+    /// The user was implicitly logged out due to the CCD cache being programmatically cleared.
+    LOGOUT_REASON_CLEAR_CACHE = 5;
+    
+    /// The user was logged out due to a CCD Login call.
+    /// (Only possible when CCD feature "CCD_USE_SHARED_CREDENTIALS" is enabled.)
+    /// This is informational only, as the other app should have already performed any cleanup,
+    /// and a different user is already logged in.
+    /// This will happen if:
+    /// # This CCD instance has user A logged in.
+    /// # Suspend this instance and switch to another app.
+    /// # User A logs out and user B logs in.
+    /// # Switch back to this CCD instance.
+    LOGOUT_REASON_CCDI_LOGIN = 6;
+
+    /// The user was logged out in this instance of CCD because they became logged out in another
+    /// instance of CCD that is using the same shared credentials as this CCD instance.
+    /// (Only possible when CCD feature "CCD_USE_SHARED_CREDENTIALS" is enabled.)
+    LOGOUT_REASON_SHARED_CREDENTIALS_REMOVED = 7;
+}
+
+message EventUserLogout {
+    
+    /// The user that was just logged-out.
+    required fixed64 user_id = 1;
+    
+    optional LogoutReason_t reason = 2 [default = LOGOUT_REASON_UNSPECIFIED];
+}
+
+message EventDocSaveAndGoCompletion {
+    // Type of notification.
+    required DocSaveAndGoChangeType change_type = 1;
+    // Absolute path and file name including drive specifier for the file.
+    // For moved or deleted files, the old absolute path and name for the file.
+    required string file_path_and_name = 3;
+    // For moved or renamed files, the new path and name for the file.
+    optional string new_file_path_and_name = 4;
+    // Timestamp of the file modification in seconds since 1/1/1970 00:00:00.
+    optional fixed64 modify_time = 5;
+
+    // added in CloudDoc v1.1
+    optional sint32 result = 10;
+    optional string docname = 11;
+    optional fixed64 comp_id = 12;
+    optional fixed64 revision = 13;
+}
+
+message EventDocSaveAndGoEngineStateChange {
+    // Change in state of queue processing engine.
+    // True means the engine started; false means engine stopped.
+    required bool engine_started = 1;
+}
+
+message EventSWUpdateProgress {
+    /// Download handle returned by SWUpdateBeginDownloadOutput
+    required uint64 handle = 1;
+
+    /// Total size of the transfer in bytes (includes overhead for decryption)
+    required uint64 total_transfer_size = 2;
+
+    /// Total number of bytes transferred so far
+    required uint64 bytes_transferred_cnt = 3;
+
+    /// State of download
+    required SWUpdateDownloadState_t state = 4;
+}
+
+message EventIoacStatusChange {
+    required IoacStatusSummary_t status_summary = 1;
+}
+
+message EventLanDevicesChange {
+    required fixed64 timestamp = 1;
+}
+
+message EventLanDevicesProbeRequest {
+    required fixed64 timestamp = 1;
+}
+
+enum PowerMode_t {
+    ///
+    POWER_NO_SYNC = 1;
+    ///
+    POWER_FOREGROUND = 2;
+    ///
+    POWER_BACKGROUND = 3;
+}
+
+message EventPowerModeChange {
+    required PowerMode_t power_mode = 1;
+}
+
+message EventRemoteSwUpdateMessage {
+    // The device id sending this message
+    required fixed64 source_device_id = 1;
+}
+
+// RF async transfer request states
+// http://www.ctbg.acer.com/wiki/index.php/CCD_HTTP_Interface_for_Dataset_Access#check_async_transfer_request_status
+enum AsyncUploadState_t {
+     ASYNC_UPLOAD_STATE_WAIT   = 1;
+     ASYNC_UPLOAD_STATE_ACTIVE = 2;
+     ASYNC_UPLOAD_STATE_DONE   = 3;
+     ASYNC_UPLOAD_STATE_ERROR  = 4;
+}
+
+message EventAsyncUploadCompletion {
+    // Async upload transaction_id.
+    required fixed64 transaction_id = 1;
+    // user_id
+    required fixed64 user_id = 2;
+    // handle
+    required fixed64 handle = 3;
+
+    // DEPRECATED - use instead "state" and "error_code" below
+    // upload_status
+    required fixed32 upload_status = 4;
+
+    required AsyncUploadState_t state = 5;
+    optional sint32 error_code = 6;
+}
+
+message EventSyncBackCompletion {
+    required fixed64 user_id = 1;
+    required fixed64 dataset_id = 2;
+    required string component_name = 3;
+    required fixed64 component_id = 4;
+    required fixed64 revision = 5;
+    required string local_path = 6;
+}
+
+message EventPicStreamDBUpdateComplete {
+    required fixed64 dataset_id = 1;
+}
+
+message EventPicStreamStorageConservation {
+    required bool   is_dropping_mode = 1;
+    optional uint64 free_disk_size_bytes = 2;
+}
+
+// **Local credential file change event.
+// Device credentials change event.
+enum DeviceCredChangeType_t {
+    // Device credentials has been write to the file.
+    DEVICE_CRED_CHANGE_TYPE_WRITE = 1;
+    // Device credential files has been deleted.
+    DEVICE_CRED_CHANGE_TYPE_DELETE = 2;
+}
+
+message EventDeviceCredentialsChange {
+    required DeviceCredChangeType_t change_type = 1;
+
+    // All device credential files are being stored in the same dedicated folder.
+    required string local_file_root_path = 2;
+}
+// User credential are being stored in main.bin and userdata.bin.
+// These 2 files will never be removed from the system.
+// So we simply just notify the file has been changed, no change type needed.
+message EventUserCredentialsChange {
+    required string local_file_path = 1;
+}
+
+/// Contains a single event.
+/// Exactly one of the fields will be set.
+message CcdiEvent {
+    
+    // If this ever gets large enough, we can add a "type" field to assist dispatch, but it's probably
+    // not necessary.
+
+    /// Synchronization status has changed for a particular feature.
+    optional EventSyncFeatureStatusChange sync_feature_status_change = 12;
+
+    /// The list of devices associated with the user's account has changed.
+    /// This will occur when a device is linked or unlinked.
+    /// This will also occur if a device property (such as "device_name") changes.
+    /// This will not occur when the online/offline/standby status changes; there is a separate
+    /// EventDeviceConnectionChange event for that.
+    optional EventDeviceInfoChange device_info_change = 9;
+
+    /// The online/offline/standby status for a device has been updated.
+    optional EventDeviceConnectionChange device_connection_change = 10;
+    
+    /// Content of a dataset has changed in the cloud.
+    /// Note that this does *not* imply that the data has actually been downloaded to the local device!
+    /// If the local CCD is configured to sync the content to the local filesystem,
+    /// you should also get a EventSyncFeatureStatus event when CCD finishes downloading the changes
+    /// (and you should also get a EventSyncFeatureStatus when CCD starts downloading changes).
+    optional EventDatasetContentChange dataset_content_change = 18;
+    
+    /// The list of StorageNodes associated with the user's account has changed.
+    optional EventStorageNodeChange storage_node_change = 19;
+    
+    /// A user has logged in to the local instance of CCD.
+    optional EventUserLogin user_login = 20;
+    
+    /// A user has logged out from the local instance of CCD.
+    optional EventUserLogout user_logout = 21;
+    
+    optional EventDocSaveAndGoCompletion doc_save_and_go_completion = 30;
+
+    optional EventDocSaveAndGoEngineStateChange doc_save_and_go_engine_state_change = 31;
+
+    optional EventSWUpdateProgress sw_update_progress = 8;
+    
+    /// The IoacOverallStatus has been updated.
+    /// Call GetSystemState with get_ioac_status set to true for details.
+    optional EventIoacStatusChange ioac_status_change = 11;
+
+    /// New info for the LAN device discovery is available.
+    /// Call ListLanDevices to get updated information.
+    optional EventLanDevicesChange lan_devices_change = 32;
+
+    /// CCD is requesting SDD (Service Discovery Daemon) to probe for LAN devices again.
+    optional EventLanDevicesProbeRequest lan_devices_probe_request = 33;
+    
+    /// CCD power mode has changed.
+    optional EventPowerModeChange  power_mode_change = 34;
+
+    /// Remote SW update event.
+    optional EventRemoteSwUpdateMessage su_message = 36;
+    
+    /// Async upload complete event.
+    optional EventAsyncUploadCompletion async_upload_completion = 37;
+
+    /// Dataset change event (the dataset itself was added/removed).
+    optional EventDatasetChange dataset_change = 38;
+
+    /// SyncDown completion event.  (For CloudDoc only).
+    optional EventSyncBackCompletion syncback_completion = 40;
+
+    /// PicStream storage conservation event. 
+    optional EventPicStreamStorageConservation picstream_storage_conservation = 41;
+
+    /// Pairing requested event.
+    optional EventPairingRequest pairing_request = 42;
+    
+    /// PicStream DB Update event.
+    optional EventPicStreamDBUpdateComplete picstreamdb_updated = 43;
+
+    /// A SyncFolder change has been uploaded or downloaded.
+    /// Currently only applicable to the Syncbox feature.
+    optional EventSyncHistory sync_history = 44;
+
+    /// Local credential file change event.
+    optional EventDeviceCredentialsChange device_cred_change = 45;
+    optional EventUserCredentialsChange user_cred_change = 46;
+}
+
+//--------
+
+message EventsDequeueOutput {
+
+    /// The list of events (in chronological order).
+    repeated CcdiEvent events = 1;
+}
+
+//-------------------------------------
+// GetDatasetDirectoryEntries
+// DEPRECATED: Needs to be reimplemented for VCS.
+// (For Sync Agent UI)
+// Retrieves information about the files and folders within a directory of a dataset.
+// The local device does not need to be subscribed to the dataset to use this function.
+//-------------------------------------
+/// @deprecated Would need to be reimplemented for VCS.
+message GetDatasetDirectoryEntriesInput {
+    
+    /// User making the request; must be signed-in on the local device.
+    required fixed64 user_id = 1;
+    
+    /// Specify which dataset contains the directory.
+    /// The local device does not need to be subscribed to the dataset.
+    required fixed64 dataset_id = 2;
+    
+    /// Directory path, relative to the root of the dataset.
+    /// Specify "/" to list the items in the root directory of the dataset.
+    required string directory_name = 3;
+}
+/// @deprecated Would need to be reimplemented for VCS.
+message DatasetDirectoryEntry {
+    
+    /// Name of the entry relative to directory_name in
+    /// #GetDatasetDirectoryEntriesInput.
+    required string name = 1;
+    
+    /// True if this entry is a directory, false if this entry is a file.
+    required bool is_dir = 2;
+    
+    /// Size of the file (bytes).
+    /// Omitted if the entry is a directory.
+    optional fixed64 size = 3;
+
+    /// The URL that can be used to instantly access the file
+    /// Omitted if the entry is a directory.
+    optional string url = 4;
+
+    /// Last modify time
+    optional fixed64 mtime = 5;
+}
+/// @deprecated Would need to be reimplemented for VCS.
+message GetDatasetDirectoryEntriesOutput {
+
+    /// List of all entries within the specified directory.
+    repeated DatasetDirectoryEntry entries = 1;
+}
+
+//-------------------------------------
+// GetInfraHttpInfo
+// (For Sync Agent UI)
+// Retrieve the URL and session information required to open a browser to the specified service.
+//-------------------------------------
+message GetInfraHttpInfoInput {
+    
+    /// Specify which local user (if any) is making the request.
+    /// If specified, the local user's credentials will be included in the output.
+    optional fixed64 user_id = 1;
+    
+    /// CCD maintains a mapping of infra services to their URL prefixes and ports.
+    required InfraHttpService_t service = 2;
+    
+    /// Indicates whether a HTTP or a HTTPS connection should be used. 
+    required bool secure = 3 [default = true];
+}
+
+message GetInfraHttpInfoOutput {
+    
+    /// The URL prefix for the requested service.
+    /// For example:
+    /// - http://www.pc.igware.net:80
+    /// - https://www.pc.igware.net:443
+    /// - http://www-c200.pc.igware.net:80
+    /// - https://www-c200.pc.igware.net:443
+    required string url_prefix = 1;
+    
+    /// Session handle that can be passed to the specified service for 
+    /// the specified user.
+    /// Not valid if #GetInfraHttpInfoInput.user_id was omitted.
+    optional string session_handle = 2;
+    
+    /// Service ticket that can be passed to the specified service for 
+    /// the specified user.
+    /// Not valid if #GetInfraHttpInfoInput.user_id was omitted.
+    optional string service_ticket = 3;
+}
+
+//-------------------------------------
+// GetLocalHttpInfo
+// Retrieve the URL and session information required to connect to the specified service.
+//-------------------------------------
+message GetLocalHttpInfoInput {
+
+    /// Specify which local user is making the request.
+    required fixed64 user_id = 1;
+
+    /// CCD maintains a mapping of local services to their URL prefixes and ports.
+    required LocalHttpService_t service = 2;
+}
+
+message GetLocalHttpInfoOutput {
+
+    /// The URL prefix for the requested service.
+    required string url_prefix = 1;
+
+    /// Session handle that can be passed to the specified service for the specified user.
+    required string session_handle = 2;
+
+    /// Service ticket that can be passed to the specified service for the specified user.
+    required string service_ticket = 3;
+}
+
+//-------------------------------------
+// GetPersonalCloudState
+// (For Sync Agent UI)
+// Retrieve information about the user's Personal Cloud.
+//-------------------------------------
+message GetPersonalCloudStateInput {
+    
+    /// User making the request; must be signed-in on the local device.
+    required fixed64 user_id = 1;
+    
+    /// If true, we will only return what we have cached, even if the list may be out-of-date.
+    /// If false (the default), the call may block while CCD updates itself by calling the infrastructure.
+    optional bool only_use_cache = 5 [default = false];
+    
+    // TODO: NOT IMPLEMENTED
+    /// Set to true to retrieve the amount of storage used/available in the infrastructure for
+    /// this user's Personal Cloud.
+    optional bool get_infra_storage_quota = 2 [default = false];
+
+    /// @deprecated Please use #ListLinkedDevices instead (with storage_nodes_only set to true). 
+    optional bool list_storage_nodes = 3 [default = false];
+    
+    /// List of deviceIds to get the connection status for.
+    /// Note that if the user does not have the device linked, the device will appear
+    /// as DEVICE_CONNECTION_OFFLINE.
+    repeated fixed64 get_device_connection_status = 4;
+}
+
+enum DeviceConnectionState_t {
+    
+    /// The device is unreachable or unknown.
+    DEVICE_CONNECTION_OFFLINE = 1;
+    
+    /// The device is currently connected and can respond to requests.
+    DEVICE_CONNECTION_ONLINE = 2;
+    
+    /// The device is in low power mode, but can be woken remotely.
+    DEVICE_CONNECTION_STANDBY = 3;
+}
+
+message DeviceConnectionStatus {
+    
+    required DeviceConnectionState_t state = 1;
+    
+    /// (Only valid for #DEVICE_CONNECTION_STANDBY)
+    optional uint64 standby_since = 2;
+    
+    /// Indicates that we are awaiting an asynchronous update from the infrastructure, so the
+    /// DeviceConnectionState_t value may be out-of-date.
+    optional bool updating = 3 [default = false];
+}
+
+/// @deprecated Please use #ListLinkedDevices instead (with storage_nodes_only set to true).
+message StorageNodeInfo {
+    
+    required fixed64 device_id = 1;
+    
+    optional string storage_name = 2;
+    
+    required DeviceConnectionStatus status = 3;
+}
+
+message GetPersonalCloudStateOutput {
+    
+    /// Amount of infrastructure storage space (in bytes) currently used by this user across all
+    /// of the user's datasets.
+    /// Subtract this from #GetPersonalCloudStateOutput.infra_storage_total_bytes to find out
+    /// how much free space is remaining for the user.
+    /// Only valid if #GetPersonalCloudStateInput.get_server_storage_quota was true.
+    optional uint64 infra_storage_used_bytes = 1;
+    
+    /// Total amount of infrastructure storage space (in bytes) allowed for this user.
+    /// This number includes both used space and free space.
+    /// Only valid if #GetPersonalCloudStateInput.get_server_storage_quota was true.
+    optional uint64 infra_storage_total_bytes = 2;
+    
+    /// @deprecated Please use #ListLinkedDevices instead (with storage_nodes_only set to true).
+    repeated StorageNodeInfo storage_nodes = 3;
+    
+    /// List of results for the specified devices.
+    /// This list will be parallel to #GetPersonalCloudStateInput.get_device_connection_status (there
+    /// will be one result element here for each request element there, and in the same order).
+    repeated DeviceConnectionStatus device_connection_status = 4;
+}
+
+//-------------------------------------
+// GetSyncState
+// (For Sync Agent UI)
+// Retrieve information about the local Sync Agent's state.
+// This should always return quickly and never contact the infrastructure.
+//-------------------------------------
+message LookupAbsPathInput {
+    required fixed64 dataset_id = 1;
+    required fixed64 component_id = 2;
+    required uint64 revision = 3;
+    optional string dataset_rel_path = 7;
+}
+
+enum SyncEventType_t {
+
+    // Remote modifications synced to local SyncFolder:
+
+    /// A new file was downloaded (due to a remote modification).
+    CCD_SYNC_EVENT_NEW_FILE_DOWNLOADED = 1;
+
+    /// A modification to an existing file was downloaded (due to a remote modification).
+    CCD_SYNC_EVENT_MODIFIED_FILE_DOWNLOADED = 2;
+
+    /// A local file was deleted (due to a remote deletion).
+    CCD_SYNC_EVENT_FILE_DELETE_DOWNLOADED = 3;
+
+    /// A local folder was created (due to a remote modification).
+    CCD_SYNC_EVENT_FOLDER_CREATE_DOWNLOADED = 4;
+
+    /// A local folder was deleted (due to a remote deletion).
+    CCD_SYNC_EVENT_FOLDER_DELETE_DOWNLOADED = 5;
+
+    // Local modifications synced to server:
+
+    /// We successfully uploaded a new file.
+    CCD_SYNC_EVENT_NEW_FILE_UPLOADED = 8;
+
+    /// We successfully uploaded a modification to an existing file.
+    CCD_SYNC_EVENT_MODIFIED_FILE_UPLOADED = 9;
+
+    /// We successfully informed the server of a deleted file.
+    CCD_SYNC_EVENT_FILE_DELETE_UPLOADED = 10;
+
+    /// We successfully informed the server of a new folder.
+    CCD_SYNC_EVENT_FOLDER_CREATE_UPLOADED = 11;
+
+    /// We successfully informed the server of a deleted folder.
+    CCD_SYNC_EVENT_FOLDER_DELETE_UPLOADED = 12;
+
+    // Other:
+
+    /// A local file was in conflict and was renamed.
+    /// SyncHistoryEvent.path will contain the new path.
+    /// SyncHistoryEvent.conflict_file_path will contain the original path.
+    CCD_SYNC_EVENT_CONFLICT_FILE_CREATED = 15;
+}
+
+message EventSyncHistory {
+
+    // Specifies the type of sync event.
+    required SyncEventType_t type = 1;
+
+    // The absolute path of the file or directory that this event is for.
+    required string path = 2;
+
+    // Specifies which SyncFeature this event is for.
+    required SyncFeature_t feature = 3;
+
+    // Specifies which dataset this event is for.
+    required uint64 dataset_id = 4;
+
+    /// Local timestamp recording when the event was generated (which should
+    /// be the same as when the operation was completed).
+    /// This is in microseconds (VPLTime_t) since the epoch.
+    required uint64 event_time = 5;
+
+    // Only valid when type == CCD_SYNC_EVENT_CONFLICT_FILE_CREATED.
+    // The original absolute path of the conflict file.
+    optional string conflict_file_original_path = 15;
+}
+
+message GetSyncStateInput {
+    
+    /// User making the request; must be signed-in on the local device.
+    /// If omitted, this will automatically use the user logged-in at index 0.
+    optional fixed64 user_id = 1;
+    
+    /// If false, CCD will ensure that the "device linked" state is up-to-date before returning.
+    /// If you are only monitoring what SyncAgent knows about, it is better to set this to true
+    /// to make sure that we don't contact the server.
+    optional bool only_use_cache = 6 [default = false];
+    
+    /// Set to true to retrieve the user-settable "friendly" name for this device.
+    optional bool get_device_name = 2 [default = false];
+    
+    /// Set to true to retrieve the user-settable camera roll enabled state
+    optional bool get_is_camera_roll_upload_enabled = 7 [default = false];
+
+    /// Set to true to retrieve the user-settable camera roll global delete state
+    optional bool get_is_camera_roll_global_delete_enabled = 32 [default = true];
+    
+    /// Set to true to retrieve the user-settable enable_network_activity state
+    optional bool get_is_network_activity_enabled = 9 [default = false];
+    
+    /// Set to true to retrieve the user-settable bandwidth limits for this device.
+    optional bool get_bandwidth_limits = 4 [default = false];
+    
+    /// List of files and/or folders to get the #ObjectSyncState for.
+    /// Each path will be canonicalized.
+    /// CURRENTLY NOT IMPLEMENTED
+    repeated string get_sync_states_for_paths = 5;
+    
+    /// List of datasets to get the #DatasetSyncStateSummary for.
+    repeated fixed64 get_sync_states_for_datasets = 8;
+    
+    /// List of sync features to get the FeatureSyncState for.
+    repeated SyncFeature_t get_sync_states_for_features = 22;
+    
+    /// Get allow background data sync setting.
+    optional bool get_background_data = 12;
+    
+    /// Get allow auto-sync setting.
+    optional bool get_auto_sync = 13;
+    
+    /// Get setting to allow data to occur while the user is on a mobile network.
+    optional bool get_mobile_network_data = 14;
+    
+    /// Get the current PicStream (camera roll) upload directories.
+    optional bool get_camera_roll_upload_dirs = 15;
+    
+    /// Get the current PicStream (camera roll) download directories.
+    optional bool get_camera_roll_download_dirs = 19;
+    
+    /// Get media metadata download path (intended for MCA use only).
+    optional bool get_media_metadata_download_path = 16;
+
+    /// Get media metadata upload path (intended for MSA use only).
+    optional bool get_media_metadata_upload_path = 17;
+
+    /// Get the local sync directory for media playlists (intended for app use).
+    optional bool get_media_playlist_path = 18;
+
+    /// Retrieve the current "Notes" SyncFeature settings.
+    optional bool get_notes_sync_settings = 21;
+
+    /// @deprecated Please use get_notes_sync_settings instead.
+    optional bool get_notes_sync_path = 23;
+
+    /// Returns the current media_metadata_thumb_download_path along with
+    /// any migration status.
+    optional bool get_mm_thumb_download_path = 24;
+
+    /// Returns whether media metadata thumbnail download sync is enabled or disabled.
+    /// In 2.6 and beyond, it returns a list of the enabled thumb types.
+    optional bool get_mm_thumb_sync_enabled = 26;
+
+    /// Get the "allow clouddoc_sync" setting.
+    optional bool get_clouddoc_sync = 28;
+
+    /// To support "Archive Storage Device File Serving" in StorageNode.
+    optional LookupAbsPathInput lookup_abs_path = 30;
+
+    /// Get the EventSyncHistory items for the specified SyncFeature.
+    /// Currently, only #SYNC_FEATURE_SYNCBOX is supported.
+    optional SyncFeature_t get_sync_history_events_by_feature = 31;
+
+    /// Set the maximum number of EventSyncHistory items desired in the response.
+    /// Only relevant when get_sync_history_events_by_feature is set.
+    /// 0 indicates no limit requested (but CCD has its own internal limit, which
+    /// should be 30 by default).
+    optional uint32 get_sync_history_events_max_count = 34 [default = 0];
+
+    /// Retrieve the current "Syncbox" SyncFeature settings.
+    optional bool get_syncbox_sync_settings = 33;
+}
+
+//% CCDIGetSyncState assumes that these enum values are exactly the same as SyncConfigStateType_t (from SyncConfig.hpp).
+enum SyncStateType_t {
+    
+    /// The file/folder is not within a folder that is being tracked as a "SyncFolder".
+    SYNC_STATE_NOT_IN_SYNC_FOLDER = 1;
+    
+    /// The file/folder exists locally and is the same as recorded in the server (VCS).
+    SYNC_STATE_UP_TO_DATE = 2;
+    
+    /// There are remote changes to the file/folder that need to be downloaded.
+    /// For folders, this recursively includes files in subdirectories.
+    SYNC_STATE_NEED_TO_DOWNLOAD = 4;
+    
+    /// There are local changes to the file/folder that need to be uploaded.
+    /// For folders, this recursively includes files in subdirectories.
+    SYNC_STATE_NEED_TO_UPLOAD = 6;
+    
+    /// There are both files to upload and files to download under the specified folder.
+    /// This state is only applicable to folders.
+    /// This recursively includes files in subdirectories.
+    SYNC_STATE_NEED_TO_UPLOAD_AND_DOWNLOAD = 7;
+    
+    /// The file/folder is being filtered out because it has special meaning to CCD.
+    /// For example ".sync_temp" will be filtered.
+    SYNC_STATE_FILTERED = 8;
+    
+    /// The file/folder is within a "SyncFolder" and is not filtered out, but CCD doesn't
+    /// know about it yet.
+    /// This can happen when a file is newly created.
+    /// It is probably safe to display this the same way as SYNC_STATE_NEED_TO_UPLOAD.
+    SYNC_STATE_UNKNOWN = 9;
+};
+
+message ObjectSyncState {
+
+    /// Classifies the synchronization state of the specified file/folder.
+    required SyncStateType_t state = 1;
+    
+    /// The dataset that this file/folder belongs to.
+    /// Omitted when state is SYNC_STATE_NOT_IN_SYNC_FOLDER.
+    optional fixed64 dataset_id = 2 [default = 0];
+    
+    /// The SyncFeature that this file/folder belongs to.
+    /// Omitted when state is SYNC_STATE_NOT_IN_SYNC_FOLDER.
+    optional SyncFeature_t sync_feature = 4;
+
+    /// This will be set to true if the requested path is the root directory of a
+    /// SyncFolder.
+    optional bool is_sync_folder_root = 3 [default = false];
+}
+
+/// These counts includes all subscriptions for the local device.
+message DatasetSyncStateSummary {
+    /// Returns the dataset state:  IN_SYNC, SYNCING, or OUT_OF_SYNC
+    optional DatasetSyncStateType_t status = 1 [default = CCD_SYNC_STATE_OUT_OF_SYNC];
+    
+    /// Number of files that need downloading since the last SyncAgent scan.
+    optional uint32 pending_files_download = 2 [default = 0];
+    
+    /// Number of files that need downloading since the last SyncAgent scan.
+    optional uint32 pending_files_upload = 3 [default = 0];
+    
+    /// Total number of files downloaded since start of CCD.
+    /// This value should only be used for debugging purposes.
+    optional uint32 total_files_downloaded = 4 [default = 0];
+    
+    /// Total number of files uploaded since start of CCD.
+    /// This value should only be used for debugging purposes.
+    optional uint32 total_files_uploaded = 5 [default = 0];
+}
+
+enum FeatureSyncStateType_t {
+
+    /// Since the last scan, the data has been determined to be in-sync.
+    CCD_FEATURE_STATE_IN_SYNC = 1;
+
+    /// A scan has been completed and the sync agent is performing the pending actions.
+    CCD_FEATURE_STATE_SYNCING = 2;
+
+    /// There is syncing to do, and an error has occurred such that syncing cannot happen.
+    CCD_FEATURE_STATE_OUT_OF_SYNC = 3;
+};
+
+message FeatureSyncStateSummary {
+    /// Returns the dataset state:  IN_SYNC, SYNCING, or OUT_OF_SYNC
+    optional FeatureSyncStateType_t status = 1  [default = CCD_FEATURE_STATE_OUT_OF_SYNC];
+    
+    /// Defined if there is more error information to provide.
+    optional sint32 error = 2;
+
+    /// Number of files that are downloading/uploading and waiting to be downloaded/uploaded.
+    /// Only valid for:
+    /// - SYNC_FEATURE_PICSTREAM_UPLOAD
+    /// - SYNC_FEATURE_PICSTREAM_DOWNLOAD_FULL_RES
+    /// - SYNC_FEATURE_PICSTREAM_DOWNLOAD_LOW_RES
+    /// .
+    optional uint32 pending_files = 3 [default = 0];
+    
+    /// Number of files that are failed to download/upload.
+    /// Only valid for:
+    /// - SYNC_FEATURE_PICSTREAM_UPLOAD
+    /// - SYNC_FEATURE_PICSTREAM_DOWNLOAD_FULL_RES
+    /// - SYNC_FEATURE_PICSTREAM_DOWNLOAD_LOW_RES
+    /// .
+    optional uint32 failed_files = 4 [default = 0];
+
+    /// Number of local files that are uploading or waiting to be uploaded.
+    /// This number includes creating/modifying/deleting of files and folders.
+    /// Only valid for SYNC_FEATURE_SYNCBOX.
+    optional uint32 uploads_remaining = 5 [default = 0];
+
+    /// Number of remote files that are downloading or waiting to be downloaded.
+    /// This number includes creating/modifying/deleting of files and folders.
+    /// Only valid for SYNC_FEATURE_SYNCBOX.
+    /// NOTE: If remote_scan_pending is true, then there are probably additional
+    /// downloads that are not being included in this count (since we don't know
+    /// exactly what they are yet).
+    optional uint32 downloads_remaining = 6 [default = 0];
+
+    /// There are likely to be remote changes incoming.
+    /// Only valid for SYNC_FEATURE_SYNCBOX.
+    optional bool remote_scan_pending = 7;
+
+    /// There is currently a scan in progress (this involves making multiple VCS calls, so it may
+    /// take some time before we actually locate a change).
+    /// Only valid for SYNC_FEATURE_SYNCBOX.
+    /// When this is true and status is CCD_FEATURE_STATE_IN_SYNC, you may want to
+    /// display this case to the user the same as "syncing".
+    optional bool scan_in_progress = 8;
+}
+
+message MediaMetadataThumbMigrateStatus {
+    /// metadata src directory to copy from during migration.
+    required string mm_src_path = 1;
+
+    /// The thumbnail metadata destination directory being copied to during
+    /// migration.  After the migration completes, the mm_thumb_download_path
+    /// will become this directory.
+    required string mm_dest_path = 2;
+}
+
+message SyncFeatureSettings {
+
+    /// Whether or not the relevant SyncFeature is currently enabled for the local device.
+    required bool sync_feature_enabled = 1;
+
+    /// The local sync directory for the relevant SyncFeature (intended for app use).
+    /// Omitted when sync_feature_enabled is false.
+    optional string sync_feature_path = 2;
+
+    /// Indicates if the local device is functioning as an archive storage device for this feature.
+    /// This means that it is hosting the staging area and serving the file content to other clients.
+    /// Only supported for SYNC_FEATURE_SYNCBOX.
+    optional bool is_archive_storage = 3 [default = false];
+}
+
+message LookupAbsPathOutput {
+    required int32 err_code = 1;
+    optional string absolute_path = 2;
+
+    /// This is in microseconds (VPLTime_t).
+    optional fixed64 local_modify_time = 3;
+
+    /// File hash stored in local SyncConfig DB.
+    optional string hash = 4;
+}
+
+message GetSyncStateOutput {
+    /// Indicates if the local device is linked to the specified local user for purposes of
+    /// personal cloud sync.
+    required bool is_device_linked = 1;
+    
+    /// Indicates if Sync Agent is running (as opposed to paused) on the
+    /// local device.
+    /// In the current release, this will always be true.  You will need
+    /// to check if individual Sync Features are enabled/disabled.
+    required bool is_sync_agent_enabled = 2;
+    
+    /// User-settable "friendly" name for this device.
+    /// Only valid if #GetSyncStateInput.get_device_name was true and
+    /// #GetSyncStateOutput.is_device_linked is true.
+    optional string my_device_name = 3;
+    
+    /// Indicates if Camera Roll is uploading to the cloud from the local device.
+    /// Only valid if #GetSyncStateInput.get_is_camera_roll_upload_enabled was true.
+    optional bool is_camera_roll_upload_enabled = 9;
+    
+    /// Indicates if local photos and data is deleted when global delete notification comes
+    /// Only valid if #GetSyncStateInput.get_is_camera_roll_global_delete_enabled was true.
+    optional bool is_camera_roll_global_delete_enabled = 32;
+
+    /// Indicates if network activity is enabled;
+    /// Only valid if #GetSyncStateInput.get_is_network_activity_enabled was true.
+    optional bool is_network_activity_enabled = 11;
+    
+    /// User-settable maximum download rate (in bytes per second).
+    /// 0 indicates no limit.
+    /// Only valid if #GetSyncStateInput.get_bandwidth_limits was true.
+    optional uint64 max_download_rate_bytes_sec = 4;
+    
+    /// User-settable maximum upload rate (in bytes per second).
+    /// 0 indicates no limit.
+    /// Only valid if #GetSyncStateInput.get_bandwidth_limits was true.
+    optional uint64 max_upload_rate_bytes_sec = 5;
+    
+    /// List of results for the specified files and folders.
+    /// This list will be parallel to #GetSyncStateInput.get_sync_states_for_paths (there
+    /// will be one result element here for each request element there, and in the same order).
+    /// CURRENTLY NOT IMPLEMENTED
+    repeated ObjectSyncState sync_states_for_paths = 6;
+    
+    /// List of results for the specified datasets.
+    /// This list will be parallel to #GetSyncStateInput.get_sync_states_for_datasets.
+    /// There will be one result element here for each request element there, and
+    /// in the same order.
+    repeated DatasetSyncStateSummary dataset_sync_state_summary = 10;
+    
+    /// List of results for the specified sync features.
+    /// This list will be parallel to #GetSyncStatInput.get_sync_states_for_features.
+    /// There will be one result element here for each request element there, and
+    /// in the same order.
+    repeated FeatureSyncStateSummary feature_sync_state_summary = 22;
+    
+    /// Get allow background data sync setting.  (See UpdateSyncSettingsInput)
+    optional bool background_data = 12;
+    
+    /// Get allow auto-sync setting.  (See UpdateSyncSettingsInput)
+    optional bool auto_sync = 13;
+    
+    /// Get setting to allow data to occur while the user is on a mobile network
+    /// (See UpdateSyncSettingsInput)
+    optional bool mobile_network_data = 14;
+    
+    /// List of PicStream (camera roll) upload directories.
+    /// Only valid if #GetSyncStateInput.get_camera_roll_upload_dirs was true.
+    repeated string camera_roll_upload_dirs = 15;
+
+    /// List of PicStream (camera roll) full resolution download directories.
+    /// Only valid if #GetSyncStateInput.get_camera_roll_download_dirs was true.
+    repeated CameraRollDownloadDirSpec camera_roll_full_res_download_dirs = 19;
+    
+    /// List of PicStream (camera roll) low resolution download directories.
+    /// Only valid if #GetSyncStateInput.get_camera_roll_download_dirs was true.
+    repeated CameraRollDownloadDirSpec camera_roll_low_res_download_dirs = 20;
+    
+    /// List of PicStream (camera roll) thumbnail download directories.
+    /// Only valid if #GetSyncStateInput.get_camera_roll_download_dirs was true.
+    repeated CameraRollDownloadDirSpec camera_roll_thumb_download_dirs = 31;
+
+    /// Media metadata download path (intended for MCA use only).
+    optional string media_metadata_download_path = 16;
+
+    /// Media metadata upload path (intended for MSA use only).
+    optional string media_metadata_upload_path = 17;
+    
+    /// The local sync directory for media playlists (intended for app use).
+    optional string media_playlist_path = 18;
+
+    /// The current settings for the "Notes" SyncFeature.
+    /// Only valid if #GetSyncStateInput.get_notes_sync_settings was true.
+    optional SyncFeatureSettings notes_sync_settings = 21;
+
+    /// @deprecated Please use notes_sync_settings instead.
+    optional string notes_sync_path = 23;
+    
+    /// The current media metadata base directory.
+    /// Only valid if #GetSyncStateInput::get_mm_thumb_download_path was true.
+    optional string mm_thumb_download_path = 24;
+
+    /// The migration status, returned when #GetSyncStateInput.get_mm_thumb_download_path
+    /// is true and a migration is ongoing.
+    optional MediaMetadataThumbMigrateStatus mm_thumb_download_migrate_status = 25;
+
+    /// The enable status of thumbnail sync.
+    /// Only valid if #GetSyncStateInput.get_mm_thumb_sync_enabled was true.
+    /// In 2.6 and beyond, this will be true IFF the mm_thumb_sync_enabled_types
+    /// list is non-empty.
+    optional bool mm_thumb_sync_enabled = 26;
+
+    /// The current "allow clouddoc_sync" setting.
+    /// Only valid if #GetSyncStateInput.get_clouddoc_sync was true.
+    optional bool clouddoc_sync = 28;
+
+    /// List of thumbnail sync types that are currently enabled.
+    /// Only valid if #GetSyncStateInput.get_mm_thumb_sync_enabled was true.
+    repeated SyncFeature_t mm_thumb_sync_enabled_types = 29;
+
+    /// Only valid if #GetSyncStateInput.lookup_abs_path was set.
+    optional LookupAbsPathOutput lookup_abs_path = 30;
+
+    /// Only valid if #GetSyncStateInput.get_sync_history_events_by_feature was set.
+    /// Events for the requested SyncFeature, sorted from oldest first to newest last.
+    /// Use #GetSyncStateInput.get_sync_history_events_max_count to specify how many
+    /// events are desired.
+    repeated EventSyncHistory sync_history_events = 34;
+
+    /// The current settings for the "Syncbox" SyncFeature. In the initial implementation,
+    /// only one syncbox_sync_settings is associated with a device. This can change in the future. 
+    /// Only valid if #GetSyncStateInput.get_syncbox_sync_settings was true.
+    repeated SyncFeatureSettings syncbox_sync_settings = 33;
+}
+
+//-------------------------------------
+// GetSyncStateNotifications
+// (For Sync Agent UI)
+// Retrieve a list of events that the application may want to report to the end-user
+// or otherwise act upon.
+// CCD will maintain a queue of SyncStateNotification elements and dequeue them when
+// this API is called.
+//-------------------------------------
+message GetSyncStateNotificationsInput {
+    
+    /// Maximum number of #SyncStateNotification elements to return.
+    /// If omitted, all queued events will be returned.
+    optional uint32 max_count = 1;
+}
+
+message SyncEventSyncComplete {
+    
+    /// Number of changes downloaded during the previous sync.
+    required uint32 num_downloaded = 1;
+    
+    /// Number of changes uploaded during the previous sync.
+    required uint32 num_uploaded = 2;
+}
+
+/// @deprecated SyncEventFileStatus will eventually replace this
+message SyncEventFileAdded {
+    required fixed64 dataset_id = 1;
+    required string full_path = 2;
+}
+
+/// @deprecated SyncEventFileStatus will eventually replace this
+message SyncEventFileRemoved {
+    required fixed64 dataset_id = 1;
+    required string full_path = 2;
+}
+
+enum SyncEventErrorType_t {
+    
+    /// Connection to the infrastructure was lost.
+    SYNC_EVENT_ERROR_INFRA_CONNECTION_LOST = 1;
+    
+    /// Connection to a storage node was lost.
+    /// See #SyncEventError.dataset_id for the affected dataset.
+    /// See #SyncEventError.name for the storage node's user-friendly name.
+    SYNC_EVENT_ERROR_STORAGE_CONNECTION_LOST = 2;
+    
+    /// Local sync folder is inaccessible; the folder or storage device may have been removed.
+    /// See #SyncEventError.dataset_id for the affected dataset.
+    /// See #SyncEventError.path for the inaccessible folder name (absolute path).
+    SYNC_EVENT_ERROR_CANNOT_ACCESS_FOLDER = 3;
+    
+    /// The local sync folder is on a drive that has run out of storage space.
+    /// See #SyncEventError.dataset_id for the affected dataset.
+    /// See #SyncEventError.path for the affected folder name (absolute path).
+    /// See #SyncEventError.count for the number of items that couldn't be downloaded.
+    SYNC_EVENT_ERROR_OUT_OF_SPACE = 4;
+    
+    /// The maximum size (quota) for the dataset on remote storage has been reached.
+    /// See #SyncEventError.dataset_id for the affected dataset.
+    /// See #SyncEventError.count for the number of items that couldn't be uploaded.
+    SYNC_EVENT_ERROR_QUOTA_EXCEEDED = 5;
+};
+
+message SyncEventError {
+    
+    /// Type of error that occurred.
+    required SyncEventErrorType_t error_type = 1;
+    
+    /// Additional info for specific error types; see #SyncEventErrorType_t for details.
+    optional fixed64 dataset_id = 3;
+    
+    /// Additional info for specific error types; see #SyncEventErrorType_t for details.
+    optional string path = 4;
+    
+    /// Additional info for specific error types; see #SyncEventErrorType_t for details.
+    optional uint32 count = 5;
+    
+    /// Additional info for specific error types; see #SyncEventErrorType_t for details.
+    optional string name = 6;
+}
+
+enum SyncFileChangeType_t {
+    
+    /// A file was added on the local device; it will be uploaded.
+    SYNC_FILE_CHANGE_LOCAL_ADD = 1;
+    
+    /// A file was removed on the local device; the deletion will be uploaded.
+    SYNC_FILE_CHANGE_LOCAL_REMOVE = 2;
+    
+    /// A file was modified on the local device; the change will be uploaded.
+    SYNC_FILE_CHANGE_LOCAL_MODIFY = 3;
+    
+    /// A file was added from a different device; the file will be downloaded.
+    SYNC_FILE_CHANGE_REMOTE_ADD = 6;
+    
+    /// A file was removed from a different device; the local file will be deleted.
+    SYNC_FILE_CHANGE_REMOTE_REMOVE = 7;
+    
+    /// A file was modified from a different device; the change will be downloaded.
+    SYNC_FILE_CHANGE_REMOTE_MODIFY = 8;
+};
+
+/// Reports that Sync Agent is beginning and/or ending an operation for a specific file.
+message SyncEventFileStatus {
+    
+    /// Absolute path to the file on the local device.
+    required string full_path = 1;
+    
+    /// Dataset that contains the file.
+    required fixed64 dataset_id = 2;
+    
+    /// The type of change that caused the Sync Agent operation.
+    required SyncFileChangeType_t change_type = 3;
+    
+    /// True if this event reports the beginning of a Sync Agent operation.
+    optional bool is_starting = 4 [default = false];
+    
+    /// True if this event reports the end of a Sync Agent operation.
+    /// @note it is valid for both is_starting and is_finished to be true in the same event.
+    /// @note it is not valid for both is_starting and is_finished to be false in the same event.
+    optional bool is_finished = 5 [default = false];
+    
+    /// If is_finished is true, this indicates the result of the Sync Agent operation.
+    /// Omitted if the operation completed successfully.
+    optional SyncEventErrorType_t error = 6;
+}
+
+/// Contains a single user notification.
+/// Exactly one of the fields will be set.
+message SyncStateNotification {
+    
+    // If this ever gets large enough, we can add a "type" field to assist dispatch, but it's probably
+    // not necessary.
+
+    /// A full synchronization has completed.
+    // NOT IMPLEMENTED YET!
+    optional SyncEventSyncComplete sync_complete = 2;
+    
+    /// A file has been added.
+    optional SyncEventFileAdded file_added = 3;
+    
+    /// A file has been removed.
+    // NOT IMPLEMENTED YET!
+    optional SyncEventFileRemoved file_removed = 4;
+    
+    /// An error of interest to the end-user has occurred.
+    // NOT IMPLEMENTED YET!
+    optional SyncEventError error = 5;
+    
+    // NOT IMPLEMENTED YET!
+    optional SyncEventFileStatus file_status = 6;
+}
+
+message GetSyncStateNotificationsOutput {
+    
+    /// The list of events (in chronological order).
+    repeated SyncStateNotification notifications = 1;
+}
+
+//-------------------------------------
+// LinkDevice
+// (For Sync Agent UI)
+// Link the local device to a user (to enable Personal Cloud Sync).
+//-------------------------------------
+message LinkDeviceInput {
+    
+    /// User making the request; must be signed-in on the local device.
+    required fixed64 user_id = 1;
+    
+    /// Can set the user-specified "friendly" name for this device.
+    optional string device_name = 2;
+    
+    /// Specify if the device is manufactured by Acer.
+    optional bool is_acer_device = 3 [default = false];
+    
+    /// Specify if the device has a camera.
+    optional bool device_has_camera = 4 [default = false];
+    
+    /// Specify the class/type of device (for UI purposes).
+    /// If omitted, a compile-time default of "DefaultAndroid", "DefaultWindows",
+    /// or "DefaultLinux" will be used.
+    optional string device_class = 5;
+    
+    /// Specify the OS version (for UI purposes).
+    optional string os_version = 6;
+}
+
+// Output: NoParamResponse
+
+//-------------------------------------
+// ListLinkedDevices
+// (For Sync Agent UI)
+// List linked devices for the specified user.
+//-------------------------------------
+message ListLinkedDevicesInput {
+
+    /// User making the request; must be signed-in on the local device.
+    required fixed64 user_id = 1;
+    
+    /// If true, we will only return what we have cached, even if the list may be out-of-date.
+    /// If false (the default), the call may block while CCD updates itself by calling the infrastructure.
+    optional bool only_use_cache = 2 [default = false];
+    
+    /// If true, this will only return the user's linked devices that are also storage nodes.
+    /// If false (the default), this will return all linked devices.
+    optional bool storage_nodes_only = 3 [default = false];
+}
+
+message LinkedDeviceInfo {
+    
+    required fixed64 device_id = 1;
+    
+    required string device_name = 2;
+    
+    required bool is_storage_node = 3;
+    
+    required DeviceConnectionStatus connection_status = 4;
+    
+    required string device_class = 5;
+    
+    required bool is_acer = 6;
+    
+    required bool has_camera = 7;
+    
+    optional string os_version = 8;
+
+    optional bool feature_media_server_capable = 9;
+
+    optional bool feature_virt_drive_capable = 10;
+
+    optional string protocol_version = 11;
+
+    optional bool feature_remote_file_access_capable = 12;
+
+    optional bool feature_fsdatasettype_capable = 13;
+
+    optional string build_info = 14;
+
+    optional string model_number = 15;
+
+    optional bool feature_my_storage_server_capable = 16;
+}
+
+message ListLinkedDevicesOutput {
+    
+    /// @deprecated Please use "devices" instead.
+    repeated vplex.vsDirectory.DeviceInfo linked_devices = 1;
+    
+    /// Details of each device.
+    repeated LinkedDeviceInfo devices = 2;
+}
+
+//-------------------------------------
+// ListOwnedDatasets
+// (For Sync Agent UI)
+// List datasets that belong to the specified user.
+//-------------------------------------
+message ListOwnedDatasetsInput {
+
+    /// User making the request; must be signed-in on the local device.
+    required fixed64 user_id = 1;
+    
+    /// If false (the default), we will only show the datasets available for the local device's
+    /// device class.  This feature will likely be used to filter out titles/games/applications
+    /// that won't run on the current device.
+    /// Set this to true to show all datasets, regardless of device class.
+    /// @note Only "false" is currently supported.
+    optional bool show_all_device_classes = 2 [default = false];
+    
+    /// If false, CCD will ensure that the dataset list is up-to-date before returning.
+    /// If you are only monitoring what SyncAgent knows about, it is better to set this to true
+    /// to make sure that we don't contact the server.
+    optional bool only_use_cache = 3 [default = false];
+}
+
+message ListOwnedDatasetsOutput {
+    
+    /// Details of each dataset.
+    repeated vplex.vsDirectory.DatasetDetail dataset_details = 1;
+    
+    /// Indicates if the current device created this dataset.
+    /// This list is parallel to dataset_details.
+    repeated bool created_by_this_device = 2;
+}
+
+//-------------------------------------
+// ListUserStorage
+// (For CloudNode)
+// List all user storage assigned to a user.
+//-------------------------------------
+message ListUserStorageInput {
+    /// User making the request; must be signed-in on the local device.
+    required fixed64 user_id = 1;
+
+    /// If true, we will only return what we have cached, even if the list may be out-of-date.
+    /// If false (the default), the call may block while CCD updates itself by calling the infrastructure.
+    optional bool only_use_cache = 2 [default = false];
+}
+
+message ListUserStorageOutput {
+    /// Details of each user storage.
+    repeated vplex.vsDirectory.UserStorage user_storage = 1;
+}
+
+//-------------------------------------
+// ListSyncSubscriptions
+// @deprecated Sync is now feature-based instead of subscription-based.  Use the UpdateAppState
+//     and/or UpdateSyncSettings APIs to specify which data you want CCD to sync.
+// (For Sync Agent UI)
+// List the subscription details for each dataset that the user has subscribed to
+// for the specified device.
+//-------------------------------------
+/// @deprecated Sync is now feature-based instead of subscription-based.  Use the UpdateAppState
+///     and/or UpdateSyncSettings APIs to specify which data you want CCD to sync.
+message ListSyncSubscriptionsInput {
+    
+    /// User making the request; must be signed-in on the local device.
+    /// (Special behavior for shell extension: if omitted, this will attempt to use the user
+    /// logged-in to player index 0.)
+    optional fixed64 user_id = 1;
+    
+    /// Specify which device's subscriptions to list.
+    /// This can be omitted to indicate the local device.
+    optional fixed64 device_id = 2;
+    
+    /// If false, CCD will ensure that the subscription list is up-to-date before returning.
+    /// If you are only monitoring what SyncAgent knows about, it is better to set this to true
+    /// to make sure that we don't contact the server.
+    optional bool only_use_cache = 3 [default = false];
+}
+
+/// @deprecated Sync is now feature-based instead of subscription-based.  Use the UpdateAppState
+///     and/or UpdateSyncSettings APIs to specify which data you want CCD to sync.
+message SyncSubscriptionDetail {
+    
+    /// The details for the dataset (device-independent fields).
+    required vplex.vsDirectory.DatasetDetail dataset_details = 1;
+    
+    /// Location where this subscription will be rooted on the subscribed device.
+    /// "raw_device_root" may contain substitution strings,
+    /// so the actual resolved path is provided here for convenience.
+    /// Omitted if this subscription is not for the local device.
+    /// This will use the platform-specific path separators ("C:\foo\bar" on Windows,
+    /// "/foo/bar" on *nix).
+    optional string absolute_device_root = 2;
+    
+    /// Location where this subscription will be rooted on the subscribed device.
+    /// It can be an absolute path (e.g. "E:/" or "/myCloud"), or it can be
+    /// relative to the client-maintained "local root" (e.g. "$LOCALROOT/MyStuff").
+    required string raw_device_root = 3;
+    
+    /// User-specified filter for the subscription.
+    optional string filter = 4;
+    
+    /// Specifies if this subscription will upload additions and modifications.
+    required bool upload_ok = 5;
+    
+    /// Specifies if this subscription will download additions and modifications.
+    required bool download_ok = 6;
+    
+    /// Specifies if this subscription will upload deletions.
+    required bool upload_delete_ok = 7;
+    
+    /// Specifies if this subscription will download deletions.
+    required bool download_delete_ok = 8;
+    
+    /// This is not currently used and should always be just "/".
+    /// It may be used in the future to allow different devices to have 
+    /// different views of the same dataset, or it might not.
+    required string dataset_root = 9;
+    
+    /// Location where this dataset can be reached via VSS protocol.
+    /// You shouldn't need to interpret its contents outside of VSCore.
+    required string dataset_location = 10;
+
+    /// Maximum size limit (bytes) set for the subscription.  If set to
+    /// 0, there's no limit enforced.
+    optional fixed64 max_size = 11;
+
+    /// Maximum files limit set for the subscription.  If set to 0, there's no
+    /// limit enforced.
+    optional fixed64 max_files = 12;
+}
+
+/// @deprecated Sync is now feature-based instead of subscription-based.  Use the UpdateAppState
+///     and/or UpdateSyncSettings APIs to specify which data you want CCD to sync.
+message ListSyncSubscriptionsOutput {
+    
+    // DEPRECATED! Please switch existing code to use subs.
+    /// Details of each subscription that the user has for the specified device.
+    repeated vplex.vsDirectory.Subscription subscriptions = 1;
+    
+    /// Details of each subscription that the user has for the specified device.
+    repeated SyncSubscriptionDetail subs = 2;
+}
+
+//-------------------------------------
+// RemoteWakeup
+// Wake up a Personal Storage Node that is in the standby (#DEVICE_CONNECTION_STANDBY) state.
+// Note that the local device must be in the online (#DEVICE_CONNECTION_ONLINE) state for this
+// to work.
+// Note that even if this returns 0 (success), it is possible that the request won't reach the
+// infrastructure; therefore, you should call this again every ~10 seconds if the user is still
+// waiting for the Personal Storage Node to become ONLINE.
+//-------------------------------------
+message RemoteWakeupInput {
+    
+    /// User making the request; must be signed-in on the local device.
+    /// This user must also be signed-in on device_to_wake.
+    required fixed64 user_id = 1;
+    
+    /// DeviceId of the device to wake.
+    required fixed64 device_to_wake = 2;
+}
+
+// Output: NoParamResponse
+
+//-------------------------------------
+// RemoteSwUpdateMessage
+// Send events between storage node and client.
+// Triggers software update actions by application.
+//-------------------------------------
+message RemoteSwUpdateMessageInput {
+    /// User making the request; must be signed-in on the local device.
+    /// This user must also be signed-in on the target device.
+    required fixed64 user_id = 1;
+    
+    /// DeviceId of the device to send software update message.
+    required fixed64 target_device_id = 2;
+};
+
+// Output: NoParamResponse
+
+//-------------------------------------
+// TODO: NOT IMPLEMENTED
+// RenameDataset
+// (For Sync Agent UI)
+// Rename a dataset.
+//-------------------------------------
+// TODO: NOT IMPLEMENTED
+message RenameDatasetInput {
+
+    /// User making the request; must be signed-in on the local device.
+    required fixed64 user_id = 1;
+    
+    /// Specify which dataset to modify.
+    required fixed64 dataset_id = 2;
+    
+    /// Set this to rename the dataset.
+    /// The name must be unique across all of the specified user's datasets.
+    required string dataset_name = 3;
+}
+
+// Output: NoParamResponse
+
+//-------------------------------------
+// PrivateMsaDataCommit
+// Internal API to commit MSA Data.
+// This method should not be used in any applications other than MSA.
+//-------------------------------------
+message PrivateMsaDataCommitInput {
+
+    /// User making the request; must be signed-in on the local device.
+    required fixed64 user_id = 1;
+    
+    /// Undocumented internal functions: only one of these should be true.
+    optional bool commit_start = 3;
+    optional bool commit_end = 4;
+    
+    /// Called by msa on startup.
+    optional bool initialize = 5;
+}
+
+//-------------------------------------
+// SyncOnce
+// Request a one-time manual synchronization for all enabled SyncFeatures.
+// (Reminder: the current foreground app determines which SyncFeatures are currently enabled;
+// see UpdateAppState.)
+// The call will return immediately, and the SyncFeatures will be processed asynchronously.
+// If the PowerMode_t is POWER_NO_SYNC, the actual synchronization will be deferred until the
+// PowerMode_t is changed to POWER_FOREGROUND or POWER_BACKGROUND.
+// On WinRT and iOS, file monitoring is not built-in to CCD, so the app must call this API
+// after changing local files (such as Playlists) to cause them to be uploaded.
+//-------------------------------------
+message SyncOnceInput {
+    /// Unique identifier for the application instance making the call.
+    /// This app_id must be in the foreground or an error will be returned.
+    required string app_id = 1;
+    
+    /// User making the request; must be signed in or an error will be returned.
+    optional fixed64 user_id = 2;
+}
+
+message SyncOnceOutput {
+}
+
+// Output: NoParamResponse
+
+//-------------------------------------
+// UnlinkDevice
+// Unlink a device from a user (disabling all sync functionality).
+// If you unlink the local device, this will also log out the user (so
+// there is no need to explicitly call Logout afterward).
+//-------------------------------------
+message UnlinkDeviceInput {
+    
+    /// User making the request; must be signed-in on the local device.
+    required fixed64 user_id = 1;
+    
+    /// Specify which device to unlink from the user.
+    /// This can be omitted to indicate that the local device should be unlinked.
+    optional fixed64 device_id = 2;
+}
+
+// Output: NoParamResponse
+
+//-------------------------------------
+// UpdateAppState
+/// Perform various operations that involve the state of a particular client of CCDI.
+/// @note This is a non-atomic batch operation (it is possible for the operation to
+///     successfully complete for some parts even if it fails for others).
+/// @note If the error code is positive, it indicates the number of operations that failed;
+///     see #UpdateAppStateOutput to find the error code for each one.
+//-------------------------------------
+message UpdateAppStateInput {
+    
+    /// Unique identifier for the application instance making the call.
+    required string app_id = 1;
+    
+    /// Sets the type of the app.  This determines which SyncFeature_t items will be enabled
+    /// when the app is in the foreground.  Ignored when foreground_mode is false.
+    optional CcdApp_t app_type = 6 [default = CCD_APP_DEFAULT];
+
+    /// Set to true to force CCD into foreground mode.
+    /// Set to false to allow CCD to be in background mode; note that CCD will only actually
+    /// be in background mode if the background_mode_interval_sec is >0 (platform-specific, but
+    /// can be overridden for testing via UpdateSystemStateInput).
+    /// Whenever CCD restarts, foreground_mode will reset to false.
+    /// In background-mode, CCD will limit CPU usage and network activity to only critical tasks
+    /// and periodically require a call to UpdateSystemState with perform_background_tasks==true
+    /// to indicate when it is safe for CCD to perform background tasks.
+    optional bool foreground_mode = 5;
+}
+
+message UpdateAppStateOutput {
+
+    /// Error code for foreground_mode.
+    optional sint32 foreground_mode_err = 5;
+}
+
+//-------------------------------------
+// UpdateSyncSettings
+// (For Sync Agent UI)
+// Update various settings for this device's Sync Agent.
+// @note This is a non-atomic batch operation (it is possible for the operation to
+//     successfully complete for some parts even if it fails for others).
+// @note If the error code is positive, it indicates the number of operations that failed;
+//     see #UpdateSyncSettingsOutput to find the error code for each one.
+//-------------------------------------
+
+message CameraRollDownloadDirSpec {
+
+    required string dir = 1;
+
+    /// (optional) Max size limit (bytes) for the data to consume on local storage.
+    /// If set to 0, there's no limit enforced.  If the size of the files is
+    /// over the limit, the oldest files are deleted locally until the size is
+    /// under the limit.
+    optional uint32 max_size = 7 [default = 0];
+
+    /// (optional) Max files limit for the data to consume on local storage.  If set to
+    /// 0, there's no limit enforced.  If the number of the files is over the
+    /// limit, the oldest files are deleted locally until the size is under the
+    /// limit.
+    optional uint32 max_files = 8 [default = 0];
+
+    // The amount of free space by percentage PicStream should leave on
+    // the volume.  PicStream photos can potentially be deleted until
+    // the there is enough free space to meet the percentage.  When this
+    // is not specified, this will clear any existing setting and is equal
+    // to 0% -- all space on disk may be potentially used.
+    optional uint32 preserve_free_disk_percentage = 9 [default = 0];
+
+    // The amount of free space in bytes PicStream should leave on
+    // the volume.  PicStream photos can potentially be deleted until
+    // there is enough free space to meet the free bytes value.  When this
+    // is not specified, this will clear any existing setting and is equal
+    // to 0 bytes -- all space on disk may be potentially used.
+    optional uint64 preserve_free_disk_size_bytes = 10 [default = 0];
+}
+
+message MediaMetadataThumbMigrate {
+    /// The thumbnail metadata destination directory being copied to for
+    /// migration.  After the migration completes, the mm_thumb_download_path
+    /// will become this directory.
+    /// When not specified, a migration to the default internal directory is used.
+    optional string mm_dest_dir = 1;
+}
+
+message SyncFeatureSettingsRequest {
+
+    /// Enable or disable the relevant SyncFeature.
+    /// If false (you are disabling the feature), this call will block until the CCD Sync
+    /// Management module has closed all files within the local "sync_feature_path".
+    required bool enable_sync_feature = 1;
+
+    /// Specify the local "sync_feature_path" for the relevant SyncFeature.
+    /// (Can only be omitted when enable_sync_feature is false.)
+    /// This is the directory on the local filesystem that should be synchronized with the
+    /// corresponding dataset.  Please provide a platform-specific absolute path that
+    /// can be passed to the underlying filesystem APIs.
+    /// @note If you change this value, CCD will *not* migrate the data from the previous path.
+    ///   To migrate the data, you must:
+    ///   1. disable sync (set enable_sync_feature to false),
+    ///   2. move the local directory (be sure to include the ".sync_temp" subdirectory),
+    ///   3. enable sync (set enable_sync_feature to true) and specify the new path for
+    ///      set_sync_feature_path.
+    optional string set_sync_feature_path = 2;
+
+    /// Specify if the local device should function as an archive storage device for this feature.
+    /// This means that it is hosting the staging area and serving the file content to other clients.
+    /// Only supported for SYNC_FEATURE_SYNCBOX.
+    optional bool is_archive_storage = 3 [default = false];
+}
+
+message UpdateSyncSettingsInput {
+    
+    /// User making the request; must be signed-in on the local device.
+    required fixed64 user_id = 1;
+    
+    /// Can set a new user-specified "friendly" name for this device.
+    optional string set_my_device_name = 2;
+    
+    /// Set to false to stop Camera Roll upload, true to start Camera Roll upload.
+    /// Only pictures taken after the camera_roll has been enabled will be uploaded.
+    /// This setting has no effect on camera roll download.
+    optional bool enable_camera_roll = 7;
+    
+    /// Set to false to stop sync and prevent any network activity from
+    /// happening until true is set.
+    /// Implementation note:  Currently, this only disables sync agent, but may
+    ///    be modified in the future to encompass other network activities.
+    /// DEPRECATED: Network activity will be controlled by the setting of
+    /// background_data and auto_sync.
+    optional bool enable_network_activity = 8;
+    
+    // TODO: NOT_IMPLEMENTED
+    /// Can set a new user-specified maximum download rate (in bytes per second).
+    /// 0 indicates no limit.
+    optional uint64 set_max_download_rate_bytes_sec = 5;
+    
+    // TODO: NOT_IMPLEMENTED
+    /// Can set a new user-specified maximum upload rate (in bytes per second).
+    /// 0 indicates no limit.
+    optional uint64 set_max_upload_rate_bytes_sec = 6;
+    
+    /// Allow background data sync as defined and set by the Android sync settings menu.
+    /// http://developer.android.com/reference/android/net/ConnectivityManager.html 
+    optional bool background_data = 10;
+    
+    /// Allow auto-sync as defined and set by the Android sync settings menu.
+    /// http://developer.android.com/reference/android/content/ContentResolver.html
+    optional bool auto_sync = 11;
+    
+    /// Allow sync to occur while the user is on a mobile network as set by the
+    /// clear.fi control panel.  This is different from the Android platform "Mobile
+    /// Network Settings" menu item "Data enabled" because the user may want finer
+    /// control over mobile app syncing for clear.fi.
+    optional bool mobile_network_data = 12;
+    
+    /// Will add to current CameraRoll upload directories.  Invalid argument
+    /// error will be returned if number of added directories greater than supported.
+    /// Use remove_camera_upload_dirs to remove unwanted directories.
+    repeated string add_camera_roll_upload_dirs = 13;
+    
+    /// Must match a string returned from get_camera_roll_upload_dirs in
+    /// GetSyncStateInput.  Upload directories will be removed.  Removing a
+    /// directory will cause previously uploaded pictures to upload once again
+    /// if this directory is again added at a future time.
+    repeated string remove_camera_roll_upload_dirs = 14;
+    
+    /// Must match a string returned from get_camera_roll_upload_dirs in
+    /// GetSyncStateInput.  The Upload directory will be triggered to upload new photos.
+    /// Invalid argument error will be returned if the directory has not been added.
+    optional string trigger_camera_roll_upload_dir = 15;
+
+    /// Will add to current PicStream (camera roll) full resolution download directories.
+    /// An error will be returned if total number of added directories is greater than ONE.
+    /// If the CameraRollDownloadDirSpec.dir is the same as an existing entry, the entry
+    /// will be updated.
+    /// Use remove_camera_roll_full_res_download_dirs to remove unwanted directories.
+    optional CameraRollDownloadDirSpec add_camera_roll_full_res_download_dir = 18;
+
+    /// Must match a string returned from get_camera_roll_full_res_download_dirs in
+    /// GetSyncStateInput.  Specified directories will be removed.
+    optional string remove_camera_roll_full_res_download_dir = 19;
+
+    /// Will add to current PicStream (camera roll) low resolution download directories.
+    /// An error will be returned if total number of added directories is greater than ONE.
+    /// If the CameraRollDownloadDirSpec.dir is the same as an existing entry, the entry
+    /// will be updated.
+    /// Use remove_camera_roll_low_res_download_dirs to remove unwanted directories.
+    optional CameraRollDownloadDirSpec add_camera_roll_low_res_download_dir = 20;
+
+    /// Must match a string returned from get_camera_roll_low_res_download_dirs in
+    /// GetSyncStateInput.  Specified directories will be removed.
+    optional string remove_camera_roll_low_res_download_dir = 21;
+
+    /// Will add to current PicStream (camera roll) thumbnail download directories.
+    /// An error will be returned if total number of added directories is greater than ONE.
+    /// If the CameraRollDownloadDirSpec.dir is the same as an existing entry, the entry
+    /// will be updated.
+    /// Use remove_camera_roll_thumb_download_dirs to remove unwanted directories.
+    optional CameraRollDownloadDirSpec add_camera_roll_thumb_download_dir = 32;
+
+    /// Must match a string returned from get_camera_roll_thumb_download_dirs in
+    /// GetSyncStateInput.  Specified directories will be removed.
+    optional string remove_camera_roll_thumb_download_dir = 33;
+
+    /// Absolute path to send single file to camera roll.
+    optional string send_file_to_camera_roll = 22;
+
+    /// Set to false to disable Camera Roll global delete, true to enable Camera Roll global delete.
+    /// default value is disabled.
+    /// Global delete message will be processed if this is enabled. 
+    optional bool enable_global_delete = 34;
+
+    /// Control the "Notes" SyncFeature (SYNC_FEATURE_NOTES).
+    optional SyncFeatureSettingsRequest configure_notes_sync = 26;
+
+    /// @deprecated Please switch to configure_notes_sync ASAP.
+    optional bool enable_notes_sync = 27;
+
+    /// Starts a MediaMetadataThumbMigrate.  If a migration is currently
+    /// ongoing, an error will be returned.
+    optional MediaMetadataThumbMigrate migrate_mm_thumb_download_path = 28;
+
+    /// When specified, disable or enables thumbnail syncing for 
+    /// photo/music/video media metadata.  Thumbnail sync should be
+    /// disabled if media_metadata thumb directory is unmounted, and
+    /// enabled when the directory is mounted.
+    /// If a migration is ongoing, thumbnail sync should also be disabled
+    /// if the destination directory is unmounted, and enabled when the
+    /// destination directory is mounted.
+    /// In 2.6 and beyond, thumb syncing can be controlled per type.  See
+    /// enable_mm_thumb_sync_types below.
+    optional bool enable_mm_thumb_sync = 29;
+
+    /// Allow Cloud Doc Sync as defined and set by the Cloud Portal settings menu.
+    optional bool enable_clouddoc_sync = 30;
+
+    /// May be specified to modify the behavior of enable_mm_thumb_sync
+    /// by limiting the types of MM thumbnails that are affected:
+    /// photo/music/video.  If specified in the absence of
+    /// enable_mm_thumb_sync, this will return an error.
+    /// When enable_mm_thumb_sync is specified without this modifier,
+    /// all available types (currently three) are affected simultaneously.
+    repeated SyncFeature_t enable_mm_thumb_sync_types = 31;
+
+    /// Control the "Syncbox" SyncFeature (SYNC_FEATURE_SYNCBOX).
+    /// This field sets either syncbox server or client sync configuration.
+    /// == Sync Client ==
+    /// By default, it enables syncbox sync as a client and associates the specified
+    /// sync folder with the first "Syncbox" dataset found for the user.
+    /// == Sync Server ==
+    /// If is_archive_storage is set to true, it enables syncbox server. It creates a
+    /// "Syncbox" dataset if not already done, then calls VSDS API to associate
+    /// the "Syncbox" dataset with the local user storage device.  SyncFeatureMgr
+    /// is also notified to add a sync config and sync as a server.
+    /// .
+    /// Once this feature is enabled, you must disable it (enable_sync_feature = false) before
+    /// changing any of the other settings (set_sync_feature_path or is_archive_storage).
+    optional SyncFeatureSettingsRequest configure_syncbox_sync = 35;
+    
+    /// Control the "SharedByMe" feature.
+    optional bool enable_shared_by_me = 36;
+    
+    /// Control the "SharedWithMe" feature.
+    optional bool enable_shared_with_me = 37;
+}
+
+message UpdateSyncSettingsOutput {
+    
+    /// Error code for set_my_device_name.
+    optional sint32 set_my_device_name_err = 1;
+    
+    /// Error code for enable_camera_roll.
+    optional sint32 enable_camera_roll_err = 6;
+    
+    /// Error code for enable_global_delete.
+    optional sint32 enable_global_delete_err = 34;
+
+    /// Error code for enable_network_activity.
+    optional sint32 enable_network_activity_err = 7;
+    
+    /// Error code for set_max_download_rate_bytes_sec.
+    optional sint32 set_max_download_rate_err = 4;
+    
+    /// Error code for set_max_upload_rate_bytes_sec.
+    optional sint32 set_max_upload_rate_err = 5;
+    
+    /// Error code for background_data
+    optional sint32 background_data_err = 10;
+    
+    /// Error code for auto_sync
+    optional sint32 auto_sync_err = 11;
+    
+    /// Error code for mobile_data_sync
+    optional sint32 mobile_network_data_err = 12;
+    
+    /// Error code for add_camera_roll_upload_dirs.
+    optional sint32 add_camera_roll_upload_dirs_err = 13;
+    
+    /// Error code for remove_camera_roll_upload_dirs.
+    optional sint32 remove_camera_roll_upload_dirs_err = 14;
+    
+    /// Error code for trigger_camera_roll_upload_dir.
+    optional sint32 trigger_camera_roll_upload_dir_err = 15;
+
+    optional sint32 add_camera_roll_full_res_download_dir_err = 18;
+
+    optional sint32 remove_camera_roll_full_res_download_dir_err = 19;
+
+    optional sint32 add_camera_roll_low_res_download_dir_err = 20;
+
+    optional sint32 remove_camera_roll_low_res_download_dir_err = 21;
+
+    optional sint32 add_camera_roll_thumb_download_dir_err = 32;
+
+    optional sint32 remove_camera_roll_thumb_download_dir_err = 33;
+
+    optional sint32 send_file_to_camera_roll_err = 22;
+
+    /// Error code for configure_notes_sync.
+    optional sint32 configure_notes_sync_err = 26;
+
+    /// @deprecated Please switch to configure_notes_sync_err ASAP.
+    optional sint32 enable_notes_sync_err = 27;
+
+    /// The err code returned if migration did not start successfully.
+    optional sint32 migrate_mm_thumb_download_path_err = 28;
+
+    /// The err code for the disable/enable of thumbnail sync operation,
+    /// returned if UpdateSyncSettingsInput::enable_mm_thumb_sync is set.
+    optional sint32 enable_mm_thumb_sync_err = 29;
+
+    optional sint32 enable_clouddoc_sync_err = 30;
+
+    optional sint32 configure_syncbox_sync_err = 31;
+
+    // msg already used: 32, 33, 34 
+
+    optional sint32 enable_shared_by_me_err = 35;
+    
+    optional sint32 enable_shared_with_me_err = 36;
+}
+
+//-------------------------------------
+// UpdateSyncSubscription
+// @deprecated Sync is now feature-based instead of subscription-based.  Use the UpdateAppState
+//     and/or UpdateSyncSettings APIs to specify which data you want CCD to sync.
+// (For Sync Agent UI)
+// Update the properties of a subscription.
+//-------------------------------------
+/// @deprecated Sync is now feature-based instead of subscription-based.  Use the UpdateAppState
+///     and/or UpdateSyncSettings APIs to specify which data you want CCD to sync.
+message UpdateSyncSubscriptionInput {
+    
+    /// User making the request; must be signed-in on the local device.
+    required fixed64 user_id = 1;
+    
+    /// Specify which dataset's subscription to modify.
+    required fixed64 dataset_id = 2;
+
+    /// Specify which device's subscription to modify.
+    /// This can be omitted to indicate the local device.
+    optional fixed64 device_id = 3;
+    
+    /// New value for the filter.  Can be set as "" to remove any existing filter without
+    /// replacing it.
+    optional string new_filter = 4;
+
+    /// New value for max size limit (bytes).
+    /// Set to 0 to remove existing limit. No change if not defined.
+    /// Subscription must have upload_delete_ok set to false for this
+    /// variable to have effect.
+    optional fixed64 max_size = 5;
+
+    /// New value for max files limit.
+    /// Set to 0 to remove existing limit. No change if not defined.
+    /// Subscription must have upload_delete_ok set to false for this
+    /// variable to have effect.
+    optional fixed64 max_files = 6;
+}
+
+// Output: NoParamResponse
+
+//---------------------------------------------------------
+// Software Update API
+//---------------------------------------------------------
+
+//-------------------------------------
+// SWUpdateCheck
+// (SW Update API)
+// Check to see if software updates are available
+// @action Returns the latest versions of SW available for the APP
+//      and CCD along with a bitmask advising how to proceed.
+//-------------------------------------
+message SWUpdateCheckInput {
+    /// Application GUID.
+    required string app_guid = 1;
+
+    /// Application version
+    required string app_version = 2;
+
+    /// force update of internal title cache
+    optional bool update_cache = 3;
+}
+
+enum SWUpdateMaskBits_t {
+    /// Application update is optional
+    SW_UPDATE_BIT_APP_OPTIONAL = 1;
+    /// Application update is required
+    SW_UPDATE_BIT_APP_CRITICAL = 2;
+    /// CCD update is needed if the APP is updated
+    SW_UPDATE_BIT_CCD_NEEDED = 4;
+    /// CCD update is required even if the APP is not
+    SW_UPDATE_BIT_CCD_CRITICAL = 8;
+}
+
+message SWUpdateCheckOutput {
+    /// Bitmask defining current update state.
+    required uint64 update_mask = 1;
+
+    /// Latest application version
+    required string latest_app_version = 2;
+
+    /// Latest CCD version
+    required string latest_ccd_version = 3;
+
+    /// Change log
+    required string change_log = 4;
+
+    /// Application size rounded up to nearest 4KiB block
+    optional uint64 app_size = 5;
+    
+    /// An indicator for application to make judgement of where to get the update.
+    /// Currently, only Android applications need this flag.
+    /// For Windows applications, they always download from our Infra.
+    /// For Windows RT and iOS applications, they always download from Windows Store/App Store.
+    /// For Android applications, if isQA is true, they should download from Infra.
+    /// Otherwise, they should download from Google Play.
+    optional bool is_qa = 6;
+    
+    /// An indicator for application to make judgement of automatically download update or not.
+    /// Infra team will set this flag to true, if the loading is too high.
+    optional bool is_auto_update_disabled = 7;
+    //// For Android application to determine download update from our infra (true) or native Google Play Store (false)
+    optional bool is_infra_download = 8;
+}
+
+//-------------------------------------
+// SWUpdateBeginDownload
+// (SW Update API)
+// Begin Downloading the requested version of the APP.
+// @action Starts the download of the requested update.
+// @action If a newer version is available, an error is returned.
+// @action If a download is already in progress for this update, the handle
+//      for the current download is returned.
+// @action If data from a previous attempted download is available, the
+//      download will continue where the previous attempt left off.
+// @action If a previous download of this update completed but was not
+//      reaped with a call to EndSwDownload, no download takes place. A
+//      handle is returned that can be progress checked and reaped.
+// @action This command downloads the update and associated files, TMD,
+//      certs, tickets, etc. needed to decrypt the update. The decryption
+//      does not take place until the EndSwDownload() call.
+//-------------------------------------
+message SWUpdateBeginDownloadInput {
+    /// Application GUID.
+    required string app_guid = 1;
+
+    /// Application version
+    required string app_version = 2;
+}
+
+message SWUpdateBeginDownloadOutput{
+    /// Download handle used for checking progress
+    required uint64 handle = 1;
+}
+
+//-------------------------------------
+// SWUpdateGetDownloadProgress
+// (SW Update API)
+// Check the current status of the requested APP download
+// @action If download in progress returns the total number of bytes being
+//      transferred and the current count of bytes transferred.
+//      state is set to the current status of the download operation.
+//-------------------------------------
+message SWUpdateGetDownloadProgressInput {
+    /// Download handle returned by SWUpdateBeginDownloadOutput
+    required uint64 handle = 1;
+}
+
+enum SWUpdateDownloadState_t {
+    SWU_DLSTATE_IN_PROGRESS     = 1;
+    SWU_DLSTATE_FAILED          = 2;
+    SWU_DLSTATE_STOPPED         = 3;
+    SWU_DLSTATE_DONE            = 4;
+    SWU_DLSTATE_CANCELED        = 5;
+}
+
+message SWUpdateGetDownloadProgressOutput {
+    /// Total size of the transfer in bytes (includes overhead for decryption)
+    required uint64 total_transfer_size = 1;
+
+    /// Total number of bytes transferred so far
+    required uint64 bytes_transferred_cnt = 2;
+
+    /// State of download
+    required SWUpdateDownloadState_t state = 3;
+}
+
+//-------------------------------------
+// SWUpdateEndDownload
+// (SW Update API)
+// End the application download, called when the transfer is complete.
+// @action If the download is active returns an error indicating "in progress"
+//      is returned.
+// @action If the download is stopped returns an error indicating "stopped"
+//      is returned.
+// @action If the download was successful, the update is decrypted and
+//      copied to the requested destination.
+// @action Once the update reaches the requested destination, the files and
+//      other resources (handle) associated with the download are removed.
+//-------------------------------------
+message SWUpdateEndDownloadInput {
+    /// Download handle returned by SWUpdateBeginDownloadOutput
+    required uint64 handle = 1;
+
+    /// File Location - where to place the downloaded APP
+    required string file_location = 2;
+}
+
+//-------------------------------------
+// SWUpdateCancelDownload
+// (SW Update API)
+// End the application download, called when the transfer is complete.
+// @action If the download is active it causes the download to be canceled
+// @action If the download is stopped or done, it does nothing.
+//         Once canceled SWUpdateEndDownload must still be called to clean up
+//         any associated resources.
+//-------------------------------------
+message SWUpdateCancelDownloadInput {
+    /// Download handle returned by SWUpdateBeginDownloadOutput
+    required uint64 handle = 1;
+}
+
+//-------------------------------------
+// SWUpdateSetCcdVersion
+// (SW Update API)
+// Inform CCD of its external version string so that it can compute
+//     the update_mask in SWUpdateChecks().
+// @action Store the external version for later use.
+//-------------------------------------
+message SWUpdateSetCcdVersionInput {
+    /// CCD's external GUID
+    required string ccd_guid = 1;
+
+    /// CCD's external release version string.
+    required string ccd_version = 2;
+}
+
+//-------------------------------------
+// UpdateSystemState
+/// Perform various operations that involve the state of the system.
+/// @note This is a non-atomic batch operation (it is possible for the operation to
+///     successfully complete for some parts even if it fails for others).
+/// @note If the error code is positive, it indicates the number of operations that failed;
+///     see #UpdateSystemStateOutput to find the error code for each one.
+//-------------------------------------
+message UpdateSystemStateInput {
+    /// Set to true to request CCD to shutdown.
+    /// Windows-specific: To deal with a race condition, the CCDI client should send one extra
+    ///   dummy request (any type) after this succeeds.  The dummy request will likely fail, but it
+    ///   will ensure that CCD actually performs shutdown in a timely manner.
+    //% GVM-specific: In configurations that use MGRD, this will also cause MGRD and the rest of GVM to shutdown.
+    optional bool do_shutdown = 12 [default = false];
+
+    /// Report that network connectivity has become available.
+    /// If the connection to ANS is currently down, this will reset the ANS retry timer (which
+    /// can grow to more than 8 minutes due to its backoff algorithm).
+    /// This can safely be called whenever a network connection is available.
+    optional bool report_network_connected = 13 [default = false];
+
+    /// Report that the previous network has become invalid and a new network is being used.
+    /// This will cause existing connections to be torn down immediately, instead of waiting for
+    /// the connections to timeout.  (Network layer timeouts can exceed 7 minutes in some cases.)
+    /// Please be careful when calling this, since it will tear down the connections even if they
+    /// are still functional, potentially harming the user experience.
+    optional bool report_different_network = 23 [default = false];
+
+    /// *****
+    /// NOTE: This is currently intended for TESTING ONLY; please rely on the platform default
+    /// (which is 30*60 for Android, and 0 for everything else).
+    /// *****
+    /// Set to a positive value to allow background mode.
+    /// The value is the maximum interval between calls to UpdateSystemState with
+    /// perform_background_tasks==true.
+    /// Set to 0 to prevent background mode.
+    optional sint32 background_mode_interval_sec = 8;
+
+    /// (Only intended for Android currently) Perform any enabled background-mode tasks.
+    /// On Android: the client must instruct AlarmManager to have setInexactRepeating()
+    ///   fire at INTERVAL_FIFTEEN_MINUTES.  Then the client will call this when AlarmManager fires.
+    /// Note that this call will block until CCD finishes any appropriate background tasks, which
+    /// may take a substantial amount of time depending on network conditions and the user's
+    /// background-mode settings (NOTE: customizing the user's preferences is not implemented yet).
+    optional bool perform_background_tasks = 9 [default = false];
+    
+//%{INTERNAL
+    /// Set to true to dump print the state of all caches to the logs.
+    optional bool log_caches = 20 [default = false];
+//%}INTERNAL
+    
+    /// Set to true if only mobile network is available.
+    /// When UpdateSyncSettings.mobile_network_data is false, and this is true, the power mode will
+    /// be NO_SYNC.  See also:
+    /// http://www.ctbg.acer.com/wiki/index.php/CCD_Power_State_And_Sync_Management
+    optional bool only_mobile_network_available = 21;
+    
+    /// If an application is intending to do streaming, this should be set to
+    /// true to prevent the system from going into NO_SYNC mode.
+    /// In NO_SYNC mode, streaming is not possible.
+    optional bool stream_power_mode = 22;
+    
+    /// To update the flag of enable/disable IOAC in disk cache.
+    /// @return IOAC_FUNCTION_BEEN_OCCUPIED IOAC is already enabled by a different OS user.
+    /// @return IOAC_UNAVAILABLE_GLOBAL_ACCESSDATA_PATH The disk cache path wasn't provided to CCDStart().
+    /// @return IOAC_FAILED_TO_ACCESS_DISK_CACHE Failed to access disk cache.
+    optional bool enable_ioac = 24;
+}
+
+message UpdateSystemStateOutput {
+    /// Error code for do_shutdown.
+    optional sint32 do_shutdown = 12;
+
+    /// Error code for background_mode_interval_sec.
+    optional sint32 background_mode_interval_err = 8;
+
+    /// Error code for perform_background_tasks.
+    optional sint32 perform_background_tasks_err = 9;
+
+//%{INTERNAL
+    /// Error code for log_caches.
+    optional sint32 log_caches_err = 20;
+//%}INTERNAL
+
+    /// Error code for only_mobile_network_available.
+    optional sint32 only_mobile_network_available_err = 21;
+    
+    /// Error code for stream_power_mode.
+    optional sint32 stream_power_mode_err = 22;
+    
+    /// Error code for enable_ioac.
+    optional sint32 enable_ioac_err = 24;
+}
+
+//--------------------------------------------------------
+// Doc Save-And-Go API
+//--------------------------------------------------------
+
+enum DocSaveAndGoChangeType {
+    DOC_SAVE_AND_GO_UPDATE = 1;
+    DOC_SAVE_AND_GO_MOVE   = 2;
+    DOC_SAVE_AND_GO_DELETE = 3;
+}
+
+//---------------------------------------------------------------
+//------------------ Media Server Agent (MSA) -------------------
+
+//-------------------------------------
+// BeginMetadataTransaction
+//-------------------------------------
+// Input:
+message BeginMetadataTransactionInput {
+    
+    /// The collection that will be changed.
+    required string collection_id = 1;
+    
+    /// App defined version string for the current state.  Cannot use '_' character.
+    optional uint64 collection_timestamp = 2 [default = 0];
+
+    /// If true, the collection will begin empty.  Commit will need to be called
+    /// for the collection to take effect.
+    optional bool reset_collection = 3 [default = false];
+}
+
+// Output: NoParamResponse
+
+//-------------------------------------
+// UpdateMetadata
+//-------------------------------------
+// Input:
+message UpdateMetadataInput {
+    
+    required media_metadata.ContentDirectoryObject metadata = 1;
+}
+
+// Output: NoParamResponse
+
+//-------------------------------------
+// DeleteMetadata
+//-------------------------------------
+// Input:
+message DeleteMetadataInput {
+    
+    required string object_id = 1;
+}
+
+// Output: NoParamResponse
+
+//-------------------------------------
+// CommitMetadataTransaction
+//-------------------------------------
+// Input: NoParamRequest
+
+// Output: NoParamResponse
+
+//-------------------------------------
+// ListCollections
+//-------------------------------------
+// Input: NoParamRequest
+
+// Output:  Defined in media_metadata_types.proto
+
+//-------------------------------------
+// DeleteCollection
+//-------------------------------------
+message DeleteCollectionInput {
+    required string collection_id = 1;
+}
+// Output: NoParamResponse
+
+//-------------------------------------
+// GetCollectionDetails
+//-------------------------------------
+// Input:
+message GetCollectionDetailsInput {
+    required string collection_id = 1;
+}
+// Output:
+message GetCollectionDetailsOutput {
+    repeated media_metadata.ContentDirectoryObject metadata = 1;
+}
+
+//-------------------------------------
+// GetMetadataSyncState
+//-------------------------------------
+// Input: NoParamRequest
+
+// Output: GetMetadataSyncStateOutput (Defined in media_metadata_types.proto)
+
+//-------------------------------------
+// BeginCatalog
+//-------------------------------------
+// Input:
+message BeginCatalogInput {
+    optional media_metadata.CatalogType_t catalog_type = 1;
+}
+// Output: NoParamResponse
+
+//-------------------------------------
+// CommitCatalog
+//-------------------------------------
+// Input:
+message CommitCatalogInput {
+    optional media_metadata.CatalogType_t catalog_type = 1;
+}
+// Output:
+
+//-------------------------------------
+// EndCatalog -- read-only version of commit catalog
+//-------------------------------------
+// Input:
+message EndCatalogInput {
+    optional media_metadata.CatalogType_t catalog_type = 1;
+}
+
+//-------------------------------------
+// DeleteCatalog
+//-------------------------------------
+// Input:
+message DeleteCatalogInput {
+    optional media_metadata.CatalogType_t catalog_type = 1;
+}
+// Output: NoParamResponse
+
+// -------------------------
+// MSAGetContentURL
+// -------------------------
+message MSAGetContentURLInput {
+    required fixed64 user_id = 1;
+    required media_metadata.CatalogType_t catalog_type = 2;
+    required string collection_id = 3;
+    required string object_id = 4;
+    optional bool is_thumb = 5 [default = false];
+}
+
+message MSAGetContentURLOutput {
+    required string url= 1;
+}
+
+//------------------ Media Server Agent (MSA) -------------------
+//---------------------------------------------------------------
+
+//---------------------------------------------------------------
+//------------------ Media Client Agent (MCA) -------------------
+
+// -------------------------
+// MCAQueryMetadataObjects
+// -------------------------
+message MCAQueryMetadataObjectsInput {
+    // Device id of the media server.
+    required fixed64 cloud_device_id = 1;
+    // Filter type.
+    required media_metadata.DBFilterType_t filter_field = 2;
+    // Query string of sqlite WHERE clause
+    optional string search_field = 3;
+    // Query string of sqlite ORDER BY clause
+    optional string sort_field = 4;
+}
+message MCAQueryMetadataObjectsOutput {
+    repeated media_metadata.MCAMetadataQueryObject content_objects = 1;
+}
+
+//------------------ Media Client Agent (MCA) -------------------
+//---------------------------------------------------------------
+
+//--------------------------------------------------
+//------------------ Pairing API -------------------
+
+// --------------------
+// RequestPairing
+// --------------------
+message RequestPairingInput {
+    // host_hwid is set for NFC pairing.
+    // host_device id is set for QRCode pairing.
+    // pin is set for Pin code pairing.
+    // Only one of these three should be set.
+
+    // Raw Hardware ID (as defined by VPL_GetHwUuid) of the PC to be paired to.
+    optional string host_hwid = 1;
+
+    // Device ID of the PC to be paired to.
+    optional fixed64 host_deviceid = 2;
+
+    // PIN entered by user on the mobile device, used to 
+    // identify PC displaying the same PIN.
+    optional string pin = 3;
+
+    // Raw Hardware ID of the device making the request.
+    required string device_hwid = 4;
+
+    // List of key value pairs of authentication factors that 
+    // may be displayed on the PC to help user decide if he 
+    // wants to pair or not.
+    repeated PairingRequestAttribute pairing_attributes = 5;
+}
+
+message RequestPairingOutput {
+    // Server-generated token that will be validated only once 
+    // user accepts the pairing request.
+    required string pairing_token = 1;
+}
+
+// --------------------------
+// RespondToPairingRequest
+// --------------------------
+message RespondToPairingRequestInput {
+    // The transaction ID that was sent in original request.
+    required string transaction_id = 1;
+
+    // 0 : REJECTED - User rejected the pairing.
+    // 1 : ACCEPTED - User accepted the pairing.
+    // These are the only two values that can be sent from the host PC. 
+    // Other status dispositions (REQUESTED, COMPLETED, TIMED OUT) may 
+    // be set from infrastructure. 
+    // Specifically, if the user does nothing, or cancels the pairing 
+    // request, the value of the STATUS column of the appropriate row 
+    // in IAS_PAIRING_REQUESTS will remain in REQUESTED or TIMED_OUT state.
+    required int32 accepted_pairing = 2;
+
+    // User ID to get IAS ticket.
+    required fixed64 user_id = 3;
+}
+
+// --------------------
+// RequestPairingPin
+// --------------------
+message RequestPairingPinInput {
+    // Device ID for which a PIN is desired. Must be validated against
+    // service ticket.
+    required fixed64 device_id = 1;
+
+    // User ID to get IAS ticket.
+    required fixed64 user_id = 2;
+}
+
+message RequestPairingPinOutput {
+    // PIN to be displayed. Note that while currently only numeric
+    // PINs are planned, this parameter is a String to allow scenarios
+    // in which alphanumeric PINs may be used in the future.
+    required string pin = 1;
+}
+
+// --------------------
+// GetPairingStatus
+// --------------------
+message GetPairingStatusInput {
+    // The pairing token for which we are querying the status.
+    required string pairing_token = 1;
+}
+
+message GetPairingStatusOutput {
+    // P = REQUESTED (pending).
+    // A = ACCEPTED.
+    // R = REJECTED.
+    required string status = 1;
+
+    // Returned only if status is ACCEPTED.
+    optional string user_name = 2;
+}
+
+//------------------ Pairing API -------------------
+//--------------------------------------------------
+
+
+//--------------------------------------------------
+//------------------ PicStream API -----------------
+
+// --------------------
+// CCDIQueryPicStreamObjects
+// --------------------
+message CCDIQueryPicStreamObjectsInput {
+    // Filter type.
+    required PicStream_DBFilterType_t filter_field = 1;
+    // Query string of sqlite WHERE clause
+    optional string search_field = 2;
+    // Query string of sqlite ORDER BY clause
+    optional string sort_field = 3;
+}
+
+message CCDIQueryPicStreamObjectsOutput {
+    repeated PicStreamQueryObject content_objects = 1;
+}
+
+// Enum filter types of the sqlite query
+enum PicStream_DBFilterType_t {
+    PICSTREAM_QUERY_ITEM   = 1;
+    PICSTREAM_QUERY_ALBUM  = 2;
+};
+
+// The output of PicStream sqlite query
+message PicStreamQueryObject {
+    /// Result for querying items
+    optional PicStreamContentDirectoryObject pcdo = 1;
+    /// Result for querying albums
+    optional PicStreamAlbumFields PicStream_album = 2;
+    /// HTTP URL that can be used to retrieve the full resolution content.
+    /// Should not set for querying albums.
+    optional string full_res_url = 3;
+    /// HTTP URL that can be used to retrieve the low resolution content.
+    /// Should not set for querying albums.
+    optional string low_res_url = 4;
+    /// HTTP URL that can be used to retrieve the thumbnail.
+    optional string thumbnail_url = 5;
+}
+
+message PicStreamContentDirectoryObject {
+    /// component id of the full resolution item.
+    required string comp_id = 1;
+    /// XML blobs of optional data.
+    repeated string optional_fields = 2;
+    optional PicStreamItemFields picstream_item = 3;
+}
+
+message PicStreamItemFields {
+    /// Identifier of the content file (ex. absolute path on the originator device).
+    required string identifier = 1;
+    /// Title.
+    required string title = 2;
+    /// Name of the album/folder that the image belongs to.
+    required string album_name = 3;
+    /// Number of milliseconds since epoch.
+    required uint64 date_time = 4;
+    /// File size (in bytes).
+    optional uint64 file_size = 5;
+    /// Originator Device ID.
+    required uint64 ori_deviceid = 6;
+    /// name.
+}
+
+message PicStreamAlbumFields {
+   /// Name of the album/folder.
+   required string album_name = 1;
+   /// Total number of images in the album/folder.
+   required uint32 item_count = 2;
+   /// Total size of all images in the album/folder.
+   required uint64 item_total_size = 3;
+}
+
+//------------------ PicStream API -------------------
+//----------------------------------------------------
+
+//------------------------------------------------------
+//------------------ SharedFiles API -------------------
+// See http://www.ctbg.acer.com/wiki/index.php/Photo_Sharing_Design
+
+message SharedFilesStoreFileInput {
+    /// User making the request; must be signed-in on the local device.
+    required fixed64 user_id = 1;
+    required string abs_file_path = 2;
+    optional string opaque_metadata = 3;
+    optional string abs_preview_path = 4;
+}
+
+message SharedFilesStoreFileOutput {
+    optional fixed64 comp_id = 1;    // Not defined if call is not successful
+    optional string stored_name = 2;  // Not defined if call not successful
+}
+
+message SharedFilesShareFileInput {
+    /// User making the request; must be signed-in on the local device.
+    required fixed64 user_id = 1;
+    // Should match output from SharedFilesStoreFileOutput
+    required fixed64 comp_id = 2;
+    // Should match output from SharedFilesStoreFileOutput
+    optional string stored_name = 3;
+    /// WARNING: Currently only the first e-mail address is used.  Infra, not CCD enforces this.
+    repeated string recipient_emails = 4;
+}
+// SharedFilesShareFileOutput: NoParamResponse
+
+message SharedFilesUnshareFileInput {
+    /// User making the request; must be signed-in on the local device.
+    required fixed64 user_id = 1;
+    // Should match output from SharedFilesStoreFileOutput
+    required fixed64 comp_id = 2;
+    // Should match output from SharedFilesStoreFileOutput
+    optional string stored_name = 3;
+    /// WARNING: Currently only the first e-mail address is used.  Infra, not CCD enforces this.
+    repeated string recipient_emails = 4;
+}
+// SharedFilesUnshareFileOutput: NoParamResponse
+
+message SharedFilesDeleteSharedFileInput {
+    /// User making the request; must be signed-in on the local device.
+    required fixed64 user_id = 1;
+    required fixed64 comp_id = 2;
+    optional string stored_name = 3;
+}
+// SharedFilesDeleteSharedFileOutput: NoParamResponse
+
+message SharedFilesQueryInput {
+    /// User making the request; must be signed-in on the local device.
+    required fixed64 user_id = 1;
+    /// Can be either SYNC_FEATURE_SHARED_FILES_PHOTOS_SHARED_BY_ME or
+    ///               SYNC_FEATURE_SHARED_FILES_PHOTOS_SHARED_WITH_ME
+    required SyncFeature_t sync_feature = 2;
+    // Query string of sqlite WHERE clause
+    optional string search_field = 3;
+    // Query string of sqlite ORDER BY clause
+    optional string sort_field = 4;
+}
+
+// The output structure of SharedFilesQuery
+message SharedFilesQueryObject {
+    required fixed64 comp_id = 1;
+    optional fixed64 revision = 2;
+    required string name = 3;
+    /// HTTP URL that can be used to retrieve the content.
+    /// This url may change between CCD sessions.
+    optional string content_url = 4;
+    /// HTTP URL that can be used to retrieve the preview content.
+    /// If omitted, indicates that thumbnail has not yet been downloaded
+    /// This url may change between CCD sessions.
+    optional string preview_url = 5;
+    /// Opaque metadata previously set by CCDISharedFilesStoreFile().
+    optional string opaque_metadata = 6;
+    /// Recipient list valid for SBM dataset.  SWM dataset does not have a recipient list.
+    /// List of e-mails to whom the photo is shared.
+    repeated string recipient_list = 7;
+}
+
+message SharedFilesQueryOutput {
+    repeated SharedFilesQueryObject query_objects = 1;
+}
+
+//------------------ SharedFiles API -------------------
+//------------------------------------------------------
+
+//------------------------------------------------------------
+//------------------ Remote Executable API -------------------
+
+message RemoteExecutableInfo {
+
+    /// User specified name of remote executable.
+    required string name = 1;
+
+    /// The absolute_path of the executable.
+    required string absolute_path = 2;
+
+    /// Version number of the executable.
+    required fixed64 version_num = 3;
+}
+
+message RegisterRemoteExecutableInput {
+
+    /// User making the request; must be signed-in on the local device.
+    required fixed64 user_id = 1;
+
+    /// Unique identifier for the application instance making the call.
+    required string app_key = 2;
+
+    /// Will add to registered remote executables list.
+    /// Override the information if the RemoteExecutableInfo.name are the same (and app_key are the same).
+    required RemoteExecutableInfo remote_executable_info = 3;
+}
+
+message UnregisterRemoteExecutableInput {
+
+    /// User making the request; must be signed-in on the local device.
+    required fixed64 user_id = 1;
+
+    /// Unique identifier for the application instance making the call.
+    required string app_key = 2;
+
+    /// Will remove the process from registered remote executables list.
+    required string remote_executable_name = 3;
+
+}
+
+message ListRegisteredRemoteExecutablesInput {
+
+    /// User making the request; must be signed-in on the local device.
+    required fixed64 user_id = 1;
+
+    /// Unique identifier for the application instance making the call.
+    required string app_key = 2;
+}
+
+message ListRegisteredRemoteExecutablesOutput {
+    repeated RemoteExecutableInfo registered_remote_executables = 1;
+}
+
+//------------------ Remote Executable API -------------------
+//------------------------------------------------------------
+
+
+//----------------------------------------------------------------------------
+
+service CCDIService {
+
+    rpc EventsCreateQueue (EventsCreateQueueInput) returns (EventsCreateQueueOutput);
+    rpc EventsDestroyQueue (EventsDestroyQueueInput) returns (NoParamResponse);
+    rpc EventsDequeue (EventsDequeueInput) returns (EventsDequeueOutput);
+    rpc GetSystemState (GetSystemStateInput) returns (GetSystemStateOutput);
+    rpc Login (LoginInput) returns (LoginOutput);
+    rpc Logout (LogoutInput) returns (NoParamResponse);
+    rpc InfraHttpRequest (InfraHttpRequestInput) returns (InfraHttpRequestOutput);
+    rpc UpdateAppState (UpdateAppStateInput) returns (UpdateAppStateOutput);
+    rpc UpdateSystemState (UpdateSystemStateInput) returns (UpdateSystemStateOutput);
+    
+    rpc RegisterStorageNode (RegisterStorageNodeInput) returns (NoParamResponse);
+    rpc UnregisterStorageNode (UnregisterStorageNodeInput) returns (NoParamResponse);
+    rpc UpdateStorageNode (UpdateStorageNodeInput) returns (NoParamResponse);
+    
+    rpc ReportLanDevices (ReportLanDevicesInput) returns (NoParamResponse);
+    rpc ListLanDevices (ListLanDevicesInput) returns (ListLanDevicesOutput);
+    rpc ProbeLanDevices (NoParamRequest) returns (NoParamResponse);
+
+    rpc ListStorageNodeDatasets (NoParamRequest) returns (ListStorageNodeDatasetsOutput);
+
+    rpc AddDataset (AddDatasetInput) returns (AddDatasetOutput);
+    rpc AddSyncSubscription (AddSyncSubscriptionInput) returns (NoParamResponse);
+    rpc DeleteDataset (DeleteDatasetInput) returns (NoParamResponse);
+    rpc DeleteSyncSubscriptions (DeleteSyncSubscriptionsInput) returns (NoParamResponse);
+    rpc GetDatasetDirectoryEntries (GetDatasetDirectoryEntriesInput) returns (GetDatasetDirectoryEntriesOutput);
+    rpc GetInfraHttpInfo (GetInfraHttpInfoInput) returns (GetInfraHttpInfoOutput);
+    rpc GetLocalHttpInfo (GetLocalHttpInfoInput) returns (GetLocalHttpInfoOutput);
+    rpc GetPersonalCloudState (GetPersonalCloudStateInput) returns (GetPersonalCloudStateOutput);
+    rpc GetSyncState (GetSyncStateInput) returns (GetSyncStateOutput);
+    rpc GetSyncStateNotifications (GetSyncStateNotificationsInput) returns (GetSyncStateNotificationsOutput);
+    rpc LinkDevice (LinkDeviceInput) returns (NoParamResponse);
+    rpc ListLinkedDevices (ListLinkedDevicesInput) returns (ListLinkedDevicesOutput);
+    rpc ListOwnedDatasets (ListOwnedDatasetsInput) returns (ListOwnedDatasetsOutput);
+    rpc ListSyncSubscriptions (ListSyncSubscriptionsInput) returns (ListSyncSubscriptionsOutput);
+    rpc OwnershipSync (NoParamRequest) returns (NoParamResponse);
+    rpc PrivateMsaDataCommit (PrivateMsaDataCommitInput) returns (NoParamResponse);
+    rpc RemoteWakeup (RemoteWakeupInput) returns (NoParamResponse);
+    rpc RenameDataset (RenameDatasetInput) returns (NoParamResponse);
+    rpc SyncOnce (SyncOnceInput) returns (SyncOnceOutput);
+    rpc UnlinkDevice (UnlinkDeviceInput) returns (NoParamResponse);
+    rpc UpdateSyncSettings (UpdateSyncSettingsInput) returns (UpdateSyncSettingsOutput);
+    rpc UpdateSyncSubscription (UpdateSyncSubscriptionInput) returns (NoParamResponse);
+    rpc ListUserStorage (ListUserStorageInput) returns (ListUserStorageOutput);
+    rpc RemoteSwUpdateMessage (RemoteSwUpdateMessageInput) returns (NoParamResponse);
+
+    //-------------------
+    // Software Update API:
+    //-------------------
+    rpc SWUpdateCheck(SWUpdateCheckInput) returns (SWUpdateCheckOutput);
+    rpc SWUpdateBeginDownload(SWUpdateBeginDownloadInput) returns (SWUpdateBeginDownloadOutput);
+    rpc SWUpdateGetDownloadProgress(SWUpdateGetDownloadProgressInput) returns (SWUpdateGetDownloadProgressOutput);
+    rpc SWUpdateEndDownload(SWUpdateEndDownloadInput) returns (NoParamResponse);
+    rpc SWUpdateCancelDownload(SWUpdateCancelDownloadInput) returns (NoParamResponse);
+    rpc SWUpdateSetCcdVersion(SWUpdateSetCcdVersionInput) returns (NoParamResponse);
+
+    //-------------------
+    // Media Server Agent (MSA) API:
+    //-------------------
+    rpc MSABeginCatalog (BeginCatalogInput) returns (NoParamResponse);;
+    rpc MSACommitCatalog (CommitCatalogInput) returns (NoParamResponse);
+    rpc MSAEndCatalog (EndCatalogInput) returns (NoParamResponse);
+    rpc MSABeginMetadataTransaction (BeginMetadataTransactionInput) returns (NoParamResponse);
+    rpc MSAUpdateMetadata (UpdateMetadataInput) returns (NoParamResponse);
+    rpc MSADeleteMetadata (DeleteMetadataInput) returns (NoParamResponse);
+    rpc MSACommitMetadataTransaction (NoParamRequest) returns (NoParamResponse);
+    rpc MSAGetMetadataSyncState (NoParamRequest) returns (media_metadata.GetMetadataSyncStateOutput);
+    rpc MSADeleteCollection (DeleteCollectionInput) returns (NoParamResponse);
+    rpc MSADeleteCatalog (DeleteCatalogInput) returns (NoParamResponse);
+    rpc MSAListCollections (NoParamRequest) returns (media_metadata.ListCollectionsOutput);
+    rpc MSAGetCollectionDetails (GetCollectionDetailsInput) returns (GetCollectionDetailsOutput);
+    rpc MSAGetContentURL (MSAGetContentURLInput) returns (MSAGetContentURLOutput);
+
+    //-------------------
+    // Media Client Agent (MCA) API:
+    //-------------------
+    rpc MCAQueryMetadataObjects (MCAQueryMetadataObjectsInput) returns (MCAQueryMetadataObjectsOutput);
+
+    //-------------------
+    // In-Memory Logging API:
+    //-------------------
+    rpc EnableInMemoryLogging (NoParamRequest) returns (NoParamResponse);
+    rpc DisableInMemoryLogging (NoParamRequest) returns (NoParamResponse);
+    rpc FlushInMemoryLogs (NoParamRequest) returns (NoParamResponse);
+
+    //-------------------
+    // Pairing API:
+    //-------------------
+    rpc RespondToPairingRequest (RespondToPairingRequestInput) returns (NoParamResponse);
+    rpc RequestPairing (RequestPairingInput) returns (RequestPairingOutput);
+    rpc RequestPairingPin (RequestPairingPinInput) returns (RequestPairingPinOutput);
+    rpc GetPairingStatus (GetPairingStatusInput) returns (GetPairingStatusOutput);
+
+    //-------------------
+    // PicStream API:
+    //-------------------
+    rpc QueryPicStreamObjects (CCDIQueryPicStreamObjectsInput) returns (CCDIQueryPicStreamObjectsOutput);
+    
+    //-------------------
+    // SharedFiles API:
+    //-------------------
+    rpc SharedFilesStoreFile (SharedFilesStoreFileInput) returns (SharedFilesStoreFileOutput);
+    rpc SharedFilesShareFile (SharedFilesShareFileInput) returns (NoParamResponse);
+    rpc SharedFilesUnshareFile (SharedFilesUnshareFileInput) returns (NoParamResponse);
+    rpc SharedFilesDeleteSharedFile (SharedFilesDeleteSharedFileInput) returns (NoParamResponse);
+    rpc SharedFilesQuery (SharedFilesQueryInput) returns (SharedFilesQueryOutput);
+
+    //-------------------
+    // Remote Executable API:
+    //-------------------
+    rpc RegisterRemoteExecutable (RegisterRemoteExecutableInput) returns (NoParamResponse);
+    rpc UnregisterRemoteExecutable (UnregisterRemoteExecutableInput) returns (NoParamResponse);
+    rpc ListRegisteredRemoteExecutables (ListRegisteredRemoteExecutablesInput) returns (ListRegisteredRemoteExecutablesOutput);
+}

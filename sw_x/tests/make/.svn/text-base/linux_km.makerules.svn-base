@@ -1,0 +1,48 @@
+# -*-Makefile-*-
+
+ifdef LOCAL_BUILD
+KERNEL_MODULES_DIR := $(TESTROOT)/local_kernel_modules
+else
+KERNEL_MODULES_DIR := $(TESTROOT)/kernel_modules
+endif
+ESCMOD_KO_PATH := $(KERNEL_MODULES_DIR)/escmod/escmod.ko
+BVD_KO_PATH := $(KERNEL_MODULES_DIR)/bvd/bvd.ko
+
+
+.PHONY: install_escmod remove_escmod install_bvdmod remove_bvdmod
+
+install_escmod:
+	if test -n "$(shell lsmod | grep escmod)" ; then $(MAKE) remove_escmod; fi
+	sudo /sbin/insmod $(ESCMOD_KO_PATH)
+	# wait 1 second while we wait for udev to create /dev/esc
+	sleep 1
+	sudo /bin/chmod 666 /dev/esc
+
+remove_escmod:
+	if test -n "$(shell lsmod | grep bvd)" ; then $(MAKE) remove_bvdmod; fi
+	sudo /sbin/rmmod escmod
+
+install_bvdmod:
+	if test -n "$(shell lsmod | grep bvd)" ; then $(MAKE) remove_bvdmod; fi
+	sudo /sbin/insmod $(BVD_KO_PATH)
+	# wait 1 second while we wait for udev to create /dev/bvd*
+	sleep 1
+	sudo /bin/chmod 666 /dev/bvd1
+	sudo /bin/chmod 666 /dev/bvd2
+	sudo /bin/chmod 666 /dev/bvd3
+	sudo /bin/chmod 666 /dev/bvd4
+	sudo /bin/chmod 666 /dev/bvd5
+	sudo /bin/chmod 666 /dev/bvd6
+	sudo /bin/chmod 666 /dev/bvd7
+	sudo /bin/chmod 666 /dev/bvd8
+	sudo /bin/chmod 666 /dev/bvd9
+	sudo /bin/chmod 666 /dev/bvd10
+	sudo /bin/chmod 666 /dev/bvd11
+	sudo /bin/chmod 666 /dev/bvd12
+	sudo /bin/chmod 666 /dev/bvd13
+	sudo /bin/chmod 666 /dev/bvd14
+	sudo /bin/chmod 666 /dev/bvd15
+	sudo /bin/chmod 666 /dev/bvdc
+
+remove_bvdmod:
+	sudo /sbin/rmmod bvd

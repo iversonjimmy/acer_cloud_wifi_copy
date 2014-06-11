@@ -1,0 +1,3 @@
+# include android-emulator.makedefs
+
+include android-emulator.makerules

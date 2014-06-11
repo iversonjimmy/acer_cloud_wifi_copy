@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="actool_winRT.MainPage"
+    IsTabStop="false"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:actool_winRT"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="#F5F5F5" >
+        <TextBlock HorizontalAlignment="Left" Margin="50,50,0,0" TextWrapping="Wrap" Text="Acer Cloud Tool" VerticalAlignment="Top" Foreground="Black"
+                   FontSize="90"/>
+        <TextBlock Margin="50,250,50,0" TextWrapping="Wrap" Text="This will generate a new configuration for ccd.exe. You will need to restart the acerCloud application." 
+           VerticalAlignment="Top" Foreground="Black" FontSize="50"/>
+        <TextBlock Margin="50,430,1130,0" TextWrapping="Wrap" Text="Domain" VerticalAlignment="Top" Foreground="Black" FontSize="50"/>
+        <TextBox x:Name="txtDomain" Margin="241,424,50,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="72" FontSize="45"/>
+        <TextBlock Margin="50,521,1130,0" TextWrapping="Wrap" Text="Group" VerticalAlignment="Top" Foreground="Black" FontSize="50"/>
+        <TextBox x:Name="txtGroup" Margin="241,521,50,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="72" FontSize="45"/>
+        <Button x:Name="btnResetDefault" Content="Reset Default" HorizontalAlignment="Left" Margin="650,620,0,0" VerticalAlignment="Top"
+                FontSize="50" Foreground="Black" Height="93" Width="366" Click="btnResetDefault_Click"/>
+        <Button x:Name="btnGenerate" Content="Generate" HorizontalAlignment="Left" Margin="1050,620,0,0" VerticalAlignment="Top" 
+                FontSize="50" Foreground="Black" Height="93" Width="266" Click="btnGenerate_Click"/>
+    </Grid>
+</Page>

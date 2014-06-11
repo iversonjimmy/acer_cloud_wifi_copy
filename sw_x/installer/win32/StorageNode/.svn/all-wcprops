@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repo/!svn/ver/10909/trunk/sw_x/installer/win32/StorageNode
+END
+en-us.wxl
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/2386/trunk/sw_x/installer/win32/StorageNode/en-us.wxl
+END
+License-en-us.rtf
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/2386/trunk/sw_x/installer/win32/StorageNode/License-en-us.rtf
+END
+RemoveAppData.vbs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/9231/trunk/sw_x/installer/win32/StorageNode/RemoveAppData.vbs
+END
+zh-tw.wxl
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/2386/trunk/sw_x/installer/win32/StorageNode/zh-tw.wxl
+END
+License-zh-tw.rtf
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/2386/trunk/sw_x/installer/win32/StorageNode/License-zh-tw.rtf
+END
+StorageNode.wxs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/10909/trunk/sw_x/installer/win32/StorageNode/StorageNode.wxs
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/7474/trunk/sw_x/installer/win32/StorageNode/Makefile
+END

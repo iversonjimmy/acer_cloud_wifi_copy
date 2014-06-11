@@ -1,0 +1,13 @@
+//
+//  libvplexTests.h
+//  libvplexTests
+//
+//  Created by wukon hsieh on 12/6/14.
+//  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
+//
+
+#import <SenTestingKit/SenTestingKit.h>
+
+@interface libvplexTests : SenTestCase
+
+@end

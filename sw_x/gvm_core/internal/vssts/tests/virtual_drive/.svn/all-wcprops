@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/52986/trunk/sw_x/gvm_core/internal/vssts/tests/virtual_drive
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repo/!svn/ver/39394/trunk/sw_x/gvm_core/internal/vssts/tests/virtual_drive/BUILD
+END
+vsTest_virtual_drive_test.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repo/!svn/ver/39394/trunk/sw_x/gvm_core/internal/vssts/tests/virtual_drive/vsTest_virtual_drive_test.cpp
+END
+vsTest.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repo/!svn/ver/52986/trunk/sw_x/gvm_core/internal/vssts/tests/virtual_drive/vsTest.cpp
+END
+vsTest_virtual_drive_test.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repo/!svn/ver/39394/trunk/sw_x/gvm_core/internal/vssts/tests/virtual_drive/vsTest_virtual_drive_test.hpp
+END

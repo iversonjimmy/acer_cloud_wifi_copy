@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repo/!svn/ver/41609/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/igware/android_services
+END
+IMcaAidlRpc.aidl
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/igware/android_services/IMcaAidlRpc.aidl
+END
+McaService.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/igware/android_services/McaService.java
+END
+ICcdiAidlRpc.aidl
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/igware/android_services/ICcdiAidlRpc.aidl
+END
+CcdiService.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repo/!svn/ver/41609/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/igware/android_services/CcdiService.java
+END
+ServiceSingleton.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/igware/android_services/ServiceSingleton.java
+END

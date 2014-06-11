@@ -1,0 +1,83 @@
+10
+
+dir
+59951
+https://src-us.ctbg.acer.com/repo/trunk/sw_x/tools
+https://src-us.ctbg.acer.com/repo
+
+
+
+2014-05-21T15:21:15.370990Z
+59934
+alex.lin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+187b5c42-a02b-43e7-ba74-80c9f8da41ab
+
+license
+dir
+
+statsvn
+dir
+
+testharness
+dir
+
+apt
+dir
+
+check_all_tests_executed.sh
+file
+
+
+
+
+2014-05-22T01:46:55.061897Z
+5c307b1f6efc824c93d178080fe35fa7
+2012-12-08T23:54:18.860179Z
+30411
+Lujia
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+279
+
+switchbox
+dir
+
+yum
+dir
+
+symbol_server
+dir
+

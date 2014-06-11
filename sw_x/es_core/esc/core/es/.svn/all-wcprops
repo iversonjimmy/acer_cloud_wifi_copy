@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repo/!svn/ver/23845/trunk/sw_x/es_core/esc/core/es
+END
+es_platform.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repo/!svn/ver/20765/trunk/sw_x/es_core/esc/core/es/es_platform.h
+END
+istorage.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repo/!svn/ver/1428/trunk/sw_x/es_core/esc/core/es/istorage.h
+END
+es_device.c
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/23845/trunk/sw_x/es_core/esc/core/es/es_device.c
+END
+es_container.c
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/23845/trunk/sw_x/es_core/esc/core/es/es_container.c
+END
+cfm.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repo/!svn/ver/1428/trunk/sw_x/es_core/esc/core/es/cfm.h
+END
+es_storage.c
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/366/trunk/sw_x/es_core/esc/core/es/es_storage.c
+END

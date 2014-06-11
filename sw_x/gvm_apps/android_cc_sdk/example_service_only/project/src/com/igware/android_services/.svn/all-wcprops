@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repo/!svn/ver/59100/trunk/sw_x/gvm_apps/android_cc_sdk/example_service_only/project/src/com/igware/android_services
+END
+CcdiService.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/repo/!svn/ver/56398/trunk/sw_x/gvm_apps/android_cc_sdk/example_service_only/project/src/com/igware/android_services/CcdiService.java
+END
+ServiceSingleton.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/repo/!svn/ver/59100/trunk/sw_x/gvm_apps/android_cc_sdk/example_service_only/project/src/com/igware/android_services/ServiceSingleton.java
+END

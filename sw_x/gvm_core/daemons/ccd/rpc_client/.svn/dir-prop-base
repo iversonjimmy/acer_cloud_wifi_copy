@@ -1,0 +1,9 @@
+K 10
+svn:ignore
+V 98
+ccdi_rpc-client-async.pb.h
+ccdi_rpc-client-async.pb.cc
+ccdi_rpc-client.pb.cc
+ccdi_rpc-client.pb.h
+
+END

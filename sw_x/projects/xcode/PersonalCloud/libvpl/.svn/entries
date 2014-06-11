@@ -1,0 +1,77 @@
+10
+
+dir
+59951
+https://src-us.ctbg.acer.com/repo/trunk/sw_x/projects/xcode/PersonalCloud/libvpl
+https://src-us.ctbg.acer.com/repo
+
+
+
+2014-03-17T06:08:36.542294Z
+56615
+jimmy.horng
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+187b5c42-a02b-43e7-ba74-80c9f8da41ab
+
+NSDirectoryWrapper
+dir
+
+libvpl
+dir
+
+Default-568h@2x.png
+file
+
+
+
+
+2014-05-22T01:47:26.817886Z
+3c998cb2406e55e66c8198c4a7697aca
+2013-03-15T09:26:25.305553Z
+32577
+jimmy.horng
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+18594
+
+libvplTests
+dir
+
+OnDeviceTest
+dir
+
+vpl.xcodeproj
+dir
+

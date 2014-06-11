@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/repo/!svn/ver/59618/trunk/sw_x/storageNode/src/win32
+END
+rf_search_indexed.fragment.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repo/!svn/ver/59611/trunk/sw_x/storageNode/src/win32/rf_search_indexed.fragment.cpp
+END
+rf_search_unindexed.fragment.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repo/!svn/ver/59618/trunk/sw_x/storageNode/src/win32/rf_search_unindexed.fragment.cpp
+END

@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/repo/!svn/ver/56035/trunk/sw_x/make
+END
+msvc_defs.mk
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/repo/!svn/ver/23610/trunk/sw_x/make/msvc_defs.mk
+END
+cloudnode_defs.mk
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/repo/!svn/ver/25205/trunk/sw_x/make/cloudnode_defs.mk
+END
+product_defs.mk
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/repo/!svn/ver/51757/trunk/sw_x/make/product_defs.mk
+END
+android_defs.mk
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repo/!svn/ver/8076/trunk/sw_x/make/android_defs.mk
+END
+kernel_module.mk
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/repo/!svn/ver/25449/trunk/sw_x/make/kernel_module.mk
+END
+makegen.py
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/repo/!svn/ver/42939/trunk/sw_x/make/makegen.py
+END
+common_defs.mk
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repo/!svn/ver/25320/trunk/sw_x/make/common_defs.mk
+END
+ios_defs.mk
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/repo/!svn/ver/51763/trunk/sw_x/make/ios_defs.mk
+END
+external_locations.mk
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repo/!svn/ver/56035/trunk/sw_x/make/external_locations.mk
+END
+win_defs.mk
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/repo/!svn/ver/24170/trunk/sw_x/make/win_defs.mk
+END
+linux_defs.mk
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/repo/!svn/ver/40810/trunk/sw_x/make/linux_defs.mk
+END
+mac_defs.mk
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/repo/!svn/ver/24188/trunk/sw_x/make/mac_defs.mk
+END
+cygwin_defs.mk
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repo/!svn/ver/24170/trunk/sw_x/make/cygwin_defs.mk
+END
+product_defs.py
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/repo/!svn/ver/51757/trunk/sw_x/make/product_defs.py
+END
+pb-lite.txt
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/repo/!svn/ver/491/trunk/sw_x/make/pb-lite.txt
+END

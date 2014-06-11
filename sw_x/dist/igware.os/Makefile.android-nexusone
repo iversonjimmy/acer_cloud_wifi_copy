@@ -1,0 +1,3 @@
+# include android-nexusone.makedefs
+
+include android-nexusone.makerules

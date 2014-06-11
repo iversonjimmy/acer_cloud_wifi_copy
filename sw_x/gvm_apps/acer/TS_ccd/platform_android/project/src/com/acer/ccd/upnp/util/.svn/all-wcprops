@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/upnp/util
+END
+Logger.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/upnp/util/Logger.java
+END
+EventItem.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/upnp/util/EventItem.java
+END
+EventXmlHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/upnp/util/EventXmlHandler.java
+END
+UpnpTool.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/upnp/util/UpnpTool.java
+END
+Upnp.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/upnp/util/Upnp.java
+END
+CBCommand.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/upnp/util/CBCommand.java
+END
+DBManagerUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/upnp/util/DBManagerUtil.java
+END
+Dlna.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/upnp/util/Dlna.java
+END

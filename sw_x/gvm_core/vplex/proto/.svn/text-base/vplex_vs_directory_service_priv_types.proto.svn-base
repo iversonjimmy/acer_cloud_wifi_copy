@@ -1,0 +1,282 @@
+/// PrivDeleteUserStorage
+/// Delete user space on a storage cluster.
+message PrivDeleteUserStorageInput {
+    required fixed64 userId = 1;
+    required fixed64 storageClusterId = 2;
+    optional string version = 3;
+}
+message PrivDeleteUserStorageOutput {
+    required Error error = 1;
+}
+
+/// PrivTakeDownStorageElement
+/// Take down a storage element.
+message PrivTakeDownStorageElementInput {
+    required string type = 1;
+    required fixed64 clusterId = 2;
+    required fixed64 elementId = 3;
+    required string reason = 4;
+    optional string version = 5;
+}
+message PrivTakeDownStorageElementOutput {
+    required Error error = 1;
+}
+
+/// PrivChangeStorageElementStatus
+/// Change status of a storage element.
+message PrivChangeStorageElementStatusInput {
+    required string type = 1;
+    required fixed64 clusterId = 2;
+    required fixed64 elementId = 3;
+    required fixed32 newStatus = 4;
+    optional string version = 5;
+}
+message PrivChangeStorageElementStatusOutput {
+    required Error error = 1;
+}
+
+/// PrivUpdateStorageUnitUsage
+/// Update usage stats for a stroage unit.
+message PrivUpdateStorageUnitUsageInput {
+    required fixed64 clusterId = 1;
+    required fixed64 storageId = 2;
+    required fixed64 usedStorage = 3;
+    optional string version = 4;
+}
+message PrivUpdateStorageUnitUsageOutput {
+    required Error error = 1;
+}
+
+/// PrivGetDeviceInfo
+/// Get the detailed device information
+message PrivGetDeviceInfoInput {
+    required fixed64 deviceId = 1;
+    optional string version = 2;
+}
+message PrivGetDeviceInfoOutput {
+    required Error error = 1;
+
+    optional DeviceInfo device = 2;
+    optional fixed64 userId = 3;
+    optional bool isPSN = 4;
+}
+
+/// PrivListMSS
+/// List a MSS instance
+message PrivListMSSInput {
+    required fixed64 clusterId = 1;
+    optional fixed64 mssId = 2;
+    optional string version = 3;
+}
+message PrivListMSSOutput {
+    required Error error = 1;
+}
+
+/// PrivCreateMSS
+/// Create a MSS instance
+message PrivCreateMSSInput {
+    required fixed64 clusterId = 1;
+    required string mssHost = 2;
+    optional string version = 3;
+}
+message PrivCreateMSSOutput {
+    required Error error = 1;
+    optional fixed64 mssId = 2;
+}
+
+/// PrivUpdateMSS
+/// Update a MSS instance
+message PrivUpdateMSSInput {
+    required fixed64 clusterId = 1;
+    required fixed64 mssId = 2;
+    required string mssHost = 3;
+    optional string version = 4;
+}
+message PrivUpdateMSSOutput {
+    required Error error = 1;
+}
+
+/// PrivDeleteMSS
+/// Delete a MSS instance
+message PrivDeleteMSSInput {
+    required fixed64 clusterId = 1;
+    required fixed64 mssId = 2;
+    optional string version = 3;
+}
+message PrivDeleteMSSOutput {
+    required Error error = 1;
+}
+
+/// PrivCreateStorageUnit
+/// Create a storage unit.
+message PrivCreateStorageUnitInput {
+    required fixed64 clusterId = 1;
+    required fixed64 mssId = 2;
+    optional fixed64 maxUsers = 3;
+    optional fixed64 maxStorage = 4;
+    optional string version = 5;
+}
+message PrivCreateStorageUnitOutput {
+    required Error error = 1;
+    optional fixed64 storageId = 2;
+}
+
+/// PrivActivateStorageUnit
+/// Activate a storage unit.
+message PrivActivateStorageUnitInput {
+    required fixed64 clusterId = 1;
+    required fixed64 storageId = 2;
+    optional string version = 3;
+}
+message PrivActivateStorageUnitOutput {
+    required Error error = 1;
+}
+
+/// PrivDeleteStorageUnit
+/// Delete a storage unit.
+message PrivDeleteStorageUnitInput {
+    required fixed64 clusterId = 1;
+    required fixed64 storageId = 2;
+    optional string version = 3;
+}
+message PrivDeleteStorageUnitOutput {
+    required Error error = 1;
+}
+
+/// PrivCreateBRS
+/// Create a BRS instance
+message PrivCreateBRSInput {
+    required fixed64 clusterId = 1;
+    required string brsHost = 2;
+    optional string version = 3;
+}
+message PrivCreateBRSOutput {
+    required Error error = 1;
+    optional fixed64 brsId = 2;
+}
+
+/// PrivDeleteBRS
+/// Delete a BRS instance
+message PrivDeleteBRSInput {
+    required fixed64 clusterId = 1;
+    required fixed64 brsId = 2;
+    optional string version = 3;
+}
+message PrivDeleteBRSOutput {
+    required Error error = 1;
+}
+
+/// PrivCreateBrsStorageUnit
+/// Create a BRS storage unit.
+message PrivCreateBrsStorageUnitInput {
+    required fixed64 clusterId = 1;
+    required fixed64 brsId = 2;
+    optional fixed64 maxUsers = 3;
+    optional string version = 4;
+}
+message PrivCreateBrsStorageUnitOutput {
+    required Error error = 1;
+    optional fixed64 brsStorageId = 2;
+}
+
+/// PrivActivateBrsStorageUnit
+/// Activate a BRS storage unit.
+message PrivActivateBrsStorageUnitInput {
+    required fixed64 clusterId = 1;
+    required fixed64 brsStorageId = 2;
+    optional string version = 3;
+}
+message PrivActivateBrsStorageUnitOutput {
+    required Error error = 1;
+}
+
+/// PrivDeleteBrsStorageUnit
+/// Delete a BRS storage unit.
+message PrivDeleteBrsStorageUnitInput {
+    required fixed64 clusterId = 1;
+    required fixed64 brsStorageId = 2;
+    optional string version = 3;
+}
+message PrivDeleteBrsStorageUnitOutput {
+    required Error error = 1;
+}
+
+/// PrivReassignUserStorage
+/// Reassign storage for user and/or datasets.
+message PrivReassignUserStorageInput {
+    required fixed64 userId = 1;
+    required string dataset = 2; // 'all_datasets', 'no_datasets', or valid dataset_id
+    required string cluster = 3; // 'nochange', or valid cluster_id
+    required string primaryStorage = 4; // 'nochange', 'auto', or valid storage_id
+    required string secondaryStorage = 5; // 'nochange', 'auto', or valid storage_id
+    required string backupStorage = 6; // 'nochange', 'auto', or valid brs_storage_id
+    optional bool forceFlag = 7; // If true, force promoting dataset secondary storage to primary
+                                 // regardless of the sync state
+    optional string version = 8;
+}
+message PrivReassignUserStorageOutput {
+    required Error error = 1;
+}
+
+/// PrivSetDatasetSuspendedFlag
+/// Set dataset suspended flag.
+message PrivSetDatasetSuspendedFlagInput {
+    required fixed64 userId = 1;
+    required fixed64 clusterId = 2;
+    optional fixed64 datasetId = 3;
+    required bool suspendedFlag = 4;
+    optional string version = 5;
+}
+message PrivSetDatasetSuspendedFlagOutput {
+    required Error error = 1;
+}
+
+/// PrivDestroyStorageCluster
+/// Destroy a storage cluster. The storage cluster may be an infrastructure cluster or a Personal Storage Node.
+message PrivDestroyStorageClusterInput {
+    required fixed64 clusterId = 1;
+    optional string version = 2;
+}
+message PrivDestroyStorageClusterOutput {
+    required Error error = 1;
+}
+
+/// PrivUpdateUserStorageFeatures
+/// Update the feature information for a user storage
+message PrivUpdateUserStorageFeaturesInput {
+    optional string version = 1;
+    required fixed64 userId = 2;
+    required fixed64 clusterId = 3;
+    optional bool featureCloudDocEnabled = 4;
+}
+message PrivUpdateUserStorageFeaturesOutput {
+    required Error error = 1;
+}
+
+/// PrivListDataSets
+/// List all datasets owned by the user_id
+message PrivListDataSetsInput {
+    required fixed64 userId = 1;
+    optional fixed64 deviceId = 2;
+    optional string version = 3;
+}
+message PrivListDataSetsOutput {
+    required Error error = 1;
+    repeated DatasetDetail datasets = 2;
+}
+
+/// PrivAddDataSet
+/// Add specified dataset
+message PrivAddDataSetInput {
+    required fixed64 userId = 1;
+    required string datasetName = 2;
+    required DatasetType datasetTypeId = 3;
+    optional fixed64 storageClusterId = 4;
+    optional string version = 5;
+}
+message PrivAddDataSetOutput { 
+    required Error error = 1;
+    optional fixed64 datasetId = 2;
+    optional fixed64 clusterId = 3;
+}
+

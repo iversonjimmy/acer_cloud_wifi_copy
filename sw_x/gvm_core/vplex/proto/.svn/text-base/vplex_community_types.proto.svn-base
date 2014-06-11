@@ -1,0 +1,28 @@
+/// Types for vplex community functionality.
+//% This file is depended on by the CS2 and CUS servers, which should
+//% be updated when this file is modified.
+
+package vplex.community;
+
+option java_package = "igware.vplex.pb";
+option java_outer_classname = "CommunityTypes";
+
+enum OnlineState_t {
+    /// The user is not logged-in or doesn't want to be visible.
+    OFFLINE = 0;
+    
+    /// The user is logged-in.
+    AVAILABLE = 1;
+    
+    /// The user is logged-in but wants to indicate that they are away from
+    /// the console.
+    AWAY = 3;
+    
+    /// User is not interacting with the console, automatically reported by
+    /// the console.
+    IDLE = 4;
+    
+    /// The user is online, but will appear offline to other users.
+    INVISIBLE = 5;
+}
+

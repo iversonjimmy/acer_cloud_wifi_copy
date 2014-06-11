@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repo/!svn/ver/51193/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/serviceclient
+END
+McaClient.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/repo/!svn/ver/15022/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/serviceclient/McaClient.java
+END
+McaClientRemoteBinder.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/serviceclient/McaClientRemoteBinder.java
+END
+CcdiClient.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/repo/!svn/ver/51193/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/serviceclient/CcdiClient.java
+END
+CcdiClientRemoteBinder.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/repo/!svn/ver/15022/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/serviceclient/CcdiClientRemoteBinder.java
+END
+AbstractMcaClient.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/serviceclient/AbstractMcaClient.java
+END
+AbstractCcdiClient.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/repo/!svn/ver/15022/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/serviceclient/AbstractCcdiClient.java
+END

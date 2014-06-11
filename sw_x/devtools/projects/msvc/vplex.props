@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" Condition="">
+    <Import Project="MSVC sw_x common.props" Condition="'$(imported_MSVC_sw_x_common_props)'==''"/>
+  </ImportGroup>
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <!--workaround for MSB4011 warning-->
+    <imported_vplex_props>true</imported_vplex_props>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)/../../../gvm_core/internal/protoxml;$(SolutionDir)/../../../gvm_core/external/protobuflib;$(SolutionDir)/../../../gvm_core/vplex/platform_win32/include;$(SolutionDir)/../../../gvm_core/vplex/include;$(SolutionDir)/../../../gvm_core/vplex/proto;$(SolutionDir)/../../../gvm_core/vpl/platform_win32/include;$(SolutionDir)/../../../gvm_core/vpl/include;$(SolutionDir)/../../../gvm_core/vpl/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;Iphlpapi.lib;shell32.lib;Advapi32.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+</Project>

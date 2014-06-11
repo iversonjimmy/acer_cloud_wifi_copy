@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_marginTop="20dip"
+        android:textSize="28sp"
+        android:layout_height="wrap_content"
+        android:text="@string/signin_label_title"
+        android:layout_width="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/textSummery"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:textSize="28sp"
+        android:layout_height="wrap_content"
+        android:text="@string/signin_label_summery"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/textTitle"/>
+    <RelativeLayout
+        android:layout_width="600dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="600dip"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/relativeLayout1">
+	    <TextView
+            android:linksClickable="true"
+            android:id="@+id/text_link_sign_up"
+            android:layout_height="wrap_content"
+            android:text="@string/signin_label_signup"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/text_title_sign_up"
+            android:layout_alignLeft="@+id/relativeLayout1" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignLeft="@+id/relativeLayout1"
+        android:layout_above="@+id/relativeLayout1"
+        android:layout_alignRight="@+id/relativeLayout1"
+        android:layout_marginBottom="50dip">
+        <ImageView
+            android:id="@+id/imageview1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon" />
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_height="wrap_content"
+            android:text="@string/signin_label_account_info"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_alignBottom="@+id/imageview1"
+            android:layout_toRightOf="@+id/imageview1"
+            android:layout_marginBottom="14dp"></TextView>
+        <TextView android:id="@+id/textView2"
+            android:layout_height="wrap_content"
+            android:text="@string/signin_label_email"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/imageview1"/>
+	    <EditText
+	        android:inputType="textEmailAddress"
+	        android:layout_height="wrap_content"
+	        android:id="@+id/signin_edit_username"
+	        android:layout_width="fill_parent" 
+	        android:layout_below="@+id/textView2"
+	        android:layout_alignLeft="@+id/textView2" />
+        <TextView android:id="@+id/textView3"
+            android:layout_height="wrap_content"
+            android:text="@string/label_password"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/signin_edit_username"
+            android:layout_alignLeft="@+id/signin_edit_username" />
+        <EditText
+            android:inputType="textPassword"
+            android:layout_height="wrap_content"
+            android:id="@+id/signin_edit_password"
+            android:layout_width="fill_parent" 
+            android:layout_below="@+id/textView3"
+            android:layout_alignLeft="@+id/textView3" />
+        <CheckBox
+            android:layout_height="wrap_content"
+            android:text="@string/signin_label_remember_account"
+            android:id="@+id/checkbox_remember_account"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/signin_edit_password"
+            android:layout_alignLeft="@+id/imageview1"/>
+        <TextView
+            android:linksClickable="true"
+            android:id="@+id/text_link_forgot_password"
+            android:layout_height="wrap_content"
+            android:text="@string/signin_label_forgot_password"
+            android:layout_marginTop="20dip"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/checkbox_remember_account"
+            android:textSize="20sp"
+            android:layout_alignLeft="@+id/imageview1" />
+        <Button
+            android:id="@+id/button_sign_in"
+            android:layout_height="45dip"
+            android:textSize="20sp"
+            android:text="@string/signin_button_signin"
+            android:layout_width="200dip"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/checkbox_remember_account"/>
+    </RelativeLayout>
+</RelativeLayout>

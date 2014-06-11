@@ -1,0 +1,38 @@
+#! /bin/csh
+#
+#  This script just installed the jars and then runs the "run-anstest" script
+#  until a failure occurs.
+#
+set log = /tmp/run-anstest.log.$$
+
+onintr leave
+
+@ round = 0;
+
+if (! -d $WORKAREA) then
+    echo '$WORKAREA'" should be set to a valid workspace"
+    exit 1
+endif
+
+if (! -d jars) then
+    mkdir jars
+endif
+
+cp $BUILDROOT/infra/modules/ans/debug/debug.jar jars/.           || exit 1
+cp $BUILDROOT/infra/imports/lib/commons-logging-1.1.1.jar jars/. || exit 1
+
+while (1)
+    ./run-anstest >& $log
+
+    if ($status != 0) then
+        echo " === The ANS module test failed!"
+        exit 1
+    endif
+
+    @ round++;
+
+    echo " === Finished round" $round "at" `date`
+end
+
+leave:
+    rm -f $log

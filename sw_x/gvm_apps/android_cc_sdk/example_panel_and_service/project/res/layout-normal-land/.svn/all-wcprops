@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_panel_and_service/project/res/layout-normal-land
+END
+logo.xml
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_panel_and_service/project/res/layout-normal-land/logo.xml
+END
+status.xml
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_panel_and_service/project/res/layout-normal-land/status.xml
+END
+rename_device.xml
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_panel_and_service/project/res/layout-normal-land/rename_device.xml
+END
+login.xml
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_panel_and_service/project/res/layout-normal-land/login.xml
+END
+link_device.xml
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_panel_and_service/project/res/layout-normal-land/link_device.xml
+END
+create_account.xml
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_panel_and_service/project/res/layout-normal-land/create_account.xml
+END

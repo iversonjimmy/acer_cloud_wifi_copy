@@ -1,0 +1,64 @@
+    To run the pxd_circle program, you need a live PXD server,
+but the debug version of PXD can run without ANS or IAS, so you
+don't need those modules or servers.  The pxd_circle program
+works around the lack of ANS with reasonable reliability.
+
+    Your PATH environment variable ($path for csh users) must
+point to the currently-supported java binary in /opt/routefree.
+Currently,
+        $ export PATH=/opt/routefree/java1.6/bin/:$PATH
+is correct.  The default java installation often doesn't seem to
+work with the jar files from the Acer build.
+
+To run against a test server on your local machine, build the
+server debug jar:
+
+    $ cd $WORKAREA/sw_i/infra/modules/pxd
+    $ make debug.jar
+
+Then start the PXD server as root:
+    # /opt/init.d/S41svcdrv stop
+    # cd $WORKAREA/sw_x/gvm_core/internal/pxd/src/testing
+    # ./start-debug
+You might need to kill some http demons by hand to free up
+TCP port 443.
+    # ps -ef | grep httpd
+will show the processes.
+
+The server log will in
+    /tmp/server.log
+
+Displaying the log on the screen directly can slow the server down
+noticeably, so you'll need to run tail -f to watch it.
+
+Then you will need to build the pxd_circle program.
+    $ cd $WORKAREA/sw_x
+    $ export DEBUG=1
+    $ export PRODUCT=linux
+    $ make libpxd
+    $ cd $WORKAREA/sw_x/gvm_core/internal/pxd/src
+    $ make pxd_circle
+
+After that, you can run the pxd_circle program:
+
+    $ cd $WORKAREA/sw_x/gvm_core/internal/pxd/src/testing
+    $ ./run-circle
+
+Once the demon has been started, you can run the pxd_circle test
+in a loop with:
+
+    $ cd $WORKAREA/sw_x/gvm_core/internal/pxd/src/testing
+    $ ./run-circle-lots
+
+If you wish to test against a standard PXD demon, one that
+uses ANS and IAS, run:
+     # ./start-real
+instead of
+     # ./start-debug
+The pxd_circle program does not use or depend on a working
+ANS server, but it should function with one running.
+
+If you are running pxd_circle against a real server, the
+"ans_host" parameter needs to point to a live ANS server,
+or the test will fail when the ANS message queue in the
+PXD server overflows.

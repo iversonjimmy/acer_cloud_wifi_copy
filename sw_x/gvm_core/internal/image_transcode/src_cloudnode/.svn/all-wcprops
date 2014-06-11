@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/55104/trunk/sw_x/gvm_core/internal/image_transcode/src_cloudnode
+END
+image__transcode.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repo/!svn/ver/55104/trunk/sw_x/gvm_core/internal/image_transcode/src_cloudnode/image__transcode.cpp
+END
+image__transcode.h
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repo/!svn/ver/29590/trunk/sw_x/gvm_core/internal/image_transcode/src_cloudnode/image__transcode.h
+END

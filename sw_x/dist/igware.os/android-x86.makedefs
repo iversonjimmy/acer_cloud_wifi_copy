@@ -1,0 +1,3 @@
+ANDROID_X86_ROOT ?= $(HOME)/android_x86_source
+REPO_DIR := $(HOME)/bin
+REPO := $(REPO_DIR)/repo

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/repo/!svn/ver/7515/trunk/sw_x/gvm_core/external/acra
+END
+BUILD
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repo/!svn/ver/7515/trunk/sw_x/gvm_core/external/acra/BUILD
+END
+acra-4.2.1b.jar
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/4726/trunk/sw_x/gvm_core/external/acra/acra-4.2.1b.jar
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/4726/trunk/sw_x/gvm_core/external/acra/Makefile
+END

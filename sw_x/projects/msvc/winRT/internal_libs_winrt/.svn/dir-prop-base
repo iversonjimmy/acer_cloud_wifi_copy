@@ -1,0 +1,8 @@
+K 10
+svn:ignore
+V 50
+internal_libs_winrt.vcxproj.user
+
+Generated Files
+
+END

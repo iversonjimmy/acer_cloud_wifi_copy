@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/repo/!svn/ver/59632/trunk/sw_x/tests/make
+END
+test_rules.mk
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repo/!svn/ver/59632/trunk/sw_x/tests/make/test_rules.mk
+END
+linux_km.makedefs
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repo/!svn/ver/750/trunk/sw_x/tests/make/linux_km.makedefs
+END
+test_defs.mk
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/repo/!svn/ver/59169/trunk/sw_x/tests/make/test_defs.mk
+END
+linux_km.makerules
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repo/!svn/ver/943/trunk/sw_x/tests/make/linux_km.makerules
+END
+test_env.mk
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/repo/!svn/ver/57560/trunk/sw_x/tests/make/test_env.mk
+END

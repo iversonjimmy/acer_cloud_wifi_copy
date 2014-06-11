@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/36876/trunk/sw_x/gvm_core/vplex/posix_include
+END
+vplex__named_socket.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repo/!svn/ver/1551/trunk/sw_x/gvm_core/vplex/posix_include/vplex__named_socket.h
+END
+vplex__file.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/36876/trunk/sw_x/gvm_core/vplex/posix_include/vplex__file.h
+END

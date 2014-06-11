@@ -1,0 +1,24 @@
+diff -rupN src/Makefile.am newsrc/Makefile.am
+--- src/Makefile.am	2010-06-14 18:54:59.000000000 -0700
++++ newsrc/Makefile.am	2010-06-14 18:56:17.000000000 -0700
+@@ -93,7 +93,7 @@ libprotobuf_lite_la_SOURCES =           
+   google/protobuf/io/coded_stream.cc                           \
+   google/protobuf/io/coded_stream_inl.h                        \
+   google/protobuf/io/zero_copy_stream.cc                       \
+-  google/protobuf/io/zero_copy_stream_impl_lite.cc
++  google/protobuf/io/zero_copy_stream_impl.cc
+ 
+ libprotobuf_la_LIBADD = $(PTHREAD_LIBS)
+ libprotobuf_la_LDFLAGS = -version-info 6:0:0 -export-dynamic -no-undefined
+diff -rupN src/Makefile.in newsrc/Makefile.in
+--- src/Makefile.in	2010-01-08 11:26:21.000000000 -0800
++++ newsrc/Makefile.in	2010-06-14 18:57:08.000000000 -0700
+@@ -511,7 +511,7 @@ libprotobuf_lite_la_SOURCES = \
+   google/protobuf/io/coded_stream.cc                           \
+   google/protobuf/io/coded_stream_inl.h                        \
+   google/protobuf/io/zero_copy_stream.cc                       \
+-  google/protobuf/io/zero_copy_stream_impl_lite.cc
++  google/protobuf/io/zero_copy_stream_impl.cc
+ 
+ libprotobuf_la_LIBADD = $(PTHREAD_LIBS)
+ libprotobuf_la_LDFLAGS = -version-info 6:0:0 -export-dynamic -no-undefined

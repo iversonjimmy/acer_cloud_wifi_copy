@@ -1,0 +1,41 @@
+#! /bin/csh -fb
+
+set tmpfile = $1
+set tmpfile = $tmpfile:t
+set tmpfile = /tmp/$tmpfile.log.$$
+
+onintr leave
+
+valgrind --leak-check=full --track-fds=yes --show-reachable=yes $* |& tee $tmpfile
+
+grep "^The pxd [a-z]* test passed." $tmpfile > /dev/null
+
+if ($status != 0) then
+    echo " === $1 failed!"
+    echo " === The log is in $tmpfile"
+    exit 1
+endif
+
+grep "ERROR SUMMARY: 0 errors from 0 contexts" $tmpfile > /dev/null
+
+if ($status != 0) then
+    echo " === $1 failed!"
+    echo " === The login is in $tmpfile"
+    exit 1
+endif
+
+grep "in use at exit: 0 bytes in 0 blocks" $tmpfile > /dev/null
+
+
+if ($status != 0) then
+    echo " === $1 leaked memory!"
+    echo " === The login is in $tmpfile"
+    exit 1
+endif
+
+rm -f $tmpfile
+exit 0
+
+leave:
+    rm -f $tmpfile
+    exit 1

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repo/!svn/ver/50079/trunk/sw_x/gvm_apps/android_cc_sdk/example_panel_and_service/project/res/values
+END
+colors.xml
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_panel_and_service/project/res/values/colors.xml
+END
+styles.xml
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_panel_and_service/project/res/values/styles.xml
+END
+strings.xml
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repo/!svn/ver/50079/trunk/sw_x/gvm_apps/android_cc_sdk/example_panel_and_service/project/res/values/strings.xml
+END

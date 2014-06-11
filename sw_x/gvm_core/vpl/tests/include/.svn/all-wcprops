@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repo/!svn/ver/51199/trunk/sw_x/gvm_core/vpl/tests/include
+END
+vplTest_common.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/51199/trunk/sw_x/gvm_core/vpl/tests/include/vplTest_common.h
+END
+vplTest.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/46945/trunk/sw_x/gvm_core/vpl/tests/include/vplTest.h
+END
+vplTest_suite_common.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repo/!svn/ver/2664/trunk/sw_x/gvm_core/vpl/tests/include/vplTest_suite_common.h
+END

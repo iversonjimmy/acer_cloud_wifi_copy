@@ -1,0 +1,6 @@
+<manifest package="com.igware.android_cc_sdk.build_jars" android:versionCode="203070275" android:versionName="2.3.7.275" xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-sdk android:minSdkVersion="8" />
+
+    <application android:debuggable="true" android:icon="@drawable/igicon" android:label="FOR BUILD ONLY">
+    </application>
+</manifest>

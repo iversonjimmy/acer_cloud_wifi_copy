@@ -1,0 +1,49 @@
+#! /bin/sh
+#
+#  This script runs the ANS module tests and single-instance integration
+#  test on a Linux platform.
+#
+#  You need some jars to run this script.  All the jars should be placed in
+#  the ./jars directory where this script will be run.
+#
+#  The debug.jar file contains the ANS classes and some debugging skeleton
+#  classes.  It is created by running "make debug.jar" in the
+#      $WORKAREA/sw_i/infra/modules/ans
+#  directory.  The debug.jar file is put in
+#      $BUILDROOT/infra/modules/ans/debug
+#  by the makefile.
+#
+#  The test requires one additional jar:
+#      $BUILDROOT/infra/imports/lib/commons-logging-1.1.1.jar
+#  The sw_i/infra build should install it in the $BUILDROOT area.
+#
+#  If your $WORKAREA variable is not set, you also need to install some
+#  configuration files:
+#      $WORKAREA/sw_i/infra/modules/src/java/com/broadon/ans/device_types
+#      $WORKAREA/sw_i/infra/modules/src/java/com/broadon/ans/server_keys
+#  You'll need to modify this script to point at the configuration files.
+#
+#  The value in the ans_ias_host variable isn't used to connect.  It might not
+#  need to be set anymore.
+#
+#  The PATH shell variable needs to point to the version of java that you
+#  wish to use.
+#
+export ans_ias_host="ias.lab1.routefree.com"
+
+export classpath="jars/*"
+
+export ans_device_types_file=$WORKAREA/sw_i/infra/modules/src/java/com/broadon/ans/device_types
+export ans_key_file=$WORKAREA/sw_i/infra/modules/src/java/com/broadon/ans/server_keys
+
+#
+#  Copy the test configuration files to the current directory for the module
+#  tests.  The ANS server reads the environment variables, but the module tests
+#  do not, so the files need to be in both places.  Also, this approach saves
+#  the configuration files locally in case there's a problem.
+#
+rm -f device_types server_keys
+
+cp $ans_device_types_file . || exit 1
+cp $ans_key_file .          || exit 1
+java -Djava.library.path=. -classpath "$classpath" com.broadon.ans.test.AnsTest

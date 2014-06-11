@@ -1,0 +1,7 @@
+#! /bin/csh -fb
+#
+#  Print the total code coverage across all the files in the total/
+#  subdirectory.
+#
+
+tail -n 1 total/*.total | awk -f tc.awk

@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{151770FE-8137-424b-9FB1-B5A690473B8C}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{119FE7A2-A7BB-4fef-BBEB-923C99335B4D}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{00ea9cfd-6307-4329-b087-4d1fa3882bf2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\gvm_apps\shellext\shellext_win\shellext_win\ACloudSyncedRF.rgs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\..\..\gvm_apps\shellext\shellext_win\shellext_win\ACloudSyncing.rgs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\..\..\gvm_apps\shellext\shellext_win\shellext_win\shellext_win.rgs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\..\..\gvm_apps\shellext\shellext_win\shellext_win\cloud.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\..\..\gvm_apps\shellext\shellext_win\shellext_win\synced.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\..\..\gvm_apps\shellext\shellext_win\shellext_win\syncing.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\..\..\gvm_apps\shellext\shellext_win\shellext_win\to-be-synced.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\..\..\gvm_apps\shellext\shellext_win\shellext_win\shellext_win.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="..\..\..\..\gvm_apps\shellext\shellext_win\shellext_win\ACloudSyncedSF.rgs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\..\..\gvm_apps\shellext\shellext_win\shellext_win\ACloudToBeSynced.rgs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\..\..\gvm_apps\shellext\shellext_win\shellext_win\syncbox.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\..\..\gvm_apps\shellext\shellext_win\shellext_win\shellext_win.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\gvm_apps\shellext\shellext_win\shellext_win\ACloudSyncedRF.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_apps\shellext\shellext_win\shellext_win\ACloudSyncedSF.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_apps\shellext\shellext_win\shellext_win\ACloudSyncing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_apps\shellext\shellext_win\shellext_win\ACloudToBeSynced.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_apps\shellext\shellext_win\shellext_win\ContextMenuShlExt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_apps\shellext\shellext_win\shellext_win\dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_apps\shellext\shellext_win\shellext_win\shellext_win.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_apps\shellext\shellext_win\shellext_win\ShlExtUtility.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(IntDir)shellext_win_i.c">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="..\..\..\..\gvm_apps\shellext\shellext_win\shellext_win\shellext_win.idl">
+      <Filter>Source Files</Filter>
+    </Midl>
+  </ItemGroup>
+</Project>

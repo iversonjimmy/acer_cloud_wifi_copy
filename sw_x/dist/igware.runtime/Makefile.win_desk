@@ -1,0 +1,278 @@
+# -*-Makefile-*-
+# Need to override BUILDER_NAME when it is not the same as PRODUCT.
+# Do this before including Makefile.common.
+export BUILDER_NAME=win_desk
+export PRODUCT=msvc
+export TEST_PLATFORM?=win7
+
+# makefile included by all sw_x/dist/igware.runtime makefiles
+include igware.runtime.common.mk
+# makefile included by all sw_x/dist/* makefiles
+include $(WORKDIR)/sw_x/dist/Makefile.common
+
+export LOCAL_SAVE_DIR=/tmp
+export PROD_SAVE_LIST=$(LOCAL_SAVE_DIR)/$(BUILDER_NAME)-files-to-save.out
+export PRODUCT_VERSION=$(shell cat ${WORKDIR}/sw_x/dist/igware.runtime/product.version.number)
+
+ifdef BUILD_BRANCH
+    RUN_SYMSTORE=1
+endif
+
+# --- this target should clean the machine before building the product
+.PHONY: clean
+clean:
+	rm -fr $(BUILDROOT)/*/$(PRODUCT)
+	rm -fr $(BUILDROOT)/build_$(PRODUCT)
+
+bump_build_number:
+	# get lock
+	ssh $(LOCK_USER)@$(LOCK_MASTER) "$(LOCK_SCRIPT) -a get -n build_number.$(BRANCH_NAME) -t exclusive -r $(PRODUCT)"
+	# get the latest version of the file
+	svn update $(BUILD_NUMBER_FILE)
+	# increment the build number
+	echo $(shell echo $$(( $(BUILD_NUMBER) + 1 )) ) > $(BUILD_NUMBER_FILE)
+	# check the change in
+	svn ci -m 'bump $(PRODUCT) build number' $(BUILD_NUMBER_FILE)
+	# release lock
+	ssh $(LOCK_USER)@$(LOCK_MASTER) "$(LOCK_SCRIPT) -a release -n build_number.$(BRANCH_NAME) -t exclusive -r $(PRODUCT)"
+
+# --- this target should install any tools needed to build the product
+.PHONY: build_tools
+build_tools: bump_build_number
+
+# --- this target should build the product
+.PHONY: default
+default:
+	mkdir -p $(TMPDIR)
+	make -C $(WORKDIR)/sw_x default
+
+# --- this target should archive any build outputs off to a different system
+
+export SAVE_TGZ=$(BUILDER_NAME)_output.$(BUILD_DATE).$(BUILD_VERSION).tar.gz
+export LNK_NAME=$(BUILDER_NAME)_output.tar.gz
+export REMOTE_SAVE_DIR=$(PRODUCT_STORAGE_DIR)/$(BUILDER_NAME)_output
+
+export SAVE_ZIP2=CloudClientSDK.$(BUILD_DATE).$(BUILD_VERSION).zip
+export LNK_NAME2=CloudClientSDK.zip
+export REMOTE_SAVE_DIR2=$(PRODUCT_STORAGE_DIR)/CloudClientSDK
+
+export TMPDIR5 = $(LOCAL_SAVE_DIR)/ccd
+export SAVE_ZIP5=ccd.$(BUILD_DATE).$(BUILD_VERSION).zip
+export LNK_NAME5=ccd.zip
+export REMOTE_SAVE_DIR5=$(PRODUCT_STORAGE_DIR)/ccd
+
+export TMPDIR6 = $(LOCAL_SAVE_DIR)/dxshell
+export SAVE_ZIP6=dxshell.$(BUILD_DATE).$(BUILD_VERSION).zip
+export LNK_NAME6=dxshell.zip
+export REMOTE_SAVE_DIR6=$(PRODUCT_STORAGE_DIR)/dxshell
+
+export TMPDIR7 = $(LOCAL_SAVE_DIR)/actool_win
+export SAVE_ZIP7=actool_win.$(BUILD_DATE).$(BUILD_VERSION).zip
+export LNK_NAME7=actool_win.zip
+export REMOTE_SAVE_DIR7=$(PRODUCT_STORAGE_DIR)/actool_win
+
+export TMPDIR8 = $(LOCAL_SAVE_DIR)/dx_remote_agent
+export SAVE_ZIP8=dx_remote_agent.$(BUILD_DATE).$(BUILD_VERSION).zip
+export LNK_NAME8=dx_remote_agent.zip
+export REMOTE_SAVE_DIR8=$(PRODUCT_STORAGE_DIR)/dx_remote_agent
+
+export TMPDIR9 = $(LOCAL_SAVE_DIR)/unitTests
+export SAVE_ZIP9=unitTests.$(BUILD_DATE).$(BUILD_VERSION).zip
+export LNK_NAME9=unitTests.zip
+export REMOTE_SAVE_DIR9=$(PRODUCT_STORAGE_DIR)/unitTests
+
+export TMPDIR10=$(LOCAL_SAVE_DIR)/shellext_win
+export SAVE_ZIP10=shellext_win.$(BUILD_DATE).$(BUILD_VERSION).zip
+export LNK_NAME10=shellext_win.zip
+export REMOTE_SAVE_DIR10=$(PRODUCT_STORAGE_DIR)/shellext_win
+
+.PHONY: dist
+dist:
+	# Save off all .exe and .dll files
+	cd $(BUILDROOT)/build_msvc && find * -path "*/Release/*" -type f -name "*.exe" -o -name "*.dll" > $(PROD_SAVE_LIST)
+	cd $(BUILDROOT)/build_msvc && tar cvzf $(LOCAL_SAVE_DIR)/$(SAVE_TGZ) -T $(PROD_SAVE_LIST)
+	ssh $(STORE_USER)@$(STORE_HOST) "mkdir -p $(REMOTE_SAVE_DIR)"
+	scp $(LOCAL_SAVE_DIR)/$(SAVE_TGZ) $(STORE_USER)@$(STORE_HOST):$(REMOTE_SAVE_DIR)/$(SAVE_TGZ)
+	ssh $(STORE_USER)@$(STORE_HOST) "cd $(REMOTE_SAVE_DIR) && rm -f $(LNK_NAME) && ln -s $(SAVE_TGZ) $(LNK_NAME)"
+	# cleanup build machine
+	rm -f $(LOCAL_SAVE_DIR)/$(SAVE_TGZ)
+
+	# Save off ccd.exe and ccd.pdb
+	-rm -rf $(TMPDIR5)
+	mkdir $(TMPDIR5)
+	cp $(BUILDROOT)/build_msvc/PersonalCloudAll/Release/ccd/Win32/ccd.exe $(TMPDIR5)
+	cp $(BUILDROOT)/build_msvc/PersonalCloudAll/Release/ccd/Win32/ccd.pdb $(TMPDIR5)
+	cp $(BUILDROOT)/build_msvc/PersonalCloudAll/Release/actool_win/Win32/actool_win.exe $(TMPDIR5)
+	cp $(WORKDIR)/sw_x/gvm_core/external/ioac_loader/32/Release/customer.dll $(TMPDIR5)
+	cp $(WORKDIR)/sw_x/gvm_core/external/ioac_loader/32/Release/inteldll.dll $(TMPDIR5)
+	cp $(WORKDIR)/sw_x/gvm_core/conf/ccd.conf.tmpl $(TMPDIR5)
+	cd $(TMPDIR5) && zip -Tr $(LOCAL_SAVE_DIR)/$(SAVE_ZIP5) *
+	ssh $(STORE_USER)@$(STORE_HOST) "mkdir -p $(REMOTE_SAVE_DIR5)"
+	scp $(LOCAL_SAVE_DIR)/$(SAVE_ZIP5) $(STORE_USER)@$(STORE_HOST):$(REMOTE_SAVE_DIR5)/$(SAVE_ZIP5)
+	ssh $(STORE_USER)@$(STORE_HOST) "cd $(REMOTE_SAVE_DIR5) && rm -f $(LNK_NAME5) && ln -s $(SAVE_ZIP5) $(LNK_NAME5)"
+	# cleanup build machine
+	rm -f $(LOCAL_SAVE_DIR)/$(SAVE_ZIP5)
+
+	# Zip up the Cloud Client SDK and save it off.
+	cd $(BUILDROOT)/release/msvc/gvm_core/daemons/ccd/sdk && \
+		zip -Tr $(LOCAL_SAVE_DIR)/$(SAVE_ZIP2) *
+	ssh $(STORE_USER)@$(STORE_HOST) "mkdir -p $(REMOTE_SAVE_DIR2)"
+	scp $(LOCAL_SAVE_DIR)/$(SAVE_ZIP2) $(STORE_USER)@$(STORE_HOST):$(REMOTE_SAVE_DIR2)/$(SAVE_ZIP2)
+	ssh $(STORE_USER)@$(STORE_HOST) "cd $(REMOTE_SAVE_DIR2) && rm -f $(LNK_NAME2) && ln -s $(SAVE_ZIP2) $(LNK_NAME2)"
+	# cleanup build machine
+	rm -f $(LOCAL_SAVE_DIR)/$(SAVE_ZIP2)
+
+	# Zip up the dxshell and save it off.
+	-rm -rf $(TMPDIR6)
+	mkdir $(TMPDIR6)
+	mkdir $(TMPDIR6)/AdbTool
+	cp $(BUILDROOT)/build_msvc/PersonalCloudAll/Release/dxshell/Win32/dxshell.exe $(TMPDIR6)
+	cp $(BUILDROOT)/build_msvc/PersonalCloudAll/Release/dx_remote_agent/Win32/dx_remote_agent.exe $(TMPDIR6)
+	cp $(BUILDROOT)/build_msvc/PersonalCloudAll/Release/CCDMonitorService/Win32/CCDMonitorService.exe $(TMPDIR6)
+	cp $(BUILDROOT)/build_msvc/PersonalCloudAll/Release/ccd/Win32/ccd.exe $(TMPDIR6)
+	cp $(BUILDROOT)/build_msvc/PersonalCloudAll/Release/ccd/Win32/ccd.pdb $(TMPDIR6)
+	cp $(WORKDIR)/sw_x/gvm_core/external/ioac_loader/32/Release/customer.dll $(TMPDIR6)
+	cp $(WORKDIR)/sw_x/gvm_core/external/ioac_loader/32/Release/inteldll.dll $(TMPDIR6)
+	cp $(WORKDIR)/sw_x/tests/dxshell/tools/* $(TMPDIR6)
+	cp $(WORKDIR)/sw_x/tests/dxshell/checkStreamMultirangeResult_ref.out $(TMPDIR6)
+	cp $(WORKDIR)/sw_x/tests/dxshell/test.jpg $(TMPDIR6)
+	cp $(WORKDIR)/sw_x/tests/dxshell/test_thumb.jpg $(TMPDIR6)
+	cp $(WORKDIR)/sw_x/gvm_core/conf/ccd.conf.tmpl $(TMPDIR6)
+	cd $(TMPDIR6)/AdbTool && wget http://$(STORE_HOST):$(HTTP_PORT)/$(TOOL_PATH)/AdbTool/adb.exe
+	cd $(TMPDIR6)/AdbTool && wget http://$(STORE_HOST):$(HTTP_PORT)/$(TOOL_PATH)/AdbTool/AdbWinApi.dll
+	cd $(TMPDIR6)/AdbTool && wget http://$(STORE_HOST):$(HTTP_PORT)/$(TOOL_PATH)/AdbTool/AdbWinUsbApi.dll
+	cd $(TMPDIR6) && wget http://$(STORE_HOST):$(HTTP_PORT)/$(TAGEDIT_TOOL_PATH)/TagEdit.exe
+	cd $(TMPDIR6) && wget http://$(STORE_HOST):$(HTTP_PORT)/$(ARCHIVED_TESTDATADIR)/$(DXSHELL_INCLUDE_FILES)
+	cd $(TMPDIR6) && tar xvzf $(DXSHELL_INCLUDE_FILES) && rm -f $(DXSHELL_INCLUDE_FILES)
+	cd $(TMPDIR6) && zip -Tr $(LOCAL_SAVE_DIR)/$(SAVE_ZIP6) *
+	ssh $(STORE_USER)@$(STORE_HOST) "mkdir -p $(REMOTE_SAVE_DIR6)"
+	scp $(LOCAL_SAVE_DIR)/$(SAVE_ZIP6) $(STORE_USER)@$(STORE_HOST):$(REMOTE_SAVE_DIR6)/$(SAVE_ZIP6)
+	ssh $(STORE_USER)@$(STORE_HOST) "cd $(REMOTE_SAVE_DIR6) && rm -f $(LNK_NAME6) && ln -s $(SAVE_ZIP6) $(LNK_NAME6)"
+	# cleanup build machine
+	rm -f $(LOCAL_SAVE_DIR)/$(SAVE_ZIP6)
+
+	# Save actool as a separate .zip file
+	-rm -rf $(TMPDIR7)
+	mkdir $(TMPDIR7)
+	cp $(WORKDIR)/sw_x/gvm_core/conf/ccd.conf.tmpl $(TMPDIR7)
+	cp $(BUILDROOT)/build_msvc/PersonalCloudAll/Release/actool_win/Win32/actool_win.exe $(TMPDIR7)
+	cd $(TMPDIR7) && zip -Tr $(LOCAL_SAVE_DIR)/$(SAVE_ZIP7) *
+	ssh $(STORE_USER)@$(STORE_HOST) "mkdir -p $(REMOTE_SAVE_DIR7)"
+	scp $(LOCAL_SAVE_DIR)/$(SAVE_ZIP7) $(STORE_USER)@$(STORE_HOST):$(REMOTE_SAVE_DIR7)/$(SAVE_ZIP7)
+	ssh $(STORE_USER)@$(STORE_HOST) "cd $(REMOTE_SAVE_DIR7) && rm -f $(LNK_NAME7) && ln -s $(SAVE_ZIP7) $(LNK_NAME7)"
+	# cleanup build machine
+	rm -rf $(LOCAL_SAVE_DIR)/$(SAVE_ZIP7)
+
+	# Zip up the dx_remote_agent and save it off.
+	-rm -rf $(TMPDIR8)
+	mkdir $(TMPDIR8)
+	mkdir $(TMPDIR8)/AdbTool
+	cp $(BUILDROOT)/build_msvc/PersonalCloudAll/Release/dx_remote_agent/Win32/dx_remote_agent.exe $(TMPDIR8)
+	cp $(BUILDROOT)/build_msvc/PersonalCloudAll/Release/ccd/Win32/ccd.exe $(TMPDIR8)
+	cp $(BUILDROOT)/build_msvc/PersonalCloudAll/Release/ccd/Win32/ccd.pdb $(TMPDIR8)
+	cp $(WORKDIR)/sw_x/gvm_core/external/ioac_loader/32/Release/customer.dll $(TMPDIR8)
+	cp $(WORKDIR)/sw_x/gvm_core/external/ioac_loader/32/Release/inteldll.dll $(TMPDIR8)
+	cd $(TMPDIR8)/AdbTool && wget http://$(STORE_HOST):$(HTTP_PORT)/$(TOOL_PATH)/AdbTool/adb.exe
+	cd $(TMPDIR8)/AdbTool && wget http://$(STORE_HOST):$(HTTP_PORT)/$(TOOL_PATH)/AdbTool/AdbWinApi.dll
+	cd $(TMPDIR8)/AdbTool && wget http://$(STORE_HOST):$(HTTP_PORT)/$(TOOL_PATH)/AdbTool/AdbWinUsbApi.dll
+	cd $(TMPDIR8) && zip -Tr $(LOCAL_SAVE_DIR)/$(SAVE_ZIP8) *
+	ssh $(STORE_USER)@$(STORE_HOST) "mkdir -p $(REMOTE_SAVE_DIR8)"
+	scp $(LOCAL_SAVE_DIR)/$(SAVE_ZIP8) $(STORE_USER)@$(STORE_HOST):$(REMOTE_SAVE_DIR8)/$(SAVE_ZIP8)
+	ssh $(STORE_USER)@$(STORE_HOST) "cd $(REMOTE_SAVE_DIR8) && rm -f $(LNK_NAME8) && ln -s $(SAVE_ZIP8) $(LNK_NAME8)"
+	# clean up build machine
+	rm -f $(LOCAL_SAVE_DIR)/$(SAVE_ZIP8)
+
+	# Zip up the all unit tests
+	-rm -rf $(TMPDIR9)
+	mkdir $(TMPDIR9)
+	cp $(BUILDROOT)/build_msvc/PersonalCloudAll/Release/vplTest/Win32/vplTest.exe $(TMPDIR9)
+	cp $(BUILDROOT)/build_msvc/PersonalCloudAll/Release/vplTest/Win32/vplTest.pdb $(TMPDIR9)
+	cp $(BUILDROOT)/build_msvc/PersonalCloudAll/Release/VPLexTest/Win32/VPLexTest.exe $(TMPDIR9)
+	cp $(BUILDROOT)/build_msvc/PersonalCloudAll/Release/VPLexTest/Win32/VPLexTest.pdb $(TMPDIR9)
+	cp $(BUILDROOT)/build_msvc/PersonalCloudAll/Release/ccd_ready_test/Win32/ccd_ready_test.exe $(TMPDIR9)
+	cp $(BUILDROOT)/build_msvc/PersonalCloudAll/Release/ccd_ready_test/Win32/ccd_ready_test.pdb $(TMPDIR9)
+	cp $(BUILDROOT)/build_msvc/PersonalCloudAll/Release/ccd_shutdown_test/Win32/ccd_shutdown_test.exe $(TMPDIR9)
+	cp $(BUILDROOT)/build_msvc/PersonalCloudAll/Release/ccd_shutdown_test/Win32/ccd_shutdown_test.pdb $(TMPDIR9)
+	cp $(BUILDROOT)/build_msvc/PersonalCloudAll/Release/test_ccd_sync/Win32/test_ccd_sync.exe $(TMPDIR9)
+	cp $(BUILDROOT)/build_msvc/PersonalCloudAll/Release/test_ccd_sync/Win32/test_ccd_sync.pdb $(TMPDIR9)
+	cp $(BUILDROOT)/build_msvc/PersonalCloudAll/Release/test_ccd_start/Win32/test_ccd_start.exe $(TMPDIR9)
+	cp $(BUILDROOT)/build_msvc/PersonalCloudAll/Release/test_ccd_start/Win32/test_ccd_start.pdb $(TMPDIR9)
+	cp $(BUILDROOT)/build_msvc/PersonalCloudAll/Release/test_sync_config/Win32/test_sync_config.exe $(TMPDIR9)
+	cp $(BUILDROOT)/build_msvc/PersonalCloudAll/Release/test_sync_config/Win32/test_sync_config.pdb $(TMPDIR9)
+	cd $(TMPDIR9) && zip -Tr $(LOCAL_SAVE_DIR)/$(SAVE_ZIP9) *
+	ssh $(STORE_USER)@$(STORE_HOST) "mkdir -p $(REMOTE_SAVE_DIR9)"
+	scp $(LOCAL_SAVE_DIR)/$(SAVE_ZIP9) $(STORE_USER)@$(STORE_HOST):$(REMOTE_SAVE_DIR9)/$(SAVE_ZIP9)
+	ssh $(STORE_USER)@$(STORE_HOST) "cd $(REMOTE_SAVE_DIR9) && rm -f $(LNK_NAME9) && ln -s $(SAVE_ZIP9) $(LNK_NAME9)"
+	# cleanup build machine
+	rm -rf $(LOCAL_SAVE_DIR)/$(SAVE_ZIP9)
+
+	# Zip up shellext_win
+	-rm -rf $(TMPDIR10)
+	mkdir $(TMPDIR10)
+	mkdir $(TMPDIR10)/Win32
+	mkdir $(TMPDIR10)/x64
+	cp $(BUILDROOT)/build_msvc/PersonalCloudAll/Release/shellext_win/Win32/shellext_win.dll $(TMPDIR10)/Win32
+	cp $(BUILDROOT)/build_msvc/PersonalCloudAll/Release/shellext_win/x64/shellext_win.dll $(TMPDIR10)/x64
+	cd $(TMPDIR10) && zip -Tr $(LOCAL_SAVE_DIR)/$(SAVE_ZIP10) *
+	ssh $(STORE_USER)@$(STORE_HOST) "mkdir -p $(REMOTE_SAVE_DIR10)"
+	scp $(LOCAL_SAVE_DIR)/$(SAVE_ZIP10) $(STORE_USER)@$(STORE_HOST):$(REMOTE_SAVE_DIR10)/$(SAVE_ZIP10)
+	ssh $(STORE_USER)@$(STORE_HOST) "cd $(REMOTE_SAVE_DIR10) && rm -f $(LNK_NAME10) && ln -s $(SAVE_ZIP10) $(LNK_NAME10)"
+	# cleanup build machine
+	rm -rf $(LOCAL_SAVE_DIR)/$(SAVE_ZIP10)
+
+ifeq ($(RUN_SYMSTORE),1)
+	# Do the symstore step if RUN_SYMSTORE=1; it is set if this is a branch build
+	# You can also set Property=RUN_SYMSTORE and Value=1 in buildbot to force this to run for top-of-tree
+	$(WORKDIR)/sw_x/dist/igware.runtime/exec_symstore.py -f ${BUILDROOT}/build_msvc/PersonalCloudAll/Release/CCD/Win32/CCD.pdb -v ${PRODUCT_VERSION}_${BUILD_DATE}
+endif
+
+# --- this target should clean the machine before running tests
+.PHONY: clean_tests
+clean_tests:
+
+# --- this target should install anything needed to test the product
+# --- assume that the build of the product and test of the product DO NOT occur on the same machine
+
+.PHONY: install_tests
+install_tests: get_idt_tool
+
+.PHONY: get_idt_tool
+get_idt_tool:
+	mkdir -p $(WORKDIR)/sw_i/tools
+	scp $(STORE_USER)@$(STORE_HOST):$(FS_PC_INFRA_STORE_PATH)/idt/idt.zip $(WORKDIR)/sw_i/tools
+	cd $(WORKDIR)/sw_i/tools && unzip idt.zip
+
+# --- this target should execute the tests (usually using the testharness)
+.PHONY: run_tests
+run_tests:
+	$(WORKDIR)/sw_x/dist/igware.runtime/make_validated_links.sh -a save -u $(STORE_USER) -n $(STORE_HOST) -d $(PRODUCT_STORAGE_DIR) -s CloudClientSDK -s actool_win -s ccd -s dxshell -s shellext_win
+	/$(WORKDIR)/sw_x/tools/testharness/bin/testharness.py -c $(WORKDIR)/sw_x/tools/testharness/conf/runs/buildbot_tests.$(BUILDER_NAME).$(TEST_PLATFORM).$(LAB).run -o /tmp/testharness/output_$(BUILDER_NAME)_$(TEST_PLATFORM)/$(BUILD_DATE) -b $(STORE_USER)@$(STORE_HOST):/$(FS_STORE_TEST_PATH)/$(BRANCH_NAME)/$(BUILD_DATE)_$(BUILDER_NAME)_$(TEST_PLATFORM)_$(LAB) -k
+	# since the tests have passed, create the links indicating the build has been validated
+	$(WORKDIR)/sw_x/dist/igware.runtime/make_validated_links.sh -a link -u $(STORE_USER) -n $(STORE_HOST) -d $(PRODUCT_STORAGE_DIR) -p $(TEST_PLATFORM)
+
+.PHONY: run_full_tests
+run_full_tests:
+	$(WORKDIR)/sw_x/dist/igware.runtime/make_validated_links.sh -a save -u $(STORE_USER) -n $(STORE_HOST) -d $(PRODUCT_STORAGE_DIR) -s CloudClientSDK -s actool_win -s ccd -s dxshell -s shellext_win
+	/$(WORKDIR)/sw_x/tools/testharness/bin/testharness.py -c $(WORKDIR)/sw_x/tools/testharness/conf/runs/buildbot_tests.$(BUILDER_NAME).full.$(TEST_PLATFORM).$(LAB).run -o /tmp/testharness/output_$(BUILDER_NAME)_$(TEST_PLATFORM)/$(BUILD_DATE) -b $(STORE_USER)@$(STORE_HOST):/$(FS_STORE_TEST_PATH)/$(BRANCH_NAME)/$(BUILD_DATE)_$(BUILDER_NAME)_$(TEST_PLATFORM)_$(LAB) -k
+	# since the tests have passed, create the links indicating the build has been validated
+	$(WORKDIR)/sw_x/dist/igware.runtime/make_validated_links.sh -a link -u $(STORE_USER) -n $(STORE_HOST) -d $(PRODUCT_STORAGE_DIR) -p $(TEST_PLATFORM)
+
+# --- this target should report the test results
+.PHONY: report_test_results
+report_test_results:
+	# if the string "TEST RUN STATUS PASS" is not found in the summary output, then it's a fail
+	cat /tmp/testharness/output_$(BUILDER_NAME)_$(TEST_PLATFORM)/$(BUILD_DATE)/testharness_summary.out
+	grep "TEST RUN STATUS PASS" /tmp/testharness/output_$(BUILDER_NAME)_$(TEST_PLATFORM)/$(BUILD_DATE)/testharness_summary.out
+
+# --- this target run once to setup a machine for build and/or test
+.PHONY: build_setup
+build_setup:
+	@echo !!! This builder currently requires manual setup.
+	@echo !!! Please see http://www.ctbg.acer.com/wiki/index.php/Building_sw_x_for_Win32_%28Windows_buildhost%29
+
+# --- this target run once on all target machines to install packages required to run the tests
+.PHONY: test_setup
+test_setup: allow_sudo_usage
+	make -f $(WORKDIR)/sw_x/dist/igware.runtime/Makefile.win_desk centos_update_repo
+	make -f $(WORKDIR)/sw_x/dist/igware.runtime/Makefile.win_desk install_common_pkgs
+	make -f $(WORKDIR)/sw_x/dist/igware.runtime/Makefile.win_desk centos_install_32bit_pkgs

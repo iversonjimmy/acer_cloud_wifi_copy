@@ -1,0 +1,173 @@
+# -*-Makefile-*-
+export PRODUCT=linux_ol
+export HOST_PLATFORM := linux
+export HOST_ARCH := $(shell uname -i)
+
+# makefile included by all sw_x/dist/igware.runtime makefiles
+include igware.runtime.common.mk
+# makefile included by all sw_x/dist/* makefiles
+include $(WORKDIR)/sw_x/dist/Makefile.common
+
+$(info HOST_PLATFORM="$(HOST_PLATFORM)")
+$(info HOST_ARCH="$(HOST_ARCH)")
+
+# --- this target should clean the machine before building the product
+.PHONY: clean
+clean:
+	rm -fr $(BUILDROOT)/*/$(PRODUCT)
+
+bump_build_number:
+	# get lock
+	ssh $(LOCK_USER)@$(LOCK_MASTER) "$(LOCK_SCRIPT) -a get -n build_number.$(BRANCH_NAME) -t exclusive -r $(PRODUCT)"
+	# get the latest version of the file
+	svn update $(BUILD_NUMBER_FILE)
+	# increment the build number
+	echo $(shell echo $$(( $(BUILD_NUMBER) + 1 )) ) > $(BUILD_NUMBER_FILE)
+	# check the change in
+	svn ci -m 'bump $(PRODUCT) build number' $(BUILD_NUMBER_FILE)
+	# release lock
+	ssh $(LOCK_USER)@$(LOCK_MASTER) "$(LOCK_SCRIPT) -a release -n build_number.$(BRANCH_NAME) -t exclusive -r $(PRODUCT)"
+
+# --- this target should install any tools needed to build the product
+.PHONY: build_tools
+build_tools: bump_build_number
+
+# --- this target should build the product
+# Flags for gcc 4.1, which has several warning related bugs.
+export GCC_GXX_WARNINGS = \
+    -Wall -Wno-error \
+    -Wno-packed \
+    -Wpointer-arith \
+    -Wredundant-decls \
+    -Wstrict-aliasing=3 \
+    -Wswitch-enum \
+    -Wundef \
+    -Wwrite-strings \
+    -Wextra -Wno-unused-parameter \
+# end of list
+export C_CXX_FLAGS +=-fno-strict-aliasing 
+.PHONY: default
+default:
+	mkdir -p $(TMPDIR)
+	make -C $(WORKDIR)/sw_x default
+
+loadgen_vss:
+	mkdir -p $(TMPDIR)
+	make -C $(WORKDIR)/sw_x gvm_core/internal/vssi/tests/loadgen_vss/loadgen_vss
+
+# --- this target should archive any build outputs off to a different system
+export LOCAL_SAVE_DIR=$(WORKDIR)/tests/$(PRODUCT)
+export DXSHELL_TMPDIR=$(LOCAL_SAVE_DIR)/dxshell
+export DXSHELL_TGZ=dxshell.$(BUILD_DATE).$(BUILD_VERSION).tar.gz
+export DXSHELL_LNK=dxshell.tar.gz
+
+.PHONY: dist
+dist:
+	# copy ccd file separately
+	ssh $(STORE_USER)@$(STORE_HOST) "mkdir -p $(PRODUCT_STORAGE_DIR)/ccd"
+	scp $(BUILDROOT)/release/$(PRODUCT)/gvm_core/daemons/ccd/ccd  $(STORE_USER)@$(STORE_HOST):$(PRODUCT_STORAGE_DIR)/ccd/ccd.$(BUILD_DATE).$(BUILD_VERSION).sav
+	ssh $(STORE_USER)@$(STORE_HOST) "cd $(PRODUCT_STORAGE_DIR)/ccd && rm -f ccd && ln -s ccd.$(BUILD_DATE).$(BUILD_VERSION).sav ccd"
+
+	# copy loadgen file separately
+	-rm -rf $(LOCAL_SAVE_DIR)/loadgen
+	mkdir -p $(LOCAL_SAVE_DIR)/loadgen
+	cp $(BUILDROOT)/release/$(PRODUCT)/gvm_core/internal/vssi/tests/loadgen_vss/loadgen_vss $(LOCAL_SAVE_DIR)/loadgen
+	cp  $(WORKDIR)/sw_x/gvm_core/internal/vssi/tests/loadgen_vss/loadgen_runs.sh $(LOCAL_SAVE_DIR)/loadgen
+	scp $(STORE_USER)@$(STORE_HOST):/$(FS_TESTDATADIR)/loadgen/test.jpg $(LOCAL_SAVE_DIR)/loadgen/small_test.jpg
+	scp $(STORE_USER)@$(STORE_HOST):/$(FS_TESTDATADIR)/loadgen/664562420013928011.jpg $(LOCAL_SAVE_DIR)/loadgen/med_test.jpg
+	scp $(STORE_USER)@$(STORE_HOST):/$(FS_TESTDATADIR)/loadgen/JPG_101171.jpg $(LOCAL_SAVE_DIR)/loadgen/large_test.jpg
+	cd $(LOCAL_SAVE_DIR)/loadgen && tar cvzf $(LOCAL_SAVE_DIR)/loadgen/loadgen.tar.gz *
+	ssh $(STORE_USER)@$(STORE_HOST) "mkdir -p $(PRODUCT_STORAGE_DIR)/loadgen_vss"
+	scp $(LOCAL_SAVE_DIR)/loadgen/loadgen.tar.gz $(STORE_USER)@$(STORE_HOST):$(PRODUCT_STORAGE_DIR)/loadgen_vss/loadgen_vss.$(BUILD_DATE).$(BUILD_VERSION).tar.gz
+	ssh $(STORE_USER)@$(STORE_HOST) "cd $(PRODUCT_STORAGE_DIR)/loadgen_vss && rm -f loadgen_vss.tar.gz loadgen_vss && ln -s loadgen_vss.$(BUILD_DATE).$(BUILD_VERSION).tar.gz loadgen_vss.tar.gz"
+	rm -f $(LOCAL_SAVE_DIR)/loadgen/loadgen.tar.gz
+
+	# copy dxshell file separately
+	-rm -rf $(DXSHELL_TMPDIR)
+	mkdir -p $(DXSHELL_TMPDIR)
+	cp $(BUILDROOT)/release/$(PRODUCT)/tests/dxshell/dxshell $(DXSHELL_TMPDIR)
+	cp $(BUILDROOT)/release/$(PRODUCT)/gvm_core/daemons/ccd/ccd $(DXSHELL_TMPDIR)
+	cp $(WORKDIR)/sw_x/tests/dxshell/checkStreamMultirangeResult_ref.out $(DXSHELL_TMPDIR)
+	cp $(WORKDIR)/sw_x/tests/dxshell/test.jpg $(DXSHELL_TMPDIR)
+	cp $(WORKDIR)/sw_x/tests/dxshell/test_thumb.jpg $(DXSHELL_TMPDIR)
+	cp $(WORKDIR)/sw_x/gvm_core/conf/ccd.conf.tmpl $(DXSHELL_TMPDIR)
+	cd $(DXSHELL_TMPDIR) && wget http://$(STORE_HOST):$(HTTP_PORT)/$(TESTDATADIR)/CloudDoc.docx
+	cd $(DXSHELL_TMPDIR) && wget http://$(STORE_HOST):$(HTTP_PORT)/$(TESTDATADIR)/CloudDoc.docx.jpg
+	cd $(DXSHELL_TMPDIR) && wget http://$(STORE_HOST):$(HTTP_PORT)/$(TESTDATADIR)/CloudDoc2.docx
+	cd $(DXSHELL_TMPDIR) && wget http://$(STORE_HOST):$(HTTP_PORT)/$(TESTDATADIR)/CloudDoc2.docx.jpg
+	cd $(DXSHELL_TMPDIR) && wget http://$(STORE_HOST):$(HTTP_PORT)/$(TESTDATADIR)/test_large.jpg
+	cd $(DXSHELL_TMPDIR) && wget http://$(STORE_HOST):$(HTTP_PORT)/$(TESTDATADIR)/test.bmp
+	cd $(DXSHELL_TMPDIR) && wget http://$(STORE_HOST):$(HTTP_PORT)/$(TESTDATADIR)/test.jpeg
+	cd $(DXSHELL_TMPDIR) && wget http://$(STORE_HOST):$(HTTP_PORT)/$(TESTDATADIR)/test.png
+	cd $(DXSHELL_TMPDIR) && wget http://$(STORE_HOST):$(HTTP_PORT)/$(TESTDATADIR)/test.tif
+	cd $(DXSHELL_TMPDIR) && wget http://$(STORE_HOST):$(HTTP_PORT)/$(TESTDATADIR)/test.tiff
+	cd $(DXSHELL_TMPDIR) && tar cvzf $(LOCAL_SAVE_DIR)/$(DXSHELL_TGZ) *
+	ssh $(STORE_USER)@$(STORE_HOST) "mkdir -p $(PRODUCT_STORAGE_DIR)/dxshell"
+	scp $(LOCAL_SAVE_DIR)/$(DXSHELL_TGZ) $(STORE_USER)@$(STORE_HOST):$(PRODUCT_STORAGE_DIR)/dxshell
+	ssh $(STORE_USER)@$(STORE_HOST) "cd $(PRODUCT_STORAGE_DIR)/dxshell && rm -f $(DXSHELL_LNK) && ln -s $(DXSHELL_TGZ) $(DXSHELL_LNK)"
+	rm -f $(LOCAL_SAVE_DIR)/$(DXSHELL_TGZ)
+
+.PHONY: printenv
+printenv:
+	env
+	pwd
+
+# --- this target should clean the machine before running tests
+.PHONY: clean_tests
+clean_tests:
+
+# --- this target should install anything needed to test the product
+# --- assume that the build of the product and test of the product DO NOT occur on the same machine
+.PHONY: install_tests
+install_tests:
+
+# --- this target should execute the tests (usually using the testharness)
+.PHONY: run_tests
+run_tests:
+
+.PHONY: run_full_tests
+run_full_tests:
+
+# --- this target should report the test results
+.PHONY: report_test_results
+report_test_results:
+
+# --- this target run once to setup a machine for build and/or test
+SETUP_TMP=$(TMPDIR)/setup/
+EXT_PKG_SRC=http://$(TOOL_HOST):$(HTTP_PORT)/$(TOOL_PATH)/third_party/platform_linux
+PYTHON_DIR=Python-2.6.5
+PYTHON_PKG=$(PYTHON_DIR).tgz
+
+ifeq ($(HOST_ARCH),i386)
+JDK_PKG=jdk-6u20-linux-i586-rpm.bin
+JRE_PKG=jre-6u20-linux-i586-rpm.bin
+else ifeq ($(HOST_ARCH),x86_64)
+JDK_PKG=jdk-6u20-linux-x64-rpm.bin
+JRE_PKG=jre-6u20-linux-x64-rpm.bin
+else
+$(error Unsupported hardware architecture: $(HOST_ARCH))
+endif
+
+install-python-2.6.5:
+	rm -rf $(SETUP_TMP)/python
+	mkdir -p $(SETUP_TMP)/python
+	cd $(SETUP_TMP)/python && wget --progress=dot:mega $(EXT_PKG_SRC)/$(PYTHON_PKG) && tar -xf $(PYTHON_PKG) 
+	cd $(SETUP_TMP)/python/$(PYTHON_DIR) && ./configure --prefix=/usr/local
+	make -C $(SETUP_TMP)/python/$(PYTHON_DIR)
+	sudo make -C $(SETUP_TMP)/python/$(PYTHON_DIR) install
+
+.PHONY: build_setup
+build_setup: install-python-2.6.5
+	sudo yum install php gcc-c++ openssl-devel curl-devel libpng-devel libjpeg-devel libtiff-devel
+	rm -rf $(SETUP_TMP) && mkdir -p $(SETUP_TMP)
+	cd $(SETUP_TMP) && wget --progress=dot:mega $(EXT_PKG_SRC)/$(JDK_PKG) $(EXT_PKG_SRC)/$(JRE_PKG)
+	chmod +x $(SETUP_TMP)/$(JDK_PKG) $(SETUP_TMP)/$(JRE_PKG)
+	cd $(SETUP_TMP) && sudo ./$(JDK_PKG)
+	cd $(SETUP_TMP) && sudo ./$(JRE_PKG)
+	rm -rf $(SETUP_TMP)
+	#
+
+# --- this target run once on all target machines to install packages required to run the tests
+.PHONY: test_setup
+test_setup:
+	sudo apt-get install ksh

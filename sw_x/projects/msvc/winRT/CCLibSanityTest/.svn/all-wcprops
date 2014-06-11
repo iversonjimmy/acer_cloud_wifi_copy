@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/46302/trunk/sw_x/projects/msvc/winRT/CCLibSanityTest
+END
+App.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/23851/trunk/sw_x/projects/msvc/winRT/CCLibSanityTest/App.xaml
+END
+pch.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/23851/trunk/sw_x/projects/msvc/winRT/CCLibSanityTest/pch.h
+END
+App.xaml.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repo/!svn/ver/23851/trunk/sw_x/projects/msvc/winRT/CCLibSanityTest/App.xaml.cpp
+END
+MainPage.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repo/!svn/ver/25767/trunk/sw_x/projects/msvc/winRT/CCLibSanityTest/MainPage.xaml
+END
+App1.vcxproj.filters
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repo/!svn/ver/40372/trunk/sw_x/projects/msvc/winRT/CCLibSanityTest/App1.vcxproj.filters
+END
+CCLibSanityTestMetro_TemporaryKey.pfx
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repo/!svn/ver/40370/trunk/sw_x/projects/msvc/winRT/CCLibSanityTest/CCLibSanityTestMetro_TemporaryKey.pfx
+END
+MainPage.xaml.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/46302/trunk/sw_x/projects/msvc/winRT/CCLibSanityTest/MainPage.xaml.cpp
+END
+App.xaml.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/23851/trunk/sw_x/projects/msvc/winRT/CCLibSanityTest/App.xaml.h
+END
+MainPage.xaml.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repo/!svn/ver/25334/trunk/sw_x/projects/msvc/winRT/CCLibSanityTest/MainPage.xaml.h
+END
+App1.vcxproj.user
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/40364/trunk/sw_x/projects/msvc/winRT/CCLibSanityTest/App1.vcxproj.user
+END
+Package.appxmanifest
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repo/!svn/ver/40364/trunk/sw_x/projects/msvc/winRT/CCLibSanityTest/Package.appxmanifest
+END
+App1.vcxproj
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repo/!svn/ver/40372/trunk/sw_x/projects/msvc/winRT/CCLibSanityTest/App1.vcxproj
+END
+pch.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/23851/trunk/sw_x/projects/msvc/winRT/CCLibSanityTest/pch.cpp
+END

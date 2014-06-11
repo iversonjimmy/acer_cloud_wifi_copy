@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/repo/!svn/ver/1335/trunk/sw_x/dist/igware.os
+END
+Makefile.android-x86_vm
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/749/trunk/sw_x/dist/igware.os/Makefile.android-x86_vm
+END
+android-x86.makedefs
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repo/!svn/ver/981/trunk/sw_x/dist/igware.os/android-x86.makedefs
+END
+android-x86.patch
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/1020/trunk/sw_x/dist/igware.os/android-x86.patch
+END
+Makefile.android-emulator
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/1001/trunk/sw_x/dist/igware.os/Makefile.android-emulator
+END
+android-nexusone.makerules
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/1002/trunk/sw_x/dist/igware.os/android-nexusone.makerules
+END
+android-x86.makerules
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/1335/trunk/sw_x/dist/igware.os/android-x86.makerules
+END
+Makefile.android-x86_generic
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/1075/trunk/sw_x/dist/igware.os/Makefile.android-x86_generic
+END
+android-emulator.makerules
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/1001/trunk/sw_x/dist/igware.os/android-emulator.makerules
+END
+Makefile.android-nexusone
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/1002/trunk/sw_x/dist/igware.os/Makefile.android-nexusone
+END

@@ -1,0 +1,11 @@
+#! /bin/csh -fb
+
+cd ~root/java
+
+rm -f libsetSockOpt.so
+
+if ("`/bin/uname -m`" =~ x86_64) then
+	ln -s libsetSockOpt64.* libsetSockOpt.so
+else 
+	ln -s libsetSockOpt32.* libsetSockOpt.so
+endif

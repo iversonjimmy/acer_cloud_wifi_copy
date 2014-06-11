@@ -1,0 +1,443 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/repo/!svn/ver/59690/trunk/sw_x/storageNode/src
+END
+vssts_srvr.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/55504/trunk/sw_x/storageNode/src/vssts_srvr.cpp
+END
+vss_p2p_client.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/25035/trunk/sw_x/storageNode/src/vss_p2p_client.hpp
+END
+vss_query.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repo/!svn/ver/54602/trunk/sw_x/storageNode/src/vss_query.cpp
+END
+HttpSvc_TsToHsAdapter.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/38966/trunk/sw_x/storageNode/src/HttpSvc_TsToHsAdapter.cpp
+END
+vss_object.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/39378/trunk/sw_x/storageNode/src/vss_object.cpp
+END
+rf_search.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repo/!svn/ver/59611/trunk/sw_x/storageNode/src/rf_search.hpp
+END
+generic_cache.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repo/!svn/ver/24871/trunk/sw_x/storageNode/src/generic_cache.hpp
+END
+HttpSvc_Sn_Handler_vcs_archive.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/58897/trunk/sw_x/storageNode/src/HttpSvc_Sn_Handler_vcs_archive.cpp
+END
+vss_client.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/39378/trunk/sw_x/storageNode/src/vss_client.cpp
+END
+HttpSvc_Sn_Handler_cmd.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/37338/trunk/sw_x/storageNode/src/HttpSvc_Sn_Handler_cmd.cpp
+END
+HttpSvc_Sn_Handler_minidms.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/48423/trunk/sw_x/storageNode/src/HttpSvc_Sn_Handler_minidms.hpp
+END
+vss_util.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/12400/trunk/sw_x/storageNode/src/vss_util.hpp
+END
+HttpSvc_Sn_Handler_rf.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/59690/trunk/sw_x/storageNode/src/HttpSvc_Sn_Handler_rf.cpp
+END
+executable_manager.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/56298/trunk/sw_x/storageNode/src/executable_manager.hpp
+END
+HttpSvc_Sn_MediaDsFile.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/56563/trunk/sw_x/storageNode/src/HttpSvc_Sn_MediaDsFile.cpp
+END
+fs_dataset.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/58268/trunk/sw_x/storageNode/src/fs_dataset.hpp
+END
+vss_session.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/30346/trunk/sw_x/storageNode/src/vss_session.hpp
+END
+vss_cmdproc.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/29014/trunk/sw_x/storageNode/src/vss_cmdproc.hpp
+END
+HttpSvc_Sn_Handler_mediafile.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repo/!svn/ver/57998/trunk/sw_x/storageNode/src/HttpSvc_Sn_Handler_mediafile.cpp
+END
+HttpSvc_Sn_MediaFsFile.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/38619/trunk/sw_x/storageNode/src/HttpSvc_Sn_MediaFsFile.hpp
+END
+HttpSvc_Sn_MediaFile.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/52028/trunk/sw_x/storageNode/src/HttpSvc_Sn_MediaFile.cpp
+END
+HttpSvc_Sn_MediaMetadata.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/53393/trunk/sw_x/storageNode/src/HttpSvc_Sn_MediaMetadata.cpp
+END
+vss_server.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/59556/trunk/sw_x/storageNode/src/vss_server.cpp
+END
+managed_dataset.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/56640/trunk/sw_x/storageNode/src/managed_dataset.cpp
+END
+HttpSvc_Sn_Dispatcher.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/55288/trunk/sw_x/storageNode/src/HttpSvc_Sn_Dispatcher.cpp
+END
+vss_file.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/40667/trunk/sw_x/storageNode/src/vss_file.cpp
+END
+HttpSvc_Sn_Handler_rexe.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/56307/trunk/sw_x/storageNode/src/HttpSvc_Sn_Handler_rexe.cpp
+END
+HttpSvc_Sn_ASFileSender.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/59558/trunk/sw_x/storageNode/src/HttpSvc_Sn_ASFileSender.cpp
+END
+xid_sequence.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/25037/trunk/sw_x/storageNode/src/xid_sequence.hpp
+END
+dataset.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repo/!svn/ver/56577/trunk/sw_x/storageNode/src/dataset.cpp
+END
+rf_search_manager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/54406/trunk/sw_x/storageNode/src/rf_search_manager.cpp
+END
+HttpSvc_Sn_Handler_mm.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/37999/trunk/sw_x/storageNode/src/HttpSvc_Sn_Handler_mm.hpp
+END
+strm_http.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repo/!svn/ver/53702/trunk/sw_x/storageNode/src/strm_http.hpp
+END
+vss_p2p_client.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repo/!svn/ver/39295/trunk/sw_x/storageNode/src/vss_p2p_client.cpp
+END
+rf_search.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repo/!svn/ver/59611/trunk/sw_x/storageNode/src/rf_search.cpp
+END
+HttpSvc_Sn_Handler.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/54788/trunk/sw_x/storageNode/src/HttpSvc_Sn_Handler.hpp
+END
+echoSvc.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repo/!svn/ver/59258/trunk/sw_x/storageNode/src/echoSvc.hpp
+END
+HttpSvc_Sn_MediaFileSender.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/47199/trunk/sw_x/storageNode/src/HttpSvc_Sn_MediaFileSender.hpp
+END
+vssts_srvr.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/54434/trunk/sw_x/storageNode/src/vssts_srvr.hpp
+END
+vss_query.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repo/!svn/ver/54602/trunk/sw_x/storageNode/src/vss_query.hpp
+END
+HttpSvc_TsToHsAdapter.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/37338/trunk/sw_x/storageNode/src/HttpSvc_TsToHsAdapter.hpp
+END
+vss_object.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/39378/trunk/sw_x/storageNode/src/vss_object.hpp
+END
+HttpSvc_Sn_Handler_minidms.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/48423/trunk/sw_x/storageNode/src/HttpSvc_Sn_Handler_minidms.cpp
+END
+vss_util.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/16554/trunk/sw_x/storageNode/src/vss_util.cpp
+END
+HttpSvc_Sn_Handler_vcs_archive.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/48593/trunk/sw_x/storageNode/src/HttpSvc_Sn_Handler_vcs_archive.hpp
+END
+executable_manager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/57867/trunk/sw_x/storageNode/src/executable_manager.cpp
+END
+fs_dataset.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/59370/trunk/sw_x/storageNode/src/fs_dataset.cpp
+END
+vss_client.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/27453/trunk/sw_x/storageNode/src/vss_client.hpp
+END
+vss_session.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/34035/trunk/sw_x/storageNode/src/vss_session.cpp
+END
+HttpSvc_Sn_Handler_cmd.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/37338/trunk/sw_x/storageNode/src/HttpSvc_Sn_Handler_cmd.hpp
+END
+vss_cmdproc.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/40490/trunk/sw_x/storageNode/src/vss_cmdproc.cpp
+END
+sn_features.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repo/!svn/ver/53702/trunk/sw_x/storageNode/src/sn_features.h
+END
+HttpSvc_Sn_MediaFsFile.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/48688/trunk/sw_x/storageNode/src/HttpSvc_Sn_MediaFsFile.cpp
+END
+HttpSvc_Sn_Handler_rf.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/57096/trunk/sw_x/storageNode/src/HttpSvc_Sn_Handler_rf.hpp
+END
+HttpSvc_Sn_MediaDsFile.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/38619/trunk/sw_x/storageNode/src/HttpSvc_Sn_MediaDsFile.hpp
+END
+HttpSvc_Sn_Handler_mediafile.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repo/!svn/ver/37999/trunk/sw_x/storageNode/src/HttpSvc_Sn_Handler_mediafile.hpp
+END
+HttpSvc_Sn_MediaFile.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/38619/trunk/sw_x/storageNode/src/HttpSvc_Sn_MediaFile.hpp
+END
+HttpSvc_Sn_MediaMetadata.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/53393/trunk/sw_x/storageNode/src/HttpSvc_Sn_MediaMetadata.hpp
+END
+managed_dataset.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/50608/trunk/sw_x/storageNode/src/managed_dataset.hpp
+END
+HttpSvc_Sn_Dispatcher.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/37338/trunk/sw_x/storageNode/src/HttpSvc_Sn_Dispatcher.hpp
+END
+vss_server.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repo/!svn/ver/59556/trunk/sw_x/storageNode/src/vss_server.hpp
+END
+xid_sequence.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/25037/trunk/sw_x/storageNode/src/xid_sequence.cpp
+END
+vss_file.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/40490/trunk/sw_x/storageNode/src/vss_file.hpp
+END
+HttpSvc_Sn_Handler_rexe.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/55356/trunk/sw_x/storageNode/src/HttpSvc_Sn_Handler_rexe.hpp
+END
+HttpSvc_Sn_Handler_mm.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/57998/trunk/sw_x/storageNode/src/HttpSvc_Sn_Handler_mm.cpp
+END
+strm_http.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repo/!svn/ver/57998/trunk/sw_x/storageNode/src/strm_http.cpp
+END
+HttpSvc_Sn_ASFileSender.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/57166/trunk/sw_x/storageNode/src/HttpSvc_Sn_ASFileSender.hpp
+END
+strm_dlna.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repo/!svn/ver/12356/trunk/sw_x/storageNode/src/strm_dlna.h
+END
+HttpSvc_Sn_Handler.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/54788/trunk/sw_x/storageNode/src/HttpSvc_Sn_Handler.cpp
+END
+echoSvc.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repo/!svn/ver/59258/trunk/sw_x/storageNode/src/echoSvc.cpp
+END
+dataset.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repo/!svn/ver/56577/trunk/sw_x/storageNode/src/dataset.hpp
+END
+rf_search_manager.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/53702/trunk/sw_x/storageNode/src/rf_search_manager.hpp
+END
+HttpSvc_Sn_MediaFileSender.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/53552/trunk/sw_x/storageNode/src/HttpSvc_Sn_MediaFileSender.cpp
+END

@@ -1,0 +1,75 @@
+package vplex.ans;
+
+option java_package = "igware.vplex.pb";
+option java_outer_classname = "AnsMessage";
+
+/// Value for the first byte of payload in an ANS notification message.
+/// This value should be serialized as one byte.
+enum ANS_NotificationType_t {
+    
+    /// A serialized vplex.syncagent.notifier.SyncAgentNotification follows.
+    /// See vplex_sync_agent_notifier.proto
+    ANS_TYPE_SYNC_AGENT = 2;
+    
+    /// Bytes follow (TODO: point to header file that describes format).
+    /// The message will be delivered to a vss_server (StorageNode) instance.
+    ANS_TYPE_PROXY = 3;
+    
+    /// This is an incoming connection request, encountered when a client CCD tries to connect
+    /// to a server CCD.
+    /// The message will be processed by PXD client.
+    /// See #pxd_unpack_ans() for the meaning of the bytes that follow.
+    ANS_TYPE_CLIENT_CONN = 4;
+    
+    /// @deprecated Should no longer be used.
+    /// A serialized vplex.community.notifier.CommunityServicesNotification follows.
+    /// See vplex_community_notifier.proto
+    ANS_TYPE_COMMUNITY = 5;
+    
+    /// This message will be received and processed by a ccd instance during the
+    /// proxy demon query server declaration flow, when the requested server info
+    /// does not yet exist in proxy demon server ip table database.
+    ANS_TYPE_SERVER_WAKEUP = 6;
+    
+    /// Sent by IAS when a session is invalidated.
+    /// 8-byte session handle follows (session handle = 0, means all sessions for the user).
+    /// A serialized SessionExpiredDetails follows that.
+    ANS_TYPE_SESSION_EXPIRED = 11;
+
+    /// Message sent between user's own devices. Followed by user device message payload (defined in ans_connection.cpp)
+    ANS_TYPE_USER_DEVICE_MESSAGE = 12;
+    
+    /// Sent by IAS when user pairing a device without logging in
+    /// A serialized PairingRequestDetails follows.
+    ANS_TYPE_PAIRING_REQUESTED = 13;
+
+    /// Nothing follows.
+    ANS_TYPE_KEEPALIVE = 254;
+    
+    // 255 is reserved in case we ever need more than 255 types (very unlikely).
+}
+
+enum UserDeviceMsgType_t {
+    REMOTE_SW_UPDATE_REQ = 1;
+}
+
+message UserDeviceMsg_t {
+    required fixed64                    srcDeviceId = 1;
+    required UserDeviceMsgType_t        msgType = 2;
+}
+
+message SessionExpiredDetails {
+    /// Set to true if the session was expired because the device was unlinked.
+    optional bool device_unlinked = 1 [default = false];
+}
+
+message PairingRequestAttribute {
+    required string key = 1;
+    required string value = 2;
+}
+
+message PairingRequestDetails {
+    repeated PairingRequestAttribute pairing_attributes = 1;
+    required string transaction_id = 2;
+}
+

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repo/!svn/ver/46294/trunk/sw_x/projects/xcode/PersonalCloud/ccd/SSOLoginWithCleanAppTest
+END
+main.m
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repo/!svn/ver/29291/trunk/sw_x/projects/xcode/PersonalCloud/ccd/SSOLoginWithCleanAppTest/main.m
+END
+SSOLoginWithCleanAppTest-Info.plist
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repo/!svn/ver/29291/trunk/sw_x/projects/xcode/PersonalCloud/ccd/SSOLoginWithCleanAppTest/SSOLoginWithCleanAppTest-Info.plist
+END
+AppDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repo/!svn/ver/29291/trunk/sw_x/projects/xcode/PersonalCloud/ccd/SSOLoginWithCleanAppTest/AppDelegate.h
+END
+SSOLoginWithCleanAppTest-Prefix.pch
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repo/!svn/ver/29291/trunk/sw_x/projects/xcode/PersonalCloud/ccd/SSOLoginWithCleanAppTest/SSOLoginWithCleanAppTest-Prefix.pch
+END
+AppDelegate.mm
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repo/!svn/ver/46294/trunk/sw_x/projects/xcode/PersonalCloud/ccd/SSOLoginWithCleanAppTest/AppDelegate.mm
+END
+Default.png
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repo/!svn/ver/29291/trunk/sw_x/projects/xcode/PersonalCloud/ccd/SSOLoginWithCleanAppTest/Default.png
+END

@@ -1,0 +1,923 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repo/!svn/ver/59886/trunk/sw_x/gvm_core/daemons/ccd/src_impl
+END
+nus_query.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/16688/trunk/sw_x/gvm_core/daemons/ccd/src_impl/nus_query.hpp
+END
+CloudDocMgr.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/58541/trunk/sw_x/gvm_core/daemons/ccd/src_impl/CloudDocMgr.cpp
+END
+cache.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/59768/trunk/sw_x/gvm_core/daemons/ccd/src_impl/cache.cpp
+END
+AutoLocks.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/21843/trunk/sw_x/gvm_core/daemons/ccd/src_impl/AutoLocks.cpp
+END
+vsds_query.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/51356/trunk/sw_x/gvm_core/daemons/ccd/src_impl/vsds_query.cpp
+END
+HttpSvc_Ccd_Handler_mediafile.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repo/!svn/ver/43449/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_Ccd_Handler_mediafile.hpp
+END
+McaDb.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/59572/trunk/sw_x/gvm_core/daemons/ccd/src_impl/McaDb.cpp
+END
+NotificationQ.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/15701/trunk/sw_x/gvm_core/daemons/ccd/src_impl/NotificationQ.cpp
+END
+HttpSvc_Ccd_MediaFile.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repo/!svn/ver/53793/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_Ccd_MediaFile.hpp
+END
+storage_proxy.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/46503/trunk/sw_x/gvm_core/daemons/ccd/src_impl/storage_proxy.hpp
+END
+MediaMetadataServer.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/50854/trunk/sw_x/gvm_core/daemons/ccd/src_impl/MediaMetadataServer.hpp
+END
+HttpSvc_Ccd_Handler_iotsdkapi.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repo/!svn/ver/59817/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_Ccd_Handler_iotsdkapi.hpp
+END
+system_query.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/40766/trunk/sw_x/gvm_core/daemons/ccd/src_impl/system_query.hpp
+END
+base.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/48179/trunk/sw_x/gvm_core/daemons/ccd/src_impl/base.h
+END
+HttpSvc_Utils.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/55704/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_Utils.hpp
+END
+CachePlayer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/59556/trunk/sw_x/gvm_core/daemons/ccd/src_impl/CachePlayer.cpp
+END
+MediaMetadata.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/58036/trunk/sw_x/gvm_core/daemons/ccd/src_impl/MediaMetadata.hpp
+END
+pin_manager.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/48191/trunk/sw_x/gvm_core/daemons/ccd/src_impl/pin_manager.hpp
+END
+ccd_util.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/58757/trunk/sw_x/gvm_core/daemons/ccd/src_impl/ccd_util.cpp
+END
+SyncUp.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/35523/trunk/sw_x/gvm_core/daemons/ccd/src_impl/SyncUp.hpp
+END
+MsaDb.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/59271/trunk/sw_x/gvm_core/daemons/ccd/src_impl/MsaDb.cpp
+END
+LanDeviceInfoCache.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repo/!svn/ver/52092/trunk/sw_x/gvm_core/daemons/ccd/src_impl/LanDeviceInfoCache.cpp
+END
+file_url_operation_ts.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repo/!svn/ver/59705/trunk/sw_x/gvm_core/daemons/ccd/src_impl/file_url_operation_ts.hpp
+END
+HttpSvc_Ccd_Handler_rf.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repo/!svn/ver/57096/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_Ccd_Handler_rf.hpp
+END
+RouteManager.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/24292/trunk/sw_x/gvm_core/daemons/ccd/src_impl/RouteManager.hpp
+END
+HttpService.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/47964/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpService.cpp
+END
+HttpSvc_Ccd_SocketAgent.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repo/!svn/ver/36090/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_Ccd_SocketAgent.hpp
+END
+config.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/59817/trunk/sw_x/gvm_core/daemons/ccd/src_impl/config.cpp
+END
+StatManager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/59277/trunk/sw_x/gvm_core/daemons/ccd/src_impl/StatManager.cpp
+END
+SyncDown.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/59434/trunk/sw_x/gvm_core/daemons/ccd/src_impl/SyncDown.hpp
+END
+HttpSvc_Ccd_MediaFileSender.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repo/!svn/ver/53793/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_Ccd_MediaFileSender.hpp
+END
+AsyncDatasetOps.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repo/!svn/ver/29765/trunk/sw_x/gvm_core/daemons/ccd/src_impl/AsyncDatasetOps.hpp
+END
+HttpSvc_Ccd_Handler_clouddoc.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repo/!svn/ver/56200/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_Ccd_Handler_clouddoc.cpp
+END
+JsonHelper.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/35443/trunk/sw_x/gvm_core/daemons/ccd/src_impl/JsonHelper.hpp
+END
+HttpSvc_Ccd_Handler_minidms.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repo/!svn/ver/59828/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_Ccd_Handler_minidms.cpp
+END
+HttpSvc_AtomicCounter.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repo/!svn/ver/36090/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_AtomicCounter.cpp
+END
+DeviceStateCache.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/58757/trunk/sw_x/gvm_core/daemons/ccd/src_impl/DeviceStateCache.hpp
+END
+HttpSvc_Ccd_Handler_mm.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repo/!svn/ver/59886/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_Ccd_Handler_mm.cpp
+END
+s3_proxy.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/54851/trunk/sw_x/gvm_core/daemons/ccd/src_impl/s3_proxy.hpp
+END
+HttpSvc_Ccd_MediaFsFile.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repo/!svn/ver/53793/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_Ccd_MediaFsFile.cpp
+END
+EventManagerPb.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repo/!svn/ver/38871/trunk/sw_x/gvm_core/daemons/ccd/src_impl/EventManagerPb.cpp
+END
+HttpSvc_HsToHttpAdapter.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repo/!svn/ver/43449/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_HsToHttpAdapter.hpp
+END
+HttpSvc_Ccd_Handler_Helper.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repo/!svn/ver/59482/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_Ccd_Handler_Helper.cpp
+END
+sw_update.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/57443/trunk/sw_x/gvm_core/daemons/ccd/src_impl/sw_update.hpp
+END
+CloudDocMgr.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/51535/trunk/sw_x/gvm_core/daemons/ccd/src_impl/CloudDocMgr.hpp
+END
+AutoLocks.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/52277/trunk/sw_x/gvm_core/daemons/ccd/src_impl/AutoLocks.hpp
+END
+vsds_query.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/51356/trunk/sw_x/gvm_core/daemons/ccd/src_impl/vsds_query.hpp
+END
+McaDb.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/58478/trunk/sw_x/gvm_core/daemons/ccd/src_impl/McaDb.hpp
+END
+vcs_utils.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/51805/trunk/sw_x/gvm_core/daemons/ccd/src_impl/vcs_utils.cpp
+END
+NotificationQ.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/6005/trunk/sw_x/gvm_core/daemons/ccd/src_impl/NotificationQ.hpp
+END
+ccd_storage.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/59277/trunk/sw_x/gvm_core/daemons/ccd/src_impl/ccd_storage.cpp
+END
+SyncUp_private.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repo/!svn/ver/54936/trunk/sw_x/gvm_core/daemons/ccd/src_impl/SyncUp_private.hpp
+END
+HttpSvc_Ccd_AsyncAgent.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repo/!svn/ver/57141/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_Ccd_AsyncAgent.cpp
+END
+ccd_build_info.c
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/32929/trunk/sw_x/gvm_core/daemons/ccd/src_impl/ccd_build_info.c
+END
+picstream.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/59794/trunk/sw_x/gvm_core/daemons/ccd/src_impl/picstream.cpp
+END
+ccd_build_info.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/32929/trunk/sw_x/gvm_core/daemons/ccd/src_impl/ccd_build_info.h
+END
+ccd_util.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/58757/trunk/sw_x/gvm_core/daemons/ccd/src_impl/ccd_util.hpp
+END
+MsaDb.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/58299/trunk/sw_x/gvm_core/daemons/ccd/src_impl/MsaDb.hpp
+END
+LanDeviceInfoCache.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repo/!svn/ver/23752/trunk/sw_x/gvm_core/daemons/ccd/src_impl/LanDeviceInfoCache.hpp
+END
+SyncDown_private.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/59798/trunk/sw_x/gvm_core/daemons/ccd/src_impl/SyncDown_private.hpp
+END
+HttpService.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/47985/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpService.hpp
+END
+ccd_core_priv.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/59403/trunk/sw_x/gvm_core/daemons/ccd/src_impl/ccd_core_priv.hpp
+END
+HttpSvc_Ccd_Dispatcher.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repo/!svn/ver/59817/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_Ccd_Dispatcher.cpp
+END
+StatManager.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/43755/trunk/sw_x/gvm_core/daemons/ccd/src_impl/StatManager.hpp
+END
+HttpSvc_Ccd_Handler_clouddoc.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repo/!svn/ver/43449/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_Ccd_Handler_clouddoc.hpp
+END
+HttpSvc_Ccd_Agent.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repo/!svn/ver/43449/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_Ccd_Agent.cpp
+END
+HttpSvc_Ccd_Handler_cmd.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repo/!svn/ver/43449/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_Ccd_Handler_cmd.cpp
+END
+HttpSvc_Ccd_Handler_minidms.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repo/!svn/ver/47299/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_Ccd_Handler_minidms.hpp
+END
+SharedFiles.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/59230/trunk/sw_x/gvm_core/daemons/ccd/src_impl/SharedFiles.cpp
+END
+HttpSvc_AtomicCounter.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repo/!svn/ver/36090/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_AtomicCounter.hpp
+END
+ccdiquery.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/35942/trunk/sw_x/gvm_core/daemons/ccd/src_impl/ccdiquery.h
+END
+HttpSvc_Ccd_Handler_mm.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repo/!svn/ver/58395/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_Ccd_Handler_mm.hpp
+END
+HttpSvc_HsToTsAdapter.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repo/!svn/ver/54819/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_HsToTsAdapter.cpp
+END
+CloudDocMgr_private.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/53883/trunk/sw_x/gvm_core/daemons/ccd/src_impl/CloudDocMgr_private.hpp
+END
+HttpSvc_Ccd_ListenAgent.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repo/!svn/ver/44586/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_Ccd_ListenAgent.cpp
+END
+HttpSvc_Ccd_MediaFsFile.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repo/!svn/ver/53793/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_Ccd_MediaFsFile.hpp
+END
+EventManagerPb.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repo/!svn/ver/16471/trunk/sw_x/gvm_core/daemons/ccd/src_impl/EventManagerPb.hpp
+END
+HttpSvc_Ccd_Handler_Helper.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repo/!svn/ver/58395/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_Ccd_Handler_Helper.hpp
+END
+query.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/52641/trunk/sw_x/gvm_core/daemons/ccd/src_impl/query.cpp
+END
+virtual_device.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repo/!svn/ver/59277/trunk/sw_x/gvm_core/daemons/ccd/src_impl/virtual_device.cpp
+END
+HttpSvc_Ccd_Handler_picstream.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repo/!svn/ver/59881/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_Ccd_Handler_picstream.cpp
+END
+config.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/59100/trunk/sw_x/gvm_core/daemons/ccd/src_impl/config.h
+END
+vcs_utils.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/51848/trunk/sw_x/gvm_core/daemons/ccd/src_impl/vcs_utils.hpp
+END
+netman.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/52584/trunk/sw_x/gvm_core/daemons/ccd/src_impl/netman.cpp
+END
+ccd_storage.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/59277/trunk/sw_x/gvm_core/daemons/ccd/src_impl/ccd_storage.hpp
+END
+HttpSvc_Ccd_AsyncAgent.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repo/!svn/ver/57141/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_Ccd_AsyncAgent.hpp
+END
+vcs_archive_access_ccd.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repo/!svn/ver/57132/trunk/sw_x/gvm_core/daemons/ccd/src_impl/vcs_archive_access_ccd.cpp
+END
+HttpSvc_Ccd_Handler_ds.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repo/!svn/ver/43449/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_Ccd_Handler_ds.cpp
+END
+AsyncUploadQueue.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/58541/trunk/sw_x/gvm_core/daemons/ccd/src_impl/AsyncUploadQueue.cpp
+END
+HttpSvc_Ccd_Server.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repo/!svn/ver/54819/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_Ccd_Server.cpp
+END
+picstream.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/51355/trunk/sw_x/gvm_core/daemons/ccd/src_impl/picstream.hpp
+END
+vcs_proxy.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/58154/trunk/sw_x/gvm_core/daemons/ccd/src_impl/vcs_proxy.cpp
+END
+SyncFeatureMgr.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repo/!svn/ver/59678/trunk/sw_x/gvm_core/daemons/ccd/src_impl/SyncFeatureMgr.cpp
+END
+ans_connection.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repo/!svn/ver/59277/trunk/sw_x/gvm_core/daemons/ccd/src_impl/ans_connection.cpp
+END
+stream_transaction.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repo/!svn/ver/54848/trunk/sw_x/gvm_core/daemons/ccd/src_impl/stream_transaction.cpp
+END
+ias_query.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/32711/trunk/sw_x/gvm_core/daemons/ccd/src_impl/ias_query.cpp
+END
+ccd_core.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/59372/trunk/sw_x/gvm_core/daemons/ccd/src_impl/ccd_core.cpp
+END
+StatManager_private.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/44487/trunk/sw_x/gvm_core/daemons/ccd/src_impl/StatManager_private.hpp
+END
+HttpSvc_Ccd_Handler.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/43449/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_Ccd_Handler.hpp
+END
+McaThumbMigrate.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repo/!svn/ver/59679/trunk/sw_x/gvm_core/daemons/ccd/src_impl/McaThumbMigrate.cpp
+END
+HttpSvc_HsToVcsTranslator.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repo/!svn/ver/59107/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_HsToVcsTranslator.cpp
+END
+HttpSvc_Ccd_Dispatcher.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repo/!svn/ver/36090/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_Ccd_Dispatcher.hpp
+END
+HttpSvc_Ccd_Handler_share.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repo/!svn/ver/58379/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_Ccd_Handler_share.cpp
+END
+ccdiimpl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/59559/trunk/sw_x/gvm_core/daemons/ccd/src_impl/ccdiimpl.cpp
+END
+HttpSvc_Ccd_Handler_rexe.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repo/!svn/ver/55288/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_Ccd_Handler_rexe.cpp
+END
+HttpSvc_Ccd_Agent.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repo/!svn/ver/36090/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_Ccd_Agent.hpp
+END
+HttpSvc_Ccd_Handler_cmd.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repo/!svn/ver/43449/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_Ccd_Handler_cmd.hpp
+END
+nus_query.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/32711/trunk/sw_x/gvm_core/daemons/ccd/src_impl/nus_query.cpp
+END
+SharedFiles.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/57751/trunk/sw_x/gvm_core/daemons/ccd/src_impl/SharedFiles.hpp
+END
+HttpSvc_Ccd_Handler_mediafile.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repo/!svn/ver/58742/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_Ccd_Handler_mediafile.cpp
+END
+HttpSvc_Ccd_MediaFile.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repo/!svn/ver/53793/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_Ccd_MediaFile.cpp
+END
+HttpSvc_HsToTsAdapter.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repo/!svn/ver/53543/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_HsToTsAdapter.hpp
+END
+HttpSvc_Ccd_ListenAgent.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repo/!svn/ver/36090/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_Ccd_ListenAgent.hpp
+END
+MediaMetadataServer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/59111/trunk/sw_x/gvm_core/daemons/ccd/src_impl/MediaMetadataServer.cpp
+END
+HttpSvc_Ccd_Handler_iotsdkapi.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repo/!svn/ver/59817/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_Ccd_Handler_iotsdkapi.cpp
+END
+system_query.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/41795/trunk/sw_x/gvm_core/daemons/ccd/src_impl/system_query.cpp
+END
+virtual_device.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repo/!svn/ver/52641/trunk/sw_x/gvm_core/daemons/ccd/src_impl/virtual_device.hpp
+END
+HttpSvc_Utils.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/55704/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_Utils.cpp
+END
+HttpSvc_Ccd_Handler_picstream.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repo/!svn/ver/54956/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_Ccd_Handler_picstream.hpp
+END
+MediaMetadata.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/58478/trunk/sw_x/gvm_core/daemons/ccd/src_impl/MediaMetadata.cpp
+END
+pin_manager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/57867/trunk/sw_x/gvm_core/daemons/ccd/src_impl/pin_manager.cpp
+END
+SyncUp.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/58541/trunk/sw_x/gvm_core/daemons/ccd/src_impl/SyncUp.cpp
+END
+main.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repo/!svn/ver/48527/trunk/sw_x/gvm_core/daemons/ccd/src_impl/main.cpp
+END
+netman.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/41795/trunk/sw_x/gvm_core/daemons/ccd/src_impl/netman.hpp
+END
+file_url_operation_ts.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repo/!svn/ver/59705/trunk/sw_x/gvm_core/daemons/ccd/src_impl/file_url_operation_ts.cpp
+END
+HttpSvc_Ccd_Handler_rf.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repo/!svn/ver/57096/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_Ccd_Handler_rf.cpp
+END
+ccdiquery.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/44717/trunk/sw_x/gvm_core/daemons/ccd/src_impl/ccdiquery.cpp
+END
+MediaDbUtil.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/41421/trunk/sw_x/gvm_core/daemons/ccd/src_impl/MediaDbUtil.hpp
+END
+RouteManager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/!svn/ver/58259/trunk/sw_x/gvm_core/daemons/ccd/src_impl/RouteManager.cpp
+END
+HttpSvc_Ccd_SocketAgent.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repo/!svn/ver/43449/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_Ccd_SocketAgent.cpp
+END
+vcs_archive_access_ccd.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repo/!svn/ver/57132/trunk/sw_x/gvm_core/daemons/ccd/src_impl/vcs_archive_access_ccd.hpp
+END
+AsyncUploadQueue.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/36090/trunk/sw_x/gvm_core/daemons/ccd/src_impl/AsyncUploadQueue.hpp
+END
+HttpSvc_Ccd_Handler_ds.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repo/!svn/ver/43449/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_Ccd_Handler_ds.hpp
+END
+HttpSvc_Ccd_Server.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repo/!svn/ver/48015/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_Ccd_Server.hpp
+END
+vcs_proxy.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/58154/trunk/sw_x/gvm_core/daemons/ccd/src_impl/vcs_proxy.hpp
+END
+SyncFeatureMgr.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repo/!svn/ver/59557/trunk/sw_x/gvm_core/daemons/ccd/src_impl/SyncFeatureMgr.hpp
+END
+SyncDown.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/59850/trunk/sw_x/gvm_core/daemons/ccd/src_impl/SyncDown.cpp
+END
+HttpSvc_Ccd_MediaFileSender.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repo/!svn/ver/53793/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_Ccd_MediaFileSender.cpp
+END
+ans_connection.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repo/!svn/ver/26246/trunk/sw_x/gvm_core/daemons/ccd/src_impl/ans_connection.hpp
+END
+AsyncDatasetOps.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repo/!svn/ver/51535/trunk/sw_x/gvm_core/daemons/ccd/src_impl/AsyncDatasetOps.cpp
+END
+stream_transaction.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repo/!svn/ver/54870/trunk/sw_x/gvm_core/daemons/ccd/src_impl/stream_transaction.hpp
+END
+ias_query.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/16688/trunk/sw_x/gvm_core/daemons/ccd/src_impl/ias_query.hpp
+END
+cache.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/59556/trunk/sw_x/gvm_core/daemons/ccd/src_impl/cache.h
+END
+JsonHelper.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/!svn/ver/35443/trunk/sw_x/gvm_core/daemons/ccd/src_impl/JsonHelper.cpp
+END
+query.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/52641/trunk/sw_x/gvm_core/daemons/ccd/src_impl/query.h
+END
+McaThumbMigrate.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repo/!svn/ver/41468/trunk/sw_x/gvm_core/daemons/ccd/src_impl/McaThumbMigrate.hpp
+END
+HttpSvc_HsToVcsTranslator.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repo/!svn/ver/59107/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_HsToVcsTranslator.hpp
+END
+DeviceStateCache.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/58757/trunk/sw_x/gvm_core/daemons/ccd/src_impl/DeviceStateCache.cpp
+END
+s3_proxy.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/56461/trunk/sw_x/gvm_core/daemons/ccd/src_impl/s3_proxy.cpp
+END
+HttpSvc_Ccd_Handler_share.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repo/!svn/ver/58379/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_Ccd_Handler_share.hpp
+END
+HttpSvc_Ccd_Handler_rexe.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repo/!svn/ver/55274/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_Ccd_Handler_rexe.hpp
+END
+HttpSvc_HsToHttpAdapter.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repo/!svn/ver/55704/trunk/sw_x/gvm_core/daemons/ccd/src_impl/HttpSvc_HsToHttpAdapter.cpp
+END
+sw_update.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/58741/trunk/sw_x/gvm_core/daemons/ccd/src_impl/sw_update.cpp
+END

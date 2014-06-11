@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/utilities
+END
+utdebug.c
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/utilities/utdebug.c
+END
+utxface.c
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/utilities/utxface.c
+END
+uteval.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/utilities/uteval.c
+END
+utlock.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/utilities/utlock.c
+END
+utmath.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/utilities/utmath.c
+END
+utalloc.c
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/utilities/utalloc.c
+END
+utmisc.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/utilities/utmisc.c
+END
+utglobal.c
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/utilities/utglobal.c
+END
+utmutex.c
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/utilities/utmutex.c
+END
+utdelete.c
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/utilities/utdelete.c
+END
+utinit.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/utilities/utinit.c
+END
+utcache.c
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/utilities/utcache.c
+END
+uttrack.c
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/utilities/uttrack.c
+END
+utobject.c
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/utilities/utobject.c
+END
+utclib.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/utilities/utclib.c
+END
+utcopy.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/utilities/utcopy.c
+END
+utresrc.c
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/utilities/utresrc.c
+END
+utids.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/utilities/utids.c
+END
+utstate.c
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/utilities/utstate.c
+END

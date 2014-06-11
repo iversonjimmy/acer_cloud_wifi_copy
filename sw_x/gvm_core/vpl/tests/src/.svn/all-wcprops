@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/repo/!svn/ver/53999/trunk/sw_x/gvm_core/vpl/tests/src
+END
+vplTest_platform_compliance.c
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repo/!svn/ver/14967/trunk/sw_x/gvm_core/vpl/tests/src/vplTest_platform_compliance.c
+END
+vplTest_time.c
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/1561/trunk/sw_x/gvm_core/vpl/tests/src/vplTest_time.c
+END
+vplTest.c
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repo/!svn/ver/46945/trunk/sw_x/gvm_core/vpl/tests/src/vplTest.c
+END
+vplTest_plat.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/24389/trunk/sw_x/gvm_core/vpl/tests/src/vplTest_plat.c
+END
+vplTest_dynamic.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/14967/trunk/sw_x/gvm_core/vpl/tests/src/vplTest_dynamic.c
+END
+vplTest_srwlock.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/13579/trunk/sw_x/gvm_core/vpl/tests/src/vplTest_srwlock.c
+END
+vplTest_conv.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/!svn/ver/53999/trunk/sw_x/gvm_core/vpl/tests/src/vplTest_conv.c
+END
+vplTest_shm.c
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/53678/trunk/sw_x/gvm_core/vpl/tests/src/vplTest_shm.c
+END
+vplTest_thread.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/45717/trunk/sw_x/gvm_core/vpl/tests/src/vplTest_thread.c
+END
+vplTest_common.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/47789/trunk/sw_x/gvm_core/vpl/tests/src/vplTest_common.c
+END
+vplTest_fs.c
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repo/!svn/ver/43707/trunk/sw_x/gvm_core/vpl/tests/src/vplTest_fs.c
+END
+vplTest_socket.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repo/!svn/ver/51205/trunk/sw_x/gvm_core/vpl/tests/src/vplTest_socket.c
+END
+vplTest_network.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repo/!svn/ver/32478/trunk/sw_x/gvm_core/vpl/tests/src/vplTest_network.c
+END

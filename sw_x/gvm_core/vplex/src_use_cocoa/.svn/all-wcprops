@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repo/!svn/ver/56232/trunk/sw_x/gvm_core/vplex/src_use_cocoa
+END
+NSCallbackInputStream.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repo/!svn/ver/56232/trunk/sw_x/gvm_core/vplex/src_use_cocoa/NSCallbackInputStream.h
+END
+NSCallbackInputStream.mm
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/56232/trunk/sw_x/gvm_core/vplex/src_use_cocoa/NSCallbackInputStream.mm
+END
+vplex_shared_object.mm
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repo/!svn/ver/45811/trunk/sw_x/gvm_core/vplex/src_use_cocoa/vplex_shared_object.mm
+END
+vplex_http2.mm
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/!svn/ver/56232/trunk/sw_x/gvm_core/vplex/src_use_cocoa/vplex_http2.mm
+END

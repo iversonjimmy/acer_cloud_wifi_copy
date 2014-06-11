@@ -1,0 +1,10 @@
+#! /bin/tcsh -f
+
+setenv ans_host    ans1-c100.lab1.routefree.com
+setenv device_host ans2-c100.lab1.routefree.com
+setenv target_host ans3-c100.lab1.routefree.com
+setenv udp_host    ans4-c100.lab1.routefree.com
+
+source ./set_classpath_csh
+
+java -classpath "$classpath" com.broadon.ans.test.AnsDeviceTest

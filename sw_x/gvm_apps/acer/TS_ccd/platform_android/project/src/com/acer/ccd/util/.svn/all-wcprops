@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repo/!svn/ver/50079/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/util
+END
+Defs.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/util/Defs.java
+END
+TimeFormatter.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/util/TimeFormatter.java
+END
+Utility.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repo/!svn/ver/15133/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/util/Utility.java
+END
+CcdSdkDefines.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repo/!svn/ver/15133/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/util/CcdSdkDefines.java
+END
+Network.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repo/!svn/ver/13477/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/util/Network.java
+END
+InternalDefines.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repo/!svn/ver/43011/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/util/InternalDefines.java
+END
+FileInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repo/!svn/ver/15024/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/util/FileInfo.java
+END
+Defines.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repo/!svn/ver/43011/trunk/sw_x/gvm_apps/acer/TS_ccd/platform_android/project/src/com/acer/ccd/util/Defines.java
+END

@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_panel_and_service/project/src/com/igware/example_panel/ui
+END
+StartUpActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_panel_and_service/project/src/com/igware/example_panel/ui/StartUpActivity.java
+END
+StatusActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_panel_and_service/project/src/com/igware/example_panel/ui/StatusActivity.java
+END
+CcdActivityDelegate.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_panel_and_service/project/src/com/igware/example_panel/ui/CcdActivityDelegate.java
+END
+MainActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_panel_and_service/project/src/com/igware/example_panel/ui/MainActivity.java
+END
+CcdListActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_panel_and_service/project/src/com/igware/example_panel/ui/CcdListActivity.java
+END
+RenameDeviceActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_panel_and_service/project/src/com/igware/example_panel/ui/RenameDeviceActivity.java
+END
+CcdPreferenceActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_panel_and_service/project/src/com/igware/example_panel/ui/CcdPreferenceActivity.java
+END
+LoginActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_panel_and_service/project/src/com/igware/example_panel/ui/LoginActivity.java
+END
+CcdActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_panel_and_service/project/src/com/igware/example_panel/ui/CcdActivity.java
+END
+SyncFoldersActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_panel_and_service/project/src/com/igware/example_panel/ui/SyncFoldersActivity.java
+END
+LinkDeviceActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_panel_and_service/project/src/com/igware/example_panel/ui/LinkDeviceActivity.java
+END
+CreateAccountActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_panel_and_service/project/src/com/igware/example_panel/ui/CreateAccountActivity.java
+END
+LogoActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_panel_and_service/project/src/com/igware/example_panel/ui/LogoActivity.java
+END
+SettingsActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/repo/!svn/ver/12095/trunk/sw_x/gvm_apps/android_cc_sdk/example_panel_and_service/project/src/com/igware/example_panel/ui/SettingsActivity.java
+END

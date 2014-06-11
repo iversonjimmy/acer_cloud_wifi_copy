@@ -1,0 +1,8 @@
+#! /bin/csh -fb
+
+cd java
+
+foreach i (1 2 3)
+    echo -n "log $i"":  "
+    egrep "Checking|Opened" multi.out.$i |& grep -v 'No such file' | tail -1
+end

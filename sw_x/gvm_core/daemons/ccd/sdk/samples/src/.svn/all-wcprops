@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repo/!svn/ver/31830/trunk/sw_x/gvm_core/daemons/ccd/sdk/samples/src
+END
+vssi.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/24119/trunk/sw_x/gvm_core/daemons/ccd/sdk/samples/src/vssi.cpp
+END
+logout.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/!svn/ver/10667/trunk/sw_x/gvm_core/daemons/ccd/sdk/samples/src/logout.cpp
+END
+setup_sync_agent.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repo/!svn/ver/31830/trunk/sw_x/gvm_core/daemons/ccd/sdk/samples/src/setup_sync_agent.cpp
+END

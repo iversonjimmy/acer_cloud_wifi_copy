@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repo/!svn/ver/56711/trunk/sw_x/gvm_core/vplex/platform_winRT/src
+END
+vplex__http2.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/56711/trunk/sw_x/gvm_core/vplex/platform_winRT/src/vplex__http2.cpp
+END
+vplex__file_winrt.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repo/!svn/ver/49138/trunk/sw_x/gvm_core/vplex/platform_winRT/src/vplex__file_winrt.cpp
+END
+vplex__shared_object.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repo/!svn/ver/31242/trunk/sw_x/gvm_core/vplex/platform_winRT/src/vplex__shared_object.cpp
+END

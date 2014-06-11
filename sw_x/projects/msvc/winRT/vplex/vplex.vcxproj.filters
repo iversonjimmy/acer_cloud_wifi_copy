@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{9adb4871-8338-4225-bab2-be1871352368}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\protobuf">
+      <UniqueIdentifier>{40609f61-4ba0-454b-b92d-dd29b7580e58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libvplex">
+      <UniqueIdentifier>{ddbb62f7-dbb1-424f-8ae5-3bffc3c437fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\protoxml">
+      <UniqueIdentifier>{9a1d02fb-9989-44db-a4fc-d9c6744765c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\vpl_src">
+      <UniqueIdentifier>{24b9b659-3aa8-4df0-9b2d-12819fe484ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\vplex_proto">
+      <UniqueIdentifier>{e401f396-bb1e-46eb-808d-7eaeb3d003be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\vplex_src">
+      <UniqueIdentifier>{a21f620f-d24f-4d76-bbb0-f94da870fc18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\vpl_winRT_src">
+      <UniqueIdentifier>{32bfad23-1fa6-4eeb-ba20-49b9196d93f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\vplex_winRT_src">
+      <UniqueIdentifier>{0190f589-3fc4-4997-8109-3fc731dfde08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\vpl_win32_src">
+      <UniqueIdentifier>{d7039d58-36f5-4493-8119-1a1bbf2bba40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\vplex_win32_src">
+      <UniqueIdentifier>{3790b63d-f7b1-4845-bddc-b81652c03e82}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\gvm_core\external\protobuflib\google\protobuf\descriptor.cc">
+      <Filter>Source Files\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\external\protobuflib\google\protobuf\descriptor.pb.cc">
+      <Filter>Source Files\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\external\protobuflib\google\protobuf\descriptor_database.cc">
+      <Filter>Source Files\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\external\protobuflib\google\protobuf\dynamic_message.cc">
+      <Filter>Source Files\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\external\protobuflib\google\protobuf\extension_set.cc">
+      <Filter>Source Files\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\external\protobuflib\google\protobuf\extension_set_heavy.cc">
+      <Filter>Source Files\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\external\protobuflib\google\protobuf\generated_message_reflection.cc">
+      <Filter>Source Files\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\external\protobuflib\google\protobuf\generated_message_util.cc">
+      <Filter>Source Files\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\external\protobuflib\google\protobuf\message.cc">
+      <Filter>Source Files\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\external\protobuflib\google\protobuf\message_lite.cc">
+      <Filter>Source Files\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\external\protobuflib\google\protobuf\reflection_ops.cc">
+      <Filter>Source Files\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\external\protobuflib\google\protobuf\repeated_field.cc">
+      <Filter>Source Files\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\external\protobuflib\google\protobuf\service.cc">
+      <Filter>Source Files\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\external\protobuflib\google\protobuf\text_format.cc">
+      <Filter>Source Files\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\external\protobuflib\google\protobuf\unknown_field_set.cc">
+      <Filter>Source Files\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\external\protobuflib\google\protobuf\wire_format.cc">
+      <Filter>Source Files\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\external\protobuflib\google\protobuf\wire_format_lite.cc">
+      <Filter>Source Files\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\external\protobuflib\google\protobuf\io\tokenizer.cc">
+      <Filter>Source Files\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\external\protobuflib\google\protobuf\io\zero_copy_stream.cc">
+      <Filter>Source Files\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\external\protobuflib\google\protobuf\io\zero_copy_stream_impl.cc">
+      <Filter>Source Files\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\external\protobuflib\google\protobuf\io\zero_copy_stream_impl_lite.cc">
+      <Filter>Source Files\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\external\protobuflib\google\protobuf\io\coded_stream.cc">
+      <Filter>Source Files\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\external\protobuflib\google\protobuf\io\gzip_stream.cc">
+      <Filter>Source Files\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\external\protobuflib\google\protobuf\io\printer.cc">
+      <Filter>Source Files\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\external\protobuflib\google\protobuf\stubs\strutil.cc">
+      <Filter>Source Files\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\external\protobuflib\google\protobuf\stubs\substitute.cc">
+      <Filter>Source Files\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\external\protobuflib\google\protobuf\stubs\common.cc">
+      <Filter>Source Files\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\external\protobuflib\google\protobuf\stubs\once.cc">
+      <Filter>Source Files\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\external\protobuflib\google\protobuf\stubs\structurally_valid.cc">
+      <Filter>Source Files\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\src\vplex_http_util.cpp">
+      <Filter>Source Files\libvplex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\src\vplex_ias.cpp">
+      <Filter>Source Files\libvplex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\src\vplex_nus.cpp">
+      <Filter>Source Files\libvplex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\src\vplex_vs_directory.cpp">
+      <Filter>Source Files\libvplex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\src\vplex_vs_directory_utils.cpp">
+      <Filter>Source Files\libvplex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\proto\vplex_ias_service_types.pb.cc">
+      <Filter>Source Files\vplex_proto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\proto\vplex_ias_service_types-xml.pb.cc">
+      <Filter>Source Files\vplex_proto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\proto\vplex_nus_service_types.pb.cc">
+      <Filter>Source Files\vplex_proto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\proto\vplex_nus_service_types-xml.pb.cc">
+      <Filter>Source Files\vplex_proto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\proto\vplex_vs_directory_service_types.pb.cc">
+      <Filter>Source Files\vplex_proto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\proto\vplex_vs_directory_service_types-xml.pb.cc">
+      <Filter>Source Files\vplex_proto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\proto\vplex_ans_message.pb.cc">
+      <Filter>Source Files\vplex_proto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\proto\vplex_common_types.pb.cc">
+      <Filter>Source Files\vplex_proto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\proto\vplex_common_types-xml.pb.cc">
+      <Filter>Source Files\vplex_proto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\proto\vplex_community_notifier.pb.cc">
+      <Filter>Source Files\vplex_proto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\proto\vplex_community_service_types.pb.cc">
+      <Filter>Source Files\vplex_proto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\proto\vplex_community_service_types-xml.pb.cc">
+      <Filter>Source Files\vplex_proto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\proto\vplex_community_types.pb.cc">
+      <Filter>Source Files\vplex_proto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\proto\vplex_community_types-xml.pb.cc">
+      <Filter>Source Files\vplex_proto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\src\vplex_list.c">
+      <Filter>Source Files\vplex_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\src\vplex_rwlock.c">
+      <Filter>Source Files\vplex_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\src\vplex_queue.c">
+      <Filter>Source Files\vplex_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\src\vplex_mem_heap.c">
+      <Filter>Source Files\vplex_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\src\vplex_safe_serialization.c">
+      <Filter>Source Files\vplex_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\src\vplex_serialization.c">
+      <Filter>Source Files\vplex_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\src\vplex_soap.cpp">
+      <Filter>Source Files\vplex_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\src\vplex_soap_util.c">
+      <Filter>Source Files\vplex_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\src\vplex_socket.c">
+      <Filter>Source Files\vplex_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\src\vplex_strings.c">
+      <Filter>Source Files\vplex_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\src\vplex_strto.c">
+      <Filter>Source Files\vplex_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\src\vplex_time.c">
+      <Filter>Source Files\vplex_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\src\vplex_trace.c">
+      <Filter>Source Files\vplex_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\src\vplex_xml_reader.c">
+      <Filter>Source Files\vplex_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\src\vplex_xml_writer.c">
+      <Filter>Source Files\vplex_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vpl\src\vpl_debug.c">
+      <Filter>Source Files\vpl_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vpl\src\vpl_version.c">
+      <Filter>Source Files\vpl_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vpl\src\vplu_strnlen.c">
+      <Filter>Source Files\vpl_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vpl\platform_win32\src\vpl__cond.c">
+      <Filter>Source Files\vpl_win32_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vpl\platform_win32\src\vpl__error.c">
+      <Filter>Source Files\vpl_win32_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vpl\platform_win32\src\vpl__lazy_init_condvar.cpp">
+      <Filter>Source Files\vpl_win32_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vpl\platform_win32\src\vpl__lazy_init_mutex.cpp">
+      <Filter>Source Files\vpl_win32_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vpl\platform_win32\src\vpl__mutex.c">
+      <Filter>Source Files\vpl_win32_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vpl\platform_win32\src\vpl__sem.c">
+      <Filter>Source Files\vpl_win32_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vpl\platform_win32\src\vpl__srwlock.cpp">
+      <Filter>Source Files\vpl_win32_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vpl\platform_win32\src\vpl__string.c">
+      <Filter>Source Files\vpl_win32_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vpl\platform_winRT\src\vpl__th.cpp">
+      <Filter>Source Files\vpl_winRT_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vpl\platform_win32\src\vpl__thread_once.c">
+      <Filter>Source Files\vpl_win32_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vpl\platform_win32\src\vpl__time.c">
+      <Filter>Source Files\vpl_win32_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vpl\platform_win32\src\vpl__wstring.cpp">
+      <Filter>Source Files\vpl_win32_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vpl\platform_winRT\src\vpl__socket.cpp">
+      <Filter>Source Files\vpl_winRT_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\platform_win32\src\vplex__plat.c">
+      <Filter>Source Files\vplex_win32_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\platform_win32\src\vplex__plat_winsock.c">
+      <Filter>Source Files\vplex_win32_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\platform_win32\src\vplex__socket.c">
+      <Filter>Source Files\vplex_win32_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\platform_win32\src\vplex__time.c">
+      <Filter>Source Files\vplex_win32_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vpl\platform_win32\src\vplu__snprintf.c">
+      <Filter>Source Files\vplex_win32_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vpl\platform_win32\src\vplu__strerror_r.c">
+      <Filter>Source Files\vplex_win32_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vpl\platform_winRT\src\vpl__plat.cpp">
+      <Filter>Source Files\vpl_winRT_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vpl\platform_winRT\src\vpl__net.c">
+      <Filter>Source Files\vpl_winRT_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\protoxml\ProtoXmlParseStateImpl.cpp">
+      <Filter>Source Files\protoxml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\protoxml\ProtoXmlParseState.cpp">
+      <Filter>Source Files\protoxml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vpl\platform_winRT\src\vpl__monitor_dir.cpp">
+      <Filter>Source Files\vpl_winRT_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\internal\log\src\log.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\platform_winRT\src\vplex__shared_object.cpp">
+      <Filter>Source Files\vplex_winRT_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\platform_winRT\src\vplex__http2.cpp">
+      <Filter>Source Files\vplex_winRT_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vpl\platform_winRT\src\vpl__fs_winrt.cpp">
+      <Filter>Source Files\vpl_winRT_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vpl\platform_win32\src\vpl__fs.cpp">
+      <Filter>Source Files\vpl_win32_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\platform_win32\src\vplex__file.cpp">
+      <Filter>Source Files\vplex_win32_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\platform_winRT\src\vplex__file_winrt.cpp">
+      <Filter>Source Files\vplex_winRT_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\src\vplex_shared_credential.cpp">
+      <Filter>Source Files\vplex_src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\proto\vplex_shared_credential.pb.cc">
+      <Filter>Source Files\vplex_proto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\gvm_core\vplex\platform_win32\src\vplex__math.c">
+      <Filter>Source Files\vplex_win32_src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

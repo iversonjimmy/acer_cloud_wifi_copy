@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/os_specific/service_layers
+END
+oswindir.c
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/os_specific/service_layers/oswindir.c
+END
+oswintbl.c
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/os_specific/service_layers/oswintbl.c
+END
+osunixxf.c
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/os_specific/service_layers/osunixxf.c
+END
+osunixdir.c
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/os_specific/service_layers/osunixdir.c
+END
+oswinxf.c
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repo/!svn/ver/43/trunk/sw_x/gvm_core/boot/ghv/acpica/os_specific/service_layers/oswinxf.c
+END

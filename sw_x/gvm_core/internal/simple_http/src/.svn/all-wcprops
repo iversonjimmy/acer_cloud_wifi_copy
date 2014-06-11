@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repo/!svn/ver/46479/trunk/sw_x/gvm_core/internal/simple_http/src
+END
+http_request_async.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repo/!svn/ver/35299/trunk/sw_x/gvm_core/internal/simple_http/src/http_request_async.cpp
+END
+http_request.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/!svn/ver/43183/trunk/sw_x/gvm_core/internal/simple_http/src/http_request.cpp
+END
+http_response.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repo/!svn/ver/46479/trunk/sw_x/gvm_core/internal/simple_http/src/http_response.cpp
+END

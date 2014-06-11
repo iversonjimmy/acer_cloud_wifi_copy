@@ -1,0 +1,221 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/!svn/ver/28419/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf
+END
+wire_format_lite.cc
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repo/!svn/ver/445/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/wire_format_lite.cc
+END
+wire_format_lite.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repo/!svn/ver/445/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/wire_format_lite.h
+END
+text_format.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repo/!svn/ver/493/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/text_format.h
+END
+repeated_field.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repo/!svn/ver/493/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/repeated_field.h
+END
+generated_message_util.cc
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repo/!svn/ver/493/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/generated_message_util.cc
+END
+wire_format_lite_inl.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repo/!svn/ver/2224/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/wire_format_lite_inl.h
+END
+message_lite.cc
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repo/!svn/ver/445/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/message_lite.cc
+END
+generated_message_util.h
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repo/!svn/ver/493/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/generated_message_util.h
+END
+service.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/!svn/ver/445/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/service.h
+END
+descriptor_database.cc
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repo/!svn/ver/493/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/descriptor_database.cc
+END
+message_lite.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repo/!svn/ver/445/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/message_lite.h
+END
+reflection_ops.cc
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repo/!svn/ver/445/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/reflection_ops.cc
+END
+generated_message_reflection.cc
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repo/!svn/ver/493/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/generated_message_reflection.cc
+END
+unknown_field_set.cc
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repo/!svn/ver/445/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/unknown_field_set.cc
+END
+reflection_ops.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repo/!svn/ver/445/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/reflection_ops.h
+END
+descriptor.pb.cc
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repo/!svn/ver/493/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/descriptor.pb.cc
+END
+unknown_field_set.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repo/!svn/ver/2224/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/unknown_field_set.h
+END
+descriptor.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repo/!svn/ver/2224/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/descriptor.h
+END
+wire_format.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repo/!svn/ver/445/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/wire_format.h
+END
+message.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repo/!svn/ver/28419/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/message.h
+END
+dynamic_message.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repo/!svn/ver/445/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/dynamic_message.h
+END
+text_format.cc
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repo/!svn/ver/493/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/text_format.cc
+END
+repeated_field.cc
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repo/!svn/ver/493/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/repeated_field.cc
+END
+descriptor.proto
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repo/!svn/ver/493/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/descriptor.proto
+END
+service.cc
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repo/!svn/ver/445/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/service.cc
+END
+descriptor_database.h
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repo/!svn/ver/445/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/descriptor_database.h
+END
+package_info.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repo/!svn/ver/445/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/package_info.h
+END
+descriptor.cc
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repo/!svn/ver/493/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/descriptor.cc
+END
+generated_message_reflection.h
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repo/!svn/ver/445/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/generated_message_reflection.h
+END
+wire_format.cc
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repo/!svn/ver/445/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/wire_format.cc
+END
+descriptor.pb.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repo/!svn/ver/493/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/descriptor.pb.h
+END
+extension_set_heavy.cc
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repo/!svn/ver/445/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/extension_set_heavy.cc
+END
+message.cc
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repo/!svn/ver/445/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/message.cc
+END
+extension_set.cc
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repo/!svn/ver/493/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/extension_set.cc
+END
+dynamic_message.cc
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repo/!svn/ver/445/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/dynamic_message.cc
+END
+extension_set.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repo/!svn/ver/493/trunk/sw_x/gvm_core/external/protobuflib/google/protobuf/extension_set.h
+END

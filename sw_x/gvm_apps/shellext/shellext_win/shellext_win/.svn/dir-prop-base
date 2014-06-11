@@ -1,0 +1,11 @@
+K 10
+svn:ignore
+V 104
+shellext_win_i.c
+shellext_win_p.c
+shellext_win_i.h
+dlldata.c
+shellext_win.aps
+shellext_win.vcxproj.user
+
+END
